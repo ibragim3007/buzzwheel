@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, TextProps } from "react-native";
 
-import { useTheme } from "@react-navigation/native";
 import {
   TypographyProps,
   fontsWeights,
   TypographyStyles,
   getColorsStyles,
 } from "../styles/typography/typography";
+import { useTheme } from "../hooks/useTheme";
 
 const Typography = (props: TypographyProps) => {
   const colors = useTheme();

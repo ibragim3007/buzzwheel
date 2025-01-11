@@ -1,3 +1,4 @@
+import Typography from "@/src/shared/typography/Typography";
 import React from "react";
 import { Text, View } from "react-native";
 
@@ -10,6 +11,8 @@ export default function HomePage() {
         alignItems: "center",
         backgroundColor: "#0b0b0b",
       }}
-    ></View>
+    >
+      <Typography>asd</Typography>
+    </View>
   );
 }
