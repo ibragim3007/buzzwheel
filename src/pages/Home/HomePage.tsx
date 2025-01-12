@@ -1,10 +1,11 @@
 import Typography from "@/src/shared/typography/Typography";
 import React from "react";
-import { Text, View } from "react-native";
+import Animated from "react-native-reanimated";
+import Roulette from "./Roulette";
 
 export default function HomePage() {
   return (
-    <View
+    <Animated.View
       style={{
         flex: 1,
         justifyContent: "center",
@@ -12,7 +13,7 @@ export default function HomePage() {
         backgroundColor: "#0b0b0b",
       }}
     >
-      <Typography>asd</Typography>
-    </View>
+      <Roulette />
+    </Animated.View>
   );
 }
