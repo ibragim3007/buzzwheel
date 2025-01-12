@@ -1,7 +1,7 @@
+import { Roulette } from "@/src/module/Roulette";
+import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import React from "react";
 import Animated from "react-native-reanimated";
-import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
-import { Roulette } from "@/src/module/Roulette";
 
 const segments = [
   { label: "Player 1", color: "#3d7a3d" },

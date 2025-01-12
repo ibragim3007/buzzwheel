@@ -33,8 +33,9 @@ export default function CenterCircle({ options }: CenterCircleProps) {
         r={RADIUS * 0.2}
         fill="#00000027"
       />
-      <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.2} fill="#e1e1e1" />
-      <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.11} fill="#c0c0c0" />
+      <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.2} fill="#ffffff" />
+
+      <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.1} fill="#d8d8d8" />
     </Svg>
   );
 }

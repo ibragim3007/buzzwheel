@@ -3,7 +3,7 @@ import Grid from "@/src/shared/grid/Grid";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated from "react-native-reanimated";
-import Svg, { Circle, G } from "react-native-svg";
+import Svg, { Circle, ClipPath, Defs, G, Mask, Rect } from "react-native-svg";
 import CenterCircle from "./CenterCircle/CenterCircle";
 import { useRoulette } from "./hooks/useRoulette";
 import { RouletteSegment } from "./segment/RouletteSegment";
@@ -40,7 +40,7 @@ const Roulette = ({ segments, options }: RouletteProps) => {
               cx={CENTER}
               cy={CENTER}
               r={RADIUS + BORDER_WIDTH / 2}
-              fill={winner ? "#252525" : "#fff"}
+              fill={winner ? "#252525" : "#eaf4ff"}
             />
             {/* Рулетка */}
             <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
@@ -60,6 +60,29 @@ const Roulette = ({ segments, options }: RouletteProps) => {
                 );
               })}
             </G>
+
+            <Defs>
+              <Mask id="holeMask">
+                <Rect width={TOTAL_SIZE} height={TOTAL_SIZE} fill="white" />
+                {/* Вырезаем центр */}
+                <Circle
+                  cx={CENTER}
+                  cy={CENTER}
+                  r={CENTER - 15} // Радиус выреза
+                  fill="black"
+                />
+              </Mask>
+            </Defs>
+
+            {/* Тень с вырезом */}
+            <Circle
+              cx={CENTER}
+              cy={CENTER}
+              r={RADIUS} // Радиус тени
+              fill="black"
+              opacity={0.25}
+              mask="url(#holeMask)" // Применяем маску
+            />
           </Svg>
         </Grid>
       </Animated.View>
