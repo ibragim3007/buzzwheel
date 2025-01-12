@@ -1,18 +1,7 @@
-import { Roulette } from "@/src/module/Roulette";
-import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
+import Typography from "@/src/shared/typography/Typography";
+import { Link } from "expo-router";
 import React from "react";
 import Animated from "react-native-reanimated";
-
-const segments = [
-  { label: "Player 1", color: "#3d7a3d" },
-  { label: "Player 2", color: "#39b844" },
-  { label: "Player 3", color: "#3d7a3d" },
-  { label: "Player 4", color: "#39b844" },
-  { label: "Player 5", color: "#3d7a3d" },
-  { label: "Player 6", color: "#39b844" },
-  { label: "Player 7", color: "#3d7a3d" },
-  { label: "Player 8", color: "#39b844" },
-];
 
 export default function HomePage() {
   return (
@@ -24,7 +13,10 @@ export default function HomePage() {
         backgroundColor: "#0b0b0b",
       }}
     >
-      <Roulette segments={segments} options={DefaultRouletteOptions} />
+      <Typography>asd</Typography>
+      <Link href="/screens/game">
+        <Typography>Play</Typography>
+      </Link>
     </Animated.View>
   );
 }
