@@ -1,22 +1,31 @@
-import Typography from "@/src/shared/typography/Typography";
+import Grid from "@/src/shared/ui/grid/Grid";
+
 import { Link } from "expo-router";
 import React from "react";
-import Animated from "react-native-reanimated";
+import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
+import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
+import Typography from "@/src/shared/ui/typography/Typography";
+import { AddPlayers } from "@/src/module/AddPlayers";
 
 export default function HomePage() {
   return (
-    <Animated.View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#0b0b0b",
-      }}
-    >
-      <Typography>asd</Typography>
-      <Link href="/screens/game">
-        <Typography>Play</Typography>
-      </Link>
-    </Animated.View>
+    <PageWrapper flex={1}>
+      <SafeWrapper>
+        <Grid space="lg">
+          <Grid space="sm">
+            <Typography textAlign="center" weight="bold" variant="title-2">
+              Party Game
+            </Typography>
+            <Typography textAlign="center" variant="caption-1">
+              Add players to start the fun!
+            </Typography>
+          </Grid>
+          <AddPlayers />
+        </Grid>
+        {/* <Link href="/screens/game">
+          <Typography>Play</Typography>
+        </Link> */}
+      </SafeWrapper>
+    </PageWrapper>
   );
 }

@@ -4,9 +4,9 @@ import { FlexAlignType, StyleSheet, View, ViewProps } from "react-native";
 import {
   calculateSpacing,
   TSpaceGrid,
-} from "../helpers/styleHelpers/calculateSpacing";
-import { normalizedSize } from "../utils/size";
-import { normalizeLayoutDimenstionValue } from "../helpers/styleHelpers/normalizeLayoutDimenstionValue";
+} from "../../helpers/styleHelpers/calculateSpacing";
+import { normalizedSize } from "../../utils/size";
+import { normalizeLayoutDimenstionValue } from "../../helpers/styleHelpers/normalizeLayoutDimenstionValue";
 
 export interface GridProps extends ViewProps {
   flex?: number;

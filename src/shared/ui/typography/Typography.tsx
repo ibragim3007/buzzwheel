@@ -1,13 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, TextProps } from "react-native";
-
+import { useTheme } from "../../hooks/useTheme";
 import {
-  TypographyProps,
   fontsWeights,
-  TypographyStyles,
   getColorsStyles,
-} from "../styles/typography/typography";
-import { useTheme } from "../hooks/useTheme";
+  TypographyProps,
+  TypographyStyles,
+} from "../../styles/typography/typography";
 
 const Typography = (props: TypographyProps) => {
   const colors = useTheme();

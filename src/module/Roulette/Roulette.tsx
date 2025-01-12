@@ -1,5 +1,5 @@
 import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
-import Grid from "@/src/shared/grid/Grid";
+import Grid from "@/src/shared/ui/grid/Grid";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated from "react-native-reanimated";
