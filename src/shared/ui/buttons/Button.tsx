@@ -2,12 +2,14 @@ import React from "react";
 import { Pressable, PressableProps } from "react-native";
 import Typography from "../typography/Typography";
 import { useTheme } from "../../hooks/useTheme";
+import Grid from "../grid/Grid";
 
 interface ButtonProps extends PressableProps {
   title: string;
+  startIcon?: React.ReactNode;
 }
 
-export default function Button({ title, ...props }: ButtonProps) {
+export default function Button({ title, startIcon, ...props }: ButtonProps) {
   const colors = useTheme();
   return (
     <Pressable
@@ -20,14 +22,17 @@ export default function Button({ title, ...props }: ButtonProps) {
       }}
       {...props}
     >
-      <Typography
-        variant="headline"
-        textAlign="center"
-        style={{ color: "#fff" }}
-        weight="medium"
-      >
-        {title}
-      </Typography>
+      <Grid row space="sm" justfity="center" align="center">
+        {startIcon}
+        <Typography
+          variant="headline"
+          textAlign="center"
+          style={{ color: "#fff" }}
+          weight="medium"
+        >
+          {title}
+        </Typography>
+      </Grid>
     </Pressable>
   );
 }

@@ -1,5 +1,10 @@
 import { createContext, PropsWithChildren, useState } from "react";
-import { darkTheme, lightTheme, PalitraInterface } from "../config/theme/theme";
+import {
+  customTheme,
+  darkTheme,
+  lightTheme,
+  PalitraInterface,
+} from "../config/theme/theme";
 
 interface ContextPalitraInterface extends PalitraInterface {}
 

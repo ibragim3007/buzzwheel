@@ -26,6 +26,11 @@ export default function Input({ onCall }: InputProps) {
         <TextInput
           onChangeText={(text) => setName(text)}
           value={name}
+          cursorColor={colors.text.primary}
+          selectionColor={colors.text.primary}
+          placeholderTextColor={colors.text.disabled}
+          placeholder="Enter name player"
+          onSubmitEditing={onPress}
           style={{
             borderWidth: 1,
             borderColor: colors.text.disabled,
@@ -36,10 +41,6 @@ export default function Input({ onCall }: InputProps) {
             color: colors.text.primary,
             fontFamily: fontWeight.medium,
           }}
-          cursorColor={colors.text.primary}
-          selectionColor={colors.text.primary}
-          placeholderTextColor={colors.text.disabled}
-          placeholder="Enter name player"
         />
 
         <Button onPress={onPress} title="+ Add" />
