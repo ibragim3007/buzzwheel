@@ -5,11 +5,11 @@ type State = {
   players: Player[];
 };
 type Actions = {
-  addNewPlayer: (player: Player) => void;
+  addNewPlayer: (name: string) => void;
   deletePlayer: (id: number) => void;
 };
 
-const usePlayerStore = create<State & Actions>((set) => {
+export const usePlayerStore = create<State & Actions>((set) => {
   return {
     players: [],
 
@@ -21,10 +21,14 @@ const usePlayerStore = create<State & Actions>((set) => {
       }));
     },
 
-    addNewPlayer: (player: Player) => {
-      set((state) => ({
-        players: [...state.players, player],
-      }));
+    addNewPlayer: (name: string) => {
+      set((state) => {
+        const player: Player = {
+          id: state.players.length + 1,
+          name,
+        };
+        return { players: [...state.players, player] };
+      });
     },
 
     deletePlayer: (id: number) => {
