@@ -29,8 +29,8 @@ export default function Button({ title, startIcon, ...props }: ButtonProps) {
         <Typography
           variant="headline"
           textAlign="center"
-          style={{ color: colors.background.primary }}
-          weight="medium"
+          style={{ color: colors.text.primary }}
+          weight="bold"
         >
           {title}
         </Typography>

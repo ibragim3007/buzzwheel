@@ -79,7 +79,7 @@ export const lightTheme: PalitraInterface = {
 export const customTheme: PalitraInterface = {
   theme: "custom",
   accent: {
-    primary: "#ffffff",
+    primary: "#FF5722",
     secondary: "#FFA500",
     tertiary: "#FF6347",
     quaternary: "#FF4500",
@@ -93,8 +93,8 @@ export const customTheme: PalitraInterface = {
     success: "#00FF00",
   },
   background: {
-    primary: "#743a83",
-    secondary: "#481355",
+    primary: "#5e3677",
+    secondary: "#36124D",
     tertiary: "#dedede",
     quaternary: "#4F4F4F",
     error: "#FF0000",

@@ -5,7 +5,7 @@ import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import React, { useState } from "react";
 import { Alert, TextInput } from "react-native";
-
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 interface InputProps {
   onCall: (name: string) => void;
 }
@@ -58,10 +58,13 @@ export default function Input({ onCall }: InputProps) {
           style={{
             borderTopLeftRadius: 0,
             borderBottomLeftRadius: 0,
-            paddingRight: 35,
+            paddingLeft: 15,
           }}
+          startIcon={
+            <FontAwesome6 name="plus" size={20} color={colors.text.primary} />
+          }
           onPress={onPress}
-          title="+ Add"
+          title="Add"
         />
       </Grid>
     </Paper>

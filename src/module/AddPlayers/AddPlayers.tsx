@@ -28,7 +28,7 @@ export default function AddPlayers() {
           players.length ? `(${players.length} players)` : ""
         }`}
         startIcon={
-          <Ionicons name="play" size={24} color={colors.background.primary} />
+          <Ionicons name="play" size={24} color={colors.text.primary} />
         }
       />
     </Grid>
