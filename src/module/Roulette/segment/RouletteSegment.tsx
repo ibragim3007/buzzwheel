@@ -58,8 +58,12 @@ export const RouletteSegment = ({
         textAnchor="middle"
         opacity={winner && !picked ? 0.1 : 1}
         transform={`rotate(${textRotation}, ${textPosition.x}, ${textPosition.y})`}
+        textLength={RADIUS * 0.8} // Adjust this value as needed
+        lengthAdjust="spacingAndGlyphs"
       >
-        {segment.label}
+        {segment.label.length > 8
+          ? segment.label.slice(0, 8) + "..."
+          : segment.label}
       </SvgText>
     </>
   );

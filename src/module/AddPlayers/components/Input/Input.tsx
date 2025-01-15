@@ -35,14 +35,14 @@ export default function Input({ onCall }: InputProps) {
         <TextInput
           onChangeText={handleChangeText}
           value={name}
-          cursorColor={colors.text.primary}
-          selectionColor={colors.text.primary}
+          cursorColor={colors.accent.primary}
+          selectionColor={colors.accent.primary}
           placeholderTextColor={colors.text.white}
           placeholder="Enter name player"
           onSubmitEditing={onPress}
           style={{
             borderWidth: 1,
-            borderColor: colors.text.primary,
+            borderColor: colors.accent.primary,
             paddingHorizontal: 25,
             flex: 1,
             borderTopLeftRadius: 50,
