@@ -8,10 +8,10 @@ import {
 
 interface ContextPalitraInterface extends PalitraInterface {}
 
-export const ThemeContext = createContext<ContextPalitraInterface>(lightTheme);
+export const ThemeContext = createContext<ContextPalitraInterface>(customTheme);
 
 export default function ThemeProvider({ children }: PropsWithChildren) {
-  const [currentTheme, setCurrentTheme] = useState(lightTheme);
+  const [currentTheme, setCurrentTheme] = useState(customTheme);
 
   return (
     <ThemeContext.Provider value={currentTheme}>

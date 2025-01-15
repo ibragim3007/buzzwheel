@@ -4,7 +4,7 @@ import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import React, { useState } from "react";
-import { TextInput } from "react-native";
+import { Alert, TextInput } from "react-native";
 
 interface InputProps {
   onCall: (name: string) => void;
@@ -15,35 +15,54 @@ export default function Input({ onCall }: InputProps) {
 
   const [name, setName] = useState("");
   const onPress = () => {
-    console.log("first");
+    if (name.trim() === "") {
+      Alert.alert("Name is required");
+      return;
+    }
     onCall(name);
     setName("");
   };
 
+  const handleChangeText = (text: string) => {
+    if (text.length <= 25) {
+      setName(text);
+    }
+  };
+
   return (
     <Paper>
-      <Grid row space="sm">
+      <Grid row>
         <TextInput
-          onChangeText={(text) => setName(text)}
+          onChangeText={handleChangeText}
           value={name}
           cursorColor={colors.text.primary}
           selectionColor={colors.text.primary}
-          placeholderTextColor={colors.text.disabled}
+          placeholderTextColor={colors.text.white}
           placeholder="Enter name player"
           onSubmitEditing={onPress}
           style={{
             borderWidth: 1,
-            borderColor: colors.text.disabled,
-            paddingHorizontal: 10,
+            borderColor: colors.text.primary,
+            paddingHorizontal: 25,
             flex: 1,
-            borderRadius: 7,
+            borderTopLeftRadius: 50,
+            borderBottomLeftRadius: 50,
             fontSize: 18,
             color: colors.text.primary,
             fontFamily: fontWeight.medium,
+            borderRightWidth: 0,
           }}
         />
 
-        <Button onPress={onPress} title="+ Add" />
+        <Button
+          style={{
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+            paddingRight: 35,
+          }}
+          onPress={onPress}
+          title="+ Add"
+        />
       </Grid>
     </Paper>
   );

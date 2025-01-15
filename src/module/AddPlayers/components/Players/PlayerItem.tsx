@@ -18,20 +18,19 @@ export default function PlayerItem({ player }: PlayerItemProps) {
   const { deletePlayer } = usePlayerStore();
 
   return (
-    <Paper>
+    <Paper paddingHorizontal={25} paddingVertical={18}>
       <Grid justfity="space-between" row>
-        <Typography weight="medium" color="secondary">
+        <Typography weight="medium" color="primary">
           {player.name}
         </Typography>
         <Pressable
           style={{
-            // backgroundColor: "red",
             width: 50,
             alignItems: "flex-end",
           }}
           onPress={() => deletePlayer(player.id)}
         >
-          <Ionicons name="close" size={24} color={colors.text.secondary} />
+          <Ionicons name="close" size={26} color={colors.text.primary} />
         </Pressable>
       </Grid>
     </Paper>

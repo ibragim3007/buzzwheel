@@ -11,7 +11,7 @@ export default function Paper({ ...props }: PaperProps) {
       {...props}
       style={{
         padding: 16,
-        borderRadius: 8,
+        borderRadius: 30,
         backgroundColor: colors.background.secondary,
       }}
     />

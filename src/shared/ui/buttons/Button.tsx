@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, PressableProps } from "react-native";
+import { Pressable, PressableProps, StyleSheet } from "react-native";
 import Typography from "../typography/Typography";
 import { useTheme } from "../../hooks/useTheme";
 import Grid from "../grid/Grid";
@@ -11,23 +11,25 @@ interface ButtonProps extends PressableProps {
 
 export default function Button({ title, startIcon, ...props }: ButtonProps) {
   const colors = useTheme();
-  return (
-    <Pressable
-      style={{
-        backgroundColor: colors.accent.primary,
 
-        paddingHorizontal: 25,
-        paddingVertical: 13,
-        borderRadius: 7,
-      }}
-      {...props}
-    >
+  const styles = StyleSheet.flatten([
+    {
+      backgroundColor: colors.accent.primary,
+      paddingHorizontal: 25,
+      paddingVertical: 13,
+      borderRadius: 30,
+    },
+    props.style,
+  ]);
+
+  return (
+    <Pressable {...props} style={styles}>
       <Grid row space="sm" justfity="center" align="center">
         {startIcon}
         <Typography
           variant="headline"
           textAlign="center"
-          style={{ color: "#fff" }}
+          style={{ color: colors.background.primary }}
           weight="medium"
         >
           {title}

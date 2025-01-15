@@ -13,10 +13,10 @@ export default function HomePage() {
       <SafeWrapper>
         <Grid space="lg">
           <Grid space="sm">
-            <Typography textAlign="center" weight="bold" variant="title-2">
+            <Typography textAlign="center" weight="bold" variant="largeTitle">
               Party Game
             </Typography>
-            <Typography textAlign="center" variant="caption-1">
+            <Typography textAlign="center" variant="headline">
               Add players to start the fun!
             </Typography>
           </Grid>

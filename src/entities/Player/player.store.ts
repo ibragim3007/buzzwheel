@@ -24,7 +24,7 @@ export const usePlayerStore = create<State & Actions>((set) => {
     addNewPlayer: (name: string) => {
       set((state) => {
         const player: Player = {
-          id: state.players.length + 1,
+          id: Date.now(),
           name,
         };
         return { players: [...state.players, player] };

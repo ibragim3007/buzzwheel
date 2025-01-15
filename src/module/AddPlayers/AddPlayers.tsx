@@ -24,10 +24,12 @@ export default function AddPlayers() {
       <Players players={players} />
       <Button
         onPress={onPressStart}
-        startIcon={<Ionicons name="play" size={24} color={colors.text.white} />}
         title={`Start Game ${
           players.length ? `(${players.length} players)` : ""
         }`}
+        startIcon={
+          <Ionicons name="play" size={24} color={colors.background.primary} />
+        }
       />
     </Grid>
   );
