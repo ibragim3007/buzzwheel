@@ -9,6 +9,7 @@ export default function StackRoute() {
     >
       <Stack.Screen name="index" />
       <Stack.Screen name="screens/game" />
+      <Stack.Screen name="screens/modes" />
       <Stack.Screen name="+not-found" />
     </Stack>
   );

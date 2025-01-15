@@ -1,16 +1,18 @@
 import Grid from "@/src/shared/ui/grid/Grid";
 
-import { Link } from "expo-router";
-import React from "react";
+import { AddPlayers } from "@/src/module/AddPlayers";
 import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import Typography from "@/src/shared/ui/typography/Typography";
-import { AddPlayers } from "@/src/module/AddPlayers";
+import Header from "@/src/widget/Header";
+import React from "react";
 
 export default function HomePage() {
   return (
     <PageWrapper flex={1}>
       <SafeWrapper>
+        <Header />
+
         <Grid space="lg">
           <Grid space="sm">
             <Typography textAlign="center" weight="bold" variant="largeTitle">

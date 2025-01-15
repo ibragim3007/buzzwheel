@@ -10,7 +10,7 @@ interface PlayersProps {
 
 export default function Players({ players }: PlayersProps) {
   return (
-    <ScrollView style={{ height: 460 }}>
+    <ScrollView style={{ height: 400 }}>
       <Grid space="md">
         {players.map((p) => (
           <PlayerItem key={p.id} player={p} />
