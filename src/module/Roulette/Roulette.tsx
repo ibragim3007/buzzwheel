@@ -11,13 +11,14 @@ import { RouletteSegment } from "./segment/RouletteSegment";
 interface RouletteProps {
   segments: SegmentType[];
   options: RouletteOptions;
+  onCallback: (winner: SegmentType) => void;
 }
 
-const Roulette = ({ segments, options }: RouletteProps) => {
+const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
   const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
 
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
-    useRoulette(segments);
+    useRoulette(segments, onCallback);
 
   return (
     <View style={styles.container}>

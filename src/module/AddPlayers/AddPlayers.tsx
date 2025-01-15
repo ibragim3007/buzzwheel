@@ -6,10 +6,16 @@ import Input from "./components/Input/Input";
 import Players from "./components/Players/Players";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import { useRouter } from "expo-router";
 
 export default function AddPlayers() {
   const colors = useTheme();
   const { players, addNewPlayer } = usePlayerStore();
+  const { navigate } = useRouter();
+
+  const onPressStart = () => {
+    navigate("/screens/game");
+  };
 
   return (
     <Grid space="lg">
@@ -17,6 +23,7 @@ export default function AddPlayers() {
 
       <Players players={players} />
       <Button
+        onPress={onPressStart}
         startIcon={<Ionicons name="play" size={24} color={colors.text.white} />}
         title={`Start Game ${
           players.length ? `(${players.length} players)` : ""

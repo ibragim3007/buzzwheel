@@ -1,3 +1,4 @@
+import { SegmentType } from "@/src/entities/Roulette/types";
 import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
 import { useState } from "react";
 import {
@@ -11,7 +12,10 @@ import {
   withTiming,
 } from "react-native-reanimated";
 
-export const useRoulette = (segments: any[]) => {
+export const useRoulette = (
+  segments: any[],
+  onCallback: (winner: SegmentType) => void
+) => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<null | number>(null);
 
@@ -124,8 +128,9 @@ export const useRoulette = (segments: any[]) => {
 
     rotation.value = withSpring(updateTotalAngle, {});
 
-    const winner = segments[getRandomSegment].label;
+    const winner = segments[getRandomSegment];
     setWinner(getRandomSegment);
+    onCallback(winner);
     // Alert.alert("Результат", `Выпало: ${winner}`);
     setIsSpinning(false);
   };
