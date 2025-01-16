@@ -31,7 +31,7 @@ export default function Input({ onCall }: InputProps) {
 
   return (
     <Paper>
-      <Grid row>
+      <Grid align="center" row>
         <TextInput
           onChangeText={handleChangeText}
           value={name}
@@ -41,7 +41,8 @@ export default function Input({ onCall }: InputProps) {
           placeholder="Enter name player"
           onSubmitEditing={onPress}
           style={{
-            borderWidth: 1,
+            borderWidth: 2,
+            height: "100%",
             borderColor: colors.accent.primary,
             paddingHorizontal: 25,
             flex: 1,

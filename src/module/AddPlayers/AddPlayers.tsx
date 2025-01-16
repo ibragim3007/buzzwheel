@@ -20,7 +20,6 @@ export default function AddPlayers() {
   return (
     <Grid space="lg">
       <Input onCall={(name) => addNewPlayer(name)} />
-
       <Players players={players} />
       <Button
         onPress={onPressStart}
