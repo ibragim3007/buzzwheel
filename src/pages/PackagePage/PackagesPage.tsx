@@ -1,4 +1,4 @@
-import { Modes } from "@/src/module/Modes";
+import Packages from "@/src/module/Packages/Packages";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
@@ -10,14 +10,14 @@ import { useRouter } from "expo-router";
 
 import React from "react";
 
-export default function ModePage() {
+export default function PackagePage() {
   const colors = useTheme();
   const { navigate } = useRouter();
   const onPressPlay = () => {
     navigate("/screens/game");
   };
   return (
-    <Grid>
+    <Grid flex={1}>
       <ScrollPageWrapper>
         <SafeWrapper style={{ paddingBottom: 200 }}>
           <Header back />
@@ -26,7 +26,7 @@ export default function ModePage() {
             <Typography textAlign="center" weight="bold" variant="title-1">
               Pick your mode!
             </Typography>
-            <Modes />
+            <Packages />
           </Grid>
         </SafeWrapper>
       </ScrollPageWrapper>

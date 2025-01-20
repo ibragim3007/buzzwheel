@@ -14,7 +14,7 @@ export default function AddPlayers() {
   const { navigate } = useRouter();
 
   const onPressStart = () => {
-    navigate("/screens/modes");
+    navigate("/screens/packages");
   };
 
   return (
