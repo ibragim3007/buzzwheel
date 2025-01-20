@@ -7,6 +7,8 @@ import Svg, { Circle, ClipPath, Defs, G, Mask, Rect } from "react-native-svg";
 import CenterCircle from "./CenterCircle/CenterCircle";
 import { useRoulette } from "./hooks/useRoulette";
 import { RouletteSegment } from "./segment/RouletteSegment";
+import { useTheme } from "@/src/shared/hooks/useTheme";
+import Button from "@/src/shared/ui/buttons/Button";
 
 interface RouletteProps {
   segments: SegmentType[];
@@ -16,12 +18,19 @@ interface RouletteProps {
 
 const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
   const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
-
+  const colors = useTheme();
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
     useRoulette(segments, onCallback);
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        {
+          backgroundColor: colors.background.primary,
+        },
+        styles.container,
+      ]}
+    >
       <Animated.View
         style={[
           { height: WHEEL_SIZE, width: WHEEL_SIZE },
@@ -92,13 +101,12 @@ const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
         <CenterCircle options={options} />
       </Animated.View>
 
-      <TouchableOpacity
-        style={[{ opacity: isSpinning ? 0 : 1, top: 150 }, [styles.button]]}
+      <Button
+        title="Roll"
         onPress={spinWheel}
         disabled={isSpinning}
-      >
-        <Text style={styles.buttonText}>Roll</Text>
-      </TouchableOpacity>
+        style={[{ opacity: isSpinning ? 0 : 1, top: 150, width: "70%" }]}
+      />
     </View>
   );
 };
@@ -109,17 +117,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    backgroundColor: "#5e3677",
+    // backgroundColor: "#5e3677",
   },
   wheelContainer: {
     transform: [{ translateY: 100 }],
   },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#FF5722",
-    borderRadius: 8,
-  },
+
   centerOverlay: {
     position: "absolute",
     // top: CENTER + 10,

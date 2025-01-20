@@ -16,7 +16,7 @@ export default function Button({ title, startIcon, ...props }: ButtonProps) {
     {
       backgroundColor: colors.accent.primary,
       paddingHorizontal: 25,
-      paddingVertical: 13,
+      paddingVertical: 17,
       borderRadius: 30,
     },
     props.style,
@@ -27,7 +27,7 @@ export default function Button({ title, startIcon, ...props }: ButtonProps) {
       <Grid row space="sm" justfity="center" align="center">
         {startIcon}
         <Typography
-          variant="headline"
+          variant="title-3"
           textAlign="center"
           style={{ color: colors.text.primary }}
           weight="bold"

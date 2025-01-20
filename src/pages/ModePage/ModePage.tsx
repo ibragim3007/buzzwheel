@@ -35,7 +35,7 @@ export default function ModePage() {
         justfity="center"
         style={{
           position: "absolute",
-          bottom: 70,
+          bottom: 40,
           width: "100%",
           shadowColor: colors.accent.primary,
           shadowOpacity: 1,
