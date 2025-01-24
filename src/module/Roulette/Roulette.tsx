@@ -2,25 +2,35 @@ import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
 import Grid from "@/src/shared/ui/grid/Grid";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Animated from "react-native-reanimated";
+import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Circle, ClipPath, Defs, G, Mask, Rect } from "react-native-svg";
 import CenterCircle from "./CenterCircle/CenterCircle";
 import { useRoulette } from "./hooks/useRoulette";
 import { RouletteSegment } from "./segment/RouletteSegment";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
+import Typography from "@/src/shared/ui/typography/Typography";
+import { Player } from "@/src/shared/types/globalTypes";
 
 interface RouletteProps {
   segments: SegmentType[];
   options: RouletteOptions;
+  currentTurn: Player | null;
   onCallback: (winner: SegmentType) => void;
 }
 
-const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
+const Roulette = ({
+  segments,
+  options,
+  currentTurn,
+  onCallback,
+}: RouletteProps) => {
   const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
   const colors = useTheme();
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
     useRoulette(segments, onCallback);
+
+  console.log(currentTurn);
 
   return (
     <View
@@ -31,6 +41,22 @@ const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
         styles.container,
       ]}
     >
+      {currentTurn && (
+        <Animated.View
+          entering={FadeIn}
+          // style={{  }}
+        >
+          <Grid>
+            <Typography weight="medium" variant="title-1">
+              Are you ready{" "}
+              <Typography weight="bold" variant="title-1">
+                {currentTurn?.name}
+              </Typography>
+              ?
+            </Typography>
+          </Grid>
+        </Animated.View>
+      )}
       <Animated.View
         style={[
           { height: WHEEL_SIZE, width: WHEEL_SIZE },
@@ -50,7 +76,7 @@ const Roulette = ({ segments, options, onCallback }: RouletteProps) => {
               cx={CENTER}
               cy={CENTER}
               r={RADIUS + BORDER_WIDTH / 2}
-              fill={winner ? "#252525" : "#eaf4ff"}
+              fill={winner !== null ? "#252525" : "#eaf4ff"}
             />
             {/* Рулетка */}
             <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>

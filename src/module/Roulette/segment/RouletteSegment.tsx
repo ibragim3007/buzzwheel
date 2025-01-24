@@ -47,7 +47,7 @@ export const RouletteSegment = ({
         strokeDasharray={16}
         strokeLinejoin="round"
         fill={segment.color}
-        opacity={winner && !picked ? 0.1 : 1}
+        opacity={winner !== null && !picked ? 0.1 : 1}
       />
       <SvgText
         fill="#fff"
@@ -56,7 +56,7 @@ export const RouletteSegment = ({
         x={textPosition.x - 5}
         y={textPosition.y + 8}
         textAnchor="middle"
-        opacity={winner && !picked ? 0.1 : 1}
+        opacity={winner !== null && !picked ? 0.1 : 1}
         transform={`rotate(${textRotation}, ${textPosition.x}, ${textPosition.y})`}
         textLength={RADIUS * 0.8} // Adjust this value as needed
         lengthAdjust="spacingAndGlyphs"

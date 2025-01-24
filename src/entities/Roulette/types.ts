@@ -1,5 +1,5 @@
 export type SegmentType = {
-  id: string;
+  id: number;
   label: string;
   color: string;
 };

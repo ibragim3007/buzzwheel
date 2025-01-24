@@ -1,29 +1,29 @@
 import { usePlayerStore } from "@/src/entities/Player/player.store";
 import { SegmentType } from "@/src/entities/Roulette/types";
+import { useRouletteGame } from "@/src/entities/RouletteGame/roulette-game.repository";
+import DareDisplay from "@/src/module/DareDisplay/DareDisplay";
 import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
+import { useTheme } from "@/src/shared/hooks/useTheme";
 import React from "react";
-import { Alert, View } from "react-native";
-
-// const segments = [
-//   { id: 1, label: "Player 1", color: "#3d7a3d" },
-//   { id: 2, label: "Player 2", color: "#39b844" },
-//   { id: 3, label: "Player 3", color: "#3d7a3d" },
-//   { id: 4, label: "Player 4", color: "#39b844" },
-//   { id: 5, label: "Player 5", color: "#3d7a3d" },
-//   { id: 6, label: "Player 6", color: "#39b844" },
-//   { id: 7, label: "Player 7", color: "#3d7a3d" },
-//   { id: 8, label: "Player 8", color: "#39b844" },
-// ];
+import { View } from "react-native";
+import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
 export default function GamePage() {
+  const colors = useTheme();
   const { players } = usePlayerStore();
+  const { currentTurn, currentDare, displayDare, setTurn, showDare, hideDare } =
+    useRouletteGame();
 
   const segments = convertPlayersToSegments(players);
 
   const callback = (winner: SegmentType) => {
-    Alert.alert(winner.label);
+    const player = players.find((player) => player.id === winner.id);
+    if (player) setTurn(player);
+    setTimeout(() => {
+      showDare();
+    }, 1800);
   };
 
   return (
@@ -32,14 +32,23 @@ export default function GamePage() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#0b0b0b",
+        backgroundColor: colors.background.primary,
       }}
     >
-      <Roulette
-        segments={segments}
-        options={DefaultRouletteOptions}
-        onCallback={callback}
-      />
+      {currentDare && displayDare && (
+        <DareDisplay dare={currentDare} hideDare={hideDare} />
+      )}
+
+      {!displayDare && (
+        <Animated.View entering={SlideInRight} exiting={SlideOutLeft}>
+          <Roulette
+            currentTurn={currentTurn}
+            segments={segments}
+            options={DefaultRouletteOptions}
+            onCallback={callback}
+          />
+        </Animated.View>
+      )}
     </View>
   );
 }
