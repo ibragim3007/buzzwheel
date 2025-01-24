@@ -1,5 +1,5 @@
-import { Package } from "@/src/entities/Package/types/types";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import { Package } from "@/src/shared/types/globalTypes";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Checked from "@/src/shared/ui/icons/Checked";
 
@@ -27,14 +27,19 @@ export default function PackageItem({
           backgroundColor: colors.background.secondary,
           borderRadius: 50,
           borderWidth: 3,
+          height: 140,
           borderColor: picked ? colors.accent.primary : "transparent",
         }}
         paddingVertical={10}
         paddingHorizontal={25}
       >
         {picked && <Checked />}
-        <Grid row space="md" align="center">
-          <Image height={50} width={50} source={{ uri: pack.imageEncoded }} />
+        <Grid flex={1} row space="md" align="center">
+          <Image
+            height={50}
+            width={50}
+            source={{ uri: `data:image/png;base64,${pack.imageEncoded}` }}
+          />
           <Grid space="sm" flex={1}>
             <Typography variant="headline" weight="bold">
               {pack.name}

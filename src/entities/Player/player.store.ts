@@ -1,5 +1,5 @@
+import { Player } from "@/src/shared/types/globalTypes";
 import { create } from "zustand";
-import { Player } from "./type";
 
 type State = {
   players: Player[];

@@ -1,3 +1,3 @@
-import Modes from "./Packages";
+import Packages from "./Packages";
 
-export { Modes };
+export { Packages };

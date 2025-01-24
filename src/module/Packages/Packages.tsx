@@ -1,11 +1,12 @@
 import Grid from "@/src/shared/ui/grid/Grid";
 import React from "react";
-import ModeItem from "./PackageItem";
-import { Package } from "@/src/entities/Package/types/types";
+
 import { usePackage } from "@/src/entities/Package/usePackage";
+import PackageItem from "./PackageItem";
+import { Package } from "@/src/shared/types/globalTypes";
 
 export default function Packages() {
-  const { packages, togglePackage, pickedPackages } = usePackage();
+  const { data, togglePackage, pickedPackages } = usePackage();
 
   const onTogglePackage = (pack: Package) => {
     togglePackage(pack);
@@ -13,10 +14,10 @@ export default function Packages() {
 
   return (
     <Grid space="md">
-      {packages.map((pack) => {
+      {data.packages.map((pack) => {
         const isPicked = pickedPackages.map((pM) => pM.id).includes(pack.id);
         return (
-          <ModeItem
+          <PackageItem
             onPress={onTogglePackage}
             picked={isPicked}
             key={pack.id}

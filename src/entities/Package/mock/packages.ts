@@ -1,4 +1,4 @@
-import { Package } from "./types/types";
+import { Package } from "@/src/shared/types/globalTypes";
 
 export const PackagesMock: Package[] = [
   {
