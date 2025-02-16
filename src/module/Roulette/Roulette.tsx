@@ -11,6 +11,7 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
 import Typography from "@/src/shared/ui/typography/Typography";
 import { Player } from "@/src/shared/types/globalTypes";
+import { normalizedSize } from "@/src/shared/utils/size";
 
 interface RouletteProps {
   segments: SegmentType[];
@@ -132,9 +133,12 @@ const Roulette = ({
         style={[
           {
             opacity: isSpinning || currentTurn ? 0 : 1,
-            top: 120,
-            width: 250,
-            paddingVertical: 20,
+            top: normalizedSize(120),
+            width: normalizedSize(250),
+            paddingVertical: normalizedSize(20),
+            shadowColor: "#FFB347",
+            shadowOpacity: 0.45,
+            shadowRadius: 30,
           },
         ]}
       />

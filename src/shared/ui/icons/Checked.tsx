@@ -11,12 +11,12 @@ export default function Checked() {
     <Grid
       style={{
         position: "absolute",
-        right: 0,
-        top: -5,
+        right: 3,
+        top: -3,
         borderRadius: 50,
-        borderColor: colors.accent.tertiary,
+        borderColor: colors.accent.primary,
       }}
-      color={colors.accent.tertiary}
+      color={colors.accent.primary}
       padding={6}
     >
       <FontAwesome name="check" size={22} color={colors.text.primary} />

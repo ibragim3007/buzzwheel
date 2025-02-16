@@ -10,6 +10,7 @@ import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
+import { normalizedSize } from "@/src/shared/utils/size";
 import { Image } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
@@ -42,7 +43,7 @@ export default function DareDisplay({
             <Paper
               style={{
                 position: "absolute",
-                top: -100,
+                top: -normalizedSize(100),
                 backgroundColor: colors.text.white,
                 borderRadius: 100,
                 shadowColor: "#000",
@@ -56,8 +57,8 @@ export default function DareDisplay({
               padding={20}
             >
               <Image
-                height={100}
-                width={100}
+                height={normalizedSize(100)}
+                width={normalizedSize(100)}
                 source={{
                   uri: `data:image/png;base64,${currentPackage?.imageEncoded}`,
                 }}

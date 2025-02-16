@@ -2,6 +2,7 @@ import { RouletteOptions } from "@/src/entities/Roulette/types";
 import React from "react";
 import { Path, Text as SvgText } from "react-native-svg";
 import { calculateCoordinates } from "../helpers/calculateCoordinates";
+import { normalizedSize } from "@/src/shared/utils/size";
 
 interface RouletteSegmentInterface {
   segment: any;
@@ -52,7 +53,7 @@ export const RouletteSegment = ({
       <SvgText
         fill="#fff"
         fontWeight="bold"
-        fontSize="25"
+        fontSize={normalizedSize(25)}
         x={textPosition.x - 5}
         y={textPosition.y + 8}
         textAnchor="middle"
