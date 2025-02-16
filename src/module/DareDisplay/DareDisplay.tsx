@@ -1,7 +1,11 @@
 import { usePackage } from "@/src/entities/Package/usePackage";
 import { HORIZONTAL_PADDINGS } from "@/src/shared/config/constants/constants";
+import {
+  getTransformedArrayOfString,
+  updatedArray,
+} from "@/src/shared/helpers/textConverters/coreLogic";
 import { useTheme } from "@/src/shared/hooks/useTheme";
-import { Dare } from "@/src/shared/types/globalTypes";
+import { Dare, Player } from "@/src/shared/types/globalTypes";
 import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
@@ -11,10 +15,17 @@ import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
 interface DareDisplayProps {
   dare: Dare;
+  currentTurn: Player;
+  players: Player[];
   hideDare: () => void;
 }
 
-export default function DareDisplay({ dare, hideDare }: DareDisplayProps) {
+export default function DareDisplay({
+  dare,
+  currentTurn,
+  players,
+  hideDare,
+}: DareDisplayProps) {
   const colors = useTheme();
   const { pickedPackages } = usePackage();
   const currentPackage = pickedPackages.find((pkg) => pkg.id === dare.package);
@@ -59,7 +70,7 @@ export default function DareDisplay({ dare, hideDare }: DareDisplayProps) {
                 color="secondary"
                 textAlign="center"
               >
-                {currentPackage?.name}
+                {dare.title}
               </Typography>
               <Typography
                 style={{ lineHeight: 26 }}
@@ -67,7 +78,11 @@ export default function DareDisplay({ dare, hideDare }: DareDisplayProps) {
                 weight="bold"
                 color="secondary"
               >
-                {dare.action}
+                {updatedArray(
+                  getTransformedArrayOfString(dare.action),
+                  currentTurn,
+                  players
+                ).join("")}
               </Typography>
             </Grid>
           </Grid>

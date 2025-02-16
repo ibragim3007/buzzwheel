@@ -1,3 +1,5 @@
+import { Player } from "../../types/globalTypes";
+
 const REGEX_PLACEHOLDER =
   /\$\{[^}]+\}|\$\{r_player\}|\$\{rand\(\d+,\d+\)\}|\$\{prev_player\}|\$\{next_player\}/g;
 const PLACEHOLDER_C_PLAYER = "${c_player}";
@@ -6,7 +8,7 @@ const PLACEHOLDER_PREV_PLAYER = "${prev_player}";
 const PLACEHOLDER_NEXT_PLAYER = "${next_player}";
 const REGEX_RAND = /\$\{rand\((\d+),(\d+)\)\}/;
 
-const getTransformedArrayOfString = (str: string): string[] => {
+export const getTransformedArrayOfString = (str: string): string[] => {
   let match;
   const result: string[] = [];
   let lastIndex = 0;
@@ -26,15 +28,10 @@ const getTransformedArrayOfString = (str: string): string[] => {
   return result;
 };
 
-type BasePlayerInterface = {
-  id: number;
-  name: string;
-};
-
-const updatedArray = (
+export const updatedArray = (
   transformedArray: string[],
-  currentPlayer: BasePlayerInterface,
-  players: BasePlayerInterface[]
+  currentPlayer: Player,
+  players: Player[]
 ): string[] => {
   const otherPlayers = players.filter(
     (player) => player.id !== currentPlayer.id
@@ -69,12 +66,12 @@ const updatedArray = (
 };
 
 // Пример данных
-const currentPlayer: BasePlayerInterface = {
+const currentPlayer: Player = {
   id: 1,
   name: "Ibragim",
 };
 
-const players: BasePlayerInterface[] = [
+const players: Player[] = [
   { id: 1, name: "Ibragim" },
   { id: 2, name: "Nikita" },
   { id: 3, name: "Kirill" },

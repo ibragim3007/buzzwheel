@@ -35,8 +35,13 @@ export default function GamePage() {
         backgroundColor: colors.background.primary,
       }}
     >
-      {currentDare && displayDare && (
-        <DareDisplay dare={currentDare} hideDare={hideDare} />
+      {currentDare && displayDare && currentTurn && (
+        <DareDisplay
+          dare={currentDare}
+          hideDare={hideDare}
+          currentTurn={currentTurn}
+          players={players}
+        />
       )}
 
       {!displayDare && (
