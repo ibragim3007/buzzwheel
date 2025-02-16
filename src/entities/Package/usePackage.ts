@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-import Data from "../../../assets/package_mock/jsons/ru.json";
 import { DATA, Package } from "@/src/shared/types/globalTypes";
+import DataTest from "../../../assets/package_mock/jsons/ru_test.json";
 
 interface State {
   data: DATA;
@@ -15,7 +15,7 @@ interface Actions {
 }
 
 export const usePackage = create<State & Actions>((set) => ({
-  data: Data as DATA,
+  data: DataTest as DATA,
   pickedPackages: [],
   addPackage: (mode) =>
     set((state) => ({ pickedPackages: [...state.pickedPackages, mode] })),

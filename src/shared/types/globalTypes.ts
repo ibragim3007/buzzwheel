@@ -34,12 +34,6 @@ export type Player = {
   name: string;
 };
 
-export interface Item {
-  readonly id: number;
-  readonly name: string;
-  readonly encoded: string;
-}
-
 export interface DATA {
   dares: Dare[];
   packages: Package[];
