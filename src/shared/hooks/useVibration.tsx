@@ -1,9 +1,13 @@
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "expo-haptics";
 
 export function useVibration() {
   const vibrate = () => {
     Haptics.impactAsync();
   };
 
-  return { vibrate };
+  const vibrateSelection = () => {
+    Haptics.selectionAsync();
+  };
+
+  return { vibrate, vibrateSelection };
 }

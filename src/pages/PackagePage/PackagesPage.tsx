@@ -1,3 +1,4 @@
+import { usePackage } from "@/src/entities/Package/usePackage";
 import Packages from "@/src/module/Packages/Packages";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
@@ -12,6 +13,7 @@ import React from "react";
 
 export default function PackagePage() {
   const colors = useTheme();
+  const { pickedPackages } = usePackage();
   const { navigate } = useRouter();
   const onPressPlay = () => {
     navigate("/screens/game");
@@ -24,26 +26,28 @@ export default function PackagePage() {
 
           <Grid space="lg">
             <Typography textAlign="center" weight="bold" variant="title-1">
-              Pick your mode!
+              Pick your modes!
             </Typography>
             <Packages />
           </Grid>
         </SafeWrapper>
       </ScrollPageWrapper>
-      <Grid
-        align="center"
-        justfity="center"
-        style={{
-          position: "absolute",
-          bottom: 40,
-          width: "100%",
-          shadowColor: colors.accent.primary,
-          shadowOpacity: 1,
-          shadowRadius: 60,
-        }}
-      >
-        <Button onPress={onPressPlay} title="Play" style={{ width: "70%" }} />
-      </Grid>
+      {pickedPackages.length > 0 && (
+        <Grid
+          align="center"
+          justfity="center"
+          style={{
+            position: "absolute",
+            bottom: 40,
+            width: "100%",
+            shadowColor: colors.accent.primary,
+            shadowOpacity: 1,
+            shadowRadius: 60,
+          }}
+        >
+          <Button onPress={onPressPlay} title="Play" style={{ width: "70%" }} />
+        </Grid>
+      )}
     </Grid>
   );
 }

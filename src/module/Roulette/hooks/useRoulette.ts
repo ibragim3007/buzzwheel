@@ -1,5 +1,6 @@
 import { SegmentType } from "@/src/entities/Roulette/types";
 import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
+import { useVibration } from "@/src/shared/hooks/useVibration";
 import { useState } from "react";
 import {
   Easing,
@@ -16,6 +17,7 @@ export const useRoulette = (
   segments: any[],
   onCallback: (winner: SegmentType) => void
 ) => {
+  const { vibrate } = useVibration();
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<null | number>(null);
 
@@ -26,6 +28,7 @@ export const useRoulette = (
   const oneSegmentAngle = 360 / segments.length;
 
   const spinWheel = () => {
+    void vibrate();
     rotation.value = withTiming(0, { duration: 0 });
     wheelScale.value = 1;
     wheelTranslateY.value = 0;
@@ -116,6 +119,7 @@ export const useRoulette = (
   };
 
   const handleFinishRotation = (totalAngle: number, segmentIndex: number) => {
+    void vibrate();
     const leftSegment =
       segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
     const randomSegments = [leftSegment, segmentIndex];

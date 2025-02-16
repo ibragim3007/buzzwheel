@@ -30,13 +30,11 @@ const Roulette = ({
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
     useRoulette(segments, onCallback);
 
-  console.log(currentTurn);
-
   return (
     <View
       style={[
         {
-          backgroundColor: colors.background.primary,
+          // backgroundColor: colors.background.primary,
         },
         styles.container,
       ]}
@@ -131,7 +129,14 @@ const Roulette = ({
         title="Roll"
         onPress={spinWheel}
         disabled={isSpinning}
-        style={[{ opacity: isSpinning ? 0 : 1, top: 150, width: "70%" }]}
+        style={[
+          {
+            opacity: isSpinning || currentTurn ? 0 : 1,
+            top: 120,
+            width: 250,
+            paddingVertical: 20,
+          },
+        ]}
       />
     </View>
   );

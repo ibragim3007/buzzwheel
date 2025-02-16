@@ -4,12 +4,16 @@ import React from "react";
 import { usePackage } from "@/src/entities/Package/usePackage";
 import PackageItem from "./PackageItem";
 import { Package } from "@/src/shared/types/globalTypes";
+import { useVibration } from "@/src/shared/hooks/useVibration";
 
 export default function Packages() {
   const { data, togglePackage, pickedPackages } = usePackage();
 
+  const { vibrateSelection } = useVibration();
+
   const onTogglePackage = (pack: Package) => {
     togglePackage(pack);
+    void vibrateSelection();
   };
 
   return (
