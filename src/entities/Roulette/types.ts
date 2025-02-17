@@ -2,6 +2,7 @@ export type SegmentType = {
   id: number;
   label: string;
   color: string;
+  type: "player" | "all";
 };
 
 export type RouletteOptions = {

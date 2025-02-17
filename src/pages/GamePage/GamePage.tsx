@@ -19,6 +19,7 @@ export default function GamePage() {
   const segments = convertPlayersToSegments(players);
 
   const callback = (winner: SegmentType) => {
+    console.log(winner);
     const player = players.find((player) => player.id === winner.id);
     if (player) setTurn(player);
     setTimeout(() => {
