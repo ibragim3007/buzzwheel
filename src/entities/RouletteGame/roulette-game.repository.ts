@@ -38,6 +38,7 @@ export const useRouletteGame = create<State & Actions>((set) => ({
   setTurn: (player: Player, type: DareType) => {
     const availablePackages = usePackage.getState().pickedPackages;
     const allDares = usePackage.getState().data.dares;
+
     const availableDares = allDares
       .filter((dare) =>
         availablePackages.map((aP) => aP.id).includes(dare.package)
