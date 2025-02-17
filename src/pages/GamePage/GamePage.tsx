@@ -19,12 +19,18 @@ export default function GamePage() {
   const segments = convertPlayersToSegments(players);
 
   const callback = (winner: SegmentType) => {
-    console.log(winner);
-    const player = players.find((player) => player.id === winner.id);
-    if (player) setTurn(player);
-    setTimeout(() => {
-      showDare();
-    }, 1800);
+    if (winner.type === "player") {
+      const player = players.find((player) => player.id === winner.id);
+      if (player) setTurn(player);
+      setTimeout(() => {
+        showDare();
+      }, 1800);
+    } else if (winner.type === "all") {
+      setTurn({ id: 0, name: winner.label });
+      setTimeout(() => {
+        showDare();
+      }, 1800);
+    }
   };
 
   return (

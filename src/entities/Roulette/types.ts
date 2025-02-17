@@ -1,8 +1,10 @@
+import { DareType } from "@/src/shared/types/globalTypes";
+
 export type SegmentType = {
   id: number;
   label: string;
   color: string;
-  type: "player" | "all";
+  type: DareType;
 };
 
 export type RouletteOptions = {

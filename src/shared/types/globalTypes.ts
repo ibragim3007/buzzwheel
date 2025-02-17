@@ -12,6 +12,8 @@ export type LANGUAGE =
   | "sv"
   | "cs";
 
+export type DareType = "player" | "all";
+
 export interface Package {
   readonly id: number;
   readonly name: string;
@@ -27,6 +29,7 @@ export interface Dare {
   readonly action: string;
   readonly time: number;
   readonly package: number;
+  readonly type: DareType;
 }
 
 export type Player = {
