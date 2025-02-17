@@ -124,14 +124,14 @@ export const useRoulette = (
       segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
     const randomSegments = [leftSegment, segmentIndex];
     const zeroOrOne = getRandomInt(0, 2);
-    const getRandomSegment = randomSegments[zeroOrOne];
+    const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
 
     const updateTotalAngle =
       totalAngle +
       (zeroOrOne === 0 ? oneSegmentAngle / 2 : -(oneSegmentAngle / 2));
 
     rotation.value = withSpring(updateTotalAngle, {});
-
+    console.log(getRandomSegment);
     const winner = segments[getRandomSegment];
     setWinner(getRandomSegment);
     onCallback(winner);

@@ -37,7 +37,7 @@ export function convertPlayersToSegments(players: Player[]): SegmentType[] {
 
   const allSegment: SegmentType = {
     id: 0,
-    label: "All",
+    label: "Все",
     color: "#232323",
     type: "all",
   };

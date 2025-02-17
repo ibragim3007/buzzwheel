@@ -1,4 +1,4 @@
-import { Dare, Player } from "@/src/shared/types/globalTypes";
+import { Dare, DareType, Player } from "@/src/shared/types/globalTypes";
 import { create } from "zustand";
 import { usePackage } from "../Package/usePackage";
 import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
@@ -12,7 +12,7 @@ interface State {
 }
 
 interface Actions {
-  setTurn: (player: Player) => void;
+  setTurn: (player: Player, type: DareType) => void;
 
   showDare: () => void;
   hideDare: () => void;
@@ -35,12 +35,14 @@ export const useRouletteGame = create<State & Actions>((set) => ({
     }));
   },
 
-  setTurn: (player: Player) => {
+  setTurn: (player: Player, type: DareType) => {
     const availablePackages = usePackage.getState().pickedPackages;
     const allDares = usePackage.getState().data.dares;
-    const availableDares = allDares.filter((dare) =>
-      availablePackages.map((aP) => aP.id).includes(dare.package)
-    );
+    const availableDares = allDares
+      .filter((dare) =>
+        availablePackages.map((aP) => aP.id).includes(dare.package)
+      )
+      .filter((dare) => dare.type === type);
 
     const randomDare = availableDares[getRandomInt(0, availableDares.length)];
 

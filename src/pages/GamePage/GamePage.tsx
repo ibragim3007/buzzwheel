@@ -9,6 +9,7 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import React from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
+import { compatibilityFlags } from "react-native-screens";
 
 export default function GamePage() {
   const colors = useTheme();
@@ -19,14 +20,15 @@ export default function GamePage() {
   const segments = convertPlayersToSegments(players);
 
   const callback = (winner: SegmentType) => {
+    console.log(winner);
     if (winner.type === "player") {
       const player = players.find((player) => player.id === winner.id);
-      if (player) setTurn(player);
+      if (player) setTurn(player, winner.type);
       setTimeout(() => {
         showDare();
       }, 1800);
     } else if (winner.type === "all") {
-      setTurn({ id: 0, name: winner.label });
+      setTurn({ id: 0, name: winner.label }, winner.type);
       setTimeout(() => {
         showDare();
       }, 1800);

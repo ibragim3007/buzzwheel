@@ -1,5 +1,6 @@
 import { usePackage } from "@/src/entities/Package/usePackage";
 import { HORIZONTAL_PADDINGS } from "@/src/shared/config/constants/constants";
+import { getActualImageLink } from "@/src/shared/helpers/getActualImageLink";
 import {
   getTransformedArrayOfString,
   updatedArray,
@@ -11,8 +12,8 @@ import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
 import { normalizedSize } from "@/src/shared/utils/size";
-import { Image } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
+import { SvgUri } from "react-native-svg";
 
 interface DareDisplayProps {
   dare: Dare;
@@ -56,23 +57,34 @@ export default function DareDisplay({
               }}
               padding={20}
             >
-              <Image
+              <SvgUri
                 height={normalizedSize(100)}
                 width={normalizedSize(100)}
-                source={{
-                  uri: `data:image/png;base64,${currentPackage?.imageEncoded}`,
-                }}
+                uri={getActualImageLink(currentPackage?.imageEncoded || "")}
+                // source={{
+                //   uri: `data:image/png;base64,${currentPackage?.imageEncoded}`,
+                // }}
               />
             </Paper>
             <Grid space="lg">
-              <Typography
-                variant="title-2"
-                weight="bold"
-                color="secondary"
-                textAlign="center"
-              >
-                {dare.title}
-              </Typography>
+              <Grid>
+                {/* <Typography
+                  textAlign="center"
+                  variant="title-2"
+                  weight="bold"
+                  color="secondary"
+                >
+                  {currentTurn.name}
+                </Typography> */}
+                <Typography
+                  variant="title-2"
+                  weight="bold"
+                  color="secondary"
+                  textAlign="center"
+                >
+                  {dare.title}
+                </Typography>
+              </Grid>
               <Typography
                 style={{ lineHeight: 26 }}
                 textAlign="center"
