@@ -14,6 +14,7 @@ import Typography from "@/src/shared/ui/typography/Typography";
 import { normalizedSize } from "@/src/shared/utils/size";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 import { SvgUri } from "react-native-svg";
+import ButtonTimer from "./ButtonTimer";
 
 interface DareDisplayProps {
   dare: Dare;
@@ -61,21 +62,10 @@ export default function DareDisplay({
                 height={normalizedSize(100)}
                 width={normalizedSize(100)}
                 uri={getActualImageLink(currentPackage?.imageEncoded || "")}
-                // source={{
-                //   uri: `data:image/png;base64,${currentPackage?.imageEncoded}`,
-                // }}
               />
             </Paper>
             <Grid space="lg">
               <Grid>
-                {/* <Typography
-                  textAlign="center"
-                  variant="title-2"
-                  weight="bold"
-                  color="secondary"
-                >
-                  {currentTurn.name}
-                </Typography> */}
                 <Typography
                   variant="title-2"
                   weight="bold"
@@ -100,9 +90,19 @@ export default function DareDisplay({
             </Grid>
           </Grid>
         </Paper>
-        <Grid width="100%" align="center">
-          <Button style={{ width: "80%" }} title="next" onPress={hideDare} />
-        </Grid>
+        {dare.time ? (
+          <Grid width="100%" align="center">
+            <ButtonTimer dare={dare} handleDone={hideDare} />
+          </Grid>
+        ) : (
+          <Grid width="100%" align="center">
+            <Button
+              style={{ width: "80%" }}
+              title="Готово"
+              onPress={hideDare}
+            />
+          </Grid>
+        )}
       </Grid>
     </Animated.View>
   );
