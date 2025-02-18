@@ -6,18 +6,30 @@ import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
 import { useTheme } from "@/src/shared/hooks/useTheme";
-import React from "react";
+import React, { useEffect } from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
-import { compatibilityFlags } from "react-native-screens";
 
 export default function GamePage() {
   const colors = useTheme();
   const { players } = usePlayerStore();
-  const { currentTurn, currentDare, displayDare, setTurn, showDare, hideDare } =
-    useRouletteGame();
+  const {
+    currentTurn,
+    currentDare,
+    displayDare,
+    groupColors,
+    setTurn,
+    showDare,
+    hideDare,
+    initRandomGroupColors,
+  } = useRouletteGame();
 
-  const segments = convertPlayersToSegments(players);
+  const segments = convertPlayersToSegments(players, groupColors);
+
+  useEffect(() => {
+    console.log("first");
+    initRandomGroupColors();
+  }, []);
 
   const callback = (winner: SegmentType) => {
     console.log(winner);

@@ -2,6 +2,7 @@ import { Dare, DareType, Player } from "@/src/shared/types/globalTypes";
 import { create } from "zustand";
 import { usePackage } from "../Package/usePackage";
 import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
+import { groupsOfColors } from "@/src/shared/config/constants/constants";
 
 interface State {
   moves: { player: Player; dare: Dare }[];
@@ -9,6 +10,8 @@ interface State {
   currentDare: Dare | null;
 
   displayDare: boolean;
+
+  groupColors: [string, string];
 }
 
 interface Actions {
@@ -16,6 +19,7 @@ interface Actions {
 
   showDare: () => void;
   hideDare: () => void;
+  initRandomGroupColors: () => void;
 }
 
 export const useRouletteGame = create<State & Actions>((set) => ({
@@ -23,6 +27,13 @@ export const useRouletteGame = create<State & Actions>((set) => ({
   currentTurn: null,
   currentDare: null,
   displayDare: false,
+  groupColors: groupsOfColors[0],
+
+  initRandomGroupColors: () => {
+    const randomGroupColors =
+      groupsOfColors[getRandomInt(0, groupsOfColors.length)];
+    set((state: State) => ({ groupColors: randomGroupColors }));
+  },
 
   showDare: () => {
     set((state: State) => ({ displayDare: true }));
