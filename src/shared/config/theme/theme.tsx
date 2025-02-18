@@ -86,7 +86,7 @@ export const customTheme: PalitraInterface = {
   },
   text: {
     primary: "#ffffff",
-    secondary: "#6A6A6A",
+    secondary: "#1e1e1e",
     disabled: "#8A8A8A",
     white: "#FFFFFF",
     error: "#FF0000",
