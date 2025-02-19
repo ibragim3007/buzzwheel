@@ -1,4 +1,6 @@
+import { StorageKeys } from "@/src/shared/config/constants/storageKeys";
 import { Player } from "@/src/shared/types/globalTypes";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 
 type State = {
@@ -10,31 +12,47 @@ type Actions = {
 };
 
 export const usePlayerStore = create<State & Actions>((set) => {
+  const initialState: State = { players: [] };
+
+  const loadInitialState = async () => {
+    const storedPlayers = await AsyncStorage.getItem(StorageKeys.players);
+
+    if (storedPlayers) {
+      set({ players: JSON.parse(storedPlayers) });
+    }
+  };
+
+  loadInitialState();
+
   return {
-    players: [],
+    ...initialState,
 
-    updatePlayer: (player: Player) => {
-      set((state) => ({
-        players: state.players.map((p) =>
-          p.id === player.id ? { ...p, ...player } : p
-        ),
-      }));
-    },
-
-    addNewPlayer: (name: string) => {
+    addNewPlayer: async (name: string) => {
       set((state) => {
         const player: Player = {
           id: Date.now(),
           name,
         };
-        return { players: [...state.players, player] };
+
+        const updatedPlayers = [...state.players, player];
+        return { players: updatedPlayers };
       });
     },
 
     deletePlayer: (id: number) => {
-      set((state) => ({
-        players: state.players.filter((player) => player.id !== id),
-      }));
+      set((state) => {
+        const updatedPlayers = state.players.filter(
+          (player) => player.id !== id
+        );
+        return { players: updatedPlayers };
+      });
     },
   };
+});
+
+usePlayerStore.subscribe(async (state) => {
+  await AsyncStorage.setItem(
+    StorageKeys.players,
+    JSON.stringify(state.players)
+  );
 });

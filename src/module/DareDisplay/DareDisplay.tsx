@@ -15,6 +15,7 @@ import { normalizedSize } from "@/src/shared/utils/size";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 import { SvgUri } from "react-native-svg";
 import ButtonTimer from "./ButtonTimer";
+import Header from "@/src/widget/Header";
 
 interface DareDisplayProps {
   dare: Dare;

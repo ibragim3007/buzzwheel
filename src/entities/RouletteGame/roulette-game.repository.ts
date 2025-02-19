@@ -56,6 +56,8 @@ export const useRouletteGame = create<State & Actions>((set) => ({
       )
       .filter((dare) => dare.type === type);
 
+    console.log(getRandomInt(0, availableDares.length));
+
     const randomDare = availableDares[getRandomInt(0, availableDares.length)];
 
     set((state: State) => ({

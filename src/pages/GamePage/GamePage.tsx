@@ -6,6 +6,9 @@ import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import Grid from "@/src/shared/ui/grid/Grid";
+import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
+import Header from "@/src/widget/Header";
 import React, { useEffect } from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
@@ -51,30 +54,42 @@ export default function GamePage() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
+        // justifyContent: "center",
         alignItems: "center",
         backgroundColor: colors.background.primary,
       }}
     >
       {currentDare && displayDare && currentTurn && (
-        <DareDisplay
-          dare={currentDare}
-          hideDare={hideDare}
-          currentTurn={currentTurn}
-          players={players}
-        />
+        <SafeWrapper>
+          <Header back />
+        </SafeWrapper>
       )}
 
-      {!displayDare && (
-        <Animated.View entering={SlideInRight} exiting={SlideOutLeft}>
-          <Roulette
+      <Grid flex={1} justfity="center">
+        {currentDare && displayDare && currentTurn && (
+          <DareDisplay
+            dare={currentDare}
+            hideDare={hideDare}
             currentTurn={currentTurn}
-            segments={segments}
-            options={DefaultRouletteOptions}
-            onCallback={callback}
+            players={players}
           />
-        </Animated.View>
-      )}
+        )}
+
+        {!displayDare && (
+          <Animated.View
+            entering={SlideInRight}
+            exiting={SlideOutLeft}
+            style={{ alignItems: "center" }}
+          >
+            <Roulette
+              currentTurn={currentTurn}
+              segments={segments}
+              options={DefaultRouletteOptions}
+              onCallback={callback}
+            />
+          </Animated.View>
+        )}
+      </Grid>
     </View>
   );
 }
