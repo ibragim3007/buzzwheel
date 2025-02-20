@@ -1,17 +1,16 @@
 import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
+import { Player } from "@/src/shared/types/globalTypes";
+import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
+import Typography from "@/src/shared/ui/typography/Typography";
+import { normalizedSize } from "@/src/shared/utils/size";
 import React, { useEffect } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
-import Svg, { Circle, ClipPath, Defs, G, Mask, Rect } from "react-native-svg";
+import Svg, { Circle, Defs, G, Mask, Rect } from "react-native-svg";
 import CenterCircle from "./CenterCircle/CenterCircle";
 import { useRoulette } from "./hooks/useRoulette";
 import { RouletteSegment } from "./segment/RouletteSegment";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import Button from "@/src/shared/ui/buttons/Button";
-import Typography from "@/src/shared/ui/typography/Typography";
-import { Player } from "@/src/shared/types/globalTypes";
-import { normalizedSize } from "@/src/shared/utils/size";
 
 interface RouletteProps {
   segments: SegmentType[];

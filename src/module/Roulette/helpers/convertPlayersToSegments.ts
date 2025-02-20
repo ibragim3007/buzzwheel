@@ -21,7 +21,7 @@ const color2Segment = "#350";
 
 export function convertPlayersToSegments(
   players: Player[],
-  colorGroup: [string, string]
+  colorGroup: [string, string, string]
 ): SegmentType[] {
   const totalSegments = players.length < 4 ? 8 : players.length * 2 + 2;
   const allSemgents = 2;
@@ -41,7 +41,7 @@ export function convertPlayersToSegments(
   const allSegment: SegmentType = {
     id: 0,
     label: "Все",
-    color: "#232323",
+    color: colorGroup[2],
     type: "all",
   };
   const step = Math.floor(totalSegments / allSemgents);

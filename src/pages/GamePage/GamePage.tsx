@@ -1,11 +1,13 @@
 import { usePlayerStore } from "@/src/entities/Player/player.store";
 import { SegmentType } from "@/src/entities/Roulette/types";
 import { useRouletteGame } from "@/src/entities/RouletteGame/roulette-game.repository";
+import { useSettings } from "@/src/entities/Settings/settings.repository";
 import DareDisplay from "@/src/module/DareDisplay/DareDisplay";
 import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
 import { SettingsGame } from "@/src/module/SettingsGame";
+import { groupsOfColors } from "@/src/shared/config/constants/constants";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import { useVibration } from "@/src/shared/hooks/useVibration";
 import HandleComponent from "@/src/shared/ui/elements/HandleComponent";
@@ -35,11 +37,16 @@ export default function GamePage() {
     initRandomGroupColors,
   } = useRouletteGame();
 
-  const segments = convertPlayersToSegments(players, groupColors);
+  const { rouletteColor } = useSettings();
 
-  useEffect(() => {
-    initRandomGroupColors();
-  }, []);
+  const segments = convertPlayersToSegments(
+    players,
+    rouletteColor?.colors || groupsOfColors[0]
+  );
+
+  // useEffect(() => {
+  //   initRandomGroupColors();
+  // }, []);
 
   const callback = (winner: SegmentType) => {
     if (winner.type === "player") {
