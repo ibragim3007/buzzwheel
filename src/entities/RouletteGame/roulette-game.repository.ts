@@ -50,13 +50,15 @@ export const useRouletteGame = create<State & Actions>((set) => ({
     const availablePackages = usePackage.getState().pickedPackages;
     const allDares = usePackage.getState().data.dares;
 
+    console.log(availablePackages);
+
     const availableDares = allDares
       .filter((dare) =>
         availablePackages.map((aP) => aP.id).includes(dare.package)
       )
       .filter((dare) => dare.type === type);
 
-    console.log(getRandomInt(0, availableDares.length));
+    console.log(availableDares.length);
 
     const randomDare = availableDares[getRandomInt(0, availableDares.length)];
 
