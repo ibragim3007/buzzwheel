@@ -5,20 +5,24 @@ import DareDisplay from "@/src/module/DareDisplay/DareDisplay";
 import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
+import { SettingsGame } from "@/src/module/SettingsGame";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import { useVibration } from "@/src/shared/hooks/useVibration";
+import HandleComponent from "@/src/shared/ui/elements/HandleComponent";
 import Grid from "@/src/shared/ui/grid/Grid";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
+import Typography from "@/src/shared/ui/typography/Typography";
 import Header from "@/src/widget/Header";
-import React, { useEffect, useState } from "react";
-import { View } from "react-native";
+import { BottomSheetModal, BottomSheetView } from "@gorhom/bottom-sheet";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
 export default function GamePage() {
   const colors = useTheme();
   const [isSpinning, setIsSpinning] = useState(false);
-  const onUpdateSpinStatus = (status: boolean) => {
-    setIsSpinning(status);
-  };
+  const onUpdateSpinStatus = (status: boolean) => setIsSpinning(status);
+
   const { players } = usePlayerStore();
   const {
     currentTurn,
@@ -34,12 +38,10 @@ export default function GamePage() {
   const segments = convertPlayersToSegments(players, groupColors);
 
   useEffect(() => {
-    console.log("first");
     initRandomGroupColors();
   }, []);
 
   const callback = (winner: SegmentType) => {
-    console.log(winner);
     if (winner.type === "player") {
       const player = players.find((player) => player.id === winner.id);
       if (player) setTurn(player, winner.type);
@@ -54,12 +56,23 @@ export default function GamePage() {
     }
   };
 
+  const { vibrateMedium } = useVibration();
+
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+  const handlePresentModalPress = useCallback(() => {
+    if (!bottomSheetModalRef.current) return;
+    vibrateMedium();
+    bottomSheetModalRef.current?.present();
+  }, []);
+  const handleSheetChanges = useCallback((index: number) => {
+    console.log("handleSheetChanges", index);
+  }, []);
+
   return (
     <View
       style={{
         flex: 1,
         height: "100%",
-        // justifyContent: "center",
         alignItems: "center",
         backgroundColor: colors.background.primary,
       }}
@@ -67,7 +80,7 @@ export default function GamePage() {
       {!isSpinning && (
         <Grid style={{ position: "absolute", zIndex: 100 }}>
           <SafeWrapper>
-            <Header back />
+            <Header back onPressSettings={handlePresentModalPress} />
           </SafeWrapper>
         </Grid>
       )}
@@ -100,6 +113,23 @@ export default function GamePage() {
           </Animated.View>
         )}
       </Grid>
+      <BottomSheetModal
+        index={1}
+        snapPoints={["40%"]}
+        ref={bottomSheetModalRef}
+        enablePanDownToClose={true}
+        enableHandlePanningGesture={true}
+        enableContentPanningGesture={true}
+        keyboardBehavior="interactive"
+        onChange={handleSheetChanges}
+        handleComponent={HandleComponent}
+        backgroundStyle={{
+          backgroundColor: colors.background.secondary,
+          borderRadius: 20,
+        }}
+      >
+        <SettingsGame />
+      </BottomSheetModal>
     </View>
   );
 }

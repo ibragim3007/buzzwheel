@@ -5,9 +5,13 @@ export function useVibration() {
     Haptics.impactAsync();
   };
 
+  const vibrateMedium = () => {
+    Haptics.notificationAsync();
+  };
+
   const vibrateSelection = () => {
     Haptics.selectionAsync();
   };
 
-  return { vibrate, vibrateSelection };
+  return { vibrate, vibrateSelection, vibrateMedium };
 }

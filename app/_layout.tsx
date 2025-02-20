@@ -13,6 +13,8 @@ import {
   OpenSans_700Bold,
   OpenSans_800ExtraBold,
 } from "@expo-google-fonts/open-sans";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -37,9 +39,13 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider>
-      <StatusBar hidden />
-      <StackRoute />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <BottomSheetModalProvider>
+        <ThemeProvider>
+          <StatusBar hidden />
+          <StackRoute />
+        </ThemeProvider>
+      </BottomSheetModalProvider>
+    </GestureHandlerRootView>
   );
 }
