@@ -58,6 +58,7 @@ export default function GamePage() {
     <View
       style={{
         flex: 1,
+        height: "100%",
         // justifyContent: "center",
         alignItems: "center",
         backgroundColor: colors.background.primary,
@@ -71,14 +72,16 @@ export default function GamePage() {
         </Grid>
       )}
 
-      <Grid flex={1} justfity="center">
+      <Grid justfity="center" align="center" flex={1}>
         {currentDare && displayDare && currentTurn && (
-          <DareDisplay
-            dare={currentDare}
-            hideDare={hideDare}
-            currentTurn={currentTurn}
-            players={players}
-          />
+          <Grid marginTop={50}>
+            <DareDisplay
+              dare={currentDare}
+              hideDare={hideDare}
+              currentTurn={currentTurn}
+              players={players}
+            />
+          </Grid>
         )}
 
         {!displayDare && (

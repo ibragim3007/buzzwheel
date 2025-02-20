@@ -16,6 +16,7 @@ import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 import { SvgUri } from "react-native-svg";
 import ButtonTimer from "./ButtonTimer";
 import Header from "@/src/widget/Header";
+import { Image } from "expo-image";
 
 interface DareDisplayProps {
   dare: Dare;
@@ -42,11 +43,11 @@ export default function DareDisplay({
           padding={30}
           style={{ backgroundColor: colors.text.white, borderRadius: 20 }}
         >
-          <Grid align="center" paddingTop={60}>
+          <Grid align="center" paddingTop={40}>
             <Paper
               style={{
                 position: "absolute",
-                top: -normalizedSize(100),
+                top: -normalizedSize(86),
                 backgroundColor: colors.text.white,
                 borderRadius: 100,
                 shadowColor: "#000",
@@ -57,12 +58,15 @@ export default function DareDisplay({
                   width: 4,
                 },
               }}
-              padding={20}
+              padding={15}
             >
-              <SvgUri
-                height={normalizedSize(100)}
-                width={normalizedSize(100)}
-                uri={getActualImageLink(currentPackage?.imageEncoded || "")}
+              <Image
+                style={{
+                  height: normalizedSize(83),
+                  width: normalizedSize(83),
+                }}
+                source={getActualImageLink(currentPackage?.imageEncoded || "")}
+                contentFit="cover"
               />
             </Paper>
             <Grid space="lg">

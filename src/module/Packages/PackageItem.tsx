@@ -3,12 +3,14 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import { Package } from "@/src/shared/types/globalTypes";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Checked from "@/src/shared/ui/icons/Checked";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { Image } from "expo-image";
 import React from "react";
 import { Pressable } from "react-native";
-import { SvgUri } from "react-native-svg";
+
+const blurhash = "AGN-D]z.oi?^";
 
 interface PackageItemProps {
   pack: Package;
@@ -39,15 +41,12 @@ export default function PackageItem({
         {picked && <Checked />}
         <Grid flex={1} row space="md" align="center">
           <Grid width={75}>
-            <SvgUri
-              height={80}
-              width={80}
-              // source={{ uri: `data:image/png;base64,${pack.imageEncoded}` }}
-              style={{ borderRadius: 5 }}
-              uri={getActualImageLink(pack.imageEncoded)}
-              // source={{
-              //   uri: getActualImageLink(pack.imageEncoded),
-              // }}
+            <Image
+              style={{ height: 80, width: 80, borderRadius: 100 }}
+              contentFit="contain"
+              source={getActualImageLink(pack.imageEncoded)}
+              transition={300}
+              placeholder={{ blurhash }}
             />
           </Grid>
           <Grid space="sm" flex={1}>
