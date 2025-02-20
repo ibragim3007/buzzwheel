@@ -1,8 +1,7 @@
-import { Player } from "@/src/entities/Player/type";
+import { Player } from "@/src/shared/types/globalTypes";
 import Grid from "@/src/shared/ui/grid/Grid";
 import React from "react";
 import PlayerItem from "./PlayerItem";
-import { ScrollView } from "react-native";
 
 interface PlayersProps {
   players: Player[];
@@ -10,12 +9,10 @@ interface PlayersProps {
 
 export default function Players({ players }: PlayersProps) {
   return (
-    <ScrollView style={{ height: 400 }}>
-      <Grid space="md">
-        {players.map((p) => (
-          <PlayerItem key={p.id} player={p} />
-        ))}
-      </Grid>
-    </ScrollView>
+    <Grid space="md">
+      {players.map((p) => (
+        <PlayerItem key={p.id} player={p} />
+      ))}
+    </Grid>
   );
 }

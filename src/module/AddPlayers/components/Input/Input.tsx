@@ -3,7 +3,7 @@ import { fontWeight } from "@/src/shared/styles/typography/typography";
 import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Alert, TextInput } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 interface InputProps {
@@ -14,6 +14,7 @@ export default function Input({ onCall }: InputProps) {
   const colors = useTheme();
 
   const [name, setName] = useState("");
+  const inputRef = useRef<TextInput>(null);
   const onPress = () => {
     if (name.trim() === "") {
       Alert.alert("Name is required");
@@ -21,6 +22,7 @@ export default function Input({ onCall }: InputProps) {
     }
     onCall(name);
     setName("");
+    inputRef.current?.blur();
   };
 
   const handleChangeText = (text: string) => {
@@ -33,6 +35,7 @@ export default function Input({ onCall }: InputProps) {
     <Paper>
       <Grid align="center" row>
         <TextInput
+          ref={inputRef}
           onChangeText={handleChangeText}
           value={name}
           cursorColor={colors.accent.primary}

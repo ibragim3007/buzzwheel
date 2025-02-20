@@ -18,6 +18,7 @@ export default function PackagePage() {
   const onPressPlay = () => {
     navigate("/screens/game");
   };
+
   return (
     <Grid flex={1}>
       <ScrollPageWrapper>

@@ -34,7 +34,7 @@ export const usePlayerStore = create<State & Actions>((set) => {
           name,
         };
 
-        const updatedPlayers = [...state.players, player];
+        const updatedPlayers = [player, ...state.players];
         return { players: updatedPlayers };
       });
     },

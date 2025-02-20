@@ -1,12 +1,16 @@
-import { Player } from "@/src/entities/Player/type";
+import { usePlayerStore } from "@/src/entities/Player/player.store";
+import { CustomAnimations } from "@/src/shared/config/theme/AnimationConfig";
+
+import { useTheme } from "@/src/shared/hooks/useTheme";
+import { Player } from "@/src/shared/types/globalTypes";
+import AnimatedWrapper from "@/src/shared/ui/animations/AnimatedWrapper";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
-import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { usePlayerStore } from "@/src/entities/Player/player.store";
+import React from "react";
 import { Pressable } from "react-native";
+import Animated from "react-native-reanimated";
 
 interface PlayerItemProps {
   player: Player;
@@ -18,21 +22,32 @@ export default function PlayerItem({ player }: PlayerItemProps) {
   const { deletePlayer } = usePlayerStore();
 
   return (
-    <Paper paddingHorizontal={25} paddingVertical={18}>
-      <Grid justfity="space-between" row>
-        <Typography weight="medium" color="primary">
-          {player.name}
-        </Typography>
-        <Pressable
+    <AnimatedWrapper>
+      <Animated.View entering={CustomAnimations.enterItemShow(0)}>
+        <Paper
+          paddingHorizontal={25}
+          paddingVertical={18}
           style={{
-            width: 50,
-            alignItems: "flex-end",
+            backgroundColor: colors.background.primary,
+            borderRadius: 30,
           }}
-          onPress={() => deletePlayer(player.id)}
         >
-          <Ionicons name="close" size={26} color={colors.text.primary} />
-        </Pressable>
-      </Grid>
-    </Paper>
+          <Grid justfity="space-between" row>
+            <Typography weight="medium" color="primary">
+              {player.name}
+            </Typography>
+            <Pressable
+              style={{
+                width: 50,
+                alignItems: "flex-end",
+              }}
+              onPress={() => deletePlayer(player.id)}
+            >
+              <Ionicons name="close" size={26} color={colors.text.primary} />
+            </Pressable>
+          </Grid>
+        </Paper>
+      </Animated.View>
+    </AnimatedWrapper>
   );
 }
