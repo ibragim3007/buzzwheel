@@ -9,12 +9,16 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import Grid from "@/src/shared/ui/grid/Grid";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import Header from "@/src/widget/Header";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
 export default function GamePage() {
   const colors = useTheme();
+  const [isSpinning, setIsSpinning] = useState(false);
+  const onUpdateSpinStatus = (status: boolean) => {
+    setIsSpinning(status);
+  };
   const { players } = usePlayerStore();
   const {
     currentTurn,
@@ -59,10 +63,12 @@ export default function GamePage() {
         backgroundColor: colors.background.primary,
       }}
     >
-      {currentDare && displayDare && currentTurn && (
-        <SafeWrapper>
-          <Header back />
-        </SafeWrapper>
+      {!isSpinning && (
+        <Grid style={{ position: "absolute", zIndex: 100 }}>
+          <SafeWrapper>
+            <Header back />
+          </SafeWrapper>
+        </Grid>
       )}
 
       <Grid flex={1} justfity="center">
@@ -86,6 +92,7 @@ export default function GamePage() {
               segments={segments}
               options={DefaultRouletteOptions}
               onCallback={callback}
+              onChangeSpinStatus={onUpdateSpinStatus}
             />
           </Animated.View>
         )}

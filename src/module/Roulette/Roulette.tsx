@@ -1,6 +1,6 @@
 import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
 import Grid from "@/src/shared/ui/grid/Grid";
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Circle, ClipPath, Defs, G, Mask, Rect } from "react-native-svg";
@@ -18,6 +18,7 @@ interface RouletteProps {
   options: RouletteOptions;
   currentTurn: Player | null;
   onCallback: (winner: SegmentType) => void;
+  onChangeSpinStatus?: (isSpinning: boolean) => void;
 }
 
 const Roulette = ({
@@ -25,26 +26,20 @@ const Roulette = ({
   options,
   currentTurn,
   onCallback,
+  onChangeSpinStatus,
 }: RouletteProps) => {
   const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
-  const colors = useTheme();
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
     useRoulette(segments, onCallback);
 
+  useEffect(() => {
+    if (onChangeSpinStatus) onChangeSpinStatus(isSpinning);
+  }, [isSpinning]);
+
   return (
-    <View
-      style={[
-        {
-          // backgroundColor: colors.background.primary,
-        },
-        styles.container,
-      ]}
-    >
+    <View style={[styles.container]}>
       {currentTurn && (
-        <Animated.View
-          entering={FadeIn}
-          // style={{  }}
-        >
+        <Animated.View entering={FadeIn}>
           <Grid>
             <Typography weight="medium" variant="title-1">
               Are you ready{" "}
@@ -56,6 +51,7 @@ const Roulette = ({
           </Grid>
         </Animated.View>
       )}
+
       <Animated.View
         style={[
           { height: WHEEL_SIZE, width: WHEEL_SIZE },
