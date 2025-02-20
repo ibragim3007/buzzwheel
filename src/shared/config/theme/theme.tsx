@@ -80,7 +80,7 @@ export const customTheme: PalitraInterface = {
   theme: "custom",
   accent: {
     primary: "#FF8D22",
-    secondary: "#FFA500",
+    secondary: "#ef2fb9",
     tertiary: "#FF6347",
     quaternary: "#FF4500",
   },

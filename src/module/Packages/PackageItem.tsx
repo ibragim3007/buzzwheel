@@ -3,7 +3,7 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import { Package } from "@/src/shared/types/globalTypes";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Checked from "@/src/shared/ui/icons/Checked";
-
+import AntDesign from "@expo/vector-icons/AntDesign";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
 import React from "react";
@@ -51,10 +51,38 @@ export default function PackageItem({
             />
           </Grid>
           <Grid space="sm" flex={1}>
-            <Typography variant="headline" weight="bold">
-              {pack.name}
-            </Typography>
-            <Typography variant="callout" numberOfLines={3}>
+            <Grid>
+              <Typography variant="headline" weight="bold">
+                {pack.name}
+              </Typography>
+              {pack.packageType === "pair" && (
+                <Grid row space="sm" align="center">
+                  <AntDesign
+                    name="heart"
+                    size={12}
+                    color={colors.accent.secondary}
+                  />
+                  <Typography
+                    weight="medium"
+                    style={{
+                      color: colors.accent.secondary,
+                      shadowColor: colors.accent.secondary,
+                      shadowOpacity: 0.8,
+                      shadowRadius: 6,
+                      lineHeight: 19,
+                      shadowOffset: {
+                        width: 0,
+                        height: 1,
+                      },
+                    }}
+                    variant="footnote"
+                  >
+                    Для двоих
+                  </Typography>
+                </Grid>
+              )}
+            </Grid>
+            <Typography variant="footnote" numberOfLines={3}>
               {pack.description}
             </Typography>
           </Grid>

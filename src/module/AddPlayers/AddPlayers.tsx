@@ -38,7 +38,6 @@ export default function AddPlayers() {
             height: normalizedSize(360),
             backgroundColor: colors.background.secondary,
             paddingHorizontal: 10,
-            // paddingVertical: 20,
             borderRadius: 40,
           }}
         >

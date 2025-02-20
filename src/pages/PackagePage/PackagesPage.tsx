@@ -2,6 +2,7 @@ import { usePackage } from "@/src/entities/Package/usePackage";
 import Packages from "@/src/module/Packages/Packages";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
+import GradientShadow from "@/src/shared/ui/elements/GradientShadow";
 import Grid from "@/src/shared/ui/grid/Grid";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import ScrollPageWrapper from "@/src/shared/ui/layout/ScrollPageWrapper";
@@ -33,21 +34,29 @@ export default function PackagePage() {
           </Grid>
         </SafeWrapper>
       </ScrollPageWrapper>
+
       {pickedPackages.length > 0 && (
-        <Grid
-          align="center"
-          justfity="center"
-          style={{
-            position: "absolute",
-            bottom: 40,
-            width: "100%",
-            shadowColor: colors.accent.primary,
-            shadowOpacity: 1,
-            shadowRadius: 60,
-          }}
-        >
-          <Button onPress={onPressPlay} title="Play" style={{ width: "70%" }} />
-        </Grid>
+        <>
+          <GradientShadow color={colors.accent.primary} height={320} />
+          <Grid
+            align="center"
+            justfity="center"
+            style={{
+              position: "absolute",
+              bottom: 40,
+              width: "100%",
+              // shadowColor: colors.accent.primary,
+              // shadowOpacity: 1,
+              // shadowRadius: 60,
+            }}
+          >
+            <Button
+              onPress={onPressPlay}
+              title="Play"
+              style={{ width: "70%" }}
+            />
+          </Grid>
+        </>
       )}
     </Grid>
   );

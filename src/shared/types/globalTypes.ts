@@ -13,11 +13,12 @@ export type LANGUAGE =
   | "cs";
 
 export type DareType = "player" | "all";
+export type PackageType = "default" | "pair";
 
 export interface Package {
   readonly id: number;
   readonly name: string;
-  readonly packageType: string;
+  readonly packageType: PackageType;
   readonly description: string;
   readonly imageEncoded: string;
   readonly isFree: boolean;
