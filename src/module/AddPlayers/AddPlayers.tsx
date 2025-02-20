@@ -7,7 +7,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import React from "react";
-import { ScrollView } from "react-native";
+import { Alert, ScrollView } from "react-native";
 import Input from "./components/Input/Input";
 import Players from "./components/Players/Players";
 
@@ -16,7 +16,12 @@ export default function AddPlayers() {
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
 
+  const isEnoughPlayers = players.length >= 2;
   const onPressStart = () => {
+    if (!isEnoughPlayers) {
+      Alert.alert("Add at least 2 players to start the game");
+      return;
+    }
     navigate("/screens/packages");
   };
 
@@ -27,24 +32,27 @@ export default function AddPlayers() {
       <Grid style={{ overflow: "hidden", position: "relative" }}>
         <ScrollView
           scrollIndicatorInsets={{ top: 40, bottom: 40 }}
+          indicatorStyle="black"
+          contentContainerStyle={{ paddingVertical: 15 }}
           style={{
             height: normalizedSize(360),
             backgroundColor: colors.background.secondary,
-            paddingHorizontal: 15,
-            paddingVertical: 20,
-            borderRadius: 30,
+            paddingHorizontal: 10,
+            // paddingVertical: 20,
+            borderRadius: 40,
           }}
         >
           <Players players={players} />
         </ScrollView>
         <LinearGradient
-          colors={["transparent", "rgba(0, 0, 0, 0.4)"]} // Цвет тени
+          colors={["transparent", colors.background.primary]} // Цвет тени
           style={{
             position: "absolute",
             bottom: 0,
             left: 0,
             right: 0,
-            height: 30, // Высота тени
+            opacity: 0.3,
+            height: 60, // Высота тени
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
           }}
@@ -57,6 +65,11 @@ export default function AddPlayers() {
         title={`Start Game ${
           players.length ? `(${players.length} players)` : ""
         }`}
+        style={{
+          backgroundColor: isEnoughPlayers
+            ? colors.accent.primary
+            : colors.background.secondary,
+        }}
         startIcon={
           <Ionicons name="play" size={24} color={colors.text.primary} />
         }

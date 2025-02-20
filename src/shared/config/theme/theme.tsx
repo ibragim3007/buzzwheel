@@ -93,8 +93,8 @@ export const customTheme: PalitraInterface = {
     success: "#00FF00",
   },
   background: {
-    primary: "#4a235a",
-    secondary: "#36124D",
+    primary: "#101116",
+    secondary: "#1D1E2A",
     tertiary: "#dedede",
     quaternary: "#4F4F4F",
     error: "#FF0000",

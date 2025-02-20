@@ -23,7 +23,10 @@ export default function PlayerItem({ player }: PlayerItemProps) {
 
   return (
     <AnimatedWrapper>
-      <Animated.View entering={CustomAnimations.enterItemShow(0)}>
+      <Animated.View
+        entering={CustomAnimations.enterItemShow(0)}
+        exiting={CustomAnimations.exitItemShow(0)}
+      >
         <Paper
           paddingHorizontal={25}
           paddingVertical={18}
