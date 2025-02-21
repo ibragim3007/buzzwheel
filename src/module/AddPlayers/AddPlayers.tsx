@@ -51,7 +51,7 @@ export default function AddPlayers() {
             left: 0,
             right: 0,
             opacity: 0.3,
-            height: 60, // Высота тени
+            height: 60,
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
           }}

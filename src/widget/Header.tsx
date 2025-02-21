@@ -3,6 +3,8 @@ import Grid from "../shared/ui/grid/Grid";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useTheme } from "../shared/hooks/useTheme";
 import { useNavigation, useRouter } from "expo-router";
+import WrapIconInCircle from "../shared/ui/wrapper/WrapIconInCircle";
+import WrapIconInPressable from "../shared/ui/wrapper/WrapIconInPressable";
 
 interface HeaderProps {
   back?: boolean;
@@ -20,19 +22,18 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
     <Grid>
       {back ? (
         <Grid width="100%" row justfity="space-between">
-          <Ionicons
-            onPress={onPressBack}
-            name="arrow-back"
-            size={24}
-            color={colors.text.primary}
-          />
+          <WrapIconInPressable onPress={onPressBack}>
+            <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
+          </WrapIconInPressable>
+
           {onPressSettings && (
-            <Ionicons
-              name="settings-sharp"
-              size={24}
-              color={colors.text.primary}
-              onPress={onPressSettings}
-            />
+            <WrapIconInPressable onPress={onPressSettings}>
+              <Ionicons
+                name="settings-sharp"
+                size={24}
+                color={colors.text.primary}
+              />
+            </WrapIconInPressable>
           )}
         </Grid>
       ) : (
