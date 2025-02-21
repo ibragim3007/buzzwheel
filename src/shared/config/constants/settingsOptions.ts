@@ -1,8 +1,11 @@
 import {
+  autumnTheme,
+  beachTheme,
+  christmasTheme,
   customTheme,
-  darkTheme,
-  lightTheme,
+  loveTheme,
   PalitraInterface,
+  summerTheme,
 } from "../theme/theme";
 
 export interface IAvailableColor {
@@ -44,5 +47,12 @@ export const SettingsConstants: ISettings = {
       isFree: false,
     },
   ],
-  themes: [customTheme, darkTheme, lightTheme],
+  themes: [
+    customTheme,
+    beachTheme,
+    christmasTheme,
+    loveTheme,
+    autumnTheme,
+    summerTheme,
+  ],
 };

@@ -15,12 +15,12 @@ class Storage {
     );
   }
 
-  async getTheme(): Promise<PalitraInterface | null> {
+  async getTheme(): Promise<number | null> {
     const value = await AsyncStorage.getItem(StorageKeys.theme);
     return value ? JSON.parse(value) : null;
   }
 
-  async setTheme(value: PalitraInterface) {
+  async setTheme(value: number) {
     await AsyncStorage.setItem(StorageKeys.theme, JSON.stringify(value));
   }
 }

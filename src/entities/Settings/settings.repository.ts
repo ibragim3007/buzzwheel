@@ -27,7 +27,11 @@ export const useSettings = create<State & Actions>((set) => {
 
   const loadInitialState = async () => {
     const storedRouletteColor = await LocalStorage.getRouletteColor();
-    const storedTheme = await LocalStorage.getTheme();
+    const storedThemeId = await LocalStorage.getTheme();
+
+    const storedTheme = SettingsConstants.themes.find(
+      (t) => t.id === storedThemeId
+    );
 
     if (storedRouletteColor) {
       set({
@@ -51,5 +55,5 @@ useSettings.subscribe(async (state) => {
   if (state.rouletteColor)
     await LocalStorage.setRouletteColor(state.rouletteColor);
 
-  if (state.theme) await LocalStorage.setTheme(state.theme);
+  if (state.theme) await LocalStorage.setTheme(state.theme.id);
 });

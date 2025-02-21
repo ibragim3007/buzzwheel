@@ -19,11 +19,15 @@ export default function ThemePicker() {
     vibrateSelection();
   };
 
+  const initialScrollIndex =
+    SettingsConstants.themes.findIndex((t) => t.id === colors.id) || 0;
+
   return (
     <Grid>
       <HorizontalListPicker
         ITEM_SIZE={100}
         data={SettingsConstants.themes}
+        initialScrollIndex={initialScrollIndex}
         renderItem={({ item, index }) => {
           const isPicked = colors.id === item.id;
           return (
