@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IAvailableColor } from "../config/constants/settingsOptions";
 import { StorageKeys } from "../config/constants/storageKeys";
+import { PalitraInterface } from "../config/theme/theme";
 
 class Storage {
   async getRouletteColor(): Promise<IAvailableColor | null> {
@@ -12,6 +13,15 @@ class Storage {
       StorageKeys.pickedRoulleteColors,
       JSON.stringify(value)
     );
+  }
+
+  async getTheme(): Promise<PalitraInterface | null> {
+    const value = await AsyncStorage.getItem(StorageKeys.theme);
+    return value ? JSON.parse(value) : null;
+  }
+
+  async setTheme(value: PalitraInterface) {
+    await AsyncStorage.setItem(StorageKeys.theme, JSON.stringify(value));
   }
 }
 
