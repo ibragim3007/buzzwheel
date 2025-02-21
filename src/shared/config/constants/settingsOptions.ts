@@ -1,3 +1,10 @@
+import {
+  customTheme,
+  darkTheme,
+  lightTheme,
+  PalitraInterface,
+} from "../theme/theme";
+
 export interface IAvailableColor {
   id: number;
   isFree: boolean;
@@ -6,6 +13,7 @@ export interface IAvailableColor {
 
 export interface ISettings {
   availableColors: IAvailableColor[];
+  themes: PalitraInterface[];
 }
 
 export const SettingsConstants: ISettings = {
@@ -36,4 +44,5 @@ export const SettingsConstants: ISettings = {
       isFree: false,
     },
   ],
+  themes: [customTheme, darkTheme, lightTheme],
 };

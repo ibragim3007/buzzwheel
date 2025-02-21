@@ -1,4 +1,5 @@
 export type PalitraInterface = {
+  id: number;
   theme: "light" | "dark" | "custom";
   accent: {
     primary: string;
@@ -25,6 +26,7 @@ export type PalitraInterface = {
 };
 
 export const darkTheme: PalitraInterface = {
+  id: 1,
   theme: "dark",
   accent: {
     primary: "#384dea",
@@ -51,6 +53,7 @@ export const darkTheme: PalitraInterface = {
 };
 
 export const lightTheme: PalitraInterface = {
+  id: 2,
   theme: "light",
   accent: {
     primary: "#4259FF",
@@ -77,6 +80,7 @@ export const lightTheme: PalitraInterface = {
 };
 
 export const customTheme: PalitraInterface = {
+  id: 3,
   theme: "custom",
   accent: {
     primary: "#FF8D22",

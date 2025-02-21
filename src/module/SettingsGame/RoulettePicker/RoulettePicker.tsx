@@ -8,9 +8,10 @@ import { useTheme } from "@/src/shared/hooks/useTheme";
 import { useVibration } from "@/src/shared/hooks/useVibration";
 import SmallRoulette from "@/src/shared/ui/elements/SmallRoulette";
 import Grid from "@/src/shared/ui/grid/Grid";
+import HorizontalListPicker from "@/src/shared/ui/layout/HorizontalListPicker";
 import { normalizedSize } from "@/src/shared/utils/size";
 import React from "react";
-import { FlatList, Pressable } from "react-native";
+import { Pressable } from "react-native";
 
 const generateSegmentsMock = (
   colors: [string, string, string]
@@ -70,58 +71,41 @@ export default function RoulettePicker() {
     ) || 0;
 
   return (
-    <Grid
-      row
-      space="md"
-      color={colors.background.primary}
-      style={{ borderRadius: 20 }}
-    >
-      <FlatList
-        data={SettingsConstants.availableColors}
-        horizontal
-        keyExtractor={(item) => item.colors.join("")}
-        initialScrollIndex={initialScrollIndex}
-        snapToInterval={50}
-        contentContainerStyle={{ padding: 8 }}
-        decelerationRate={0}
-        getItemLayout={(data, index) => ({
-          length: WHEEL_SIZE,
-          offset: WHEEL_SIZE * index,
-          index,
-        })}
-        showsHorizontalScrollIndicator={false}
-        ItemSeparatorComponent={() => <Grid width={10} />}
-        renderItem={({ item, index }) => {
-          const isPicked = item.id === rouletteColor?.id;
-
-          return (
-            <Pressable onPress={() => onRouletteColorChange(item)}>
-              <Grid
-                color={isPicked ? colors.background.secondary : "transparent"}
-                padding={5}
-                style={{
-                  borderRadius: 20,
-                  borderWidth: 1,
-                  borderColor: isPicked ? "#ffffff23" : "transparent",
+    <HorizontalListPicker
+      data={SettingsConstants.availableColors}
+      keyExtractor={(item) => item.colors.join("")}
+      initialScrollIndex={initialScrollIndex}
+      snapToInterval={50}
+      ITEM_SIZE={WHEEL_SIZE}
+      renderItem={({ item, index }) => {
+        const isPicked = item.id === rouletteColor?.id;
+        return (
+          <Pressable onPress={() => onRouletteColorChange(item)}>
+            <Grid
+              color={isPicked ? colors.background.secondary : "transparent"}
+              padding={5}
+              style={{
+                borderRadius: 20,
+                borderWidth: 1,
+                borderColor: isPicked ? "#ffffff23" : "transparent",
+              }}
+            >
+              <SmallRoulette
+                segments={generateSegmentsMock(item.colors)}
+                options={{
+                  TOTAL_SIZE,
+                  BORDER_WIDTH,
+                  CENTER,
+                  WHEEL_SIZE,
+                  EXTRA_PADDING,
+                  RADIUS,
+                  TEXT_RADIUS,
                 }}
-              >
-                <SmallRoulette
-                  segments={generateSegmentsMock(item.colors)}
-                  options={{
-                    TOTAL_SIZE,
-                    BORDER_WIDTH,
-                    CENTER,
-                    WHEEL_SIZE,
-                    EXTRA_PADDING,
-                    RADIUS,
-                    TEXT_RADIUS,
-                  }}
-                />
-              </Grid>
-            </Pressable>
-          );
-        }}
-      />
-    </Grid>
+              />
+            </Grid>
+          </Pressable>
+        );
+      }}
+    />
   );
 }

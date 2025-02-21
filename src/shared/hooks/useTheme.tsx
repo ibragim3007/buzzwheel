@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { ThemeContext } from "../providers/ThemeProvider";
+import { useSettings } from "@/src/entities/Settings/settings.repository";
 
 export function useTheme() {
-  const theme = useContext(ThemeContext);
+  const { theme } = useSettings();
 
   if (!theme) {
     throw new Error("useTheme must be used within a ThemeProvider");
