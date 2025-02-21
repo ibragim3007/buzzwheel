@@ -20,12 +20,14 @@ export default function Packages() {
     <Grid space="md">
       {data.packages.map((pack) => {
         const isPicked = pickedPackages.map((pM) => pM.id).includes(pack.id);
+        const amountOfDares = data.dares.filter((d) => d.package === pack.id);
         return (
           <PackageItem
             onPress={onTogglePackage}
             picked={isPicked}
             key={pack.id}
             pack={pack}
+            amountOfDares={amountOfDares.length}
           />
         );
       })}

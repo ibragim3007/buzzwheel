@@ -15,12 +15,14 @@ const blurhash = "AGN-D]z.oi?^";
 interface PackageItemProps {
   pack: Package;
   picked: boolean;
+  amountOfDares?: number;
   onPress: (pack: Package) => void;
 }
 
 export default function PackageItem({
   pack,
   picked,
+  amountOfDares,
   onPress,
 }: PackageItemProps) {
   const colors = useTheme();
@@ -52,7 +54,7 @@ export default function PackageItem({
           <Grid space="sm" flex={1}>
             <Grid>
               <Typography variant="headline" weight="bold">
-                {pack.name}
+                {pack.name} {`(${amountOfDares})`}
               </Typography>
               {pack.packageType === "pair" && (
                 <Grid row space="sm" align="center">
