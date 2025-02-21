@@ -20,6 +20,7 @@ export default function HomePage() {
             Add players to start the fun!
           </Typography>
         </Grid>
+
         <AddPlayers />
       </Grid>
     </SafeWrapper>

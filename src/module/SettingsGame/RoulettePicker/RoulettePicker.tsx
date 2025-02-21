@@ -31,14 +31,14 @@ const generateSegmentsMock = (
     },
     { color: colors[2], label: "", id: 2, type: "player" },
     {
-      color: colors[0],
+      color: colors[1],
       label: "",
       id: 3,
       type: "player",
     },
-    { color: colors[1], label: "", id: 2, type: "player" },
+    { color: colors[0], label: "", id: 2, type: "player" },
     {
-      color: colors[0],
+      color: colors[1],
       label: "",
       id: 4,
       type: "player",
@@ -51,7 +51,7 @@ const EXTRA_PADDING = normalizedSize(0); // Дополнительное про�
 const WHEEL_SIZE = normalizedSize(100); // Размер рулетки
 const CENTER = WHEEL_SIZE / 2; // Центр рулетки
 const RADIUS = CENTER - 9; // Радиус рулетки
-const TEXT_RADIUS = CENTER * 0.66; // Радиус для текста (уменьшен для визуального эффекта)
+const TEXT_RADIUS = CENTER * 0.6; // Радиус для текста (уменьшен для визуального эффекта)
 const BORDER_WIDTH = normalizedSize(15);
 const TOTAL_SIZE = WHEEL_SIZE + BORDER_WIDTH; // Размер SVG с учётом обводки
 
@@ -64,6 +64,11 @@ export default function RoulettePicker() {
     setRouletteColors(color);
   };
 
+  const initialScrollIndex =
+    SettingsConstants.availableColors.findIndex(
+      (item) => item.id === rouletteColor?.id
+    ) || 0;
+
   return (
     <Grid
       row
@@ -75,9 +80,15 @@ export default function RoulettePicker() {
         data={SettingsConstants.availableColors}
         horizontal
         keyExtractor={(item) => item.colors.join("")}
+        initialScrollIndex={initialScrollIndex}
         snapToInterval={50}
         contentContainerStyle={{ padding: 8 }}
         decelerationRate={0}
+        getItemLayout={(data, index) => ({
+          length: WHEEL_SIZE,
+          offset: WHEEL_SIZE * index,
+          index,
+        })}
         showsHorizontalScrollIndicator={false}
         ItemSeparatorComponent={() => <Grid width={10} />}
         renderItem={({ item, index }) => {

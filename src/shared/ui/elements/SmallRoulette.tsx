@@ -1,13 +1,8 @@
 import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
-import CenterCircle from "@/src/module/Roulette/CenterCircle/CenterCircle";
 import { RouletteSegment } from "@/src/module/Roulette/segment/RouletteSegment";
-import { Player } from "@/src/shared/types/globalTypes";
-import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
-import { normalizedSize } from "@/src/shared/utils/size";
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import Animated from "react-native-reanimated";
 import Svg, { Circle, Defs, G, Mask, Rect } from "react-native-svg";
 
 interface SmallRouletteProps {
