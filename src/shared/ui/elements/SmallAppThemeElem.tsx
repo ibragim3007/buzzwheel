@@ -16,35 +16,45 @@ export default function SmallAppThemeElem({ theme }: SmallAppThemeElemProps) {
       paddingHorizontal={10}
       paddingVertical={10}
       style={{
-        borderRadius: 10,
+        borderRadius: 20,
         borderWidth: 1,
         borderColor: theme.accent.primary,
       }}
     >
       <Grid
         width="100%"
-        height={10}
+        height={8}
         color={theme.accent.primary}
-        style={{ borderRadius: 10 }}
+        style={{
+          borderRadius: 10,
+        }}
       />
       <Grid
         width="100%"
-        height={40}
+        height={45}
         color={theme.background.secondary}
         paddingVertical={5}
         paddingHorizontal={5}
+        style={{ borderRadius: 12 }}
+        gap={3}
       >
         <Grid
-          width="80%"
-          height={10}
-          color={theme.accent.secondary}
+          width="70%"
+          height={8}
+          color={theme.text.primary}
+          style={{ borderRadius: 10 }}
+        />
+        <Grid
+          width="40%"
+          height={8}
+          color={theme.text.primary}
           style={{ borderRadius: 10 }}
         />
       </Grid>
 
       <Grid
         width="100%"
-        height={15}
+        height={13}
         color={theme.accent.primary}
         style={{ borderRadius: 10 }}
       />
