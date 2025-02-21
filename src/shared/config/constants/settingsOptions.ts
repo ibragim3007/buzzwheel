@@ -30,5 +30,10 @@ export const SettingsConstants: ISettings = {
       colors: ["#FFAEBC", "#fa26a0", "#232323"],
       isFree: false,
     },
+    {
+      id: 5,
+      colors: ["#2e8bc0", "#145da0", "#0c2d48"],
+      isFree: false,
+    },
   ],
 };

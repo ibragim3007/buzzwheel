@@ -5,6 +5,7 @@ import {
   SettingsConstants,
 } from "@/src/shared/config/constants/settingsOptions";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import { useVibration } from "@/src/shared/hooks/useVibration";
 import SmallRoulette from "@/src/shared/ui/elements/SmallRoulette";
 import Grid from "@/src/shared/ui/grid/Grid";
 import { normalizedSize } from "@/src/shared/utils/size";
@@ -57,8 +58,9 @@ const TOTAL_SIZE = WHEEL_SIZE + BORDER_WIDTH; // Размер SVG с учёто�
 export default function RoulettePicker() {
   const colors = useTheme();
   const { rouletteColor, setRouletteColors } = useSettings();
-
+  const { vibrateSelection } = useVibration();
   const onRouletteColorChange = (color: IAvailableColor) => {
+    if (rouletteColor?.id !== color.id) vibrateSelection();
     setRouletteColors(color);
   };
 
@@ -67,7 +69,6 @@ export default function RoulettePicker() {
       row
       space="md"
       color={colors.background.primary}
-      padding={7}
       style={{ borderRadius: 20 }}
     >
       <FlatList
@@ -75,17 +76,23 @@ export default function RoulettePicker() {
         horizontal
         keyExtractor={(item) => item.colors.join("")}
         snapToInterval={50}
+        contentContainerStyle={{ padding: 8 }}
         decelerationRate={0}
+        showsHorizontalScrollIndicator={false}
         ItemSeparatorComponent={() => <Grid width={10} />}
         renderItem={({ item, index }) => {
           const isPicked = item.id === rouletteColor?.id;
-          console.log(isPicked);
+
           return (
             <Pressable onPress={() => onRouletteColorChange(item)}>
               <Grid
                 color={isPicked ? colors.background.secondary : "transparent"}
                 padding={5}
-                style={{ borderRadius: 20 }}
+                style={{
+                  borderRadius: 20,
+                  borderWidth: 1,
+                  borderColor: isPicked ? "#ffffff23" : "transparent",
+                }}
               >
                 <SmallRoulette
                   segments={generateSegmentsMock(item.colors)}
