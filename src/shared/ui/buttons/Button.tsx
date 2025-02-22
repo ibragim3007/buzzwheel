@@ -3,13 +3,20 @@ import { Pressable, PressableProps, StyleSheet } from "react-native";
 import Typography from "../typography/Typography";
 import { useTheme } from "../../hooks/useTheme";
 import Grid from "../grid/Grid";
+import { TypographyProps } from "../../styles/typography/typography";
 
 interface ButtonProps extends PressableProps {
   title: string;
   startIcon?: React.ReactNode;
+  textStyle?: TypographyProps;
 }
 
-export default function Button({ title, startIcon, ...props }: ButtonProps) {
+export default function Button({
+  title,
+  startIcon,
+  textStyle,
+  ...props
+}: ButtonProps) {
   const colors = useTheme();
 
   const styles = StyleSheet.flatten([
@@ -29,7 +36,7 @@ export default function Button({ title, startIcon, ...props }: ButtonProps) {
         <Typography
           variant="title-3"
           textAlign="center"
-          style={{ color: colors.text.primary }}
+          style={[{ color: colors.text.primary }, textStyle?.style]}
           weight="bold"
         >
           {title}

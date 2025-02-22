@@ -7,12 +7,12 @@ export default function WrapIconInCircle({ ...props }: PressableProps) {
   return (
     <Pressable
       style={{
-        borderWidth: 3,
+        borderWidth: 1,
         borderRadius: 100,
-        padding: 4,
-        width: 60,
-        height: 60,
-        borderColor: colors.accent.primary,
+        padding: 0,
+        width: 50,
+        height: 50,
+        borderColor: colors.accent.secondary,
         alignItems: "center",
         justifyContent: "center",
       }}

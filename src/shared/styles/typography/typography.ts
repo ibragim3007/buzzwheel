@@ -25,7 +25,8 @@ export type TColor =
   | "disabled"
   | "white"
   | "error"
-  | "success";
+  | "success"
+  | "secondary-accent";
 export type TTextAlign = "auto" | "left" | "right" | "center" | "justify";
 export interface TypographyProps extends TextProps {
   variant?: TypographyVariants;
@@ -81,6 +82,9 @@ export const getColorsStyles = (
   },
   success: {
     color: colors.text.secondary,
+  },
+  "secondary-accent": {
+    color: colors.accent.secondary,
   },
 });
 

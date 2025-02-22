@@ -12,11 +12,11 @@ import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
 import { normalizedSize } from "@/src/shared/utils/size";
-import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
-import { SvgUri } from "react-native-svg";
-import ButtonTimer from "./ButtonTimer";
-import Header from "@/src/widget/Header";
 import { Image } from "expo-image";
+import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
+import ButtonTimer from "./ButtonTimer";
+import GradientShadow from "@/src/shared/ui/elements/GradientShadow";
+import ButtomTimerInCard from "./ButtomTimerInCard";
 
 interface DareDisplayProps {
   dare: Dare;
@@ -37,53 +37,70 @@ export default function DareDisplay({
 
   return (
     <Animated.View entering={SlideInRight} exiting={SlideOutLeft}>
-      <Grid space="lg">
+      <Grid gap={90}>
         <Paper
           marginHorizontal={HORIZONTAL_PADDINGS}
           padding={30}
-          style={{ backgroundColor: colors.text.white, borderRadius: 20 }}
+          paddingBottom={40}
+          style={{
+            backgroundColor: colors.text.white,
+            borderRadius: 40,
+          }}
         >
-          <Grid align="center" paddingTop={40}>
-            <Paper
+          <GradientShadow
+            secondColor={colors.text.white}
+            height={50}
+            color={colors.accent.primary}
+          />
+
+          <Grid align="center" paddingBottom={30} space="md">
+            {dare.time && (
+              <Grid width="100%">
+                <ButtomTimerInCard dare={dare} handleDone={hideDare} />
+              </Grid>
+            )}
+
+            {/* <Paper
               style={{
                 position: "absolute",
-                top: -normalizedSize(86),
-                backgroundColor: colors.text.white,
+                bottom: -70,
+                left: "-15%",
+                transform: [{ rotate: "15deg" }],
+                backgroundColor: colors.text.primary,
                 borderRadius: 100,
-                shadowColor: "#000",
-                shadowOpacity: 0.1,
-                shadowRadius: 6,
+                shadowColor: colors.background.primary,
+                shadowOpacity: 0.2,
+                shadowRadius: 10,
                 shadowOffset: {
-                  height: 5,
-                  width: 4,
+                  height: -3,
+                  width: 0,
                 },
               }}
-              padding={15}
+              padding={5}
             >
               <Image
                 style={{
-                  height: normalizedSize(83),
-                  width: normalizedSize(83),
+                  height: normalizedSize(50),
+                  width: normalizedSize(50),
                 }}
                 source={getActualImageLink(currentPackage?.imageEncoded || "")}
                 contentFit="cover"
               />
-            </Paper>
+            </Paper> */}
             <Grid space="lg">
-              <Grid>
-                <Typography
-                  variant="title-2"
-                  weight="bold"
-                  color="secondary"
-                  textAlign="center"
-                >
-                  {dare.title}
-                </Typography>
-              </Grid>
+              <Typography
+                variant="title-2"
+                weight="bold"
+                color="secondary"
+                textAlign="center"
+              >
+                {dare.title}
+              </Typography>
+
               <Typography
                 style={{ lineHeight: 26 }}
                 textAlign="center"
-                weight="bold"
+                weight="medium"
                 color="secondary"
               >
                 {updatedArray(
@@ -95,19 +112,15 @@ export default function DareDisplay({
             </Grid>
           </Grid>
         </Paper>
-        {dare.time ? (
+        {/* {dare.time ? (
           <Grid width="100%" align="center">
             <ButtonTimer dare={dare} handleDone={hideDare} />
           </Grid>
-        ) : (
-          <Grid width="100%" align="center">
-            <Button
-              style={{ width: "80%" }}
-              title="Готово"
-              onPress={hideDare}
-            />
-          </Grid>
-        )}
+        ) : ( */}
+        <Grid width="100%" align="center">
+          <Button style={{ width: "80%" }} title="Готово" onPress={hideDare} />
+        </Grid>
+        {/* )} */}
       </Grid>
     </Animated.View>
   );
