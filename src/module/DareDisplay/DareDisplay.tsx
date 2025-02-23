@@ -48,7 +48,7 @@ export default function DareDisplay({
       entering={SlideInRight}
       exiting={SlideOutLeft}
     >
-      <Grid gap={80} align="center">
+      <Grid gap={60} align="center">
         {/* <Grid
           color={colors.text.white}
           width="100%"
@@ -72,15 +72,14 @@ export default function DareDisplay({
 
         <View ref={ref} onLayout={handleLayout}>
           <Grid
-            paddingVertical={40}
+            paddingVertical={30}
             paddingHorizontal={30}
             marginHorizontal={HORIZONTAL_PADDINGS}
-            // width="100%"
             color={colors.text.white}
             style={{ borderRadius: 40 }}
           >
             <Grid align="center" space="lg">
-              <Grid marginBottom={40} space="md">
+              <Grid marginBottom={30} space="md">
                 {dare.time ? (
                   <ButtomTimerInCard dare={dare} handleDone={hideDare} />
                 ) : null}
@@ -94,7 +93,7 @@ export default function DareDisplay({
                 </Typography>
               </Grid>
 
-              <Grid marginBottom={60}>
+              <Grid marginBottom={50}>
                 <Typography
                   style={{ lineHeight: 33, letterSpacing: 0.3 }}
                   textAlign="center"

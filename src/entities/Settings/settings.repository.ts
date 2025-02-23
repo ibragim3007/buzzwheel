@@ -22,7 +22,7 @@ interface Actions {
 export const useSettings = create<State & Actions>((set) => {
   const initialState: State = {
     theme: customTheme,
-    isRemoveRepetitions: true,
+    isRemoveRepetitions: false,
 
     rouletteColor: SettingsConstants.availableColors.find(
       (a) => a.isFree === true
@@ -32,6 +32,7 @@ export const useSettings = create<State & Actions>((set) => {
   const loadInitialState = async () => {
     const storedRouletteColor = await LocalStorage.getRouletteColor();
     const storedThemeId = await LocalStorage.getTheme();
+    const storedRemoveRepetitions = await LocalStorage.getRepetitions();
 
     const storedTheme = SettingsConstants.themes.find(
       (t) => t.id === storedThemeId
@@ -41,6 +42,7 @@ export const useSettings = create<State & Actions>((set) => {
       set({
         rouletteColor: storedRouletteColor,
         theme: storedTheme || customTheme,
+        isRemoveRepetitions: storedRemoveRepetitions || false,
       });
     }
   };
@@ -65,4 +67,7 @@ useSettings.subscribe(async (state) => {
     await LocalStorage.setRouletteColor(state.rouletteColor);
 
   if (state.theme) await LocalStorage.setTheme(state.theme.id);
+
+  if (state.isRemoveRepetitions)
+    await LocalStorage.setRepetitions(state.isRemoveRepetitions);
 });
