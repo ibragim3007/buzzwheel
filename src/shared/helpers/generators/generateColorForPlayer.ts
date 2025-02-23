@@ -1,8 +1,8 @@
 export function generateColorForPlayer(): string {
-  const getBrightValue = () => Math.floor(128 + Math.random() * 127); // Значения от 128 до 255 для яркости
-  const r = getBrightValue().toString(16).padStart(2, "0");
-  const g = getBrightValue().toString(16).padStart(2, "0");
-  const b = getBrightValue().toString(16).padStart(2, "0");
+  const getColorComponent = () => Math.floor(100 + Math.random() * 155); // 100–255 для ярких оттенков
+  const r = getColorComponent().toString(16).padStart(2, "0");
+  const g = getColorComponent().toString(16).padStart(2, "0");
+  const b = getColorComponent().toString(16).padStart(2, "0");
   return `#${r}${g}${b}`;
 }
 
