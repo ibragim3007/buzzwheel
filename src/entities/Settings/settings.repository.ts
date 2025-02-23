@@ -10,16 +10,20 @@ import { create } from "zustand";
 interface State {
   rouletteColor?: IAvailableColor;
   theme: PalitraInterface;
+  isRemoveRepetitions: boolean;
 }
 
 interface Actions {
   setRouletteColors: (avaialbleColor: IAvailableColor) => void;
   setTheme: (theme: PalitraInterface) => void;
+  setRemoveRepetitions: (isRemoveRepetitions: boolean) => void;
 }
 
 export const useSettings = create<State & Actions>((set) => {
   const initialState: State = {
     theme: customTheme,
+    isRemoveRepetitions: true,
+
     rouletteColor: SettingsConstants.availableColors.find(
       (a) => a.isFree === true
     ),
@@ -45,9 +49,14 @@ export const useSettings = create<State & Actions>((set) => {
 
   return {
     ...initialState,
+
     setRouletteColors: (avaialbleColor: IAvailableColor) =>
       set({ rouletteColor: avaialbleColor }),
+
     setTheme: (theme: PalitraInterface) => set({ theme }),
+
+    setRemoveRepetitions: (isRemoveRepetitions: boolean) =>
+      set({ isRemoveRepetitions }),
   };
 });
 

@@ -31,6 +31,6 @@ function hslToHex(h: number, s: number, l: number): string {
 }
 
 // 📌 Пример использования
-console.log(generateColorForPlayer()); // Случайный яркий цвет
-console.log(generateColorForPlayer(true)); // Контрастный цвет
-console.log(generateColorForPlayer(true)); // Ещё один контрастный цвет
+// console.log(generateColorForPlayer()); // Случайный яркий цвет
+// console.log(generateColorForPlayer(true)); // Контрастный цвет
+// console.log(generateColorForPlayer(true)); // Ещё один контрастный цвет

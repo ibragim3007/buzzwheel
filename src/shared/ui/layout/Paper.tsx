@@ -8,12 +8,15 @@ export default function Paper({ ...props }: PaperProps) {
   const colors = useTheme();
   return (
     <Grid
-      style={{
-        padding: 16,
-        borderRadius: 50,
-        backgroundColor: colors.background.secondary,
-      }}
       {...props}
+      style={[
+        {
+          padding: 16,
+          borderRadius: 15,
+          backgroundColor: colors.background.secondary,
+        },
+        props.style,
+      ]}
     />
   );
 }

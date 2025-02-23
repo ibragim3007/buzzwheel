@@ -32,7 +32,7 @@ export default function Input({ onCall }: InputProps) {
   };
 
   return (
-    <Paper>
+    <Paper style={{ borderRadius: 50 }}>
       <Grid align="center" row>
         <TextInput
           ref={inputRef}

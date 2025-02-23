@@ -13,11 +13,10 @@ import { useVibration } from "@/src/shared/hooks/useVibration";
 import HandleComponent from "@/src/shared/ui/elements/HandleComponent";
 import Grid from "@/src/shared/ui/grid/Grid";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
-import Typography from "@/src/shared/ui/typography/Typography";
 import Header from "@/src/widget/Header";
-import { BottomSheetModal, BottomSheetView } from "@gorhom/bottom-sheet";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import React, { useCallback, useRef, useState } from "react";
+import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
 export default function GamePage() {
@@ -26,16 +25,8 @@ export default function GamePage() {
   const onUpdateSpinStatus = (status: boolean) => setIsSpinning(status);
 
   const { players } = usePlayerStore();
-  const {
-    currentTurn,
-    currentDare,
-    displayDare,
-    groupColors,
-    setTurn,
-    showDare,
-    hideDare,
-    initRandomGroupColors,
-  } = useRouletteGame();
+  const { currentTurn, currentDare, displayDare, setTurn, showDare, hideDare } =
+    useRouletteGame();
 
   const { rouletteColor } = useSettings();
 
@@ -43,10 +34,6 @@ export default function GamePage() {
     players,
     rouletteColor?.colors || groupsOfColors[0]
   );
-
-  // useEffect(() => {
-  //   initRandomGroupColors();
-  // }, []);
 
   const callback = (winner: SegmentType) => {
     if (winner.type === "player") {
