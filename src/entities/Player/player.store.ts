@@ -37,7 +37,7 @@ export const usePlayerStore = create<State & Actions>((set) => {
         const player: Player = {
           id: Date.now(),
           name,
-          color: isNameAlreadyTaken ? generateColorForPlayer() : undefined,
+          color: isNameAlreadyTaken ? generateColorForPlayer(true) : undefined,
         };
 
         const updatedPlayers = [player, ...state.players];
