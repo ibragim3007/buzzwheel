@@ -8,7 +8,6 @@ import {
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import { Dare, Player } from "@/src/shared/types/globalTypes";
 import Button from "@/src/shared/ui/buttons/Button";
-import GradientShadow from "@/src/shared/ui/elements/GradientShadow";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Typography from "@/src/shared/ui/typography/Typography";
 import { normalizedSize } from "@/src/shared/utils/size";

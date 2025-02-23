@@ -19,12 +19,46 @@ const color2Segment = "#350";
 
 // 8 - number
 
+const calcTotalSegments = (players: Player[]) => {
+  const totalSegments = players.length < 4 ? 8 : players.length * 2 + 2;
+  if (players.length < 4) {
+    return 8;
+  }
+  if (players.length >= 4 && players.length <= 7) {
+    players.length * 2 + 2;
+  }
+  if (players.length === 8) {
+    return 10;
+  }
+  if (players.length > 8) {
+    if (players.length % 2 === 0) {
+      return players.length + 2;
+    }
+    return players.length + 3;
+  }
+  return totalSegments;
+};
+
+const calcAllPlayerSegments = (players: Player[]) => {
+  if (players.length <= 8) {
+    return 2;
+  }
+  if (players.length > 8) {
+    if (players.length % 2 === 0) {
+      return 2;
+    }
+    return 3;
+  }
+  return 2;
+};
+
 export function convertPlayersToSegments(
   players: Player[],
   colorGroup: [string, string, string]
 ): SegmentType[] {
-  const totalSegments = players.length < 4 ? 8 : players.length * 2 + 2;
-  const allSemgents = 2;
+  const totalSegments = calcTotalSegments(players);
+
+  const allSemgents = calcAllPlayerSegments(players);
   const playerSegments = totalSegments - allSemgents;
 
   while (players.length < playerSegments) {
@@ -38,7 +72,7 @@ export function convertPlayersToSegments(
     type: "player",
   }));
 
-  const allSegment: SegmentType = {
+  const allPlayerSegment: SegmentType = {
     id: 0,
     label: "Все",
     color: colorGroup[2],
@@ -46,7 +80,7 @@ export function convertPlayersToSegments(
   };
   const step = Math.floor(totalSegments / allSemgents);
   for (let i = 0; i < allSemgents; i++) {
-    segments.splice((i + 1) * step - 1, 0, allSegment);
+    segments.splice((i + 1) * step - 1, 0, allPlayerSegment);
   }
 
   return segments;
