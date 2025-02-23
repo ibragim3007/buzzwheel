@@ -38,8 +38,8 @@ export function convertPlayersToSegments(
   colorGroup: [string, string, string]
 ): SegmentType[] {
   const totalSegments = calcTotalSegments(players);
-
   const allSemgents = calcAllPlayerSegments(players);
+
   const playerSegments = totalSegments - allSemgents;
 
   while (players.length < playerSegments) {
@@ -60,10 +60,15 @@ export function convertPlayersToSegments(
     color: colorGroup[2],
     type: "all",
   };
+
   const step = Math.floor(totalSegments / allSemgents);
-  for (let i = 0; i < allSemgents; i++) {
-    segments.splice((i + 1) * step - 1, 0, allPlayerSegment);
-  }
+
+  if (allSemgents === 2)
+    for (let i = 0; i < allSemgents; i++)
+      segments.splice((i + 1) * step - 1, 0, allPlayerSegment);
+  else if (allSemgents === 3)
+    for (let i = 0; i < allSemgents; i++)
+      segments.splice(i * step, 0, allPlayerSegment);
 
   return segments;
 }

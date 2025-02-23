@@ -16,6 +16,7 @@ import { useRef, useState } from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 import ButtomTimerInCard from "./ButtomTimerInCard";
+import GradientShadow from "@/src/shared/ui/elements/GradientShadow";
 
 interface DareDisplayProps {
   dare: Dare;
@@ -50,58 +51,55 @@ export default function DareDisplay({
       <Grid gap={80} align="center">
         {/* <Grid
           color={colors.text.white}
-          width="95%"
+          width="100%"
           height={heightBlock}
           style={{
             position: "absolute",
             borderRadius: 40,
             alignSelf: "center",
             zIndex: -10,
-            // transform: [
-            //   {
-            //     skewX: "-5deg",
-            //   },
-            //   { scale: 0.96 },
-            //   {
-            //     skewY: "-3deg",
-            //   },
-            // ],
+            transform: [
+              {
+                skewX: "-6deg",
+              },
+              { scale: 1 },
+              {
+                skewY: "-2deg",
+              },
+            ],
           }}
-        >
-          <GradientShadow
-            secondColor={colors.text.white}
-            height={35}
-            color={colors.background.primary}
-          />
-        </Grid> */}
+        /> */}
 
         <View ref={ref} onLayout={handleLayout}>
           <Grid
             paddingVertical={40}
             paddingHorizontal={30}
-            width="99%"
-            color={colors.text.primary}
-            style={{ borderRadius: 50 }}
+            marginHorizontal={HORIZONTAL_PADDINGS}
+            // width="100%"
+            color={colors.text.white}
+            style={{ borderRadius: 40 }}
           >
-            <Grid align="center" space="md">
-              {dare.time ? (
-                <ButtomTimerInCard dare={dare} handleDone={hideDare} />
-              ) : null}
-
-              <Grid space="md">
+            <Grid align="center" space="lg">
+              <Grid marginBottom={40} space="md">
+                {dare.time ? (
+                  <ButtomTimerInCard dare={dare} handleDone={hideDare} />
+                ) : null}
                 <Typography
                   variant="title-3"
                   weight="bold"
-                  color="secondary"
+                  color="secondary-accent"
                   textAlign="center"
                 >
                   {dare.title}
                 </Typography>
+              </Grid>
 
+              <Grid marginBottom={60}>
                 <Typography
-                  style={{ lineHeight: 27 }}
+                  style={{ lineHeight: 33, letterSpacing: 0.3 }}
                   textAlign="center"
-                  weight="regular"
+                  // weight="bold"
+                  variant="title-3"
                   color="secondary"
                 >
                   {updatedArray(
