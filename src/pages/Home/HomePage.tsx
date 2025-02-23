@@ -13,11 +13,11 @@ export default function HomePage() {
   return (
     <SafeWrapper>
       <Header />
-      <Grid space="lg">
-        <Grid space="sm">
-          <Typography textAlign="center" weight="bold" variant="largeTitle">
+      <Grid marginTop={18} space="lg">
+        <Grid space="md">
+          {/* <Typography textAlign="center" weight="bold" variant="largeTitle">
             Party Game
-          </Typography>
+          </Typography> */}
           <Typography textAlign="center" variant="headline">
             {players.length > 0
               ? `${players.length}/${MAX_PLAYERS_FOR_FREE} players`

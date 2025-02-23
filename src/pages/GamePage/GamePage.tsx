@@ -6,16 +6,13 @@ import DareDisplay from "@/src/module/DareDisplay/DareDisplay";
 import { Roulette } from "@/src/module/Roulette";
 import { DefaultRouletteOptions } from "@/src/module/Roulette/config/config";
 import { convertPlayersToSegments } from "@/src/module/Roulette/helpers/convertPlayersToSegments";
-import { SettingsGame } from "@/src/module/SettingsGame";
 import { groupsOfColors } from "@/src/shared/config/constants/constants";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import { useVibration } from "@/src/shared/hooks/useVibration";
-import HandleComponent from "@/src/shared/ui/elements/HandleComponent";
 import Grid from "@/src/shared/ui/grid/Grid";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import Header from "@/src/widget/Header";
-import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import Animated, { SlideInRight, SlideOutLeft } from "react-native-reanimated";
 
@@ -52,16 +49,6 @@ export default function GamePage() {
 
   const { vibrateMedium } = useVibration();
 
-  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-  const handlePresentModalPress = useCallback(() => {
-    if (!bottomSheetModalRef.current) return;
-    vibrateMedium();
-    bottomSheetModalRef.current?.present();
-  }, []);
-  const handleSheetChanges = useCallback((index: number) => {
-    // console.log("handleSheetChanges", index);
-  }, []);
-
   return (
     <View
       style={{
@@ -74,7 +61,7 @@ export default function GamePage() {
       {!isSpinning && (
         <Grid style={{ position: "absolute", zIndex: 100 }}>
           <SafeWrapper>
-            <Header back onPressSettings={handlePresentModalPress} />
+            <Header back />
           </SafeWrapper>
         </Grid>
       )}
@@ -107,23 +94,6 @@ export default function GamePage() {
           </Animated.View>
         )}
       </Grid>
-      <BottomSheetModal
-        index={1}
-        snapPoints={["40%"]}
-        ref={bottomSheetModalRef}
-        enablePanDownToClose={true}
-        enableHandlePanningGesture={true}
-        enableContentPanningGesture={true}
-        keyboardBehavior="interactive"
-        onChange={handleSheetChanges}
-        handleComponent={HandleComponent}
-        backgroundStyle={{
-          backgroundColor: colors.background.secondary,
-          borderRadius: 20,
-        }}
-      >
-        <SettingsGame />
-      </BottomSheetModal>
     </View>
   );
 }
