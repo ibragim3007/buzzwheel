@@ -1,4 +1,5 @@
 import { StorageKeys } from "@/src/shared/config/constants/storageKeys";
+import { generateColorForPlayer } from "@/src/shared/helpers/generators/generateColorForPlayer";
 import { Player } from "@/src/shared/types/globalTypes";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
@@ -29,9 +30,14 @@ export const usePlayerStore = create<State & Actions>((set) => {
 
     addNewPlayer: async (name: string) => {
       set((state) => {
+        const isNameAlreadyTaken = state.players.some(
+          (player) => player.name === name
+        );
+
         const player: Player = {
           id: Date.now(),
           name,
+          color: isNameAlreadyTaken ? generateColorForPlayer() : undefined,
         };
 
         const updatedPlayers = [player, ...state.players];

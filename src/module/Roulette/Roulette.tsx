@@ -42,7 +42,11 @@ const Roulette = ({
           <Grid>
             <Typography weight="medium" variant="title-1">
               Are you ready{" "}
-              <Typography weight="bold" variant="title-1">
+              <Typography
+                style={{ color: currentTurn.color || "#fff" }}
+                weight="bold"
+                variant="title-1"
+              >
                 {currentTurn?.name}
               </Typography>
               ?

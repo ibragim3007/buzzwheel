@@ -36,7 +36,13 @@ export default function PlayerItem({ player }: PlayerItemProps) {
           }}
         >
           <Grid justfity="space-between" row>
-            <Typography weight="medium" color="primary">
+            <Typography
+              style={{
+                color: player.color ? player.color : colors.text.primary,
+              }}
+              weight="medium"
+              color="primary"
+            >
               {player.name}
             </Typography>
             <Pressable

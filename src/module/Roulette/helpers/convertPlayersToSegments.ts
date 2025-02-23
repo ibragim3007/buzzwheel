@@ -19,37 +19,18 @@ const color2Segment = "#350";
 
 // 8 - number
 
-const calcTotalSegments = (players: Player[]) => {
-  const totalSegments = players.length < 4 ? 8 : players.length * 2 + 2;
-  if (players.length < 4) {
-    return 8;
-  }
-  if (players.length >= 4 && players.length <= 7) {
-    players.length * 2 + 2;
-  }
-  if (players.length === 8) {
-    return 10;
-  }
-  if (players.length > 8) {
-    if (players.length % 2 === 0) {
-      return players.length + 2;
-    }
-    return players.length + 3;
-  }
-  return totalSegments;
+const calcTotalSegments = (players: Player[]): number => {
+  const length = players.length;
+
+  if (length < 4) return 8;
+  if (length <= 7) return length * 2 + 2;
+  if (length === 8) return 10;
+
+  return length + (length % 2 === 0 ? 2 : 3);
 };
 
-const calcAllPlayerSegments = (players: Player[]) => {
-  if (players.length <= 8) {
-    return 2;
-  }
-  if (players.length > 8) {
-    if (players.length % 2 === 0) {
-      return 2;
-    }
-    return 3;
-  }
-  return 2;
+const calcAllPlayerSegments = (players: Player[]): number => {
+  return players.length > 8 && players.length % 2 !== 0 ? 3 : 2;
 };
 
 export function convertPlayersToSegments(
@@ -70,6 +51,7 @@ export function convertPlayersToSegments(
     label: player.name,
     color: index % 2 === 0 ? colorGroup[0] : colorGroup[1],
     type: "player",
+    textColor: player.color,
   }));
 
   const allPlayerSegment: SegmentType = {

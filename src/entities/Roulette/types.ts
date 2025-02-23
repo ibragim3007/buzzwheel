@@ -5,6 +5,7 @@ export type SegmentType = {
   label: string;
   color: string;
   type: DareType;
+  textColor?: string;
 };
 
 export type RouletteOptions = {

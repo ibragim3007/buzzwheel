@@ -36,6 +36,7 @@ export interface Dare {
 export type Player = {
   readonly id: number;
   name: string;
+  color?: string;
 };
 
 export interface DATA {

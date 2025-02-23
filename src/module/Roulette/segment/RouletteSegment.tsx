@@ -1,11 +1,11 @@
-import { RouletteOptions } from "@/src/entities/Roulette/types";
+import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
 import React from "react";
 import { Path, Text as SvgText } from "react-native-svg";
 import { calculateCoordinates } from "../helpers/calculateCoordinates";
 import { normalizedSize } from "@/src/shared/utils/size";
 
 interface RouletteSegmentInterface {
-  segment: any;
+  segment: SegmentType;
   startAngle: number;
   endAngle: number;
   winner: number | null;
@@ -51,7 +51,7 @@ export const RouletteSegment = ({
         opacity={winner !== null && !picked ? 0.1 : 1}
       />
       <SvgText
-        fill="#fff"
+        fill={segment.textColor ? segment.textColor : "#fff"}
         fontWeight="bold"
         fontSize={normalizedSize(25)}
         x={textPosition.x - 5}
