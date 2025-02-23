@@ -10,6 +10,7 @@ import React from "react";
 import { Alert, ScrollView } from "react-native";
 import Input from "./components/Input/Input";
 import Players from "./components/Players/Players";
+import { MAX_PLAYERS_FOR_FREE } from "@/src/shared/config/constants/constants";
 
 export default function AddPlayers() {
   const colors = useTheme();
@@ -17,6 +18,17 @@ export default function AddPlayers() {
   const { navigate } = useRouter();
 
   const isEnoughPlayers = players.length >= 2;
+
+  const onAddNewPlayer = (name: string) => {
+    if (players.length >= MAX_PLAYERS_FOR_FREE) {
+      Alert.alert(
+        "You have reached the maximum number of players for the free version"
+      );
+      return;
+    }
+    addNewPlayer(name);
+  };
+
   const onPressStart = () => {
     if (!isEnoughPlayers) {
       Alert.alert("Add at least 2 players to start the game");
@@ -26,8 +38,8 @@ export default function AddPlayers() {
   };
 
   return (
-    <Grid space="lg" color={colors.background.primary} height="100%">
-      <Input onCall={(name) => addNewPlayer(name)} />
+    <Grid space="lg" height="100%">
+      <Input onCall={onAddNewPlayer} />
 
       <Grid style={{ overflow: "hidden", position: "relative" }}>
         <ScrollView

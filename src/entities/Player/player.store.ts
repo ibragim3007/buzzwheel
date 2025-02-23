@@ -1,3 +1,4 @@
+import { MAX_PLAYERS_FOR_FREE } from "@/src/shared/config/constants/constants";
 import { StorageKeys } from "@/src/shared/config/constants/storageKeys";
 import { generateColorForPlayer } from "@/src/shared/helpers/generators/generateColorForPlayer";
 import { Player } from "@/src/shared/types/globalTypes";
