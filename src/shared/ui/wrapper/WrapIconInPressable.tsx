@@ -5,19 +5,20 @@ import { normalizedSize } from "../../utils/size";
 
 interface WrapIconInPressableProps extends PressableProps {
   primaryColor?: string;
+  backgroundColor?: string;
 }
 
 export default function WrapIconInPressable({
   primaryColor,
+  backgroundColor,
   ...props
 }: WrapIconInPressableProps) {
-  const colors = useTheme();
   return (
     <Pressable
       {...props}
       style={{
         padding: normalizedSize(7),
-        // backgroundColor: colors.background.secondary,
+        backgroundColor: backgroundColor || "transparent",
         borderRadius: 50,
         borderWidth: 1,
         borderColor: primaryColor || "#ffffff17",

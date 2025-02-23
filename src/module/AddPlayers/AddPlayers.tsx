@@ -11,6 +11,8 @@ import { Alert, ScrollView } from "react-native";
 import Input from "./components/Input/Input";
 import Players from "./components/Players/Players";
 import { MAX_PLAYERS_FOR_FREE } from "@/src/shared/config/constants/constants";
+import GradientShadow from "@/src/shared/ui/elements/GradientShadow";
+import Typography from "@/src/shared/ui/typography/Typography";
 
 export default function AddPlayers() {
   const colors = useTheme();
@@ -38,8 +40,18 @@ export default function AddPlayers() {
   };
 
   return (
-    <Grid space="lg" height="100%">
-      <Input onCall={onAddNewPlayer} />
+    <Grid flex={1} justfity="space-around" space="sm">
+      <Grid space="md">
+        <Input onCall={onAddNewPlayer} />
+        {/* <Typography textAlign="center" weight="bold" variant="largeTitle">
+            Party Game
+          </Typography> */}
+        <Typography textAlign="center" variant="headline">
+          {players.length > 0
+            ? `${players.length}/${MAX_PLAYERS_FOR_FREE} players`
+            : "Add players to start the fun!"}
+        </Typography>
+      </Grid>
 
       <Grid style={{ overflow: "hidden", position: "relative" }}>
         <ScrollView
@@ -53,22 +65,16 @@ export default function AddPlayers() {
             borderRadius: 40,
           }}
         >
+          {players.length === 0 && (
+            <Grid height={normalizedSize(300)} align="center" justfity="center">
+              <Typography weight="medium" textAlign="center">
+                Players will{"\n"}be displayed here
+              </Typography>
+            </Grid>
+          )}
           <Players players={players} />
         </ScrollView>
-        <LinearGradient
-          colors={["transparent", colors.background.primary]} // Цвет тени
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            opacity: 0.3,
-            height: 60,
-            borderBottomLeftRadius: 40,
-            borderBottomRightRadius: 40,
-          }}
-          pointerEvents="none"
-        />
+        <GradientShadow />
       </Grid>
 
       <Button

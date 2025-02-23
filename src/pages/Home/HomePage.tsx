@@ -7,26 +7,20 @@ import Header from "@/src/widget/Header";
 import React from "react";
 import { usePlayerStore } from "@/src/entities/Player/player.store";
 import { MAX_PLAYERS_FOR_FREE } from "@/src/shared/config/constants/constants";
+import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 
 export default function HomePage() {
   const { players } = usePlayerStore();
   return (
-    <SafeWrapper>
-      <Header />
-      <Grid marginTop={18} space="lg">
-        <Grid space="md">
-          {/* <Typography textAlign="center" weight="bold" variant="largeTitle">
-            Party Game
-          </Typography> */}
-          <Typography textAlign="center" variant="headline">
-            {players.length > 0
-              ? `${players.length}/${MAX_PLAYERS_FOR_FREE} players`
-              : "Add players to start the fun!"}
-          </Typography>
-        </Grid>
+    <PageWrapper>
+      <SafeWrapper>
+        <Header />
+        <Grid height="95%" space="lg">
+          <Grid space="md"></Grid>
 
-        <AddPlayers />
-      </Grid>
-    </SafeWrapper>
+          <AddPlayers />
+        </Grid>
+      </SafeWrapper>
+    </PageWrapper>
   );
 }

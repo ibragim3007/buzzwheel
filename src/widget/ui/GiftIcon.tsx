@@ -5,11 +5,9 @@ import React from "react";
 
 export default function GiftIcon() {
   const colors = useTheme();
+
   return (
-    <WrapIconInPressable
-      primaryColor={colors.accent.secondary}
-      style={{ borderColor: colors.accent.secondary }}
-    >
+    <WrapIconInPressable primaryColor={colors.accent.secondary}>
       <Ionicons name="gift-outline" size={22} color={colors.accent.secondary} />
     </WrapIconInPressable>
   );
