@@ -16,4 +16,5 @@ export type RouletteOptions = {
   EXTRA_PADDING: number;
   RADIUS: number;
   TEXT_RADIUS: number;
+  BORDER_COLOR?: string;
 };

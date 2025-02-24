@@ -4,6 +4,7 @@ import { CustomAnimations } from "@/src/shared/config/theme/AnimationConfig";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import { Player } from "@/src/shared/types/globalTypes";
 import AnimatedWrapper from "@/src/shared/ui/animations/AnimatedWrapper";
+import Avatar from "@/src/shared/ui/elements/AvatarGenerator";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Paper from "@/src/shared/ui/layout/Paper";
 import Typography from "@/src/shared/ui/typography/Typography";
@@ -36,15 +37,17 @@ export default function PlayerItem({ player }: PlayerItemProps) {
           }}
         >
           <Grid justfity="space-between" row>
-            <Typography
-              style={{
-                color: player.color ? player.color : colors.text.primary,
-              }}
-              weight="medium"
-              color="primary"
-            >
-              {player.name}
-            </Typography>
+            <Grid row justfity="center" space="md">
+              <Typography
+                style={{
+                  color: player.color ? player.color : colors.text.primary,
+                }}
+                weight="medium"
+                color="primary"
+              >
+                {player.name}
+              </Typography>
+            </Grid>
             <Pressable
               style={{
                 width: 50,

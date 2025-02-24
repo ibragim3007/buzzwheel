@@ -27,7 +27,9 @@ const Roulette = ({
   onCallback,
   onChangeSpinStatus,
 }: RouletteProps) => {
-  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
+  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE, BORDER_COLOR } =
+    options;
+
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
     useRoulette(segments, onCallback);
 
@@ -74,7 +76,7 @@ const Roulette = ({
               cx={CENTER}
               cy={CENTER}
               r={RADIUS + BORDER_WIDTH / 2}
-              fill={winner !== null ? "#252525" : "#eaf4ff"}
+              fill={winner !== null ? "#252525" : BORDER_COLOR || "#eaf4ff"}
             />
             {/* Рулетка */}
             <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
@@ -122,9 +124,14 @@ const Roulette = ({
       </Animated.View>
 
       <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
-        <CenterCircle options={options} />
+        <Grid
+          width={55}
+          height={55}
+          color="blue"
+          style={{ borderRadius: 100 }}
+        />
+        {/* <CenterCircle options={options} /> */}
       </Animated.View>
-
       <Button
         title="Roll"
         onPress={spinWheel}
@@ -159,7 +166,8 @@ const styles = StyleSheet.create({
 
   centerOverlay: {
     position: "absolute",
-    // top: CENTER + 10,
+    top: 145,
+    left: "42.5%",
   },
   buttonText: {
     color: "#fff",

@@ -10,6 +10,7 @@ export default function StackRoute() {
       <Stack.Screen name="index" />
       <Stack.Screen name="screens/game" />
       <Stack.Screen name="screens/packages" />
+      <Stack.Screen name="screens/gift" />
       <Stack.Screen name="+not-found" />
     </Stack>
   );
