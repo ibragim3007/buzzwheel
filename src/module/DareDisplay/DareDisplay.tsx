@@ -134,8 +134,8 @@ export default function DareDisplay({
           </Grid>
         </View>
 
-        <Grid row>
-          <Button style={{ width: "80%" }} title="Готово" onPress={hideDare} />
+        <Grid width="100%" paddingHorizontal={40}>
+          <Button title="Готово" style={{ width: "100%" }} onPress={hideDare} />
         </Grid>
       </Grid>
     </Animated.View>

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Pressable, PressableProps, StyleSheet } from "react-native";
 import Typography from "../typography/Typography";
 import { useTheme } from "../../hooks/useTheme";
 import Grid from "../grid/Grid";
 import { TypographyProps } from "../../styles/typography/typography";
+import AnimTouchWrapper from "../animations/AnimTouchWrapper";
 
 interface ButtonProps extends PressableProps {
   title: string;
@@ -15,13 +16,29 @@ export default function Button({
   title,
   startIcon,
   textStyle,
+  disabled,
   ...props
 }: ButtonProps) {
   const colors = useTheme();
+  // const defaultColor = props.style
+
+  const [currentColorButton, setCurrentColorButton] = useState(
+    colors.accent.primary
+  );
+
+  const onTouchStart = () => {
+    setCurrentColorButton(colors.accent.quaternary);
+  };
+
+  const onTouchEnd = () => {
+    setCurrentColorButton(colors.accent.primary);
+  };
 
   const styles = StyleSheet.flatten([
     {
-      backgroundColor: colors.accent.primary,
+      backgroundColor: disabled
+        ? colors.background.secondary
+        : currentColorButton,
       paddingHorizontal: 25,
       paddingVertical: 17,
       borderRadius: 30,
@@ -30,18 +47,25 @@ export default function Button({
   ]);
 
   return (
-    <Pressable {...props} style={styles}>
-      <Grid row space="sm" justfity="center" align="center">
-        {startIcon}
-        <Typography
-          variant="title-3"
-          textAlign="center"
-          style={[{ color: colors.text.primary }, textStyle?.style]}
-          weight="bold"
-        >
-          {title}
-        </Typography>
-      </Grid>
-    </Pressable>
+    <AnimTouchWrapper>
+      <Pressable
+        {...props}
+        style={styles}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        <Grid row space="sm" justfity="center" align="center">
+          {startIcon}
+          <Typography
+            variant="title-3"
+            textAlign="center"
+            style={[{ color: colors.text.primary }, textStyle?.style]}
+            weight="bold"
+          >
+            {title}
+          </Typography>
+        </Grid>
+      </Pressable>
+    </AnimTouchWrapper>
   );
 }

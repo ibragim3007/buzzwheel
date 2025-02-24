@@ -32,7 +32,7 @@ export const customTheme: PalitraInterface = {
     primary: "#FF8D22",
     secondary: "#ef2fb9",
     tertiary: "#FF6347",
-    quaternary: "#FF4500",
+    quaternary: "#b5651a",
   },
   text: {
     primary: "#ffffff",

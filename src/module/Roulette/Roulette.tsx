@@ -124,13 +124,7 @@ const Roulette = ({
       </Animated.View>
 
       <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
-        <Grid
-          width={55}
-          height={55}
-          color="blue"
-          style={{ borderRadius: 100 }}
-        />
-        {/* <CenterCircle options={options} /> */}
+        <CenterCircle options={options} />
       </Animated.View>
       <Button
         title="Roll"
@@ -166,8 +160,6 @@ const styles = StyleSheet.create({
 
   centerOverlay: {
     position: "absolute",
-    top: 145,
-    left: "42.5%",
   },
   buttonText: {
     color: "#fff",

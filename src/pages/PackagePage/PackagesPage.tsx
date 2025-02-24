@@ -21,7 +21,7 @@ export default function PackagePage() {
   };
 
   return (
-    <Grid flex={1}>
+    <Grid>
       <ScrollPageWrapper>
         <SafeWrapper style={{ paddingBottom: 200 }}>
           <Header back />
@@ -36,27 +36,19 @@ export default function PackagePage() {
       </ScrollPageWrapper>
 
       {pickedPackages.length > 0 && (
-        <>
+        <Grid>
           <GradientShadow color={colors.accent.primary} height={320} />
           <Grid
-            align="center"
-            justfity="center"
+            paddingHorizontal={40}
             style={{
               position: "absolute",
               bottom: 40,
               width: "100%",
-              // shadowColor: colors.accent.primary,
-              // shadowOpacity: 1,
-              // shadowRadius: 60,
             }}
           >
-            <Button
-              onPress={onPressPlay}
-              title="Play"
-              style={{ width: "70%" }}
-            />
+            <Button onPress={onPressPlay} title="Play" />
           </Grid>
-        </>
+        </Grid>
       )}
     </Grid>
   );

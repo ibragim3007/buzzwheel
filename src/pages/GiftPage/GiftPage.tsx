@@ -1,16 +1,15 @@
 import { SegmentType } from "@/src/entities/Roulette/types";
-import { Roulette } from "@/src/module/Roulette";
-import {
-  calcByWheelSize,
-  DefaultRouletteOptions,
-} from "@/src/module/Roulette/config/config";
+import Roulette, { RouletteRef } from "@/src/entities/Roulette/ui/Roulette";
+
+import { calcByWheelSize } from "@/src/module/Roulette/config/config";
 import { useTheme } from "@/src/shared/hooks/useTheme";
+import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import Typography from "@/src/shared/ui/typography/Typography";
 import Header from "@/src/widget/Header";
-import React from "react";
+import React, { useRef, useState } from "react";
 
 // Игкрок зашел первый день и видит получение приза
 // игрок получает возможность крутить колесо и получить фичу
@@ -82,22 +81,35 @@ const mockSegments: SegmentType[] = [
 
 export default function GiftPage() {
   const colors = useTheme();
+  const [spinStatus, setSpinStatus] = useState(false);
+  const onChangeSpinStatus = (isSpinning: boolean) => setSpinStatus(isSpinning);
+
+  const rouletteRef = useRef<RouletteRef>(null);
+
+  const onPressSpinRoulette = () => {
+    rouletteRef.current?.spinRoulette();
+  };
 
   return (
     <PageWrapper flex={1}>
       <SafeWrapper>
-        <Grid height="90%" justfity="space-between">
+        <Grid space="lg" height="100%" justfity="space-between">
           <Grid style={{ zIndex: 100 }}>
             <Header back />
           </Grid>
-          <Typography weight="bold">GIFT PAGE</Typography>
+          <Typography weight="bold" variant="title-2">
+            GIFT PAGE
+          </Typography>
+          <Button title="GET PRIZE" onPress={onPressSpinRoulette} />
           <Grid align="center" justfity="center" row>
             <Roulette
+              ref={rouletteRef}
               segments={mockSegments}
               options={{
                 ...calcByWheelSize(350),
                 BORDER_COLOR: colors.accent.primary,
               }}
+              onChangeSpinStatus={onChangeSpinStatus}
               currentTurn={null}
               onCallback={() => {}}
             />

@@ -82,11 +82,12 @@ export default function AddPlayers() {
         title={`Start Game ${
           players.length ? `(${players.length} players)` : ""
         }`}
-        style={{
-          backgroundColor: isEnoughPlayers
-            ? colors.accent.primary
-            : colors.background.secondary,
-        }}
+        disabled={!isEnoughPlayers}
+        // style={{
+        //   backgroundColor: isEnoughPlayers
+        //     ? colors.accent.primary
+        //     : colors.background.secondary,
+        // }}
         startIcon={
           <Ionicons name="play" size={24} color={colors.text.primary} />
         }
