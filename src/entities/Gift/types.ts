@@ -10,3 +10,8 @@ export interface IGift {
   type: GiftTypes;
   segmentColor?: string;
 }
+
+// export interface ILocalGiftUnlocked {
+//   unlockedRouletteColors: number[];
+//   unlockedThemes: number[];
+// }

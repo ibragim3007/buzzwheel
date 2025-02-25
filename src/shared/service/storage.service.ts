@@ -34,6 +34,32 @@ class Storage {
       JSON.stringify(value)
     );
   }
+
+  async getUnlockedRouletteColors(): Promise<number[]> {
+    const value = await AsyncStorage.getItem(
+      StorageKeys.unlockedRouletteColors
+    );
+    return value ? JSON.parse(value) : [];
+  }
+
+  async getUnlockedThemes(): Promise<number[]> {
+    const value = await AsyncStorage.getItem(StorageKeys.unlockedThemes);
+    return value ? JSON.parse(value) : [];
+  }
+
+  async setUnlockedRouletteColors(value: number[]) {
+    await AsyncStorage.setItem(
+      StorageKeys.unlockedRouletteColors,
+      JSON.stringify(value)
+    );
+  }
+
+  async setUnlockedThemes(value: number[]) {
+    await AsyncStorage.setItem(
+      StorageKeys.unlockedThemes,
+      JSON.stringify(value)
+    );
+  }
 }
 
 export const LocalStorage = new Storage();
