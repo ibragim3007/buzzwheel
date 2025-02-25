@@ -2,10 +2,12 @@ import { DareType } from "@/src/shared/types/globalTypes";
 
 export type SegmentType = {
   id: number;
+
   label: string;
   color: string;
   type: DareType;
   textColor?: string;
+  probability: number;
 };
 
 export type RouletteOptions = {

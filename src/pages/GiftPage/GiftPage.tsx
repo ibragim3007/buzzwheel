@@ -1,15 +1,18 @@
+import { convertGiftsToSegments } from "@/src/entities/Gift/convertGiftsToSegments";
+import { mockGifts } from "@/src/entities/Gift/mockGifts";
 import { SegmentType } from "@/src/entities/Roulette/types";
-import Roulette, { RouletteRef } from "@/src/entities/Roulette/ui/Roulette";
+import { Roulette } from "@/src/module/Roulette";
 
 import { calcByWheelSize } from "@/src/module/Roulette/config/config";
+
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
 import Grid from "@/src/shared/ui/grid/Grid";
 import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
-import Typography from "@/src/shared/ui/typography/Typography";
 import Header from "@/src/widget/Header";
 import React, { useRef, useState } from "react";
+import Animated, { ZoomIn } from "react-native-reanimated";
 
 // Игкрок зашел первый день и видит получение приза
 // игрок получает возможность крутить колесо и получить фичу
@@ -28,67 +31,67 @@ import React, { useRef, useState } from "react";
 // Легендарный приз: Премиум подписка на месяц
 // Легендарный приз: Выпадение пакета
 
-const mockSegments: SegmentType[] = [
-  {
-    id: 1,
-    color: "red",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 2,
-    color: "green",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 1,
-    color: "red",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 2,
-    color: "green",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 1,
-    color: "red",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 2,
-    color: "green",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 1,
-    color: "red",
-    label: "label",
-    type: "player",
-  },
-  {
-    id: 2,
-    color: "green",
-    label: "label",
-    type: "player",
-  },
-];
+// const mockSegments: SegmentType[] = [
+//   {
+//     id: 1,
+//     color: "red",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 2,
+//     color: "green",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 1,
+//     color: "red",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 2,
+//     color: "green",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 1,
+//     color: "red",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 2,
+//     color: "green",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 1,
+//     color: "red",
+//     label: "label",
+//     type: "player",
+//   },
+//   {
+//     id: 2,
+//     color: "green",
+//     label: "label",
+//     type: "player",
+//   },
+// ];
 
 export default function GiftPage() {
   const colors = useTheme();
   const [spinStatus, setSpinStatus] = useState(false);
   const onChangeSpinStatus = (isSpinning: boolean) => setSpinStatus(isSpinning);
 
-  const rouletteRef = useRef<RouletteRef>(null);
+  // const onPressSpinRoulette = () => {
+  //   rouletteRef.current?.spinRoulette();
+  // };
 
-  const onPressSpinRoulette = () => {
-    rouletteRef.current?.spinRoulette();
-  };
+  const segments = convertGiftsToSegments(mockGifts);
 
   return (
     <PageWrapper flex={1}>
@@ -97,23 +100,25 @@ export default function GiftPage() {
           <Grid style={{ zIndex: 100 }}>
             <Header back />
           </Grid>
-          <Typography weight="bold" variant="title-2">
-            GIFT PAGE
-          </Typography>
-          <Button title="GET PRIZE" onPress={onPressSpinRoulette} />
-          <Grid align="center" justfity="center" row>
-            <Roulette
-              ref={rouletteRef}
-              segments={mockSegments}
-              options={{
-                ...calcByWheelSize(350),
-                BORDER_COLOR: colors.accent.primary,
-              }}
-              onChangeSpinStatus={onChangeSpinStatus}
-              currentTurn={null}
-              onCallback={() => {}}
-            />
-          </Grid>
+
+          <Animated.View
+            style={{ flex: 1 }}
+            entering={ZoomIn.delay(300).springify()}
+          >
+            <Grid flex={1}>
+              <Roulette
+                centerBlock
+                segments={segments}
+                options={{
+                  ...calcByWheelSize(390),
+                  BORDER_COLOR: colors.accent.primary,
+                }}
+                onChangeSpinStatus={onChangeSpinStatus}
+                currentTurn={null}
+                onCallback={() => {}}
+              />
+            </Grid>
+          </Animated.View>
         </Grid>
       </SafeWrapper>
     </PageWrapper>

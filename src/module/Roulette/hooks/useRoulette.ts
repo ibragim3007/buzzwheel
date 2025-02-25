@@ -13,8 +13,27 @@ import {
   withTiming,
 } from "react-native-reanimated";
 
+const getWeightedRandomItem = (items: SegmentType[]) => {
+  const totalWeight = items.reduce(
+    (total, item) => total + item.probability,
+    0
+  );
+  const randomNum = Math.random() * totalWeight;
+  let cumulativeWeight = 0;
+  let randomIndex = 0;
+
+  for (let i = 0; i < items.length; i++) {
+    cumulativeWeight += items[i].probability;
+    if (randomNum < cumulativeWeight) {
+      return { item: items[i], index: i };
+    }
+  }
+
+  return { item: items[0], index: 0 };
+};
+
 export const useRoulette = (
-  segments: any[],
+  segments: SegmentType[],
   onCallback: (winner: SegmentType) => void
 ) => {
   const { vibrate } = useVibration();
@@ -37,7 +56,9 @@ export const useRoulette = (
 
     setIsSpinning(true);
 
-    const randomSegmentIndex = getRandomInt(0, segments.length);
+    // const randomSegmentIndex = getRandomInt(0, segments.length);
+
+    const { index: randomSegmentIndex } = getWeightedRandomItem(segments);
 
     const totalAngle =
       rotation.value - 360 * 6 - oneSegmentAngle * randomSegmentIndex;
@@ -123,7 +144,10 @@ export const useRoulette = (
     const leftSegment =
       segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
     const randomSegments = [leftSegment, segmentIndex];
-    const zeroOrOne = getRandomInt(0, 2);
+    const segmentsArr = [segments[leftSegment], segments[segmentIndex]];
+    const { index: zeroOrOne } = getWeightedRandomItem(segmentsArr);
+    // const zeroOrOne = getRandomInt(0, 2);
+    // const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
     const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
 
     const updateTotalAngle =
@@ -152,7 +176,7 @@ export const useRoulette = (
       { rotate: `${cursorRotation.value}deg` },
       { scale: wheelScale.value },
     ],
-    bottom: 260 + wheelTranslateY.value,
+    bottom: 250 + wheelTranslateY.value,
   }));
 
   return { spinWheel, winner, isSpinning, animatedStyle, cursorAnimatedStyle };

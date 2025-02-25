@@ -7,7 +7,7 @@ import Typography from "@/src/shared/ui/typography/Typography";
 import React, { forwardRef, useEffect, useImperativeHandle } from "react";
 import { StyleSheet, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
-import Svg, { Circle, Defs, G, Mask, Rect } from "react-native-svg";
+import Svg, { Circle, Defs, G, Mask, Polygon, Rect } from "react-native-svg";
 
 import { RouletteSegment } from "./RouletteSegment";
 import CenterCircle from "./CenterCircle";
@@ -95,6 +95,7 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
                 r={RADIUS + BORDER_WIDTH / 2}
                 fill={winner !== null ? "#252525" : BORDER_COLOR || "#eaf4ff"}
               />
+
               {/* Рулетка */}
               <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
                 {segments.map((segment, index) => {
@@ -136,15 +137,35 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
                 opacity={0.25}
                 mask="url(#holeMask)" // Применяем маску
               />
+
+              <Polygon
+                points={`${CENTER},${CENTER - RADIUS} ${CENTER},${
+                  CENTER - RADIUS
+                } ${CENTER},${CENTER - RADIUS * 0.9}`}
+                fill="#ffffff"
+              />
             </Svg>
           </Grid>
         </Animated.View>
 
-        <Grid style={{ top: -90 }}>
-          <Animated.View style={[cursorAnimatedStyle]}>
-            <CenterCircle options={options} />
-          </Animated.View>
-        </Grid>
+        <Animated.View style={[cursorAnimatedStyle]}>
+          <Grid
+            width={60}
+            height={60}
+            color="blue"
+            align="center"
+            justfity="center"
+            style={{ borderRadius: 50, top: "-50%", left: "40%" }}
+          >
+            <Grid
+              color="#fff"
+              width={30}
+              height={30}
+              style={{ borderRadius: 30 }}
+            />
+          </Grid>
+          {/* <CenterCircle options={options} /> */}
+        </Animated.View>
       </View>
     );
   }
@@ -153,9 +174,11 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    // flexDirection: "row",
+    // justifyContent: "center",
+    // alignItems: "center",
     width: "100%",
+    position: "relative",
     // backgroundColor: "#5e3677",
   },
   wheelContainer: {
@@ -163,7 +186,7 @@ const styles = StyleSheet.create({
   },
 
   centerOverlay: {
-    position: "absolute",
+    // position: "absolute",
     // top: 145,
     // left: "42.5%",
   },

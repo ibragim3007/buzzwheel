@@ -18,12 +18,14 @@ interface RouletteProps {
   currentTurn: Player | null;
   onCallback: (winner: SegmentType) => void;
   onChangeSpinStatus?: (isSpinning: boolean) => void;
+  centerBlock?: React.ReactNode;
 }
 
 const Roulette = ({
   segments,
   options,
   currentTurn,
+  centerBlock,
   onCallback,
   onChangeSpinStatus,
 }: RouletteProps) => {
@@ -123,9 +125,17 @@ const Roulette = ({
         </Grid>
       </Animated.View>
 
-      <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
-        <CenterCircle options={options} />
-      </Animated.View>
+      {centerBlock ? (
+        <Grid style={{ top: 250, left: -195 }}>
+          <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
+            <CenterCircle options={options} />
+          </Animated.View>
+        </Grid>
+      ) : (
+        <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
+          <CenterCircle options={options} />
+        </Animated.View>
+      )}
       <Button
         title="Roll"
         onPress={spinWheel}

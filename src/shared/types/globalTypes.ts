@@ -12,7 +12,7 @@ export type LANGUAGE =
   | "sv"
   | "cs";
 
-export type DareType = "player" | "all";
+export type DareType = "player" | "all" | "gift";
 export type PackageType = "default" | "pair";
 
 export interface Package {
