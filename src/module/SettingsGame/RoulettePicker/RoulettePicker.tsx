@@ -6,12 +6,13 @@ import {
 } from "@/src/shared/config/constants/settingsOptions";
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import { useVibration } from "@/src/shared/hooks/useVibration";
+import LockElement from "@/src/shared/ui/elements/LockElement";
 import SmallRoulette from "@/src/shared/ui/elements/SmallRoulette";
 import Grid from "@/src/shared/ui/grid/Grid";
 import HorizontalListPicker from "@/src/shared/ui/layout/HorizontalListPicker";
 import { normalizedSize } from "@/src/shared/utils/size";
 import React from "react";
-import { Pressable } from "react-native";
+import { Alert, Pressable } from "react-native";
 
 const generateSegmentsMock = (
   colors: [string, string, string]
@@ -61,8 +62,12 @@ export default function RoulettePicker() {
   const { rouletteColor, setRouletteColors } = useSettings();
   const { vibrateSelection } = useVibration();
   const onRouletteColorChange = (color: IAvailableColor) => {
-    if (rouletteColor?.id !== color.id) vibrateSelection();
-    setRouletteColors(color);
+    if (color.isFree) {
+      if (rouletteColor?.id !== color.id) vibrateSelection();
+      setRouletteColors(color);
+    } else {
+      Alert.alert("You have to get full access");
+    }
   };
 
   const initialScrollIndex =
@@ -84,12 +89,14 @@ export default function RoulettePicker() {
             <Grid
               color={isPicked ? colors.background.secondary : "transparent"}
               padding={5}
+              justfity="center"
               style={{
                 borderRadius: 20,
                 borderWidth: 1,
                 borderColor: isPicked ? "#ffffff23" : "transparent",
               }}
             >
+              {!item.isFree && <LockElement />}
               <SmallRoulette
                 segments={generateSegmentsMock(item.colors)}
                 options={{

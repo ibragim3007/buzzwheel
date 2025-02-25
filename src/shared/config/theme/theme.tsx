@@ -1,5 +1,6 @@
 export type PalitraInterface = {
   id: number;
+  isFree: boolean;
   theme: string;
   accent: {
     primary: string;
@@ -27,6 +28,7 @@ export type PalitraInterface = {
 
 export const customTheme: PalitraInterface = {
   id: 3,
+  isFree: true,
   theme: "custom",
   accent: {
     primary: "#FF8D22",
@@ -54,6 +56,7 @@ export const customTheme: PalitraInterface = {
 
 export const beachTheme: PalitraInterface = {
   id: 8,
+  isFree: false,
   theme: "beach",
   accent: {
     primary: "#FFD700", // золотой песок
@@ -81,6 +84,7 @@ export const beachTheme: PalitraInterface = {
 
 export const christmasTheme: PalitraInterface = {
   id: 9,
+  isFree: false,
   theme: "christmas",
   accent: {
     primary: "#008000", // ёлка
@@ -108,6 +112,7 @@ export const christmasTheme: PalitraInterface = {
 
 export const loveTheme: PalitraInterface = {
   id: 10,
+  isFree: false,
   theme: "love",
   accent: {
     primary: "#FF69B4", // розовый
@@ -135,6 +140,7 @@ export const loveTheme: PalitraInterface = {
 
 export const autumnTheme: PalitraInterface = {
   id: 11,
+  isFree: false,
   theme: "autumn",
   accent: {
     primary: "#FF6347", // томатный
@@ -162,6 +168,7 @@ export const autumnTheme: PalitraInterface = {
 
 export const summerTheme: PalitraInterface = {
   id: 12,
+  isFree: false,
   theme: "summer",
   accent: {
     primary: "#FF4500", // оранжевый
