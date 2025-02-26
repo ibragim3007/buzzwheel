@@ -1,3 +1,5 @@
+import { SettingsConstants } from "@/src/shared/config/constants/settingsOptions";
+import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
 import { LocalStorage } from "@/src/shared/service/storage.service";
 import { create } from "zustand";
 

@@ -15,6 +15,7 @@ import {
 } from "@expo-google-fonts/open-sans";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import CustomModal from "@/src/entities/Modal/ui/CustomModal";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -43,6 +44,7 @@ export default function RootLayout() {
       <BottomSheetModalProvider>
         <ThemeProvider>
           <StatusBar hidden />
+          <CustomModal />
           <StackRoute />
         </ThemeProvider>
       </BottomSheetModalProvider>

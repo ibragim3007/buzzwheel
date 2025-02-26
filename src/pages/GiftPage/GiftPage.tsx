@@ -1,17 +1,27 @@
 import { convertGiftsToSegments } from "@/src/entities/Gift/convertGiftsToSegments";
+import { useGiftRepositroy } from "@/src/entities/Gift/gift.repository";
 import { mockGifts } from "@/src/entities/Gift/mockGifts";
+import { useModalStore } from "@/src/entities/Modal/useModalStore";
 import { SegmentType } from "@/src/entities/Roulette/types";
+import { giftService } from "@/src/module/GiftModule/GiftService";
 import { Roulette } from "@/src/module/Roulette";
 
 import { calcByWheelSize } from "@/src/module/Roulette/config/config";
+import {
+  generateSegmentsMock,
+  OPTIONS_SMALL_ROULETTE,
+} from "@/src/module/SettingsGame/RoulettePicker/RoulettePicker";
+import { SettingsConstants } from "@/src/shared/config/constants/settingsOptions";
 
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
+import SmallAppThemeElem from "@/src/shared/ui/elements/SmallAppThemeElem";
+import SmallRoulette from "@/src/shared/ui/elements/SmallRoulette";
 import Grid from "@/src/shared/ui/grid/Grid";
 import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
 import Header from "@/src/widget/Header";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Animated, { ZoomIn } from "react-native-reanimated";
 
 // Игкрок зашел первый день и видит получение приза
@@ -86,10 +96,56 @@ export default function GiftPage() {
   const colors = useTheme();
   const [spinStatus, setSpinStatus] = useState(false);
   const onChangeSpinStatus = (isSpinning: boolean) => setSpinStatus(isSpinning);
+  const { openModal } = useModalStore();
 
-  // const onPressSpinRoulette = () => {
-  //   rouletteRef.current?.spinRoulette();
-  // };
+  const {
+    unlockRouletteColor,
+    unlockTheme,
+    unlockedRouletteColors,
+    unlockedThemes,
+  } = useGiftRepositroy();
+
+  const onCallback = (segment: SegmentType) => {
+    if (segment.type === "gift") {
+      const gift = mockGifts.find((gift) => gift.id === segment.id);
+
+      if (gift?.type === "app-theme") {
+        const lockedTheme = giftService.getRandomLockedGift(
+          SettingsConstants.themes,
+          unlockedThemes
+        );
+        if (lockedTheme) {
+          unlockTheme(lockedTheme.id);
+          openModal({
+            title: "Вы выйграли подарок!",
+            description: "Вы получили тему для приложения!",
+            node: <SmallAppThemeElem theme={lockedTheme} />,
+            buttonText: "Получить",
+          });
+        }
+      }
+      if (gift?.type === "roulette-colors") {
+        const lockedRoulette = giftService.getRandomLockedGift(
+          SettingsConstants.availableColors,
+          unlockedRouletteColors
+        );
+        if (lockedRoulette) {
+          unlockRouletteColor(lockedRoulette.id);
+          openModal({
+            title: "Вы выйграли подарок!",
+            description: "Вы получили колесо для игры!",
+            node: (
+              <SmallRoulette
+                segments={generateSegmentsMock(lockedRoulette.colors)}
+                options={OPTIONS_SMALL_ROULETTE}
+              />
+            ),
+            buttonText: "Получить",
+          });
+        }
+      }
+    }
+  };
 
   const segments = convertGiftsToSegments(mockGifts);
 
@@ -115,7 +171,7 @@ export default function GiftPage() {
                 }}
                 onChangeSpinStatus={onChangeSpinStatus}
                 currentTurn={null}
-                onCallback={() => {}}
+                onCallback={onCallback}
               />
             </Grid>
           </Animated.View>

@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IAvailableColor } from "../config/constants/settingsOptions";
 import { StorageKeys } from "../config/constants/storageKeys";
+import { sizeOf } from "../utils/sizeOf";
 
 class Storage {
   async getRouletteColor(): Promise<IAvailableColor | null> {
@@ -59,6 +60,30 @@ class Storage {
       StorageKeys.unlockedThemes,
       JSON.stringify(value)
     );
+  }
+
+  async clearStorage(key: string) {
+    if (key === "key") await AsyncStorage.clear();
+  }
+
+  async calculateSize() {
+    const keys = await AsyncStorage.getAllKeys();
+
+    let totalSizeInBytes = 0;
+
+    for (const key of keys) {
+      const item = await AsyncStorage.getItem(key);
+      try {
+        if (item) {
+          const sizeInBytes = sizeOf(item);
+          totalSizeInBytes += sizeInBytes;
+        }
+      } catch (e) {
+        console.log(`Error to get item: ${key}`);
+      }
+    }
+
+    return totalSizeInBytes;
   }
 }
 

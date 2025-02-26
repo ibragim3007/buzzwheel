@@ -67,13 +67,14 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
         </Grid>
       )}
       <BottomSheetModal
-        index={1}
-        snapPoints={["40%"]}
+        index={0}
+        snapPoints={["55%"]}
         ref={bottomSheetModalRef}
-        enablePanDownToClose={true}
-        enableHandlePanningGesture={true}
-        enableContentPanningGesture={true}
-        keyboardBehavior="interactive"
+        // enablePanDownToClose={true}
+        // enableHandlePanningGesture={true}
+        // enableContentPanningGesture={true}
+        // keyboardBehavior="interactive"
+
         onChange={handleSheetChanges}
         handleComponent={HandleComponent}
         backgroundStyle={{

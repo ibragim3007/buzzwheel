@@ -1,3 +1,4 @@
+import { useGiftRepositroy } from "@/src/entities/Gift/gift.repository";
 import { SegmentType } from "@/src/entities/Roulette/types";
 import { useSettings } from "@/src/entities/Settings/settings.repository";
 import {
@@ -14,7 +15,7 @@ import { normalizedSize } from "@/src/shared/utils/size";
 import React from "react";
 import { Alert, Pressable } from "react-native";
 
-const generateSegmentsMock = (
+export const generateSegmentsMock = (
   colors: [string, string, string]
 ): SegmentType[] => {
   return [
@@ -23,29 +24,33 @@ const generateSegmentsMock = (
       label: "",
       id: 1,
       type: "player",
+      probability: 1,
     },
-    { color: colors[1], label: "", id: 2, type: "player" },
+    { color: colors[1], label: "", id: 2, type: "player", probability: 1 },
     {
       color: colors[0],
       label: "",
       id: 2,
       type: "player",
+      probability: 1,
     },
-    { color: colors[2], label: "", id: 2, type: "player" },
+    { color: colors[2], label: "", id: 2, type: "player", probability: 1 },
     {
       color: colors[1],
       label: "",
       id: 3,
       type: "player",
+      probability: 1,
     },
-    { color: colors[0], label: "", id: 2, type: "player" },
+    { color: colors[0], label: "", id: 2, type: "player", probability: 1 },
     {
       color: colors[1],
       label: "",
       id: 4,
       type: "player",
+      probability: 1,
     },
-    { color: colors[2], label: "", id: 5, type: "player" },
+    { color: colors[2], label: "", id: 5, type: "player", probability: 1 },
   ];
 };
 
@@ -57,12 +62,26 @@ const TEXT_RADIUS = CENTER * 0.6; // Радиус для текста (умен�
 const BORDER_WIDTH = normalizedSize(15);
 const TOTAL_SIZE = WHEEL_SIZE + BORDER_WIDTH; // Размер SVG с учётом обводки
 
+export const OPTIONS_SMALL_ROULETTE = {
+  EXTRA_PADDING,
+  WHEEL_SIZE,
+  CENTER,
+  RADIUS,
+  TEXT_RADIUS,
+  BORDER_WIDTH,
+  TOTAL_SIZE,
+};
+
 export default function RoulettePicker() {
   const colors = useTheme();
   const { rouletteColor, setRouletteColors } = useSettings();
   const { vibrateSelection } = useVibration();
-  const onRouletteColorChange = (color: IAvailableColor) => {
-    if (color.isFree) {
+  const { unlockedRouletteColors } = useGiftRepositroy();
+  const onRouletteColorChange = (
+    color: IAvailableColor,
+    isAvailable: boolean
+  ) => {
+    if (isAvailable) {
       if (rouletteColor?.id !== color.id) vibrateSelection();
       setRouletteColors(color);
     } else {
@@ -84,8 +103,10 @@ export default function RoulettePicker() {
       ITEM_SIZE={WHEEL_SIZE}
       renderItem={({ item, index }) => {
         const isPicked = item.id === rouletteColor?.id;
+        const isUnlocked = unlockedRouletteColors.includes(item.id);
+        const isAvailable = item.isFree || isUnlocked;
         return (
-          <Pressable onPress={() => onRouletteColorChange(item)}>
+          <Pressable onPress={() => onRouletteColorChange(item, isAvailable)}>
             <Grid
               color={isPicked ? colors.background.secondary : "transparent"}
               padding={5}
@@ -96,18 +117,10 @@ export default function RoulettePicker() {
                 borderColor: isPicked ? "#ffffff23" : "transparent",
               }}
             >
-              {!item.isFree && <LockElement />}
+              {!isAvailable && <LockElement />}
               <SmallRoulette
                 segments={generateSegmentsMock(item.colors)}
-                options={{
-                  TOTAL_SIZE,
-                  BORDER_WIDTH,
-                  CENTER,
-                  WHEEL_SIZE,
-                  EXTRA_PADDING,
-                  RADIUS,
-                  TEXT_RADIUS,
-                }}
+                options={OPTIONS_SMALL_ROULETTE}
               />
             </Grid>
           </Pressable>
