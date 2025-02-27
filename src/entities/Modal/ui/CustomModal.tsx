@@ -1,21 +1,27 @@
 // src/components/CustomModal.tsx
+import { useTheme } from "@/src/shared/hooks/useTheme";
 import Grid from "@/src/shared/ui/grid/Grid";
 import Typography from "@/src/shared/ui/typography/Typography";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import React from "react";
 import { Modal, Pressable, StyleSheet, TouchableOpacity } from "react-native";
 import { useModalStore } from "../useModalStore";
 import ModalDarkWrap from "./ModalDarkWrap";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import WrapIconInCircle from "@/src/shared/ui/wrapper/WrapIconInCircle";
-import WrapIconInPressable from "@/src/shared/ui/wrapper/WrapIconInPressable";
 
 const CustomModal: React.FC = () => {
   const { isVisible, modalContent, closeModal } = useModalStore();
   const colors = useTheme();
+
+  const onClose = () => {
+    if (modalContent?.callbackOnClose) {
+      modalContent.callbackOnClose();
+    }
+    closeModal();
+  };
+
   return (
-    <Modal visible={isVisible} onRequestClose={closeModal} transparent>
-      <ModalDarkWrap onClose={closeModal}>
+    <Modal visible={isVisible} onRequestClose={onClose} transparent>
+      <ModalDarkWrap onClose={onClose}>
         <Pressable>
           <Grid
             padding={20}
@@ -35,7 +41,7 @@ const CustomModal: React.FC = () => {
 
               <AntDesign
                 name="close"
-                onPress={closeModal}
+                onPress={onClose}
                 size={24}
                 color={colors.text.primary}
                 style={{ position: "absolute", right: -50 }}
@@ -47,7 +53,7 @@ const CustomModal: React.FC = () => {
               </Typography>
             )}
             {modalContent?.node && modalContent.node}
-            <TouchableOpacity style={styles.button} onPress={closeModal}>
+            <TouchableOpacity style={styles.button} onPress={onClose}>
               <Typography weight="bold" style={styles.buttonText}>
                 {modalContent?.buttonText || "Close"}
               </Typography>

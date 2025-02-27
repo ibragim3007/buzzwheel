@@ -7,6 +7,7 @@ interface IModalContent {
   description?: string;
   node?: React.ReactNode;
   buttonText?: string;
+  callbackOnClose?: () => void;
 }
 
 interface ModalState {

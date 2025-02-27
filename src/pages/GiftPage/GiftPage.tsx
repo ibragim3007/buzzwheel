@@ -12,6 +12,7 @@ import {
   OPTIONS_SMALL_ROULETTE,
 } from "@/src/module/SettingsGame/RoulettePicker/RoulettePicker";
 import { SettingsConstants } from "@/src/shared/config/constants/settingsOptions";
+import { CustomAnimations } from "@/src/shared/config/theme/AnimationConfig";
 
 import { useTheme } from "@/src/shared/hooks/useTheme";
 import Button from "@/src/shared/ui/buttons/Button";
@@ -20,9 +21,10 @@ import SmallRoulette from "@/src/shared/ui/elements/SmallRoulette";
 import Grid from "@/src/shared/ui/grid/Grid";
 import PageWrapper from "@/src/shared/ui/layout/PageWrapper";
 import SafeWrapper from "@/src/shared/ui/layout/SafeWrapper";
+import Typography from "@/src/shared/ui/typography/Typography";
 import Header from "@/src/widget/Header";
 import React, { useEffect, useRef, useState } from "react";
-import Animated, { ZoomIn } from "react-native-reanimated";
+import Animated, { ZoomIn, ZoomOut } from "react-native-reanimated";
 
 // Игкрок зашел первый день и видит получение приза
 // игрок получает возможность крутить колесо и получить фичу
@@ -101,8 +103,10 @@ export default function GiftPage() {
   const {
     unlockRouletteColor,
     unlockTheme,
+    setIsAvailableToSpin,
     unlockedRouletteColors,
     unlockedThemes,
+    isAvailableToSpin,
   } = useGiftRepositroy();
 
   const onCallback = (segment: SegmentType) => {
@@ -119,6 +123,7 @@ export default function GiftPage() {
           openModal({
             title: "Вы выйграли подарок!",
             description: "Вы получили тему для приложения!",
+            callbackOnClose: () => setIsAvailableToSpin(false),
             node: <SmallAppThemeElem theme={lockedTheme} />,
             buttonText: "Получить",
           });
@@ -134,6 +139,7 @@ export default function GiftPage() {
           openModal({
             title: "Вы выйграли подарок!",
             description: "Вы получили колесо для игры!",
+            callbackOnClose: () => setIsAvailableToSpin(false),
             node: (
               <SmallRoulette
                 segments={generateSegmentsMock(lockedRoulette.colors)}
@@ -149,6 +155,31 @@ export default function GiftPage() {
 
   const segments = convertGiftsToSegments(mockGifts);
 
+  if (!isAvailableToSpin.value) {
+    return (
+      <PageWrapper flex={1}>
+        <SafeWrapper>
+          <Animated.View entering={CustomAnimations.enterItemShow(3)}>
+            <Grid space="md">
+              <Header back />
+              <Grid space="sm">
+                <Typography variant="title-1" weight="bold">
+                  There is no gift for now
+                </Typography>
+                <Grid>
+                  <Typography>Comeback tomorrow!</Typography>
+                  {/* <Typography variant="caption-1">
+                    {isAvailableToSpin.date.toDateString()}
+                  </Typography> */}
+                </Grid>
+              </Grid>
+            </Grid>
+          </Animated.View>
+        </SafeWrapper>
+      </PageWrapper>
+    );
+  }
+
   return (
     <PageWrapper flex={1}>
       <SafeWrapper>
@@ -160,6 +191,7 @@ export default function GiftPage() {
           <Animated.View
             style={{ flex: 1 }}
             entering={ZoomIn.delay(300).springify()}
+            exiting={ZoomOut.delay(400).springify()}
           >
             <Grid flex={1}>
               <Roulette

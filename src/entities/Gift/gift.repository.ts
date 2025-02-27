@@ -1,11 +1,14 @@
-import { SettingsConstants } from "@/src/shared/config/constants/settingsOptions";
-import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
 import { LocalStorage } from "@/src/shared/service/storage.service";
 import { create } from "zustand";
 
 interface State {
   unlockedRouletteColors: number[];
   unlockedThemes: number[];
+
+  isAvailableToSpin: {
+    value: boolean;
+    date: Date;
+  };
 }
 
 interface Actions {
@@ -14,12 +17,18 @@ interface Actions {
 
   lockRouletteColor: (id: number) => void;
   lockTheme: (id: number) => void;
+
+  setIsAvailableToSpin: (isAvailableToSpin: boolean) => void;
 }
 
 export const useGiftRepositroy = create<State & Actions>((set) => {
   const initialState: State = {
     unlockedRouletteColors: [],
     unlockedThemes: [],
+    isAvailableToSpin: {
+      value: false,
+      date: new Date(),
+    },
   };
 
   const getInitialState = async () => {
@@ -27,9 +36,21 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
       await LocalStorage.getUnlockedRouletteColors();
     const unlockedThemes = await LocalStorage.getUnlockedThemes();
 
+    const localDate = await LocalStorage.getDayliTaskDatePressed();
+    const date = localDate ? new Date(localDate) : new Date();
+    const now = new Date();
+    const dayPlusOne = new Date(date);
+    dayPlusOne.setDate(dayPlusOne.getDate() + 1);
+
+    const isAvailableToSpin = !localDate || now >= dayPlusOne;
+
     set({
       unlockedRouletteColors: unlockedRouletteColors || [],
       unlockedThemes: unlockedThemes || [],
+      isAvailableToSpin: {
+        value: isAvailableToSpin,
+        date: dayPlusOne,
+      },
     });
   };
 
@@ -69,6 +90,14 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
         };
       });
     },
+    setIsAvailableToSpin: (isAvailableToSpin: boolean) => {
+      set({
+        isAvailableToSpin: {
+          value: isAvailableToSpin,
+          date: new Date(),
+        },
+      });
+    },
   };
 });
 
@@ -78,5 +107,9 @@ useGiftRepositroy.subscribe(async (state) => {
   }
   if (state.unlockedThemes) {
     await LocalStorage.setUnlockedThemes(state.unlockedThemes);
+  }
+
+  if (state.isAvailableToSpin) {
+    await LocalStorage.setDayliTaskDatePressed(new Date().toString());
   }
 });

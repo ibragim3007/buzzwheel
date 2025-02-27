@@ -5,4 +5,5 @@ export const StorageKeys = {
   isRemoveRepetitions: "isRemoveRepetitions",
   unlockedRouletteColors: "unlockedRouletteColors",
   unlockedThemes: "unlockedThemes",
+  dayliTaskDatePressed: "dayliTaskDatePressed",
 };

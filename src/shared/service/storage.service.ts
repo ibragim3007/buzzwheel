@@ -62,6 +62,18 @@ class Storage {
     );
   }
 
+  async getDayliTaskDatePressed(): Promise<string | null> {
+    const value = await AsyncStorage.getItem(StorageKeys.dayliTaskDatePressed);
+    return value ? JSON.parse(value) : null;
+  }
+
+  async setDayliTaskDatePressed(value: string) {
+    await AsyncStorage.setItem(
+      StorageKeys.dayliTaskDatePressed,
+      JSON.stringify(value)
+    );
+  }
+
   async clearStorage(key: string) {
     if (key === "key") await AsyncStorage.clear();
   }
