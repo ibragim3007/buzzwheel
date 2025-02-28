@@ -64,14 +64,12 @@ class Storage {
 
   async getDayliTaskDatePressed(): Promise<string | null> {
     const value = await AsyncStorage.getItem(StorageKeys.dayliTaskDatePressed);
-    return value ? JSON.parse(value) : null;
+    return value ? value : null;
   }
 
   async setDayliTaskDatePressed(value: string) {
-    await AsyncStorage.setItem(
-      StorageKeys.dayliTaskDatePressed,
-      JSON.stringify(value)
-    );
+    console.log("SEATTER: ", value);
+    await AsyncStorage.setItem(StorageKeys.dayliTaskDatePressed, value);
   }
 
   async clearStorage(key: string) {

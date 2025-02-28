@@ -36,21 +36,40 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
       await LocalStorage.getUnlockedRouletteColors();
     const unlockedThemes = await LocalStorage.getUnlockedThemes();
 
-    const localDate = await LocalStorage.getDayliTaskDatePressed();
-    const date = localDate ? new Date(localDate) : new Date();
-    const now = new Date();
-    const dayPlusOne = new Date(date);
-    dayPlusOne.setDate(dayPlusOne.getDate() + 1);
+    const dayliTaskDatePressed = await LocalStorage.getDayliTaskDatePressed();
+    console.log("DAULY: ", dayliTaskDatePressed);
 
-    const isAvailableToSpin = !localDate || now >= dayPlusOne;
+    if (!dayliTaskDatePressed) {
+      set({
+        isAvailableToSpin: {
+          value: true,
+          date: new Date(),
+        },
+      });
+    } else if (dayliTaskDatePressed) {
+      const localDate = new Date(dayliTaskDatePressed);
+      const currentDate = new Date();
+
+      if (currentDate.getTime() > localDate.getTime()) {
+        set({
+          isAvailableToSpin: {
+            value: true,
+            date: new Date(),
+          },
+        });
+      } else {
+        set({
+          isAvailableToSpin: {
+            value: false,
+            date: new Date(),
+          },
+        });
+      }
+    }
 
     set({
       unlockedRouletteColors: unlockedRouletteColors || [],
       unlockedThemes: unlockedThemes || [],
-      isAvailableToSpin: {
-        value: isAvailableToSpin,
-        date: dayPlusOne,
-      },
     });
   };
 
@@ -90,11 +109,19 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
         };
       });
     },
-    setIsAvailableToSpin: (isAvailableToSpin: boolean) => {
+    setIsAvailableToSpin: async (isAvailableToSpin: boolean) => {
+      const currentDate = new Date();
+      const plusOneDay = new Date(
+        currentDate.setDate(currentDate.getDate() + 1)
+      );
+
+      console.log("PLUS ONE LOCAL:", plusOneDay.toString());
+
+      await LocalStorage.setDayliTaskDatePressed(plusOneDay.toString());
       set({
         isAvailableToSpin: {
           value: isAvailableToSpin,
-          date: new Date(),
+          date: plusOneDay,
         },
       });
     },
@@ -107,9 +134,5 @@ useGiftRepositroy.subscribe(async (state) => {
   }
   if (state.unlockedThemes) {
     await LocalStorage.setUnlockedThemes(state.unlockedThemes);
-  }
-
-  if (state.isAvailableToSpin) {
-    await LocalStorage.setDayliTaskDatePressed(new Date().toString());
   }
 });
