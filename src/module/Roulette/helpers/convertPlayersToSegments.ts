@@ -1,4 +1,5 @@
 import { SegmentType } from "@/src/entities/Roulette/types";
+import { DEFAULT_PROBABILITY } from "@/src/shared/config/constants/constants";
 import { Player } from "@/src/shared/types/globalTypes";
 
 const color1Segment = "#990";
@@ -52,7 +53,7 @@ export function convertPlayersToSegments(
     color: index % 2 === 0 ? colorGroup[0] : colorGroup[1],
     type: "player",
     textColor: player.color,
-    probability: 0.1,
+    probability: DEFAULT_PROBABILITY,
   }));
 
   const allPlayerSegment: SegmentType = {
@@ -60,7 +61,7 @@ export function convertPlayersToSegments(
     label: "Все",
     color: colorGroup[2],
     type: "all",
-    probability: 0.1,
+    probability: DEFAULT_PROBABILITY,
   };
 
   const step = Math.floor(totalSegments / allSemgents);

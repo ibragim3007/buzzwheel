@@ -1,4 +1,5 @@
 import { SegmentType } from "@/src/entities/Roulette/types";
+import { DEFAULT_PROBABILITY } from "@/src/shared/config/constants/constants";
 import { useVibration } from "@/src/shared/hooks/useVibration";
 import { useState } from "react";
 import {
@@ -14,14 +15,14 @@ import {
 
 const getWeightedRandomItem = (items: SegmentType[]) => {
   const totalWeight = items.reduce(
-    (total, item) => total + item.probability,
+    (total, item) => total + (item?.probability || DEFAULT_PROBABILITY),
     0
   );
   const randomNum = Math.random() * totalWeight;
   let cumulativeWeight = 0;
 
   for (let i = 0; i < items.length; i++) {
-    cumulativeWeight += items[i].probability;
+    cumulativeWeight += items[i]?.probability || DEFAULT_PROBABILITY;
     if (randomNum < cumulativeWeight) {
       return { item: items[i], index: i };
     }
