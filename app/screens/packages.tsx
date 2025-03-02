@@ -1,5 +1,4 @@
-import { PackagesPage } from "@/src/pages/PackagePage";
-import React from "react";
+import { PackagesPage } from '@/src/pages/PackagePage';
 
 export default function packages() {
   return <PackagesPage />;

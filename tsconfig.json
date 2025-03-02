@@ -39,5 +39,14 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "tsconfig.base.json",
+    "tsconfig.json",
+    ".prettierrc.js",
   ]
 }

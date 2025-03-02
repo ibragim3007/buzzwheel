@@ -23,6 +23,11 @@ export default [{
         "**/react-native.config.js",
         "**/metro.config.js",
         "**/babel.config.js",
+        "node_modules",
+        "babel.config.js",
+        "metro.config.js",
+        "tsconfig.json",
+        ".prettierrc.js",
     ],
 }, ...fixupConfigRules(compat.extends(
     "eslint:recommended",

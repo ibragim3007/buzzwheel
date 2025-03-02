@@ -1,5 +1,4 @@
-import { GamePage } from "@/src/pages/GamePage";
-import React from "react";
+import { GamePage } from '@/src/pages/GamePage';
 
 export default function game() {
   return <GamePage />;
