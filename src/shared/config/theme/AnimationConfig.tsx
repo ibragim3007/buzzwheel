@@ -10,6 +10,7 @@ import {
   SlideOutLeft,
   SlideOutRight,
   SlideOutUp,
+  ZoomInDown,
 } from 'react-native-reanimated';
 import { ANIMATION_SPEED } from '../constants/constants';
 
@@ -64,6 +65,12 @@ export const CustomAnimations = {
 
   exitSlideOutRight: (n: number) =>
     SlideOutRight.delay(n * ANIMATION_SPEED)
+      .mass(0.6)
+      .stiffness(70),
+
+  zoomInDown: (n: number) =>
+    ZoomInDown.delay(n * ANIMATION_SPEED)
+      .springify()
       .mass(0.6)
       .stiffness(70),
 };
