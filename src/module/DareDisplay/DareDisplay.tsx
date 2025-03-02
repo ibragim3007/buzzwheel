@@ -3,6 +3,7 @@ import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { getTransformedArrayOfString, updatedArray } from '@/src/shared/helpers/textConverters/coreLogic';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { animationEngine, animationService } from '@/src/shared/service/animation.service';
 import { Dare, Player } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
@@ -11,7 +12,7 @@ import { normalizedSize } from '@/src/shared/utils/size';
 import { Image } from 'expo-image';
 import { useRef, useState } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
-import Animated, { SlideInRight, SlideOutLeft } from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
 import ButtomTimerInCard from './ButtomTimerInCard';
 
 interface DareDisplayProps {
@@ -36,8 +37,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   return (
     <Animated.View
       style={{ width: '100%', marginHorizontal: HORIZONTAL_PADDINGS }}
-      entering={SlideInRight}
-      exiting={SlideOutLeft}
+      entering={animationService.enteringDareCard(0)}
+      exiting={animationEngine.slideOutLeft(0)}
     >
       <Grid gap={60} align="center">
         {/* <Grid

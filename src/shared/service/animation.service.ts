@@ -1,4 +1,11 @@
-import { FadeInUp, SlideInRight, ZoomInDown } from 'react-native-reanimated';
+import {
+  ComplexAnimationBuilder,
+  FadeInUp,
+  SlideInRight,
+  SlideOutLeft,
+  SlideOutRight,
+  ZoomInDown,
+} from 'react-native-reanimated';
 
 // Место контроля анимаций в приложении
 
@@ -14,41 +21,34 @@ const OptionsAnimationService: OptionAnimationServiceType = {
   stiffness: 70,
 };
 
-interface AnimationBased {
-  fadeInUp: (n: number) => FadeInUp;
-  zoomInDown: (n: number) => ZoomInDown;
-  slideInRight: (n: number) => SlideInRight;
-}
-
-class AnimationEngine implements AnimationBased {
-  fadeInUp: (n: number) => FadeInUp;
-  zoomInDown: (n: number) => ZoomInDown;
-  slideInRight: (n: number) => SlideInRight;
+class AnimationEngine {
+  private ANIMATION_SPEED: number;
+  private MASS: number;
+  private stiffness: number;
 
   constructor(options: OptionAnimationServiceType) {
     const { ANIMATION_SPEED, MASS, stiffness } = options;
-
-    this.fadeInUp = (n: number) =>
-      FadeInUp.delay(n * ANIMATION_SPEED)
-        .springify()
-        .stiffness(stiffness)
-        .mass(MASS);
-
-    this.zoomInDown = (n: number) =>
-      ZoomInDown.delay(n * ANIMATION_SPEED)
-        .springify()
-        .stiffness(stiffness)
-        .mass(MASS);
-
-    this.slideInRight = (n: number) =>
-      SlideInRight.delay(n * ANIMATION_SPEED)
-        .springify()
-        .stiffness(stiffness)
-        .mass(MASS);
+    this.ANIMATION_SPEED = ANIMATION_SPEED;
+    this.MASS = MASS;
+    this.stiffness = stiffness;
   }
+
+  private createAnimation<T extends ComplexAnimationBuilder>(animationType: T, n: number) {
+    return animationType
+      .delay(n * this.ANIMATION_SPEED)
+      .springify()
+      .stiffness(this.stiffness)
+      .mass(this.MASS);
+  }
+
+  fadeInUp = (n: number) => this.createAnimation(new FadeInUp(), n);
+  zoomInDown = (n: number) => this.createAnimation(new ZoomInDown(), n);
+  slideInRight = (n: number) => this.createAnimation(new SlideInRight(), n);
+  slideOutRight = (n: number) => this.createAnimation(new SlideOutRight(), n);
+  slideOutLeft = (n: number) => this.createAnimation(new SlideOutLeft(), n);
 }
 
-const animationEngine = new AnimationEngine(OptionsAnimationService);
+export const animationEngine = new AnimationEngine(OptionsAnimationService);
 
 class AnimationService {
   animationEngine: AnimationEngine;
@@ -58,7 +58,11 @@ class AnimationService {
   }
 
   getAnimationForShowPackageItem = (index: number) => {
-    return this.animationEngine.slideInRight(index + 1);
+    return this.animationEngine.slideInRight((index + 1) * 0.5);
+  };
+
+  enteringDareCard = (index: number) => {
+    return this.animationEngine.slideInRight(index);
   };
 }
 

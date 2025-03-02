@@ -8,6 +8,7 @@ import { DefaultRouletteOptions } from '@/src/module/Roulette/config/config';
 import { convertPlayersToSegments } from '@/src/module/Roulette/helpers/convertPlayersToSegments';
 import { groupsOfColors } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { animationService } from '@/src/shared/service/animation.service';
 import Grid from '@/src/shared/ui/grid/Grid';
 import SafeWrapper from '@/src/shared/ui/layout/SafeWrapper';
 import Header from '@/src/widget/Header';
@@ -67,7 +68,11 @@ export default function GamePage() {
         )}
 
         {!displayDare && (
-          <Animated.View entering={SlideInRight} exiting={SlideOutLeft} style={{ alignItems: 'center' }}>
+          <Animated.View
+            entering={animationService.enteringDareCard(0)}
+            exiting={SlideOutLeft}
+            style={{ alignItems: 'center' }}
+          >
             <Roulette
               currentTurn={currentTurn}
               segments={segments}
