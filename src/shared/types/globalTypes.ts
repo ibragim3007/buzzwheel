@@ -1,19 +1,7 @@
-export type LANGUAGE =
-  | "ru"
-  | "en"
-  | "es"
-  | "fr"
-  | "de"
-  | "it"
-  | "pt"
-  | "pl"
-  | "tr"
-  | "nl"
-  | "sv"
-  | "cs";
+export type LANGUAGE = 'ru' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'tr' | 'nl' | 'sv' | 'cs';
 
-export type DareType = "player" | "all" | "gift";
-export type PackageType = "default" | "pair";
+export type DareType = 'player' | 'all' | 'gift';
+export type PackageType = 'default' | 'pair';
 
 export interface Package {
   readonly id: number;

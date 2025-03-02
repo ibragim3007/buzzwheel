@@ -1,12 +1,11 @@
 const PLACEHOLDERS = {
-  CURRENT_PLAYER: "${c_player}",
-  RANDOM_PLAYER: "${r_player}",
-  PREV_PLAYER: "${prev_player}",
-  NEXT_PLAYER: "${next_player}",
-  RANDOM_LETTER: "${r_letter}",
+  CURRENT_PLAYER: '${c_player}',
+  RANDOM_PLAYER: '${r_player}',
+  PREV_PLAYER: '${prev_player}',
+  NEXT_PLAYER: '${next_player}',
+  RANDOM_LETTER: '${r_letter}',
   RAND_REGEX: /\$\{rand\((\d+),(\d+)\)\}/,
-  TOKEN_REGEX:
-    /\$\{[^}]+\}|\$\{r_player\}|\$\{rand\(\d+,\d+\)\}|\$\{prev_player\}|\$\{next_player\}|\$\{r_letter\}/g,
+  TOKEN_REGEX: /\$\{[^}]+\}|\$\{r_player\}|\$\{rand\(\d+,\d+\)\}|\$\{prev_player\}|\$\{next_player\}|\$\{r_letter\}/g,
 };
 
 export const getTransformedArrayOfString = (str: string): string[] => {
@@ -37,30 +36,20 @@ type BasePlayerInterface = {
 export const updatedArray = (
   transformedArray: string[],
   currentPlayer: BasePlayerInterface,
-  players: BasePlayerInterface[]
+  players: BasePlayerInterface[],
 ): string[] => {
-  const otherPlayers = players.filter(
-    (player) => player.id !== currentPlayer.id
-  );
-  const randomPlayer =
-    otherPlayers.length > 0
-      ? otherPlayers[Math.floor(Math.random() * otherPlayers.length)]
-      : null;
+  const otherPlayers = players.filter(player => player.id !== currentPlayer.id);
+  const randomPlayer = otherPlayers.length > 0 ? otherPlayers[Math.floor(Math.random() * otherPlayers.length)] : null;
 
-  const currentIndex = players.findIndex(
-    (player) => player.id === currentPlayer.id
-  );
-  const prevPlayer =
-    players[(currentIndex - 1 + players.length) % players.length];
+  const currentIndex = players.findIndex(player => player.id === currentPlayer.id);
+  const prevPlayer = players[(currentIndex - 1 + players.length) % players.length];
   const nextPlayer = players[(currentIndex + 1) % players.length];
 
-  const getRandomLetter = () =>
-    String.fromCharCode(65 + Math.floor(Math.random() * 26));
+  const getRandomLetter = () => String.fromCharCode(65 + Math.floor(Math.random() * 26));
 
-  return transformedArray.map((item) => {
+  return transformedArray.map(item => {
     if (item === PLACEHOLDERS.CURRENT_PLAYER) return currentPlayer.name;
-    if (item === PLACEHOLDERS.RANDOM_PLAYER && randomPlayer)
-      return randomPlayer.name;
+    if (item === PLACEHOLDERS.RANDOM_PLAYER && randomPlayer) return randomPlayer.name;
     if (item === PLACEHOLDERS.PREV_PLAYER) return prevPlayer.name;
     if (item === PLACEHOLDERS.NEXT_PLAYER) return nextPlayer.name;
     if (item === PLACEHOLDERS.RANDOM_LETTER) return getRandomLetter();

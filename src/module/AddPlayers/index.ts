@@ -1,3 +1,3 @@
-import AddPlayers from "./AddPlayers";
+import AddPlayers from './AddPlayers';
 
 export { AddPlayers };

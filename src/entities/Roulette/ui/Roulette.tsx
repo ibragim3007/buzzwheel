@@ -1,16 +1,15 @@
-import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
-import { useRoulette } from "@/src/module/Roulette/hooks/useRoulette";
+import { RouletteOptions, SegmentType } from '@/src/entities/Roulette/types';
+import { useRoulette } from '@/src/module/Roulette/hooks/useRoulette';
 
-import { Player } from "@/src/shared/types/globalTypes";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Typography from "@/src/shared/ui/typography/Typography";
-import React, { forwardRef, useEffect, useImperativeHandle } from "react";
-import { StyleSheet, View } from "react-native";
-import Animated, { FadeIn } from "react-native-reanimated";
-import Svg, { Circle, Defs, G, Mask, Polygon, Rect } from "react-native-svg";
+import { Player } from '@/src/shared/types/globalTypes';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Typography from '@/src/shared/ui/typography/Typography';
+import { forwardRef, useEffect, useImperativeHandle } from 'react';
+import { StyleSheet, View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
+import Svg, { Circle, Defs, G, Mask, Polygon, Rect } from 'react-native-svg';
 
-import { RouletteSegment } from "./RouletteSegment";
-import CenterCircle from "./CenterCircle";
+import { RouletteSegment } from './RouletteSegment';
 
 interface RouletteProps {
   segments: SegmentType[];
@@ -27,22 +26,9 @@ export type RouletteRef = {
 
 const Roulette = forwardRef<RouletteRef, RouletteProps>(
   ({ segments, options, currentTurn, onCallback, onChangeSpinStatus }, ref) => {
-    const {
-      TOTAL_SIZE,
-      BORDER_WIDTH,
-      CENTER,
-      RADIUS,
-      WHEEL_SIZE,
-      BORDER_COLOR,
-    } = options;
+    const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE, BORDER_COLOR } = options;
 
-    const {
-      isSpinning,
-      winner,
-      animatedStyle,
-      cursorAnimatedStyle,
-      spinWheel,
-    } = useRoulette(segments, onCallback);
+    const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } = useRoulette(segments, onCallback);
 
     useEffect(() => {
       if (onChangeSpinStatus) onChangeSpinStatus(isSpinning);
@@ -60,12 +46,8 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
           <Animated.View entering={FadeIn}>
             <Grid>
               <Typography weight="medium" variant="title-1">
-                Are you ready{" "}
-                <Typography
-                  style={{ color: currentTurn.color || "#fff" }}
-                  weight="bold"
-                  variant="title-1"
-                >
+                Are you ready{' '}
+                <Typography style={{ color: currentTurn.color || '#fff' }} weight="bold" variant="title-1">
                   {currentTurn?.name}
                 </Typography>
                 ?
@@ -74,13 +56,7 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
           </Animated.View>
         )}
 
-        <Animated.View
-          style={[
-            { height: WHEEL_SIZE, width: WHEEL_SIZE },
-            styles.wheelContainer,
-            animatedStyle,
-          ]}
-        >
+        <Animated.View style={[{ height: WHEEL_SIZE, width: WHEEL_SIZE }, styles.wheelContainer, animatedStyle]}>
           <Grid>
             <Svg
               width={TOTAL_SIZE}
@@ -93,7 +69,7 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
                 cx={CENTER}
                 cy={CENTER}
                 r={RADIUS + BORDER_WIDTH / 2}
-                fill={winner !== null ? "#252525" : BORDER_COLOR || "#eaf4ff"}
+                fill={winner !== null ? '#252525' : BORDER_COLOR || '#eaf4ff'}
               />
 
               {/* Рулетка */}
@@ -139,9 +115,7 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
               />
 
               <Polygon
-                points={`${CENTER},${CENTER - RADIUS} ${CENTER},${
-                  CENTER - RADIUS
-                } ${CENTER},${CENTER - RADIUS * 0.9}`}
+                points={`${CENTER},${CENTER - RADIUS} ${CENTER},${CENTER - RADIUS} ${CENTER},${CENTER - RADIUS * 0.9}`}
                 fill="#ffffff"
               />
             </Svg>
@@ -155,20 +129,15 @@ const Roulette = forwardRef<RouletteRef, RouletteProps>(
             color="blue"
             align="center"
             justfity="center"
-            style={{ borderRadius: 50, top: "-50%", left: "40%" }}
+            style={{ borderRadius: 50, top: '-50%', left: '40%' }}
           >
-            <Grid
-              color="#fff"
-              width={30}
-              height={30}
-              style={{ borderRadius: 30 }}
-            />
+            <Grid color="#fff" width={30} height={30} style={{ borderRadius: 30 }} />
           </Grid>
           {/* <CenterCircle options={options} /> */}
         </Animated.View>
       </View>
     );
-  }
+  },
 );
 
 const styles = StyleSheet.create({
@@ -177,8 +146,8 @@ const styles = StyleSheet.create({
     // flexDirection: "row",
     // justifyContent: "center",
     // alignItems: "center",
-    width: "100%",
-    position: "relative",
+    width: '100%',
+    position: 'relative',
     // backgroundColor: "#5e3677",
   },
   wheelContainer: {
@@ -191,9 +160,9 @@ const styles = StyleSheet.create({
     // left: "42.5%",
   },
   buttonText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 });
 export default Roulette;

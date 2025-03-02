@@ -1,16 +1,16 @@
-import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
-import { Player } from "@/src/shared/types/globalTypes";
-import Button from "@/src/shared/ui/buttons/Button";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Typography from "@/src/shared/ui/typography/Typography";
-import { normalizedSize } from "@/src/shared/utils/size";
-import React, { useEffect } from "react";
-import { StyleSheet, View } from "react-native";
-import Animated, { FadeIn } from "react-native-reanimated";
-import Svg, { Circle, Defs, G, Mask, Rect } from "react-native-svg";
-import CenterCircle from "./CenterCircle/CenterCircle";
-import { useRoulette } from "./hooks/useRoulette";
-import { RouletteSegment } from "./segment/RouletteSegment";
+import { RouletteOptions, SegmentType } from '@/src/entities/Roulette/types';
+import { Player } from '@/src/shared/types/globalTypes';
+import Button from '@/src/shared/ui/buttons/Button';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Typography from '@/src/shared/ui/typography/Typography';
+import { normalizedSize } from '@/src/shared/utils/size';
+import React, { useEffect } from 'react';
+import { StyleSheet, View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
+import Svg, { Circle, Defs, G, Mask, Rect } from 'react-native-svg';
+import CenterCircle from './CenterCircle/CenterCircle';
+import { useRoulette } from './hooks/useRoulette';
+import { RouletteSegment } from './segment/RouletteSegment';
 
 interface RouletteProps {
   segments: SegmentType[];
@@ -21,19 +21,10 @@ interface RouletteProps {
   centerBlock?: React.ReactNode;
 }
 
-const Roulette = ({
-  segments,
-  options,
-  currentTurn,
-  centerBlock,
-  onCallback,
-  onChangeSpinStatus,
-}: RouletteProps) => {
-  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE, BORDER_COLOR } =
-    options;
+const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onChangeSpinStatus }: RouletteProps) => {
+  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE, BORDER_COLOR } = options;
 
-  const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } =
-    useRoulette(segments, onCallback);
+  const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } = useRoulette(segments, onCallback);
 
   useEffect(() => {
     if (onChangeSpinStatus) onChangeSpinStatus(isSpinning);
@@ -45,12 +36,8 @@ const Roulette = ({
         <Animated.View entering={FadeIn}>
           <Grid>
             <Typography weight="medium" variant="title-1">
-              Are you ready{" "}
-              <Typography
-                style={{ color: currentTurn.color || "#fff" }}
-                weight="bold"
-                variant="title-1"
-              >
+              Are you ready{' '}
+              <Typography style={{ color: currentTurn.color || '#fff' }} weight="bold" variant="title-1">
                 {currentTurn?.name}
               </Typography>
               ?
@@ -59,13 +46,7 @@ const Roulette = ({
         </Animated.View>
       )}
 
-      <Animated.View
-        style={[
-          { height: WHEEL_SIZE, width: WHEEL_SIZE },
-          styles.wheelContainer,
-          animatedStyle,
-        ]}
-      >
+      <Animated.View style={[{ height: WHEEL_SIZE, width: WHEEL_SIZE }, styles.wheelContainer, animatedStyle]}>
         <Grid>
           <Svg
             width={TOTAL_SIZE}
@@ -78,7 +59,7 @@ const Roulette = ({
               cx={CENTER}
               cy={CENTER}
               r={RADIUS + BORDER_WIDTH / 2}
-              fill={winner !== null ? "#252525" : BORDER_COLOR || "#eaf4ff"}
+              fill={winner !== null ? '#252525' : BORDER_COLOR || '#eaf4ff'}
             />
             {/* Рулетка */}
             <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
@@ -146,7 +127,7 @@ const Roulette = ({
             top: normalizedSize(120),
             width: normalizedSize(250),
             paddingVertical: normalizedSize(20),
-            shadowColor: "#FFB347",
+            shadowColor: '#FFB347',
             shadowOpacity: 0.45,
             shadowRadius: 30,
           },
@@ -159,9 +140,9 @@ const Roulette = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
     // backgroundColor: "#5e3677",
   },
   wheelContainer: {
@@ -169,12 +150,12 @@ const styles = StyleSheet.create({
   },
 
   centerOverlay: {
-    position: "absolute",
+    position: 'absolute',
   },
   buttonText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 });
 export default Roulette;

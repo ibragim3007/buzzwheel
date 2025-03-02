@@ -1,5 +1,5 @@
-import { LocalStorage } from "@/src/shared/service/storage.service";
-import { create } from "zustand";
+import { LocalStorage } from '@/src/shared/service/storage.service';
+import { create } from 'zustand';
 
 interface State {
   unlockedRouletteColors: number[];
@@ -21,7 +21,7 @@ interface Actions {
   setIsAvailableToSpin: (isAvailableToSpin: boolean) => void;
 }
 
-export const useGiftRepositroy = create<State & Actions>((set) => {
+export const useGiftRepositroy = create<State & Actions>(set => {
   const initialState: State = {
     unlockedRouletteColors: [],
     unlockedThemes: [],
@@ -32,12 +32,11 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
   };
 
   const getInitialState = async () => {
-    const unlockedRouletteColors =
-      await LocalStorage.getUnlockedRouletteColors();
+    const unlockedRouletteColors = await LocalStorage.getUnlockedRouletteColors();
     const unlockedThemes = await LocalStorage.getUnlockedThemes();
 
     const dayliTaskDatePressed = await LocalStorage.getDayliTaskDatePressed();
-    console.log("DAULY: ", dayliTaskDatePressed);
+    console.log('DAULY: ', dayliTaskDatePressed);
 
     if (!dayliTaskDatePressed) {
       set({
@@ -73,49 +72,43 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
     });
   };
 
-  getInitialState();
+  void getInitialState();
 
   return {
     ...initialState,
     unlockRouletteColor: (id: number) => {
-      set((state) => {
+      set(state => {
         return {
           unlockedRouletteColors: [...state.unlockedRouletteColors, id],
         };
       });
     },
     unlockTheme: (id: number) => {
-      set((state) => {
+      set(state => {
         return {
           unlockedThemes: [...state.unlockedThemes, id],
         };
       });
     },
     lockRouletteColor: (id: number) => {
-      set((state) => {
+      set(state => {
         return {
-          unlockedRouletteColors: state.unlockedRouletteColors.filter(
-            (colorId) => colorId !== id
-          ),
+          unlockedRouletteColors: state.unlockedRouletteColors.filter(colorId => colorId !== id),
         };
       });
     },
     lockTheme: (id: number) => {
-      set((state) => {
+      set(state => {
         return {
-          unlockedThemes: state.unlockedThemes.filter(
-            (themeId) => themeId !== id
-          ),
+          unlockedThemes: state.unlockedThemes.filter(themeId => themeId !== id),
         };
       });
     },
     setIsAvailableToSpin: async (isAvailableToSpin: boolean) => {
       const currentDate = new Date();
-      const plusOneDay = new Date(
-        currentDate.setDate(currentDate.getDate() + 1)
-      );
+      const plusOneDay = new Date(currentDate.setDate(currentDate.getDate() + 1));
 
-      console.log("PLUS ONE LOCAL:", plusOneDay.toString());
+      console.log('PLUS ONE LOCAL:', plusOneDay.toString());
 
       await LocalStorage.setDayliTaskDatePressed(plusOneDay.toString());
       set({
@@ -128,7 +121,7 @@ export const useGiftRepositroy = create<State & Actions>((set) => {
   };
 });
 
-useGiftRepositroy.subscribe(async (state) => {
+useGiftRepositroy.subscribe(async state => {
   if (state.unlockedRouletteColors) {
     await LocalStorage.setUnlockedRouletteColors(state.unlockedRouletteColors);
   }

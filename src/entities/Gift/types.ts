@@ -1,8 +1,4 @@
-export type GiftTypes =
-  | "roulette-colors"
-  | "app-theme"
-  | "package"
-  | "weekly-sub";
+export type GiftTypes = 'roulette-colors' | 'app-theme' | 'package' | 'weekly-sub';
 
 export interface IGift {
   id: number;

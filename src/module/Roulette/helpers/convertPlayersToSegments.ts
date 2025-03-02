@@ -1,9 +1,6 @@
-import { SegmentType } from "@/src/entities/Roulette/types";
-import { DEFAULT_PROBABILITY } from "@/src/shared/config/constants/constants";
-import { Player } from "@/src/shared/types/globalTypes";
-
-const color1Segment = "#990";
-const color2Segment = "#350";
+import { SegmentType } from '@/src/entities/Roulette/types';
+import { DEFAULT_PROBABILITY } from '@/src/shared/config/constants/constants';
+import { Player } from '@/src/shared/types/globalTypes';
 
 // 2 игрока: 8 сегментов, 6 игроков (повторяются), 2 - all
 // 3 игроков:  8 сегментов, 6 – игроков (повторяются), 2 – all
@@ -34,10 +31,7 @@ const calcAllPlayerSegments = (players: Player[]): number => {
   return players.length > 8 && players.length % 2 !== 0 ? 3 : 2;
 };
 
-export function convertPlayersToSegments(
-  players: Player[],
-  colorGroup: [string, string, string]
-): SegmentType[] {
+export function convertPlayersToSegments(players: Player[], colorGroup: [string, string, string]): SegmentType[] {
   const totalSegments = calcTotalSegments(players);
   const allSemgents = calcAllPlayerSegments(players);
 
@@ -51,27 +45,23 @@ export function convertPlayersToSegments(
     id: player.id,
     label: player.name,
     color: index % 2 === 0 ? colorGroup[0] : colorGroup[1],
-    type: "player",
+    type: 'player',
     textColor: player.color,
     probability: DEFAULT_PROBABILITY,
   }));
 
   const allPlayerSegment: SegmentType = {
     id: 0,
-    label: "Все",
+    label: 'Все',
     color: colorGroup[2],
-    type: "all",
+    type: 'all',
     probability: DEFAULT_PROBABILITY,
   };
 
   const step = Math.floor(totalSegments / allSemgents);
 
-  if (allSemgents === 2)
-    for (let i = 0; i < allSemgents; i++)
-      segments.splice((i + 1) * step - 1, 0, allPlayerSegment);
-  else if (allSemgents === 3)
-    for (let i = 0; i < allSemgents; i++)
-      segments.splice(i * step, 0, allPlayerSegment);
+  if (allSemgents === 2) for (let i = 0; i < allSemgents; i++) segments.splice((i + 1) * step - 1, 0, allPlayerSegment);
+  else if (allSemgents === 3) for (let i = 0; i < allSemgents; i++) segments.splice(i * step, 0, allPlayerSegment);
 
   return segments;
 }

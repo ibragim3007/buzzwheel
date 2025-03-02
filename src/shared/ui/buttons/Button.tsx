@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Pressable, PressableProps, StyleSheet } from "react-native";
-import Typography from "../typography/Typography";
-import { useTheme } from "../../hooks/useTheme";
-import Grid from "../grid/Grid";
-import { TypographyProps } from "../../styles/typography/typography";
-import AnimTouchWrapper from "../animations/AnimTouchWrapper";
+import React, { useState } from 'react';
+import { Pressable, PressableProps, StyleSheet } from 'react-native';
+import Typography from '../typography/Typography';
+import { useTheme } from '../../hooks/useTheme';
+import Grid from '../grid/Grid';
+import { TypographyProps } from '../../styles/typography/typography';
+import AnimTouchWrapper from '../animations/AnimTouchWrapper';
 
 interface ButtonProps extends PressableProps {
   title: string;
@@ -12,19 +12,11 @@ interface ButtonProps extends PressableProps {
   textStyle?: TypographyProps;
 }
 
-export default function Button({
-  title,
-  startIcon,
-  textStyle,
-  disabled,
-  ...props
-}: ButtonProps) {
+export default function Button({ title, startIcon, textStyle, disabled, ...props }: ButtonProps) {
   const colors = useTheme();
   // const defaultColor = props.style
 
-  const [currentColorButton, setCurrentColorButton] = useState(
-    colors.accent.primary
-  );
+  const [currentColorButton, setCurrentColorButton] = useState(colors.accent.primary);
 
   const onTouchStart = () => {
     setCurrentColorButton(colors.accent.quaternary);
@@ -36,9 +28,7 @@ export default function Button({
 
   const styles = StyleSheet.flatten([
     {
-      backgroundColor: disabled
-        ? colors.background.secondary
-        : currentColorButton,
+      backgroundColor: disabled ? colors.background.secondary : currentColorButton,
       paddingHorizontal: 25,
       paddingVertical: 17,
       borderRadius: 30,
@@ -48,12 +38,7 @@ export default function Button({
 
   return (
     <AnimTouchWrapper>
-      <Pressable
-        {...props}
-        style={styles}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
+      <Pressable {...props} style={styles} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <Grid row space="sm" justfity="center" align="center">
           {startIcon}
           <Typography

@@ -1,35 +1,21 @@
-import { generateTimerTime } from "@/src/shared/helpers/timer/generateTime";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { Dare } from "@/src/shared/types/globalTypes";
-import Button from "@/src/shared/ui/buttons/Button";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Typography from "@/src/shared/ui/typography/Typography";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import React, { useEffect, useState } from "react";
-import Animated, {
-  Extrapolate,
-  FadeInLeft,
-  FadeInRight,
-  interpolate,
-  SlideInLeft,
-  SlideInRight,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-} from "react-native-reanimated";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { fontWeight } from "@/src/shared/styles/typography/typography";
-import WrapIconInCircle from "@/src/shared/ui/wrapper/WrapIconInCircle";
+import { generateTimerTime } from '@/src/shared/helpers/timer/generateTime';
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { fontWeight } from '@/src/shared/styles/typography/typography';
+import { Dare } from '@/src/shared/types/globalTypes';
+import Button from '@/src/shared/ui/buttons/Button';
+import Grid from '@/src/shared/ui/grid/Grid';
+import WrapIconInCircle from '@/src/shared/ui/wrapper/WrapIconInCircle';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { useEffect, useState } from 'react';
+import Animated, { FadeInLeft, FadeInRight, useSharedValue, withRepeat, withTiming } from 'react-native-reanimated';
 
 interface ButtomTimerInCardProps {
   handleDone: () => void;
   dare: Dare;
 }
 
-export default function ButtomTimerInCard({
-  dare,
-  handleDone,
-}: ButtomTimerInCardProps) {
+export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCardProps) {
   const colors = useTheme();
   const [timerWasStarted, setTimerWasStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(dare.time);
@@ -44,7 +30,7 @@ export default function ButtomTimerInCard({
     if (!isTimerRunning || timeLeft === 0) return;
 
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
+      setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timer);
           skipTimer();
@@ -59,13 +45,9 @@ export default function ButtomTimerInCard({
 
   useEffect(() => {
     // Когда время меняется, запускаем анимацию увеличения
-    scale.value = withTiming(
-      timeLeft < 10 ? 1.25 : 1.1,
-      { duration: 210 },
-      () => {
-        scale.value = withTiming(1, { duration: 200 });
-      }
-    );
+    scale.value = withTiming(timeLeft < 10 ? 1.25 : 1.1, { duration: 210 }, () => {
+      scale.value = withTiming(1, { duration: 200 });
+    });
 
     // Запускаем анимацию вращения каждую секунду
   }, [timeLeft]);
@@ -80,9 +62,9 @@ export default function ButtomTimerInCard({
     rotation.value = withRepeat(
       withTiming(1, { duration: 100 }),
       0, // повторяем бесконечно
-      false // не возвращаем обратно
+      false, // не возвращаем обратно
     );
-    setIsTimerRunning((prev) => !prev);
+    setIsTimerRunning(prev => !prev);
   };
 
   const resetTimer = () => {
@@ -95,11 +77,7 @@ export default function ButtomTimerInCard({
       {timerWasStarted && (
         <Animated.View entering={FadeInRight}>
           <WrapIconInCircle onPress={toggleTimer}>
-            <FontAwesome6
-              name={isTimerRunning ? "pause" : "play"}
-              size={20}
-              color={colors.accent.secondary}
-            />
+            <FontAwesome6 name={isTimerRunning ? 'pause' : 'play'} size={20} color={colors.accent.secondary} />
           </WrapIconInCircle>
         </Animated.View>
       )}
@@ -111,24 +89,18 @@ export default function ButtomTimerInCard({
           borderWidth: 1,
           paddingHorizontal: 20,
           paddingVertical: 18,
-          backgroundColor: isTimerRunning
-            ? colors.accent.secondary
-            : "transparent",
+          backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
         }}
         textStyle={{
           style: {
-            color: isTimerRunning ? "#fff" : colors.accent.secondary,
+            color: isTimerRunning ? '#fff' : colors.accent.secondary,
             fontSize: 23,
             fontFamily: fontWeight.regular,
           },
         }}
         onPress={toggleTimer}
         startIcon={
-          <Ionicons
-            name="stopwatch-outline"
-            size={32}
-            color={isTimerRunning ? "#fff" : colors.accent.secondary}
-          />
+          <Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.accent.secondary} />
         }
         title={generateTimerTime(timeLeft)}
       />
@@ -136,11 +108,7 @@ export default function ButtomTimerInCard({
       {timerWasStarted && (
         <Animated.View entering={FadeInLeft}>
           <WrapIconInCircle onPress={resetTimer}>
-            <FontAwesome6
-              name={"arrow-rotate-right"}
-              size={20}
-              color={colors.accent.secondary}
-            />
+            <FontAwesome6 name={'arrow-rotate-right'} size={20} color={colors.accent.secondary} />
           </WrapIconInCircle>
         </Animated.View>
       )}

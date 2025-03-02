@@ -1,16 +1,13 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import React from "react";
-import { useTheme } from "../../hooks/useTheme";
-import Grid from "../grid/Grid";
-
-interface CheckedProps {}
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { useTheme } from '../../hooks/useTheme';
+import Grid from '../grid/Grid';
 
 export default function Checked() {
   const colors = useTheme();
   return (
     <Grid
       style={{
-        position: "absolute",
+        position: 'absolute',
         right: 3,
         top: -3,
         borderRadius: 50,

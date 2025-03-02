@@ -1,3 +1,3 @@
-import SettingsGame from "./SettingsGame";
+import SettingsGame from './SettingsGame';
 
 export { SettingsGame };

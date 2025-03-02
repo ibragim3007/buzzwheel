@@ -1,6 +1,6 @@
 // src/store/useModalStore.ts
-import React from "react";
-import { create } from "zustand";
+import React from 'react';
+import { create } from 'zustand';
 
 interface IModalContent {
   title?: string;
@@ -17,9 +17,8 @@ interface ModalState {
   closeModal: () => void;
 }
 
-export const useModalStore = create<ModalState>((set) => ({
+export const useModalStore = create<ModalState>(set => ({
   isVisible: false,
-  openModal: (modalContent?: IModalContent) =>
-    set({ isVisible: true, modalContent }),
+  openModal: (modalContent?: IModalContent) => set({ isVisible: true, modalContent }),
   closeModal: () => set({ isVisible: false, modalContent: undefined }),
 }));

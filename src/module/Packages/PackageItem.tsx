@@ -1,16 +1,15 @@
-import { getActualImageLink } from "@/src/shared/helpers/getActualImageLink";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { Package } from "@/src/shared/types/globalTypes";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Checked from "@/src/shared/ui/icons/Checked";
-import Paper from "@/src/shared/ui/layout/Paper";
-import Typography from "@/src/shared/ui/typography/Typography";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import { Image } from "expo-image";
-import React from "react";
-import { Pressable } from "react-native";
+import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { Package } from '@/src/shared/types/globalTypes';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Checked from '@/src/shared/ui/icons/Checked';
+import Paper from '@/src/shared/ui/layout/Paper';
+import Typography from '@/src/shared/ui/typography/Typography';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import { Image } from 'expo-image';
+import { Pressable } from 'react-native';
 
-const blurhash = "AGN-D]z.oi?^";
+const blurhash = 'AGN-D]z.oi?^';
 
 interface PackageItemProps {
   pack: Package;
@@ -19,12 +18,7 @@ interface PackageItemProps {
   onPress: (pack: Package) => void;
 }
 
-export default function PackageItem({
-  pack,
-  picked,
-  amountOfDares,
-  onPress,
-}: PackageItemProps) {
+export default function PackageItem({ pack, picked, amountOfDares, onPress }: PackageItemProps) {
   const colors = useTheme();
   return (
     <Pressable onPress={() => onPress(pack)}>
@@ -34,7 +28,7 @@ export default function PackageItem({
           borderRadius: 50,
           borderWidth: 3,
           height: 140,
-          borderColor: picked ? colors.accent.primary : "transparent",
+          borderColor: picked ? colors.accent.primary : 'transparent',
         }}
         paddingVertical={10}
         paddingHorizontal={10}
@@ -56,13 +50,9 @@ export default function PackageItem({
               <Typography variant="headline" weight="bold">
                 {pack.name} {`(${amountOfDares})`}
               </Typography>
-              {pack.packageType === "pair" && (
+              {pack.packageType === 'pair' && (
                 <Grid row space="sm" align="center">
-                  <AntDesign
-                    name="heart"
-                    size={12}
-                    color={colors.accent.secondary}
-                  />
+                  <AntDesign name="heart" size={12} color={colors.accent.secondary} />
                   <Typography
                     weight="medium"
                     style={{

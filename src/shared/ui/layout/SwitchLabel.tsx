@@ -1,8 +1,7 @@
-import React from "react";
-import SwitchCustom, { SwitchCustomProps } from "../controller/SwitchCustom";
-import Grid from "../grid/Grid";
-import Typography from "../typography/Typography";
-import { Pressable } from "react-native";
+import { Pressable } from 'react-native';
+import SwitchCustom, { SwitchCustomProps } from '../controller/SwitchCustom';
+import Grid from '../grid/Grid';
+import Typography from '../typography/Typography';
 
 interface SwitchLabelProps extends SwitchCustomProps {
   label: string;

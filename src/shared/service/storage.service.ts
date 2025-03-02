@@ -1,23 +1,20 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { IAvailableColor } from "../config/constants/settingsOptions";
-import { StorageKeys } from "../config/constants/storageKeys";
-import { sizeOf } from "../utils/sizeOf";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { IAvailableColor } from '../config/constants/settingsOptions';
+import { StorageKeys } from '../config/constants/storageKeys';
+import { sizeOf } from '../utils/sizeOf';
 
 class Storage {
   async getRouletteColor(): Promise<IAvailableColor | null> {
     const value = await AsyncStorage.getItem(StorageKeys.pickedRoulleteColors);
-    return value ? JSON.parse(value) : null;
+    return value ? (JSON.parse(value) as IAvailableColor) : null;
   }
   async setRouletteColor(value: IAvailableColor) {
-    await AsyncStorage.setItem(
-      StorageKeys.pickedRoulleteColors,
-      JSON.stringify(value)
-    );
+    await AsyncStorage.setItem(StorageKeys.pickedRoulleteColors, JSON.stringify(value));
   }
 
   async getTheme(): Promise<number | null> {
     const value = await AsyncStorage.getItem(StorageKeys.theme);
-    return value ? JSON.parse(value) : null;
+    return value ? (JSON.parse(value) as number) : null;
   }
 
   async setTheme(value: number) {
@@ -26,40 +23,29 @@ class Storage {
 
   async getRepetitions(): Promise<boolean | null> {
     const value = await AsyncStorage.getItem(StorageKeys.isRemoveRepetitions);
-    return value ? JSON.parse(value) : null;
+    return value ? (JSON.parse(value) as boolean) : null;
   }
 
   async setRepetitions(value: boolean) {
-    await AsyncStorage.setItem(
-      StorageKeys.isRemoveRepetitions,
-      JSON.stringify(value)
-    );
+    await AsyncStorage.setItem(StorageKeys.isRemoveRepetitions, JSON.stringify(value));
   }
 
   async getUnlockedRouletteColors(): Promise<number[]> {
-    const value = await AsyncStorage.getItem(
-      StorageKeys.unlockedRouletteColors
-    );
-    return value ? JSON.parse(value) : [];
+    const value = await AsyncStorage.getItem(StorageKeys.unlockedRouletteColors);
+    return value ? (JSON.parse(value) as number[]) : [];
   }
 
   async getUnlockedThemes(): Promise<number[]> {
     const value = await AsyncStorage.getItem(StorageKeys.unlockedThemes);
-    return value ? JSON.parse(value) : [];
+    return value ? (JSON.parse(value) as number[]) : [];
   }
 
   async setUnlockedRouletteColors(value: number[]) {
-    await AsyncStorage.setItem(
-      StorageKeys.unlockedRouletteColors,
-      JSON.stringify(value)
-    );
+    await AsyncStorage.setItem(StorageKeys.unlockedRouletteColors, JSON.stringify(value));
   }
 
   async setUnlockedThemes(value: number[]) {
-    await AsyncStorage.setItem(
-      StorageKeys.unlockedThemes,
-      JSON.stringify(value)
-    );
+    await AsyncStorage.setItem(StorageKeys.unlockedThemes, JSON.stringify(value));
   }
 
   async getDayliTaskDatePressed(): Promise<string | null> {
@@ -68,12 +54,12 @@ class Storage {
   }
 
   async setDayliTaskDatePressed(value: string) {
-    console.log("SEATTER: ", value);
+    console.log('SEATTER: ', value);
     await AsyncStorage.setItem(StorageKeys.dayliTaskDatePressed, value);
   }
 
   async clearStorage(key: string) {
-    if (key === "key") await AsyncStorage.clear();
+    if (key === 'key') await AsyncStorage.clear();
   }
 
   async calculateSize() {
@@ -88,7 +74,7 @@ class Storage {
           const sizeInBytes = sizeOf(item);
           totalSizeInBytes += sizeInBytes;
         }
-      } catch (e) {
+      } catch (e: any) {
         console.log(`Error to get item: ${key}`);
       }
     }

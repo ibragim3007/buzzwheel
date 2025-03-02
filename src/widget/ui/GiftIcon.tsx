@@ -1,9 +1,8 @@
-import { useGiftRepositroy } from "@/src/entities/Gift/gift.repository";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import WrapIconInPressable from "@/src/shared/ui/wrapper/WrapIconInPressable";
-import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
-import React from "react";
+import { useGiftRepositroy } from '@/src/entities/Gift/gift.repository';
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import WrapIconInPressable from '@/src/shared/ui/wrapper/WrapIconInPressable';
+import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 export default function GiftIcon() {
   const colors = useTheme();
@@ -11,15 +10,13 @@ export default function GiftIcon() {
   const { isAvailableToSpin } = useGiftRepositroy();
 
   const navigateToGift = () => {
-    navigate("/screens/gift");
+    navigate('/screens/gift');
   };
 
   return (
     <WrapIconInPressable
       onPress={navigateToGift}
-      backgroundColor={
-        isAvailableToSpin.value ? colors.accent.secondary : "transparent"
-      }
+      backgroundColor={isAvailableToSpin.value ? colors.accent.secondary : 'transparent'}
     >
       <Ionicons name="gift" size={22} color={colors.text.white} />
     </WrapIconInPressable>

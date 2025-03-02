@@ -1,8 +1,8 @@
-import { getRandomInt } from "@/src/shared/helpers/getRandomInt";
-import { Dare, DareType, Player } from "@/src/shared/types/globalTypes";
-import { create } from "zustand";
-import { usePackage } from "../Package/usePackage";
-import { useSettings } from "../Settings/settings.repository";
+import { getRandomInt } from '@/src/shared/helpers/getRandomInt';
+import { Dare, DareType, Player } from '@/src/shared/types/globalTypes';
+import { create } from 'zustand';
+import { usePackage } from '../Package/usePackage';
+import { useSettings } from '../Settings/settings.repository';
 
 interface State {
   moves: { player: Player; dare: Dare }[];
@@ -17,18 +17,18 @@ interface Actions {
   hideDare: () => void;
 }
 
-export const useRouletteGame = create<State & Actions>((set) => ({
+export const useRouletteGame = create<State & Actions>(set => ({
   moves: [],
   currentTurn: null,
   currentDare: null,
   displayDare: false,
 
   showDare: () => {
-    set((state: State) => ({ displayDare: true }));
+    set(() => ({ displayDare: true }));
   },
 
   hideDare: () => {
-    set((state: State) => ({
+    set(() => ({
       displayDare: false,
       currentDare: null,
       currentTurn: null,
@@ -40,17 +40,13 @@ export const useRouletteGame = create<State & Actions>((set) => ({
     const allDares = usePackage.getState().data.dares;
 
     const availableDares = allDares
-      .filter((dare) =>
-        availablePackages.map((aP) => aP.id).includes(dare.package)
-      )
-      .filter((dare) => dare.type === type);
+      .filter(dare => availablePackages.map(aP => aP.id).includes(dare.package))
+      .filter(dare => dare.type === type);
 
     const state = useRouletteGame.getState();
 
     const sortedDares = useSettings.getState().isRemoveRepetitions
-      ? availableDares.filter(
-          (dare) => !state.moves.some((move) => move.dare.id === dare.id)
-        )
+      ? availableDares.filter(dare => !state.moves.some(move => move.dare.id === dare.id))
       : availableDares;
 
     if (sortedDares.length === 0) sortedDares.push(...availableDares);

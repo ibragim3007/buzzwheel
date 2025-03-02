@@ -1,6 +1,5 @@
-import { LinearGradient } from "expo-linear-gradient";
-import React from "react";
-import { useTheme } from "../../hooks/useTheme";
+import { LinearGradient } from 'expo-linear-gradient';
+import { useTheme } from '../../hooks/useTheme';
 
 interface GradientShadowProps {
   height?: number;
@@ -8,20 +7,13 @@ interface GradientShadowProps {
   secondColor?: string;
 }
 
-export default function GradientShadow({
-  height,
-  color,
-  secondColor,
-}: GradientShadowProps) {
+export default function GradientShadow({ height, color, secondColor }: GradientShadowProps) {
   const colors = useTheme();
   return (
     <LinearGradient
-      colors={[
-        secondColor || "transparent",
-        color || colors.background.primary,
-      ]} // Цвет тени
+      colors={[secondColor || 'transparent', color || colors.background.primary]} // Цвет тени
       style={{
-        position: "absolute",
+        position: 'absolute',
         bottom: 0,
         left: 0,
         right: 0,

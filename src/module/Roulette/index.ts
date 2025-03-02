@@ -1,3 +1,3 @@
-import Roulette from "./Roulette";
+import Roulette from './Roulette';
 
 export { Roulette };

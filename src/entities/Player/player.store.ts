@@ -1,9 +1,8 @@
-import { MAX_PLAYERS_FOR_FREE } from "@/src/shared/config/constants/constants";
-import { StorageKeys } from "@/src/shared/config/constants/storageKeys";
-import { generateColorForPlayer } from "@/src/shared/helpers/generators/generateColorForPlayer";
-import { Player } from "@/src/shared/types/globalTypes";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { create } from "zustand";
+import { StorageKeys } from '@/src/shared/config/constants/storageKeys';
+import { generateColorForPlayer } from '@/src/shared/helpers/generators/generateColorForPlayer';
+import { Player } from '@/src/shared/types/globalTypes';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { create } from 'zustand';
 
 type State = {
   players: Player[];
@@ -13,27 +12,25 @@ type Actions = {
   deletePlayer: (id: number) => void;
 };
 
-export const usePlayerStore = create<State & Actions>((set) => {
+export const usePlayerStore = create<State & Actions>(set => {
   const initialState: State = { players: [] };
 
   const loadInitialState = async () => {
     const storedPlayers = await AsyncStorage.getItem(StorageKeys.players);
 
     if (storedPlayers) {
-      set({ players: JSON.parse(storedPlayers) });
+      set({ players: JSON.parse(storedPlayers) as Player[] });
     }
   };
 
-  loadInitialState();
+  void loadInitialState();
 
   return {
     ...initialState,
 
-    addNewPlayer: async (name: string) => {
-      set((state) => {
-        const isNameAlreadyTaken = state.players.some(
-          (player) => player.name === name
-        );
+    addNewPlayer: (name: string) => {
+      set(state => {
+        const isNameAlreadyTaken = state.players.some(player => player.name === name);
 
         const player: Player = {
           id: Date.now(),
@@ -47,19 +44,14 @@ export const usePlayerStore = create<State & Actions>((set) => {
     },
 
     deletePlayer: (id: number) => {
-      set((state) => {
-        const updatedPlayers = state.players.filter(
-          (player) => player.id !== id
-        );
+      set(state => {
+        const updatedPlayers = state.players.filter(player => player.id !== id);
         return { players: updatedPlayers };
       });
     },
   };
 });
 
-usePlayerStore.subscribe(async (state) => {
-  await AsyncStorage.setItem(
-    StorageKeys.players,
-    JSON.stringify(state.players)
-  );
+usePlayerStore.subscribe(async state => {
+  await AsyncStorage.setItem(StorageKeys.players, JSON.stringify(state.players));
 });

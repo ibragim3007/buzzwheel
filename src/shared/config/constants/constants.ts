@@ -6,6 +6,6 @@ export const ANIMATION_SPEED = 150;
 export const DEFAULT_PROBABILITY = 0.1;
 
 export const groupsOfColors: [string, string, string][] = [
-  ["#2E8B57", "#3CB371", "#232323"],
-  ["#990", "#350", "#232323"],
+  ['#2E8B57', '#3CB371', '#232323'],
+  ['#990', '#350', '#232323'],
 ];

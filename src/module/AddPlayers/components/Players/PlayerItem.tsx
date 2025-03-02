@@ -1,17 +1,15 @@
-import { usePlayerStore } from "@/src/entities/Player/player.store";
-import { CustomAnimations } from "@/src/shared/config/theme/AnimationConfig";
+import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { CustomAnimations } from '@/src/shared/config/theme/AnimationConfig';
 
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { Player } from "@/src/shared/types/globalTypes";
-import AnimatedWrapper from "@/src/shared/ui/animations/AnimatedWrapper";
-import Avatar from "@/src/shared/ui/elements/AvatarGenerator";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Paper from "@/src/shared/ui/layout/Paper";
-import Typography from "@/src/shared/ui/typography/Typography";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import React from "react";
-import { Pressable } from "react-native";
-import Animated from "react-native-reanimated";
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { Player } from '@/src/shared/types/globalTypes';
+import AnimatedWrapper from '@/src/shared/ui/animations/AnimatedWrapper';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Paper from '@/src/shared/ui/layout/Paper';
+import Typography from '@/src/shared/ui/typography/Typography';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { Pressable } from 'react-native';
+import Animated from 'react-native-reanimated';
 
 interface PlayerItemProps {
   player: Player;
@@ -24,10 +22,7 @@ export default function PlayerItem({ player }: PlayerItemProps) {
 
   return (
     <AnimatedWrapper>
-      <Animated.View
-        entering={CustomAnimations.enterItemShow(0)}
-        exiting={CustomAnimations.exitItemShow(0)}
-      >
+      <Animated.View entering={CustomAnimations.enterItemShow(0)} exiting={CustomAnimations.exitItemShow(0)}>
         <Paper
           paddingHorizontal={25}
           paddingVertical={18}
@@ -51,7 +46,7 @@ export default function PlayerItem({ player }: PlayerItemProps) {
             <Pressable
               style={{
                 width: 50,
-                alignItems: "flex-end",
+                alignItems: 'flex-end',
               }}
               onPress={() => deletePlayer(player.id)}
             >

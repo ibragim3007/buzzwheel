@@ -1,10 +1,9 @@
-import Grid from "@/src/shared/ui/grid/Grid";
-import React from "react";
+import Grid from '@/src/shared/ui/grid/Grid';
 
-import { usePackage } from "@/src/entities/Package/usePackage";
-import PackageItem from "./PackageItem";
-import { Package } from "@/src/shared/types/globalTypes";
-import { useVibration } from "@/src/shared/hooks/useVibration";
+import { usePackage } from '@/src/entities/Package/usePackage';
+import { useVibration } from '@/src/shared/hooks/useVibration';
+import { Package } from '@/src/shared/types/globalTypes';
+import PackageItem from './PackageItem';
 
 export default function Packages() {
   const { data, togglePackage, pickedPackages } = usePackage();
@@ -18,9 +17,9 @@ export default function Packages() {
 
   return (
     <Grid space="md">
-      {data.packages.map((pack) => {
-        const isPicked = pickedPackages.map((pM) => pM.id).includes(pack.id);
-        const amountOfDares = data.dares.filter((d) => d.package === pack.id);
+      {data.packages.map(pack => {
+        const isPicked = pickedPackages.map(pM => pM.id).includes(pack.id);
+        const amountOfDares = data.dares.filter(d => d.package === pack.id);
         return (
           <PackageItem
             onPress={onTogglePackage}

@@ -1,6 +1,5 @@
-import { RouletteOptions } from "@/src/entities/Roulette/types";
-import React from "react";
-import Svg, { Circle, Polygon } from "react-native-svg";
+import { RouletteOptions } from '@/src/entities/Roulette/types';
+import Svg, { Circle, Polygon } from 'react-native-svg';
 
 interface CenterCircleProps {
   options: RouletteOptions;
@@ -14,12 +13,7 @@ export default function CenterCircle({ options }: CenterCircleProps) {
   // const { SIZE, CENTER, RADIUS } = options;
 
   return (
-    <Svg
-      width={SIZE}
-      height={SIZE}
-      style={{ backgroundColor: "coral" }}
-      viewBox={`0 0 ${SIZE} ${SIZE}`}
-    >
+    <Svg width={SIZE} height={SIZE} style={{ backgroundColor: 'coral' }} viewBox={`0 0 ${SIZE} ${SIZE}`}>
       <Polygon
         points={`
           ${CENTER - 13},${CENTER - RADIUS + 3} 

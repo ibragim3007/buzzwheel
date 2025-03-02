@@ -1,11 +1,11 @@
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { fontWeight } from "@/src/shared/styles/typography/typography";
-import Button from "@/src/shared/ui/buttons/Button";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Paper from "@/src/shared/ui/layout/Paper";
-import React, { useState, useRef } from "react";
-import { Alert, TextInput } from "react-native";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { fontWeight } from '@/src/shared/styles/typography/typography';
+import Button from '@/src/shared/ui/buttons/Button';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Paper from '@/src/shared/ui/layout/Paper';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { useRef, useState } from 'react';
+import { Alert, TextInput } from 'react-native';
 interface InputProps {
   onCall: (name: string) => void;
 }
@@ -13,15 +13,15 @@ interface InputProps {
 export default function Input({ onCall }: InputProps) {
   const colors = useTheme();
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const inputRef = useRef<TextInput>(null);
   const onPress = () => {
-    if (name.trim() === "") {
-      Alert.alert("Name is required");
+    if (name.trim() === '') {
+      Alert.alert('Name is required');
       return;
     }
     onCall(name);
-    setName("");
+    setName('');
     inputRef.current?.blur();
   };
 
@@ -45,7 +45,7 @@ export default function Input({ onCall }: InputProps) {
           onSubmitEditing={onPress}
           style={{
             borderWidth: 2,
-            height: "100%",
+            height: '100%',
             borderColor: colors.accent.primary,
             paddingHorizontal: 25,
             flex: 1,
@@ -64,9 +64,7 @@ export default function Input({ onCall }: InputProps) {
             borderBottomLeftRadius: 0,
             paddingLeft: 15,
           }}
-          startIcon={
-            <FontAwesome6 name="plus" size={20} color={colors.text.primary} />
-          }
+          startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
           onPress={onPress}
           title="Add"
         />

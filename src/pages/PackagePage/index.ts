@@ -1,3 +1,3 @@
-import PackagesPage from "./PackagesPage";
+import PackagesPage from './PackagesPage';
 
 export { PackagesPage };

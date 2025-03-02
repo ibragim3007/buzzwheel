@@ -7,20 +7,16 @@ import {
   SlideInDown,
   SlideInLeft,
   SlideInRight,
-  SlideInUp,
   SlideOutLeft,
   SlideOutRight,
   SlideOutUp,
-} from "react-native-reanimated";
-import { ANIMATION_SPEED } from "../constants/constants";
+} from 'react-native-reanimated';
+import { ANIMATION_SPEED } from '../constants/constants';
 
 // type AnimType = typeof BaseAnimationBuilder | BaseAnimationBuilder | LayoutAnimationFunction | undefined;
 
 export const CustomAnimations = {
-  layoutDefault: LinearTransition.duration(ANIMATION_SPEED)
-    .springify()
-    .damping(10)
-    .mass(0.47),
+  layoutDefault: LinearTransition.duration(ANIMATION_SPEED).springify().damping(10).mass(0.47),
   showPunishmentText: FadeInDown.springify().mass(0.47),
   enterItemShow: (n: number) =>
     FadeInUp.delay(n * 25)

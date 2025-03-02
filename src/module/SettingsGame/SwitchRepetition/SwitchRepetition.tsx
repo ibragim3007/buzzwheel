@@ -1,6 +1,5 @@
-import { useSettings } from "@/src/entities/Settings/settings.repository";
-import SwitchLabel from "@/src/shared/ui/layout/SwitchLabel";
-import React from "react";
+import { useSettings } from '@/src/entities/Settings/settings.repository';
+import SwitchLabel from '@/src/shared/ui/layout/SwitchLabel';
 
 export default function SwitchRepetition() {
   const { setRemoveRepetitions, isRemoveRepetitions } = useSettings();
@@ -8,7 +7,7 @@ export default function SwitchRepetition() {
 
   return (
     <SwitchLabel
-      onValueChange={(value) => onChange(value)}
+      onValueChange={value => onChange(value)}
       label="Отключить повторы действий"
       value={isRemoveRepetitions}
     />

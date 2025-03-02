@@ -1,6 +1,6 @@
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native';
 
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window');
 export const PAGE_WIDTH = width;
 export const ITEM_WIDTH = 115;
 export const ITEM_HEIGHT = 140;

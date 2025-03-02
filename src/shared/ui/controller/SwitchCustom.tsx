@@ -1,6 +1,5 @@
-import React from "react";
-import { Switch, SwitchProps } from "react-native";
-import { useTheme } from "../../hooks/useTheme";
+import { Switch, SwitchProps } from 'react-native';
+import { useTheme } from '../../hooks/useTheme';
 
 export interface SwitchCustomProps extends SwitchProps {}
 

@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
-import Grid from "../grid/Grid";
-import Typography from "../typography/Typography";
+import { PropsWithChildren } from 'react';
+import Grid from '../grid/Grid';
+import Typography from '../typography/Typography';
 
 interface GroupByProps extends PropsWithChildren {
   title: string;

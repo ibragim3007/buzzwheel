@@ -1,12 +1,12 @@
 // src/components/CustomModal.tsx
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Typography from "@/src/shared/ui/typography/Typography";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import React from "react";
-import { Modal, Pressable, StyleSheet, TouchableOpacity } from "react-native";
-import { useModalStore } from "../useModalStore";
-import ModalDarkWrap from "./ModalDarkWrap";
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Typography from '@/src/shared/ui/typography/Typography';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import React from 'react';
+import { Modal, Pressable, StyleSheet, TouchableOpacity } from 'react-native';
+import { useModalStore } from '../useModalStore';
+import ModalDarkWrap from './ModalDarkWrap';
 
 const CustomModal: React.FC = () => {
   const { isVisible, modalContent, closeModal } = useModalStore();
@@ -29,7 +29,7 @@ const CustomModal: React.FC = () => {
             style={{
               backgroundColor: colors.background.primary,
               borderRadius: 25,
-              alignItems: "center",
+              alignItems: 'center',
             }}
           >
             <Grid row align="center">
@@ -44,18 +44,16 @@ const CustomModal: React.FC = () => {
                 onPress={onClose}
                 size={24}
                 color={colors.text.primary}
-                style={{ position: "absolute", right: -50 }}
+                style={{ position: 'absolute', right: -50 }}
               />
             </Grid>
             {modalContent?.description && (
-              <Typography style={styles.description}>
-                {modalContent?.description}
-              </Typography>
+              <Typography style={styles.description}>{modalContent?.description}</Typography>
             )}
             {modalContent?.node && modalContent.node}
             <TouchableOpacity style={styles.button} onPress={onClose}>
               <Typography weight="bold" style={styles.buttonText}>
-                {modalContent?.buttonText || "Close"}
+                {modalContent?.buttonText || 'Close'}
               </Typography>
             </TouchableOpacity>
           </Grid>
@@ -70,23 +68,23 @@ const styles = StyleSheet.create({
     // backgroundColor: "white",
     padding: 20,
     borderRadius: 16,
-    alignItems: "center",
+    alignItems: 'center',
   },
 
   description: {
     fontSize: 16,
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: 20,
   },
   button: {
-    backgroundColor: "#FF69B4",
+    backgroundColor: '#FF69B4',
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 12,
   },
   buttonText: {
-    color: "white",
-    fontWeight: "bold",
+    color: 'white',
+    fontWeight: 'bold',
     fontSize: 16,
   },
 });

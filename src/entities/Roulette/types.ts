@@ -1,4 +1,4 @@
-import { DareType } from "@/src/shared/types/globalTypes";
+import { DareType } from '@/src/shared/types/globalTypes';
 
 export type SegmentType = {
   id: number;

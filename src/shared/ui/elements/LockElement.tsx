@@ -1,21 +1,20 @@
-import React from "react";
-import Entypo from "@expo/vector-icons/Entypo";
-import Grid from "../grid/Grid";
-import { useTheme } from "../../hooks/useTheme";
+import Entypo from '@expo/vector-icons/Entypo';
+import { useTheme } from '../../hooks/useTheme';
+import Grid from '../grid/Grid';
 
 export default function LockElement() {
   const colors = useTheme();
   return (
     <Grid
       width="100%"
-      height={"100%"}
+      height={'100%'}
       justfity="center"
       align="center"
       style={{
         zIndex: 100,
-        position: "absolute",
-        backgroundColor: "#000000cd",
-        alignSelf: "center",
+        position: 'absolute',
+        backgroundColor: '#000000cd',
+        alignSelf: 'center',
         borderRadius: 20,
       }}
     >

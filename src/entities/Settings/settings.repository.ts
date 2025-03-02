@@ -1,11 +1,8 @@
-import {
-  IAvailableColor,
-  SettingsConstants,
-} from "@/src/shared/config/constants/settingsOptions";
-import { customTheme, PalitraInterface } from "@/src/shared/config/theme/theme";
-import { LocalStorage } from "@/src/shared/service/storage.service";
+import { IAvailableColor, SettingsConstants } from '@/src/shared/config/constants/settingsOptions';
+import { customTheme, PalitraInterface } from '@/src/shared/config/theme/theme';
+import { LocalStorage } from '@/src/shared/service/storage.service';
 
-import { create } from "zustand";
+import { create } from 'zustand';
 
 interface State {
   rouletteColor?: IAvailableColor;
@@ -19,14 +16,12 @@ interface Actions {
   setRemoveRepetitions: (isRemoveRepetitions: boolean) => void;
 }
 
-export const useSettings = create<State & Actions>((set) => {
+export const useSettings = create<State & Actions>(set => {
   const initialState: State = {
     theme: customTheme,
     isRemoveRepetitions: false,
 
-    rouletteColor: SettingsConstants.availableColors.find(
-      (a) => a.isFree === true
-    ),
+    rouletteColor: SettingsConstants.availableColors.find(a => a.isFree === true),
   };
 
   const loadInitialState = async () => {
@@ -34,9 +29,7 @@ export const useSettings = create<State & Actions>((set) => {
     const storedThemeId = await LocalStorage.getTheme();
     const storedRemoveRepetitions = await LocalStorage.getRepetitions();
 
-    const storedTheme = SettingsConstants.themes.find(
-      (t) => t.id === storedThemeId
-    );
+    const storedTheme = SettingsConstants.themes.find(t => t.id === storedThemeId);
 
     if (storedRouletteColor) {
       set({
@@ -47,27 +40,23 @@ export const useSettings = create<State & Actions>((set) => {
     }
   };
 
-  loadInitialState();
+  void loadInitialState();
 
   return {
     ...initialState,
 
-    setRouletteColors: (avaialbleColor: IAvailableColor) =>
-      set({ rouletteColor: avaialbleColor }),
+    setRouletteColors: (avaialbleColor: IAvailableColor) => set({ rouletteColor: avaialbleColor }),
 
     setTheme: (theme: PalitraInterface) => set({ theme }),
 
-    setRemoveRepetitions: (isRemoveRepetitions: boolean) =>
-      set({ isRemoveRepetitions }),
+    setRemoveRepetitions: (isRemoveRepetitions: boolean) => set({ isRemoveRepetitions }),
   };
 });
 
-useSettings.subscribe(async (state) => {
-  if (state.rouletteColor)
-    await LocalStorage.setRouletteColor(state.rouletteColor);
+useSettings.subscribe(async state => {
+  if (state.rouletteColor) await LocalStorage.setRouletteColor(state.rouletteColor);
 
   if (state.theme) await LocalStorage.setTheme(state.theme.id);
 
-  if (state.isRemoveRepetitions)
-    await LocalStorage.setRepetitions(state.isRemoveRepetitions);
+  if (state.isRemoveRepetitions) await LocalStorage.setRepetitions(state.isRemoveRepetitions);
 });

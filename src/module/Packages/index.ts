@@ -1,3 +1,3 @@
-import Packages from "./Packages";
+import Packages from './Packages';
 
 export { Packages };

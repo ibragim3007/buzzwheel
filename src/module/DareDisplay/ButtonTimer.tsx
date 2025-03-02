@@ -1,13 +1,13 @@
-import { generateTimerTime } from "@/src/shared/helpers/timer/generateTime";
-import { useTheme } from "@/src/shared/hooks/useTheme";
-import { Dare } from "@/src/shared/types/globalTypes";
-import Button from "@/src/shared/ui/buttons/Button";
-import Grid from "@/src/shared/ui/grid/Grid";
-import Typography from "@/src/shared/ui/typography/Typography";
-import WrapIconInCircle from "@/src/shared/ui/wrapper/WrapIconInCircle";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import React, { useEffect, useState } from "react";
-import { Pressable } from "react-native";
+import { generateTimerTime } from '@/src/shared/helpers/timer/generateTime';
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { Dare } from '@/src/shared/types/globalTypes';
+import Button from '@/src/shared/ui/buttons/Button';
+import Grid from '@/src/shared/ui/grid/Grid';
+import Typography from '@/src/shared/ui/typography/Typography';
+import WrapIconInCircle from '@/src/shared/ui/wrapper/WrapIconInCircle';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { useEffect, useState } from 'react';
+import { Pressable } from 'react-native';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -16,7 +16,7 @@ import Animated, {
   useSharedValue,
   withRepeat,
   withTiming,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
 interface ButtonTimerProps {
   handleDone: () => void;
@@ -38,7 +38,7 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
     if (!isTimerRunning || timeLeft === 0) return;
 
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
+      setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timer);
           skipTimer();
@@ -53,13 +53,9 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
 
   useEffect(() => {
     // Когда время меняется, запускаем анимацию увеличения
-    scale.value = withTiming(
-      timeLeft < 10 ? 1.25 : 1.1,
-      { duration: 210 },
-      () => {
-        scale.value = withTiming(1, { duration: 200 });
-      }
-    );
+    scale.value = withTiming(timeLeft < 10 ? 1.25 : 1.1, { duration: 210 }, () => {
+      scale.value = withTiming(1, { duration: 200 });
+    });
 
     // Запускаем анимацию вращения каждую секунду
   }, [timeLeft]);
@@ -74,9 +70,9 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
     rotation.value = withRepeat(
       withTiming(1, { duration: 100 }),
       0, // повторяем бесконечно
-      false // не возвращаем обратно
+      false, // не возвращаем обратно
     );
-    setIsTimerRunning((prev) => !prev);
+    setIsTimerRunning(prev => !prev);
   };
 
   const resetTimer = () => {
@@ -84,12 +80,7 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
     setTimeLeft(dare.time);
   };
 
-  const rotationInterpolated = interpolate(
-    rotation.value,
-    [0, 360],
-    [0, 360],
-    Extrapolate.CLAMP
-  );
+  const rotationInterpolated = interpolate(rotation.value, [0, 360], [0, 360], Extrapolate.CLAMP);
 
   return (
     <Grid width="100%" align="center" space="lg">
@@ -105,17 +96,13 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
           {timerWasStarted && (
             <Animated.View entering={SlideInLeft}>
               <WrapIconInCircle onPress={toggleTimer}>
-                <FontAwesome6
-                  name={isTimerRunning ? "pause" : "play"}
-                  size={30}
-                  color={colors.accent.primary}
-                />
+                <FontAwesome6 name={isTimerRunning ? 'pause' : 'play'} size={30} color={colors.accent.primary} />
               </WrapIconInCircle>
             </Animated.View>
           )}
 
           <Button
-            style={{ width: "50%" }}
+            style={{ width: '50%' }}
             onPress={toggleTimer}
             startIcon={
               isTimerRunning && (
@@ -124,35 +111,24 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
                     transform: [{ rotate: `${rotationInterpolated}deg` }],
                   }}
                 >
-                  <FontAwesome6
-                    name={"stop"}
-                    size={24}
-                    color={colors.text.white}
-                  />
+                  <FontAwesome6 name={'stop'} size={24} color={colors.text.white} />
                 </Animated.View>
               )
             }
-            title={isTimerRunning ? "Остановить" : "Запустить"}
+            title={isTimerRunning ? 'Остановить' : 'Запустить'}
           />
 
           {timerWasStarted && (
             <Animated.View entering={SlideInRight}>
               <WrapIconInCircle onPress={resetTimer}>
-                <FontAwesome6
-                  name={"arrow-rotate-right"}
-                  size={30}
-                  color={colors.accent.primary}
-                />
+                <FontAwesome6 name={'arrow-rotate-right'} size={30} color={colors.accent.primary} />
               </WrapIconInCircle>
             </Animated.View>
           )}
         </Grid>
       </Grid>
       <Pressable onPress={skipTimer}>
-        <Typography
-          style={{ textDecorationLine: "underline" }}
-          variant="callout"
-        >
+        <Typography style={{ textDecorationLine: 'underline' }} variant="callout">
           Пропустить
         </Typography>
       </Pressable>

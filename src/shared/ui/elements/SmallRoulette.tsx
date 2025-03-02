@@ -1,9 +1,8 @@
-import { RouletteOptions, SegmentType } from "@/src/entities/Roulette/types";
-import { RouletteSegment } from "@/src/module/Roulette/segment/RouletteSegment";
-import Grid from "@/src/shared/ui/grid/Grid";
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import Svg, { Circle, Defs, G, Mask, Rect } from "react-native-svg";
+import { RouletteOptions, SegmentType } from '@/src/entities/Roulette/types';
+import { RouletteSegment } from '@/src/module/Roulette/segment/RouletteSegment';
+import Grid from '@/src/shared/ui/grid/Grid';
+import { StyleSheet, View } from 'react-native';
+import Svg, { Circle, Defs, G, Mask, Rect } from 'react-native-svg';
 
 interface SmallRouletteProps {
   segments: SegmentType[];
@@ -11,7 +10,7 @@ interface SmallRouletteProps {
 }
 
 const SmallRoulette = ({ segments, options }: SmallRouletteProps) => {
-  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE } = options;
+  const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS } = options;
 
   return (
     <View style={[styles.container]}>
@@ -23,12 +22,7 @@ const SmallRoulette = ({ segments, options }: SmallRouletteProps) => {
           //   TOTAL_SIZE + BORDER_WIDTH * 2
           // } ${TOTAL_SIZE + BORDER_WIDTH * 2}`}
         >
-          <Circle
-            cx={CENTER}
-            cy={CENTER}
-            r={RADIUS + BORDER_WIDTH / 2}
-            fill={"#eaf4ff"}
-          />
+          <Circle cx={CENTER} cy={CENTER} r={RADIUS + BORDER_WIDTH / 2} fill={'#eaf4ff'} />
           {/* Рулетка */}
           <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
             {segments.map((segment, index) => {
@@ -87,11 +81,11 @@ const styles = StyleSheet.create({
     // backgroundColor: "#5e3677",
   },
   wheelContainer: {
-    backgroundColor: "red",
+    backgroundColor: 'red',
   },
 
   centerOverlay: {
-    position: "absolute",
+    position: 'absolute',
     // top: CENTER + 10,
   },
 });

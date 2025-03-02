@@ -1,25 +1,14 @@
-import React from "react";
-import { DimensionValue, StyleProp, ViewStyle } from "react-native";
-import { FlexAlignType, StyleSheet, View, ViewProps } from "react-native";
-import {
-  calculateSpacing,
-  TSpaceGrid,
-} from "../../helpers/styleHelpers/calculateSpacing";
-import { normalizedSize } from "../../utils/size";
-import { normalizeLayoutDimenstionValue } from "../../helpers/styleHelpers/normalizeLayoutDimenstionValue";
+import { DimensionValue, FlexAlignType, StyleProp, StyleSheet, View, ViewProps, ViewStyle } from 'react-native';
+import { calculateSpacing, TSpaceGrid } from '../../helpers/styleHelpers/calculateSpacing';
+import { normalizeLayoutDimenstionValue } from '../../helpers/styleHelpers/normalizeLayoutDimenstionValue';
+import { normalizedSize } from '../../utils/size';
 
 export interface GridProps extends ViewProps {
   flex?: number;
   color?: string;
   wrap?: boolean;
   align?: FlexAlignType;
-  justfity?:
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-between"
-    | "space-around"
-    | "space-evenly";
+  justfity?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
   row?: boolean;
   gap?: number;
   space?: TSpaceGrid;
@@ -73,9 +62,9 @@ const Grid = ({
     justfity !== undefined && { justifyContent: justfity },
     align !== undefined && { alignItems: align },
     color !== undefined && { backgroundColor: color },
-    row !== undefined && { flexDirection: "row" },
+    row !== undefined && { flexDirection: 'row' },
     gap !== undefined && { gap: normalizedSize(gap) },
-    wrap !== undefined && { flexWrap: "wrap" },
+    wrap !== undefined && { flexWrap: 'wrap' },
     height !== undefined && { height: normalizeLayoutDimenstionValue(height) },
     width !== undefined && { width: normalizeLayoutDimenstionValue(width) },
     padding !== undefined && { padding: normalizedSize(padding) },

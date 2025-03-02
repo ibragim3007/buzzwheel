@@ -1,10 +1,6 @@
-import React from "react";
-import { StyleProp, ViewStyle } from "react-native";
-import Animated, {
-  AnimatedStyle,
-  LinearTransition,
-} from "react-native-reanimated";
-import { CustomAnimations } from "../../config/theme/AnimationConfig";
+import React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
+import Animated, { AnimatedStyle, LinearTransition } from 'react-native-reanimated';
 
 export interface AnimatedWrapperProps {
   duration?: number;
@@ -12,11 +8,7 @@ export interface AnimatedWrapperProps {
   style?: StyleProp<AnimatedStyle<StyleProp<ViewStyle>>>;
 }
 
-const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
-  children,
-  duration,
-  style,
-}) => {
+const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({ children, duration, style }) => {
   return (
     <Animated.View style={[{}, style]} layout={LinearTransition}>
       {children}

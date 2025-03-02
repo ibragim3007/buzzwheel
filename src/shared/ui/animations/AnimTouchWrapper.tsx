@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Animated, StyleProp, ViewStyle } from "react-native";
+import React, { useRef } from 'react';
+import { Animated, StyleProp, ViewStyle } from 'react-native';
 
 interface AnimTouchWrapperProps {
   children: React.ReactNode;
@@ -7,14 +7,8 @@ interface AnimTouchWrapperProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const AnimTouchWrapper: React.FC<AnimTouchWrapperProps> = ({
-  children,
-  style,
-  value = 0.97,
-}) => {
-  const animationControlScaleShowProgress = useRef(
-    new Animated.Value(1)
-  ).current;
+const AnimTouchWrapper: React.FC<AnimTouchWrapperProps> = ({ children, style, value = 0.97 }) => {
+  const animationControlScaleShowProgress = useRef(new Animated.Value(1)).current;
 
   const onTouchStart = () => {
     Animated.spring(animationControlScaleShowProgress, {

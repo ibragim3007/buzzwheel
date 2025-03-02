@@ -1,3 +1,3 @@
-import GiftPage from "./GiftPage";
+import GiftPage from './GiftPage';
 
 export { GiftPage };

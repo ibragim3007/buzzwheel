@@ -1,6 +1,5 @@
-import React from "react";
-import Grid from "../grid/Grid";
-import { useTheme } from "../../hooks/useTheme";
+import { useTheme } from '../../hooks/useTheme';
+import Grid from '../grid/Grid';
 
 export default function HandleComponent() {
   const colors = useTheme();
@@ -13,12 +12,7 @@ export default function HandleComponent() {
       justfity="center"
       style={{ borderRadius: 20 }}
     >
-      <Grid
-        width={30}
-        height={4}
-        color={colors.text.primary}
-        style={{ borderRadius: 50 }}
-      />
+      <Grid width={30} height={4} color={colors.text.primary} style={{ borderRadius: 50 }} />
     </Grid>
   );
 }

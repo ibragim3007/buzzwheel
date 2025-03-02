@@ -1,5 +1,5 @@
-import { RouletteOptions } from "@/src/entities/Roulette/types";
-import { normalizedSize } from "@/src/shared/utils/size";
+import { RouletteOptions } from '@/src/entities/Roulette/types';
+import { normalizedSize } from '@/src/shared/utils/size';
 
 const EXTRA_PADDING = normalizedSize(5); // Дополнительное пространство для безопасности
 const WHEEL_SIZE = normalizedSize(390); // Размер рулетки

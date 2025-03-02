@@ -1,8 +1,7 @@
-import React from "react";
-import Grid, { GridProps } from "../grid/Grid";
-import { useTheme } from "../../hooks/useTheme";
+import { useTheme } from '../../hooks/useTheme';
+import Grid, { GridProps } from '../grid/Grid';
 
-interface PaperProps extends GridProps {}
+type PaperProps = GridProps;
 
 export default function Paper({ ...props }: PaperProps) {
   const colors = useTheme();

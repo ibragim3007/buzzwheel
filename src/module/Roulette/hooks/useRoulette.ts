@@ -1,7 +1,7 @@
-import { SegmentType } from "@/src/entities/Roulette/types";
-import { DEFAULT_PROBABILITY } from "@/src/shared/config/constants/constants";
-import { useVibration } from "@/src/shared/hooks/useVibration";
-import { useState } from "react";
+import { SegmentType } from '@/src/entities/Roulette/types';
+import { DEFAULT_PROBABILITY } from '@/src/shared/config/constants/constants';
+import { useVibration } from '@/src/shared/hooks/useVibration';
+import { useState } from 'react';
 import {
   Easing,
   runOnJS,
@@ -11,13 +11,10 @@ import {
   withSequence,
   withSpring,
   withTiming,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
 const getWeightedRandomItem = (items: SegmentType[]) => {
-  const totalWeight = items.reduce(
-    (total, item) => total + (item?.probability || DEFAULT_PROBABILITY),
-    0
-  );
+  const totalWeight = items.reduce((total, item) => total + (item?.probability || DEFAULT_PROBABILITY), 0);
   const randomNum = Math.random() * totalWeight;
   let cumulativeWeight = 0;
 
@@ -31,10 +28,7 @@ const getWeightedRandomItem = (items: SegmentType[]) => {
   return { item: items[0], index: 0 };
 };
 
-export const useRoulette = (
-  segments: SegmentType[],
-  onCallback: (winner: SegmentType) => void
-) => {
+export const useRoulette = (segments: SegmentType[], onCallback: (winner: SegmentType) => void) => {
   const { vibrate } = useVibration();
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<null | number>(null);
@@ -59,8 +53,7 @@ export const useRoulette = (
 
     const { index: randomSegmentIndex } = getWeightedRandomItem(segments);
 
-    const totalAngle =
-      rotation.value - 360 * 6 - oneSegmentAngle * randomSegmentIndex;
+    const totalAngle = rotation.value - 360 * 6 - oneSegmentAngle * randomSegmentIndex;
 
     const realSegmentId = Math.abs((totalAngle % 360) / oneSegmentAngle);
 
@@ -118,30 +111,22 @@ export const useRoulette = (
       withTiming(-20, { duration: 160 }),
       withTiming(0, { duration: 160 }),
       withTiming(10, { duration: 260 }),
-      withTiming(0, { duration: 360 })
+      withTiming(0, { duration: 360 }),
     );
 
-    rotation.value = withTiming(
-      totalAngle,
-      { duration: 5000, easing: Easing.out(Easing.cubic) },
-      (isFinished) => {
-        if (isFinished) {
-          runOnJS(handleFinishRotation)(totalAngle, realSegmentId); // Передаём индекс сегмента
-        }
+    rotation.value = withTiming(totalAngle, { duration: 5000, easing: Easing.out(Easing.cubic) }, isFinished => {
+      if (isFinished) {
+        runOnJS(handleFinishRotation)(totalAngle, realSegmentId); // Передаём индекс сегмента
       }
-    );
+    });
 
     wheelScale.value = withDelay(3100, withTiming(1.5, { duration: 900 }));
-    wheelTranslateY.value = withDelay(
-      3100,
-      withTiming(-300, { duration: 900 })
-    );
+    wheelTranslateY.value = withDelay(3100, withTiming(-300, { duration: 900 }));
   };
 
   const handleFinishRotation = (totalAngle: number, segmentIndex: number) => {
     void vibrate();
-    const leftSegment =
-      segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
+    const leftSegment = segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
     const randomSegments = [leftSegment, segmentIndex];
     const segmentsArr = [segments[leftSegment], segments[segmentIndex]];
     const { index: zeroOrOne } = getWeightedRandomItem(segmentsArr);
@@ -149,9 +134,7 @@ export const useRoulette = (
     // const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
     const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
 
-    const updateTotalAngle =
-      totalAngle +
-      (zeroOrOne === 0 ? oneSegmentAngle / 2 : -(oneSegmentAngle / 2));
+    const updateTotalAngle = totalAngle + (zeroOrOne === 0 ? oneSegmentAngle / 2 : -(oneSegmentAngle / 2));
 
     rotation.value = withSpring(updateTotalAngle, {});
     console.log(getRandomSegment);
@@ -163,18 +146,12 @@ export const useRoulette = (
   };
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      { rotate: `${rotation.value}deg` },
-      { scale: wheelScale.value },
-    ],
+    transform: [{ rotate: `${rotation.value}deg` }, { scale: wheelScale.value }],
     bottom: wheelTranslateY.value,
   }));
 
   const cursorAnimatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      { rotate: `${cursorRotation.value}deg` },
-      { scale: wheelScale.value },
-    ],
+    transform: [{ rotate: `${cursorRotation.value}deg` }, { scale: wheelScale.value }],
     bottom: 250 + wheelTranslateY.value,
   }));
 

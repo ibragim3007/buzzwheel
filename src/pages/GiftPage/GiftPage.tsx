@@ -12,7 +12,6 @@ import { SettingsConstants } from '@/src/shared/config/constants/settingsOptions
 import { CustomAnimations } from '@/src/shared/config/theme/AnimationConfig';
 
 import { useTheme } from '@/src/shared/hooks/useTheme';
-import Button from '@/src/shared/ui/buttons/Button';
 import SmallAppThemeElem from '@/src/shared/ui/elements/SmallAppThemeElem';
 import SmallRoulette from '@/src/shared/ui/elements/SmallRoulette';
 import Grid from '@/src/shared/ui/grid/Grid';
@@ -20,7 +19,7 @@ import PageWrapper from '@/src/shared/ui/layout/PageWrapper';
 import SafeWrapper from '@/src/shared/ui/layout/SafeWrapper';
 import Typography from '@/src/shared/ui/typography/Typography';
 import Header from '@/src/widget/Header';
-import React, { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Animated, { ZoomIn, ZoomOut } from 'react-native-reanimated';
 
 // Игкрок зашел первый день и видит получение приза
@@ -93,7 +92,7 @@ import Animated, { ZoomIn, ZoomOut } from 'react-native-reanimated';
 
 export default function GiftPage() {
   const colors = useTheme();
-  const [spinStatus, setSpinStatus] = useState(false);
+  const [_, setSpinStatus] = useState(false);
   const onChangeSpinStatus = (isSpinning: boolean) => setSpinStatus(isSpinning);
   const { openModal } = useModalStore();
 

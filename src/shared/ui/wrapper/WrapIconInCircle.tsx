@@ -1,6 +1,5 @@
-import React from "react";
-import { Pressable, PressableProps } from "react-native";
-import { useTheme } from "../../hooks/useTheme";
+import { Pressable, PressableProps } from 'react-native';
+import { useTheme } from '../../hooks/useTheme';
 
 export default function WrapIconInCircle({ ...props }: PressableProps) {
   const colors = useTheme();
@@ -13,8 +12,8 @@ export default function WrapIconInCircle({ ...props }: PressableProps) {
         width: 50,
         height: 50,
         borderColor: colors.accent.secondary,
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
       {...props}
     />
