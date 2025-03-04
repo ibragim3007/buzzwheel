@@ -1,6 +1,7 @@
 import {
   ComplexAnimationBuilder,
   FadeInUp,
+  SlideInLeft,
   SlideInRight,
   SlideOutLeft,
   SlideOutRight,
@@ -16,7 +17,7 @@ type OptionAnimationServiceType = {
 };
 
 const OptionsAnimationService: OptionAnimationServiceType = {
-  ANIMATION_SPEED: 150,
+  ANIMATION_SPEED: 160,
   MASS: 0.6,
   stiffness: 70,
 };
@@ -46,6 +47,7 @@ class AnimationEngine {
   slideInRight = (n: number) => this.createAnimation(new SlideInRight(), n);
   slideOutRight = (n: number) => this.createAnimation(new SlideOutRight(), n);
   slideOutLeft = (n: number) => this.createAnimation(new SlideOutLeft(), n);
+  slideInLeft = (n: number) => this.createAnimation(new SlideInLeft(), n);
 }
 
 export const animationEngine = new AnimationEngine(OptionsAnimationService);
@@ -58,7 +60,7 @@ class AnimationService {
   }
 
   getAnimationForShowPackageItem = (index: number) => {
-    return this.animationEngine.slideInRight((index + 1) * 0.5);
+    return this.animationEngine.zoomInDown((index + 1) * 0.6);
   };
 
   enteringDareCard = (index: number) => {

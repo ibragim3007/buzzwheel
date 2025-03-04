@@ -7,7 +7,7 @@ interface AnimTouchWrapperProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const AnimTouchWrapper: React.FC<AnimTouchWrapperProps> = ({ children, style, value = 0.97 }) => {
+const AnimTouchWrapper: React.FC<AnimTouchWrapperProps> = ({ children, style, value = 0.95 }) => {
   const animationControlScaleShowProgress = useRef(new Animated.Value(1)).current;
 
   const onTouchStart = () => {

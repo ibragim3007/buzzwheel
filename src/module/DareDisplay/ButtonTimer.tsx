@@ -1,5 +1,6 @@
 import { generateTimerTime } from '@/src/shared/helpers/timer/generateTime';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { animationEngine } from '@/src/shared/service/animation.service';
 import { Dare } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
@@ -94,7 +95,7 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
         </Animated.View>
         <Grid width="100%" row align="center" justfity="space-evenly">
           {timerWasStarted && (
-            <Animated.View entering={SlideInLeft}>
+            <Animated.View entering={animationEngine.slideInLeft(0)}>
               <WrapIconInCircle onPress={toggleTimer}>
                 <FontAwesome6 name={isTimerRunning ? 'pause' : 'play'} size={30} color={colors.accent.primary} />
               </WrapIconInCircle>
@@ -119,7 +120,7 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
           />
 
           {timerWasStarted && (
-            <Animated.View entering={SlideInRight}>
+            <Animated.View entering={animationEngine.slideInRight(0)}>
               <WrapIconInCircle onPress={resetTimer}>
                 <FontAwesome6 name={'arrow-rotate-right'} size={30} color={colors.accent.primary} />
               </WrapIconInCircle>
