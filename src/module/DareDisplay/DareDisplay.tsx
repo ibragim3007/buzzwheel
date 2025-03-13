@@ -14,6 +14,7 @@ import { useRef, useState } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ButtomTimerInCard from './ButtomTimerInCard';
+import ActionPreproc from './ActionPreproc';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -86,7 +87,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                   variant="title-3"
                   color="secondary"
                 >
-                  {updatedArray(getTransformedArrayOfString(dare.action), currentTurn, players).join('')}
+                  <ActionPreproc action={dare.action} players={players} currentTurn={currentTurn} />
+                  {/* {updatedArray(getTransformedArrayOfString(dare.action), currentTurn, players).join('')} */}
                 </Typography>
               </Grid>
             </Grid>
