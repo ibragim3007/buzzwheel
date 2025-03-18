@@ -6,7 +6,7 @@ import { SegmentType } from '@/src/entities/Roulette/types';
 import { giftService } from '@/src/module/GiftModule/GiftService';
 import { Roulette } from '@/src/module/Roulette';
 
-import { calcByWheelSize } from '@/src/module/Roulette/config/config';
+import { calcByWheelSize, DefaultRouletteOptions } from '@/src/module/Roulette/config/config';
 import { generateSegmentsMock, OPTIONS_SMALL_ROULETTE } from '@/src/module/SettingsGame/RoulettePicker/RoulettePicker';
 import { SettingsConstants } from '@/src/shared/config/constants/settingsOptions';
 import { CustomAnimations } from '@/src/shared/config/theme/AnimationConfig';
@@ -38,57 +38,6 @@ import Animated, { ZoomIn, ZoomOut } from 'react-native-reanimated';
 // Редкий приз: Премиум подписка на неделю
 // Легендарный приз: Премиум подписка на месяц
 // Легендарный приз: Выпадение пакета
-
-// const mockSegments: SegmentType[] = [
-//   {
-//     id: 1,
-//     color: "red",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 2,
-//     color: "green",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 1,
-//     color: "red",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 2,
-//     color: "green",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 1,
-//     color: "red",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 2,
-//     color: "green",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 1,
-//     color: "red",
-//     label: "label",
-//     type: "player",
-//   },
-//   {
-//     id: 2,
-//     color: "green",
-//     label: "label",
-//     type: "player",
-//   },
-// ];
 
 export default function GiftPage() {
   const colors = useTheme();
@@ -188,7 +137,7 @@ export default function GiftPage() {
                 centerBlock
                 segments={segments}
                 options={{
-                  ...calcByWheelSize(390),
+                  ...DefaultRouletteOptions,
                   BORDER_COLOR: colors.accent.primary,
                 }}
                 onChangeSpinStatus={onChangeSpinStatus}

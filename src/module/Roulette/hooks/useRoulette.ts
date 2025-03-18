@@ -1,3 +1,4 @@
+import { normalizedSize } from '@/src/shared/utils/size';
 import { SegmentType } from '@/src/entities/Roulette/types';
 import { DEFAULT_PROBABILITY } from '@/src/shared/config/constants/constants';
 import { useVibration } from '@/src/shared/hooks/useVibration';
@@ -137,11 +138,11 @@ export const useRoulette = (segments: SegmentType[], onCallback: (winner: Segmen
     const updateTotalAngle = totalAngle + (zeroOrOne === 0 ? oneSegmentAngle / 2 : -(oneSegmentAngle / 2));
 
     rotation.value = withSpring(updateTotalAngle, {});
-    console.log(getRandomSegment);
+
     const winner = segments[getRandomSegment];
     setWinner(getRandomSegment);
     onCallback(winner);
-    // Alert.alert("Результат", `Выпало: ${winner}`);
+
     setIsSpinning(false);
   };
 
@@ -150,9 +151,10 @@ export const useRoulette = (segments: SegmentType[], onCallback: (winner: Segmen
     bottom: wheelTranslateY.value,
   }));
 
+  const bottomNormalized = normalizedSize(240);
   const cursorAnimatedStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${cursorRotation.value}deg` }, { scale: wheelScale.value }],
-    bottom: 250 + wheelTranslateY.value,
+    bottom: bottomNormalized + wheelTranslateY.value,
   }));
 
   return { spinWheel, winner, isSpinning, animatedStyle, cursorAnimatedStyle };

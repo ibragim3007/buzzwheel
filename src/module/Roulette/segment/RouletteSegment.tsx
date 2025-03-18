@@ -39,8 +39,8 @@ export const RouletteSegment = ({
         d={pathData}
         stroke={picked ? '#fff' : 'none'}
         strokeWidth={picked ? 10 : 0}
-        strokeDashoffset={18}
-        strokeDasharray={16}
+        // strokeDashoffset={18}
+        // strokeDasharray={16}
         strokeLinejoin="round"
         fill={segment.color}
         opacity={winner !== null && !picked ? 0.1 : 1}

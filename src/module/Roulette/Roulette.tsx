@@ -107,7 +107,7 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
       </Animated.View>
 
       {centerBlock ? (
-        <Grid style={{ top: 250, left: -195 }}>
+        <Grid style={{ top: normalizedSize(250), left: '-56%' }}>
           <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
             <CenterCircle options={options} />
           </Animated.View>

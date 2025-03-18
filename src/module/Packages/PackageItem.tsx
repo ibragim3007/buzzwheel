@@ -7,6 +7,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import Checked from '@/src/shared/ui/icons/Checked';
 import Paper from '@/src/shared/ui/layout/Paper';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { normalizedSize } from '@/src/shared/utils/size';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Image } from 'expo-image';
 import { Pressable } from 'react-native';
@@ -45,7 +46,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
             <Grid flex={1} row space="md" align="center">
               <Grid width={75}>
                 <Image
-                  style={{ height: 80, width: 80, borderRadius: 100 }}
+                  style={{ height: normalizedSize(80), width: normalizedSize(80), borderRadius: 100 }}
                   contentFit="contain"
                   source={getActualImageLink(pack.imageEncoded)}
                   transition={300}
