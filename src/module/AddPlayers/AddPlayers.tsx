@@ -38,7 +38,7 @@ export default function AddPlayers() {
 
   const onPressStart = () => {
     if (!isEnoughPlayers) {
-      Inform.error('Add at least 2 players to start the game');
+      Inform.error('', { text1: 'Need at least 2 players', position: 'bottom', type: 'error' });
       return;
     }
     navigate('/screens/packages');
