@@ -1,6 +1,7 @@
 import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { MAX_PLAYERS_FOR_FREE } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { Inform } from '@/src/shared/service/logger.service/logger.service';
 import Button from '@/src/shared/ui/buttons/Button';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid from '@/src/shared/ui/grid/Grid';
@@ -8,20 +9,28 @@ import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import { Alert, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import Input from './components/Input/Input';
 import Players from './components/Players/Players';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 
 export default function AddPlayers() {
   const colors = useTheme();
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
+  const { vibrate } = useVibration();
 
   const isEnoughPlayers = players.length >= 2;
 
   const onAddNewPlayer = (name: string) => {
     if (players.length >= MAX_PLAYERS_FOR_FREE) {
-      Alert.alert('You have reached the maximum number of players for the free version');
+      Inform.error('', {
+        text1: `Limit of ${MAX_PLAYERS_FOR_FREE} players`,
+        text2: 'You can increase this in full access',
+        type: 'error',
+        onShow: () => vibrate(),
+        onPress: () => navigate('/screens/gift'),
+      });
       return;
     }
     addNewPlayer(name);
@@ -29,7 +38,7 @@ export default function AddPlayers() {
 
   const onPressStart = () => {
     if (!isEnoughPlayers) {
-      Alert.alert('Add at least 2 players to start the game');
+      Inform.error('Add at least 2 players to start the game');
       return;
     }
     navigate('/screens/packages');

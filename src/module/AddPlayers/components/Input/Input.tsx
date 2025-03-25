@@ -26,9 +26,7 @@ export default function Input({ onCall }: InputProps) {
   };
 
   const handleChangeText = (text: string) => {
-    if (text.length <= 25) {
-      setName(text);
-    }
+    if (text.length <= 25) setName(text);
   };
 
   return (

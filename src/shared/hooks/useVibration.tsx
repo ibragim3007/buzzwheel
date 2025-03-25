@@ -2,7 +2,7 @@ import * as Haptics from 'expo-haptics';
 
 export function useVibration() {
   const vibrate = () => {
-    void Haptics.impactAsync();
+    void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
   };
 
   const vibrateMedium = () => {

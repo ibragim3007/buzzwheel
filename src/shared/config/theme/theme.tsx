@@ -41,7 +41,7 @@ export const customTheme: PalitraInterface = {
     secondary: '#181818',
     disabled: '#8A8A8A',
     white: '#FFFFFF',
-    error: '#FF0000',
+    error: '#df3a3a',
     success: '#00FF00',
   },
   background: {
@@ -49,7 +49,7 @@ export const customTheme: PalitraInterface = {
     secondary: '#1D1E2A',
     tertiary: '#dedede',
     quaternary: '#4F4F4F',
-    error: '#FF0000',
+    error: '#df3a3a',
     success: '#00FF00',
   },
 };
