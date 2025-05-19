@@ -69,13 +69,14 @@ export default function Input({ onCall }: InputProps) {
       <Paper style={[{ borderRadius: 50 }]}>
         <Grid align="center" row>
           <TextInput
+            accessibilityHint="Input field for player name"
             ref={inputRef}
             onChangeText={handleChangeText}
             value={name}
             cursorColor={colors.accent.primary}
             selectionColor={colors.accent.primary}
             placeholderTextColor={isError ? colors.text.error : colors.text.white}
-            placeholder={isError ? 'Name is required' : 'Enter name player'}
+            placeholder={isError ? 'Name is required' : 'Enter player name'}
             onSubmitEditing={onPress}
             style={{
               borderWidth: 2,

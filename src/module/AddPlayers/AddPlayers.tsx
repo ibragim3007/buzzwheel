@@ -1,18 +1,18 @@
 import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { MAX_PLAYERS_FOR_FREE } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 import { Inform } from '@/src/shared/service/logger.service/logger.service';
 import Button from '@/src/shared/ui/buttons/Button';
-import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid from '@/src/shared/ui/grid/Grid';
-import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
 import { ScrollView } from 'react-native';
 import Input from './components/Input/Input';
+import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
-import { useVibration } from '@/src/shared/hooks/useVibration';
+import UserLimit from './components/Players/UserLimit';
 
 export default function AddPlayers() {
   const colors = useTheme();
@@ -45,15 +45,10 @@ export default function AddPlayers() {
   };
 
   return (
-    <Grid flex={1} justfity="space-around" space="sm">
-      <Grid space="md">
+    <Grid flex={1} justfity="space-around" gap={16}>
+      <Grid gap={24}>
         <Input onCall={onAddNewPlayer} />
-        {/* <Typography textAlign="center" weight="bold" variant="largeTitle">
-            Party Game
-          </Typography> */}
-        <Typography textAlign="center" variant="headline">
-          {players.length > 0 ? `${players.length}/${MAX_PLAYERS_FOR_FREE} players` : 'Add players to start the fun!'}
-        </Typography>
+        <UserLimit currentPlayers={players.length} />
       </Grid>
 
       <Grid style={{ overflow: 'hidden', position: 'relative' }}>
@@ -68,29 +63,20 @@ export default function AddPlayers() {
             borderRadius: 40,
           }}
         >
-          {players.length === 0 && (
-            <Grid height={normalizedSize(300)} align="center" justfity="center">
-              <Typography weight="medium" textAlign="center">
-                Players will{'\n'}be displayed here
-              </Typography>
-            </Grid>
-          )}
+          {players.length === 0 && <Placeholder />}
           <Players players={players} />
         </ScrollView>
-        <GradientShadow />
+        {/* <GradientShadow /> */}
       </Grid>
 
-      <Button
-        onPress={onPressStart}
-        title={`Start Game ${players.length ? `(${players.length} players)` : ''}`}
-        disabled={!isEnoughPlayers}
-        // style={{
-        //   backgroundColor: isEnoughPlayers
-        //     ? colors.accent.primary
-        //     : colors.background.secondary,
-        // }}
-        startIcon={<Ionicons name="play" size={24} color={colors.text.primary} />}
-      />
+      <Grid marginBottom={30}>
+        <Button
+          onPress={onPressStart}
+          title={'Start Game'}
+          disabled={!isEnoughPlayers}
+          startIcon={<Ionicons name="play" size={24} color={colors.text.primary} />}
+        />
+      </Grid>
     </Grid>
   );
 }
