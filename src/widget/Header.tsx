@@ -53,7 +53,7 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
             <Ionicons name="settings-sharp" size={24} color={colors.text.primary} />
           </WrapIconInPressable>
           <Grid align="center" space="md" row>
-            <GiftIcon />
+            {/* <GiftIcon /> */}
             <ProButton />
           </Grid>
         </Grid>

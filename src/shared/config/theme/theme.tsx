@@ -31,7 +31,7 @@ export const customTheme: PalitraInterface = {
   isFree: true,
   theme: 'custom',
   accent: {
-    primary: '#FF8D22',
+    primary: '#FD9301',
     secondary: '#ef2fb9',
     tertiary: '#FF6347',
     quaternary: '#b5651a',

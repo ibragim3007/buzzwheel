@@ -43,14 +43,16 @@ export default function SettingsGame() {
           <GroupBy title={'Выбор темы'}>
             <ThemePicker />
           </GroupBy>
-          <GroupBy title="Dev">
-            <Grid align="flex-start">
-              <Button
-                onPress={() => void LocalStorage.clearStorage('key')}
-                title={`Clear cache (${formatBytes(size)})`}
-              />
-            </Grid>
-          </GroupBy>
+          {__DEV__ && (
+            <GroupBy title="Dev">
+              <Grid align="flex-start">
+                <Button
+                  onPress={() => void LocalStorage.clearStorage('key')}
+                  title={`Clear cache (${formatBytes(size)})`}
+                />
+              </Grid>
+            </GroupBy>
+          )}
         </Grid>
       </BottomSheetScrollView>
     </BottomSheetView>

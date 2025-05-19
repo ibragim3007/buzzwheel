@@ -19,6 +19,8 @@ export interface Dare {
   readonly time: number;
   readonly package: number;
   readonly type: DareType;
+
+  readonly alcohol?: number;
 }
 
 export type Player = {

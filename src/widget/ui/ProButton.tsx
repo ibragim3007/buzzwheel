@@ -9,12 +9,13 @@ export default function ProButton() {
       paddingHorizontal={16}
       paddingVertical={6}
       style={{
-        borderWidth: 1,
-        borderColor: colors.accent.secondary,
+        borderWidth: 2,
+        backgroundColor: colors.accent.secondary,
+        borderColor: colors.text.white,
         borderRadius: 50,
       }}
     >
-      <Typography weight="medium" color="secondary-accent">
+      <Typography weight="bold" color="primary">
         PRO
       </Typography>
     </Grid>
