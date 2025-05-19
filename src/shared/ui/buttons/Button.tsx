@@ -3,7 +3,7 @@ import { Pressable, PressableProps, StyleSheet } from 'react-native';
 import Typography from '../typography/Typography';
 import { useTheme } from '../../hooks/useTheme';
 import Grid from '../grid/Grid';
-import { TypographyProps } from '../../styles/typography/typography';
+import { fontsWeights, TypographyProps } from '../../styles/typography/typography';
 import AnimTouchWrapper from '../animations/AnimTouchWrapper';
 
 interface ButtonProps extends PressableProps {
@@ -36,17 +36,19 @@ export default function Button({ title, startIcon, textStyle, disabled, ...props
     props.style,
   ]);
 
+  const fontStyles = StyleSheet.flatten([
+    {
+      color: disabled ? colors.text.disabled : colors.text.primary,
+    },
+    textStyle?.style,
+  ]);
+
   return (
     <AnimTouchWrapper>
       <Pressable {...props} style={styles} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <Grid row space="sm" justfity="center" align="center">
           {startIcon}
-          <Typography
-            variant="title-3"
-            textAlign="center"
-            style={[{ color: colors.text.primary }, textStyle?.style]}
-            weight="bold"
-          >
+          <Typography variant="title-3" textAlign="center" style={fontStyles} weight="bold">
             {title}
           </Typography>
         </Grid>

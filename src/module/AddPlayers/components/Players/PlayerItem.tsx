@@ -2,11 +2,13 @@ import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { CustomAnimations } from '@/src/shared/config/theme/AnimationConfig';
 
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 import { Player } from '@/src/shared/types/globalTypes';
 import AnimatedWrapper from '@/src/shared/ui/animations/AnimatedWrapper';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Paper from '@/src/shared/ui/layout/Paper';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -17,14 +19,19 @@ interface PlayerItemProps {
 
 export default function PlayerItem({ player }: PlayerItemProps) {
   const colors = useTheme();
-
+  const { vibrateSelection } = useVibration();
   const { deletePlayer } = usePlayerStore();
+
+  const onPressDeletePlayer = () => {
+    deletePlayer(player.id);
+    vibrateSelection();
+  };
 
   return (
     <AnimatedWrapper>
       <Animated.View entering={CustomAnimations.enterItemShow(0)} exiting={CustomAnimations.exitItemShow(0)}>
         <Paper
-          paddingHorizontal={25}
+          paddingHorizontal={20}
           paddingVertical={18}
           style={{
             backgroundColor: colors.background.primary,
@@ -44,13 +51,20 @@ export default function PlayerItem({ player }: PlayerItemProps) {
               </Typography>
             </Grid>
             <Pressable
-              style={{
-                width: 50,
-                alignItems: 'flex-end',
+              hitSlop={{
+                top: 10,
+                bottom: 10,
+                left: 10,
+                right: 10,
               }}
-              onPress={() => deletePlayer(player.id)}
+              style={{
+                width: normalizedSize(50),
+                alignItems: 'flex-end',
+                opacity: 0.7,
+              }}
+              onPress={onPressDeletePlayer}
             >
-              <Ionicons name="close" size={26} color={colors.text.primary} />
+              <Ionicons name="close" size={normalizedSize(24)} color={colors.text.primary} />
             </Pressable>
           </Grid>
         </Paper>

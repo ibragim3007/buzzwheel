@@ -49,7 +49,7 @@ export default function Input({ onCall }: InputProps) {
     }
     onCall(name);
     setName('');
-    inputRef.current?.blur();
+    // inputRef.current?.blur();
   };
 
   const handleChangeText = (text: string) => {

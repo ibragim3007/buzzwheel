@@ -8,7 +8,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import { ScrollView } from 'react-native';
+import { Keyboard, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import Input from './components/Input/Input';
 import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
@@ -18,7 +18,7 @@ export default function AddPlayers() {
   const colors = useTheme();
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
-  const { vibrate } = useVibration();
+  const { vibrate, vibrateSelection } = useVibration();
 
   const isEnoughPlayers = players.length >= 2;
 
@@ -33,10 +33,12 @@ export default function AddPlayers() {
       });
       return;
     }
+    vibrateSelection();
     addNewPlayer(name);
   };
 
   const onPressStart = () => {
+    console.log('first');
     if (!isEnoughPlayers) {
       Inform.error('', { text1: 'Need at least 2 players', position: 'bottom', type: 'error' });
       return;
@@ -45,8 +47,8 @@ export default function AddPlayers() {
   };
 
   return (
-    <Grid flex={1} justfity="space-around" gap={16}>
-      <Grid gap={24}>
+    <Grid flex={1} justfity="space-around" gap={6}>
+      <Grid gap={12}>
         <Input onCall={onAddNewPlayer} />
         <UserLimit currentPlayers={players.length} />
       </Grid>
@@ -74,7 +76,9 @@ export default function AddPlayers() {
           onPress={onPressStart}
           title={'Start Game'}
           disabled={!isEnoughPlayers}
-          startIcon={<Ionicons name="play" size={24} color={colors.text.primary} />}
+          startIcon={
+            <Ionicons name="play" size={24} color={!isEnoughPlayers ? colors.text.disabled : colors.text.primary} />
+          }
         />
       </Grid>
     </Grid>
