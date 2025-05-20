@@ -1,6 +1,7 @@
 import {
   ComplexAnimationBuilder,
   FadeInUp,
+  LinearTransition,
   SlideInLeft,
   SlideInRight,
   SlideOutLeft,
@@ -33,6 +34,8 @@ class AnimationEngine {
     this.MASS = MASS;
     this.stiffness = stiffness;
   }
+
+  public layoutAnimation = LinearTransition;
 
   private createAnimation<T extends ComplexAnimationBuilder>(animationType: T, n: number) {
     return animationType

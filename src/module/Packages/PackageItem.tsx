@@ -1,6 +1,6 @@
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { useTheme } from '@/src/shared/hooks/useTheme';
-import { animationService } from '@/src/shared/service/animation.service';
+import { animationEngine, animationService } from '@/src/shared/service/animation.service';
 import { Package } from '@/src/shared/types/globalTypes';
 import AnimTouchWrapper from '@/src/shared/ui/animations/AnimTouchWrapper';
 import Grid from '@/src/shared/ui/grid/Grid';
@@ -27,7 +27,11 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
   const colors = useTheme();
 
   return (
-    <Animated.View style={{ zIndex: index }} entering={animationService.getAnimationForShowPackageItem(index)}>
+    <Animated.View
+      layout={animationEngine.layoutAnimation}
+      style={{ zIndex: index }}
+      entering={animationService.getAnimationForShowPackageItem(index)}
+    >
       <AnimTouchWrapper>
         <Pressable onPress={() => onPress(pack)}>
           <Paper
@@ -103,7 +107,12 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                     </Grid>
                   )}
                 </Grid>
-                <Typography numberOfLines={3} color="secondary" style={{ lineHeight: 19 }} variant="footnote">
+                <Typography
+                  numberOfLines={picked ? 5 : 3}
+                  color="secondary"
+                  style={{ lineHeight: 19 }}
+                  variant="footnote"
+                >
                   {pack.description}
                 </Typography>
               </Grid>

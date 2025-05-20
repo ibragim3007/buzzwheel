@@ -32,6 +32,8 @@ export default function Button({ title, startIcon, textStyle, disabled, ...props
       paddingHorizontal: 25,
       paddingVertical: 17,
       borderRadius: 30,
+      borderWidth: 1,
+      borderColor: disabled ? colors.background.secondary : currentColorButton,
     },
     props.style,
   ]);
