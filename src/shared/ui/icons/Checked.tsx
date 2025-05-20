@@ -8,15 +8,15 @@ export default function Checked() {
     <Grid
       style={{
         position: 'absolute',
-        right: 3,
-        top: -3,
+        right: 10,
+        top: 13,
         borderRadius: 50,
         borderColor: colors.accent.primary,
       }}
       color={colors.accent.primary}
-      padding={6}
+      padding={5}
     >
-      <FontAwesome name="check" size={22} color={colors.text.primary} />
+      <FontAwesome name="check" size={19} color={colors.text.primary} />
     </Grid>
   );
 }

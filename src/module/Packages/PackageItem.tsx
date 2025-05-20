@@ -27,26 +27,47 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
   const colors = useTheme();
 
   return (
-    <Animated.View entering={animationService.getAnimationForShowPackageItem(index)}>
+    <Animated.View style={{ zIndex: index }} entering={animationService.getAnimationForShowPackageItem(index)}>
       <AnimTouchWrapper>
         <Pressable onPress={() => onPress(pack)}>
           <Paper
             style={{
               backgroundColor: colors.background.secondary,
-              borderRadius: 50,
-              borderWidth: 3,
-              height: 140,
+              borderRadius: 25,
+              borderWidth: 4,
               borderColor: picked ? colors.accent.primary : 'transparent',
+              shadowColor: '#000',
+              shadowOpacity: 0.3,
+              shadowRadius: 10,
+              shadowOffset: {
+                height: 0,
+                width: 0,
+              },
             }}
-            paddingVertical={10}
-            paddingHorizontal={10}
-            paddingRight={15}
+            paddingVertical={15}
+            paddingHorizontal={13}
           >
             {picked && <Checked />}
-            <Grid flex={1} row space="md" align="center">
-              <Grid width={75}>
+            <Grid flex={1} row gap={15}>
+              <Grid
+                style={{
+                  shadowColor: '#000',
+                  shadowOpacity: picked ? 0.4 : 0,
+                  shadowRadius: 20,
+                }}
+                align="center"
+              >
+                {/* <Grid
+                  color="#3c3816"
+                  width={60}
+                  height={60}
+                  style={{ position: 'absolute', borderRadius: 50, top: 7 }}
+                /> */}
                 <Image
-                  style={{ height: normalizedSize(80), width: normalizedSize(80), borderRadius: 100 }}
+                  style={{
+                    height: normalizedSize(70),
+                    width: normalizedSize(70),
+                  }}
                   contentFit="contain"
                   source={getActualImageLink(pack.imageEncoded)}
                   transition={300}
@@ -55,8 +76,9 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
               </Grid>
               <Grid space="sm" flex={1}>
                 <Grid>
-                  <Typography variant="headline" weight="bold">
-                    {pack.name} {`(${amountOfDares})`}
+                  <Typography variant="title-3" weight="bold">
+                    {pack.name}
+                    {/* {`(${amountOfDares})`} */}
                   </Typography>
                   {pack.packageType === 'pair' && (
                     <Grid row space="sm" align="center">
@@ -68,7 +90,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                           shadowColor: colors.accent.secondary,
                           shadowOpacity: 0.8,
                           shadowRadius: 6,
-                          lineHeight: 19,
+                          // lineHeight: 19,
                           shadowOffset: {
                             width: 0,
                             height: 1,
@@ -81,7 +103,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                     </Grid>
                   )}
                 </Grid>
-                <Typography variant="footnote" numberOfLines={3}>
+                <Typography numberOfLines={3} color="secondary" style={{ lineHeight: 19 }} variant="footnote">
                   {pack.description}
                 </Typography>
               </Grid>

@@ -1,0 +1,88 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "name": "Warm-up Shots",
+      "packageType": "default",
+      "description": "Simple, fun questions and easy dares to get the party started. No surprises—just pure fun!",
+      "isFree": true
+    },
+    {
+      "id": 2,
+      "name": "First Date Flirt",
+      "packageType": "pair",
+      "description": "Gentle and playful challenges for new couples. Sparks guaranteed!",
+      "isFree": false
+    },
+    {
+      "id": 3,
+      "name": "Hot & Spicy",
+      "packageType": "pair",
+      "description": "Provocative questions and daring actions for experienced couples. Heat things up!",
+      "isFree": false
+    },
+    {
+      "id": 4,
+      "name": "Total Chaos",
+      "packageType": "default",
+      "description": "Wild, unpredictable challenges that break every rule. Only for the bravest!",
+      "isFree": false
+    },
+    {
+      "id": 5,
+      "name": "Adult Kindergarten",
+      "packageType": "default",
+      "description": "Ridiculous and hilarious tasks suitable for any crowd—even parents!",
+      "isFree": true
+    },
+    {
+      "id": 6,
+      "name": "Bottom of Truth",
+      "packageType": "default",
+      "description": "Bold questions revealing your group's deepest secrets. Dare to face the truth?",
+      "isFree": false
+    },
+    {
+      "id": 7,
+      "name": "Guys Gone Wild",
+      "packageType": "default",
+      "description": "Testosterone-fueled challenges: sports, adrenaline rushes, and cheeky dares. Perfect for a boys’ night!",
+      "isFree": false
+    },
+    {
+      "id": 8,
+      "name": "Girls' Night Secrets",
+      "packageType": "default",
+      "description": "Beauty challenges, hilarious confessions, and intimate gossip. For ladies only!",
+      "isFree": false
+    },
+    {
+      "id": 9,
+      "name": "Insanity Mode",
+      "packageType": "default",
+      "description": "Extreme tasks pushing your limits to the edge. Not for the faint-hearted!",
+      "isFree": false
+    },
+    {
+      "id": 10,
+      "name": "Tipsy Trivia",
+      "packageType": "default",
+      "description": "Trivia with a twist: wrong answers mean drinking. Test your wits under pressure!",
+      "isFree": false
+    },
+    {
+      "id": 11,
+      "name": "Snack Attack",
+      "packageType": "default",
+      "description": "Crazy food and drink challenges. Mix, drink, and laugh your way through!",
+      "isFree": false
+    },
+    {
+      "id": 12,
+      "name": "Never Have I Ever",
+      "packageType": "default",
+      "description": "Classic drinking game revealing everyone's wildest secrets. Who’s the most experienced?",
+      "isFree": false
+    }
+  ]
+}
