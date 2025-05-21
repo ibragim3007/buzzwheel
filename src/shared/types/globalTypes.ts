@@ -10,14 +10,14 @@ export interface Package {
   readonly description: string;
   readonly imageEncoded: string;
   readonly isFree: boolean;
-  readonly dares: Dare[];
+  dares: Dare[];
 }
 
 export interface Dare {
-  readonly id: number;
+  id: number;
   readonly title: string;
   readonly action: string;
-  readonly time: number;
+  readonly time?: number;
   readonly type: DareType;
 
   readonly alcohol?: number;

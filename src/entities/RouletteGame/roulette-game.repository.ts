@@ -1,14 +1,14 @@
 import { getRandomInt } from '@/src/shared/helpers/getRandomInt';
-import { Dare, DareType, Package, Player } from '@/src/shared/types/globalTypes';
+import { Dare, DareType, Player } from '@/src/shared/types/globalTypes';
 import { create } from 'zustand';
-import { usePackage } from '../Package/usePackage';
+import { PackageWithDaresIds, usePackage } from '../Package/usePackage';
 import { useSettings } from '../Settings/settings.repository';
 
 interface State {
   moves: { player: Player; dare: Dare; packId: number }[];
   currentTurn: Player | null;
   currentDare: Dare | null;
-  currentPackage: Package | null;
+  currentPackage: PackageWithDaresIds | null;
   displayDare: boolean;
 }
 
@@ -61,6 +61,8 @@ export const useRouletteGame = create<State & Actions>(set => ({
 
     // Возможно имеет смысл сделать органичение по игроку/действию  move.player.id === player.id &&
     const randomDare = sortedDares[getRandomInt(0, sortedDares.length)];
+
+    console.log(useRouletteGame.getState().moves.map(a => a.dare.id));
 
     set((state: State) => ({
       currentPackage: randomPackage,
