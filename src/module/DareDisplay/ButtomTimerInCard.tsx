@@ -1,5 +1,6 @@
 import { generateTimerTime } from '@/src/shared/helpers/timer/generateTime';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 import { fontWeight } from '@/src/shared/styles/typography/typography';
 import { Dare } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
@@ -20,6 +21,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
   const [timerWasStarted, setTimerWasStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(dare.time);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const { vibrate, vibrateSelection } = useVibration();
 
   // Для анимации увеличения
   const scale = useSharedValue(1);
@@ -30,6 +32,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
     if (!isTimerRunning || timeLeft === 0) return;
 
     const timer = setInterval(() => {
+      vibrateSelection();
       setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timer);
@@ -58,6 +61,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
   };
 
   const toggleTimer = () => {
+    vibrate();
     setTimerWasStarted(true);
     rotation.value = withRepeat(
       withTiming(1, { duration: 100 }),
@@ -86,22 +90,20 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
         style={{
           // width: "100%",
           borderColor: colors.accent.secondary,
-          borderWidth: 1,
+          borderWidth: 2,
           paddingHorizontal: 20,
           paddingVertical: 18,
-          backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
+          backgroundColor: isTimerRunning ? colors.accent.secondary : colors.accent.secondary,
         }}
         textStyle={{
           style: {
-            color: isTimerRunning ? '#fff' : colors.accent.secondary,
+            color: isTimerRunning ? '#fff' : colors.text.white,
             fontSize: 23,
-            fontFamily: fontWeight.regular,
+            fontFamily: fontWeight.bold,
           },
         }}
         onPress={toggleTimer}
-        startIcon={
-          <Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.accent.secondary} />
-        }
+        startIcon={<Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.text.white} />}
         title={generateTimerTime(timeLeft)}
       />
 

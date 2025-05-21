@@ -6,7 +6,7 @@ export default function WrapIconInCircle({ ...props }: PressableProps) {
   return (
     <Pressable
       style={{
-        borderWidth: 1,
+        borderWidth: 2,
         borderRadius: 100,
         padding: 0,
         width: 50,

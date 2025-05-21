@@ -14,6 +14,7 @@ import { LayoutChangeEvent, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -71,9 +72,9 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
             style={{ borderRadius: 40 }}
           >
             <Grid align="center" space="lg">
-              <Grid marginBottom={30} space="md">
+              <Grid marginBottom={10} space="md">
                 {dare.time ? <ButtomTimerInCard dare={dare} handleDone={hideDare} /> : null}
-                <Typography variant="title-3" weight="bold" color="secondary-accent" textAlign="center">
+                <Typography variant="title-2" weight="bold" color="secondary-accent" textAlign="center">
                   {dare.title}
                 </Typography>
               </Grid>
@@ -85,22 +86,16 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
               </Grid>
             </Grid>
             <Grid
-              padding={5}
               style={{
                 position: 'absolute',
-                bottom: -30,
-                right: 15,
-                // backgroundColor: "#fff",
-                borderRadius: 50,
-                shadowColor: colors.background.primary,
-                shadowOpacity: 0.17,
-                shadowRadius: 10,
+                bottom: 15,
+                right: 20,
               }}
             >
               <Image
                 style={{
-                  height: normalizedSize(60),
-                  width: normalizedSize(60),
+                  height: normalizedSize(70),
+                  width: normalizedSize(70),
                 }}
                 source={getActualImageLink(currentPackage?.imageEncoded || '')}
                 contentFit="contain"
