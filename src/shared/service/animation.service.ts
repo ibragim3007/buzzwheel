@@ -35,8 +35,6 @@ class AnimationEngine {
     this.stiffness = stiffness;
   }
 
-  public layoutAnimation = LinearTransition;
-
   private createAnimation<T extends ComplexAnimationBuilder>(animationType: T, n: number) {
     return animationType
       .delay(n * this.ANIMATION_SPEED)
@@ -44,6 +42,9 @@ class AnimationEngine {
       .stiffness(this.stiffness)
       .mass(this.MASS);
   }
+  public layoutAnimation = LinearTransition.springify()
+    .mass(OptionsAnimationService.MASS)
+    .stiffness(OptionsAnimationService.stiffness);
 
   fadeInUp = (n: number) => this.createAnimation(new FadeInUp(), n);
   zoomInDown = (n: number) => this.createAnimation(new ZoomInDown(), n);

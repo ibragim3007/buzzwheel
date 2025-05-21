@@ -17,9 +17,9 @@ export default function Packages() {
 
   return (
     <Grid space="md">
-      {data.packages.map((pack, index) => {
+      {data.map((pack, index) => {
         const isPicked = pickedPackages.map(pM => pM.id).includes(pack.id);
-        const amountOfDares = data.dares.filter(d => d.package === pack.id);
+        const amountOfDares = pack.dares.length;
         return (
           <PackageItem
             onPress={onTogglePackage}
@@ -27,7 +27,7 @@ export default function Packages() {
             key={pack.id}
             pack={pack}
             index={index}
-            amountOfDares={amountOfDares.length}
+            amountOfDares={amountOfDares}
           />
         );
       })}

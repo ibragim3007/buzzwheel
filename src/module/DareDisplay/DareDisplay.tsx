@@ -14,7 +14,7 @@ import { LayoutChangeEvent, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
-import { useVibration } from '@/src/shared/hooks/useVibration';
+import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -28,8 +28,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   const [heightBlock, setHeightBlock] = useState(300);
 
   const colors = useTheme();
-  const { pickedPackages } = usePackage();
-  const currentPackage = pickedPackages.find(pkg => pkg.id === dare.package);
+  const { currentPackage } = useRouletteGame();
 
   const handleLayout = (event: LayoutChangeEvent) => {
     const { height } = event.nativeEvent.layout;

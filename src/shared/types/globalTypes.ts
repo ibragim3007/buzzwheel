@@ -10,6 +10,7 @@ export interface Package {
   readonly description: string;
   readonly imageEncoded: string;
   readonly isFree: boolean;
+  readonly dares: Dare[];
 }
 
 export interface Dare {
@@ -17,7 +18,6 @@ export interface Dare {
   readonly title: string;
   readonly action: string;
   readonly time: number;
-  readonly package: number;
   readonly type: DareType;
 
   readonly alcohol?: number;
@@ -29,11 +29,9 @@ export type Player = {
   color?: string;
 };
 
-export interface DATA {
-  dares: Dare[];
-  packages: Package[];
-  language: LanguageInterface;
-}
+// export interface DATA {
+//   packages: Package;
+// }
 
 export interface LanguageInterface {
   readonly id: number;

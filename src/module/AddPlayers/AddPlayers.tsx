@@ -8,7 +8,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import { Keyboard, ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { ScrollView } from 'react-native';
 import Input from './components/Input/Input';
 import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
