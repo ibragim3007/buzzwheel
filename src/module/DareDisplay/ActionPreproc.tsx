@@ -15,11 +15,10 @@ export default function ActionPreproc({ action, currentTurn, players }: ActionPr
 
   return updatedArr.map((item, index) => (
     <Typography
-      style={{ lineHeight: 33, letterSpacing: 0.3, color: item.color }}
+      style={{ lineHeight: 33, letterSpacing: 0.3, color: item.color || '#000' }}
       textAlign="center"
       weight={item.weight}
       variant="title-3"
-      color="secondary"
       key={index}
     >
       {item.value}

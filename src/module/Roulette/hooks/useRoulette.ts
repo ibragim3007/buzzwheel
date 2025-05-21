@@ -7,6 +7,7 @@ import {
   Easing,
   runOnJS,
   useAnimatedStyle,
+  useDerivedValue,
   useSharedValue,
   withDelay,
   withSequence,
@@ -30,7 +31,7 @@ const getWeightedRandomItem = (items: SegmentType[]) => {
 };
 
 export const useRoulette = (segments: SegmentType[], onCallback: (winner: SegmentType) => void) => {
-  const { vibrate } = useVibration();
+  const { vibrate, vibrateSelection } = useVibration();
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<null | number>(null);
 
@@ -39,6 +40,19 @@ export const useRoulette = (segments: SegmentType[], onCallback: (winner: Segmen
   const wheelTranslateY = useSharedValue(0);
   const cursorRotation = useSharedValue(0);
   const oneSegmentAngle = 360 / segments.length;
+  const prevIndex = useSharedValue(-1); // хранит индекс предыдущего сектора
+
+  /** Каждый раз, когда колесо «перешагнуло» в новый сектор → лёгкий тик */
+  useDerivedValue(() => {
+    if (!isSpinning) return;
+
+    const currentIndex = Math.floor((Math.abs(rotation.value) % 360) / oneSegmentAngle);
+
+    if (currentIndex !== prevIndex.value) {
+      prevIndex.value = currentIndex;
+      runOnJS(vibrateSelection)(); // запускаем haptic-тик в JS-потоке
+    }
+  });
 
   const spinWheel = () => {
     void vibrate();

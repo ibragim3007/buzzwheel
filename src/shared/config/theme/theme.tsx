@@ -15,6 +15,7 @@ export type PalitraInterface = {
     white: string;
     error: string;
     success: string;
+    black: string;
   };
   background: {
     primary: string;
@@ -43,6 +44,7 @@ export const customTheme: PalitraInterface = {
     white: '#FFFFFF',
     error: '#df3a3a',
     success: '#00FF00',
+    black: '#000000',
   },
   background: {
     primary: '#15171c',
@@ -70,7 +72,8 @@ export const beachTheme: PalitraInterface = {
     disabled: '#A9A9A9', // для отключенных элементов
     white: '#FFFFFF',
     error: '#FF4500', // ярко-красный
-    success: '#32CD32', // лаймовый
+    success: '#32CD32', // лаймовый,
+    black: '#000000',
   },
   background: {
     primary: '#87CEEB', // ясное небо
@@ -99,6 +102,7 @@ export const christmasTheme: PalitraInterface = {
     white: '#FFFFFF',
     error: '#D32F2F', // новогодний красный
     success: '#388E3C', // зелёный
+    black: '#000000',
   },
   background: {
     primary: '#003366', // глубокий синий
@@ -127,6 +131,7 @@ export const loveTheme: PalitraInterface = {
     white: '#FFFFFF',
     error: '#FF0000', // красный
     success: '#00FF00', // зелёный
+    black: '#000000',
   },
   background: {
     primary: '#FFF0F5', // розовый фон
@@ -155,6 +160,7 @@ export const autumnTheme: PalitraInterface = {
     white: '#FFFFFF',
     error: '#B22222', // темно-красный
     success: '#228B22', // лесной зелёный
+    black: '#000000',
   },
   background: {
     primary: '#2F4F4F', // тёмно-серый с оттенком зелёного
@@ -183,6 +189,7 @@ export const summerTheme: PalitraInterface = {
     white: '#FFFFFF',
     error: '#FF6347', // красноватый
     success: '#32CD32', // зелёный
+    black: '#000000',
   },
   background: {
     primary: '#FFFFF0', // светло-жёлтый

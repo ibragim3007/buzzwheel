@@ -58,8 +58,8 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
             <Circle
               cx={CENTER}
               cy={CENTER}
-              r={RADIUS + BORDER_WIDTH / 2}
-              fill={winner !== null ? '#252525' : BORDER_COLOR || '#eaf4ff'}
+              r={RADIUS + BORDER_WIDTH / 3}
+              fill={winner !== null ? '#252525' : BORDER_COLOR || '#FFB000'}
             />
             {/* Рулетка */}
             <G rotation={-90} origin={`${CENTER}, ${CENTER}`}>
@@ -118,18 +118,23 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         </Animated.View>
       )}
       <Button
-        title="Roll"
+        title="ROLL"
         onPress={spinWheel}
         disabled={isSpinning}
+        textStyle={{
+          color: 'disabled',
+          variant: 'title-2',
+        }}
         style={[
           {
             opacity: isSpinning || currentTurn ? 0 : 1,
             top: normalizedSize(120),
             width: normalizedSize(250),
-            paddingVertical: normalizedSize(20),
-            shadowColor: '#FFB347',
-            shadowOpacity: 0.45,
-            shadowRadius: 30,
+            paddingVertical: normalizedSize(13),
+
+            shadowColor: '#ec9c2e',
+            shadowOpacity: 0.55,
+            shadowRadius: 20,
           },
         ]}
       />

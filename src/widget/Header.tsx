@@ -23,12 +23,12 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
     navigate('..');
   };
 
-  const { vibrateMedium } = useVibration();
+  const { vibrate } = useVibration();
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
   const handlePresentModalPress = useCallback(() => {
     if (!bottomSheetModalRef.current) return;
-    vibrateMedium();
+    vibrate();
     bottomSheetModalRef.current?.present();
   }, []);
   const handleSheetChanges = useCallback((index: number) => {

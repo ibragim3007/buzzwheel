@@ -50,7 +50,7 @@ export default function Button({ title, startIcon, textStyle, disabled, ...props
       <Pressable {...props} style={styles} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <Grid row space="sm" justfity="center" align="center">
           {startIcon}
-          <Typography variant="title-3" textAlign="center" style={fontStyles} weight="bold">
+          <Typography variant="title-3" textAlign="center" style={fontStyles} weight="bold" {...textStyle}>
             {title}
           </Typography>
         </Grid>

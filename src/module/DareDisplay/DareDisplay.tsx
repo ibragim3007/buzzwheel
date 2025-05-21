@@ -1,7 +1,6 @@
 import { usePackage } from '@/src/entities/Package/usePackage';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
-import { getTransformedArrayOfString, updatedArray } from '@/src/shared/helpers/textConverters/coreLogic';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { animationEngine, animationService } from '@/src/shared/service/animation.service';
 import { Dare, Player } from '@/src/shared/types/globalTypes';
@@ -13,8 +12,8 @@ import { Image } from 'expo-image';
 import { useRef, useState } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
 import Animated from 'react-native-reanimated';
-import ButtomTimerInCard from './ButtomTimerInCard';
 import ActionPreproc from './ActionPreproc';
+import ButtomTimerInCard from './ButtomTimerInCard';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -80,15 +79,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
               </Grid>
 
               <Grid marginBottom={50}>
-                <Typography
-                  style={{ lineHeight: 33, letterSpacing: 0.3 }}
-                  textAlign="center"
-                  // weight="bold"
-                  variant="title-3"
-                  color="secondary"
-                >
+                <Typography style={{ lineHeight: 33, letterSpacing: 0.3 }} textAlign="center" variant="title-3">
                   <ActionPreproc action={dare.action} players={players} currentTurn={currentTurn} />
-                  {/* {updatedArray(getTransformedArrayOfString(dare.action), currentTurn, players).join('')} */}
                 </Typography>
               </Grid>
             </Grid>
