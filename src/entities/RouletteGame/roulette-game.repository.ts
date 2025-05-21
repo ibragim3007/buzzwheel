@@ -5,7 +5,7 @@ import { usePackage } from '../Package/usePackage';
 import { useSettings } from '../Settings/settings.repository';
 
 interface State {
-  moves: { player: Player; dare: Dare }[];
+  moves: { player: Player; dare: Dare; packId: number }[];
   currentTurn: Player | null;
   currentDare: Dare | null;
   currentPackage: Package | null;
@@ -65,7 +65,7 @@ export const useRouletteGame = create<State & Actions>(set => ({
     set((state: State) => ({
       currentPackage: randomPackage,
       currentTurn: player,
-      moves: [...state.moves, { dare: randomDare, player: player }],
+      moves: [...state.moves, { dare: randomDare, player: player, packId: randomPackage.id }],
       currentDare: randomDare,
     }));
   },
