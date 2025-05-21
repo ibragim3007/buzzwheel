@@ -1,4 +1,4 @@
-import { usePackage } from '@/src/entities/Package/usePackage';
+import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { useTheme } from '@/src/shared/hooks/useTheme';
@@ -14,7 +14,6 @@ import { LayoutChangeEvent, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
-import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -74,7 +73,14 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
               <Grid marginBottom={10} space="md">
                 {dare.time ? <ButtomTimerInCard dare={dare} handleDone={hideDare} /> : null}
                 <Typography variant="title-2" weight="bold" color="secondary-accent" textAlign="center">
-                  {dare.title}
+                  <ActionPreproc
+                    textColor={colors.accent.secondary}
+                    action={dare.title}
+                    players={players}
+                    currentTurn={currentTurn}
+                    weight="bold"
+                  />
+                  {/* {dare.title} */}
                 </Typography>
               </Grid>
 

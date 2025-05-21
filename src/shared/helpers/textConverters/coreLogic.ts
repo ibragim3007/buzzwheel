@@ -48,6 +48,7 @@ export const updatedArray = (
   currentPlayer: BasePlayerInterface,
   players: BasePlayerInterface[],
   theme: PalitraInterface,
+  textColor: string = theme.text.black,
 ): TransforeArrayItem[] => {
   const otherPlayers = players.filter(player => player.id !== currentPlayer.id);
   const randomPlayer = otherPlayers.length > 0 ? otherPlayers[Math.floor(Math.random() * otherPlayers.length)] : null;
@@ -60,13 +61,12 @@ export const updatedArray = (
 
   const items: TransforeArrayItem[] = transformedArray.map(item => {
     if (item === PLACEHOLDERS.CURRENT_PLAYER)
-      return { value: currentPlayer.name, color: currentPlayer.color || theme.text.black, weight: 'bold' };
+      return { value: currentPlayer.name, color: currentPlayer.color || textColor, weight: 'bold' };
     if (item === PLACEHOLDERS.RANDOM_PLAYER && randomPlayer)
-      return { value: randomPlayer.name, color: theme.text.black, weight: 'bold' };
-    if (item === PLACEHOLDERS.PREV_PLAYER) return { value: prevPlayer.name, color: theme.text.black, weight: 'bold' };
-    if (item === PLACEHOLDERS.NEXT_PLAYER) return { value: nextPlayer.name, color: theme.text.black, weight: 'bold' };
-    if (item === PLACEHOLDERS.RANDOM_LETTER)
-      return { value: getRandomLetter(), color: theme.text.black, weight: 'bold' };
+      return { value: randomPlayer.name, color: textColor, weight: 'bold' };
+    if (item === PLACEHOLDERS.PREV_PLAYER) return { value: prevPlayer.name, color: textColor, weight: 'bold' };
+    if (item === PLACEHOLDERS.NEXT_PLAYER) return { value: nextPlayer.name, color: textColor, weight: 'bold' };
+    if (item === PLACEHOLDERS.RANDOM_LETTER) return { value: getRandomLetter(), color: textColor, weight: 'bold' };
 
     const randMatch = item.match(PLACEHOLDERS.RAND_REGEX);
     if (randMatch) {
@@ -74,12 +74,12 @@ export const updatedArray = (
       const max = parseInt(randMatch[2], 10);
       return {
         value: (Math.floor(Math.random() * (max - min + 1)) + min).toString(),
-        color: theme.text.black,
+        color: textColor,
         weight: 'bold',
       };
     }
 
-    return { value: item, color: theme.text.black, weight: 'regular' };
+    return { value: item, color: textColor, weight: 'regular' };
   });
 
   return items;
