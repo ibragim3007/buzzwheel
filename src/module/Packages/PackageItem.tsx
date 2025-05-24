@@ -13,7 +13,7 @@ import { Image } from 'expo-image';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-const blurhash = 'AGN-D]z.oi?^';
+const blurhash = 'L15;,i?Y0003pgR;Z^xT0HMd-_.S';
 
 interface PackageItemProps {
   pack: Package;
@@ -61,12 +61,6 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                 }}
                 align="center"
               >
-                {/* <Grid
-                  color="#3c3816"
-                  width={60}
-                  height={60}
-                  style={{ position: 'absolute', borderRadius: 50, top: 7 }}
-                /> */}
                 <Image
                   style={{
                     height: normalizedSize(70),
@@ -75,7 +69,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                   contentFit="contain"
                   source={getActualImageLink(pack.imageEncoded)}
                   transition={300}
-                  placeholder={{ blurhash }}
+                  // placeholder={{ blurhash }}
                 />
               </Grid>
               <Grid space="sm" flex={1}>

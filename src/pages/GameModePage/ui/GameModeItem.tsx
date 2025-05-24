@@ -1,6 +1,7 @@
 import { ModeType } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import AnimTouchWrapper from '@/src/shared/ui/animations/AnimTouchWrapper';
+import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 
@@ -86,6 +87,7 @@ export default function GameModeItem({ title, description, image, value, current
               </Typography>
             </Grid>
             {/* </PressablePaper> */}
+            <GradientShadow />
           </Grid>
         </LinearGradient>
       </Pressable>
