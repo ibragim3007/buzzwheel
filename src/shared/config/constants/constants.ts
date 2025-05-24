@@ -5,6 +5,13 @@ export const MAX_HEIGHT_APP = 750;
 export const ANIMATION_SPEED = 150;
 export const DEFAULT_PROBABILITY = 0.1;
 
+export const APP_STORE_LINK = 'https://apps.apple.com/app/apple-store/6746181307?action=write-review';
+
+export const LINKS = {
+  privacyPolicy: '',
+  termsOfUse: '',
+};
+
 export const groupsOfColors: [string, string, string][] = [
   ['#2E8B57', '#3CB371', '#232323'],
   ['#990', '#350', '#232323'],

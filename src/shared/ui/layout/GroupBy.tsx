@@ -9,11 +9,11 @@ interface GroupByProps extends PropsWithChildren {
 
 export default function GroupBy({ title, subtext, children }: GroupByProps) {
   return (
-    <Grid space="sm">
+    <Grid space="md">
       <Typography variant="headline" weight="bold">
         {title}
       </Typography>
-      <Grid>{children}</Grid>
+      <Grid space="sm">{children}</Grid>
     </Grid>
   );
 }

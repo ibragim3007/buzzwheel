@@ -8,9 +8,9 @@ import Paper from '@/src/shared/ui/layout/Paper';
 import { formatBytes } from '@/src/shared/utils/formatBytes';
 import { BottomSheetScrollView, BottomSheetView } from '@gorhom/bottom-sheet';
 import { useEffect, useState } from 'react';
-import RoulettePicker from './RoulettePicker/RoulettePicker';
+import LegalBlock from './Blocks/LegalBlock';
 import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
-import ThemePicker from './ThemePicker/ThemePicker';
+import RateBlock from './Blocks/RateBlock';
 
 export default function SettingsGame() {
   const colors = useTheme();
@@ -37,12 +37,14 @@ export default function SettingsGame() {
               <SwitchRepetition />
             </Paper>
           </GroupBy>
-          <GroupBy title="Выбор колеса">
+          {/* <GroupBy title="Выбор колеса">
             <RoulettePicker />
-          </GroupBy>
-          <GroupBy title={'Выбор темы'}>
+          </GroupBy> */}
+          <RateBlock />
+          <LegalBlock />
+          {/* <GroupBy title={'Выбор темы'}>
             <ThemePicker />
-          </GroupBy>
+          </GroupBy> */}
           {__DEV__ && (
             <GroupBy title="Dev">
               <Grid align="flex-start">
