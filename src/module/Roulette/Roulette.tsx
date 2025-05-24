@@ -118,12 +118,12 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         </Animated.View>
       )}
       <Button
-        title="ROLL"
+        title="Spin the Wheel"
         onPress={spinWheel}
         disabled={isSpinning}
         textStyle={{
           color: 'disabled',
-          variant: 'title-2',
+          variant: 'title-3',
         }}
         style={[
           {

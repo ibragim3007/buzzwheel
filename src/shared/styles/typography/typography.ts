@@ -17,13 +17,15 @@ type TypographyVariants =
   | 'caption-1'
   | 'caption-2';
 
-export type TypographyWeight = 'regular' | 'bold' | 'medium';
+export type TypographyWeight = 'light' | 'regular' | 'bold' | 'medium' | 'semiBold';
+export type TypographyWeightSecondary = 'light' | 'regular' | 'bold' | 'medium' | 'extraBold' | 'black';
 
 export type TColor = 'primary' | 'secondary' | 'disabled' | 'white' | 'error' | 'success' | 'secondary-accent';
 export type TTextAlign = 'auto' | 'left' | 'right' | 'center' | 'justify';
 export interface TypographyProps extends TextProps {
   variant?: TypographyVariants;
   weight?: TypographyWeight;
+  weightSecondary?: TypographyWeightSecondary;
   color?: TColor;
   textAlign?: TTextAlign;
   isLayoutAnimation?: boolean;
@@ -79,12 +81,46 @@ export const getColorsStyles = (colors: PalitraInterface): Record<TColor, TextPr
 });
 
 export const fontWeight = {
-  regular: 'OpenSans_400Regular',
-  medium: 'OpenSans_500Medium',
-  bold: 'OpenSans_700Bold',
+  light: 'Manrope_300Light',
+  semiBold: 'Manrope_600SemiBold',
+  regular: 'Manrope_400Regular',
+  medium: 'Manrope_500Medium',
+  bold: 'Manrope_700Bold',
+};
+
+export const fontWeightSecondary = {
+  light: 'Rubik_300Light',
+  regular: 'Rubik_400Regular',
+  medium: 'Rubik_500Medium',
+  bold: 'Rubik_700Bold',
+  black: 'Rubik_900Black',
+  extraBold: 'Rubik_800ExtraBold',
+};
+export const fontsWeightsSecondary: Record<TypographyWeightSecondary, TextProps['style']> = {
+  light: {
+    fontFamily: fontWeightSecondary.light,
+  },
+  regular: {
+    fontFamily: fontWeightSecondary.regular,
+  },
+  bold: {
+    fontFamily: fontWeightSecondary.bold,
+  },
+  medium: {
+    fontFamily: fontWeightSecondary.medium,
+  },
+  extraBold: {
+    fontFamily: fontWeightSecondary.extraBold,
+  },
+  black: {
+    fontFamily: fontWeightSecondary.black,
+  },
 };
 
 export const fontsWeights: Record<TypographyWeight, TextProps['style']> = {
+  light: {
+    fontFamily: 'OpenSans_300Light',
+  },
   regular: {
     fontFamily: fontWeight.regular,
   },
@@ -93,5 +129,8 @@ export const fontsWeights: Record<TypographyWeight, TextProps['style']> = {
   },
   medium: {
     fontFamily: fontWeight.medium,
+  },
+  semiBold: {
+    fontFamily: fontWeight.semiBold,
   },
 };

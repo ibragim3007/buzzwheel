@@ -6,7 +6,7 @@ import { useSettings } from '../Settings/settings.repository';
 
 export type ModeType = 'drink' | 'dry';
 interface State {
-  moves: { player: Player; dare: Dare; packId: number }[];
+  moves: { player: Player; dare: Dare; packId: number; drunk: boolean }[];
   currentTurn: Player | null;
   currentDare: Dare | null;
   currentPackage: PackageWithDaresIds | null;
@@ -17,7 +17,7 @@ interface State {
 interface Actions {
   setTurn: (player: Player, type: DareType) => void;
   showDare: () => void;
-  hideDare: () => void;
+  hideDare: (drunk: boolean) => void;
   setMode: (mode: ModeType) => void;
 }
 
@@ -33,12 +33,32 @@ export const useRouletteGame = create<State & Actions>(set => ({
     set(() => ({ displayDare: true }));
   },
 
-  hideDare: () => {
-    set(() => ({
-      displayDare: false,
-      currentDare: null,
-      currentTurn: null,
-    }));
+  hideDare: (drunk: boolean) => {
+    set(state => {
+      if (state.currentDare !== null && state.currentTurn !== null && state.currentPackage !== null) {
+        return {
+          moves: [
+            ...state.moves,
+            {
+              dare: state.currentDare,
+              player: state.currentTurn,
+              packId: state.currentPackage.id,
+              drunk: drunk,
+            },
+          ],
+          currentPackage: null,
+          displayDare: false,
+          currentDare: null,
+          currentTurn: null,
+        };
+      }
+      return {
+        currentPackage: null,
+        displayDare: false,
+        currentDare: null,
+        currentTurn: null,
+      };
+    });
   },
 
   setMode: (mode: 'drink' | 'dry' | null) => {
@@ -75,7 +95,7 @@ export const useRouletteGame = create<State & Actions>(set => ({
     set((state: State) => ({
       currentPackage: randomPackage,
       currentTurn: player,
-      moves: [...state.moves, { dare: randomDare, player: player, packId: randomPackage.id }],
+
       currentDare: randomDare,
     }));
   },

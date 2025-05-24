@@ -2,6 +2,7 @@ import { DimensionValue, FlexAlignType, StyleProp, StyleSheet, View, ViewProps, 
 import { calculateSpacing, TSpaceGrid } from '../../helpers/styleHelpers/calculateSpacing';
 import { normalizeLayoutDimenstionValue } from '../../helpers/styleHelpers/normalizeLayoutDimenstionValue';
 import { normalizedSize } from '../../utils/size';
+import { withPressable } from '../../hoc/withPressable';
 
 export interface GridProps extends ViewProps {
   flex?: number;
@@ -103,3 +104,5 @@ const Grid = ({
 };
 
 export default Grid;
+
+export const GridPressable = withPressable(Grid);

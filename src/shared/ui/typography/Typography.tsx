@@ -1,18 +1,26 @@
-import { StyleSheet, Text, TextProps } from 'react-native';
+import { StyleProp, StyleSheet, Text, TextProps, TextStyle } from 'react-native';
 import { useTheme } from '../../hooks/useTheme';
-import { fontsWeights, getColorsStyles, TypographyProps, TypographyStyles } from '../../styles/typography/typography';
+import {
+  fontsWeights,
+  fontWeightSecondary,
+  getColorsStyles,
+  TypographyProps,
+  TypographyStyles,
+} from '../../styles/typography/typography';
 
 const Typography = (props: TypographyProps) => {
   const colors = useTheme();
 
   const fontStyles = fontsWeights[props.weight || 'regular'];
+  const fontStylesSecondary = fontWeightSecondary[props.weightSecondary || 'regular'];
   const typographyStyle = TypographyStyles[props.variant || 'body'];
   const colorStyle: TextProps['style'] = getColorsStyles(colors)[props.color || 'primary'];
 
-  const stylesText = StyleSheet.flatten([
+  const stylesText: StyleProp<TextStyle> = StyleSheet.flatten([
     props.textAlign && { textAlign: props.textAlign },
     typographyStyle,
     fontStyles,
+    fontStylesSecondary,
     colorStyle,
     props.style,
   ]);

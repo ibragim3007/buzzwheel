@@ -17,7 +17,7 @@ export default function ActionPreproc({ action, currentTurn, players, textColor,
 
   return updatedArr.map((item, index) => (
     <Typography
-      style={{ lineHeight: 33, letterSpacing: 0.3, color: textColor || item.color || '#000' }}
+      style={{ lineHeight: 31, letterSpacing: 0.3, color: textColor || item.color || '#000' }}
       textAlign="center"
       weight={item.weight}
       variant="title-3"

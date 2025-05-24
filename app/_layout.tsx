@@ -6,29 +6,42 @@ import 'react-native-reanimated';
 import CustomModal from '@/src/entities/Modal/ui/CustomModal';
 import { toastConfig } from '@/src/shared/config/toast';
 import ThemeProvider from '@/src/shared/providers/ThemeProvider';
-import {
-  OpenSans_300Light,
-  OpenSans_400Regular,
-  OpenSans_500Medium,
-  OpenSans_700Bold,
-  OpenSans_800ExtraBold,
-} from '@expo-google-fonts/open-sans';
+
+import { Manrope_300Light } from '@expo-google-fonts/manrope/300Light';
+import { Manrope_400Regular } from '@expo-google-fonts/manrope/400Regular';
+import { Manrope_500Medium } from '@expo-google-fonts/manrope/500Medium';
+import { Manrope_600SemiBold } from '@expo-google-fonts/manrope/600SemiBold';
+import { Manrope_700Bold } from '@expo-google-fonts/manrope/700Bold';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
 import StackRoute from './stack';
 
+import { Rubik_300Light } from '@expo-google-fonts/rubik/300Light';
+import { Rubik_400Regular } from '@expo-google-fonts/rubik/400Regular';
+import { Rubik_500Medium } from '@expo-google-fonts/rubik/500Medium';
+import { Rubik_700Bold } from '@expo-google-fonts/rubik/700Bold';
+import { Rubik_800ExtraBold } from '@expo-google-fonts/rubik/800ExtraBold';
+import { Rubik_900Black } from '@expo-google-fonts/rubik/900Black';
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    OpenSans_300Light,
-    OpenSans_400Regular,
-    OpenSans_500Medium,
-    OpenSans_700Bold,
-    OpenSans_800ExtraBold,
+    Manrope_300Light,
+    Manrope_400Regular,
+    Manrope_500Medium,
+    Manrope_600SemiBold,
+    Manrope_700Bold,
+
+    Rubik_300Light,
+    Rubik_400Regular,
+    Rubik_500Medium,
+    Rubik_700Bold,
+    Rubik_800ExtraBold,
+    Rubik_900Black,
   });
 
   useEffect(() => {
