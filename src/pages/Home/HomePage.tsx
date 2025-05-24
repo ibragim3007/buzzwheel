@@ -8,9 +8,11 @@ export default function HomePage() {
   return (
     <PageWrapper>
       <SafeWrapper>
-        <Header />
-        <Grid height="95%" space="lg">
-          <AddPlayers />
+        <Grid space="sm">
+          <Header />
+          <Grid height="95%">
+            <AddPlayers />
+          </Grid>
         </Grid>
       </SafeWrapper>
     </PageWrapper>

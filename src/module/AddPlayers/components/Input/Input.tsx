@@ -17,6 +17,7 @@ export default function Input({ onCall }: InputProps) {
   const colors = useTheme();
   const [name, setName] = useState('');
   const [isError, setIsError] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const { vibrate } = useVibration();
 
   const inputRef = useRef<TextInput>(null);
@@ -66,53 +67,56 @@ export default function Input({ onCall }: InputProps) {
 
   return (
     <Animated.View style={animatedStyle}>
-      <Paper style={[{ borderRadius: 50 }]}>
-        <Grid align="center" row>
-          <TextInput
-            accessibilityHint="Input field for player name"
-            ref={inputRef}
-            onChangeText={handleChangeText}
-            value={name}
-            cursorColor={colors.accent.primary}
-            selectionColor={colors.accent.primary}
-            placeholderTextColor={isError ? colors.text.error : colors.text.white}
-            placeholder={isError ? 'Name is required' : 'Enter player name'}
-            onSubmitEditing={onPress}
-            style={{
-              borderWidth: 2,
-              height: '100%',
-              borderColor: currentInputColor,
-              paddingHorizontal: 25,
-              flex: 1,
-              borderTopLeftRadius: 50,
-              borderBottomLeftRadius: 50,
-              fontSize: 18,
-              color: isError ? colors.text.error : colors.text.primary,
-              fontFamily: fontWeight.medium,
-              borderRightWidth: 0,
-            }}
-          />
+      {/* <Paper style={[{ borderRadius: 50 }]}> */}
+      <Grid align="center" row>
+        <TextInput
+          accessibilityHint="Input field for player name"
+          ref={inputRef}
+          onChangeText={handleChangeText}
+          value={name}
+          cursorColor={colors.accent.primary}
+          selectionColor={colors.accent.primary}
+          placeholderTextColor={isError ? colors.text.error : colors.text.white}
+          placeholder={isError ? 'Name is required' : 'Enter player name'}
+          onSubmitEditing={onPress}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          style={{
+            borderWidth: 2,
+            height: '100%',
+            borderColor: currentInputColor,
+            backgroundColor: isFocused ? colors.background.secondary : 'trans', // Fallback focus color
+            paddingHorizontal: 25,
+            flex: 1,
+            borderTopLeftRadius: 50,
+            borderBottomLeftRadius: 50,
+            fontSize: 18,
+            color: isError ? colors.text.error : colors.text.primary,
+            fontFamily: fontWeight.medium,
+            borderRightWidth: 0,
+          }}
+        />
 
-          <Button
-            style={{
-              borderTopLeftRadius: 0,
-              borderBottomLeftRadius: 0,
-              paddingLeft: 15,
-              backgroundColor: currentInputColor,
-            }}
-            startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
-            onPress={onPress}
-            title="Add"
-          />
-        </Grid>
-        {/* {isError && (
+        <Button
+          style={{
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+            paddingLeft: 15,
+            backgroundColor: currentInputColor,
+          }}
+          startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
+          onPress={onPress}
+          title="Add"
+        />
+      </Grid>
+      {/* {isError && (
           <Grid marginLeft={25}>
             <Typography color="error" variant="caption-1">
               Name is required
             </Typography>
           </Grid>
         )} */}
-      </Paper>
+      {/* </Paper> */}
     </Animated.View>
   );
 }

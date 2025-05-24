@@ -15,7 +15,7 @@ export default function WrapIconInPressable({ primaryColor, backgroundColor, ...
         backgroundColor: backgroundColor || 'transparent',
         borderRadius: 50,
         borderWidth: 1,
-        borderColor: primaryColor || '#ffffff17',
+        borderColor: primaryColor || '#ffffff42',
         alignItems: 'center',
         justifyContent: 'center',
       }}

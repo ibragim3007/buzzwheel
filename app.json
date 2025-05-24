@@ -50,6 +50,9 @@
     "runtimeVersion": {
       "policy": "appVersion"
     },
-    "owner": "ibragimlol"
+    "owner": "ibragimlol",
+    "updates": {
+      "url": "https://u.expo.dev/1f969f83-2d04-4a6a-ab0a-44323df0de8c"
+    }
   }
 }

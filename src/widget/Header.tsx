@@ -40,11 +40,11 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
       {back ? (
         <Grid width="100%" row justfity="space-between">
           <WrapIconInPressable onPress={onPressBack}>
-            <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
+            <Ionicons name="arrow-back" size={22} color={colors.text.primary} />
           </WrapIconInPressable>
 
           <WrapIconInPressable onPress={handlePresentModalPress}>
-            <Ionicons name="settings-sharp" size={24} color={colors.text.primary} />
+            <Ionicons name="settings-sharp" size={22} color={colors.text.primary} />
           </WrapIconInPressable>
         </Grid>
       ) : (

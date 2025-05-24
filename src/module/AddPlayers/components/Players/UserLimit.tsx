@@ -26,13 +26,13 @@ export default function UserLimit({ currentPlayers }: UserLimitProps) {
   const isMaxPlayers = currentPlayers >= MAX_PLAYERS_FOR_FREE;
 
   return (
-    <Grid space="sm">
+    <Grid space="md">
       <Typography textAlign="center" variant="footnote">
         {isMaxPlayers
           ? `You have reached the limit of ${MAX_PLAYERS_FOR_FREE} players`
           : isPlayersGreaterThan0
             ? `${currentPlayers}/${MAX_PLAYERS_FOR_FREE} players`
-            : 'Add players to start the game'}
+            : 'Add at least 2 players to begin'}
         {/* {isPlayersGreaterThan0 ? `${currentPlayers}/${MAX_PLAYERS_FOR_FREE} players` : 'Add players to start the game'} */}
       </Typography>
 
