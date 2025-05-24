@@ -28,7 +28,9 @@ export default function GameModeItem({ title, description, image, value, current
   };
 
   const gradientColors: [ColorValue, ColorValue, ...ColorValue[]] = isPicked
-    ? [colors.accent.primary, '#FF5E5E']
+    ? value === 'drink'
+      ? [colors.accent.primary, '#FF5E5E']
+      : ['#723fde', '#4effea']
     : [colors.background.secondary, colors.background.secondary];
 
   return (
@@ -36,9 +38,9 @@ export default function GameModeItem({ title, description, image, value, current
       <Pressable
         onPress={onPressWrapper}
         style={{
-          shadowColor: colors.accent.primary,
+          shadowColor: value === 'drink' ? colors.accent.primary : '#4f3fde',
           shadowOffset: { height: 0, width: 0 },
-          shadowOpacity: isPicked ? 0.4 : 0,
+          shadowOpacity: isPicked ? 0.3 : 0,
           shadowRadius: 7,
         }}
       >
@@ -74,7 +76,7 @@ export default function GameModeItem({ title, description, image, value, current
             <Grid width="35%">
               <Image source={image} style={{ width: 130, height: 140 }} contentFit="cover" />
             </Grid>
-            <Grid width="65%" space="sm">
+            <Grid width="56%" space="sm">
               <Typography weight="bold" variant="title-2">
                 {title}
               </Typography>
