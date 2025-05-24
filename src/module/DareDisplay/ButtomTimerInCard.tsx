@@ -93,17 +93,19 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
           borderWidth: 2,
           paddingHorizontal: 20,
           paddingVertical: 18,
-          backgroundColor: isTimerRunning ? colors.accent.secondary : colors.accent.secondary,
+          backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
         }}
         textStyle={{
           style: {
-            color: isTimerRunning ? '#fff' : colors.text.white,
+            color: isTimerRunning ? '#fff' : colors.accent.secondary,
             fontSize: 23,
             fontFamily: fontWeight.bold,
           },
         }}
         onPress={toggleTimer}
-        startIcon={<Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.text.white} />}
+        startIcon={
+          <Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.accent.secondary} />
+        }
         title={generateTimerTime(timeLeft)}
       />
 

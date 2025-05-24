@@ -17,7 +17,7 @@ export default function PackagePage() {
   const { pickedPackages } = usePackage();
   const { navigate } = useRouter();
   const onPressPlay = () => {
-    navigate('/screens/game');
+    navigate('/screens/gameModeScreen');
   };
 
   return (
@@ -48,7 +48,7 @@ export default function PackagePage() {
               width: '100%',
             }}
           >
-            <Button onPress={onPressPlay} title="Play" />
+            <Button onPress={onPressPlay} title="Continue" />
           </Grid>
         </Animated.View>
       )}

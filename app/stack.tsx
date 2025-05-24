@@ -7,6 +7,7 @@ export default function StackRoute() {
       <Stack.Screen name="screens/game" />
       <Stack.Screen name="screens/packages" />
       <Stack.Screen name="screens/gift" />
+      <Stack.Screen name="screens/gameModeScreen" />
       <Stack.Screen name="+not-found" />
     </Stack>
   );
