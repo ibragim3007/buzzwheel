@@ -15,6 +15,8 @@ import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
 import InGameButton from './ui/InGameButton';
 import { Entypo } from '@expo/vector-icons';
+import Button from '@/src/shared/ui/buttons/Button';
+import { fontsWeightsSecondary, fontWeightSecondary } from '@/src/shared/styles/typography/typography';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -63,7 +65,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
       entering={animationService.enteringDareCard(0)}
       exiting={animationEngine.slideOutLeft(0)}
     >
-      <Grid gap={120}>
+      <Grid gap={140}>
         <View ref={ref} onLayout={handleLayout}>
           <Grid
             paddingVertical={30}
@@ -113,20 +115,26 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
         </View>
 
         <Grid row width="100%" paddingHorizontal={40} space="lg">
-          {dare.alcohol && mode == 'drink' && (
-            <Grid flex={0.5} gap={20}>
-              <InGameButton onPress={onPressDrunk} color={colors.background.secondary} title="Alcohol" />
-              <Grid align="center" row justfity="center" space="sm">
-                <Entypo name="drink" size={15} color={colors.text.disabled} />
-                <Typography textAlign="center" variant="caption-1" color="disabled">
-                  Drunk {dare.alcohol} times
-                </Typography>
+          {dare.alcohol && mode == 'drink' ? (
+            <>
+              <Grid flex={0.5} gap={20}>
+                <InGameButton onPress={onPressDrunk} color={colors.background.secondary} title="Alcohol" />
+                <Grid align="center" row justfity="center" space="sm">
+                  <Entypo name="drink" size={15} color={colors.text.disabled} />
+                  <Typography textAlign="center" variant="caption-1" color="disabled">
+                    Drunk {dare.alcohol} times
+                  </Typography>
+                </Grid>
               </Grid>
+              <Grid flex={mode == 'drink' ? 0.5 : 1}>
+                <InGameButton title="Done" onPress={onPressDry} />
+              </Grid>
+            </>
+          ) : (
+            <Grid width="100%">
+              <Button onPress={onPressDry} title="Done" />
             </Grid>
           )}
-          <Grid flex={mode == 'drink' ? 0.5 : 1}>
-            <InGameButton title="Done" onPress={onPressDry} />
-          </Grid>
         </Grid>
       </Grid>
     </Animated.View>

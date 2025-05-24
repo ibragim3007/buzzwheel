@@ -129,12 +129,12 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
           {
             opacity: isSpinning || currentTurn ? 0 : 1,
             top: normalizedSize(120),
-            width: normalizedSize(250),
-            paddingVertical: normalizedSize(13),
+            width: normalizedSize(260),
+            // paddingVertical: normalizedSize(13),
 
             shadowColor: '#ec9c2e',
-            shadowOpacity: 0.55,
-            shadowRadius: 20,
+            shadowOpacity: 0.15,
+            shadowRadius: 15,
           },
         ]}
       />
