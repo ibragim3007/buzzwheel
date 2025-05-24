@@ -8,12 +8,18 @@ import Header from '@/src/widget/Header';
 import DryRunImage from '@/assets/images/game_mode_images/dry_run_image.png';
 import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png';
 import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
+import { useRouter } from 'expo-router';
 
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
+  const { navigate } = useRouter();
 
   const handleModeSelect = (selectedMode: ModeType) => {
     setMode(selectedMode);
+  };
+
+  const onPressStartGame = () => {
+    navigate('/screens/game');
   };
 
   const isDisabled = mode === null;
@@ -51,7 +57,7 @@ export default function GameModePage() {
             />
           </Grid>
           <Grid marginBottom={20}>
-            <Button disabled={isDisabled} title="Start Game" />
+            <Button onPress={onPressStartGame} disabled={isDisabled} title="Start Game" />
           </Grid>
         </Grid>
       </SafeWrapper>
