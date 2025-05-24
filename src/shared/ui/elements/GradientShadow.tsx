@@ -19,8 +19,6 @@ export default function GradientShadow({ height, color, secondColor }: GradientS
         right: 0,
         opacity: 0.3,
         height: height || 60, // Высота тени
-        borderBottomLeftRadius: 40,
-        borderBottomRightRadius: 40,
       }}
       pointerEvents="none"
     />

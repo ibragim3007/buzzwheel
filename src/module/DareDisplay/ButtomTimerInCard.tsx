@@ -93,6 +93,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
           borderWidth: 2,
           paddingHorizontal: 20,
           paddingVertical: 18,
+          borderRadius: 100,
           backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
         }}
         textStyle={{

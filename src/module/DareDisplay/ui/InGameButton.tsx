@@ -1,5 +1,6 @@
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import AnimTouchWrapper from '@/src/shared/ui/animations/AnimTouchWrapper';
+import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import { GridPressable, GridProps } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 
@@ -22,10 +23,11 @@ export default function InGameButton({ title, onPress, ...props }: InGameButtonP
         style={{ borderRadius: 20 }}
         {...props}
       >
-        <Typography weight="bold" variant="title-4" textAlign="center">
+        <Typography weight="bold" variant="title-3" textAlign="center">
           {title}
         </Typography>
       </GridPressable>
+      <GradientShadow />
     </AnimTouchWrapper>
   );
 }

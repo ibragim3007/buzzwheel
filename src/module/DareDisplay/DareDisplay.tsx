@@ -63,7 +63,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
       entering={animationService.enteringDareCard(0)}
       exiting={animationEngine.slideOutLeft(0)}
     >
-      <Grid gap={80}>
+      <Grid gap={120}>
         <View ref={ref} onLayout={handleLayout}>
           <Grid
             paddingVertical={30}
@@ -81,7 +81,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                     action={dare.title}
                     players={players}
                     currentTurn={currentTurn}
-                    weight="medium"
+                    weight="semiBold"
                   />
                 </Typography>
               </Grid>

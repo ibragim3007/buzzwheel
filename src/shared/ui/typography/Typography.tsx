@@ -11,8 +11,10 @@ import {
 const Typography = (props: TypographyProps) => {
   const colors = useTheme();
 
-  const fontStyles = fontsWeights[props.weight || 'regular'];
-  const fontStylesSecondary = fontWeightSecondary[props.weightSecondary || 'regular'];
+  const fontStyles = props.weightSecondary
+    ? fontWeightSecondary[props.weightSecondary]
+    : fontsWeights[props.weight || 'regular'];
+
   const typographyStyle = TypographyStyles[props.variant || 'body'];
   const colorStyle: TextProps['style'] = getColorsStyles(colors)[props.color || 'primary'];
 
@@ -20,7 +22,6 @@ const Typography = (props: TypographyProps) => {
     props.textAlign && { textAlign: props.textAlign },
     typographyStyle,
     fontStyles,
-    fontStylesSecondary,
     colorStyle,
     props.style,
   ]);

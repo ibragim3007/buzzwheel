@@ -119,7 +119,7 @@ export const fontsWeightsSecondary: Record<TypographyWeightSecondary, TextProps[
 
 export const fontsWeights: Record<TypographyWeight, TextProps['style']> = {
   light: {
-    fontFamily: 'OpenSans_300Light',
+    fontFamily: fontWeight.light,
   },
   regular: {
     fontFamily: fontWeight.regular,
