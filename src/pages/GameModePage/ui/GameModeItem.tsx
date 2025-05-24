@@ -41,8 +41,8 @@ export default function GameModeItem({ title, description, image, value, current
         style={{
           shadowColor: value === 'drink' ? colors.accent.primary : '#4f3fde',
           shadowOffset: { height: 0, width: 0 },
-          shadowOpacity: isPicked ? 0.3 : 0,
-          shadowRadius: 7,
+          shadowOpacity: isPicked ? 0.2 : 0,
+          shadowRadius: 10,
         }}
       >
         <LinearGradient
@@ -63,22 +63,11 @@ export default function GameModeItem({ title, description, image, value, current
             space="md"
             paddingHorizontal={6}
           >
-            {/* <PressablePaper
-          style={{
-            borderWidth: 3,
-            borderColor: isPicked ? colors.accent.primary : colors.background.secondary,
-            backgroundColor: isPicked ? colors.background.secondary : colors.background.primary,
-          }}
-          onPress={onPressWrapper}
-          align="center"
-          justfity="space-around"
-          row
-        > */}
             <Grid width="35%">
               <Image source={image} style={{ width: 130, height: 140 }} contentFit="cover" />
             </Grid>
             <Grid width="56%" space="sm">
-              <Typography weight="bold" variant="title-2">
+              <Typography weight="bold" variant="title-1">
                 {title}
               </Typography>
 
@@ -86,7 +75,6 @@ export default function GameModeItem({ title, description, image, value, current
                 {description}
               </Typography>
             </Grid>
-            {/* </PressablePaper> */}
             <GradientShadow />
           </Grid>
         </LinearGradient>
