@@ -47,10 +47,9 @@ export default function AddPlayers() {
   };
 
   return (
-    <Grid flex={1} justfity="space-around" gap={6}>
+    <Grid flex={1} justfity="space-around">
       <Grid gap={12}>
         <Input onCall={onAddNewPlayer} />
-        <UserLimit currentPlayers={players.length} />
       </Grid>
 
       <Grid style={{ overflow: 'hidden', position: 'relative' }}>
@@ -70,8 +69,8 @@ export default function AddPlayers() {
         </ScrollView>
         {/* <GradientShadow /> */}
       </Grid>
-
-      <Grid marginBottom={30}>
+      <Grid space="lg" marginBottom={20}>
+        <UserLimit currentPlayers={players.length} />
         <Button
           onPress={onPressStart}
           title={'Start Game'}

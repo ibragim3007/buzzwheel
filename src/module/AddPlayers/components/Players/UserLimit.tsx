@@ -26,8 +26,8 @@ export default function UserLimit({ currentPlayers }: UserLimitProps) {
   const isMaxPlayers = currentPlayers >= MAX_PLAYERS_FOR_FREE;
 
   return (
-    <Grid space="md">
-      <Typography textAlign="center" variant="footnote">
+    <Grid space="sm">
+      <Typography color="disabled" textAlign="center" variant="footnote">
         {isMaxPlayers
           ? `You have reached the limit of ${MAX_PLAYERS_FOR_FREE} players`
           : isPlayersGreaterThan0
