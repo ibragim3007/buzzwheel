@@ -7,28 +7,51 @@ import Button from '@/src/shared/ui/buttons/Button';
 import Header from '@/src/widget/Header';
 import DryRunImage from '@/assets/images/game_mode_images/dry_run_image.png';
 import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png';
+import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 
 export default function GameModePage() {
+  const { mode, setMode } = useRouletteGame();
+
+  const handleModeSelect = (selectedMode: ModeType) => {
+    setMode(selectedMode);
+  };
+
+  const isDisabled = mode === null;
+
   return (
     <PageWrapper flex={1}>
       <SafeWrapper>
         <Header back />
-        <Grid height="95%" justfity="space-between">
-          <Grid>
+        <Grid height="93%" justfity="space-between">
+          <Grid marginTop={10} space="sm">
             <Typography weight="bold" variant="title-1" textAlign="center">
               Game Mode
             </Typography>
-            <Typography variant="footnote" color="disabled" textAlign="center" marginTop={8}>
+            <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
               Choose how you would like to spend this evening
             </Typography>
           </Grid>
 
-          <Grid space="lg">
-            <GameModeItem image={DrinkDareImage} title="Drink & Dare" description="Miss the mark? Bottoms up!" />
-            <GameModeItem image={DryRunImage} title="Dry Run" description="Play it clean, no booze needed." />
+          <Grid gap={24}>
+            <GameModeItem
+              currentMode={mode}
+              value="drink"
+              image={DrinkDareImage}
+              title="Drink & Dare"
+              description="Miss the mark? Bottoms up!"
+              onPress={value => handleModeSelect(value as ModeType)}
+            />
+            <GameModeItem
+              currentMode={mode}
+              value="dry"
+              image={DryRunImage}
+              title="Dry Run"
+              description="Play it clean, no booze needed."
+              onPress={value => handleModeSelect(value as ModeType)}
+            />
           </Grid>
           <Grid marginBottom={20}>
-            <Button title="Start Game" />
+            <Button disabled={isDisabled} title="Start Game" />
           </Grid>
         </Grid>
       </SafeWrapper>

@@ -4,18 +4,21 @@ import { create } from 'zustand';
 import { PackageWithDaresIds, usePackage } from '../Package/usePackage';
 import { useSettings } from '../Settings/settings.repository';
 
+export type ModeType = 'drink' | 'dry';
 interface State {
   moves: { player: Player; dare: Dare; packId: number }[];
   currentTurn: Player | null;
   currentDare: Dare | null;
   currentPackage: PackageWithDaresIds | null;
   displayDare: boolean;
+  mode: ModeType | null;
 }
 
 interface Actions {
   setTurn: (player: Player, type: DareType) => void;
   showDare: () => void;
   hideDare: () => void;
+  setMode: (mode: ModeType) => void;
 }
 
 export const useRouletteGame = create<State & Actions>(set => ({
@@ -24,6 +27,7 @@ export const useRouletteGame = create<State & Actions>(set => ({
   currentDare: null,
   displayDare: false,
   currentPackage: null,
+  mode: null,
 
   showDare: () => {
     set(() => ({ displayDare: true }));
@@ -35,6 +39,10 @@ export const useRouletteGame = create<State & Actions>(set => ({
       currentDare: null,
       currentTurn: null,
     }));
+  },
+
+  setMode: (mode: 'drink' | 'dry' | null) => {
+    set(() => ({ mode }));
   },
 
   setTurn: (player: Player, type: DareType) => {
