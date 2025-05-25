@@ -13,6 +13,8 @@ import Input from './components/Input/Input';
 import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
 import UserLimit from './components/Players/UserLimit';
+import ArrowAnimation from '@/assets/lottie/arrow-pointer.json';
+import LottieView from 'lottie-react-native';
 
 export default function AddPlayers() {
   const colors = useTheme();
@@ -46,6 +48,8 @@ export default function AddPlayers() {
     navigate('/screens/packages');
   };
 
+  const isShowArrow = players.length <= 0;
+
   return (
     <Grid flex={1} justfity="space-around">
       <Grid gap={12}>
@@ -67,7 +71,6 @@ export default function AddPlayers() {
           {players.length === 0 && <Placeholder />}
           <Players players={players} />
         </ScrollView>
-        {/* <GradientShadow /> */}
       </Grid>
       <Grid space="lg" marginBottom={20}>
         <UserLimit currentPlayers={players.length} />
@@ -80,6 +83,14 @@ export default function AddPlayers() {
           }
         />
       </Grid>
+      {isShowArrow && (
+        <Grid
+          pointerEvents="none"
+          style={{ position: 'absolute', top: 30, right: 60, transform: [{ rotateY: '180deg' }, { rotate: '-30deg' }] }}
+        >
+          <LottieView autoPlay loop source={ArrowAnimation} style={{ width: 200, height: 200 }} />
+        </Grid>
+      )}
     </Grid>
   );
 }

@@ -38,7 +38,7 @@ export const usePackage = create<State & Actions>(set => {
   // Set the initial state
   return {
     data: packagesWithDaresIds,
-    pickedPackages: [],
+    pickedPackages: [packagesWithDaresIds[0]],
     addPackage: mode => set(state => ({ pickedPackages: [...state.pickedPackages, mode] })),
     removePackage: mode =>
       set(state => ({

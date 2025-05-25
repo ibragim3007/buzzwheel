@@ -1,9 +1,9 @@
+import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { fontWeight } from '@/src/shared/styles/typography/typography';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
-import Paper from '@/src/shared/ui/layout/Paper';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { useRef, useState } from 'react';
 import { TextInput } from 'react-native';
@@ -18,6 +18,8 @@ export default function Input({ onCall }: InputProps) {
   const [name, setName] = useState('');
   const [isError, setIsError] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const { players } = usePlayerStore();
+
   const { vibrate } = useVibration();
 
   const inputRef = useRef<TextInput>(null);
@@ -68,7 +70,7 @@ export default function Input({ onCall }: InputProps) {
   return (
     <Animated.View style={animatedStyle}>
       {/* <Paper style={[{ borderRadius: 50 }]}> */}
-      <Grid align="center" row>
+      <Grid space="md" align="center" row>
         <TextInput
           accessibilityHint="Input field for player name"
           ref={inputRef}
@@ -85,22 +87,22 @@ export default function Input({ onCall }: InputProps) {
             borderWidth: 2,
             height: '100%',
             borderColor: currentInputColor,
-            backgroundColor: isFocused ? colors.background.secondary : 'trans', // Fallback focus color
+            backgroundColor: colors.background.secondary, // Fallback focus color
             paddingHorizontal: 25,
             flex: 1,
-            borderTopLeftRadius: 50,
-            borderBottomLeftRadius: 50,
+            // borderTopLeftRadius: 50,
+            // borderBottomLeftRadius: 50,
+            borderRadius: 50,
             fontSize: 18,
             color: isError ? colors.text.error : colors.text.primary,
             fontFamily: fontWeight.medium,
-            borderRightWidth: 0,
           }}
         />
 
         <Button
           style={{
-            borderTopLeftRadius: 0,
-            borderBottomLeftRadius: 0,
+            // borderTopLeftRadius: 0,
+            // borderBottomLeftRadius: 0,
             paddingLeft: 15,
             backgroundColor: currentInputColor,
           }}
@@ -109,6 +111,7 @@ export default function Input({ onCall }: InputProps) {
           title="Add"
         />
       </Grid>
+
       {/* {isError && (
           <Grid marginLeft={25}>
             <Typography color="error" variant="caption-1">
