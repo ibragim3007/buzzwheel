@@ -13,7 +13,7 @@ import { Manrope_500Medium } from '@expo-google-fonts/manrope/500Medium';
 import { Manrope_600SemiBold } from '@expo-google-fonts/manrope/600SemiBold';
 import { Manrope_700Bold } from '@expo-google-fonts/manrope/700Bold';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { Platform, StatusBar } from 'react-native';
+import { AppState, Platform, StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
 import StackRoute from './stack';
@@ -61,6 +61,20 @@ export default function RootLayout() {
       console.error('Error configuring RevenueCat:', error);
     }
   }, []);
+
+  // AppState.addEventListener('change', async nextAppState => {
+  //   if (nextAppState === 'active') {
+  //     try {
+  //       Purchases.addCustomerInfoUpdateListener(customerInfo => {
+  //         // Handle customer info updates
+  //         console.log('Customer info updated');
+  //         setCustomerInfo(customerInfo);
+  //       });
+  //     } catch (error) {
+  //       console.error('Error configuring RevenueCat:', error);
+  //     }
+  //   }
+  // });
 
   useEffect(() => {
     if (loaded) void SplashScreen.hideAsync();

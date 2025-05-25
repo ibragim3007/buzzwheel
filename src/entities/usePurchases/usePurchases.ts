@@ -45,6 +45,10 @@ export const usePurchases = create<State & Actions>(set => {
     offering: null,
     isActiveSubscription: false,
 
-    setCustomerInfo: (customerInfo: CustomerInfo) => set({ customerInfo }),
+    setCustomerInfo: (customerInfo: CustomerInfo) => {
+      const isActiveSubscription = customerInfo.activeSubscriptions.length > 0;
+
+      set({ customerInfo, isActiveSubscription });
+    },
   };
 });
