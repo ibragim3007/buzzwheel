@@ -9,12 +9,15 @@ import DryRunImage from '@/assets/images/game_mode_images/dry_run_image.png';
 import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png';
 import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { useRouter } from 'expo-router';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
   const { navigate } = useRouter();
+  const { vibrateSelection } = useVibration();
 
   const handleModeSelect = (selectedMode: ModeType) => {
+    vibrateSelection();
     setMode(selectedMode);
   };
 

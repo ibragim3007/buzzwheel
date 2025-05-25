@@ -90,7 +90,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                 />
               </Grid>
               <Grid space="sm" flex={1}>
-                <Grid>
+                <Grid marginRight={20}>
                   <Typography variant="title-3" weight="bold">
                     {pack.name}
                     {/* {`(${amountOfDares})`} */}

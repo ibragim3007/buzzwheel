@@ -10,6 +10,8 @@ import PaywallItems from './ui/PaywallItems';
 import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { useEffect, useState } from 'react';
+import LottieView from 'lottie-react-native';
+import LoadingAnimation from '@/assets/lottie/loading_animation.json';
 
 export default function Paywall() {
   const { offering } = usePurchases();
@@ -17,11 +19,11 @@ export default function Paywall() {
 
   const [showCloseIcon, setShowCloseIcon] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowCloseIcon(true);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowCloseIcon(true);
+  //   }, 4300);
+  // }, []);
 
   useEffect(() => {
     setCurrentProduct(offering?.availablePackages[0]);
@@ -45,11 +47,23 @@ export default function Paywall() {
   return (
     <Grid justfity="space-between" height="100%">
       <Grid space="md">
-        {showCloseIcon && (
-          <Pressable style={{ position: 'absolute' }} onPress={goBack} hitSlop={10}>
-            <Ionicons name="close" size={24} color={colors.text.primary} />
-          </Pressable>
-        )}
+        <Grid style={{ position: 'absolute' }}>
+          {showCloseIcon ? (
+            <Pressable onPress={goBack} hitSlop={10}>
+              <Ionicons name="close" size={24} color={colors.text.primary} />
+            </Pressable>
+          ) : (
+            <LottieView
+              resizeMode="cover"
+              source={LoadingAnimation}
+              autoPlay
+              loop={false}
+              speed={1.2}
+              style={{ width: 25, height: 25, position: 'absolute' }}
+              onAnimationFinish={() => setShowCloseIcon(true)}
+            />
+          )}
+        </Grid>
         <HeaderLogo />
         <Grid>
           <Typography weight="bold" textAlign="center" variant="title-4">
