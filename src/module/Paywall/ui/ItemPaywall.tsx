@@ -10,7 +10,7 @@ interface ItemPaywallProps {
 export default function ItemPaywall({ icon, title }: ItemPaywallProps) {
   return (
     <Grid space="md" align="center" justfity="center" row>
-      <Grid width="5%">{icon}</Grid>
+      <Grid width="10%">{icon}</Grid>
       <Grid width="60%">
         <Typography>{title}</Typography>
       </Grid>

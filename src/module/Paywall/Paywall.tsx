@@ -1,20 +1,33 @@
 import { useTheme } from '@/src/shared/hooks/useTheme';
-import Button from '@/src/shared/ui/buttons/Button';
 import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
-import PaywallItems from './ui/PaywallItems';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { navigate } from 'expo-router/build/global-state/routing';
+import { Pressable } from 'react-native';
 import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
+import PaywallItems from './ui/PaywallItems';
+import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
 
 export default function Paywall() {
   const colors = useTheme();
+  const goBack = () => {
+    navigate('..');
+  };
   return (
     <Grid justfity="space-between" height="100%">
       <Grid space="md">
+        <Pressable onPress={goBack} hitSlop={10}>
+          <Ionicons name="close" size={24} color={colors.text.primary} />
+        </Pressable>
         <HeaderLogo />
         <Grid>
           <Typography weight="bold" textAlign="center" variant="title-4">
-            Уже 11032 играют в статусе VIP
+            Уже{' '}
+            <Typography weight="bold" color="secondary-accent" textAlign="center" variant="title-4">
+              {getWeeklyPurchaseCount()}
+            </Typography>{' '}
+            играют в статусе VIP
           </Typography>
           <Typography weight="bold" textAlign="center" variant="title-4">
             Вы с нами?
