@@ -52,19 +52,6 @@ export default function RootLayout() {
 
   useEffect(() => {
     try {
-      Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
-
-      // Configure RevenueCat based on the platform
-      if (Platform.OS === 'ios') {
-        Purchases.configure({
-          apiKey: REVENUE_CAT_API_IOS,
-        });
-      } else if (Platform.OS === 'android') {
-        Purchases.configure({
-          apiKey: REVENUE_CAT_API_ANDROID,
-        });
-      }
-
       Purchases.addCustomerInfoUpdateListener(customerInfo => {
         // Handle customer info updates
         console.log('Customer info updated');

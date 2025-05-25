@@ -1,4 +1,5 @@
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
@@ -14,6 +15,7 @@ interface PaywallButtonProps {
 export default function PaywallButton({ product }: PaywallButtonProps) {
   const colors = useTheme();
   const scaleAnim = useRef(new Animated.Value(1)).current;
+  const { vibrateMedium } = useVibration();
 
   useEffect(() => {
     const pulse = () => {
@@ -36,13 +38,14 @@ export default function PaywallButton({ product }: PaywallButtonProps) {
     pulse();
   }, [scaleAnim]);
 
-  const pressBuyButton = () => {
+  const pressBuyButton = async () => {
+    vibrateMedium();
     try {
       if (!product) {
         throw new Error('No offering identifier found');
       }
 
-      Purchases.purchasePackage(product);
+      await Purchases.purchasePackage(product);
     } catch (e) {
       console.log(e);
     }

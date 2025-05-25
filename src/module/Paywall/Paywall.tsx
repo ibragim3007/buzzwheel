@@ -15,6 +15,14 @@ export default function Paywall() {
   const { offering } = usePurchases();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
+  const [showCloseIcon, setShowCloseIcon] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowCloseIcon(true);
+    }, 3000);
+  }, []);
+
   useEffect(() => {
     setCurrentProduct(offering?.availablePackages[0]);
   }, [offering]);
@@ -37,9 +45,11 @@ export default function Paywall() {
   return (
     <Grid justfity="space-between" height="100%">
       <Grid space="md">
-        <Pressable onPress={goBack} hitSlop={10}>
-          <Ionicons name="close" size={24} color={colors.text.primary} />
-        </Pressable>
+        {showCloseIcon && (
+          <Pressable style={{ position: 'absolute' }} onPress={goBack} hitSlop={10}>
+            <Ionicons name="close" size={24} color={colors.text.primary} />
+          </Pressable>
+        )}
         <HeaderLogo />
         <Grid>
           <Typography weight="bold" textAlign="center" variant="title-4">
