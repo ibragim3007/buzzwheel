@@ -12,7 +12,7 @@ export default function SwitchCustom({ ...props }: SwitchCustomProps) {
       ios_backgroundColor={colors.background.primary}
       trackColor={{
         false: colors.background.secondary,
-        true: colors.background.tertiary,
+        true: colors.text.primary,
       }}
     />
   );

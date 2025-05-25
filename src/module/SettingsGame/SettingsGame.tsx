@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import LegalBlock from './Blocks/LegalBlock';
 import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import RateBlock from './Blocks/RateBlock';
+import VibrationToggle from './VibrationToggle/VibrationToggle';
 
 export default function SettingsGame() {
   const colors = useTheme();
@@ -35,6 +36,9 @@ export default function SettingsGame() {
           <GroupBy title="Настройки">
             <Paper paddingHorizontal={10} style={{ backgroundColor: colors.background.primary }}>
               <SwitchRepetition />
+            </Paper>
+            <Paper paddingHorizontal={10} style={{ backgroundColor: colors.background.primary }}>
+              <VibrationToggle />
             </Paper>
           </GroupBy>
           {/* <GroupBy title="Выбор колеса">

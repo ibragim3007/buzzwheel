@@ -1,7 +1,13 @@
+import { useApp } from '@/src/entities/appStore/app.store';
 import * as Haptics from 'expo-haptics';
 
 export function useVibration() {
+  const { isVibrationEnabled } = useApp();
+
   const vibrate = () => {
+    if (!isVibrationEnabled) {
+      return;
+    }
     void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
   };
 
@@ -10,10 +16,16 @@ export function useVibration() {
   };
 
   const vibrateMedium = () => {
+    if (!isVibrationEnabled) {
+      return;
+    }
     void Haptics.notificationAsync();
   };
 
   const vibrateSelection = () => {
+    if (!isVibrationEnabled) {
+      return;
+    }
     void Haptics.selectionAsync();
   };
 
