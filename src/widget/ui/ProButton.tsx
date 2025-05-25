@@ -1,11 +1,18 @@
 import { useTheme } from '@/src/shared/hooks/useTheme';
-import Grid from '@/src/shared/ui/grid/Grid';
+import { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { navigate } from 'expo-router/build/global-state/routing';
 
 export default function ProButton() {
   const colors = useTheme();
+
+  const onPressPro = () => {
+    navigate('/screens/paywall');
+  };
+
   return (
-    <Grid
+    <GridPressable
+      onPress={onPressPro}
       paddingHorizontal={16}
       paddingVertical={6}
       style={{
@@ -18,6 +25,6 @@ export default function ProButton() {
       <Typography weight="bold" style={{ color: colors.accent.primary }}>
         PRO
       </Typography>
-    </Grid>
+    </GridPressable>
   );
 }

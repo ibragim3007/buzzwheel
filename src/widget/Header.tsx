@@ -8,7 +8,6 @@ import { useVibration } from '../shared/hooks/useVibration';
 import HandleComponent from '../shared/ui/elements/HandleComponent';
 import Grid from '../shared/ui/grid/Grid';
 import WrapIconInPressable from '../shared/ui/wrapper/WrapIconInPressable';
-import GiftIcon from './ui/GiftIcon';
 import ProButton from './ui/ProButton';
 
 interface HeaderProps {
@@ -66,7 +65,6 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
         // enableHandlePanningGesture={true}
         // enableContentPanningGesture={true}
         // keyboardBehavior="interactive"
-
         onChange={handleSheetChanges}
         handleComponent={HandleComponent}
         backgroundStyle={{

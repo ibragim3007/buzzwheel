@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Pressable, PressableProps, StyleSheet } from 'react-native';
-import Typography from '../typography/Typography';
 import { useTheme } from '../../hooks/useTheme';
-import Grid from '../grid/Grid';
-import { fontsWeights, TypographyProps } from '../../styles/typography/typography';
+import { TypographyProps } from '../../styles/typography/typography';
 import AnimTouchWrapper from '../animations/AnimTouchWrapper';
+import Grid from '../grid/Grid';
+import Typography from '../typography/Typography';
 
 interface ButtonProps extends PressableProps {
   title: string;
