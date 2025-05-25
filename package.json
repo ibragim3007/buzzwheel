@@ -53,7 +53,7 @@
     "react-native": "0.79.2",
     "react-native-adapty": "^3.6.1",
     "react-native-gesture-handler": "~2.24.0",
-    "react-native-purchases": "^8.9.1",
+    "react-native-purchases": "^8.10.1",
     "react-native-reanimated": "~3.17.4",
     "react-native-reanimated-carousel": "^4.0.2",
     "react-native-safe-area-context": "5.4.0",

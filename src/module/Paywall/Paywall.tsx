@@ -8,12 +8,32 @@ import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
 import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import { useEffect, useState } from 'react';
 
 export default function Paywall() {
+  const { offering } = usePurchases();
+  const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
+
+  useEffect(() => {
+    setCurrentProduct(offering?.availablePackages[0]);
+  }, [offering]);
+
   const colors = useTheme();
   const goBack = () => {
     navigate('..');
   };
+
+  if (!currentProduct) {
+    return (
+      <Grid justfity="center" height="100%" align="center">
+        <Typography variant="title-4" weight="bold">
+          Ошибка загрузки продукта
+        </Typography>
+      </Grid>
+    );
+  }
+
   return (
     <Grid justfity="space-between" height="100%">
       <Grid space="md">
@@ -36,8 +56,8 @@ export default function Paywall() {
       </Grid>
       <PaywallItems />
       <Grid space="lg" align="center" width="100%">
-        <Typography weight="light">3-Day Trial, then $6.99 per week</Typography>
-        <PaywallButton />
+        <Typography weight="light">3-Day Trial, then {currentProduct.product.priceString} per week</Typography>
+        <PaywallButton product={currentProduct} />
         <Grid space="sm" align="center">
           <Grid align="center" row space="lg">
             <GridPressable>

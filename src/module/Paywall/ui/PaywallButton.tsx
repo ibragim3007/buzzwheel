@@ -3,10 +3,15 @@ import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Animated, Easing } from 'react-native';
 import { useEffect, useRef } from 'react';
+import { Animated, Easing } from 'react-native';
+import Purchases, { PurchasesPackage } from 'react-native-purchases';
 
-export default function PaywallButton() {
+interface PaywallButtonProps {
+  product: PurchasesPackage;
+}
+
+export default function PaywallButton({ product }: PaywallButtonProps) {
   const colors = useTheme();
   const scaleAnim = useRef(new Animated.Value(1)).current;
 
@@ -31,9 +36,21 @@ export default function PaywallButton() {
     pulse();
   }, [scaleAnim]);
 
+  const pressBuyButton = () => {
+    try {
+      if (!product) {
+        throw new Error('No offering identifier found');
+      }
+
+      Purchases.purchasePackage(product);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
-      <GridPressable>
+      <GridPressable onPress={pressBuyButton}>
         <LinearGradient
           start={[0, 0]}
           end={[1, 1]}

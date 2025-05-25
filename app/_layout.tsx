@@ -13,7 +13,7 @@ import { Manrope_500Medium } from '@expo-google-fonts/manrope/500Medium';
 import { Manrope_600SemiBold } from '@expo-google-fonts/manrope/600SemiBold';
 import { Manrope_700Bold } from '@expo-google-fonts/manrope/700Bold';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { StatusBar } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
 import StackRoute from './stack';
@@ -24,6 +24,10 @@ import { Rubik_500Medium } from '@expo-google-fonts/rubik/500Medium';
 import { Rubik_700Bold } from '@expo-google-fonts/rubik/700Bold';
 import { Rubik_800ExtraBold } from '@expo-google-fonts/rubik/800ExtraBold';
 import { Rubik_900Black } from '@expo-google-fonts/rubik/900Black';
+
+import Purchases from 'react-native-purchases';
+import { REVENUE_CAT_API_ANDROID, REVENUE_CAT_API_IOS } from '@/src/shared/config/constants/constants';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();
@@ -43,6 +47,33 @@ export default function RootLayout() {
     Rubik_800ExtraBold,
     Rubik_900Black,
   });
+
+  const { setCustomerInfo } = usePurchases();
+
+  useEffect(() => {
+    try {
+      Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
+
+      // Configure RevenueCat based on the platform
+      if (Platform.OS === 'ios') {
+        Purchases.configure({
+          apiKey: REVENUE_CAT_API_IOS,
+        });
+      } else if (Platform.OS === 'android') {
+        Purchases.configure({
+          apiKey: REVENUE_CAT_API_ANDROID,
+        });
+      }
+
+      Purchases.addCustomerInfoUpdateListener(customerInfo => {
+        // Handle customer info updates
+        console.log('Customer info updated');
+        setCustomerInfo(customerInfo);
+      });
+    } catch (error) {
+      console.error('Error configuring RevenueCat:', error);
+    }
+  }, []);
 
   useEffect(() => {
     if (loaded) void SplashScreen.hideAsync();
