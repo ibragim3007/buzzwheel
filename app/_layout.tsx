@@ -13,7 +13,7 @@ import { Manrope_500Medium } from '@expo-google-fonts/manrope/500Medium';
 import { Manrope_600SemiBold } from '@expo-google-fonts/manrope/600SemiBold';
 import { Manrope_700Bold } from '@expo-google-fonts/manrope/700Bold';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { AppState, Platform, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
 import StackRoute from './stack';
@@ -25,9 +25,13 @@ import { Rubik_700Bold } from '@expo-google-fonts/rubik/700Bold';
 import { Rubik_800ExtraBold } from '@expo-google-fonts/rubik/800ExtraBold';
 import { Rubik_900Black } from '@expo-google-fonts/rubik/900Black';
 
-import Purchases from 'react-native-purchases';
-import { REVENUE_CAT_API_ANDROID, REVENUE_CAT_API_IOS } from '@/src/shared/config/constants/constants';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import Purchases from 'react-native-purchases';
+import { modesRu } from '@/assets/package_mock/modes';
+import { preloadImages } from '@/src/shared/service/preload.service';
+import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
+
+preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();

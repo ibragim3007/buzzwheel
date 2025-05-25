@@ -3,19 +3,17 @@ import { useTheme } from '@/src/shared/hooks/useTheme';
 import SettingsItem from '@/src/shared/ui/elements/SettingsItem';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import { FontAwesome } from '@expo/vector-icons';
-// import * as StoreReview from 'expo-store-review';
+import * as StoreReview from 'expo-store-review';
 import { Linking } from 'react-native';
 
 export default function RateBlock() {
   const colors = useTheme();
 
-  // const { subscriptionStatus } = useSubscription();
-
-  // const handleRatePress = async () => {
-  //   if (await StoreReview.isAvailableAsync()) {
-  //     StoreReview.requestReview();
-  //   }
-  // };
+  const handleRatePress = async () => {
+    if (await StoreReview.isAvailableAsync()) {
+      StoreReview.requestReview();
+    }
+  };
 
   const handleFeedbackPress = async () => {
     if (await Linking.canOpenURL(APP_STORE_LINK)) {
@@ -32,10 +30,10 @@ export default function RateBlock() {
         prefix={'Your feedback is important for us!'}
       />
       <SettingsItem
-        textColor={colors.background.primary}
+        textColor={colors.text.white}
         color={colors.accent.primary}
-        // onPress={handleRatePress}
-        leftIcon={<FontAwesome name="star" size={24} color={colors.text.black} />}
+        onPress={handleRatePress}
+        leftIcon={<FontAwesome name="star" size={24} color={colors.text.white} />}
         title={'Rate us'}
       />
     </GroupBy>

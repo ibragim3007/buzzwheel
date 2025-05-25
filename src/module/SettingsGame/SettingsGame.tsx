@@ -1,16 +1,14 @@
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { LocalStorage } from '@/src/shared/service/storage.service';
-import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import Paper from '@/src/shared/ui/layout/Paper';
-import { formatBytes } from '@/src/shared/utils/formatBytes';
 import { BottomSheetScrollView, BottomSheetView } from '@gorhom/bottom-sheet';
 import { useEffect, useState } from 'react';
 import LegalBlock from './Blocks/LegalBlock';
-import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import RateBlock from './Blocks/RateBlock';
+import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import VibrationToggle from './VibrationToggle/VibrationToggle';
 
 export default function SettingsGame() {
@@ -49,7 +47,7 @@ export default function SettingsGame() {
           {/* <GroupBy title={'Выбор темы'}>
             <ThemePicker />
           </GroupBy> */}
-          {__DEV__ && (
+          {/* {__DEV__ && (
             <GroupBy title="Dev">
               <Grid align="flex-start">
                 <Button
@@ -58,7 +56,7 @@ export default function SettingsGame() {
                 />
               </Grid>
             </GroupBy>
-          )}
+          )} */}
         </Grid>
       </BottomSheetScrollView>
     </BottomSheetView>
