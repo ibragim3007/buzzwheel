@@ -1,6 +1,7 @@
 import { usePackage } from '@/src/entities/Package/usePackage';
 import Packages from '@/src/module/Packages/Packages';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 import { animationEngine } from '@/src/shared/service/animation.service';
 import Button from '@/src/shared/ui/buttons/Button';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
@@ -16,7 +17,9 @@ export default function PackagePage() {
   const colors = useTheme();
   const { pickedPackages } = usePackage();
   const { navigate } = useRouter();
+  const { vibrate } = useVibration();
   const onPressPlay = () => {
+    vibrate();
     navigate('/screens/gameModeScreen');
   };
 

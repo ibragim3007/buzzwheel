@@ -5,6 +5,10 @@ export function useVibration() {
     void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
   };
 
+  const vibrateError = () => {
+    void Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+  };
+
   const vibrateMedium = () => {
     void Haptics.notificationAsync();
   };
@@ -13,5 +17,5 @@ export function useVibration() {
     void Haptics.selectionAsync();
   };
 
-  return { vibrate, vibrateSelection, vibrateMedium };
+  return { vibrate, vibrateSelection, vibrateMedium, vibrateError };
 }

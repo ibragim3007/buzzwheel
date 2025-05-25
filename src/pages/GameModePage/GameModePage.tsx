@@ -14,7 +14,7 @@ import { useVibration } from '@/src/shared/hooks/useVibration';
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
   const { navigate } = useRouter();
-  const { vibrateSelection } = useVibration();
+  const { vibrateSelection, vibrate } = useVibration();
 
   const handleModeSelect = (selectedMode: ModeType) => {
     vibrateSelection();
@@ -22,6 +22,7 @@ export default function GameModePage() {
   };
 
   const onPressStartGame = () => {
+    vibrate();
     navigate('/screens/game');
   };
 

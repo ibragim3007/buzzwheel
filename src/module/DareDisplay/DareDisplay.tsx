@@ -17,6 +17,7 @@ import InGameButton from './ui/InGameButton';
 import { Entypo } from '@expo/vector-icons';
 import Button from '@/src/shared/ui/buttons/Button';
 import { fontsWeightsSecondary, fontWeightSecondary } from '@/src/shared/styles/typography/typography';
+import { useVibration } from '@/src/shared/hooks/useVibration';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -28,6 +29,7 @@ interface DareDisplayProps {
 export default function DareDisplay({ dare, currentTurn, players, hideDare }: DareDisplayProps) {
   const ref = useRef<View | null>(null);
   const [heightBlock, setHeightBlock] = useState(300);
+  const { vibrate } = useVibration();
 
   const colors = useTheme();
   const { currentPackage, mode } = useRouletteGame();
@@ -38,6 +40,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   };
 
   const onPressDrunk = () => {
+    vibrate();
     Alert.alert('Drunk Dare', 'Are you sure you want to take this dare?', [
       {
         text: `Drunk ${dare.alcohol} times`,
@@ -56,6 +59,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   };
 
   const onPressDry = () => {
+    vibrate();
     hideDare(false);
   };
 

@@ -20,7 +20,7 @@ export default function AddPlayers() {
   const colors = useTheme();
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
-  const { vibrate, vibrateSelection } = useVibration();
+  const { vibrate, vibrateSelection, vibrateError } = useVibration();
 
   const isEnoughPlayers = players.length >= 2;
 
@@ -40,11 +40,13 @@ export default function AddPlayers() {
   };
 
   const onPressStart = () => {
-    console.log('first');
     if (!isEnoughPlayers) {
+      vibrateError();
       Inform.error('', { text1: 'Need at least 2 players', position: 'bottom', type: 'error' });
       return;
     }
+
+    vibrate();
     navigate('/screens/packages');
   };
 
