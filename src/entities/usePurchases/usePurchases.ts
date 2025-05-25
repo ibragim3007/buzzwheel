@@ -3,6 +3,7 @@ import { create } from 'zustand';
 
 interface State {
   customerInfo?: CustomerInfo;
+  isActiveSubscription?: boolean;
   offering: PurchasesOffering | null;
 }
 
@@ -15,7 +16,8 @@ export const usePurchases = create<State & Actions>(set => {
     try {
       const customerInfo = await Purchases.getCustomerInfo();
       const offerings = await Purchases.getOfferings();
-      set({ customerInfo, offering: offerings.current });
+      const isActiveSubscription = customerInfo.activeSubscriptions.length > 0;
+      set({ customerInfo, offering: offerings.current, isActiveSubscription });
     } catch (e) {
       console.error('Error fetching customer info:', e);
     }
@@ -26,6 +28,7 @@ export const usePurchases = create<State & Actions>(set => {
   return {
     customerInfo: undefined,
     offering: null,
+    isActiveSubscription: false,
 
     setCustomerInfo: (customerInfo: CustomerInfo) => set({ customerInfo }),
   };

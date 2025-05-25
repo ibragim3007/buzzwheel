@@ -1,3 +1,4 @@
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { animationEngine, animationService } from '@/src/shared/service/animation.service';
@@ -9,11 +10,11 @@ import Paper from '@/src/shared/ui/layout/Paper';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Image } from 'expo-image';
+import { navigate } from 'expo-router/build/global-state/routing';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
-
-const blurhash = 'L15;,i?Y0003pgR;Z^xT0HMd-_.S';
 
 interface PackageItemProps {
   pack: Package;
@@ -26,6 +27,17 @@ interface PackageItemProps {
 export default function PackageItem({ pack, picked, amountOfDares, index, onPress }: PackageItemProps) {
   const colors = useTheme();
 
+  const { isActiveSubscription } = usePurchases();
+  const isLocked = !isActiveSubscription && pack.isFree === false;
+
+  const onPressWrapper = () => {
+    if (isLocked) {
+      navigate('/screens/paywall');
+      return;
+    }
+    onPress(pack);
+  };
+
   return (
     <Animated.View
       layout={animationEngine.layoutAnimation}
@@ -33,7 +45,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
       entering={animationService.getAnimationForShowPackageItem(index)}
     >
       <AnimTouchWrapper>
-        <Pressable onPress={() => onPress(pack)}>
+        <Pressable onPress={onPressWrapper}>
           <Paper
             style={{
               backgroundColor: colors.background.secondary,
@@ -51,6 +63,11 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
             paddingVertical={15}
             paddingHorizontal={13}
           >
+            {isLocked && (
+              <Grid style={{ position: 'absolute', top: 15, right: 15 }} align="center" justfity="center">
+                <FontAwesome name="lock" size={24} color={colors.accent.primary} />
+              </Grid>
+            )}
             {picked && <Checked />}
             <Grid flex={1} row gap={15}>
               <Grid

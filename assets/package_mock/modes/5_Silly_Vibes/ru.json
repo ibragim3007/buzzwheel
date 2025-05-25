@@ -4,7 +4,7 @@
   "packageType": "default",
   "description": "Абсурдные и весёлые задания, которые можно выполнять даже в присутствии родителей. Детский сад для взрослых!",
   "imageEncoded": "b581a6f6-beb9-40b6-870b-fda247bf89b9.png",
-  "isFree": true,
+  "isFree": false,
   "dares": [
     {
       "id": 1,
