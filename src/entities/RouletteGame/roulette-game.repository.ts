@@ -3,6 +3,7 @@ import { Dare, DareType, Player } from '@/src/shared/types/globalTypes';
 import { create } from 'zustand';
 import { PackageWithDaresIds, usePackage } from '../Package/usePackage';
 import { useSettings } from '../Settings/settings.repository';
+import { navigate } from 'expo-router/build/global-state/routing';
 
 export type ModeType = 'drink' | 'dry';
 interface State {
@@ -12,6 +13,10 @@ interface State {
   currentPackage: PackageWithDaresIds | null;
   displayDare: boolean;
   mode: ModeType | null;
+  paywallOptions: {
+    showPaywallAfter: number;
+    currentSeries: number;
+  };
 }
 
 interface Actions {
@@ -21,13 +26,17 @@ interface Actions {
   setMode: (mode: ModeType) => void;
 }
 
-export const useRouletteGame = create<State & Actions>(set => ({
+export const useRouletteGame = create<State & Actions>((set, get) => ({
   moves: [],
   currentTurn: null,
   currentDare: null,
   displayDare: false,
   currentPackage: null,
   mode: null,
+  paywallOptions: {
+    showPaywallAfter: getRandomInt(2, 5), // Показывать paywall после 2-5 ходов
+    currentSeries: 0, // Текущая серия для paywall
+  },
 
   showDare: () => {
     set(() => ({ displayDare: true }));
@@ -66,9 +75,28 @@ export const useRouletteGame = create<State & Actions>(set => ({
   },
 
   setTurn: (player: Player, type: DareType) => {
+    /* Реализовать логику показа paywall, на каждый 5-й ход через навигацию */
+    const { showPaywallAfter, currentSeries } = get().paywallOptions;
+    console.log(currentSeries, '/', showPaywallAfter);
+
+    /* Если количество ходов кратно showPaywallAfter, то показываем paywall */
+    if (currentSeries === showPaywallAfter) {
+      setTimeout(() => {
+        navigate('/screens/paywall'); // Показываем paywall
+
+        set({
+          paywallOptions: {
+            currentSeries: 0, // Сбрасываем серию после показа paywall
+            showPaywallAfter: getRandomInt(2, 4), // Генерируем новое значение для показа paywall
+          },
+        });
+      }, 2000); // Задержка в 2 секунды чтобы игрок успел увидеть свой ход
+    }
+
     const isRemoveRepetitions = useSettings.getState().isRemoveRepetitions;
     const availablePackages = usePackage.getState().pickedPackages;
     const randomPackage = availablePackages[getRandomInt(0, availablePackages.length)];
+    const moves = useRouletteGame.getState().moves;
 
     if (!randomPackage) {
       set(() => ({
@@ -81,7 +109,7 @@ export const useRouletteGame = create<State & Actions>(set => ({
     // Фильтруем дачи по типу и удаляем повторы, если это необходимо
     const sortedDaresFromPackage = randomPackage.dares.filter(dare => dare.type === type);
     const sortedDares = isRemoveRepetitions
-      ? sortedDaresFromPackage.filter(dare => !useRouletteGame.getState().moves.some(move => move.dare.id === dare.id))
+      ? sortedDaresFromPackage.filter(dare => !moves.some(move => move.dare.id === dare.id))
       : sortedDaresFromPackage;
 
     // Если нет доступных дач, то добавляем все дачи из пакета
@@ -90,13 +118,14 @@ export const useRouletteGame = create<State & Actions>(set => ({
     // Возможно имеет смысл сделать органичение по игроку/действию  move.player.id === player.id &&
     const randomDare = sortedDares[getRandomInt(0, sortedDares.length)];
 
-    console.log(useRouletteGame.getState().moves.map(a => a.dare.id));
-
     set((state: State) => ({
       currentPackage: randomPackage,
       currentTurn: player,
-
       currentDare: randomDare,
+      paywallOptions: {
+        currentSeries: currentSeries + 1, // Увеличиваем серию после каждого хода
+        showPaywallAfter: state.paywallOptions.showPaywallAfter,
+      },
     }));
   },
 }));
