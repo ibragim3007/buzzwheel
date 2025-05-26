@@ -15,17 +15,20 @@ import Players from './components/Players/Players';
 import UserLimit from './components/Players/UserLimit';
 import ArrowAnimation from '@/assets/lottie/arrow-pointer.json';
 import LottieView from 'lottie-react-native';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import Typography from '@/src/shared/ui/typography/Typography';
 
 export default function AddPlayers() {
   const colors = useTheme();
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
   const { vibrate, vibrateSelection, vibrateError } = useVibration();
-
+  const { isActiveSubscription } = usePurchases();
   const isEnoughPlayers = players.length >= 2;
 
   const onAddNewPlayer = (name: string) => {
-    if (players.length >= MAX_PLAYERS_FOR_FREE) {
+    console.log(isActiveSubscription);
+    if (players.length >= MAX_PLAYERS_FOR_FREE && !isActiveSubscription) {
       Inform.error('', {
         text1: `Limit of ${MAX_PLAYERS_FOR_FREE} players`,
         text2: 'You can increase this in full access',
@@ -52,6 +55,8 @@ export default function AddPlayers() {
 
   const isShowArrow = players.length <= 0;
 
+  const isPlayersGreaterThan0 = players.length > 0;
+
   return (
     <Grid flex={1} justfity="space-around">
       <Grid gap={12}>
@@ -75,7 +80,13 @@ export default function AddPlayers() {
         </ScrollView>
       </Grid>
       <Grid space="lg" marginBottom={20}>
-        <UserLimit currentPlayers={players.length} />
+        {isActiveSubscription ? (
+          <Typography color="disabled" textAlign="center" variant="footnote">
+            {isPlayersGreaterThan0 ? `${players.length} players` : 'Add at least 2 players to begin'}
+          </Typography>
+        ) : (
+          <UserLimit currentPlayers={players.length} />
+        )}
         <Button
           onPress={onPressStart}
           title={'Start Game'}

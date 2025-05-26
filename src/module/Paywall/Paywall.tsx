@@ -1,6 +1,5 @@
 import LoadingAnimation from '@/assets/lottie/loading_animation.json';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import { LINKS } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
@@ -8,8 +7,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { navigate } from 'expo-router/build/global-state/routing';
 import LottieView from 'lottie-react-native';
 import { useEffect, useState } from 'react';
-import { Linking, Pressable } from 'react-native';
-import Purchases from 'react-native-purchases';
+import { Pressable } from 'react-native';
 import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
 import FooterActions from './ui/FooterActions';
 import HeaderLogo from './ui/HeaderLogo';
