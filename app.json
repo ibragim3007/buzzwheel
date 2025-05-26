@@ -71,6 +71,14 @@
               "backgroundColor": "#001413",
               "foregroundImage": "./assets/images/icons_ios/icon-c.png"
             }
+          },
+          {
+            "name": "IconD",
+            "ios": "./assets/images/icons_ios/icon-d.png",
+            "android": {
+              "backgroundColor": "#001413",
+              "foregroundImage": "./assets/images/icons_ios/icon-d.png"
+            }
           }
         ]
       ],

@@ -3,7 +3,7 @@ import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { navigate } from 'expo-router/build/global-state/routing';
-import { Pressable } from 'react-native';
+import { Linking, Pressable } from 'react-native';
 import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
@@ -12,18 +12,14 @@ import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { useEffect, useState } from 'react';
 import LottieView from 'lottie-react-native';
 import LoadingAnimation from '@/assets/lottie/loading_animation.json';
+import { LINKS } from '@/src/shared/config/constants/constants';
+import Purchases from 'react-native-purchases';
 
 export default function Paywall() {
-  const { offering } = usePurchases();
+  const { offering, setCustomerInfo } = usePurchases();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
   const [showCloseIcon, setShowCloseIcon] = useState(false);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowCloseIcon(true);
-  //   }, 4300);
-  // }, []);
 
   useEffect(() => {
     setCurrentProduct(offering?.availablePackages[0]);
@@ -32,6 +28,27 @@ export default function Paywall() {
   const colors = useTheme();
   const goBack = () => {
     navigate('..');
+  };
+
+  const onPressTerms = async () => {
+    if (await Linking.canOpenURL(LINKS.termsOfUse)) {
+      Linking.openURL(LINKS.termsOfUse);
+    }
+  };
+
+  const onPressPrivacy = async () => {
+    if (await Linking.canOpenURL(LINKS.eula)) {
+      Linking.openURL(LINKS.eula);
+    }
+  };
+
+  const restorePurchases = async () => {
+    try {
+      const res = await Purchases.restorePurchases();
+      setCustomerInfo(res);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   if (!currentProduct) {
@@ -84,18 +101,18 @@ export default function Paywall() {
         <PaywallButton product={currentProduct} />
         <Grid space="sm" align="center">
           <Grid align="center" row space="lg">
-            <GridPressable>
+            <GridPressable onPress={onPressTerms}>
               <Typography color="disabled" variant="caption-1">
                 Terms of Use
               </Typography>
             </GridPressable>
             <GridPressable>
-              <Typography color="disabled" variant="footnote">
+              <Typography onPress={restorePurchases} color="disabled" variant="footnote">
                 Restore
               </Typography>
             </GridPressable>
             <GridPressable>
-              <Typography color="disabled" variant="caption-1">
+              <Typography onPress={onPressPrivacy} color="disabled" variant="caption-1">
                 Privacy & Policy
               </Typography>
             </GridPressable>

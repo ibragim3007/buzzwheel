@@ -88,6 +88,12 @@ export const fontWeight = {
   bold: 'Manrope_700Bold',
 };
 
+export const fontWeightThird = {
+  light: 'PassionOne_400Regular',
+  regular: 'PassionOne_700Bold',
+  medium: 'PassionOne_900Black',
+};
+
 export const fontWeightSecondary = {
   light: 'Rubik_300Light',
   regular: 'Rubik_400Regular',

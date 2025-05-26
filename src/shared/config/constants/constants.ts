@@ -11,8 +11,10 @@ export const REVENUE_CAT_API_ANDROID = '';
 export const APP_STORE_LINK = 'https://apps.apple.com/app/apple-store/6746181307?action=write-review';
 
 export const LINKS = {
-  privacyPolicy: '',
-  termsOfUse: '',
+  eula: 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula',
+  privacyPolicy: 'https://buzzwheel-landing.vercel.app/privacy',
+  termsOfUse: 'https://buzzwheel-landing.vercel.app/terms',
+  support: 'https://buzzwheel-landing.vercel.app/',
 };
 
 export const groupsOfColors: [string, string, string][] = [

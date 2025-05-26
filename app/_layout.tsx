@@ -25,6 +25,10 @@ import { Rubik_700Bold } from '@expo-google-fonts/rubik/700Bold';
 import { Rubik_800ExtraBold } from '@expo-google-fonts/rubik/800ExtraBold';
 import { Rubik_900Black } from '@expo-google-fonts/rubik/900Black';
 
+import { PassionOne_400Regular } from '@expo-google-fonts/passion-one/400Regular';
+import { PassionOne_700Bold } from '@expo-google-fonts/passion-one/700Bold';
+import { PassionOne_900Black } from '@expo-google-fonts/passion-one/900Black';
+
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import Purchases from 'react-native-purchases';
 import { modesRu } from '@/assets/package_mock/modes';
@@ -50,6 +54,10 @@ export default function RootLayout() {
     Rubik_700Bold,
     Rubik_800ExtraBold,
     Rubik_900Black,
+
+    PassionOne_400Regular,
+    PassionOne_700Bold,
+    PassionOne_900Black,
   });
 
   const { setCustomerInfo } = usePurchases();

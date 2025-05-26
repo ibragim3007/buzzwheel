@@ -20,6 +20,7 @@
     "@eslint/compat": "^1.2.7",
     "@expo-google-fonts/manrope": "^0.3.0",
     "@expo-google-fonts/open-sans": "^0.2.3",
+    "@expo-google-fonts/passion-one": "^0.3.0",
     "@expo-google-fonts/rubik": "^0.3.0",
     "@expo/vector-icons": "^14.1.0",
     "@gorhom/bottom-sheet": "^5.1.1",
