@@ -1,9 +1,12 @@
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from 'expo-router';
+import { navigate } from 'expo-router/build/global-state/routing';
 import { useEffect, useRef } from 'react';
 import { Animated, Easing } from 'react-native';
 import Purchases, { PurchasesPackage } from 'react-native-purchases';
@@ -14,8 +17,10 @@ interface PaywallButtonProps {
 
 export default function PaywallButton({ product }: PaywallButtonProps) {
   const colors = useTheme();
+  const { setCustomerInfo } = usePurchases();
   const scaleAnim = useRef(new Animated.Value(1)).current;
   const { vibrateMedium } = useVibration();
+  const navigation = useNavigation();
 
   useEffect(() => {
     const pulse = () => {
@@ -45,7 +50,15 @@ export default function PaywallButton({ product }: PaywallButtonProps) {
         throw new Error('No offering identifier found');
       }
 
-      await Purchases.purchasePackage(product);
+      const res = await Purchases.purchasePackage(product);
+      if (res.customerInfo) {
+        setCustomerInfo(res.customerInfo);
+        if (navigation.canGoBack()) {
+          navigation.goBack();
+        } else {
+          navigate('/');
+        }
+      }
     } catch (e) {
       console.log(e);
     }

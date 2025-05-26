@@ -1,22 +1,23 @@
+import LoadingAnimation from '@/assets/lottie/loading_animation.json';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import { LINKS } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
-import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
+import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { navigate } from 'expo-router/build/global-state/routing';
+import LottieView from 'lottie-react-native';
+import { useEffect, useState } from 'react';
 import { Linking, Pressable } from 'react-native';
+import Purchases from 'react-native-purchases';
+import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
+import FooterActions from './ui/FooterActions';
 import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
-import { getWeeklyPurchaseCount } from './helpers/generatePeopleNumber';
-import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import { useEffect, useState } from 'react';
-import LottieView from 'lottie-react-native';
-import LoadingAnimation from '@/assets/lottie/loading_animation.json';
-import { LINKS } from '@/src/shared/config/constants/constants';
-import Purchases from 'react-native-purchases';
 
 export default function Paywall() {
-  const { offering, setCustomerInfo } = usePurchases();
+  const { offering } = usePurchases();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
   const [showCloseIcon, setShowCloseIcon] = useState(false);
@@ -28,27 +29,6 @@ export default function Paywall() {
   const colors = useTheme();
   const goBack = () => {
     navigate('..');
-  };
-
-  const onPressTerms = async () => {
-    if (await Linking.canOpenURL(LINKS.termsOfUse)) {
-      Linking.openURL(LINKS.termsOfUse);
-    }
-  };
-
-  const onPressPrivacy = async () => {
-    if (await Linking.canOpenURL(LINKS.eula)) {
-      Linking.openURL(LINKS.eula);
-    }
-  };
-
-  const restorePurchases = async () => {
-    try {
-      const res = await Purchases.restorePurchases();
-      setCustomerInfo(res);
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   if (!currentProduct) {
@@ -100,23 +80,7 @@ export default function Paywall() {
         <Typography weight="light">3-Day Trial, then {currentProduct.product.priceString} per week</Typography>
         <PaywallButton product={currentProduct} />
         <Grid space="sm" align="center">
-          <Grid align="center" row space="lg">
-            <GridPressable onPress={onPressTerms}>
-              <Typography color="disabled" variant="caption-1">
-                Terms of Use
-              </Typography>
-            </GridPressable>
-            <GridPressable>
-              <Typography onPress={restorePurchases} color="disabled" variant="footnote">
-                Restore
-              </Typography>
-            </GridPressable>
-            <GridPressable>
-              <Typography onPress={onPressPrivacy} color="disabled" variant="caption-1">
-                Privacy & Policy
-              </Typography>
-            </GridPressable>
-          </Grid>
+          <FooterActions />
         </Grid>
       </Grid>
     </Grid>
