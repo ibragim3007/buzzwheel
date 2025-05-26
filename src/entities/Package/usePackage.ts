@@ -5,22 +5,28 @@ import { Dare, Package } from '@/src/shared/types/globalTypes';
 
 export interface PackageWithDaresIds extends Package {
   dares: (Dare & { id: number })[];
+  weight: number;
 }
 
 interface State {
   data: PackageWithDaresIds[];
   pickedPackages: PackageWithDaresIds[];
 }
+const INITIAL_WEIGHT = 1;
+const MIN_WEIGHT = 0.001;
 
 interface Actions {
   addPackage: (mode: PackageWithDaresIds) => void;
   removePackage: (mode: PackageWithDaresIds) => void;
   togglePackage: (mode: PackageWithDaresIds) => void;
+
+  decayWeight: (id: number) => void;
+  resetWeight: () => void;
 }
 
 export const usePackage = create<State & Actions>(set => {
   // Initialize the state with packages and their dares
-  const packagesWithDaresIds = Object.values(modes.ru).map((mode, index) => {
+  const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modes.ru).map((mode, index) => {
     const daresWithIds = mode.dares.map((dare, dareIndex) => ({
       ...dare,
       id: index * 100 + dareIndex,
@@ -30,6 +36,7 @@ export const usePackage = create<State & Actions>(set => {
     // Assign a unique ID to each dare based on its index
     return {
       ...mode,
+      weight: INITIAL_WEIGHT,
       packageType: mode.packageType as Package['packageType'],
       dares: daresWithIds,
     };
@@ -39,16 +46,41 @@ export const usePackage = create<State & Actions>(set => {
   return {
     data: packagesWithDaresIds,
     pickedPackages: [packagesWithDaresIds[0]],
+
     addPackage: mode => set(state => ({ pickedPackages: [...state.pickedPackages, mode] })),
+
     removePackage: mode =>
       set(state => ({
         pickedPackages: state.pickedPackages.filter(m => m.id !== mode.id),
       })),
+
     togglePackage: mode =>
       set(state => ({
         pickedPackages: state.pickedPackages.some(m => m.id === mode.id)
           ? state.pickedPackages.filter(m => m.id !== mode.id)
           : [...state.pickedPackages, mode],
       })),
+
+    resetWeight: () =>
+      set(state => ({
+        data: state.data.map(pkg => ({
+          ...pkg,
+          dares: pkg.dares.map(dare => ({
+            ...dare,
+          })),
+          weight: INITIAL_WEIGHT, // Reset package weight to initial value
+        })),
+      })),
+
+    decayWeight: id =>
+      set(state => {
+        const halve = (arr: PackageWithDaresIds[]) =>
+          arr.map(p => (p.id === id ? { ...p, weight: Math.max(MIN_WEIGHT, p.weight * 0.5) } : p));
+
+        return {
+          data: halve(state.data),
+          pickedPackages: halve(state.pickedPackages),
+        };
+      }),
   };
 });

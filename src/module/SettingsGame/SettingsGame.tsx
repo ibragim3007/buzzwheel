@@ -10,9 +10,26 @@ import LegalBlock from './Blocks/LegalBlock';
 import RateBlock from './Blocks/RateBlock';
 import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import VibrationToggle from './VibrationToggle/VibrationToggle';
+import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { Button } from 'react-native';
+import { formatBytes } from '@/src/shared/utils/formatBytes';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import * as Clipboard from 'expo-clipboard';
 
 export default function SettingsGame() {
   const colors = useTheme();
+  const { customerInfo } = usePurchases();
+  const { players } = usePlayerStore();
+  const isDev = players[0].name === 'developer7';
+
+  const copyToken = async () => {
+    if (customerInfo?.originalAppUserId) {
+      await Clipboard.setStringAsync(customerInfo?.originalAppUserId || 'undefiend');
+      alert('Token copied to clipboard');
+    } else {
+      alert('No token available');
+    }
+  };
 
   const [size, setSize] = useState(0);
   useEffect(() => {
@@ -47,16 +64,17 @@ export default function SettingsGame() {
           {/* <GroupBy title={'Выбор темы'}>
             <ThemePicker />
           </GroupBy> */}
-          {/* {__DEV__ && (
+          {isDev && (
             <GroupBy title="Dev">
               <Grid align="flex-start">
+                <Button onPress={copyToken} title="Copy token" />
                 <Button
                   onPress={() => void LocalStorage.clearStorage('key')}
                   title={`Clear cache (${formatBytes(size)})`}
                 />
               </Grid>
             </GroupBy>
-          )} */}
+          )}
         </Grid>
       </BottomSheetScrollView>
     </BottomSheetView>

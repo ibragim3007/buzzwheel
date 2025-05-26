@@ -4,6 +4,8 @@ import { create } from 'zustand';
 import { PackageWithDaresIds, usePackage } from '../Package/usePackage';
 import { useSettings } from '../Settings/settings.repository';
 import { navigate } from 'expo-router/build/global-state/routing';
+import { pickByWeight } from '@/src/shared/utils/pickByWeight';
+import { usePurchases } from '../usePurchases/usePurchases';
 
 export type ModeType = 'drink' | 'dry';
 interface State {
@@ -74,13 +76,26 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
     set(() => ({ mode }));
   },
 
+  /*
+
+    Нужно чтобы пакеты выпадали с определенными вероятностями 
+    в зависимости от того сколько раз он уже выпал и сколько в нем действий осталось.
+
+    Например, если пакет выпал 3 раза, то вероятность его выпадения должна быть ниже
+    чем у пакета, который выпал 1 раз.
+
+    Например можно выставить всем пакетам вероятность 1. А затем каждый раз, когда пакет выпадает,
+    уменьшать вероятность его выпадения на 1 / 0.1 * dares.length
+
+  */
+
   setTurn: (player: Player, type: DareType) => {
     /* Реализовать логику показа paywall, на каждый 5-й ход через навигацию */
     const { showPaywallAfter, currentSeries } = get().paywallOptions;
-    console.log(currentSeries, '/', showPaywallAfter);
+    const { isActiveSubscription } = usePurchases.getState();
 
     /* Если количество ходов кратно showPaywallAfter, то показываем paywall */
-    if (currentSeries === showPaywallAfter) {
+    if (currentSeries === showPaywallAfter && !isActiveSubscription) {
       setTimeout(() => {
         navigate('/screens/paywall'); // Показываем paywall
 
@@ -93,9 +108,26 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
       }, 2000); // Задержка в 2 секунды чтобы игрок успел увидеть свой ход
     }
 
+    const { pickedPackages, decayWeight, resetWeight } = usePackage.getState();
     const isRemoveRepetitions = useSettings.getState().isRemoveRepetitions;
-    const availablePackages = usePackage.getState().pickedPackages;
-    const randomPackage = availablePackages[getRandomInt(0, availablePackages.length)];
+    // const randomPackage = availablePackages[getRandomInt(0, availablePackages.length)];
+    const randomPackage = pickByWeight(pickedPackages);
+
+    if (!randomPackage) {
+      resetWeight();
+      return;
+    }
+
+    console.log(pickedPackages.map(pkg => `${pkg.name} (weight: ${pkg.weight})\n`));
+
+    decayWeight(randomPackage.id); // обязательно после удачного хода
+
+    if (!randomPackage) {
+      set({ currentTurn: null, currentDare: null });
+      resetWeight;
+      return;
+    }
+
     const moves = useRouletteGame.getState().moves;
 
     if (!randomPackage) {
@@ -106,7 +138,7 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
       return;
     }
 
-    // Фильтруем дачи по типу и удаляем повторы, если это необходимо
+    // Фильтруем пакеты по типу
     const sortedDaresFromPackage = randomPackage.dares.filter(dare => dare.type === type);
     const sortedDares = isRemoveRepetitions
       ? sortedDaresFromPackage.filter(dare => !moves.some(move => move.dare.id === dare.id))

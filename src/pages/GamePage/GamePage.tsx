@@ -1,3 +1,4 @@
+import { usePackage } from '@/src/entities/Package/usePackage';
 import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { SegmentType } from '@/src/entities/Roulette/types';
 import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
@@ -12,9 +13,9 @@ import { animationService } from '@/src/shared/service/animation.service';
 import Grid from '@/src/shared/ui/grid/Grid';
 import SafeWrapper from '@/src/shared/ui/layout/SafeWrapper';
 import Header from '@/src/widget/Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View } from 'react-native';
-import Animated, { SlideInRight, SlideOutLeft } from 'react-native-reanimated';
+import Animated, { SlideOutLeft } from 'react-native-reanimated';
 
 export default function GamePage() {
   const colors = useTheme();
@@ -23,6 +24,15 @@ export default function GamePage() {
 
   const { players } = usePlayerStore();
   const { currentTurn, currentDare, displayDare, setTurn, showDare, hideDare } = useRouletteGame();
+
+  const { resetWeight } = usePackage();
+
+  useEffect(() => {
+    return () => {
+      resetWeight();
+      console.log('resete');
+    };
+  }, []);
 
   const { rouletteColor } = useSettings();
 
