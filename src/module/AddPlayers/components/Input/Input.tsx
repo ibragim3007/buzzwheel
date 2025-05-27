@@ -4,6 +4,7 @@ import { useVibration } from '@/src/shared/hooks/useVibration';
 import { fontWeight } from '@/src/shared/styles/typography/typography';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
+import { normalizedSize } from '@/src/shared/utils/size';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { useRef, useState } from 'react';
 import { TextInput } from 'react-native';
@@ -92,7 +93,7 @@ export default function Input({ onCall }: InputProps) {
             flex: 1,
             // borderTopLeftRadius: 50,
             // borderBottomLeftRadius: 50,
-            borderRadius: 50,
+            borderRadius: colors.styles.borderRadiusDefault,
             fontSize: 18,
             color: isError ? colors.text.error : colors.text.primary,
             fontFamily: fontWeight.medium,
@@ -103,7 +104,7 @@ export default function Input({ onCall }: InputProps) {
           style={{
             // borderTopLeftRadius: 0,
             // borderBottomLeftRadius: 0,
-            paddingLeft: 15,
+            paddingLeft: normalizedSize(15),
             backgroundColor: currentInputColor,
           }}
           startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}

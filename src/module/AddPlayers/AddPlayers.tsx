@@ -67,12 +67,12 @@ export default function AddPlayers() {
         <ScrollView
           scrollIndicatorInsets={{ top: 40, bottom: 40 }}
           indicatorStyle="black"
-          contentContainerStyle={{ paddingVertical: 15 }}
+          contentContainerStyle={{ paddingVertical: normalizedSize(15) }}
           style={{
             height: normalizedSize(360),
             backgroundColor: colors.background.secondary,
-            paddingHorizontal: 10,
-            borderRadius: 40,
+            paddingHorizontal: normalizedSize(15),
+            borderRadius: colors.styles.borderRadiusDefault + 15,
           }}
         >
           {players.length === 0 && <Placeholder />}

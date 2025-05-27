@@ -35,7 +35,7 @@ export default function PlayerItem({ player }: PlayerItemProps) {
           paddingVertical={18}
           style={{
             backgroundColor: colors.background.primary,
-            borderRadius: 30,
+            borderRadius: colors.styles.borderRadiusDefault,
           }}
         >
           <Grid justfity="space-between" row>

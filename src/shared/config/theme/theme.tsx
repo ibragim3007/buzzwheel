@@ -1,3 +1,5 @@
+import { normalizedSize } from '../../utils/size';
+
 export type PalitraInterface = {
   id: number;
   isFree: boolean;
@@ -24,6 +26,10 @@ export type PalitraInterface = {
     quaternary: string;
     error: string;
     success: string;
+  };
+  styles: {
+    borderRadiusDefault: number;
+    borderRadiusSmall: number;
   };
 };
 
@@ -54,6 +60,10 @@ export const customTheme: PalitraInterface = {
     error: '#df3a3a',
     success: '#00FF00',
   },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
+  },
 };
 
 export const beachTheme: PalitraInterface = {
@@ -82,6 +92,10 @@ export const beachTheme: PalitraInterface = {
     quaternary: '#FFE4B5', // светло-песочный
     error: '#FF4500',
     success: '#32CD32',
+  },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
   },
 };
 
@@ -112,6 +126,10 @@ export const christmasTheme: PalitraInterface = {
     error: '#D32F2F',
     success: '#388E3C',
   },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
+  },
 };
 
 export const loveTheme: PalitraInterface = {
@@ -140,6 +158,10 @@ export const loveTheme: PalitraInterface = {
     quaternary: '#FFE4E1', // розовато-белый
     error: '#FF0000',
     success: '#00FF00',
+  },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
   },
 };
 
@@ -170,6 +192,10 @@ export const autumnTheme: PalitraInterface = {
     error: '#B22222',
     success: '#228B22',
   },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
+  },
 };
 
 export const summerTheme: PalitraInterface = {
@@ -198,5 +224,9 @@ export const summerTheme: PalitraInterface = {
     quaternary: '#B0E0E6', // светло-голубой
     error: '#FF6347',
     success: '#32CD32',
+  },
+  styles: {
+    borderRadiusDefault: normalizedSize(20),
+    borderRadiusSmall: normalizedSize(10),
   },
 };

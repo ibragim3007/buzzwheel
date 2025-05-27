@@ -49,7 +49,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
           <Paper
             style={{
               backgroundColor: colors.background.secondary,
-              borderRadius: 25,
+              borderRadius: colors.styles.borderRadiusDefault + 5,
               borderWidth: 4,
               borderColor: picked ? colors.accent.primary : 'transparent',
               shadowColor: '#000',
@@ -70,25 +70,17 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
             )}
             {picked && <Checked />}
             <Grid flex={1} row gap={15}>
-              <Grid
+              <Image
                 style={{
-                  shadowColor: '#000',
-                  shadowOpacity: picked ? 0.4 : 0,
-                  shadowRadius: 20,
+                  height: normalizedSize(70),
+                  width: normalizedSize(70),
                 }}
-                align="center"
-              >
-                <Image
-                  style={{
-                    height: normalizedSize(70),
-                    width: normalizedSize(70),
-                  }}
-                  contentFit="contain"
-                  source={getActualImageLink(pack.imageEncoded)}
-                  transition={300}
-                  // placeholder={{ blurhash }}
-                />
-              </Grid>
+                contentFit="contain"
+                source={getActualImageLink(pack.imageEncoded)}
+                transition={300}
+                // placeholder={{ blurhash }}
+              />
+
               <Grid space="sm" flex={1}>
                 <Grid marginRight={20}>
                   <Typography variant="title-3" weight="bold">

@@ -30,7 +30,6 @@ export default function GamePage() {
   useEffect(() => {
     return () => {
       resetWeight();
-      console.log('resete');
     };
   }, []);
 

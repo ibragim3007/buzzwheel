@@ -4,6 +4,7 @@ import AnimTouchWrapper from '@/src/shared/ui/animations/AnimTouchWrapper';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { normalizedSize } from '@/src/shared/utils/size';
 
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -50,8 +51,8 @@ export default function GameModeItem({ title, description, image, value, current
           end={{ x: 1, y: 1 }}
           colors={gradientColors}
           style={{
-            borderRadius: 20,
-            padding: 3,
+            borderRadius: colors.styles.borderRadiusDefault + normalizedSize(3),
+            padding: normalizedSize(3),
           }}
         >
           <Grid
@@ -59,7 +60,7 @@ export default function GameModeItem({ title, description, image, value, current
             align="center"
             paddingVertical={20}
             color={isPicked ? colors.background.secondary : colors.background.primary}
-            style={{ borderRadius: 17 }}
+            style={{ borderRadius: colors.styles.borderRadiusDefault }}
             space="md"
             paddingHorizontal={6}
           >

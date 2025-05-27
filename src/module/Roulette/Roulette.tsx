@@ -1,8 +1,10 @@
 import { RouletteOptions, SegmentType } from '@/src/entities/Roulette/types';
+import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { Player } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { calcWidth } from '@/src/shared/utils/calcWidth';
 import { normalizedSize } from '@/src/shared/utils/size';
 import React, { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
@@ -117,27 +119,36 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
           <CenterCircle options={options} />
         </Animated.View>
       )}
-      <Button
-        title="Spin the Wheel"
-        onPress={spinWheel}
-        disabled={isSpinning}
-        textStyle={{
-          color: 'disabled',
-          variant: 'title-3',
-        }}
-        style={[
-          {
-            opacity: isSpinning || currentTurn ? 0 : 1,
-            top: normalizedSize(120),
-            width: normalizedSize(260),
-            // paddingVertical: normalizedSize(13),
 
-            shadowColor: '#ec9c2e',
-            shadowOpacity: 0.15,
-            shadowRadius: 15,
-          },
-        ]}
-      />
+      <Grid
+        style={{
+          width: calcWidth(),
+          alignSelf: 'center',
+        }}
+        width="100%"
+        paddingHorizontal={HORIZONTAL_PADDINGS * 2}
+      >
+        <Button
+          title="Spin the Wheel"
+          onPress={spinWheel}
+          disabled={isSpinning}
+          textStyle={{
+            color: 'disabled',
+            variant: 'title-3',
+          }}
+          style={[
+            {
+              opacity: isSpinning || currentTurn ? 0 : 1,
+              top: normalizedSize(120),
+              width: '100%',
+              // paddingVertical: normalizedSize(13),
+              shadowColor: '#ec9c2e',
+              shadowOpacity: 0.15,
+              shadowRadius: 15,
+            },
+          ]}
+        />
+      </Grid>
     </View>
   );
 };
@@ -148,19 +159,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    // backgroundColor: "#5e3677",
+
+    // backgroundColor: '#5e3677',
   },
   wheelContainer: {
     transform: [{ translateY: 100 }],
   },
-
   centerOverlay: {
     position: 'absolute',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
 });
 export default Roulette;

@@ -31,7 +31,7 @@ export default function Button({ title, startIcon, textStyle, disabled, ...props
       backgroundColor: disabled ? colors.background.secondary : currentColorButton,
       paddingHorizontal: 25,
       paddingVertical: 17,
-      borderRadius: 30,
+      borderRadius: colors.styles.borderRadiusDefault,
       borderWidth: 1,
       borderColor: disabled ? colors.background.secondary : currentColorButton,
     },
