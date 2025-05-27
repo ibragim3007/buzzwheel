@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icons_android/icon-filled.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ibragimlol.BuzzWheel"
     },
     "web": {
       "bundler": "metro",

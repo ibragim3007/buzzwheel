@@ -66,3 +66,4 @@ yarn-error.*
 
 *.app
 *.ipa
+*.aab

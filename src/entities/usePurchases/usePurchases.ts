@@ -24,6 +24,7 @@ export const usePurchases = create<State & Actions>(set => {
           apiKey: REVENUE_CAT_API_IOS,
         });
       } else if (Platform.OS === 'android') {
+        console.log(REVENUE_CAT_API_ANDROID);
         Purchases.configure({
           apiKey: REVENUE_CAT_API_ANDROID,
         });

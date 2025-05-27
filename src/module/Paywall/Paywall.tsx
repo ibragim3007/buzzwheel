@@ -13,6 +13,7 @@ import FooterActions from './ui/FooterActions';
 import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
+import Button from '@/src/shared/ui/buttons/Button';
 
 export default function Paywall() {
   const { offering } = usePurchases();
@@ -35,6 +36,7 @@ export default function Paywall() {
         <Typography variant="title-4" weight="bold">
           Ошибка загрузки продукта
         </Typography>
+        <Button title="Go back" onPress={goBack} />
       </Grid>
     );
   }
