@@ -1,5 +1,3 @@
-import { normalizedSize } from '../../utils/size';
-
 export type PalitraInterface = {
   id: number;
   isFree: boolean;
@@ -61,8 +59,8 @@ export const customTheme: PalitraInterface = {
     success: '#00FF00',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };
 
@@ -94,8 +92,8 @@ export const beachTheme: PalitraInterface = {
     success: '#32CD32',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };
 
@@ -127,8 +125,8 @@ export const christmasTheme: PalitraInterface = {
     success: '#388E3C',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };
 
@@ -160,8 +158,8 @@ export const loveTheme: PalitraInterface = {
     success: '#00FF00',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };
 
@@ -193,8 +191,8 @@ export const autumnTheme: PalitraInterface = {
     success: '#228B22',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };
 
@@ -226,7 +224,7 @@ export const summerTheme: PalitraInterface = {
     success: '#32CD32',
   },
   styles: {
-    borderRadiusDefault: normalizedSize(20),
-    borderRadiusSmall: normalizedSize(10),
+    borderRadiusDefault: 20,
+    borderRadiusSmall: 10,
   },
 };

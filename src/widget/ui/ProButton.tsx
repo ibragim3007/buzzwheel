@@ -19,7 +19,7 @@ export default function ProButton() {
         borderWidth: 1,
         // backgroundColor: colors.accent.primary,
         borderColor: colors.accent.primary,
-        borderRadius: 50,
+        borderRadius: colors.styles.borderRadiusDefault / 1.5,
       }}
     >
       <Typography weight="bold" style={{ color: colors.accent.primary }}>
