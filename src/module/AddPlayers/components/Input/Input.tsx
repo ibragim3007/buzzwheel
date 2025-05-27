@@ -105,7 +105,8 @@ export default function Input({ onCall }: InputProps) {
             // borderTopLeftRadius: 0,
             // borderBottomLeftRadius: 0,
             paddingLeft: normalizedSize(15),
-            backgroundColor: currentInputColor,
+
+            // backgroundColor: currentInputColor,
           }}
           startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
           onPress={onPress}

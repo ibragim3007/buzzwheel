@@ -31,8 +31,8 @@ export default function PlayerItem({ player }: PlayerItemProps) {
     <AnimatedWrapper>
       <Animated.View entering={CustomAnimations.enterItemShow(0)} exiting={CustomAnimations.exitItemShow(0)}>
         <Paper
-          paddingHorizontal={20}
-          paddingVertical={18}
+          paddingHorizontal={25}
+          paddingVertical={20}
           style={{
             backgroundColor: colors.background.primary,
             borderRadius: colors.styles.borderRadiusDefault,

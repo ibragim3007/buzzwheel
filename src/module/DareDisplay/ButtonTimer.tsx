@@ -103,6 +103,7 @@ export default function ButtonTimer({ dare, handleDone }: ButtonTimerProps) {
           )}
 
           <Button
+            gradientColors={['transparent', 'transparent']}
             style={{ width: '50%' }}
             onPress={toggleTimer}
             startIcon={

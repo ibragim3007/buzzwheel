@@ -124,6 +124,8 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         style={{
           width: calcWidth(),
           alignSelf: 'center',
+          top: normalizedSize(120),
+          opacity: isSpinning || currentTurn ? 0 : 1,
         }}
         width="100%"
         paddingHorizontal={HORIZONTAL_PADDINGS * 2}
@@ -134,17 +136,11 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
           disabled={isSpinning}
           textStyle={{
             color: 'disabled',
-            variant: 'title-3',
+            variant: 'title-2',
           }}
           style={[
             {
-              opacity: isSpinning || currentTurn ? 0 : 1,
-              top: normalizedSize(120),
               width: '100%',
-              // paddingVertical: normalizedSize(13),
-              shadowColor: '#ec9c2e',
-              shadowOpacity: 0.15,
-              shadowRadius: 15,
             },
           ]}
         />

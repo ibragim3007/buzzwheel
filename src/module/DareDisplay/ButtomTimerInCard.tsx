@@ -76,6 +76,10 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
     setTimeLeft(dare.time);
   };
 
+  const buttonGradientColors: [string, string] = isTimerRunning
+    ? [colors.accent.secondary, colors.accent.secondary]
+    : ['transparent', 'transparent'];
+
   return (
     <Grid row align="center" space="md" justfity="center">
       {timerWasStarted && (
@@ -87,14 +91,15 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
       )}
 
       <Button
+        gradientColors={buttonGradientColors}
         style={{
           // width: "100%",
           borderColor: colors.accent.secondary,
           borderWidth: 2,
           paddingHorizontal: 20,
           paddingVertical: 18,
-          borderRadius: 100,
-          backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
+          borderRadius: colors.styles.borderRadiusDefault + 3,
+          // backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
         }}
         textStyle={{
           style: {
