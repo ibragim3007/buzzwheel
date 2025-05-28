@@ -11,9 +11,11 @@ import Paper from '@/src/shared/ui/layout/Paper';
 import { useState } from 'react';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { useTranslation } from 'react-i18next';
 
 export default function LanguagePicker() {
   const colors = useTheme();
+  const { t } = useTranslation();
   const { lang, setLang } = useLang();
   const [open, setOpen] = useState(false);
   const toggleModal = () => {
@@ -22,6 +24,7 @@ export default function LanguagePicker() {
 
   const onSetLanguage = (code: string) => {
     setLang(code);
+    toggleModal();
   };
 
   const currentLanguage = languages.find(a => a.code === lang);
@@ -32,7 +35,7 @@ export default function LanguagePicker() {
         onPress={toggleModal}
         rightPrefix={currentLanguage?.flag}
         leftIcon={<FontAwesome name="language" size={24} color={colors.text.white} />}
-        title="Language"
+        title={t('settings.language')}
       />
       <Modal transparent onRequestClose={toggleModal} visible={open}>
         <ModalDarkWrap onClose={toggleModal}>
@@ -40,7 +43,7 @@ export default function LanguagePicker() {
             <Paper space="md">
               <Grid width="100%" row justfity="center" align="center">
                 <Typography weight="bold" variant="headline">
-                  Language
+                  {t('settings.language')}
                 </Typography>
               </Grid>
               <GridPressable hitSlop={20} onPress={toggleModal} style={{ position: 'absolute', right: 0, top: -33 }}>

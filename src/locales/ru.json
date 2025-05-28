@@ -1,0 +1,70 @@
+{
+  "homepage": {
+    "need-at-least-players": "Необходимо минимум 2 игрока",
+    "increase-in-full-access": "Лимит можно увеличить в полной версии",
+    "limit_players": "Максимум {{ max_players }} игроков",
+    "add-at-least-players": "Добавьте минимум 2 игроков, чтобы начать",
+    "players-length-players": "{{ amount }} игроков",
+    "start-game": "Начать игру",
+    "input-field-for-player-name": "Имя игрока",
+    "add": "Добавить",
+    "name-is-required": "Имя обязательно",
+    "enter-player-name": "Введите имя игрока",
+    "max-players-reached": "Вы достигли лимита в {{ max_players }} игроков",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} игроков"
+  },
+  "packagePage": {
+    "pick-your-modes": "Выберите режимы!",
+    "continue": "Продолжить",
+    "for-tow-only": "Только для двоих"
+  },
+  "paywall": {
+    "error-to-load-product": "Ошибка загрузки продукта",
+    "day-trial-then": "Пробный период 3 дня, затем {{ price }} в неделю",
+    "open-modes": "Открыть режимы",
+    "vip_status_message": "Уже <bold><accent>{{count}}</accent></bold> пользователей играют со статусом VIP — присоединяйтесь!",
+    "button-text-play-for-free": "Играть бесплатно",
+    "terms": "Условия использования",
+    "restore": "Восстановить покупку",
+    "privacy": "Политика конфиденциальности",
+    "unlock-all-modes": "Открыть все режимы",
+    "cancel-any-time": "Отменить в любой момент",
+    "unforgettable-emotions": "Незабываемые эмоции"
+  },
+  "modePage": {
+    "game-mode": "Игровой режим",
+    "description": "Выберите, как хотите провести вечер",
+    "drink-and-dare": "Выпей и Дерзай",
+    "drink-mode-description": "Промахнулся? Пей до дна!",
+    "dry-mode-title": "Без алкоголя",
+    "dry-mode-description": "Играйте трезво — без алкоголя.",
+    "start-button": "Начать игру"
+  },
+  "gamePage": {
+    "modal-drink-title": "Задание на выпивку",
+    "drink-modal-subtext": "Вы уверены, что хотите выбрать это?",
+    "modal-active-button": "Выпейте {{ number }} раз(а)",
+    "modal-cancel-button": "Отмена",
+    "roulette": {
+      "task-for": "Задание для",
+      "spin-button": "Крутить колесо"
+    },
+    "done-button": "Готово",
+    "drink-button": "Выпить"
+  },
+  "settings": {
+    "token-copied": "Токен скопирован в буфер обмена",
+    "no-token-available": "Токен недоступен",
+    "title": "Настройки",
+    "disable-action-repeats": "Блокировать повтор действий",
+    "vibration": "Вибрация",
+    "write-review": "Написать отзыв",
+    "feedback-subtext": "Нам важно ваше мнение!",
+    "rate-us-title": "Оцените нас",
+    "privacy": "Политика конфиденциальности",
+    "copy-token": "Скопировать токен",
+    "feedback-title": "Обратная связь",
+    "legal": "Правовая информация",
+    "language": "Язык"
+  }
+}

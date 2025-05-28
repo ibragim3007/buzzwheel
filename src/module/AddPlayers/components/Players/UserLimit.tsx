@@ -3,6 +3,7 @@ import { useTheme } from '@/src/shared/hooks/useTheme';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Animated } from 'react-native';
 
 interface UserLimitProps {
@@ -11,6 +12,7 @@ interface UserLimitProps {
 
 export default function UserLimit({ currentPlayers }: UserLimitProps) {
   const colors = useTheme();
+  const { t } = useTranslation();
   const [progress] = useState(new Animated.Value(0));
 
   useEffect(() => {
@@ -29,10 +31,10 @@ export default function UserLimit({ currentPlayers }: UserLimitProps) {
     <Grid space="sm">
       <Typography color="disabled" textAlign="center" variant="footnote">
         {isMaxPlayers
-          ? `You have reached the limit of ${MAX_PLAYERS_FOR_FREE} players`
+          ? t('homepage.max-players-reached', { max_players: MAX_PLAYERS_FOR_FREE })
           : isPlayersGreaterThan0
-            ? `${currentPlayers}/${MAX_PLAYERS_FOR_FREE} players`
-            : 'Add at least 2 players to begin'}
+            ? t('homepage.current-max-players', { currentPlayers: currentPlayers, maxPlayers: MAX_PLAYERS_FOR_FREE })
+            : t('homepage.need-at-least-players')}
         {/* {isPlayersGreaterThan0 ? `${currentPlayers}/${MAX_PLAYERS_FOR_FREE} players` : 'Add players to start the game'} */}
       </Typography>
 

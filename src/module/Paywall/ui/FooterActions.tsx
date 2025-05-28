@@ -31,14 +31,14 @@ export default function FooterActions() {
     }
   };
   return (
-    <Grid align="center" row space="lg">
+    <Grid align="center" justfity="center" row space="md" wrap>
       <GridPressable onPress={onPressTerms}>
         <Typography color="disabled" variant="caption-1">
           {t('paywall.terms')}
         </Typography>
       </GridPressable>
       <GridPressable>
-        <Typography onPress={restorePurchases} color="disabled" variant="footnote">
+        <Typography onPress={restorePurchases} color="disabled" variant="caption-1">
           {t('paywall.restore')}
         </Typography>
       </GridPressable>

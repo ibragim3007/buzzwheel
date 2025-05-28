@@ -117,7 +117,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
             <>
               <Grid flex={0.5} gap={13}>
                 <Button
-                  title={'Alcohol'}
+                  title={t('gamePage.drink-button')}
                   onPress={onPressDrunk}
                   gradientColors={[colors.background.secondary, colors.background.secondary]}
                   borderColor="transparent"
@@ -131,7 +131,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                 </Grid>
               </Grid>
               <Grid flex={mode == 'drink' ? 0.5 : 1}>
-                <Button title={'Done'} onPress={onPressDry} />
+                <Button title={t('gamePage.done-button')} onPress={onPressDry} />
                 {/* <InGameButton title="Done" onPress={onPressDry} /> */}
               </Grid>
             </>

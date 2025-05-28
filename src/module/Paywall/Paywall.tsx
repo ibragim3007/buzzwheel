@@ -79,7 +79,7 @@ export default function Paywall() {
       </Grid>
       <PaywallItems />
       <Grid space="lg" align="center" width="100%">
-        <Typography weight="light">
+        <Typography textAlign="center" weight="light">
           {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
         </Typography>
         <PaywallButton title={t('paywall.button-text-play-for-free')} product={currentProduct} />
