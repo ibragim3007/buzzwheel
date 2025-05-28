@@ -1,5 +1,4 @@
 import { RouletteOptions } from '@/src/entities/Roulette/types';
-import Grid from '@/src/shared/ui/grid/Grid';
 import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Circle, Polygon } from 'react-native-svg';
 

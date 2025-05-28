@@ -1,3 +1,66 @@
 {
-  "hello": "Hello"
+  "homepage": {
+    "need-at-least-players": "Need at least 2 players",
+    "increase-in-full-access": "You can increase this in full access",
+    "limit_players": "Limit of {{ max_players }} players",
+    "add-at-least-players": "Add at least 2 players to begin",
+    "players-length-players": "{{ amount }} players",
+    "start-game": "Start Game",
+    "input-field-for-player-name": "Input field for player name",
+    "add": "Add",
+    "name-is-required": "Name is required",
+    "enter-player-name": "Enter player name"
+  },
+  "packagePage": {
+    "pick-your-modes": "Pick your modes!",
+    "continue": "Continue",
+    "for-tow-only": "For two"
+  },
+  "paywall": {
+    "error-to-load-product": "Product loading error",
+    "day-trial-then": "3-Day Trial, then {{ price }} per week",
+    "open-modes": "Open modes",
+    "vip_status_message": "Already <bold><accent>{{count}}</accent></bold> users are playing with VIP status, are you with us?",
+    "button-text-play-for-free": "Play for Free",
+    "terms": "Terms of Use",
+    "restore": "Restore",
+    "privacy": "Privacy & Policy",
+    "unlock-all-modes": "Access to all modes",
+    "cancel-any-time": "Cancel at any time",
+    "unforgettable-emotions": "Unforgettable emotions"
+  },
+  "modePage": {
+    "game-mode": "Game Mode",
+    "description": "Choose how you would like to spend this evening",
+    "drink-and-dare": "Drink & Dare",
+    "drink-mode-description": "Miss the mark? Bottoms up!",
+    "dry-mode-title": "Dry Run",
+    "dry-mode-description": "Play it clean, no booze needed.",
+    "start-button": "Start Game"
+  },
+  "gamePage": {
+    "modal-drink-title": "Drinking Task",
+    "drink-modal-subtext": "Are you sure you want to select this?",
+    "modal-active-button": "Drink {{ number }} times",
+    "modal-cancel-button": "Cancel",
+    "done-button": "Done",
+    "roulette": {
+      "task-for": "A task for",
+      "spin-button": "Spin the Wheel"
+    }
+  },
+  "settings": {
+    "token-copied": "Token copied to clipboard",
+    "no-token-available": "No token available",
+    "title": "Settings",
+    "disable-action-repeats": "Disable action repeats",
+    "vibration": "Vibration",
+    "write-review": "Write review",
+    "feedback-subtext": "Your feedback is important for us!",
+    "rate-us-title": "Rate us",
+    "privacy": "Privacy Policy",
+    "copy-token": "Copy token",
+    "feedback-title": "Give us feedback",
+    "legal": "Legal"
+  }
 }

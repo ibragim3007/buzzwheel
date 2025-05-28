@@ -10,11 +10,13 @@ import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png'
 import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { useRouter } from 'expo-router';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { useTranslation } from 'react-i18next';
 
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
   const { navigate } = useRouter();
   const { vibrateSelection, vibrate } = useVibration();
+  const { t } = useTranslation();
 
   const handleModeSelect = (selectedMode: ModeType) => {
     vibrateSelection();
@@ -35,10 +37,10 @@ export default function GameModePage() {
         <Grid height="93%" justfity="space-between">
           <Grid marginTop={10} space="sm">
             <Typography weight="bold" variant="title-1" textAlign="center">
-              Game Mode
+              {t('modePage.game-mode')}
             </Typography>
             <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
-              Choose how you would like to spend this evening
+              {t('modePage.description')}
             </Typography>
           </Grid>
 
@@ -47,21 +49,21 @@ export default function GameModePage() {
               currentMode={mode}
               value="drink"
               image={DrinkDareImage}
-              title="Drink & Dare"
-              description="Miss the mark? Bottoms up!"
+              title={t('modePage.drink-and-dare')}
+              description={t('modePage.drink-mode-description')}
               onPress={value => handleModeSelect(value as ModeType)}
             />
             <GameModeItem
               currentMode={mode}
               value="dry"
               image={DryRunImage}
-              title="Dry Run"
-              description="Play it clean, no booze needed."
+              title={t('modePage.dry-mode-title')}
+              description={t('modePage.dry-mode-description')}
               onPress={value => handleModeSelect(value as ModeType)}
             />
           </Grid>
           <Grid marginBottom={20}>
-            <Button onPress={onPressStartGame} disabled={isDisabled} title="Start Game" />
+            <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
           </Grid>
         </Grid>
       </SafeWrapper>

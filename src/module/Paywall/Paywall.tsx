@@ -14,9 +14,11 @@ import HeaderLogo from './ui/HeaderLogo';
 import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
 import Button from '@/src/shared/ui/buttons/Button';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function Paywall() {
   const { offering } = usePurchases();
+  const { t } = useTranslation();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
   const [showCloseIcon, setShowCloseIcon] = useState(false);
@@ -34,7 +36,7 @@ export default function Paywall() {
     return (
       <Grid justfity="center" height="100%" align="center">
         <Typography variant="title-4" weight="bold">
-          Ошибка загрузки продукта
+          {t('paywall.error-to-load-product')}
         </Typography>
         <Button title="Go back" onPress={goBack} />
       </Grid>
@@ -63,22 +65,24 @@ export default function Paywall() {
         </Grid>
         <HeaderLogo />
         <Grid>
-          <Typography weight="bold" textAlign="center" variant="title-4">
-            Уже{' '}
-            <Typography weight="bold" color="secondary-accent" textAlign="center" variant="title-4">
-              {getWeeklyPurchaseCount()}
-            </Typography>{' '}
-            играют в статусе VIP
-          </Typography>
-          <Typography weight="bold" textAlign="center" variant="title-4">
-            Вы с нами?
+          <Typography textAlign="center" weight="bold">
+            <Trans
+              i18nKey="paywall.vip_status_message"
+              values={{ count: getWeeklyPurchaseCount() }}
+              components={{
+                bold: <Typography weight="bold" textAlign="center" variant="title-4" />,
+                accent: <Typography weight="bold" color="secondary-accent" textAlign="center" variant="title-4" />,
+              }}
+            />
           </Typography>
         </Grid>
       </Grid>
       <PaywallItems />
       <Grid space="lg" align="center" width="100%">
-        <Typography weight="light">3-Day Trial, then {currentProduct.product.priceString} per week</Typography>
-        <PaywallButton title="Играть бесплатно" product={currentProduct} />
+        <Typography weight="light">
+          {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
+        </Typography>
+        <PaywallButton title={t('paywall.button-text-play-for-free')} product={currentProduct} />
         <Grid space="sm" align="center">
           <FooterActions />
         </Grid>

@@ -1,4 +1,3 @@
-import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { fontWeight } from '@/src/shared/styles/typography/typography';
@@ -7,6 +6,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import { normalizedSize } from '@/src/shared/utils/size';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { TextInput } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
@@ -19,8 +19,7 @@ export default function Input({ onCall }: InputProps) {
   const [name, setName] = useState('');
   const [isError, setIsError] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const { players } = usePlayerStore();
-
+  const { t } = useTranslation();
   const { vibrate } = useVibration();
 
   const inputRef = useRef<TextInput>(null);
@@ -70,17 +69,16 @@ export default function Input({ onCall }: InputProps) {
 
   return (
     <Animated.View style={animatedStyle}>
-      {/* <Paper style={[{ borderRadius: 50 }]}> */}
       <Grid space="md" align="center" row>
         <TextInput
-          accessibilityHint="Input field for player name"
+          accessibilityHint={t('homepage.input-field-for-player-name')}
           ref={inputRef}
           onChangeText={handleChangeText}
           value={name}
           cursorColor={colors.accent.primary}
           selectionColor={colors.accent.primary}
           placeholderTextColor={isError ? colors.text.error : colors.text.white}
-          placeholder={isError ? 'Name is required' : 'Enter player name'}
+          placeholder={isError ? t('homepage.name-is-required') : t('homepage.enter-player-name')}
           onSubmitEditing={onPress}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
@@ -91,8 +89,6 @@ export default function Input({ onCall }: InputProps) {
             backgroundColor: colors.background.secondary, // Fallback focus color
             paddingHorizontal: 25,
             flex: 1,
-            // borderTopLeftRadius: 50,
-            // borderBottomLeftRadius: 50,
             borderRadius: colors.styles.borderRadiusDefault,
             fontSize: 18,
             color: isError ? colors.text.error : colors.text.primary,
@@ -102,26 +98,13 @@ export default function Input({ onCall }: InputProps) {
 
         <Button
           style={{
-            // borderTopLeftRadius: 0,
-            // borderBottomLeftRadius: 0,
             paddingLeft: normalizedSize(15),
-
-            // backgroundColor: currentInputColor,
           }}
           startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
           onPress={onPress}
-          title="Add"
+          title={t('homepage.add')}
         />
       </Grid>
-
-      {/* {isError && (
-          <Grid marginLeft={25}>
-            <Typography color="error" variant="caption-1">
-              Name is required
-            </Typography>
-          </Grid>
-        )} */}
-      {/* </Paper> */}
     </Animated.View>
   );
 }

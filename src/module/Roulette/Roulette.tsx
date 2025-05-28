@@ -13,6 +13,7 @@ import Svg, { Circle, Defs, G, Mask, Rect } from 'react-native-svg';
 import CenterCircle from './CenterCircle/CenterCircle';
 import { useRoulette } from './hooks/useRoulette';
 import { RouletteSegment } from './segment/RouletteSegment';
+import { useTranslation } from 'react-i18next';
 
 interface RouletteProps {
   segments: SegmentType[];
@@ -25,7 +26,7 @@ interface RouletteProps {
 
 const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onChangeSpinStatus }: RouletteProps) => {
   const { TOTAL_SIZE, BORDER_WIDTH, CENTER, RADIUS, WHEEL_SIZE, BORDER_COLOR } = options;
-
+  const { t } = useTranslation();
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } = useRoulette(segments, onCallback);
 
   useEffect(() => {
@@ -38,11 +39,10 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         <Animated.View entering={FadeIn}>
           <Grid>
             <Typography weight="medium" variant="title-1">
-              Are you ready{' '}
+              {t('gamePage.roulette.task-for')}{' '}
               <Typography style={{ color: currentTurn.color || '#fff' }} weight="bold" variant="title-1">
                 {currentTurn?.name}
               </Typography>
-              ?
             </Typography>
           </Grid>
         </Animated.View>
@@ -131,7 +131,7 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         paddingHorizontal={HORIZONTAL_PADDINGS * 2}
       >
         <Button
-          title="Spin the Wheel"
+          title={t('gamePage.roulette.spin-button')}
           onPress={spinWheel}
           disabled={isSpinning}
           textStyle={{

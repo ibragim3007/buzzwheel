@@ -13,6 +13,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Image } from 'expo-image';
 import { navigate } from 'expo-router/build/global-state/routing';
+import { useTranslation } from 'react-i18next';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
@@ -26,7 +27,7 @@ interface PackageItemProps {
 
 export default function PackageItem({ pack, picked, amountOfDares, index, onPress }: PackageItemProps) {
   const colors = useTheme();
-
+  const { t } = useTranslation();
   const { isActiveSubscription } = usePurchases();
   const isLocked = !isActiveSubscription && pack.isFree === false;
 
@@ -105,7 +106,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                         }}
                         variant="footnote"
                       >
-                        Для двоих
+                        {t('packagePage.for-tow-only')}
                       </Typography>
                     </Grid>
                   )}

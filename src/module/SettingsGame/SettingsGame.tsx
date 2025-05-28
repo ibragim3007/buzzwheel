@@ -15,9 +15,12 @@ import { Button } from 'react-native';
 import { formatBytes } from '@/src/shared/utils/formatBytes';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import * as Clipboard from 'expo-clipboard';
+import { useTranslation } from 'react-i18next';
+import RoulettePicker from './RoulettePicker/RoulettePicker';
 
 export default function SettingsGame() {
   const colors = useTheme();
+  const { t } = useTranslation();
   const { customerInfo } = usePurchases();
   const { players } = usePlayerStore();
   const isDev = players[0]?.name === 'developer7';
@@ -25,9 +28,9 @@ export default function SettingsGame() {
   const copyToken = async () => {
     if (customerInfo?.originalAppUserId) {
       await Clipboard.setStringAsync(customerInfo?.originalAppUserId || 'undefiend');
-      alert('Token copied to clipboard');
+      alert(t('settings.token-copied'));
     } else {
-      alert('No token available');
+      alert(t('settings.no-token-available'));
     }
   };
 
@@ -48,7 +51,7 @@ export default function SettingsGame() {
           paddingBottom={40}
           space="lg"
         >
-          <GroupBy title="Настройки">
+          <GroupBy title={t('settings.title')}>
             <Paper paddingHorizontal={10} style={{ backgroundColor: colors.background.primary }}>
               <SwitchRepetition />
             </Paper>
@@ -67,7 +70,7 @@ export default function SettingsGame() {
           {isDev && (
             <GroupBy title="Dev">
               <Grid align="flex-start">
-                <Button onPress={copyToken} title="Copy token" />
+                <Button onPress={copyToken} title={t('settings.copy-token')} />
                 <Button
                   onPress={() => void LocalStorage.clearStorage('key')}
                   title={`Clear cache (${formatBytes(size)})`}

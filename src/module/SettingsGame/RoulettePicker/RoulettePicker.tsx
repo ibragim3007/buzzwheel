@@ -92,7 +92,7 @@ export default function RoulettePicker() {
       renderItem={({ item, index }) => {
         const isPicked = item.id === rouletteColor?.id;
         const isUnlocked = unlockedRouletteColors.includes(item.id);
-        const isAvailable = item.isFree || isUnlocked;
+        const isAvailable = true || item.isFree || isUnlocked;
         return (
           <Pressable onPress={() => onRouletteColorChange(item, isAvailable)}>
             <Grid

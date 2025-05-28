@@ -3,6 +3,9 @@
     "ios/Pods/RCT-Folly/folly/lang",
     "ios/Pods/boost/boost/predef/language",
     "ios/Pods/Headers/Private/RCT-Folly/folly/lang",
-    "ios/Pods/Headers/Public/RCT-Folly/folly/lang"
-  ]
+    "ios/Pods/Headers/Public/RCT-Folly/folly/lang",
+    "src/locales",
+    "src/shared/hooks/lang"
+  ],
+  "i18n-ally.keystyle": "nested"
 }

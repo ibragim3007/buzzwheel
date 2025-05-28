@@ -3,6 +3,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { useEffect, useState } from 'react';
 import PaywallButton from './ui/PaywallButton';
+import { useTranslation } from 'react-i18next';
 
 interface PaywallBlockProps {
   title: string;
@@ -10,6 +11,7 @@ interface PaywallBlockProps {
 
 export default function PaywallBlock() {
   const { offering } = usePurchases();
+  const { t } = useTranslation();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function PaywallBlock() {
     return (
       <Grid justfity="center" align="center">
         <Typography variant="title-4" weight="bold">
-          Ошибка загрузки продукта
+          {t('paywall.error-to-load-product')}
         </Typography>
       </Grid>
     );
@@ -28,8 +30,10 @@ export default function PaywallBlock() {
 
   return (
     <Grid space="md" align="center">
-      <Typography weight="light">3-Day Trial, then {currentProduct.product.priceString} per week</Typography>
-      <PaywallButton title="Открыть пакеты" product={currentProduct} />
+      <Typography weight="light">
+        {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
+      </Typography>
+      <PaywallButton title={t('paywall.open-modes')} product={currentProduct} />
     </Grid>
   );
 }

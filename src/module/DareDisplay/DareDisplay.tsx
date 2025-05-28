@@ -16,6 +16,7 @@ import { Alert, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
+import { useTranslation } from 'react-i18next';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -26,7 +27,7 @@ interface DareDisplayProps {
 
 export default function DareDisplay({ dare, currentTurn, players, hideDare }: DareDisplayProps) {
   const ref = useRef<View | null>(null);
-
+  const { t } = useTranslation();
   const { vibrate } = useVibration();
 
   const colors = useTheme();
@@ -34,15 +35,15 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
 
   const onPressDrunk = () => {
     vibrate();
-    Alert.alert('Drunk Dare', 'Are you sure you want to take this dare?', [
+    Alert.alert(t('gamePage.modal-drink-title'), t('gamePage.drink-modal-subtext'), [
       {
-        text: `Drunk ${dare.alcohol} times`,
+        text: t('gamePage.modal-active-button', { number: dare.alcohol }),
         onPress: () => {
           hideDare(true);
         },
       },
       {
-        text: 'Cancel',
+        text: t('gamePage.modal-cancel-button'),
         style: 'cancel',
         onPress: () => {
           // Do nothing on cancel
@@ -125,7 +126,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                 <Grid align="center" row justfity="center" space="sm">
                   <Entypo name="drink" size={15} color={colors.text.disabled} />
                   <Typography textAlign="center" variant="caption-1" color="disabled">
-                    Drunk {dare.alcohol} times
+                    {t('gamePage.modal-active-button', { number: dare.alcohol })}
                   </Typography>
                 </Grid>
               </Grid>
@@ -136,7 +137,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
             </>
           ) : (
             <Grid width="100%">
-              <Button onPress={onPressDry} title="Done" />
+              <Button onPress={onPressDry} title={t('gamePage.done-button')} />
             </Grid>
           )}
         </Grid>

@@ -13,9 +13,11 @@ import Typography from '@/src/shared/ui/typography/Typography';
 import Header from '@/src/widget/Header';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Animated from 'react-native-reanimated';
 
 export default function PackagePage() {
+  const { t } = useTranslation();
   const colors = useTheme();
   const { pickedPackages } = usePackage();
   const { navigate } = useRouter();
@@ -40,7 +42,7 @@ export default function PackagePage() {
 
             <Grid space="lg">
               <Typography textAlign="center" weight="bold" variant="title-1">
-                Pick your modes!
+                {t('packagePage.pick-your-modes')}
               </Typography>
               <Packages />
               <Grid paddingHorizontal={30}>
@@ -62,7 +64,7 @@ export default function PackagePage() {
               width: '100%',
             }}
           >
-            <Button onPress={onPressPlay} title="Continue" />
+            <Button onPress={onPressPlay} title={t('packagePage.continue')} />
           </Grid>
         </Animated.View>
       )}

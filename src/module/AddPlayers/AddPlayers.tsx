@@ -1,25 +1,28 @@
+import ArrowAnimation from '@/assets/lottie/arrow-pointer.json';
 import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { MAX_PLAYERS_FOR_FREE } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { Inform } from '@/src/shared/service/logger.service/logger.service';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
+import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
+import LottieView from 'lottie-react-native';
+
 import { ScrollView } from 'react-native';
 import Input from './components/Input/Input';
 import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
 import UserLimit from './components/Players/UserLimit';
-import ArrowAnimation from '@/assets/lottie/arrow-pointer.json';
-import LottieView from 'lottie-react-native';
-import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import Typography from '@/src/shared/ui/typography/Typography';
+import { useTranslation } from 'react-i18next';
 
 export default function AddPlayers() {
   const colors = useTheme();
+  const { t } = useTranslation();
   const { players, addNewPlayer } = usePlayerStore();
   const { navigate } = useRouter();
   const { vibrate, vibrateSelection, vibrateError } = useVibration();
@@ -27,11 +30,10 @@ export default function AddPlayers() {
   const isEnoughPlayers = players.length >= 2;
 
   const onAddNewPlayer = (name: string) => {
-    console.log(isActiveSubscription);
     if (players.length >= MAX_PLAYERS_FOR_FREE && !isActiveSubscription) {
       Inform.error('', {
-        text1: `Limit of ${MAX_PLAYERS_FOR_FREE} players`,
-        text2: 'You can increase this in full access',
+        text1: t('homepage.limit_players', { max_players: MAX_PLAYERS_FOR_FREE }),
+        text2: t('homepage.increase-in-full-access'),
         type: 'error',
         onShow: () => vibrate(),
         onPress: () => navigate('/screens/gift'),
@@ -45,7 +47,7 @@ export default function AddPlayers() {
   const onPressStart = () => {
     if (!isEnoughPlayers) {
       vibrateError();
-      Inform.error('', { text1: 'Need at least 2 players', position: 'bottom', type: 'error' });
+      Inform.error('', { text1: t('homepage.need-at-least-players'), position: 'bottom', type: 'error' });
       return;
     }
 
@@ -82,14 +84,16 @@ export default function AddPlayers() {
       <Grid space="lg" marginBottom={20}>
         {isActiveSubscription ? (
           <Typography color="disabled" textAlign="center" variant="footnote">
-            {isPlayersGreaterThan0 ? `${players.length} players` : 'Add at least 2 players to begin'}
+            {isPlayersGreaterThan0
+              ? t('homepage.players-length-players', { amount: players.length })
+              : t('homepage.add-at-least-players')}
           </Typography>
         ) : (
           <UserLimit currentPlayers={players.length} />
         )}
         <Button
           onPress={onPressStart}
-          title={'Start Game'}
+          title={t('homepage.start-game')}
           disabled={!isEnoughPlayers}
           startIcon={
             <Ionicons name="play" size={24} color={!isEnoughPlayers ? colors.text.disabled : colors.text.primary} />

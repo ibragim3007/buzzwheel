@@ -13,7 +13,7 @@ import { Manrope_500Medium } from '@expo-google-fonts/manrope/500Medium';
 import { Manrope_600SemiBold } from '@expo-google-fonts/manrope/600SemiBold';
 import { Manrope_700Bold } from '@expo-google-fonts/manrope/700Bold';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { StatusBar } from 'react-native';
+import { I18nManager, StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
 import StackRoute from './stack';
@@ -29,20 +29,24 @@ import { PassionOne_400Regular } from '@expo-google-fonts/passion-one/400Regular
 import { PassionOne_700Bold } from '@expo-google-fonts/passion-one/700Bold';
 import { PassionOne_900Black } from '@expo-google-fonts/passion-one/900Black';
 
-import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import Purchases from 'react-native-purchases';
 import { modesRu } from '@/assets/package_mock/modes';
-import { preloadImages } from '@/src/shared/service/preload.service';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
-import { I18nextProvider } from 'react-i18next';
+import { preloadImages } from '@/src/shared/service/preload.service';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+import Purchases from 'react-native-purchases';
 import i18n from '@/src/shared/providers/i18n';
 
 preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
 
+const isRTL = i18n.language.startsWith('ar');
+I18nManager.allowRTL(isRTL);
+I18nManager.forceRTL(isRTL);
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const { i18n } = useTranslation(); // автоматический re-render при смене языка
   const [loaded] = useFonts({
     Manrope_300Light,
     Manrope_400Regular,

@@ -3,10 +3,12 @@ import { useTheme } from '@/src/shared/hooks/useTheme';
 import SettingItem from '@/src/shared/ui/elements/SettingsItem';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import Feather from '@expo/vector-icons/Feather';
+import { useTranslation } from 'react-i18next';
 import { Linking } from 'react-native';
 
 export default function LegalBlock() {
   const colors = useTheme();
+  const { t } = useTranslation();
 
   const onPressPrivacyPolicy = async () => {
     if (await Linking.canOpenURL(LINKS.privacyPolicy)) {
@@ -20,16 +22,16 @@ export default function LegalBlock() {
   };
 
   return (
-    <GroupBy title="Legal">
+    <GroupBy title={t('settings.legal')}>
       <SettingItem
         onPress={onPressPrivacyPolicy}
         leftIcon={<Feather name="shield" size={24} color={colors.text.primary} />}
-        title={'Privacy Policy'}
+        title={t('settings.privacy')}
       />
       <SettingItem
         onPress={onPressTermsOfUse}
         leftIcon={<Feather name="book" size={24} color={colors.text.primary} />}
-        title={'Terms of Use'}
+        title={t('paywall.terms')}
       />
     </GroupBy>
   );
