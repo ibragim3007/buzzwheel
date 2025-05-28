@@ -40,7 +40,7 @@ export default function Button({ title, startIcon, textStyle, disabled, gradient
       paddingHorizontal: 25,
       paddingVertical: 17,
       borderRadius: colors.styles.borderRadiusDefault,
-      // borderWidth: 1,
+
       borderColor: disabled ? colors.background.secondary : currentColorButton,
     },
     props.style,
@@ -49,6 +49,9 @@ export default function Button({ title, startIcon, textStyle, disabled, gradient
   const fontStyles = StyleSheet.flatten([
     {
       color: disabled ? colors.text.disabled : colors.text.primary,
+      textShadowColor: '#0000002f',
+      textShadowRadius: 5,
+      textShadowOffset: { width: 0, height: 0 },
     },
     textStyle?.style,
   ]);
@@ -58,7 +61,7 @@ export default function Button({ title, startIcon, textStyle, disabled, gradient
       <LinearGradient
         // pointerEvents="none"
         start={[-0.5, -0.5]}
-        end={[2, 2]}
+        end={[3.5, 1]}
         style={{ borderRadius: 20, borderWidth: 1, borderColor: disabled ? 'transparent' : '#ffffff5f' }}
         colors={buttonColors}
       >

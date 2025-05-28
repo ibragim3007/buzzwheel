@@ -42,12 +42,12 @@ export default function PackagePage() {
 
       {pickedPackages.length > 0 && (
         <Animated.View>
-          <GradientShadow color={colors.accent.primary} height={250} />
+          <GradientShadow color={colors.background.primary} height={250} />
           <Grid
-            paddingHorizontal={40}
+            paddingHorizontal={30}
             style={{
               position: 'absolute',
-              bottom: 40,
+              bottom: 45,
               width: '100%',
             }}
           >

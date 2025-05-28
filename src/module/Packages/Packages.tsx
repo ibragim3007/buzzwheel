@@ -16,7 +16,7 @@ export default function Packages() {
   };
 
   return (
-    <Grid space="md">
+    <Grid gap={14}>
       {data.map((pack, index) => {
         const isPicked = pickedPackages.map(pM => pM.id).includes(pack.id);
         const amountOfDares = pack.dares.length;

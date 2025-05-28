@@ -50,7 +50,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
             style={{
               backgroundColor: colors.background.secondary,
               borderRadius: colors.styles.borderRadiusDefault + 5,
-              borderWidth: 4,
+              borderWidth: 2,
               borderColor: picked ? colors.accent.primary : 'transparent',
               shadowColor: '#000',
               shadowOpacity: 0.3,
@@ -111,7 +111,7 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                   )}
                 </Grid>
                 <Typography
-                  numberOfLines={picked ? 5 : 3}
+                  // numberOfLines={picked ? 5 : 3}
                   color="secondary"
                   style={{ lineHeight: 19 }}
                   variant="footnote"
