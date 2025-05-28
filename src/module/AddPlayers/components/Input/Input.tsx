@@ -77,7 +77,7 @@ export default function Input({ onCall }: InputProps) {
           value={name}
           cursorColor={colors.accent.primary}
           selectionColor={colors.accent.primary}
-          placeholderTextColor={isError ? colors.text.error : colors.text.white}
+          placeholderTextColor={isError ? colors.text.error : colors.text.secondary}
           placeholder={isError ? t('homepage.name-is-required') : t('homepage.enter-player-name')}
           onSubmitEditing={onPress}
           onFocus={() => setIsFocused(true)}
@@ -85,7 +85,7 @@ export default function Input({ onCall }: InputProps) {
           style={{
             borderWidth: 2,
             height: '100%',
-            borderColor: currentInputColor,
+            borderColor: isFocused ? currentInputColor : 'transparent', // Use currentInputColor for focused state
             backgroundColor: colors.background.secondary, // Fallback focus color
             paddingHorizontal: 25,
             flex: 1,
@@ -98,9 +98,13 @@ export default function Input({ onCall }: InputProps) {
 
         <Button
           style={{
-            paddingLeft: normalizedSize(15),
+            // paddingLeft: normalizedSize(15),
+            paddingHorizontal: normalizedSize(14),
           }}
-          startIcon={<FontAwesome6 name="plus" size={20} color={colors.text.primary} />}
+          textStyle={{
+            variant: 'title-4',
+          }}
+          startIcon={<FontAwesome6 name="plus" size={normalizedSize(16)} color={colors.text.primary} />}
           onPress={onPress}
           title={t('homepage.add')}
         />

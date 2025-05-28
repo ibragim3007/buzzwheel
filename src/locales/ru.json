@@ -9,9 +9,10 @@
     "input-field-for-player-name": "Имя игрока",
     "add": "Добавить",
     "name-is-required": "Имя обязательно",
-    "enter-player-name": "Введите имя игрока",
+    "enter-player-name": "Введите имя",
     "max-players-reached": "Вы достигли лимита в {{ max_players }} игроков",
-    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} игроков"
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} игроков",
+    "no-players-placeholder": "Игроков пока нет"
   },
   "packagePage": {
     "pick-your-modes": "Выберите режимы!",
@@ -35,7 +36,7 @@
     "game-mode": "Игровой режим",
     "description": "Выберите, как хотите провести вечер",
     "drink-and-dare": "Выпей и Дерзай",
-    "drink-mode-description": "Промахнулся? Пей до дна!",
+    "drink-mode-description": "Пропустил? Пей до дна!",
     "dry-mode-title": "Без алкоголя",
     "dry-mode-description": "Играйте трезво — без алкоголя.",
     "start-button": "Начать игру"

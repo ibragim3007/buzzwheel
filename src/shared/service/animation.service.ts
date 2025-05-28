@@ -1,6 +1,7 @@
 import {
   ComplexAnimationBuilder,
   FadeInUp,
+  FadeOutUp,
   LinearTransition,
   SlideInLeft,
   SlideInRight,
@@ -47,6 +48,7 @@ class AnimationEngine {
     .stiffness(OptionsAnimationService.stiffness);
 
   fadeInUp = (n: number) => this.createAnimation(new FadeInUp(), n);
+  fadeOutUp = (n: number) => this.createAnimation(new FadeOutUp(), n);
   zoomInDown = (n: number) => this.createAnimation(new ZoomInDown(), n);
   slideInRight = (n: number) => this.createAnimation(new SlideInRight(), n);
   slideOutRight = (n: number) => this.createAnimation(new SlideOutRight(), n);

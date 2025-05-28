@@ -10,7 +10,8 @@
     "name-is-required": "Name is required",
     "enter-player-name": "Enter player name",
     "max-players-reached": "You have reached the limit of {{ max_players }} players",
-    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} players"
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} players",
+    "no-players-placeholder": "There are no players yet"
   },
   "packagePage": {
     "pick-your-modes": "Choose your modes!",
