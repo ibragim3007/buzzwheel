@@ -4,6 +4,7 @@ export const MAX_WIDTH_APP = 750;
 export const MAX_HEIGHT_APP = 750;
 export const ANIMATION_SPEED = 150;
 export const DEFAULT_PROBABILITY = 0.1;
+export const DEFAULT_LANGUAGE = 'en';
 
 export const REVENUE_CAT_API_IOS = 'appl_JvQzYUnFnXHONWmbTkMEfXNbiHd';
 export const REVENUE_CAT_API_ANDROID = 'goog_YZSTubwqjwKaWdWJTaYSubzeGPm';

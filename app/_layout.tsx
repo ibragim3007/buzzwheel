@@ -34,6 +34,8 @@ import Purchases from 'react-native-purchases';
 import { modesRu } from '@/assets/package_mock/modes';
 import { preloadImages } from '@/src/shared/service/preload.service';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/src/shared/providers/i18n';
 
 preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
 
@@ -95,15 +97,17 @@ export default function RootLayout() {
   if (!loaded) return null;
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <BottomSheetModalProvider>
-        <ThemeProvider>
-          <StatusBar hidden />
-          <CustomModal />
-          <StackRoute />
-          <Toast position="top" config={toastConfig} />
-        </ThemeProvider>
-      </BottomSheetModalProvider>
-    </GestureHandlerRootView>
+    <I18nextProvider i18n={i18n}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <BottomSheetModalProvider>
+          <ThemeProvider>
+            <StatusBar hidden />
+            <CustomModal />
+            <StackRoute />
+            <Toast position="top" config={toastConfig} />
+          </ThemeProvider>
+        </BottomSheetModalProvider>
+      </GestureHandlerRootView>
+    </I18nextProvider>
   );
 }
