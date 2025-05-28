@@ -1,51 +1,51 @@
 {
   "homepage": {
-    "need-at-least-players": "Need at least 2 players",
-    "increase-in-full-access": "You can increase this in full access",
-    "limit_players": "Limit of {{ max_players }} players",
-    "add-at-least-players": "Add at least 2 players to begin",
+    "need-at-least-players": "At least 2 players are required",
+    "increase-in-full-access": "Increase this limit with Full Access",
+    "limit_players": "Maximum {{ max_players }} players",
+    "add-at-least-players": "Add at least 2 players to start",
     "players-length-players": "{{ amount }} players",
     "start-game": "Start Game",
-    "input-field-for-player-name": "Input field for player name",
+    "input-field-for-player-name": "Player name",
     "add": "Add",
     "name-is-required": "Name is required",
     "enter-player-name": "Enter player name"
   },
   "packagePage": {
-    "pick-your-modes": "Pick your modes!",
+    "pick-your-modes": "Choose your modes!",
     "continue": "Continue",
-    "for-tow-only": "For two"
+    "for-tow-only": "For two players"
   },
   "paywall": {
-    "error-to-load-product": "Product loading error",
+    "error-to-load-product": "Error loading product",
     "day-trial-then": "3-Day Trial, then {{ price }} per week",
-    "open-modes": "Open modes",
-    "vip_status_message": "Already <bold><accent>{{count}}</accent></bold> users are playing with VIP status, are you with us?",
+    "open-modes": "Unlock modes",
+    "vip_status_message": "Already <bold><accent>{{count}}</accent></bold> users enjoy VIP status — join them!",
     "button-text-play-for-free": "Play for Free",
     "terms": "Terms of Use",
-    "restore": "Restore",
-    "privacy": "Privacy & Policy",
-    "unlock-all-modes": "Access to all modes",
-    "cancel-any-time": "Cancel at any time",
-    "unforgettable-emotions": "Unforgettable emotions"
+    "restore": "Restore Purchase",
+    "privacy": "Privacy Policy",
+    "unlock-all-modes": "Unlock all modes",
+    "cancel-any-time": "Cancel anytime",
+    "unforgettable-emotions": "Unforgettable experiences"
   },
   "modePage": {
     "game-mode": "Game Mode",
-    "description": "Choose how you would like to spend this evening",
+    "description": "Choose how you'd like to spend the evening",
     "drink-and-dare": "Drink & Dare",
     "drink-mode-description": "Miss the mark? Bottoms up!",
     "dry-mode-title": "Dry Run",
-    "dry-mode-description": "Play it clean, no booze needed.",
+    "dry-mode-description": "Play it clean — no booze needed.",
     "start-button": "Start Game"
   },
   "gamePage": {
     "modal-drink-title": "Drinking Task",
-    "drink-modal-subtext": "Are you sure you want to select this?",
+    "drink-modal-subtext": "Are you sure you want to choose this?",
     "modal-active-button": "Drink {{ number }} times",
     "modal-cancel-button": "Cancel",
     "done-button": "Done",
     "roulette": {
-      "task-for": "A task for",
+      "task-for": "Task for",
       "spin-button": "Spin the Wheel"
     }
   },
@@ -53,10 +53,10 @@
     "token-copied": "Token copied to clipboard",
     "no-token-available": "No token available",
     "title": "Settings",
-    "disable-action-repeats": "Disable action repeats",
+    "disable-action-repeats": "Disable repeated actions",
     "vibration": "Vibration",
-    "write-review": "Write review",
-    "feedback-subtext": "Your feedback is important for us!",
+    "write-review": "Write a review",
+    "feedback-subtext": "Your feedback is important to us!",
     "rate-us-title": "Rate us",
     "privacy": "Privacy Policy",
     "copy-token": "Copy token",
