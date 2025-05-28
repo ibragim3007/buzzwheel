@@ -17,6 +17,7 @@ import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import * as Clipboard from 'expo-clipboard';
 import { useTranslation } from 'react-i18next';
 import RoulettePicker from './RoulettePicker/RoulettePicker';
+import { LanguagePicker } from '../LanguagePicker';
 
 export default function SettingsGame() {
   const colors = useTheme();
@@ -52,12 +53,13 @@ export default function SettingsGame() {
           space="lg"
         >
           <GroupBy title={t('settings.title')}>
-            <Paper paddingHorizontal={10} style={{ backgroundColor: colors.background.primary }}>
+            <Paper paddingHorizontal={15} style={{ backgroundColor: colors.background.primary }}>
               <SwitchRepetition />
             </Paper>
-            <Paper paddingHorizontal={10} style={{ backgroundColor: colors.background.primary }}>
+            <Paper paddingHorizontal={15} style={{ backgroundColor: colors.background.primary }}>
               <VibrationToggle />
             </Paper>
+            <LanguagePicker />
           </GroupBy>
           {/* <GroupBy title="Выбор колеса">
             <RoulettePicker />

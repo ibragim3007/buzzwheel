@@ -9,6 +9,7 @@ import HandleComponent from '../shared/ui/elements/HandleComponent';
 import Grid from '../shared/ui/grid/Grid';
 import WrapIconInPressable from '../shared/ui/wrapper/WrapIconInPressable';
 import ProButton from './ui/ProButton';
+import { LanguagePicker } from '../module/LanguagePicker';
 
 interface HeaderProps {
   back?: boolean;
@@ -48,9 +49,11 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
         </Grid>
       ) : (
         <Grid row align="center" justfity="space-between">
-          <WrapIconInPressable onPress={handlePresentModalPress}>
-            <Ionicons name="settings-sharp" size={24} color={colors.text.primary} />
-          </WrapIconInPressable>
+          <Grid row align="center" space="md">
+            <WrapIconInPressable onPress={handlePresentModalPress}>
+              <Ionicons name="settings-sharp" size={24} color={colors.text.primary} />
+            </WrapIconInPressable>
+          </Grid>
           <Grid align="center" space="md" row>
             {/* <GiftIcon /> */}
             <ProButton />
