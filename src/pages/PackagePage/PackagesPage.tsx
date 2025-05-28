@@ -11,6 +11,7 @@ import ScrollPageWrapper from '@/src/shared/ui/layout/ScrollPageWrapper';
 import Typography from '@/src/shared/ui/typography/Typography';
 import Header from '@/src/widget/Header';
 import { useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
 import Animated from 'react-native-reanimated';
 
 export default function PackagePage() {
@@ -22,6 +23,12 @@ export default function PackagePage() {
     vibrate();
     navigate('/screens/gameModeScreen');
   };
+
+  const [justMounted, setJustMounted] = useState(false);
+
+  useEffect(() => {
+    setJustMounted(true);
+  }, []);
 
   return (
     <Grid>
@@ -41,7 +48,7 @@ export default function PackagePage() {
       </ScrollPageWrapper>
 
       {pickedPackages.length > 0 && (
-        <Animated.View>
+        <Animated.View entering={justMounted ? undefined : animationEngine.zoomInDown(3)}>
           <GradientShadow color={colors.background.primary} height={250} />
           <Grid
             paddingHorizontal={30}

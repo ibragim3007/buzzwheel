@@ -20,7 +20,7 @@ export default function SettingsGame() {
   const colors = useTheme();
   const { customerInfo } = usePurchases();
   const { players } = usePlayerStore();
-  const isDev = players[0].name === 'developer7';
+  const isDev = players[0]?.name === 'developer7';
 
   const copyToken = async () => {
     if (customerInfo?.originalAppUserId) {
