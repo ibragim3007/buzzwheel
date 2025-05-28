@@ -7,20 +7,22 @@ import Typography from '@/src/shared/ui/typography/Typography';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from 'expo-router';
 import { navigate } from 'expo-router/build/global-state/routing';
-import { useEffect, useRef } from 'react';
-import { Animated, Easing } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Animated, Easing } from 'react-native';
 import Purchases, { PurchasesPackage } from 'react-native-purchases';
 
 interface PaywallButtonProps {
   product: PurchasesPackage;
+  title: string;
 }
 
-export default function PaywallButton({ product }: PaywallButtonProps) {
+export default function PaywallButton({ product, title }: PaywallButtonProps) {
   const colors = useTheme();
   const { setCustomerInfo } = usePurchases();
   const scaleAnim = useRef(new Animated.Value(1)).current;
   const { vibrateMedium } = useVibration();
   const navigation = useNavigation();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const pulse = () => {
@@ -44,6 +46,7 @@ export default function PaywallButton({ product }: PaywallButtonProps) {
   }, [scaleAnim]);
 
   const pressBuyButton = async () => {
+    setIsLoading(true);
     vibrateMedium();
     try {
       if (!product) {
@@ -61,11 +64,13 @@ export default function PaywallButton({ product }: PaywallButtonProps) {
       }
     } catch (e) {
       console.log(e);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+    <Animated.View style={{ transform: [{ scale: isLoading ? 1 : scaleAnim }], width: '85%' }}>
       <GridPressable onPress={pressBuyButton}>
         <LinearGradient
           start={[0, 0]}
@@ -73,15 +78,20 @@ export default function PaywallButton({ product }: PaywallButtonProps) {
           style={{ borderRadius: 25, borderWidth: 1, borderColor: '#ffffff5f' }}
           colors={[colors.accent.primary, colors.accent.secondary]}
         >
-          <Grid paddingHorizontal={40} paddingVertical={20}>
+          <Grid height={70} justfity="center" paddingHorizontal={10} paddingVertical={20}>
             <GradientShadow color="#ffffff85" />
-            <Typography
-              style={{ shadowColor: '#000', shadowOpacity: 0.4, shadowRadius: 12 }}
-              variant="title-2"
-              weight="bold"
-            >
-              Играть бесплатно
-            </Typography>
+            {isLoading ? (
+              <ActivityIndicator color="#fff" />
+            ) : (
+              <Typography
+                style={{ shadowColor: '#000', shadowOpacity: 0.4, shadowRadius: 12 }}
+                variant="title-2"
+                weight="bold"
+                textAlign="center"
+              >
+                {title}
+              </Typography>
+            )}
           </Grid>
         </LinearGradient>
       </GridPressable>

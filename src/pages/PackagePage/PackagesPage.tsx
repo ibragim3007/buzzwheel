@@ -1,5 +1,6 @@
 import { usePackage } from '@/src/entities/Package/usePackage';
 import Packages from '@/src/module/Packages/Packages';
+import PaywallBlock from '@/src/module/Paywall/PaywallBlock';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { animationEngine } from '@/src/shared/service/animation.service';
@@ -42,6 +43,9 @@ export default function PackagePage() {
                 Pick your modes!
               </Typography>
               <Packages />
+              <Grid paddingHorizontal={30}>
+                <PaywallBlock />
+              </Grid>
             </Grid>
           </Animated.View>
         </SafeWrapper>

@@ -78,7 +78,7 @@ export default function Paywall() {
       <PaywallItems />
       <Grid space="lg" align="center" width="100%">
         <Typography weight="light">3-Day Trial, then {currentProduct.product.priceString} per week</Typography>
-        <PaywallButton product={currentProduct} />
+        <PaywallButton title="Играть бесплатно" product={currentProduct} />
         <Grid space="sm" align="center">
           <FooterActions />
         </Grid>
