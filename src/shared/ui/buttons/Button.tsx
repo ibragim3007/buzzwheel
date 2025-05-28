@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import React, { useState } from 'react';
 import { Pressable, PressableProps, StyleSheet } from 'react-native';
 import { useTheme } from '../../hooks/useTheme';
@@ -5,17 +6,24 @@ import { TypographyProps } from '../../styles/typography/typography';
 import AnimTouchWrapper from '../animations/AnimTouchWrapper';
 import Grid from '../grid/Grid';
 import Typography from '../typography/Typography';
-import { LinearGradient } from 'expo-linear-gradient';
-import GradientShadow from '../elements/GradientShadow';
 
 interface ButtonProps extends PressableProps {
   title: string;
   startIcon?: React.ReactNode;
   textStyle?: TypographyProps;
   gradientColors?: [string, string];
+  borderColor?: string;
 }
 
-export default function Button({ title, startIcon, textStyle, disabled, gradientColors, ...props }: ButtonProps) {
+export default function Button({
+  title,
+  startIcon,
+  textStyle,
+  disabled,
+  gradientColors,
+  borderColor,
+  ...props
+}: ButtonProps) {
   const colors = useTheme();
   // const defaultColor = props.style
 
@@ -49,9 +57,6 @@ export default function Button({ title, startIcon, textStyle, disabled, gradient
   const fontStyles = StyleSheet.flatten([
     {
       color: disabled ? colors.text.disabled : colors.text.primary,
-      textShadowColor: '#0000002f',
-      textShadowRadius: 5,
-      textShadowOffset: { width: 0, height: 0 },
     },
     textStyle?.style,
   ]);
@@ -62,10 +67,13 @@ export default function Button({ title, startIcon, textStyle, disabled, gradient
         // pointerEvents="none"
         start={[-0.5, -0.5]}
         end={[3.5, 1]}
-        style={{ borderRadius: 20, borderWidth: 1, borderColor: disabled ? 'transparent' : '#ffffff5f' }}
+        style={{
+          borderRadius: 20,
+          borderWidth: 1,
+          borderColor: disabled ? 'transparent' : borderColor ? borderColor : '#ffffff5f',
+        }}
         colors={buttonColors}
       >
-        <GradientShadow color="#ffffff85" />
         <Pressable {...props} style={styles} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <Grid row space="sm" justfity="center" align="center">
             {startIcon}

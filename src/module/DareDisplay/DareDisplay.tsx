@@ -11,12 +11,11 @@ import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import { Entypo } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { useRef, useState } from 'react';
-import { Alert, LayoutChangeEvent, View } from 'react-native';
+import { useRef } from 'react';
+import { Alert, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
-import InGameButton from './ui/InGameButton';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -27,16 +26,11 @@ interface DareDisplayProps {
 
 export default function DareDisplay({ dare, currentTurn, players, hideDare }: DareDisplayProps) {
   const ref = useRef<View | null>(null);
-  const [heightBlock, setHeightBlock] = useState(300);
+
   const { vibrate } = useVibration();
 
   const colors = useTheme();
   const { currentPackage, mode } = useRouletteGame();
-
-  const handleLayout = (event: LayoutChangeEvent) => {
-    const { height } = event.nativeEvent.layout;
-    setHeightBlock(height); // обновляем высоту
-  };
 
   const onPressDrunk = () => {
     vibrate();
@@ -69,7 +63,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
       exiting={animationEngine.slideOutLeft(0)}
     >
       <Grid gap={130}>
-        <View ref={ref} onLayout={handleLayout}>
+        <View ref={ref}>
           <Grid
             paddingVertical={30}
             paddingHorizontal={30}
@@ -120,8 +114,14 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
         <Grid row width="100%" paddingHorizontal={40} space="lg">
           {dare.alcohol && mode == 'drink' ? (
             <>
-              <Grid flex={0.5} gap={20}>
-                <InGameButton onPress={onPressDrunk} color={colors.background.secondary} title="Alcohol" />
+              <Grid flex={0.5} gap={13}>
+                <Button
+                  title={'Alcohol'}
+                  onPress={onPressDrunk}
+                  gradientColors={[colors.background.secondary, colors.background.secondary]}
+                  borderColor="transparent"
+                />
+                {/* <InGameButton onPress={onPressDrunk} color={colors.background.secondary} title="Alcohol" /> */}
                 <Grid align="center" row justfity="center" space="sm">
                   <Entypo name="drink" size={15} color={colors.text.disabled} />
                   <Typography textAlign="center" variant="caption-1" color="disabled">
@@ -130,7 +130,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                 </Grid>
               </Grid>
               <Grid flex={mode == 'drink' ? 0.5 : 1}>
-                <InGameButton title="Done" onPress={onPressDry} />
+                <Button title={'Done'} onPress={onPressDry} />
+                {/* <InGameButton title="Done" onPress={onPressDry} /> */}
               </Grid>
             </>
           ) : (

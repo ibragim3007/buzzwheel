@@ -35,7 +35,7 @@ export default function SettingItem({
     <Pressable onPress={onPress}>
       <Grid
         style={{
-          borderRadius: 16,
+          borderRadius: colors.styles.borderRadiusDefault,
         }}
         // height={50}
         color={color || (danger ? colors.background.error : colors.background.primary)}
