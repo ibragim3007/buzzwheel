@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Snack Challenge",
+  "packageType": "default",
+  "description": "Tasty and crazy challenges with food and drinks. Mix, sip, and experiment!",
+  "imageEncoded": "2f1c884e-8ae2-4e67-9ac6-8fc471732f82.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Blind Taste Tester",
+      "action": "${c_player}, with eyes covered, taste a spoonful of whatever ${r_player} gives you and guess the ingredient.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Surprise Sandwich",
+      "action": "${c_player}, make a sandwich from three random items and eat it.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Spice Shot",
+      "action": "${c_player}, drink a sip of water with a pinch of hot pepper. No grimacing!",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Spread",
+      "action": "Everyone spreads a random sauce on bread and eats. Anyone who winces drinks.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Salty Dessert",
+      "action": "${c_player}, sprinkle salt on half a cookie and eat it silently.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cocktail Roulette",
+      "action": "${c_player}, mix two different drinks chosen by ${r_player} and take a sip.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Crunch Echo",
+      "action": "${c_player}, crunch any snack loudly and say ‘delicious’ three times.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cheese Smile",
+      "action": "${c_player}, bite a piece of cheese into a smile shape and show it to everyone.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fridge Combo",
+      "action": "${c_player}, mix three fridge drinks in one glass and chug without stopping.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Everyone’s a Gourmet",
+      "action": "Each person eats a spoon of ketchup + mayo. Anyone who refuses drinks.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Fruit Rap",
+      "action": "${c_player}, wrap a mandarin with a napkin like a microphone and rap a short verse about food.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Fork Critic",
+      "action": "${c_player}, pretend you’re judging a fancy dish while tasting a French fry.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cucumber Giggles",
+      "action": "${c_player}, bite a cucumber and laugh for 10 seconds without swallowing.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Wild Toast",
+      "action": "${c_player}, invent an absurd toast about kefir and say it raising a glass of water.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chocolate + Chips",
+      "action": "${c_player}, eat a piece of chocolate together with a chip in one bite.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Water Sommeliers",
+      "action": "Everyone sips water describing the ‘after‑taste’. Fail → drink.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Porridge Clap",
+      "action": "${c_player}, slap a bowl of porridge (real or imaginary) and say ‘masterpiece’.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spicy Dare",
+      "action": "${c_player}, eat a chili slice. You may swallow a drink only after 30 s.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Friendship Sandwich",
+      "action": "Make a shared sandwich: each adds one ingredient then take turns biting.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Reverse Roll",
+      "action": "${c_player}, skip the rice! Wrap a slice of bread with nori and eat it.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Foamy ’Stache",
+      "action": "${c_player}, take a sip of a fizzy drink and photo your foam moustache.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Juice‑Milk Mix",
+      "action": "${c_player}, mix juice with a little milk, drink, describe the taste in one word.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Everyone’s a Bartender",
+      "action": "Each names a weird cocktail ingredient. ${r_player} mixes and drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Spoon Dance",
+      "action": "${c_player}, grip a spoon between your teeth and dance for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Flip the Glass",
+      "action": "${c_player}, drink water holding the glass by the very bottom with two fingers.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Egg Question",
+      "action": "${c_player}, down a raw egg or take two big gulps of your drink.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fruit Ring‑a‑Ring",
+      "action": "Everyone grabs a fruit and spins around the table for 10 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Sugar Snow",
+      "action": "${c_player}, pour a pinch of sugar on your tongue and say ‘snowflake’.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spice Sniffer",
+      "action": "${c_player}, guess a spice by smell—the one ${r_player} picks.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Super Smoothie",
+      "action": "${c_player}, name 4 ingredients for the perfect smoothie. Each miss → a gulp.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Everyone’s a Chef",
+      "action": "Invent a dish from ‘whatever’s here’. ${r_player} crowns the best; others drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mayo Mastiff",
+      "action": "${c_player}, eat a teaspoon of mayo without a face.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chew Loud",
+      "action": "${c_player}, crunch a chip louder than everyone for 5 s. Too quiet? extra gulp.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Unsweet Dessert",
+      "action": "${c_player}, sprinkle any dessert with salt and eat it.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Water Tasters",
+      "action": "Describe plain water like fine wine. Dullest description drinks.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Onion Braveheart",
+      "action": "${c_player}, bite raw onion. Refuse → two gulps.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chocolate + Salt",
+      "action": "${c_player}, dip a chocolate piece in salt and eat it.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Eat the Rainbow",
+      "action": "${c_player}, eat five foods of different colours in a row.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Buddy Cocktail",
+      "action": "${c_player} and ${r_player} each mix a drink for the other and swap.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pepper + Milk",
+      "action": "${c_player}, wash down a chili bite with milk and say ‘easy’.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hands‑Free Salad",
+      "action": "${c_player}, eat a piece of salad without using your hands.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Everyone’s a Barista",
+      "action": "Describe the perfect coffee taste. Dullest person drinks.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Soup Story",
+      "action": "${c_player}, tell a short fairy‑tale about soup starring ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Patty King",
+      "action": "${c_player}, act out a hamburger ad so everyone wants one.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Food Tower",
+      "action": "${c_player}, build a 6‑crouton tower. If it collapses—you drink.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gourmet Critics",
+      "action": "Rate water 1–10. Anyone giving 1 or 10 drinks.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Honey + Lemon",
+      "action": "${c_player}, eat a spoon of honey then bite a lemon immediately.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Striped Drink",
+      "action": "${c_player}, layer three liquids into a drink and down it.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cheese Test",
+      "action": "${c_player}, blind‑taste two cheeses and guess which is which.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Ice‑Cream Shamans",
+      "action": "Name the wildest ice‑cream flavour you’d try. Hesitate → drink.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}

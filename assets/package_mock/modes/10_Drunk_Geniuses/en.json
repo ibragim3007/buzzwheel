@@ -1,0 +1,277 @@
+{
+  "id": 10,
+  "name": "Boozy Brainiacs",
+  "packageType": "default",
+  "description": "A boozy quiz: every wrong answer sinks you closer to the bottom of your glass. Let's test your knowledge!",
+  "imageEncoded": "2c529522-b46d-4904-a6da-ae2e97bd7e1d.png",
+  "isFree": false,
+  "dares": [
+    { "title": "No‑Calculator Math", "action": "${c_player}, what's 17 × 8?", "type": "player", "alcohol": 1 },
+    { "title": "Capital Quiz", "action": "${c_player}, name the capital of Canada.", "type": "player", "alcohol": 1 },
+    {
+      "title": "Flag Guess",
+      "action": "${c_player}, which country's flag has a maple leaf?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Space First",
+      "action": "${c_player}, who was the first human in space?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chemical Symbol",
+      "action": "${c_player}, what's the chemical symbol for gold?",
+      "type": "player",
+      "alcohol": 1
+    },
+    { "title": "Who Wrote It?", "action": "${c_player}, who wrote the novel '1984'?", "type": "player", "alcohol": 1 },
+    {
+      "title": "Speedy Translation",
+      "action": "${c_player}, translate the word 'свобода' into English.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beatles Birthplace",
+      "action": "${c_player}, in which city were The Beatles born?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Exact Year",
+      "action": "${c_player}, in what year did the USSR dissolve?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sports Timer",
+      "action": "${c_player}, how many minutes is one half in football (soccer)?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Math Blitz",
+      "action": "${c_player}, what's the square root of 144?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Greek War God",
+      "action": "${c_player}, who was the god of war in Greek mythology?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Planet Trio",
+      "action": "${c_player}, name any three planets in the Solar System back‑to‑back.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Literary Sidekick",
+      "action": "${c_player}, what's the surname of the doctor in the Sherlock series?",
+      "type": "player",
+      "alcohol": 1
+    },
+    { "title": "French Leader 1804", "action": "${c_player}, who led France in 1804?", "type": "player", "alcohol": 2 },
+    {
+      "title": "River City",
+      "action": "${c_player}, which city does the Neva River flow through?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Richter Measures?",
+      "action": "${c_player}, what does the Richter scale measure?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "HTML Decode",
+      "action": "${c_player}, what does the acronym HTML stand for?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Paella Origin",
+      "action": "${c_player}, which country is the dish 'paella' from?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tricky Capital",
+      "action": "${c_player}, what's the capital of New Zealand?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Water Formula",
+      "action": "${c_player}, write the chemical formula for water.",
+      "type": "player",
+      "alcohol": 1
+    },
+    { "title": "Titanic Star", "action": "${c_player}, who played Jack in 'Titanic'?", "type": "player", "alcohol": 1 },
+    {
+      "title": "Women's Day",
+      "action": "${c_player}, on which date is International Women's Day celebrated?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bitten Apple Logo",
+      "action": "${c_player}, which company's logo is a bitten apple?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Motion Laws",
+      "action": "${c_player}, which scientist formulated the three laws of motion?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Alphabet Animal March",
+      "action": "Go around naming animals in alphabetical order. Mistake — sip!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Capital Relay",
+      "action": "Take turns naming world capitals. Repeat — sip!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Count to Ten",
+      "action": "Say numbers 1‑10 in turn, but clap instead of saying 5. Error — drink.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Movie Quotes",
+      "action": "Keep naming movie quotes without pausing. Slip up — sip.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Song Chain",
+      "action": "Each names a song that starts with the last letter of the previous.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Brand Marathon",
+      "action": "Name clothing brands clockwise. Repeat or pause — drink!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Football Clubs",
+      "action": "List football clubs in turn. Mistake — drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    { "title": "Color Round", "action": "Quickly name a unique color. Repeat — sip.", "type": "all", "alcohol": 1 },
+    {
+      "title": "Proverb Puzzle",
+      "action": "One starts a proverb, the next continues it. Fail — drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "World Languages",
+      "action": "List languages around the circle. Hesitate — drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Flag Color",
+      "action": "${c_player}, which color is NOT on the flag of France?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Espresso Origin",
+      "action": "${c_player}, espresso originated in which country?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bio Blitz",
+      "action": "${c_player}, how many molars does an adult human have?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "IPO Meaning",
+      "action": "${c_player}, what does the acronym 'IPO' stand for?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Most‑Translated Book",
+      "action": "${c_player}, which book has been translated into the most languages?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Earth's Radius",
+      "action": "${c_player}, roughly how many kilometers is Earth's radius?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Russia Dial Code",
+      "action": "${c_player}, what's Russia's international phone code?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Light‑Bulb Patent",
+      "action": "${c_player}, who patented the first incandescent light bulb?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Grammar Check",
+      "action": "${c_player}, what part of speech is the word 'beautifully'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Octopus Hearts",
+      "action": "${c_player}, how many hearts does an octopus have?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Constellation Chain",
+      "action": "Name constellations in turn. Hesitation — sip.",
+      "type": "all",
+      "alcohol": 2
+    },
+    { "title": "Alphabet Movie Challenge", "action": "Name movies A‑Z. Slip — drink.", "type": "all", "alcohol": 2 },
+    { "title": "Body‑Part Chain", "action": "List human body parts. Repeat — sip.", "type": "all", "alcohol": 1 },
+    {
+      "title": "City Word Chain",
+      "action": "Each names a city starting with the last letter of the previous.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Final Blitz",
+      "action": "${c_player}, name 5 European countries in 20 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

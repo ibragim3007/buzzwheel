@@ -1,0 +1,549 @@
+{
+  "id": 4,
+  "name": "CHAOS Mode",
+  "packageType": "default",
+  "description": "Crazy challenges that will shatter every boundary of decency. Only for the most daring!",
+  "imageEncoded": "954fe94f-1850-475e-806c-5cd50a704d80.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Ridiculous Spy",
+      "action": "${c_player}, sneak across the entire room, acting like a spy.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Reverse Conversation",
+      "action": "${c_player}, try speaking backward for 15 seconds. The others judge how well you did.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Wild Animal",
+      "action": "${c_player}, become the animal the other players choose and behave accordingly for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Minute of Panic",
+      "action": "All players simultaneously act panicked on a sinking ship for 20 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Scream Song",
+      "action": "${c_player}, sing a well-known song only by screaming it at the top of your lungs.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Mad Stylist",
+      "action": "${c_player}, create a crazy hairstyle or outfit for ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Great Artist",
+      "action": "${c_player}, draw ${r_player}’s portrait in the air. The others rate the likeness.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dance of Chaos",
+      "action": "All players dance at the same time in totally different styles for 20 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Panicked TV Host",
+      "action": "${c_player}, pretend you’re hosting a show when aliens suddenly attack the studio.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Zombie Walk",
+      "action": "${c_player}, walk around the room like a zombie and try to “scare” ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Yelling Compliment",
+      "action": "${c_player}, loudly— and strangely— compliment any player.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Culinary Fantasy",
+      "action": "${c_player}, in 15 seconds invent the most disgusting dish you can and describe its recipe.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Radical Politician",
+      "action": "${c_player}, give a political speech demanding that everyone start dancing immediately.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Orchestra of Madness",
+      "action": "All players pretend to play the most absurd instruments for 20 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Talking Cat",
+      "action": "${c_player}, act as a talking cat who’s complaining about its hard life.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Absurd Argument",
+      "action": "${c_player}, start an argument with ${r_player} on the most ridiculous topic.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Out-of-Control Robot",
+      "action": "${c_player}, turn into a robot that’s short-circuited and move chaotically for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Absurd Forecast",
+      "action": "${c_player}, give tomorrow’s weather forecast promising a rain of cats and dogs.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Mad Professor",
+      "action": "${c_player}, deliver a lecture on “how to properly do absolutely nothing.”",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Group Madness",
+      "action": "Everyone shouts their own name in different voices and tones for 10 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Clothes Inside Out",
+      "action": "${c_player}, put on any item of clothing backwards and keep it on until your next turn.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ridiculous Dance",
+      "action": "${c_player}, dance as if a balloon is tied to each leg.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pose of Chaos",
+      "action": "${c_player}, freeze in the weirdest pose you can and hold it for ${rand(10,20)} seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Monkeying Around",
+      "action": "All players pull faces, jump, and make monkey noises for 15 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Loud Whisper",
+      "action": "${c_player}, whisper the phrase “I’m fine” as loudly as you can.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Workout for No Reason",
+      "action": "${c_player}, do ${rand(5,10)} squats and shout something weird after each one.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Living Alarm Clock",
+      "action": "${c_player}, act like an alarm clock going off at 5 a.m., using your body and voice.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Team Ring Dance",
+      "action": "All players form a ring around ${r_player} and shout random words while circling.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Power of Instinct",
+      "action": "${c_player}, close your eyes and find ${r_player} by crawling on all fours.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 25
+    },
+    {
+      "title": "Random Object",
+      "action": "${c_player}, pick any nearby object and use it for the wrong purpose for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Single-Letter Talk",
+      "action": "${c_player}, for 15 seconds speak using only words that start with \"${r_letter}\".",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Model Walk",
+      "action": "${c_player}, walk across the room like a runway model while balancing something on your head.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Silent Tantrum",
+      "action": "${c_player}, act out a tantrum without making any sound.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Mirror Reflection",
+      "action": "${c_player} and ${r_player} act as mirrors: one copies the other’s movements for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Explosion of Emotions",
+      "action": "${c_player}, in 10 seconds show 3 strong emotions with the strangest faces you can.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Voice Not Your Own",
+      "action": "${c_player}, speak in a cartoon character’s voice for the next round.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Invisible Chair",
+      "action": "${c_player}, sit on an imaginary chair and stay like that for 10 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Double Challenge",
+      "action": "${c_player} and ${r_player} must each perform one silly move, one after the other.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Everything Opposite",
+      "action": "${c_player}, for 30 seconds do everything “backwards”: say “no” when you mean “yes,” and vice versa.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Rubber-Boot Jumps",
+      "action": "${c_player}, jump 10 times in rubber boots (real or imaginary) while loudly shouting “Woo!”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Glass Carousel",
+      "action": "All players pass an imaginary glass around, saying “chirk” each time.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Frog Hops",
+      "action": "${c_player}, hop like a frog to ${r_player} and back.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Invisible Train",
+      "action": "${c_player}, make 3 laps around the room pretending you’re dragging an invisible train behind you.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Team Wave",
+      "action": "All players create a hand wave in sequence—whoever is late drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Jump Rope Without Rope",
+      "action": "${c_player}, skip an imaginary rope ${rand(10,15)} times.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Volume Ramp",
+      "action": "${c_player}, say 5 words in a row, each one louder than the previous.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Facial Relay",
+      "action": "Players take turns making a funny face until ${c_player} says “stop.”",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Lap of Honor",
+      "action": "${c_player}, tiptoe around the room whispering “I’m a hero.”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Imagination Bend",
+      "action": "${c_player}, bend forward as if to kiss the floor and hold for 10 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Vegetable March",
+      "action": "All players march in place pretending they are different vegetables.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Mask of Madness",
+      "action": "${c_player}, cover your hair with a scarf (real or imaginary) and say “ha-ha” after every word.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Echo Steps",
+      "action": "${c_player}, take 5 steps forward, loudly echoing your own voice after each step.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Speedy Heels",
+      "action": "${c_player}, walk quickly on your heels for ${rand(10,15)} seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Group Silence",
+      "action": "Everyone keeps silent and gestures until ${r_player} says “speak.”",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Exchange of Glances",
+      "action": "${c_player} and ${r_player}, look into each other’s eyes and blink in sync for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Jump Over Your Shadow",
+      "action": "${c_player}, try to jump over your own shadow (or where it used to be).",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Foot Drawing",
+      "action": "${c_player}, “draw” an imaginary picture in the air with your toe.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Reverse Countdown",
+      "action": "${c_player}, quickly count down aloud from ${rand(10,20)} to 1 without mistakes.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Jump Relay",
+      "action": "${c_player} and ${r_player}, jump in place alternately ${rand(5,10)} times.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pillow Fight",
+      "action": "${c_player} and ${r_player}, enact a short fight with imaginary pillows.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Zombie March",
+      "action": "${c_player}, walk across the room like a zombie, saying “brains.”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Laughter for No Reason",
+      "action": "All players laugh loudly and ridiculously for 10 seconds nonstop.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Crab Walk",
+      "action": "${c_player}, move sideways across the room like a crab for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Chicken Dance",
+      "action": "${c_player}, perform a short, chaotic chicken dance.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 0
+    },
+    {
+      "title": "Animal Roll-Call",
+      "action": "Players take turns loudly imitating different animal sounds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Invisible Staircase",
+      "action": "${c_player}, pretend to climb invisible stairs for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Talk to the Wall",
+      "action": "${c_player}, have an emotional argument with the wall.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Mad Conductor",
+      "action": "${c_player}, chaotically conduct an imaginary orchestra.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Seagull Screams",
+      "action": "All players scream like seagulls for 10 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Funny Walk",
+      "action": "${c_player}, show the silliest walk you can think of.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Friend Parody",
+      "action": "${c_player}, do a short parody of ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Arm Windmill",
+      "action": "${c_player}, rotate your arms like a windmill while saying “wind” for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Penguin Dance",
+      "action": "${c_player}, act like a penguin dancing in a nightclub.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Floor Swimming",
+      "action": "${c_player}, pretend to swim crawl stroke across the floor.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Loud Laugh",
+      "action": "${c_player}, laugh loudly and abruptly, even if nothing is funny.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Shaman Wild Dance",
+      "action": "${c_player}, perform a short shaman dance to summon rain.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Imaginary Sword Fight",
+      "action": "${c_player} and ${r_player}, enact a short duel with imaginary swords.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Crazy Walk",
+      "action": "${c_player}, walk as if on a tightrope over an abyss.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Spinning Circles",
+      "action": "${c_player}, spin in place ${rand(5,10)} times and then try to stand still.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    }
+  ]
+}

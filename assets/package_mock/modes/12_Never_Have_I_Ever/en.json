@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Never Have I Ever",
+  "packageType": "default",
+  "description": "Classic mode that uncovers the wildest secrets of the players. Let’s see who’s the most experienced!",
+  "imageEncoded": "ffcbcd22-7596-4e08-9b0b-e7f1dc210335.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Secret Party",
+      "action": "${c_player}, say: \"Never have I ever been to a party I regretted the next morning.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Petty Theft",
+      "action": "${c_player}, say: \"Never have I ever stolen loose change from a store.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Random Kiss",
+      "action": "${c_player}, say: \"Never have I ever kissed a stranger on a dare.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Broken Heart Exit",
+      "action": "${c_player}, say: \"Never have I ever walked out of a relationship without explanation.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Spontaneous Trip",
+      "action": "${c_player}, say: \"Never have I ever bought a ticket to another city on a whim.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "School Fight",
+      "action": "${c_player}, say: \"Never have I ever gotten into a school fight.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Overslept Exam",
+      "action": "${c_player}, say: \"Never have I ever slept through an important exam.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Teacher Crush",
+      "action": "${c_player}, say: \"Never have I ever had a crush on a teacher or professor.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Drunken Tattoo",
+      "action": "${c_player}, say: \"Never have I ever gotten a tattoo while drunk.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Terminal Nap",
+      "action": "${c_player}, say: \"Never have I ever woken up at the last stop on public transport.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Office Romance",
+      "action": "${c_player}, say: \"Never have I ever started an office romance.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wrong Ride",
+      "action": "${c_player}, say: \"Never have I ever taken the wrong train or bus.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sleep-Talking",
+      "action": "${c_player}, say: \"Never have I ever talked in my sleep in front of others.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mirror Striptease",
+      "action": "${c_player}, say: \"Never have I ever danced a striptease in front of a mirror.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Missed Flight",
+      "action": "${c_player}, say: \"Never have I ever missed a flight.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fake Sick Day",
+      "action": "${c_player}, say: \"Never have I ever taken sick leave when I wasn’t sick.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Late-Night Ex Chat",
+      "action": "${c_player}, say: \"Never have I ever texted my ex late at night.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Skinny-Dipping",
+      "action": "${c_player}, say: \"Never have I ever gone skinny-dipping.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Drowned Phone",
+      "action": "${c_player}, say: \"Never have I ever accidentally dropped my phone in water.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret House Party",
+      "action": "${c_player}, say: \"Never have I ever thrown a secret house party without my parents knowing.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Skipped School Day",
+      "action": "${c_player}, say: \"Never have I ever skipped an entire school day.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wrong Recipient",
+      "action": "${c_player}, say: \"Never have I ever sent an intimate message to the wrong person.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cringe Video",
+      "action": "${c_player}, say: \"Never have I ever filmed a cringey video for social media.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spy Account",
+      "action": "${c_player}, say: \"Never have I ever created a fake profile to spy on someone.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Midnight Snack",
+      "action": "${c_player}, say: \"Never have I ever eaten at night while standing in front of the fridge.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Blind Date",
+      "action": "${c_player}, say: \"Never have I ever gone on a blind date.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Scared the Neighbors",
+      "action": "${c_player}, say: \"Never have I ever scared my neighbors with strange noises.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Big Gamble",
+      "action": "${c_player}, say: \"Never have I ever lost a large sum of money gambling.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Broke & Hid",
+      "action": "${c_player}, say: \"Never have I ever broken someone’s belongings and kept quiet about it.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ran from Security",
+      "action": "${c_player}, say: \"Never have I ever run from security or the police.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tag Showing",
+      "action": "${c_player}, say: \"Never have I ever left the house with the price tag still on my clothes.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ate Insects",
+      "action": "${c_player}, say: \"Never have I ever eaten insects.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Slept at Work",
+      "action": "${c_player}, say: \"Never have I ever fallen asleep at work or in a lecture.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hidden Tattoo",
+      "action": "${c_player}, say: \"Never have I ever hidden a tattoo from my parents.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Weird Fetish",
+      "action": "${c_player}, say: \"Never have I ever had a strange attraction to objects.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Accidental Like",
+      "action": "${c_player}, say: \"Never have I ever accidentally liked my ex’s photo.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Revenge on Ex",
+      "action": "${c_player}, say: \"Never have I ever gotten revenge on an ex-partner.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Childhood Escape",
+      "action": "${c_player}, say: \"Never have I ever tried to run away from home as a kid.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fake Illness",
+      "action": "${c_player}, say: \"Never have I ever pretended to be sick to cancel plans.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Teacher Crush 2.0",
+      "action": "${c_player}, say: \"Never have I ever fallen in love with my teacher.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Eavesdropper",
+      "action": "${c_player}, say: \"Never have I ever deliberately eavesdropped on someone’s conversation.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wrong Car",
+      "action": "${c_player}, say: \"Never have I ever gotten into the wrong car by mistake.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fare Dodger",
+      "action": "${c_player}, say: \"Never have I ever ridden public transport without paying.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Heartbreaker",
+      "action": "${c_player}, say: \"Never have I ever intentionally broken someone’s heart.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Test Escape",
+      "action": "${c_player}, say: \"Never have I ever skipped a test.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hotel Souvenirs",
+      "action": "${c_player}, say: \"Never have I ever taken things from a hotel room.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Woke Up Elsewhere",
+      "action": "${c_player}, say: \"Never have I ever woken up in a stranger’s place with no idea how I got there.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie While Driving",
+      "action": "${c_player}, say: \"Never have I ever taken a selfie while driving.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Night-Time Fast-Food",
+      "action": "${c_player}, say: \"Never have I ever eaten fast food at night while on a diet.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fake Age",
+      "action": "${c_player}, say: \"Never have I ever lied about my age.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Movie Sneak-In",
+      "action": "${c_player}, say: \"Never have I ever snuck into a movie theater without a ticket.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Stage Fright Fail",
+      "action": "${c_player}, say: \"Never have I ever forgotten my lines on stage.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fake Skill",
+      "action": "${c_player}, say: \"Never have I ever bragged about a skill I don’t actually have.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Stole Roommate’s Food",
+      "action": "${c_player}, say: \"Never have I ever stolen food from a roommate’s fridge.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Alias",
+      "action": "I have never created an account under someone else’s name.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wings to Nowhere",
+      "action": "I have never left for another city without money or a plan.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Dawn Call",
+      "action": "I have never called an ex at dawn.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Fake Tattoo Bluff",
+      "action": "I have never claimed a temporary tattoo was real.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Dare Dodge",
+      "action": "I have never backed out of a dare and then disappeared.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Spilled a Secret",
+      "action": "I have never revealed someone’s secret after promising to keep it.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Epic Public Fall",
+      "action": "I have never fallen in public and pretended it was a dance move.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Forged a Signature",
+      "action": "I have never forged my parents’ signature.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Celebrity DM",
+      "action": "I have never slid into a celebrity’s DMs.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Mystery Tickets",
+      "action": "I have never bought concert tickets without knowing the performer.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

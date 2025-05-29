@@ -11,6 +11,8 @@ import DrunkGeniusRu from './10_Drunk_Geniuses/ru.json';
 import SnackAttact from './11_Snack_Attack_Challenge/ru.json';
 import NeverHave from './12_Never_Have_I_Ever/ru.json';
 
+import freeModeEn from './1_free_mode/en.json';
+
 export const modesRu = [
   freeModeRu,
   flirtyDuoRu,
@@ -26,6 +28,11 @@ export const modesRu = [
   NeverHave,
 ];
 
+export const modesEn = {
+  freeModeEn,
+};
+
 export const modes = {
   ru: modesRu,
+  en: modesEn,
 };

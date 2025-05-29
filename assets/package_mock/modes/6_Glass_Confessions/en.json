@@ -1,0 +1,304 @@
+{
+  "id": 6,
+  "name": "Confession at the Bottom of the Glass",
+  "packageType": "default",
+  "description": "Bold questions that uncover the group’s deepest secrets. Ready for the truth?",
+  "imageEncoded": "d8bcd8ca-d9ec-49a3-a141-bd9cb4ac965c.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Most Daring Act",
+      "action": "${c_player}, what is the craziest thing you’ve ever done?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Date",
+      "action": "${c_player}, have you ever had a secret romance?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Shameful Secret",
+      "action": "${r_player}, which secret still makes you blush?",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "First Love",
+      "action": "${c_player}, who was your first love?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Forbidden Desire",
+      "action": "${c_player}, name one hidden desire.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hidden Envy",
+      "action": "${c_player}, who in the group do you envy the most and why?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Awkward Moment",
+      "action": "${c_player}, what’s the most embarrassing moment of your life?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Worst Kiss",
+      "action": "${c_player}, tell us about your worst kiss.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Biggest Lie",
+      "action": "${c_player}, what’s the biggest lie you’ve told someone close?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Forbidden Crush",
+      "action": "${c_player}, who did you like even though it was forbidden or awkward?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Secret Weakness",
+      "action": "${c_player}, what secret weakness do you have that few people know about?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Strangest Place",
+      "action": "${c_player}, what’s the most unusual place you’ve kissed someone?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Biggest Regret",
+      "action": "${c_player}, what do you regret most in life?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fake Feelings",
+      "action": "${r_player}, have you ever pretended to be in love?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Hidden Feelings",
+      "action": "${c_player}, who in this group do you like more than just a friend?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Boldest Fantasy",
+      "action": "${c_player}, what’s your boldest fantasy?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rejected Confession",
+      "action": "${c_player}, have you ever been rejected?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Double Game",
+      "action": "${c_player}, have you ever dated two people at the same time?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Worst Deed",
+      "action": "${c_player}, what’s the worst thing you’ve ever done?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Bad Habit",
+      "action": "${c_player}, what’s your worst habit?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dating Disaster",
+      "action": "${c_player}, tell us about your most disastrous date.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Loveless Relationship",
+      "action": "${c_player}, have you ever been in a relationship without love?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Uncomfortable Truth",
+      "action": "${c_player}, what awkward truth do you still hide from loved ones?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Odd Attraction",
+      "action": "${c_player}, tell us about your strangest romantic crush.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hidden Grudge",
+      "action": "${r_player}, who here do you still hold a grudge against?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Worst Gift",
+      "action": "${c_player}, what’s the worst gift you’ve ever received?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Public Embarrassment",
+      "action": "${c_player}, have you ever had a public blunder?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bad Friend",
+      "action": "${c_player}, have you ever betrayed a friend?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hidden Fear",
+      "action": "${c_player}, what fear do you keep secret from everyone?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Love for an Ex",
+      "action": "${c_player}, do you still have feelings for an ex?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Guilty Pleasure",
+      "action": "${c_player}, what’s your guilty pleasure?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Dream",
+      "action": "${c_player}, have you had a dream you’re embarrassed to share?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wildest Adventure",
+      "action": "${c_player}, what’s the boldest adventure you’ve taken on?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lie for Gain",
+      "action": "${r_player}, have you ever lied for your own benefit?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Most Painful Breakup",
+      "action": "${c_player}, which breakup hurt you the most?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Messaging",
+      "action": "${c_player}, are you keeping a secret chat right now?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Broken Promise",
+      "action": "${c_player}, what promise have you broken?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hidden Contempt",
+      "action": "${c_player}, whom here do you secretly despise at times?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Secret Friend",
+      "action": "${c_player}, do you have a secret friend nobody knows about?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Inappropriate Thoughts",
+      "action": "${c_player}, what are the most inappropriate thoughts that have crossed your mind at the wrong time?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Using Someone",
+      "action": "${c_player}, have you ever used someone for your own benefit?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hidden Dissatisfaction",
+      "action": "${r_player}, what secretly bothers you about the group?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Unexpected Rejection",
+      "action": "${c_player}, whom have you turned down unexpectedly and why?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Double Life",
+      "action": "${c_player}, have you ever led a double life?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Unmet Expectations",
+      "action": "${c_player}, who in the group has let you down?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Judgment",
+      "action": "${c_player}, what do you secretly judge ${r_player} for?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Betrayal for Love",
+      "action": "${c_player}, would you betray a friend for love?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lying to Yourself",
+      "action": "${c_player}, what do you still lie to yourself about?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Million-Dollar Question",
+      "action": "${c_player}, would you reveal all your secrets for a million dollars?",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

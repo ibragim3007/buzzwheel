@@ -1,0 +1,265 @@
+{
+  "id": 3,
+  "name": "50 Shades",
+  "packageType": "pair",
+  "description": "Hot challenges and very candid questions for couples who aren’t afraid to cross the line.",
+  "imageEncoded": "d61a609e-a3db-4d94-88e1-47f460cc0616.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Whisper of Passion",
+      "action": "${c_player}, whisper to ${r_player} which touch you like the most.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minute of Revelation",
+      "action": "${c_player}, share your boldest fantasy with ${r_player}.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "No Closer Than This",
+      "action": "${c_player}, slowly move toward ${r_player} until there’s almost no space left between you, and freeze for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Forbidden Topic",
+      "action": "${c_player}, ask ${r_player} the most candid question you’ve long wanted to ask.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "No Hands",
+      "action": "${c_player}, touch ${r_player} with any part of your body except your hands.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Secret Place",
+      "action": "${c_player}, tell ${r_player} the most unusual place where you’d like to be alone with them.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Eyes to Eyes",
+      "action": "${c_player} and ${r_player}, silently look into each other’s eyes for 20 seconds, slowly moving closer.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "One Word",
+      "action": "${c_player}, tell ${r_player} one word that gives you goosebumps.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Confession in the Dark",
+      "action": "${c_player}, close your eyes and make a very personal confession to ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Limits of Permission",
+      "action": "${c_player}, quietly tell ${r_player} what you’d agree to if you had only one night together.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Draw a Desire",
+      "action": "${c_player}, gently trace your secret desire on ${r_player}'s body with your finger.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Breath of Closeness",
+      "action": "Bring your lips as close as possible without touching and stay like that for 15 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Fantasy Out Loud",
+      "action": "${c_player}, briefly tell ${r_player} what private scenario with them you think about most often.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Game Rules",
+      "action": "${c_player}, propose one \"rule\" for the next hour that ${r_player} must follow.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Secret Gesture",
+      "action": "${c_player}, show ${r_player} which gesture of theirs you find most arousing.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Conversation Without Words",
+      "action": "Try to communicate your desire to each other using only facial expressions and eye contact.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Personal Massage",
+      "action": "${c_player}, give ${r_player} a sensual neck massage for 20 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Nothing but the Truth",
+      "action": "${c_player}, answer ${r_player}'s question as honestly as possible, no matter how candid it is.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dangerous Proximity",
+      "action": "${c_player}, whisper in ${r_player}'s ear the most explicit phrase that comes to mind right now.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Desire for Two",
+      "action": "On the count of three, say aloud your most intimate desire for each other.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Forbidden Zone Kiss",
+      "action": "${c_player}, gently kiss ${r_player} in any unexpected spot on their body.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Blind Touch",
+      "action": "${c_player}, with eyes closed, run your hand over ${r_player}'s body, stopping wherever you like.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Minute of Passion",
+      "action": "Kiss for a full minute without breaking contact.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 60
+    },
+    {
+      "title": "Scent of Arousal",
+      "action": "${c_player}, inhale the scent of ${r_player}'s skin at the neck and describe how it makes you feel.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Secret Whisper",
+      "action": "${c_player}, whisper in ${r_player}'s ear what you want to do with them right now.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Close Contact",
+      "action": "${c_player}, press your whole body against ${r_player} and stay like that for 15 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Perfect Touch",
+      "action": "${c_player}, gently run a finger over ${r_player}'s lips.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Candid Massage",
+      "action": "${c_player}, give ${r_player} a sensual shoulder and back massage for 30 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Hot Breath",
+      "action": "${c_player}, let your breath travel along ${r_player}'s neck, barely touching the skin.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Without Words",
+      "action": "${c_player}, show with a gesture or touch what you want from ${r_player} right now.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Private Dance",
+      "action": "${c_player}, perform a short, provocative dance for ${r_player}.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Fantasy Out Loud (Detailed)",
+      "action": "${c_player}, describe to ${r_player} in as much detail as possible your most intimate desire involving them.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sweet Bite",
+      "action": "${c_player}, gently nibble ${r_player}'s earlobe or neck.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Invitation to Intimacy",
+      "action": "${c_player}, softly invite ${r_player} to be alone with you as seductively as possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Absolute Trust",
+      "action": "${c_player}, let ${r_player} touch any part of your body they choose.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "One Breath",
+      "action": "Kiss as if you're sharing a single breath.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Desire by Hand",
+      "action": "${c_player}, using your hands, indicate on ${r_player}'s body the spot you want to kiss right now.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Breath Control",
+      "action": "${c_player}, run your lips along ${r_player}'s collarbones while controlling their breathing.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Eyes and Lips",
+      "action": "Alternate gazes and light lip kisses for 20 seconds.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Forbidden Promise",
+      "action": "${c_player}, whisper to ${r_player} the most explicit promise you're ready to fulfill today.",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

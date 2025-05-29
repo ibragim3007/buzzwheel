@@ -1,0 +1,402 @@
+{
+  "id": 8,
+  "name": "Girls' Night in Heels",
+  "packageType": "default",
+  "description": "Dares and questions about love, beauty, and secrets between girlfriends. What happens here stays between us girls!",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "First Date Story",
+      "action": "${c_player}, tell us about the funniest date you’ve ever been on.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fashion Verdict",
+      "action": "${c_player}, rate ${r_player}’s outfit and give her one fashion tip.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret Crush",
+      "action": "${c_player}, confess who your secret crush was.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beauty or Comfort",
+      "action": "${c_player}, choose — heels all day or go to a date with no makeup?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret Makeup",
+      "action": "${c_player}, what’s one beauty product you secretly love but never admit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Favorite Scent",
+      "action": "${c_player}, which perfume scent do your friends associate with you?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauty Recipe",
+      "action": "${c_player}, share your weirdest beauty trick.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Celebrity Date",
+      "action": "${c_player}, name a celebrity you’d love to go on a date with.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wardrobe Malfunction",
+      "action": "${c_player}, what’s your most awkward clothing moment?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Perfect Day",
+      "action": "${c_player}, describe your perfect girls’ day out.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Best Dressed",
+      "action": "${c_player}, honestly say who looks best tonight.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "First Date Fear",
+      "action": "${c_player}, what secretly scares you the most on a first date?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dress Color No-No",
+      "action": "${c_player}, what color would you never wear and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weird Gift",
+      "action": "${c_player}, share the weirdest gift you’ve ever received.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Role Model Friend",
+      "action": "${c_player}, what habit of ${r_player} do you secretly wish you had?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Dress",
+      "action": "${c_player}, describe your dream dress.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantic Movie Moment",
+      "action": "${c_player}, which romantic movie made you cry?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Love Fortune",
+      "action": "${c_player}, make a love prediction for ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Compliment Time",
+      "action": "${c_player}, give a compliment to each friend at the table.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "First Kiss",
+      "action": "${c_player}, tell us about your first kiss.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hidden Hobby",
+      "action": "${c_player}, what’s one hobby no one knows you have?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Inner Beauty",
+      "action": "${c_player}, what makes a woman beautiful beyond her looks?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Go-To Accessory",
+      "action": "${c_player}, what’s one accessory you always wear and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Forbidden Dessert",
+      "action": "${c_player}, what dessert would you break your diet for?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Little Black Dress",
+      "action": "${c_player}, where would you wear your perfect little black dress?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Heels",
+      "action": "${c_player}, describe the shoes that make you feel like royalty.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Friendly Envy",
+      "action": "${c_player}, what do you genuinely admire about ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Selfie Pro",
+      "action": "${c_player}, show how you take the perfect selfie.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sweet Gesture",
+      "action": "${c_player}, what’s a gesture from a guy that melts your heart?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfect Nails",
+      "action": "${c_player}, what nail style do you consider most stylish?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weirdest Diet",
+      "action": "${c_player}, tell us the weirdest diet you’ve tried.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Slim Secret",
+      "action": "${c_player}, what’s your top trick for staying in shape?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret Influencer",
+      "action": "${c_player}, who’s the influencer you follow secretly?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unforgettable Compliment",
+      "action": "${c_player}, what compliment stuck with you forever?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Expert Friend",
+      "action": "${c_player}, what do your friends consider you an expert in?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels or Sneakers",
+      "action": "${c_player}, what would you wear on a date — heels or sneakers?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hidden Talent",
+      "action": "${c_player}, what secret talent do you have?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Favorite Show",
+      "action": "${c_player}, what show can you watch on repeat forever?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfect Morning",
+      "action": "${c_player}, describe your perfect morning.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Heel Fail",
+      "action": "${c_player}, tell us about a time you hilariously fell in heels.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "1-Minute Makeup",
+      "action": "${c_player}, describe your one-minute makeup routine.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lipstick Check",
+      "action": "${c_player}, what color lipstick is in your bag right now?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Friend in Need",
+      "action": "${c_player}, tell a story when a friend saved your day.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "3AM Call",
+      "action": "${c_player}, which friend would you call first at 3 a.m.?",
+      "type": "player",
+      "alcohol": 1
+    },
+
+    {
+      "title": "Beauty Secret Swap",
+      "action": "Each girl shares one weird beauty hack. Can’t name one? You drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Group Selfie",
+      "action": "Take a group selfie with your funniest face. Refuse? You drink!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Compliment Chain",
+      "action": "Each girl compliments the one to her right. Stumble? You drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Top Accessory",
+      "action": "Everyone shows their favorite accessory. The least-voted one drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Lip Color Match",
+      "action": "Say your favorite lipstick color at the same time. Matches drink together!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Photo Pose-Off",
+      "action": "Everyone strikes their best photo pose. First to laugh — drinks!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Self-Love Shout",
+      "action": "Everyone shouts ‘I love myself!’ at once. Quietest voice drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Nail Check",
+      "action": "Everyone shows their nails. No manicure? You drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels Dance-Off",
+      "action": "Dance in heels for 15 seconds. First to stop — drinks!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Showtime Picks",
+      "action": "Say your favorite show all at once. If it’s unique — assign a drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Girlfriend Fortune",
+      "action": "Predict what’s coming this year for the girl on your right. Can’t do it? Drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Shoe Showdown",
+      "action": "Everyone shows their shoes. Simplest pair — drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Truth or Bluff",
+      "action": "Tell a short story. Others guess if it’s true or not. Wrong guess — drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Sing Your Favorite",
+      "action": "Everyone hums their favorite song. First one to stop — drinks!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Wink War",
+      "action": "All girls wink at the same time. Anyone who forgets — drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret Steal",
+      "action": "Admit which makeup item you'd secretly steal from a friend. Refuse? Drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Favorite Dress",
+      "action": "Describe your favorite dress. Anyone who fumbles — drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Friendship Circle Dance",
+      "action": "Hold hands and dance in a circle for 15 seconds. Break it? Drink!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cheers to Us",
+      "action": "Say a toast to friendship at the same time. Shortest toast — drinks!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Date",
+      "action": "Describe your dream date out loud. Matching details? Drink together!",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

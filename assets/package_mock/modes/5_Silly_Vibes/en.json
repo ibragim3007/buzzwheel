@@ -1,0 +1,531 @@
+{
+  "id": 5,
+  "name": "Silly Shenanigans",
+  "packageType": "default",
+  "description": "Absurd and cheerful challenges you can even play in front of your parents. Kindergarten for grown-ups!",
+  "imageEncoded": "b581a6f6-beb9-40b6-870b-fda247bf89b9.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Baby Elephant Walk",
+      "action": "${c_player}, walk around the room swinging your arm like an elephant’s trunk.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cartoon Voice",
+      "action": "${c_player}, speak in the voice of any cartoon character for the next round.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Athletic Chicken",
+      "action": "${c_player}, act like a chicken that’s working out.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Group Buzz",
+      "action": "All players buzz like bees for 10 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Imaginary Lemon",
+      "action": "${c_player}, pretend to eat a sour lemon and show your reaction.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Slow Robot",
+      "action": "${c_player}, move and talk like a robot for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Happy Kangaroo",
+      "action": "${c_player}, hop around the room like a joyful kangaroo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Serious Little Frog",
+      "action": "${c_player}, squat and act like a very serious frog for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Magic Wand",
+      "action": "${c_player}, grab an imaginary wand and grant one player’s wish.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Group Wave",
+      "action": "Players pass a hand wave around in turn; anyone who slips up drinks.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cheerful Conductor",
+      "action": "${c_player}, happily conduct the other players like an orchestra.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lost Penguin",
+      "action": "${c_player}, waddle around like a penguin who’s lost its home.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sock Talk",
+      "action": "${c_player}, chat with your socks and ask how their day went.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Frozen Yogurt",
+      "action": "${c_player}, freeze in the most ridiculous pose for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Name Roll Call",
+      "action": "Each player quickly and humorously says their name until it comes back to ${c_player}.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Puddle Jumps",
+      "action": "${c_player}, jump in place like you’re splashing in a giant puddle.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Invisibility Hat",
+      "action": "${c_player}, put on an imaginary invisible hat and try to disappear.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Unusual Musician",
+      "action": "${c_player}, play a short tune on an imaginary instrument.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Butterfly Parade",
+      "action": "All players flap their arms like butterfly wings for 15 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Emotional Sandwich",
+      "action": "${c_player}, describe a sandwich recipe using emotions instead of ingredients.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Fish Out of Water",
+      "action": "${c_player}, act like a fish trying to swim on land.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Odd Storyteller",
+      "action": "${c_player}, tell a short story about how ${r_player} became a superhero.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Plasticine Person",
+      "action": "${c_player}, move as if you’re made of modeling clay.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cheerful Applause",
+      "action": "All players clap loudly and happily for ${r_player} for 10 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Silly Walk",
+      "action": "${c_player}, demonstrate a walk that would suit ${r_player} perfectly.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unusual Singer",
+      "action": "${c_player}, sing any song in the voice of an animal chosen by ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Toy Conversation",
+      "action": "${c_player}, talk to an imaginary toy and ask its advice about ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Quick Joke",
+      "action": "${c_player}, invent a short joke about ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Silent Parody",
+      "action": "${c_player}, perform a wordless parody of ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Group Surprise",
+      "action": "All players make a surprised face and stare at ${r_player} for 10 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Sleeping Beauty",
+      "action": "${c_player}, act like Sleeping Beauty and ‘wake up’ when ${r_player} speaks.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Strangest Question",
+      "action": "${c_player}, ask ${r_player} the silliest question you can think of.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chair Road Trip",
+      "action": "${c_player}, sit on a chair and pretend it’s a car. Drive around the room.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Loud Confession",
+      "action": "${c_player}, loudly confess to ${r_player} that you love candy more than friends.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dance of Joy",
+      "action": "All players dance happily until ${r_player} says “stop.”",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "High-Five in the Air",
+      "action": "${c_player}, give an imaginary high-five to each player, starting with ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weird Exercise",
+      "action": "${c_player}, show the oddest exercise that ${r_player} should try to copy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sudden Stop",
+      "action": "${c_player}, start talking and freeze when ${r_player} commands.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Awkward Pause",
+      "action": "${c_player} and ${r_player}, stare at each other silently for 10 seconds without laughing.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Most Important Announcement",
+      "action": "${c_player}, loudly announce that ${r_player} is the best thing that ever happened to you.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Letter from the Past",
+      "action": "${c_player}, share what you would write to your past self in a letter.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Star Guide",
+      "action": "${c_player}, act as a night-sky guide and show the star that represents ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Magic Garden",
+      "action": "${c_player}, describe a magic garden where every player’s wishes grow.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Butterfly Landing",
+      "action": "${c_player}, mimic a butterfly landing on ${r_player}’s hand without touching them.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Portrait of Happiness",
+      "action": "${c_player}, explain what would appear in your portrait of absolute happiness.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rain Music",
+      "action": "All players gently tap fingers like rain while ${r_player} tells a story.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Bedtime Story",
+      "action": "${c_player}, create a brief, kind bedtime tale about ${r_player}’s adventures.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Cloud Ride",
+      "action": "${c_player}, pretend you’re flying on a cloud and invite ${r_player} to join.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream within a Dream",
+      "action": "${c_player}, describe the strangest dream ${r_player} could have.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Living Statue",
+      "action": "${c_player}, become a statue that comes to life and delivers an important message.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Dream Ship",
+      "action": "${c_player}, tell where you’d sail on a ship built from everyone’s dreams.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wind Music",
+      "action": "All players hum softly like the wind while ${r_player} dances like a leaf.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Meeting Yourself",
+      "action": "${c_player}, imagine meeting your future self. What would you ask?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Brushless Painting",
+      "action": "${c_player}, paint an imaginary picture in the air that reflects ${r_player}’s character.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Letter to an Alien",
+      "action": "${c_player}, explain to an alien why ${r_player} is the most important person on Earth.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Bird Concert",
+      "action": "All players softly imitate birdsong while ${r_player} tells a short springtime story.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Mood Flower",
+      "action": "${c_player}, say which flower best reflects ${r_player}’s mood and why.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sky of Words",
+      "action": "${c_player}, name three words that should be written in the sky to make everyone happy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Island",
+      "action": "${c_player}, describe your dream island if you could take only ${r_player} with you.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Bridge of Friendship",
+      "action": "${c_player} and ${r_player}, create a bridge with your arms symbolizing your friendship.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Magic Lantern",
+      "action": "${c_player}, imagine a lantern that shows happy memories. Describe one.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "City of Clouds",
+      "action": "${c_player}, describe a city built of clouds and dreams.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Snowflake Dance",
+      "action": "${c_player}, gently dance like a snowflake landing on ${r_player}’s palm.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Bird of Happiness",
+      "action": "${c_player}, pretend to be a bird of happiness gifting ${r_player} an imaginary feather.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mirror of Fantasies",
+      "action": "${c_player}, say what you would like to see in a magic mirror.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Night Garden",
+      "action": "All players close their eyes and hum softly while ${r_player} talks about a night-garden walk.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sea of Wishes",
+      "action": "${c_player}, imagine sailing on a sea where every wish comes true. Which wish do you choose?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Flower Meadow",
+      "action": "${c_player}, design a bouquet that would suit ${r_player} perfectly and explain why.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Moon Whisper",
+      "action": "${c_player}, tell what the moon whispers to ${r_player} tonight.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Shadow Dance",
+      "action": "${c_player}, use your hands to perform a shadow dance showing today’s mood.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Living Book",
+      "action": "${c_player}, imagine your favorite book came to life. What would it say?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Traveler’s Song",
+      "action": "All players tap a rhythm while ${r_player} sings a short song about an imaginary trip.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Treasure Island",
+      "action": "${c_player}, describe your treasure island where emotions are the treasure, not money.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Fairy",
+      "action": "${c_player}, imagine you’re a fairy granting sweet dreams. What would ${r_player} dream tonight?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Castle in the Air",
+      "action": "${c_player}, describe the castle you’d build in the clouds for all players.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Voice of the Sea",
+      "action": "All players whisper like waves while ${r_player} tells what the sea is saying.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sunbeam",
+      "action": "${c_player}, act like a sunbeam and warm ${r_player} with kind words.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Road Home",
+      "action": "${c_player}, describe a road home from any fantasy land.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kind Giant",
+      "action": "${c_player}, imagine you’re a kind giant helping ${r_player}. How will you help?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Forest of Whispers",
+      "action": "All players softly repeat “everything will be fine” while ${r_player} speaks about a magic forest walk.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Men on the Edge",
+  "packageType": "default",
+  "description": "Brutal challenges with strength, striptease, and adrenaline. The best mode for an all-guys crew!",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Speed Push-Ups",
+      "action": "${c_player}, do 15 push-ups as fast as you can.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Handstand Hold",
+      "action": "${c_player}, hold a handstand for at least 10 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "One-Hand Shirt Off",
+      "action": "${c_player}, dramatically take off your shirt using one hand.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Abs Dance",
+      "action": "${c_player}, perform a belly dance.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Arm Wrestling",
+      "action": "${c_player} and ${r_player}, do a mini arm-wrestling match.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Plank Challenge",
+      "action": "${c_player}, hold a plank for 30 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Muscle Show",
+      "action": "${c_player}, show your top three bodybuilder poses.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Boxing Minute",
+      "action": "${c_player}, throw punches in the air for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Burpee Challenge",
+      "action": "${c_player}, do 10 burpees in 30 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Magic Mike Move",
+      "action": "${c_player}, mimic a dance move from Magic Mike.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Clap Push-Ups",
+      "action": "${c_player}, do 15 clap push-ups.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Bridge Pose",
+      "action": "${c_player}, do a bridge and hold for 10 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "One-Leg Hops",
+      "action": "${c_player}, hop on one leg for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Strip of Silence",
+      "action": "${c_player}, take off one clothing item and stay serious for 30 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Victory Lap",
+      "action": "${c_player}, run a lap around the table or room.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beach Body Flex",
+      "action": "${c_player}, act like a bodybuilder on the beach for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Shadow Boxing",
+      "action": "${c_player}, shadow box for one round.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Balance Test",
+      "action": "${c_player}, stand on one leg with eyes closed for 15 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Powerlifter Minute",
+      "action": "${c_player}, pretend to lift an invisible heavy barbell.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lift a Friend",
+      "action": "${c_player}, lift ${r_player} and do 3 squats.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ninja Jump",
+      "action": "${c_player}, jump as high as you can.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Superman Slide",
+      "action": "${c_player}, act like Superman flying across the floor.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Flying Kick",
+      "action": "${c_player}, do a jumping kick.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini Strip",
+      "action": "${c_player}, perform a short striptease for 20 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Push-Up with Weight",
+      "action": "${c_player}, do push-ups while ${r_player} sits on your back.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "High Kick",
+      "action": "${c_player}, kick as high as your head.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Leg Press",
+      "action": "${c_player}, squat while holding ${r_player} on your back.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Loud Challenge",
+      "action": "${c_player}, loudly and boldly challenge ${r_player} to a duel.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fast Strip",
+      "action": "${c_player}, take off any two items of clothing in 15 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Victory Pose",
+      "action": "${c_player}, strike a victory pose and hold it for 20 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Table Pull-Ups",
+      "action": "${c_player}, do 10 pull-ups using a table or other surface.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Push-Ups with a Smile",
+      "action": "${c_player}, do 10 push-ups while smiling wide.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Football Freestyle",
+      "action": "${c_player}, show a series of football tricks.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Chair Jump",
+      "action": "${c_player}, carefully jump over a chair.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Flexibility Duel",
+      "action": "${c_player}, show your maximum stretch.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Camera Flex",
+      "action": "${c_player}, flex your muscles dramatically for the group.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Team Squats",
+      "action": "All players do 10 squats at the same time.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Show of Strength",
+      "action": "${c_player}, lift and hold a chair for 10 seconds.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Frog Jump",
+      "action": "${c_player}, jump over ${r_player} like a frog.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lightning Strikes",
+      "action": "${c_player}, show the fastest punches you can.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Live Kettlebell",
+      "action": "${c_player}, lift ${r_player} like a kettlebell.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Squat Ladder",
+      "action": "${c_player}, do squats one by one with each player.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pull-Up King",
+      "action": "${c_player}, do 10 pull-ups on an imaginary bar.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Extreme Jumps",
+      "action": "${c_player}, do a set of high jumps.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bodybuilder Minute",
+      "action": "${c_player}, flex for each player one by one.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Push-Ups",
+      "action": "All players do 10 push-ups at once. Last to finish drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Men’s Strip Show",
+      "action": "Each player removes one item of clothing. Anyone who refuses drinks.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Plank Battle",
+      "action": "Everyone holds a plank for 30 seconds. First to fall loses and drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Arm Wrestling Ring",
+      "action": "Do an arm wrestling tournament. The winner picks someone to drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Jump Relay",
+      "action": "Players take turns doing 5 high jumps. Lowest number drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sparta Challenge",
+      "action": "All yell 'This is Sparta!' and strike fighting poses. Quietest drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Push-Up Ring",
+      "action": "Everyone does push-ups. First to stop drinks.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Battle Cry",
+      "action": "Each player gives their loudest battle cry. Weakest one drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Brotherhood Strength",
+      "action": "Players link arms and do 10 squats in sync. Anyone off-beat drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Warrior Dance",
+      "action": "All perform a battle dance for 15 seconds. Anyone who refuses drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

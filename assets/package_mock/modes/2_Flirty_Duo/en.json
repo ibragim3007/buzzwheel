@@ -1,0 +1,268 @@
+{
+  "id": 2,
+  "name": "Flirt for Two",
+  "packageType": "pair",
+  "description": "Tender and spicy challenges for new couples. Let’s see how much you like each other!",
+  "imageEncoded": "8f67a9d5-ac29-4365-b38a-577dd245bd6e.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Blind Compliment",
+      "action": "${c_player}, close your eyes and give ${r_player} your most sincere compliment.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dance for Two",
+      "action": "${c_player}, invite ${r_player} to a slow dance with no music.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Whispered Wish",
+      "action": "${c_player}, whisper to ${r_player} one small romantic wish.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "10 Seconds Eye to Eye",
+      "action": "Look into each other’s eyes for 10 seconds without looking away.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Letters by Touch",
+      "action": "${c_player}, gently trace the first letter of your name on ${r_player}’s back with your finger.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tasty Compliment",
+      "action": "${c_player}, compare ${r_player} to a dessert and explain why.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "First Meeting",
+      "action": "Act as if you have just met each other.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Little Secret",
+      "action": "${c_player}, quietly tell ${r_player} something personal they don’t know yet.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tender Pause",
+      "action": "${c_player}, hold ${r_player}’s hands for ${rand(10,20)} seconds while looking into their eyes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Romantic Advice",
+      "action": "${c_player}, give ${r_player} a one-sentence romantic tip.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hold Me Tight",
+      "action": "${c_player}, hug ${r_player} for 15 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sweet Nickname",
+      "action": "${c_player}, invent a cute nickname for ${r_player} that they haven’t heard before.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "One Question",
+      "action": "${c_player}, ask ${r_player} any romantic question you’ve always wanted answered.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Breath of Closeness",
+      "action": "Bring your faces as close as possible and stay like that for 10 seconds without touching.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Short Confession",
+      "action": "${c_player}, tell ${r_player} something you’re grateful to them for.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Smile for a Smile",
+      "action": "${c_player}, try to make ${r_player} laugh using only facial expressions.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Hands Will Tell",
+      "action": "${c_player}, with eyes closed, identify ${r_player} by touching only their hands.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Shared Future",
+      "action": "Take turns naming one moment you’d like to experience together.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Story in Letters",
+      "action": "${c_player}, make up a short romantic story about you and ${r_player} using the letter ${r_letter}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Plan for Tomorrow",
+      "action": "Together, invent a short romantic plan for tomorrow evening within 30 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Secret Gaze",
+      "action": "${c_player}, look at ${r_player} with the gentlest gaze for 10 seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Favorite Scent",
+      "action": "${c_player}, tell ${r_player} which scent you associate with them.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Butterfly Touch",
+      "action": "${c_player}, gently touch ${r_player}’s cheek like a butterfly wing.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Voice of the Heart",
+      "action": "${c_player}, whisper three words into ${r_player}’s ear that you want to say right now.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Melody of Love",
+      "action": "${c_player}, hum a tune that reminds you of ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfect Date",
+      "action": "${c_player}, briefly describe the perfect date you’d like to plan for ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Hand in Hand",
+      "action": "Hold hands and don’t let go until the next dare.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "One Fact",
+      "action": "${c_player}, name one fact about ${r_player} that especially impresses you.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Short Declaration",
+      "action": "${c_player}, make a brief but vivid declaration to ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Smile",
+      "action": "${c_player}, smile at ${r_player} so they feel truly special.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gentle Massage",
+      "action": "${c_player}, give ${r_player} a light shoulder massage for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "One in a Million",
+      "action": "${c_player}, name one trait that makes ${r_player} different from everyone else.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sweet Memory",
+      "action": "${c_player}, briefly share the nicest moment you’ve had with ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Shared Wish",
+      "action": "At the same time, say aloud what you both want right now.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Favorite Sound",
+      "action": "${c_player}, tell which sound or tone of ${r_player} you like most.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantic Movie",
+      "action": "${c_player}, choose a movie that perfectly describes your relationship with ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Warm Breath",
+      "action": "${c_player}, warm ${r_player}’s hands with your breath for 10 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Letter Without Words",
+      "action": "${c_player}, gently draw a heart on ${r_player}’s palm with your finger.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "One Step Closer",
+      "action": "Simultaneously take one step toward each other and freeze for 10 seconds.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Perfect Evening",
+      "action": "${c_player}, tell ${r_player} what your ideal evening together looks like.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

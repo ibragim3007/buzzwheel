@@ -1,0 +1,502 @@
+{
+  "id": 9,
+  "name": "Total Mayhem",
+  "packageType": "default",
+  "description": "Extreme dares only the bold attempt. Weaklings, don't even try!",
+  "imageEncoded": "77c0dfdc-6b68-4aec-b217-a79c325f3fc4.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Spicy Truth",
+      "action": "${c_player}, eat something spicy without water.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Street Scream",
+      "action": "${c_player}, go outside and shout, 'I love my mom!' at the top of your lungs.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cold Shower",
+      "action": "${c_player}, douse yourself with cold water for 10 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Reverse Strip",
+      "action": "${c_player}, put on every piece of clothing you can find in the room at once.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Madman Dance",
+      "action": "${c_player}, perform the craziest dance you can on the table.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Weighted Push-Ups",
+      "action": "${c_player}, do 10 push-ups while balancing any object on your back.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Surprise Confession",
+      "action": "${c_player}, call someone and confess something unexpected.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chew the Unchewable",
+      "action": "${c_player}, chew on something inedible (paper, napkin, etc.).",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Savage Cocktail",
+      "action": "${c_player}, drink a cocktail of three random ingredients picked by the others.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Max Volume",
+      "action": "${c_player}, belt out any song for 15 seconds at full volume.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Extreme Make-Up",
+      "action": "${c_player}, let the others give you the wildest make-up look ever.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mirror Hype",
+      "action": "${c_player}, loudly praise yourself in the mirror for 20 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Window Dancer",
+      "action": "${c_player}, dance by the window so passers-by can see you.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Bold Post",
+      "action": "${c_player}, post a weird photo to your socials right now.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Crazy Compliment",
+      "action": "${c_player}, give a heartfelt compliment to a wall—or any object.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Awkward Call",
+      "action": "${c_player}, call a friend and ask to borrow a large sum of money.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fake Panic Attack",
+      "action": "${c_player}, act out a panic attack for 15 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Street Serenade",
+      "action": "${c_player}, run outside and sing the chorus of your favorite song.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Trust Test",
+      "action": "${c_player}, close your eyes and let ${r_player} feed you something unknown.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Minute of Humility",
+      "action": "${c_player}, get on your knees and apologize to a chair.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gross Mix",
+      "action": "${c_player}, mix the 4 strangest drinks around and take a sip.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Loudest Laugh",
+      "action": "${c_player}, laugh as loud and crazy as you can.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Inside-Out Outfit",
+      "action": "${c_player}, wear your clothes backwards and keep them on for 10 minutes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    { "title": "Tasty Dirt", "action": "${c_player}, lick the sole of your own shoe.", "type": "player", "alcohol": 3 },
+    {
+      "title": "Custom Meltdown",
+      "action": "${c_player}, have a one-minute meltdown with tears and screams.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Real Slap Boxing",
+      "action": "${c_player}, let ${r_player} give you a light slap.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Object Kiss",
+      "action": "${c_player}, passionately kiss a random object chosen by the group.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Parent Confession",
+      "action": "${c_player}, text your parents and tell them you love them.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ridiculous Headgear",
+      "action": "${c_player}, wear underwear on your head for 5 minutes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Street Jumps",
+      "action": "${c_player}, go outside and do 10 loud jumps.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Random Video",
+      "action": "${c_player}, record a silly video and send it to a random contact.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Shock Tale",
+      "action": "${c_player}, tell a made-up shocking story as convincingly as possible.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Weird Challenge",
+      "action": "${c_player}, challenge anyone to the strangest contest you can think of.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dare of Dares",
+      "action": "${c_player}, let the group pick a punishment for you.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Wild Photo Shoot",
+      "action": "${c_player}, take 5 of the weirdest photos possible and drop them in the group chat.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Blunt Question",
+      "action": "${c_player}, answer ${r_player}'s most awkward question honestly.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Window Singer",
+      "action": "${c_player}, sing loudly out the window for 10 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Animal Instinct",
+      "action": "${c_player}, act like any animal for 30 seconds.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Banana Kiss",
+      "action": "${c_player}, eat a banana as seductively as possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Abduction Cry",
+      "action": "${c_player}, yell out the window that you've been kidnapped!",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Electro Dance",
+      "action": "Everyone dances like they've been zapped. First to stop drinks.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Pain Orchestra",
+      "action": "Each player pretends to be a musical instrument—using only their mouth. Quietest drinks!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Mass Hysteria",
+      "action": "Everyone acts out a loud freak-out for 15 seconds. Laugh and you drink.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Strange March",
+      "action": "March in a circle using the weirdest pose you can imagine for 20 seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chaos Chant",
+      "action": "On three, everyone screams the word 'chaos' together. Forget? Drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wardrobe Swap",
+      "action": "Everyone must put on someone else's item. Fail and drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Noisy Wave",
+      "action": "Do a stadium wave with screams. Mess up and drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Edible or Not",
+      "action": "Name objects in turn. Call something oddly edible? Drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Friendship Jumps",
+      "action": "Everyone does 10 jumps in place. Do fewer? Drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Confession",
+      "action": "All at once confess one embarrassing thing. Stay silent? Drink.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Silly Faces",
+      "action": "Pull your craziest face for 15 seconds. The dullest drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Team Roar",
+      "action": "Roar together for 10 seconds. Giggle and you drink.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Truth Gauntlet",
+      "action": "Ask any question around the circle. Refuse to answer? Drink.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Catwalk Chaos",
+      "action": "Strut with a random item balanced on your head. Refuse? Drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Hug Your Frenemy",
+      "action": "Hug someone you haven't spoken to tonight. Can't do it? Drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Silent Stare",
+      "action": "Silently stare at each other for 20 seconds. First to laugh drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Group Shame",
+      "action": "Each tells an embarrassing story. Can't? Drink.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Surreal Karaoke",
+      "action": "Everyone sings different songs at once for 20 seconds. Stop early? Drink.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chaos Leap",
+      "action": "All leap wildly into the center. Least energetic drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Stare of Madness",
+      "action": "Lock eyes with crazy faces for 10 seconds. First blink drinks.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Spoon of Fire",
+      "action": "${c_player}, eat a spoonful of the hottest sauce ${r_player} can find.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dark Shout",
+      "action": "${c_player}, turn off the lights and yell 'I'm here!' three times without waiting for a reply.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ice Grip",
+      "action": "${c_player}, hold an ice cube until it fully melts.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Midnight Sprint",
+      "action": "${c_player}, dash outside, run around the house, then hop back in.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Under-Table Crawl",
+      "action": "${c_player}, crawl under the table to the other side of the room.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Ridiculous Make-Up",
+      "action": "${c_player}, let ${r_player} give you the silliest make-up look.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Glass Kiss",
+      "action": "${c_player}, passionately kiss a window or mirror.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Opera Voice",
+      "action": "${c_player}, sing any phrase in an operatic voice.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Savage Joke",
+      "action": "${c_player}, tell the harshest joke you know.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mud Dance",
+      "action": "${c_player}, pretend you're dancing in mud for 20 seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Napkin Snack",
+      "action": "${c_player}, chew a napkin and declare, 'Delicious!'",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Group Reverse Strip",
+      "action": "Everyone puts on one extra item over their clothes. Last one drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Run in Place",
+      "action": "Everyone jogs in place for 30 seconds. First to stop drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Loud Laughter",
+      "action": "Laugh out loud together for 15 seconds. Stop and drink.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Ice Wave",
+      "action": "Touch your forehead and say 'cold!' together. Silent one drinks.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Team Shout",
+      "action": "On three, yell 'Mayhem!' together. Mess up and drink.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Extreme Pose",
+      "action": "Freeze in the most uncomfortable pose for 20 seconds. Move and drink.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Whisper Squad",
+      "action": "Whisper 'adrenaline' together. Speak louder and drink.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Risk Group",
+      "action": "All name the most extreme thing they've done. Can't name one? Drink.",
+      "type": "all",
+      "alcohol": 3
+    }
+  ]
+}

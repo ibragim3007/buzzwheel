@@ -1,0 +1,660 @@
+{
+  "id": 1,
+  "name": "Sober Warm-Up",
+  "packageType": "default",
+  "description": "Light, funny questions to get the party warmed up without any unwelcome surprises — perfect for kicking things off!",
+  "imageEncoded": "66178b0b-ebf8-4e85-90c4-43a65e7936f8.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Dancing Broccoli",
+      "action": "${c_player}, pretend you're a piece of broccoli that went clubbing. Dance until ${r_player} says \"boiled!\"",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Martian Taxi Dispatcher",
+      "action": "${c_player}, you are the dispatcher of the Mars taxi service. Explain to ${r_player} how to get to planet Zyuz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Very Important Chicken",
+      "action": "${c_player}, as a high-ranking chicken, address the nation. Cluck ${rand(3,5)} times.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fridge Secret Agent",
+      "action": "${c_player}, play an agent trying to find out from ${r_player} what's in their fridge.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lunar Radio Host",
+      "action": "${c_player}, host a news broadcast from the Moon. Talk about weather, sports and sensations — everything must be lunar.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Philosopher Grandma",
+      "action": "${c_player}, become a grumbling grandma and explain to ${r_player} why the youth no longer values the letter \"${r_letter}\".",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talking Sofa",
+      "action": "${c_player}, act as the sofa that ${r_player} just sat on. Complain about the hard life of furniture.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chaos Fairy",
+      "action": "${c_player}, you're a fairy who grants weird wishes. Offer ${r_player} ${rand(2,3)} absurd gifts.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cat at a Job Interview",
+      "action": "${c_player}, imagine you're a cat applying for a job. ${r_player} is the interviewer.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Teacher of Absurdity",
+      "action": "${c_player}, give a lesson on \"How to dance on the ceiling.\" Use at least ${rand(3,5)} technical terms.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "TikTok Star",
+      "action": "${c_player}, act out a parody of a viral video. ${r_player} must guess what it is.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Dragon Dentist",
+      "action": "${c_player}, you're a dragon moonlighting as a dentist. Give ${r_player} a check-up.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Emotion Mailman",
+      "action": "${c_player}, you deliver letters only in the form of emotions. Deliver news to ${r_player} using only facial expressions.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Laugh Mechanic",
+      "action": "${c_player}, show how you \"repair\" ${r_player}'s laughter. Describe your tools and methods.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Detective of Lost Slippers",
+      "action": "${c_player}, find clues to accuse ${r_player} of stealing imaginary slippers.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Owl Consultant",
+      "action": "${c_player}, give wise but completely useless advice to ${r_player} using only words starting with \"${r_letter}\".",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Group Commercial",
+      "action": "All players together make an ad for the new product: \"Hat for Sadness\". ${r_player} directs the shoot.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Cartoon Chef",
+      "action": "${c_player}, invent and present the dish \"Omelet of Thunder and Rainbow.\" Be convincing!",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Everyone Is a Mime",
+      "action": "For ${rand(15,30)} seconds all players may communicate only with gestures. Whoever speaks drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Wild Animal",
+      "action": "Each player shows how they would behave if they were a pet ostrich. ${c_player} is the judge.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret Vegetable",
+      "action": "${c_player}, if you were a vegetable, which one and why? ${r_player} may disagree and suggest an alternative.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fine for Thinking",
+      "action": "${c_player}, if every thought cost a fine, what thought would already owe you a million?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Face of the Week",
+      "action": "${c_player}, whose face would you replace yours with for a week? ${r_player} must approve the choice.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Body Swap",
+      "action": "${c_player}, which player would you definitely NOT swap bodies with and why?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mind Sandwich",
+      "action": "${c_player}, build a sandwich out of players' personalities: who is the bread, cheese, sauce, and why.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Meme Soul",
+      "action": "${c_player}, which meme best describes your personality? ${r_player} may disagree.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dance of the Soul",
+      "action": "${c_player}, if your soul could be expressed by a dance — what dance would it be?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Penguin President",
+      "action": "${c_player}, how would the country change if it were led by a penguin with ${r_player}'s voice?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Absurd Holiday",
+      "action": "${c_player}, invent a ridiculous holiday you'd like to make official.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pointless Choice",
+      "action": "${c_player}, choose: lose your nose forever or speak forever with ${r_player}'s voice?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Shared Fail",
+      "action": "Each player tells something they did and immediately regretted. ${r_player} picks the winner.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 40
+    },
+    {
+      "title": "Collective Fantasy",
+      "action": "Players take turns continuing the phrase: \"If I were a banana...\" Whoever messes up drinks.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Nonsensical Law",
+      "action": "${c_player}, create a new absurd law that will apply in this room.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Official Color of the Day",
+      "action": "${c_player}, choose the \"color of the day\" and explain why everyone must obey it.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spirit Animal",
+      "action": "${c_player}, choose an animal that spiritually patronizes ${r_player} and explain why.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dreamworld Job",
+      "action": "${c_player}, what would your job be if all professions were based on dreams?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Verdict",
+      "action": "Everyone decides what role ${c_player} would have in a post-apocalypse. ${c_player} may object — but risks drinking.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Living Name",
+      "action": "${c_player}, if your name reflected your nature, what would it be? (${r_letter} must be included!)",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Reboot",
+      "action": "Everyone simultaneously says one word, creating a sentence. Repeats forbidden. Make a mistake — drink.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "One Day as Someone Else",
+      "action": "${c_player}, choose any player. Describe how you'd spend one day in their body.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Object Life",
+      "action": "${c_player}, if you could become a household object, what would it be and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unusual Pet",
+      "action": "${c_player}, what's the strangest animal you'd like to have and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Time Travel",
+      "action": "${c_player}, which historical period would you visit and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Superpower",
+      "action": "${c_player}, which superpower would you choose if you could?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Celebrity for a Day",
+      "action": "${c_player}, which celebrity would you like to be for one day and what would you do?",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Cartoon Life",
+      "action": "${c_player}, which cartoon character would you like to become and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Invisible Day",
+      "action": "${c_player}, what's the first thing you'd do if you were invisible for one day?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Best Holiday",
+      "action": "${c_player}, if you could create a new holiday, what would it be?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Three Wishes",
+      "action": "${c_player}, imagine you caught a goldfish. What three wishes would you make?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Desert Island",
+      "action": "${c_player}, what three items would you take to a deserted island?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hidden Talents",
+      "action": "Each player shares a hidden talent. Whoever refuses drinks.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Strange Food",
+      "action": "Players take turns naming the weirdest thing they've ever eaten. If you can't recall, drink.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Unusual Profession",
+      "action": "${c_player}, what's the most unusual profession you can imagine and would like to try?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Animal Life",
+      "action": "${c_player}, which animal would you like to be for a day and why?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weird Sport",
+      "action": "${c_player}, invent the most ridiculous sport you can.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Childhood Dream",
+      "action": "${c_player}, what did you dream of becoming as a child and why didn't it happen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Group Trip",
+      "action": "All players propose one place for a group trip. ${r_player} chooses the funniest location.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Dream House",
+      "action": "${c_player}, describe your ideal house. How is it different from an ordinary one?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pointless Purchase",
+      "action": "Each player names the most useless thing they've bought. Refuse — drink.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "One Day as President",
+      "action": "${c_player}, describe how you'd spend the day as the country's president.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Statue of Liberty",
+      "action": "${c_player}, freeze in the Statue of Liberty pose and hold for ${rand(15,25)} seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Unwilling Dancer",
+      "action": "${c_player}, perform a short funny dance invented by ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Penguin Walk",
+      "action": "${c_player}, waddle around the room like a penguin for ${rand(2,4)} laps.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Balancing Act",
+      "action": "${c_player}, try to balance any object on your head for ${rand(10,20)} seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Running in Place",
+      "action": "${c_player}, act like you're running away from a swarm of bees for ${rand(15,20)} seconds.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Finger Gymnastics",
+      "action": "${r_player}, show a funny finger exercise that everyone must copy.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Air Guitar",
+      "action": "${c_player}, play an invisible guitar to a song hummed by ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Invisible Jump Rope",
+      "action": "${c_player}, jump an invisible rope ${rand(10,15)} times.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Yoga Style",
+      "action": "${c_player}, strike a difficult and silly yoga pose named by ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Robot Dance",
+      "action": "${c_player}, dance like a robot in a club.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Space Walk",
+      "action": "All players imitate walking in zero gravity for ${rand(10,20)} seconds.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Airplane Pose",
+      "action": "${c_player}, pose like an airplane balancing on one leg for ${rand(10,15)} seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Fight with Invisible",
+      "action": "${c_player}, act out a short fight scene with an invisible opponent.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Fun Warm-up",
+      "action": "${r_player}, lead a short and funny warm-up for all players.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Moon Walk",
+      "action": "${c_player}, slowly walk across the room as if stepping on the Moon.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Singing Balance",
+      "action": "${c_player}, sing a short song standing on one leg.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Shadow Boxing",
+      "action": "${c_player}, perform a quick match with an imaginary rival.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Team Airplane",
+      "action": "All players line up as an airplane and circle the room led by ${r_player}.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Invisible Volleyball",
+      "action": "${c_player}, play a short match of invisible volleyball against ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Dancing Animals",
+      "action": "${c_player}, dance like an animal chosen by ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Air Salesperson",
+      "action": "${c_player}, convincingly sell air to the other players for ${rand(10,20)} seconds.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "News About Nothing",
+      "action": "${c_player}, deliver breaking news about a completely unimportant event.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Unusual Tour",
+      "action": "${c_player}, give a brief tour of the room as if it's a museum.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Boredom Ad",
+      "action": "${c_player}, create an advertising slogan for boredom so people will want to buy it.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sports Commentator",
+      "action": "${c_player}, comment on any actions of ${r_player} as if they were a sports match.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Movie in 15 Seconds",
+      "action": "${c_player}, summarize any famous movie in 15 seconds. Others guess.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Impromptu Poem",
+      "action": "${c_player}, compose a short four-line poem about ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Absurd Interview",
+      "action": "${c_player}, interview ${r_player} as if they are a renowned expert on laziness.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Group Fairy Tale",
+      "action": "Players take turns saying one sentence, creating a ridiculous fairy tale. Slip up — drink.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Lecture About Nothing",
+      "action": "${c_player}, give a scientific lecture on \"why doing nothing is beneficial\".",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "One-Man Show",
+      "action": "${c_player}, stage a mini-play, playing all characters yourself.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Team Commercial",
+      "action": "All players together invent a commercial for an imaginary product.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Inventor of Absurdity",
+      "action": "${c_player}, invent and present a ridiculous invention that improves people's lives.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Horoscope by ${c_player}",
+      "action": "${c_player}, predict ${r_player}'s day as if you are a professional astrologer.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weather Reporter",
+      "action": "${c_player}, give tomorrow's weather forecast for this room.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Group Rap",
+      "action": "Players take turns composing a short rap about the current game.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Convincing Lie",
+      "action": "${c_player}, tell a brief life story. Others guess if it's true or false.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Weirdness Expert",
+      "action": "${c_player}, explain the usefulness of a completely useless item suggested by ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Group Orchestra",
+      "action": "All players act as an orchestra using only hands and voices. ${r_player} conducts.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Human Manual",
+      "action": "${c_player}, give instructions on how to operate a human as if it's a household appliance.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    }
+  ]
+}
