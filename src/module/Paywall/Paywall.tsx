@@ -16,6 +16,7 @@ import PaywallItems from './ui/PaywallItems';
 import Button from '@/src/shared/ui/buttons/Button';
 import { Trans, useTranslation } from 'react-i18next';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 
 export default function Paywall() {
   const { offering } = usePurchases();
@@ -28,8 +29,23 @@ export default function Paywall() {
     setCurrentProduct(offering?.availablePackages[0]);
   }, [offering]);
 
+  const [timeBeforePaywallClose, setTimeBeforePaywallClose] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeBeforePaywallClose(prev => {
+        return prev + 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const colors = useTheme();
   const goBack = () => {
+    analytics.trackEvent(Events.timeBeforeClosePaywall, {
+      time: timeBeforePaywallClose,
+    });
     navigate('..');
   };
 

@@ -3,6 +3,7 @@ import Packages from '@/src/module/Packages/Packages';
 import PaywallBlock from '@/src/module/Paywall/PaywallBlock';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { animationEngine } from '@/src/shared/service/animation.service';
 import Button from '@/src/shared/ui/buttons/Button';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
@@ -23,6 +24,9 @@ export default function PackagePage() {
   const { navigate } = useRouter();
   const { vibrate } = useVibration();
   const onPressPlay = () => {
+    analytics.trackEvent(Events.pressContinueGameAfterPackagePage, {
+      packages: pickedPackages.map(p => p.id),
+    });
     vibrate();
     navigate('/screens/gameModeScreen');
   };

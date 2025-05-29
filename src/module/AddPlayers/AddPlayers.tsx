@@ -19,6 +19,7 @@ import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
 import UserLimit from './components/Players/UserLimit';
 import { useTranslation } from 'react-i18next';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 
 export default function AddPlayers() {
   const colors = useTheme();
@@ -31,6 +32,11 @@ export default function AddPlayers() {
 
   const onAddNewPlayer = (name: string) => {
     if (players.length >= MAX_PLAYERS_FOR_FREE && !isActiveSubscription) {
+      analytics.trackEvent(Events.addPlayerRestricted, {
+        limitRestricted: players.length >= MAX_PLAYERS_FOR_FREE,
+        isSub: isActiveSubscription,
+      });
+
       Inform.error('', {
         text1: t('homepage.limit_players', { max_players: MAX_PLAYERS_FOR_FREE }),
         text2: t('homepage.increase-in-full-access'),
@@ -40,16 +46,30 @@ export default function AddPlayers() {
       });
       return;
     }
+
+    analytics.trackEvent(Events.pressAddPlayer, {
+      nameLength: name.length,
+    });
     vibrateSelection();
     addNewPlayer(name);
   };
 
   const onPressStart = () => {
     if (!isEnoughPlayers) {
+      analytics.trackEvent(Events.notEnougthPlayers, {
+        limitRestricted: players.length,
+        isSub: isActiveSubscription,
+      });
+
       vibrateError();
       Inform.error('', { text1: t('homepage.need-at-least-players'), position: 'bottom', type: 'error' });
       return;
     }
+
+    analytics.trackEvent(Events.pressStartGame, {
+      playersCount: players.length,
+      players: players.map(player => player.name),
+    });
 
     vibrate();
     navigate('/screens/packages');
@@ -86,7 +106,7 @@ export default function AddPlayers() {
           <Typography color="disabled" textAlign="center" variant="footnote">
             {isPlayersGreaterThan0
               ? t('homepage.players-length-players', { amount: players.length })
-              : t('homepage.add-at-least-players')}
+              : t('homepage.need-at-least-players')}
           </Typography>
         ) : (
           <UserLimit currentPlayers={players.length} />

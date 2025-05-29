@@ -1,6 +1,8 @@
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import { useLang } from '@/src/shared/hooks/lang/useLangStore';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import GradientShadow from '@/src/shared/ui/elements/GradientShadow';
 import Grid, { GridPressable } from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
@@ -45,7 +47,13 @@ export default function PaywallButton({ product, title }: PaywallButtonProps) {
     pulse();
   }, [scaleAnim]);
 
+  const { lang } = useLang();
   const pressBuyButton = async () => {
+    analytics.trackEvent(Events.pressBuyButtonInPaywall, {
+      value: 'start',
+      productId: product.product.identifier,
+      local: lang,
+    });
     setIsLoading(true);
     vibrateMedium();
     try {
@@ -63,7 +71,12 @@ export default function PaywallButton({ product, title }: PaywallButtonProps) {
         }
       }
     } catch (e) {
-      console.log(e);
+      analytics.trackEvent(Events.pressBuyButtonInPaywall, {
+        value: 'error (dismissed)',
+        productId: product.product.identifier,
+        local: lang,
+      });
+      console.error(e);
     } finally {
       setIsLoading(false);
     }

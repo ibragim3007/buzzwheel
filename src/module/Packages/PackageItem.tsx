@@ -1,6 +1,7 @@
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { animationEngine, animationService } from '@/src/shared/service/animation.service';
 import { Package } from '@/src/shared/types/globalTypes';
 import AnimTouchWrapper from '@/src/shared/ui/animations/AnimTouchWrapper';
@@ -33,9 +34,20 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
 
   const onPressWrapper = () => {
     if (isLocked) {
+      analytics.trackEvent(Events.pressOnDisabledPackage, {
+        packageId: pack.id,
+        packageName: pack.name,
+      });
+
       navigate('/screens/paywall');
       return;
     }
+
+    analytics.trackEvent(Events.pressOnOpenPackage, {
+      packageId: pack.id,
+      packageName: pack.name,
+    });
+
     onPress(pack);
   };
 

@@ -2,6 +2,8 @@ import { customEvent as customEventFn } from 'vexo-analytics';
 
 export const Events = {
   pressAddPlayer: 'press_add_player',
+  addPlayerRestricted: 'add_player_restricted',
+  notEnougthPlayers: 'not_enough_players',
   pressRemovePlayer: 'press_remove_player',
   pressStartGame: 'press_start_game',
   pressSettings: 'press_settings',
@@ -20,6 +22,7 @@ export const Events = {
   pressDryRun: 'press_dry_run',
   pressStartGameAfterModePage: 'press_start_game_after_mode_page',
   pressSpinWheel: 'press_spin_wheel',
+  finishRotation: 'finish_rotation',
   pressTimer: 'press_timer',
   pressPause: 'press_pause',
   pressReset: 'press_reset',

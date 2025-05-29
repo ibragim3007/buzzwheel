@@ -1,5 +1,7 @@
 import { APP_STORE_LINK } from '@/src/shared/config/constants/constants';
+import { useLang } from '@/src/shared/hooks/lang/useLangStore';
 import { useTheme } from '@/src/shared/hooks/useTheme';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import SettingsItem from '@/src/shared/ui/elements/SettingsItem';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import { FontAwesome } from '@expo/vector-icons';
@@ -10,15 +12,43 @@ import { Linking } from 'react-native';
 export default function RateBlock() {
   const colors = useTheme();
   const { t } = useTranslation();
+  const { lang } = useLang();
   const handleRatePress = async () => {
-    if (await StoreReview.isAvailableAsync()) {
-      StoreReview.requestReview();
+    try {
+      if (await StoreReview.isAvailableAsync()) {
+        analytics.trackEvent(Events.pressRateUs, {
+          open: true,
+          local: lang,
+        });
+
+        StoreReview.requestReview();
+      } else {
+        analytics.trackEvent(Events.pressRateUs, {
+          open: false,
+          local: lang,
+        });
+      }
+    } catch (error) {
+      console.error('Failed to request review:', error);
     }
   };
 
   const handleFeedbackPress = async () => {
-    if (await Linking.canOpenURL(APP_STORE_LINK)) {
-      await Linking.openURL(APP_STORE_LINK);
+    try {
+      if (await Linking.canOpenURL(APP_STORE_LINK)) {
+        analytics.trackEvent(Events.pressWriteReview, {
+          open: true,
+          local: lang,
+        });
+        await Linking.openURL(APP_STORE_LINK);
+      } else {
+        analytics.trackEvent(Events.pressWriteReview, {
+          open: false,
+          local: lang,
+        });
+      }
+    } catch (error) {
+      console.error('Failed to open URL:', error);
     }
   };
 

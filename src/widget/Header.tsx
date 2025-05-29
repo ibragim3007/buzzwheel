@@ -11,6 +11,7 @@ import WrapIconInPressable from '../shared/ui/wrapper/WrapIconInPressable';
 import ProButton from './ui/ProButton';
 import { LanguagePicker } from '../module/LanguagePicker';
 import { normalizedSize } from '../shared/utils/size';
+import { analytics, Events } from '../shared/service/analytics.service';
 
 interface HeaderProps {
   back?: boolean;
@@ -29,6 +30,7 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
   const handlePresentModalPress = useCallback(() => {
     if (!bottomSheetModalRef.current) return;
+    analytics.trackEvent(Events.pressSettings, {});
     vibrate();
     bottomSheetModalRef.current?.present();
   }, []);

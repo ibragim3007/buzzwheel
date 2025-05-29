@@ -11,10 +11,15 @@ import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-
 import { useRouter } from 'expo-router';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { useTranslation } from 'react-i18next';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
+import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { usePackage } from '@/src/entities/Package/usePackage';
 
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
   const { navigate } = useRouter();
+  const { players } = usePlayerStore();
+  const { pickedPackages } = usePackage();
   const { vibrateSelection, vibrate } = useVibration();
   const { t } = useTranslation();
 
@@ -24,6 +29,11 @@ export default function GameModePage() {
   };
 
   const onPressStartGame = () => {
+    analytics.trackEvent(Events.pressStartGameAfterModePage, {
+      mode: mode,
+      playersAmount: players.length,
+      pickedPackages: pickedPackages.map(p => p.id),
+    });
     vibrate();
     navigate('/screens/game');
   };

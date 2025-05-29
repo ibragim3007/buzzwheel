@@ -12,6 +12,7 @@ import { useState } from 'react';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { useTranslation } from 'react-i18next';
+import { LANGUAGE } from '@/src/shared/types/globalTypes';
 
 export default function LanguagePicker() {
   const colors = useTheme();
@@ -22,7 +23,7 @@ export default function LanguagePicker() {
     setOpen(!open);
   };
 
-  const onSetLanguage = (code: string) => {
+  const onSetLanguage = (code: LANGUAGE) => {
     setLang(code);
     toggleModal();
   };

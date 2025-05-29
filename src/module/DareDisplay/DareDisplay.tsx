@@ -17,6 +17,7 @@ import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
 import { useTranslation } from 'react-i18next';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -34,6 +35,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   const { currentPackage, mode } = useRouletteGame();
 
   const onPressDrunk = () => {
+    analytics.trackEvent(Events.pressAlcohol, {});
     vibrate();
     Alert.alert(t('gamePage.modal-drink-title'), t('gamePage.drink-modal-subtext'), [
       {
@@ -53,6 +55,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   };
 
   const onPressDry = () => {
+    analytics.trackEvent(Events.pressDryRun, {});
     vibrate();
     hideDare(false);
   };

@@ -1,6 +1,7 @@
 import { generateTimerTime } from '@/src/shared/helpers/timer/generateTime';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { fontWeight } from '@/src/shared/styles/typography/typography';
 import { Dare } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
@@ -62,6 +63,10 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
   };
 
   const toggleTimer = () => {
+    analytics.trackEvent(Events.pressTimer, {
+      isTimerRunning: !isTimerRunning,
+      dareId: dare.id,
+    });
     vibrate();
     setTimerWasStarted(true);
     rotation.value = withRepeat(
@@ -73,6 +78,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
   };
 
   const resetTimer = () => {
+    analytics.trackEvent(Events.pressReset, {});
     setIsTimerRunning(false);
     setTimeLeft(dare.time);
   };

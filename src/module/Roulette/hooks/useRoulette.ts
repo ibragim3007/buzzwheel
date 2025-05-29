@@ -14,6 +14,7 @@ import {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 
 const getWeightedRandomItem = (items: SegmentType[]) => {
   const totalWeight = items.reduce((total, item) => total + (item?.probability || DEFAULT_PROBABILITY), 0);
@@ -55,6 +56,7 @@ export const useRoulette = (segments: SegmentType[], onCallback: (winner: Segmen
   });
 
   const spinWheel = () => {
+    analytics.trackEvent(Events.pressSpinWheel, {});
     void vibrate();
     rotation.value = withTiming(0, { duration: 0 });
     wheelScale.value = 1;
@@ -156,7 +158,7 @@ export const useRoulette = (segments: SegmentType[], onCallback: (winner: Segmen
     const winner = segments[getRandomSegment];
     setWinner(getRandomSegment);
     onCallback(winner);
-
+    analytics.trackEvent(Events.finishRotation, {});
     setIsSpinning(false);
   };
 
