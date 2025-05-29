@@ -17,7 +17,8 @@
   "packagePage": {
     "pick-your-modes": "Выберите режимы!",
     "continue": "Продолжить",
-    "for-tow-only": "Только для двоих"
+    "for-tow-only": "Только для двоих",
+    "all": "Все"
   },
   "paywall": {
     "error-to-load-product": "Ошибка загрузки продукта",

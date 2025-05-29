@@ -31,7 +31,13 @@ const calcAllPlayerSegments = (players: Player[]): number => {
   return players.length > 8 && players.length % 2 !== 0 ? 3 : 2;
 };
 
-export function convertPlayersToSegments(players: Player[], colorGroup: [string, string, string]): SegmentType[] {
+export function convertPlayersToSegments(
+  players: Player[],
+  colorGroup: [string, string, string],
+  labels: {
+    all: string;
+  },
+): SegmentType[] {
   const totalSegments = calcTotalSegments(players);
   const allSemgents = calcAllPlayerSegments(players);
 
@@ -52,7 +58,7 @@ export function convertPlayersToSegments(players: Player[], colorGroup: [string,
 
   const allPlayerSegment: SegmentType = {
     id: 0,
-    label: 'Все',
+    label: labels.all,
     color: colorGroup[2],
     type: 'all',
     probability: DEFAULT_PROBABILITY,

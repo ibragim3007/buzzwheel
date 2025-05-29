@@ -47,7 +47,8 @@
     "modal-cancel-button": "Cancel",
     "roulette": {
       "task-for": "Task for",
-      "spin-button": "Spin the Wheel"
+      "spin-button": "Spin the Wheel",
+      "all": "All"
     },
     "done-button": "Done",
     "drink-button": "Alcohol"
