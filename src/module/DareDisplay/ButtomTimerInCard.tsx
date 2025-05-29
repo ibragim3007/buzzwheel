@@ -6,6 +6,7 @@ import { Dare } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import WrapIconInCircle from '@/src/shared/ui/wrapper/WrapIconInCircle';
+import { normalizedSize } from '@/src/shared/utils/size';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useEffect, useState } from 'react';
@@ -85,7 +86,11 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
       {timerWasStarted && (
         <Animated.View entering={FadeInRight}>
           <WrapIconInCircle onPress={toggleTimer}>
-            <FontAwesome6 name={isTimerRunning ? 'pause' : 'play'} size={20} color={colors.accent.secondary} />
+            <FontAwesome6
+              name={isTimerRunning ? 'pause' : 'play'}
+              size={normalizedSize(18)}
+              color={colors.accent.secondary}
+            />
           </WrapIconInCircle>
         </Animated.View>
       )}
@@ -96,21 +101,25 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
           // width: "100%",
           borderColor: colors.accent.secondary,
           borderWidth: 2,
-          paddingHorizontal: 20,
-          paddingVertical: 18,
+          paddingHorizontal: normalizedSize(18),
+          paddingVertical: normalizedSize(16),
           borderRadius: colors.styles.borderRadiusDefault + 3,
           // backgroundColor: isTimerRunning ? colors.accent.secondary : 'transparent',
         }}
         textStyle={{
           style: {
             color: isTimerRunning ? '#fff' : colors.accent.secondary,
-            fontSize: 23,
+            fontSize: normalizedSize(22),
             fontFamily: fontWeight.bold,
           },
         }}
         onPress={toggleTimer}
         startIcon={
-          <Ionicons name="stopwatch-outline" size={32} color={isTimerRunning ? '#fff' : colors.accent.secondary} />
+          <Ionicons
+            name="stopwatch-outline"
+            size={normalizedSize(32)}
+            color={isTimerRunning ? '#fff' : colors.accent.secondary}
+          />
         }
         title={generateTimerTime(timeLeft)}
       />
@@ -118,7 +127,7 @@ export default function ButtomTimerInCard({ dare, handleDone }: ButtomTimerInCar
       {timerWasStarted && (
         <Animated.View entering={FadeInLeft}>
           <WrapIconInCircle onPress={resetTimer}>
-            <FontAwesome6 name={'arrow-rotate-right'} size={20} color={colors.accent.secondary} />
+            <FontAwesome6 name={'arrow-rotate-right'} size={normalizedSize(18)} color={colors.accent.secondary} />
           </WrapIconInCircle>
         </Animated.View>
       )}

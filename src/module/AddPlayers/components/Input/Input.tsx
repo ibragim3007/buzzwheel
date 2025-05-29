@@ -87,10 +87,10 @@ export default function Input({ onCall }: InputProps) {
             height: '100%',
             borderColor: isFocused ? currentInputColor : 'transparent', // Use currentInputColor for focused state
             backgroundColor: colors.background.secondary, // Fallback focus color
-            paddingHorizontal: 25,
+            paddingHorizontal: normalizedSize(25),
             flex: 1,
             borderRadius: colors.styles.borderRadiusDefault,
-            fontSize: 18,
+            fontSize: normalizedSize(18),
             color: isError ? colors.text.error : colors.text.primary,
             fontFamily: fontWeight.medium,
           }}

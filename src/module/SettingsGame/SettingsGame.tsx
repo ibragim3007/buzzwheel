@@ -16,7 +16,6 @@ import { formatBytes } from '@/src/shared/utils/formatBytes';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import * as Clipboard from 'expo-clipboard';
 import { useTranslation } from 'react-i18next';
-import RoulettePicker from './RoulettePicker/RoulettePicker';
 import { LanguagePicker } from '../LanguagePicker';
 
 export default function SettingsGame() {

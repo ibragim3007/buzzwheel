@@ -32,37 +32,39 @@ export default function GameModePage() {
 
   return (
     <PageWrapper flex={1}>
-      <SafeWrapper>
+      <SafeWrapper style={{ flex: 1 }}>
         <Header back />
-        <Grid height="93%" justfity="space-between">
-          <Grid marginTop={10} space="sm">
-            <Typography weight="bold" variant="title-1" textAlign="center">
-              {t('modePage.game-mode')}
-            </Typography>
-            <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
-              {t('modePage.description')}
-            </Typography>
-          </Grid>
+        <Grid flex={1} justfity="space-between">
+          <Grid flex={1}>
+            <Grid marginTop={10} space="sm">
+              <Typography weight="bold" variant="title-1" textAlign="center">
+                {t('modePage.game-mode')}
+              </Typography>
+              <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
+                {t('modePage.description')}
+              </Typography>
+            </Grid>
 
-          <Grid gap={24}>
-            <GameModeItem
-              currentMode={mode}
-              value="drink"
-              image={DrinkDareImage}
-              title={t('modePage.drink-and-dare')}
-              description={t('modePage.drink-mode-description')}
-              onPress={value => handleModeSelect(value as ModeType)}
-            />
-            <GameModeItem
-              currentMode={mode}
-              value="dry"
-              image={DryRunImage}
-              title={t('modePage.dry-mode-title')}
-              description={t('modePage.dry-mode-description')}
-              onPress={value => handleModeSelect(value as ModeType)}
-            />
+            <Grid flex={1} justfity="center" gap={24}>
+              <GameModeItem
+                currentMode={mode}
+                value="drink"
+                image={DrinkDareImage}
+                title={t('modePage.drink-and-dare')}
+                description={t('modePage.drink-mode-description')}
+                onPress={value => handleModeSelect(value as ModeType)}
+              />
+              <GameModeItem
+                currentMode={mode}
+                value="dry"
+                image={DryRunImage}
+                title={t('modePage.dry-mode-title')}
+                description={t('modePage.dry-mode-description')}
+                onPress={value => handleModeSelect(value as ModeType)}
+              />
+            </Grid>
           </Grid>
-          <Grid marginBottom={20}>
+          <Grid>
             <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
           </Grid>
         </Grid>

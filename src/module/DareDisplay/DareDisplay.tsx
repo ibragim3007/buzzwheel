@@ -59,58 +59,55 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
 
   return (
     <Animated.View
-      style={{ width: '100%', marginHorizontal: HORIZONTAL_PADDINGS }}
+      style={{ width: '100%', marginHorizontal: HORIZONTAL_PADDINGS, flex: 1 }}
       entering={animationService.enteringDareCard(0)}
       exiting={animationEngine.slideOutLeft(0)}
     >
-      <Grid gap={130}>
-        <View ref={ref}>
-          <Grid
-            paddingVertical={30}
-            paddingHorizontal={30}
-            marginHorizontal={HORIZONTAL_PADDINGS}
-            color={colors.text.white}
-            style={{ borderRadius: colors.styles.borderRadiusDefault }}
-          >
-            <Grid align="center" space="lg">
-              <Grid marginBottom={10} space="md">
-                {dare.time ? <ButtomTimerInCard dare={dare} handleDone={onPressDry} /> : null}
-                <Typography variant="title-2" weight="bold" color="secondary-accent" textAlign="center">
-                  <ActionPreproc
-                    textColor={colors.accent.secondary}
-                    action={dare.title}
-                    players={players}
-                    currentTurn={currentTurn}
-                    weight="semiBold"
-                  />
-                </Typography>
-              </Grid>
-
-              <Grid marginBottom={50}>
-                <Typography style={{ lineHeight: 33, letterSpacing: 0.3 }} textAlign="center" variant="title-3">
-                  <ActionPreproc action={dare.action} players={players} currentTurn={currentTurn} />
-                </Typography>
-              </Grid>
+      <Grid flex={1} justfity="space-evenly">
+        <Grid
+          paddingVertical={30}
+          paddingHorizontal={30}
+          marginHorizontal={HORIZONTAL_PADDINGS}
+          color={colors.text.white}
+          style={{ borderRadius: colors.styles.borderRadiusDefault }}
+        >
+          <Grid align="center" space="lg">
+            <Grid marginBottom={10} space="md">
+              {dare.time ? <ButtomTimerInCard dare={dare} handleDone={onPressDry} /> : null}
+              <Typography variant="title-2" weight="bold" color="secondary-accent" textAlign="center">
+                <ActionPreproc
+                  textColor={colors.accent.secondary}
+                  action={dare.title}
+                  players={players}
+                  currentTurn={currentTurn}
+                  weight="semiBold"
+                />
+              </Typography>
             </Grid>
-            <Grid
-              style={{
-                position: 'absolute',
-                bottom: normalizedSize(8),
-                right: normalizedSize(17),
-              }}
-            >
-              <Image
-                style={{
-                  height: normalizedSize(70),
-                  width: normalizedSize(70),
-                  transform: [{ rotate: '10deg' }],
-                }}
-                source={getActualImageLink(currentPackage?.imageEncoded || '')}
-                contentFit="contain"
-              />
+
+            <Grid marginBottom={50}>
+              <Typography style={{ lineHeight: 33, letterSpacing: 0.3 }} textAlign="center" variant="title-3">
+                <ActionPreproc action={dare.action} players={players} currentTurn={currentTurn} />
+              </Typography>
             </Grid>
           </Grid>
-        </View>
+          <Grid
+            style={{
+              position: 'absolute',
+              bottom: normalizedSize(8),
+              right: normalizedSize(17),
+            }}
+          >
+            <Image
+              style={{
+                height: normalizedSize(70),
+                width: normalizedSize(70),
+              }}
+              source={getActualImageLink(currentPackage?.imageEncoded || '')}
+              contentFit="contain"
+            />
+          </Grid>
+        </Grid>
 
         <Grid row width="100%" paddingHorizontal={40} space="lg">
           {dare.alcohol && mode == 'drink' ? (

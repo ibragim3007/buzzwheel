@@ -67,7 +67,7 @@ export default function AddPlayers() {
 
       <Grid style={{ overflow: 'hidden', position: 'relative' }}>
         <ScrollView
-          scrollIndicatorInsets={{ top: 40, bottom: 40 }}
+          scrollIndicatorInsets={{ top: normalizedSize(40), bottom: normalizedSize(40) }}
           indicatorStyle="black"
           contentContainerStyle={{ paddingVertical: normalizedSize(15) }}
           style={{

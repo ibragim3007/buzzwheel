@@ -15,6 +15,7 @@ import PaywallButton from './ui/PaywallButton';
 import PaywallItems from './ui/PaywallItems';
 import Button from '@/src/shared/ui/buttons/Button';
 import { Trans, useTranslation } from 'react-i18next';
+import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 
 export default function Paywall() {
   const { offering } = usePurchases();
@@ -44,7 +45,7 @@ export default function Paywall() {
   }
 
   return (
-    <Grid justfity="space-between" height="100%">
+    <Grid justfity="space-between" height="100%" paddingHorizontal={HORIZONTAL_PADDINGS / 2}>
       <Grid space="md">
         <Grid style={{ position: 'absolute' }}>
           {showCloseIcon ? (

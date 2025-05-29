@@ -10,6 +10,7 @@ import Grid from '../shared/ui/grid/Grid';
 import WrapIconInPressable from '../shared/ui/wrapper/WrapIconInPressable';
 import ProButton from './ui/ProButton';
 import { LanguagePicker } from '../module/LanguagePicker';
+import { normalizedSize } from '../shared/utils/size';
 
 interface HeaderProps {
   back?: boolean;
@@ -40,18 +41,18 @@ export default function Header({ back, onPressSettings }: HeaderProps) {
       {back ? (
         <Grid width="100%" row justfity="space-between">
           <WrapIconInPressable onPress={onPressBack}>
-            <Ionicons name="arrow-back" size={22} color={colors.text.primary} />
+            <Ionicons name="arrow-back" size={normalizedSize(22)} color={colors.text.primary} />
           </WrapIconInPressable>
 
           <WrapIconInPressable onPress={handlePresentModalPress}>
-            <Ionicons name="settings-sharp" size={22} color={colors.text.primary} />
+            <Ionicons name="settings-sharp" size={normalizedSize(22)} color={colors.text.primary} />
           </WrapIconInPressable>
         </Grid>
       ) : (
         <Grid row align="center" justfity="space-between">
           <Grid row align="center" space="md">
             <WrapIconInPressable onPress={handlePresentModalPress}>
-              <Ionicons name="settings-sharp" size={24} color={colors.text.primary} />
+              <Ionicons name="settings-sharp" size={normalizedSize(24)} color={colors.text.primary} />
             </WrapIconInPressable>
           </Grid>
           <Grid align="center" space="md" row>

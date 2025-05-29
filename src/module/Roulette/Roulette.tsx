@@ -5,7 +5,7 @@ import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { calcWidth } from '@/src/shared/utils/calcWidth';
-import { normalizedSize } from '@/src/shared/utils/size';
+import { isTablet, normalizedSize } from '@/src/shared/utils/size';
 import React, { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
@@ -109,7 +109,7 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
       </Animated.View>
 
       {centerBlock ? (
-        <Grid style={{ top: normalizedSize(250), left: '-56%' }}>
+        <Grid style={{ top: normalizedSize(240), left: isTablet() ? '-34.4%' : '-51.5%' }}>
           <Animated.View style={[styles.centerOverlay, cursorAnimatedStyle]}>
             <CenterCircle options={options} />
           </Animated.View>
@@ -124,7 +124,7 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
         style={{
           width: calcWidth(),
           alignSelf: 'center',
-          top: normalizedSize(120),
+          top: normalizedSize(90),
           opacity: isSpinning || currentTurn ? 0 : 1,
         }}
         width="100%"

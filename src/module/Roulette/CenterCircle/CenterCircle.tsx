@@ -1,4 +1,5 @@
 import { RouletteOptions } from '@/src/entities/Roulette/types';
+import { normalizedSize } from '@/src/shared/utils/size';
 import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Circle, Polygon } from 'react-native-svg';
 
@@ -27,12 +28,12 @@ export default function CenterCircle({ options }: CenterCircleProps) {
       <LinearGradient
         colors={['#FEF331', '#E77801']}
         style={{
-          width: 84,
-          height: 84,
+          width: normalizedSize(84),
+          height: normalizedSize(84),
           borderRadius: 100,
           position: 'absolute',
-          top: WHEEL_SIZE / 2 - 42,
-          left: WHEEL_SIZE / 2 - 42,
+          top: WHEEL_SIZE / 2 - normalizedSize(42),
+          left: WHEEL_SIZE / 2 - normalizedSize(42),
           shadowColor: '#01e705',
           shadowOpacity: 1,
           shadowRadius: 10,
@@ -41,16 +42,16 @@ export default function CenterCircle({ options }: CenterCircleProps) {
       <LinearGradient
         colors={['#FD9901', '#f0ae20']}
         style={{
-          width: 70,
-          height: 70,
+          width: normalizedSize(70),
+          height: normalizedSize(70),
           borderRadius: 100,
           position: 'absolute',
-          top: WHEEL_SIZE / 2 - 35,
-          left: WHEEL_SIZE / 2 - 35,
+          top: WHEEL_SIZE / 2 - normalizedSize(35),
+          left: WHEEL_SIZE / 2 - normalizedSize(35),
         }}
       />
 
-      <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.12} fill="#a18014" />
+      {/* <Circle cx={CENTER} cy={CENTER} r={RADIUS * 0.12} fill="#a18014" /> */}
     </Svg>
   );
 }

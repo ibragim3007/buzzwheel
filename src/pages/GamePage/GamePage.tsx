@@ -63,7 +63,7 @@ export default function GamePage() {
     >
       {!isSpinning && (
         <Grid style={{ position: 'absolute', zIndex: 100 }}>
-          <SafeWrapper>
+          <SafeWrapper style={{ backgroundColor: 'transparent' }}>
             <Header back />
           </SafeWrapper>
         </Grid>
@@ -83,6 +83,7 @@ export default function GamePage() {
             style={{ alignItems: 'center' }}
           >
             <Roulette
+              centerBlock
               currentTurn={currentTurn}
               segments={segments}
               options={DefaultRouletteOptions}

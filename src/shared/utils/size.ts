@@ -9,7 +9,7 @@ const scaleVertical = SCREEN_HEIGHT / 812;
 export function normalizedSize(size: number) {
   const newSize = size * scale;
   if (isTablet()) {
-    return size;
+    return Math.round(PixelRatio.roundToNearestPixel(size * (SCREEN_WIDTH / 650)));
   } else if (Platform.OS === 'ios') {
     return Math.round(PixelRatio.roundToNearestPixel(newSize));
   } else if (Platform.OS === 'android') {

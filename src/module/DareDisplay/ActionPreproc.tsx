@@ -3,6 +3,7 @@ import { useTheme } from '@/src/shared/hooks/useTheme';
 import { TypographyProps } from '@/src/shared/styles/typography/typography';
 import { Player } from '@/src/shared/types/globalTypes';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { normalizedSize } from '@/src/shared/utils/size';
 
 interface ActionPreprocProps extends TypographyProps {
   action: string;
@@ -17,7 +18,7 @@ export default function ActionPreproc({ action, currentTurn, players, textColor,
 
   return updatedArr.map((item, index) => (
     <Typography
-      style={{ lineHeight: 31, letterSpacing: 0.3, color: textColor || item.color || '#000' }}
+      style={{ lineHeight: normalizedSize(29), letterSpacing: 0.3, color: textColor || item.color || '#000' }}
       textAlign="center"
       weight={item.weight}
       variant="title-3"
