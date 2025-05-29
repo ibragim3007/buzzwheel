@@ -4,13 +4,14 @@ import { immer } from 'zustand/middleware/immer';
 import i18n from '../../providers/i18n';
 import { getDeviceLanguage } from '../../helpers/getDeviceLanguage';
 import { ZustandLanguageStorage } from './lang.storage';
+import { LANGUAGE } from '../../types/globalTypes';
 
 interface State {
-  lang: string;
+  lang: LANGUAGE;
   _hasHydrated: boolean;
 }
 interface Actions {
-  setLang: (lang: string) => void;
+  setLang: (lang: LANGUAGE) => void;
   setHasHydrated: (v: boolean) => void;
 }
 
@@ -39,6 +40,7 @@ export const useLang = create<State & Actions>()(
       /** выстрелит ровно один раз после подгрузки сохранённого стейта */
       onRehydrateStorage: state => persistedState => {
         const saved = persistedState?.lang;
+
         i18n.changeLanguage(saved ?? state.lang); // если был — применяем
         state.setHasHydrated(true); // даём знать UI
       },

@@ -1,4 +1,4 @@
-export type LANGUAGE = 'ru' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'tr' | 'nl' | 'sv' | 'cs';
+export type LANGUAGE = 'ru' | 'en';
 
 export type DareType = 'player' | 'all' | 'gift';
 export type PackageType = 'default' | 'pair';

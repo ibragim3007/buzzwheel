@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 import { modes } from '@/assets/package_mock/modes';
 import { Dare, Package } from '@/src/shared/types/globalTypes';
+import { useLang } from '@/src/shared/hooks/lang/useLangStore';
 
 export interface PackageWithDaresIds extends Package {
   dares: (Dare & { id: number })[];
@@ -26,7 +27,10 @@ interface Actions {
 
 export const usePackage = create<State & Actions>(set => {
   // Initialize the state with packages and their dares
-  const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modes.ru).map((mode, index) => {
+  const lang = useLang.getState().lang;
+  const modesLang = modes[lang];
+
+  const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modesLang).map((mode, index) => {
     const daresWithIds = mode.dares.map((dare, dareIndex) => ({
       ...dare,
       id: index * 100 + dareIndex,
@@ -83,4 +87,28 @@ export const usePackage = create<State & Actions>(set => {
         };
       }),
   };
+});
+
+useLang.subscribe(state => {
+  if (state.lang && state._hasHydrated) {
+    const lang = state.lang;
+    const modesLang = modes[lang];
+
+    const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modesLang).map((mode, index) => {
+      const daresWithIds = mode.dares.map((dare, dareIndex) => ({
+        ...dare,
+        id: index * 100 + dareIndex,
+        type: dare.type as Dare['type'], // Cast type to DareType
+      }));
+
+      return {
+        ...mode,
+        weight: INITIAL_WEIGHT,
+        packageType: mode.packageType as Package['packageType'],
+        dares: daresWithIds,
+      };
+    });
+
+    usePackage.setState({ data: packagesWithDaresIds });
+  }
 });
