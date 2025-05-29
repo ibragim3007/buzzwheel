@@ -12,7 +12,12 @@
       "distribution": "internal"
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "SENTRY_AUTH_TOKEN": "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",
+        "SENTRY_ALLOW_FAILURE": "true",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      }
     },
     "simulator-development": {
       "ios": {

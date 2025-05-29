@@ -37,6 +37,23 @@ import { I18nextProvider, useTranslation } from 'react-i18next';
 import Purchases from 'react-native-purchases';
 import i18n from '@/src/shared/providers/i18n';
 import { vexo } from 'vexo-analytics';
+import * as Sentry from '@sentry/react-native';
+
+Sentry.init({
+  dsn: 'https://663038e91c353db48e2d250a8446f0b7@o4509188089708544.ingest.us.sentry.io/4509407262670848',
+
+  // Adds more context data to events (IP address, cookies, user, etc.)
+  // For more information, visit: https://docs.sentry.io/platforms/react-native/data-management/data-collected/
+  sendDefaultPii: true,
+
+  // Configure Session Replay
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1,
+  integrations: [Sentry.mobileReplayIntegration()],
+
+  // uncomment the line below to enable Spotlight (https://spotlightjs.com)
+  spotlight: __DEV__,
+});
 
 if (!__DEV__) {
   vexo('1aea5fc9-e226-4e8f-b22f-7e86b51c5c7d');
@@ -50,7 +67,7 @@ I18nManager.forceRTL(isRTL);
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+export default Sentry.wrap(function RootLayout() {
   const { i18n } = useTranslation(); // автоматический re-render при смене языка
   const [loaded] = useFonts({
     Manrope_300Light,
@@ -119,4 +136,4 @@ export default function RootLayout() {
       </GestureHandlerRootView>
     </I18nextProvider>
   );
-}
+});

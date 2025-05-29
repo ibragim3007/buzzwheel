@@ -88,6 +88,14 @@
         {
           "microphonePermission": "Allow BuzzWheel to access your microphone."
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "buzzwheel",
+          "organization": "mydream-6o"
+        }
       ]
     ],
     "experiments": {
