@@ -36,6 +36,11 @@ import { preloadImages } from '@/src/shared/service/preload.service';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import Purchases from 'react-native-purchases';
 import i18n from '@/src/shared/providers/i18n';
+import { vexo } from 'vexo-analytics';
+
+if (!__DEV__) {
+  vexo('1aea5fc9-e226-4e8f-b22f-7e86b51c5c7d');
+}
 
 preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
 
