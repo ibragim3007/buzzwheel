@@ -38,7 +38,9 @@
     "drink-mode-description": "Miss the mark? Bottoms up!",
     "dry-mode-title": "Dry Run",
     "dry-mode-description": "Play it clean — no booze needed.",
-    "start-button": "Start Game"
+    "start-button": "Start Game",
+    "please-select-a-game-mode": "Please select a game mode",
+    "need-pick-mode-modal-desck": "You need to select a game mode before starting the game."
   },
   "gamePage": {
     "modal-drink-title": "Drinking Task",

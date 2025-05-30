@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { usePackage } from '@/src/entities/Package/usePackage';
+import { Alert } from 'react-native';
 
 export default function GameModePage() {
   const { mode, setMode } = useRouletteGame();
@@ -29,6 +30,10 @@ export default function GameModePage() {
   };
 
   const onPressStartGame = () => {
+    if (mode === null) {
+      Alert.alert(t('modePage.please-select-a-game-mode'), t('modePage.need-pick-mode-modal-desck'));
+      return;
+    }
     analytics.trackEvent(Events.pressStartGameAfterModePage, {
       mode: mode,
       playersAmount: players.length,

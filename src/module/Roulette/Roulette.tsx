@@ -31,8 +31,6 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
 
   const winnerSegment = segments.find(segment => segment.id === currentTurn?.id) || null;
 
-  console.log('asdasd', winnerSegment);
-
   useEffect(() => {
     if (onChangeSpinStatus) onChangeSpinStatus(isSpinning);
   }, [isSpinning]);
