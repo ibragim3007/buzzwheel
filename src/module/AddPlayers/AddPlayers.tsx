@@ -102,15 +102,17 @@ export default function AddPlayers() {
         </ScrollView>
       </Grid>
       <Grid space="lg" marginBottom={20}>
-        {isActiveSubscription ? (
-          <Typography color="disabled" textAlign="center" variant="footnote">
-            {isPlayersGreaterThan0
-              ? t('homepage.players-length-players', { amount: players.length })
-              : t('homepage.need-at-least-players')}
-          </Typography>
-        ) : (
-          <UserLimit currentPlayers={players.length} />
-        )}
+        <Grid height={30} justfity="center">
+          {isActiveSubscription ? (
+            <Typography color="disabled" textAlign="center" variant="footnote">
+              {isPlayersGreaterThan0
+                ? t('homepage.players-length-players', { amount: players.length })
+                : t('homepage.need-at-least-players')}
+            </Typography>
+          ) : (
+            <UserLimit currentPlayers={players.length} />
+          )}
+        </Grid>
         <Button
           onPress={onPressStart}
           title={t('homepage.start-game')}
