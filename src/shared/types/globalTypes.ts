@@ -27,6 +27,7 @@ export type Player = {
   readonly id: number;
   name: string;
   color?: string;
+  type?: 'player' | 'all';
 };
 
 // export interface DATA {

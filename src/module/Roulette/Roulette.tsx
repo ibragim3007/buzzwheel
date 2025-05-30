@@ -29,6 +29,10 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
   const { t } = useTranslation();
   const { isSpinning, winner, animatedStyle, cursorAnimatedStyle, spinWheel } = useRoulette(segments, onCallback);
 
+  const winnerSegment = segments.find(segment => segment.id === currentTurn?.id) || null;
+
+  console.log('asdasd', winnerSegment);
+
   useEffect(() => {
     if (onChangeSpinStatus) onChangeSpinStatus(isSpinning);
   }, [isSpinning]);
@@ -38,12 +42,18 @@ const Roulette = ({ segments, options, currentTurn, centerBlock, onCallback, onC
       {currentTurn && (
         <Animated.View entering={FadeIn}>
           <Grid>
-            <Typography weight="medium" variant="title-1">
-              {t('gamePage.roulette.task-for')}{' '}
-              <Typography style={{ color: currentTurn.color || '#fff' }} weight="bold" variant="title-1">
-                {currentTurn?.name}
+            {winnerSegment?.type === 'all' ? (
+              <Typography weight="medium" variant="title-1">
+                {t('gamePage.roulette.task-for-all')}
               </Typography>
-            </Typography>
+            ) : (
+              <Typography weight="medium" variant="title-1">
+                {t('gamePage.roulette.task-for')}{' '}
+                <Typography style={{ color: currentTurn.color || '#fff' }} weight="bold" variant="title-1">
+                  {currentTurn?.name}
+                </Typography>
+              </Typography>
+            )}
           </Grid>
         </Animated.View>
       )}

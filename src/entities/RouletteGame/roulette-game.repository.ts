@@ -118,7 +118,7 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
       return;
     }
 
-    console.log(pickedPackages.map(pkg => `${pkg.name} (weight: ${pkg.weight})\n`));
+    // console.log(pickedPackages.map(pkg => `${pkg.name} (weight: ${pkg.weight})\n`));
 
     decayWeight(randomPackage.id); // обязательно после удачного хода
 

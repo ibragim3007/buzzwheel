@@ -1,4 +1,5 @@
 import { usePackage } from '@/src/entities/Package/usePackage';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import Packages from '@/src/module/Packages/Packages';
 import PaywallBlock from '@/src/module/Paywall/PaywallBlock';
 import { useTheme } from '@/src/shared/hooks/useTheme';
@@ -21,6 +22,7 @@ export default function PackagePage() {
   const { t } = useTranslation();
   const colors = useTheme();
   const { pickedPackages } = usePackage();
+  const { isActiveSubscription } = usePurchases();
   const { navigate } = useRouter();
   const { vibrate } = useVibration();
   const onPressPlay = () => {
@@ -49,9 +51,11 @@ export default function PackagePage() {
                 {t('packagePage.pick-your-modes')}
               </Typography>
               <Packages />
-              <Grid paddingHorizontal={30}>
-                <PaywallBlock />
-              </Grid>
+              {!isActiveSubscription && (
+                <Grid paddingHorizontal={30}>
+                  <PaywallBlock />
+                </Grid>
+              )}
             </Grid>
           </Animated.View>
         </SafeWrapper>

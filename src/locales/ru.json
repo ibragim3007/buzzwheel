@@ -49,7 +49,9 @@
     "modal-cancel-button": "Отмена",
     "roulette": {
       "task-for": "Задание для",
-      "spin-button": "Крутить колесо"
+      "spin-button": "Крутить колесо",
+      "all": "Всех",
+      "task-for-all": "Задание для всех!"
     },
     "done-button": "Готово",
     "drink-button": "Выпить"

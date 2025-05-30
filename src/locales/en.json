@@ -48,7 +48,8 @@
     "roulette": {
       "task-for": "Task for",
       "spin-button": "Spin the Wheel",
-      "all": "All"
+      "all": "All",
+      "task-for-all": "A task for everyone!"
     },
     "done-button": "Done",
     "drink-button": "Alcohol"
