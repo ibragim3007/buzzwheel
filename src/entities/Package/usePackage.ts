@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
-import { modes } from '@/assets/package_mock/modes';
-import { Dare, Package } from '@/src/shared/types/globalTypes';
 import { useLang } from '@/src/shared/hooks/lang/useLangStore';
+import { Dare, Package } from '@/src/shared/types/globalTypes';
+import { buildPackages } from './helpers/buildPackages';
 
 export interface PackageWithDaresIds extends Package {
   dares: (Dare & { id: number })[];
@@ -21,35 +21,20 @@ interface Actions {
   removePackage: (mode: PackageWithDaresIds) => void;
   togglePackage: (mode: PackageWithDaresIds) => void;
 
+  // resetPackages: () => void;
+
   decayWeight: (id: number) => void;
   resetWeight: () => void;
 }
 
 export const usePackage = create<State & Actions>(set => {
   // Initialize the state with packages and their dares
-  const lang = useLang.getState().lang;
-  const modesLang = modes[lang];
-
-  const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modesLang).map((mode, index) => {
-    const daresWithIds = mode.dares.map((dare, dareIndex) => ({
-      ...dare,
-      id: index * 100 + dareIndex,
-      type: dare.type as Dare['type'], // Cast type to DareType
-    }));
-
-    // Assign a unique ID to each dare based on its index
-    return {
-      ...mode,
-      weight: INITIAL_WEIGHT,
-      packageType: mode.packageType as Package['packageType'],
-      dares: daresWithIds,
-    };
-  });
+  const initialPackages = buildPackages(useLang.getState().lang);
 
   // Set the initial state
   return {
-    data: packagesWithDaresIds,
-    pickedPackages: [packagesWithDaresIds[0]],
+    data: initialPackages,
+    pickedPackages: [initialPackages[0]],
 
     addPackage: mode => set(state => ({ pickedPackages: [...state.pickedPackages, mode] })),
 
@@ -86,29 +71,29 @@ export const usePackage = create<State & Actions>(set => {
           pickedPackages: halve(state.pickedPackages),
         };
       }),
+
+    // resetPackages: () =>
+    //   set(() => {
+    //     const packages = buildPackages(useLang.getState().lang);
+
+    //     return {
+    //       pickedPackages: [packages[0]], // Reset to the first package
+    //       data: packages, // Reset data to initial packages
+    //     };
+    //   }),
   };
 });
 
 useLang.subscribe(state => {
-  if (state.lang && state._hasHydrated) {
-    const lang = state.lang;
-    const modesLang = modes[lang];
+  const prevPickedIds = usePackage.getState().pickedPackages.map(p => p.id);
 
-    const packagesWithDaresIds: PackageWithDaresIds[] = Object.values(modesLang).map((mode, index) => {
-      const daresWithIds = mode.dares.map((dare, dareIndex) => ({
-        ...dare,
-        id: index * 100 + dareIndex,
-        type: dare.type as Dare['type'], // Cast type to DareType
-      }));
+  const lang = state.lang;
+  const packages = buildPackages(lang);
 
-      return {
-        ...mode,
-        weight: INITIAL_WEIGHT,
-        packageType: mode.packageType as Package['packageType'],
-        dares: daresWithIds,
-      };
-    });
+  const pickedPackages = packages.filter(pkg => prevPickedIds.includes(pkg.id));
 
-    usePackage.setState({ data: packagesWithDaresIds });
-  }
+  usePackage.setState({
+    data: packages,
+    pickedPackages: pickedPackages.length ? pickedPackages : [packages[0]],
+  });
 });

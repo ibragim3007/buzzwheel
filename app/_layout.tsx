@@ -94,7 +94,6 @@ export default Sentry.wrap(function RootLayout() {
     try {
       Purchases.addCustomerInfoUpdateListener(customerInfo => {
         // Handle customer info updates
-        console.log('Customer info updated');
         setCustomerInfo(customerInfo);
       });
     } catch (error) {

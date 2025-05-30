@@ -1,7 +1,9 @@
 import { usePackage } from '@/src/entities/Package/usePackage';
+import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import Packages from '@/src/module/Packages/Packages';
 import PaywallBlock from '@/src/module/Paywall/PaywallBlock';
+import { useLang } from '@/src/shared/hooks/lang/useLangStore';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
@@ -22,9 +24,14 @@ export default function PackagePage() {
   const { t } = useTranslation();
   const colors = useTheme();
   const { pickedPackages } = usePackage();
+  const { resetGame } = useRouletteGame();
   const { isActiveSubscription } = usePurchases();
   const { navigate } = useRouter();
   const { vibrate } = useVibration();
+  const { lang } = useLang();
+
+  console.log(lang);
+
   const onPressPlay = () => {
     analytics.trackEvent(Events.pressContinueGameAfterPackagePage, {
       packages: pickedPackages.map(p => p.id),
@@ -36,6 +43,8 @@ export default function PackagePage() {
   const [justMounted, setJustMounted] = useState(false);
 
   useEffect(() => {
+    // resetPackages();
+    resetGame();
     setJustMounted(true);
   }, []);
 

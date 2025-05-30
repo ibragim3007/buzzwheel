@@ -27,6 +27,7 @@ export const useLang = create<State & Actions>()(
         set(s => {
           if (s.lang !== lang) {
             s.lang = lang;
+
             i18n.changeLanguage(lang); // переключаем сразу
           }
         }),

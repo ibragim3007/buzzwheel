@@ -26,6 +26,8 @@ interface Actions {
   showDare: () => void;
   hideDare: (drunk: boolean) => void;
   setMode: (mode: ModeType) => void;
+
+  resetGame: () => void;
 }
 
 export const useRouletteGame = create<State & Actions>((set, get) => ({
@@ -88,6 +90,17 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
     уменьшать вероятность его выпадения на 1 / 0.1 * dares.length
 
   */
+
+  resetGame: () => {
+    set(() => ({
+      moves: [],
+      currentTurn: null,
+      currentDare: null,
+      displayDare: false,
+      currentPackage: null,
+      mode: null,
+    }));
+  },
 
   setTurn: (player: Player, type: DareType) => {
     /* Реализовать логику показа paywall, на каждый 5-й ход через навигацию */
