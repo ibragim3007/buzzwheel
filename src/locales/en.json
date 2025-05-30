@@ -29,7 +29,9 @@
     "privacy": "Privacy Policy",
     "unlock-all-modes": "Unlock all modes",
     "cancel-any-time": "Cancel anytime",
-    "unforgettable-emotions": "Unforgettable experiences"
+    "unforgettable-emotions": "Unforgettable experiences",
+    "alread-sub-message": "You already have an active subscription. Thank you for your support!",
+    "go-back": "Go Back"
   },
   "modePage": {
     "game-mode": "Game Mode",

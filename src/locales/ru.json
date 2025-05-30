@@ -31,7 +31,9 @@
     "privacy": "Политика конфиденциальности",
     "unlock-all-modes": "Открыть все режимы",
     "cancel-any-time": "Отменить в любой момент",
-    "unforgettable-emotions": "Незабываемые эмоции"
+    "unforgettable-emotions": "Незабываемые эмоции",
+    "alread-sub-message": "У вас уже есть активная подписка. Спасибо за вашу поддержку!",
+    "go-back": "Назад"
   },
   "modePage": {
     "game-mode": "Игровой режим",
