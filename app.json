@@ -8,6 +8,10 @@
     "icon": "./assets/images/icons_ios/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "locales": {
+      "en": "./assets/locales/en.json",
+      "ru": "./assets/locales/ru.json"
+    },
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -17,7 +21,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.ibragimlol.BuzzWheel",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleAllowMixedLocalizations": true
       }
     },
     "android": {
@@ -86,7 +91,7 @@
       [
         "expo-av",
         {
-          "microphonePermission": "Allow BuzzWheel to access your microphone."
+          "microphonePermission": "Allow Buzz Wheel to use the microphone to record your voice for the selected functionality."
         }
       ],
       [
