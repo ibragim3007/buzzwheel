@@ -69,3 +69,4 @@ yarn-error.*
 *.aab
 
 .env.local
+*.apk
