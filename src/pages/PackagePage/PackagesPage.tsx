@@ -28,16 +28,13 @@ export default function PackagePage() {
   const { isActiveSubscription } = usePurchases();
   const { navigate } = useRouter();
   const { vibrate } = useVibration();
-  const { lang } = useLang();
-
-  console.log(lang);
 
   const onPressPlay = () => {
     analytics.trackEvent(Events.pressContinueGameAfterPackagePage, {
       packages: pickedPackages.map(p => p.id),
     });
     vibrate();
-    navigate('/screens/gameModeScreen');
+    navigate('/screens/game');
   };
 
   const [justMounted, setJustMounted] = useState(false);

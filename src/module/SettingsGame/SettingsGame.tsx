@@ -16,7 +16,6 @@ import { LanguagePicker } from '../LanguagePicker';
 import LegalBlock from './Blocks/LegalBlock';
 import RateBlock from './Blocks/RateBlock';
 import DrinkModeToggle from './DrinkModeToggle/DrinkModeToggle';
-import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import VibrationToggle from './VibrationToggle/VibrationToggle';
 
 export default function SettingsGame() {
