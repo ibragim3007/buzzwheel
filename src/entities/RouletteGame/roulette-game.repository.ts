@@ -7,7 +7,7 @@ import { navigate } from 'expo-router/build/global-state/routing';
 import { pickByWeight } from '@/src/shared/utils/pickByWeight';
 import { usePurchases } from '../usePurchases/usePurchases';
 
-export type ModeType = 'drink' | 'dry';
+export type ModeType = 'drink' | 'dry' | 'push-ups' | 'no-penalty';
 interface State {
   moves: { player: Player; dare: Dare; packId: number; drunk: boolean }[];
   currentTurn: Player | null;
@@ -74,7 +74,7 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
     });
   },
 
-  setMode: (mode: 'drink' | 'dry' | null) => {
+  setMode: (mode: ModeType | null) => {
     set(() => ({ mode }));
   },
 

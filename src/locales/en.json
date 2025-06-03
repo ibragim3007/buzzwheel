@@ -45,9 +45,9 @@
     "need-pick-mode-modal-desck": "You need to select a game mode before starting the game."
   },
   "gamePage": {
-    "modal-drink-title": "Drinking Task",
+    "modal-drink-title": "Penalty task",
     "drink-modal-subtext": "Are you sure you want to choose this?",
-    "modal-active-button": "Drink {{ number }} times",
+    "modal-active-button": "{{ number }} penalties",
     "modal-cancel-button": "Cancel",
     "roulette": {
       "task-for": "Task for",
@@ -56,7 +56,7 @@
       "task-for-all": "A task for everyone!"
     },
     "done-button": "Done",
-    "drink-button": "Alcohol"
+    "drink-button": "Penalty"
   },
   "settings": {
     "token-copied": "Token copied to clipboard",

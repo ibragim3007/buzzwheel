@@ -3,7 +3,6 @@ import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repos
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import Packages from '@/src/module/Packages/Packages';
 import PaywallBlock from '@/src/module/Paywall/PaywallBlock';
-import { useLang } from '@/src/shared/hooks/lang/useLangStore';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
@@ -34,7 +33,7 @@ export default function PackagePage() {
       packages: pickedPackages.map(p => p.id),
     });
     vibrate();
-    navigate('/screens/game');
+    navigate('/screens/gameModeScreen');
   };
 
   const [justMounted, setJustMounted] = useState(false);
@@ -66,7 +65,6 @@ export default function PackagePage() {
           </Animated.View>
         </SafeWrapper>
       </ScrollPageWrapper>
-
       {pickedPackages.length > 0 && (
         <Animated.View entering={justMounted ? undefined : animationEngine.zoomInDown(3)}>
           <GradientShadow color={colors.background.primary} height={250} />

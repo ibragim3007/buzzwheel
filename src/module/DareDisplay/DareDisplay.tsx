@@ -18,6 +18,7 @@ import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
 import { useTranslation } from 'react-i18next';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
+import { useSettings } from '@/src/entities/Settings/settings.repository';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -32,7 +33,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   const { vibrate } = useVibration();
 
   const colors = useTheme();
-  const { currentPackage, mode } = useRouletteGame();
+  const { currentPackage } = useRouletteGame();
+  const { isDrinkingMode } = useSettings();
 
   const onPressDrunk = () => {
     analytics.trackEvent(Events.pressAlcohol, {});
@@ -112,8 +114,8 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
           </Grid>
         </Grid>
 
-        <Grid row width="100%" paddingHorizontal={40} space="lg">
-          {dare.alcohol && mode == 'drink' ? (
+        <Grid row width="100%" paddingHorizontal={HORIZONTAL_PADDINGS * 2} space="lg">
+          {dare.alcohol && isDrinkingMode ? (
             <>
               <Grid flex={0.5} gap={13}>
                 <Button
@@ -124,13 +126,13 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                 />
                 {/* <InGameButton onPress={onPressDrunk} color={colors.background.secondary} title="Alcohol" /> */}
                 <Grid align="center" row justfity="center" space="sm">
-                  <Entypo name="drink" size={15} color={colors.text.disabled} />
+                  <Entypo name="flag" size={15} color={colors.text.disabled} />
                   <Typography textAlign="center" variant="caption-1" color="disabled">
                     {t('gamePage.modal-active-button', { number: dare.alcohol })}
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid flex={mode == 'drink' ? 0.5 : 1}>
+              <Grid flex={isDrinkingMode ? 0.5 : 1}>
                 <Button title={t('gamePage.done-button')} onPress={onPressDry} />
                 {/* <InGameButton title="Done" onPress={onPressDry} /> */}
               </Grid>

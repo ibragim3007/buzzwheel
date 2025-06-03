@@ -17,9 +17,18 @@ interface GameModeItemProps {
   image: string;
   value: ModeType;
   currentMode?: ModeType | null;
+  gradientColors: [ColorValue, ColorValue, ...ColorValue[]];
 }
 
-export default function GameModeItem({ title, description, image, value, currentMode, onPress }: GameModeItemProps) {
+export default function GameModeItem({
+  title,
+  description,
+  image,
+  value,
+  currentMode,
+  gradientColors,
+  onPress,
+}: GameModeItemProps) {
   const isPicked = currentMode === value;
   const colors = useTheme();
 
@@ -29,10 +38,8 @@ export default function GameModeItem({ title, description, image, value, current
     }
   };
 
-  const gradientColors: [ColorValue, ColorValue, ...ColorValue[]] = isPicked
-    ? value === 'drink'
-      ? [colors.accent.primary, '#FF5E5E']
-      : ['#723fde', '#4effea']
+  const borderColors: [ColorValue, ColorValue, ...ColorValue[]] = isPicked
+    ? gradientColors
     : [colors.background.secondary, colors.background.secondary];
 
   return (
@@ -40,7 +47,7 @@ export default function GameModeItem({ title, description, image, value, current
       <Pressable
         onPress={onPressWrapper}
         style={{
-          shadowColor: value === 'drink' ? colors.accent.primary : '#4f3fde',
+          shadowColor: isPicked ? gradientColors[0] : '#4f3fde',
           shadowOffset: { height: 0, width: 0 },
           shadowOpacity: isPicked ? 0.2 : 0,
           shadowRadius: 10,
@@ -49,7 +56,7 @@ export default function GameModeItem({ title, description, image, value, current
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={gradientColors}
+          colors={borderColors}
           style={{
             borderRadius: colors.styles.borderRadiusDefault + normalizedSize(3),
             padding: normalizedSize(3),
@@ -58,13 +65,13 @@ export default function GameModeItem({ title, description, image, value, current
           <Grid
             row
             align="center"
-            paddingVertical={20}
+            paddingVertical={18}
             color={isPicked ? colors.background.secondary : colors.background.primary}
             style={{ borderRadius: colors.styles.borderRadiusDefault }}
             space="md"
             paddingHorizontal={6}
           >
-            <Grid width="35%">
+            <Grid width="38%">
               <Image source={image} style={{ width: 130, height: 140 }} contentFit="cover" />
             </Grid>
             <Grid width="56%" space="sm">

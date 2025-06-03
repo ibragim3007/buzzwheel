@@ -1,22 +1,27 @@
+import Button from '@/src/shared/ui/buttons/Button';
+import Grid from '@/src/shared/ui/grid/Grid';
 import PageWrapper from '@/src/shared/ui/layout/PageWrapper';
 import SafeWrapper from '@/src/shared/ui/layout/SafeWrapper';
 import Typography from '@/src/shared/ui/typography/Typography';
-import GameModeItem from './ui/GameModeItem';
-import Grid from '@/src/shared/ui/grid/Grid';
-import Button from '@/src/shared/ui/buttons/Button';
 import Header from '@/src/widget/Header';
-import DryRunImage from '@/assets/images/game_mode_images/dry_run_image.png';
-import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png';
-import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
-import { useRouter } from 'expo-router';
-import { useVibration } from '@/src/shared/hooks/useVibration';
-import { useTranslation } from 'react-i18next';
-import { analytics, Events } from '@/src/shared/service/analytics.service';
-import { usePlayerStore } from '@/src/entities/Player/player.store';
+import GameModeItem from './ui/GameModeItem';
+// import DryRunImage from '@/assets/images/game_mode_images/dry_run_image.png';
+// import DrinkDareImage from '@/assets/images/game_mode_images/drink_dare_run.png';
+import DrinkWaterImage from '@/assets/images/game_mode_images/drink_water.png';
+import NoPenaltyImage from '@/assets/images/game_mode_images/no_penalty2.png';
+import PushUpImage from '@/assets/images/game_mode_images/push_up.png';
 import { usePackage } from '@/src/entities/Package/usePackage';
-import { Alert } from 'react-native';
+import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
+import { useTheme } from '@/src/shared/hooks/useTheme';
+import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
+import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
+import { Alert, ScrollView } from 'react-native';
 
 export default function GameModePage() {
+  const colors = useTheme();
   const { mode, setMode } = useRouletteGame();
   const { navigate } = useRouter();
   const { players } = usePlayerStore();
@@ -48,40 +53,58 @@ export default function GameModePage() {
   return (
     <PageWrapper flex={1}>
       <SafeWrapper style={{ flex: 1 }}>
-        <Header back />
-        <Grid flex={1} justfity="space-between">
-          <Grid flex={1}>
-            <Grid marginTop={10} space="sm">
-              <Typography weight="bold" variant="title-1" textAlign="center">
-                {t('modePage.game-mode')}
-              </Typography>
-              <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
-                {t('modePage.description')}
-              </Typography>
-            </Grid>
+        <ScrollView
+          contentContainerStyle={{
+            paddingVertical: 30,
+          }}
+          showsVerticalScrollIndicator={false}
+        >
+          <Header back />
+          <Grid space="lg" flex={1} justfity="space-between">
+            <Grid space="lg" flex={1}>
+              <Grid marginTop={10} space="sm">
+                <Typography weight="bold" variant="title-1" textAlign="center">
+                  {t('modePage.game-mode')}
+                </Typography>
+                <Typography variant="footnote" color="secondary" textAlign="center" marginTop={8}>
+                  {t('modePage.description')}
+                </Typography>
+              </Grid>
 
-            <Grid flex={1} justfity="center" gap={24}>
-              <GameModeItem
-                currentMode={mode}
-                value="drink"
-                image={DrinkDareImage}
-                title={t('modePage.drink-and-dare')}
-                description={t('modePage.drink-mode-description')}
-                onPress={value => handleModeSelect(value as ModeType)}
-              />
-              <GameModeItem
-                currentMode={mode}
-                value="dry"
-                image={DryRunImage}
-                title={t('modePage.dry-mode-title')}
-                description={t('modePage.dry-mode-description')}
-                onPress={value => handleModeSelect(value as ModeType)}
-              />
+              <Grid flex={1} justfity="center" gap={24}>
+                <GameModeItem
+                  gradientColors={['#30e561', '#4effea']}
+                  currentMode={mode}
+                  value="no-penalty"
+                  image={NoPenaltyImage}
+                  title={'Easy Mode'}
+                  description={'Stay dry and consequence-free—just pure fun, no forfeits.'}
+                  onPress={value => handleModeSelect(value as ModeType)}
+                />
+                <GameModeItem
+                  currentMode={mode}
+                  value="push-ups"
+                  image={PushUpImage}
+                  title={'Drop & Pump'}
+                  description={'Slip up a turn? Hit the floor and crank out some push-ups.'}
+                  onPress={value => handleModeSelect(value as ModeType)}
+                  gradientColors={[colors.accent.primary, colors.accent.quaternary]}
+                />
+                <GameModeItem
+                  gradientColors={['#723fde', '#4effea']}
+                  currentMode={mode}
+                  value="drink"
+                  image={DrinkWaterImage}
+                  title={'Sip or Snack	'}
+                  description={'Miss the mark? Gulp water or down a quick bite as your forfeit.'}
+                  onPress={value => handleModeSelect(value as ModeType)}
+                />
+              </Grid>
             </Grid>
           </Grid>
-          <Grid>
-            <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
-          </Grid>
+        </ScrollView>
+        <Grid marginTop={20}>
+          <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
         </Grid>
       </SafeWrapper>
     </PageWrapper>

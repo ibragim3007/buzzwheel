@@ -24,7 +24,6 @@ export const usePurchases = create<State & Actions>(set => {
           apiKey: REVENUE_CAT_API_IOS,
         });
       } else if (Platform.OS === 'android') {
-        console.log(REVENUE_CAT_API_ANDROID);
         Purchases.configure({
           apiKey: REVENUE_CAT_API_ANDROID,
         });
@@ -33,7 +32,7 @@ export const usePurchases = create<State & Actions>(set => {
       const customerInfo = await Purchases.getCustomerInfo();
       const offerings = await Purchases.getOfferings();
       const isActiveSubscription = customerInfo.activeSubscriptions.length > 0;
-      set({ customerInfo, offering: offerings.current, isActiveSubscription });
+      set({ customerInfo, offering: offerings.current, isActiveSubscription: true });
     } catch (e) {
       console.error('Error fetching customer info:', e);
     }
