@@ -8,6 +8,8 @@ export const Events = {
   pressStartGame: 'press_start_game',
   pressSettings: 'press_settings',
   pressDisableRepeated: 'press_disable_repeated',
+  pressDisabledDrinkingMode: 'press_disabled_drinking_mode',
+  pressEnableDrinkingMode: 'press_enable_drinking_mode',
   pressDisableVibration: 'press_disable_vibration',
   pressProButton: 'press_pro_button',
   pressRateUs: 'press_rate_us',

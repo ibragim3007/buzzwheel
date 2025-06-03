@@ -3,60 +3,49 @@ import { customTheme, PalitraInterface } from '@/src/shared/config/theme/theme';
 import { LocalStorage } from '@/src/shared/service/storage.service';
 
 import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
+import { SettingsStateStorage } from './settings.storage';
 
 interface State {
   rouletteColor?: IAvailableColor;
   theme: PalitraInterface;
   isRemoveRepetitions: boolean;
+  isDrinkingMode: boolean;
 }
 
 interface Actions {
   setRouletteColors: (avaialbleColor: IAvailableColor) => void;
   setTheme: (theme: PalitraInterface) => void;
   setRemoveRepetitions: (isRemoveRepetitions: boolean) => void;
+  setDrinkingMode: (isDrinkingMode: boolean) => void;
 }
 
-export const useSettings = create<State & Actions>(set => {
-  const initialState: State = {
-    theme: customTheme,
-    isRemoveRepetitions: false,
+export const useSettings = create<State & Actions>()(
+  persist(
+    set => {
+      const initialState: State = {
+        theme: customTheme,
+        isRemoveRepetitions: true,
+        isDrinkingMode: false,
 
-    rouletteColor: SettingsConstants.availableColors.find(a => a.isFree === true),
-  };
+        rouletteColor: SettingsConstants.availableColors.find(a => a.isFree === true),
+      };
 
-  const loadInitialState = async () => {
-    const storedRouletteColor = await LocalStorage.getRouletteColor();
-    const storedThemeId = await LocalStorage.getTheme();
-    const storedRemoveRepetitions = await LocalStorage.getRepetitions();
+      return {
+        ...initialState,
 
-    const storedTheme = SettingsConstants.themes.find(t => t.id === storedThemeId);
+        setRouletteColors: (avaialbleColor: IAvailableColor) => set({ rouletteColor: avaialbleColor }),
 
-    if (storedRouletteColor) {
-      set({
-        rouletteColor: storedRouletteColor,
-        theme: storedTheme || customTheme,
-        isRemoveRepetitions: storedRemoveRepetitions || false,
-      });
-    }
-  };
+        setTheme: (theme: PalitraInterface) => set({ theme }),
 
-  void loadInitialState();
+        setRemoveRepetitions: (isRemoveRepetitions: boolean) => set({ isRemoveRepetitions }),
 
-  return {
-    ...initialState,
-
-    setRouletteColors: (avaialbleColor: IAvailableColor) => set({ rouletteColor: avaialbleColor }),
-
-    setTheme: (theme: PalitraInterface) => set({ theme }),
-
-    setRemoveRepetitions: (isRemoveRepetitions: boolean) => set({ isRemoveRepetitions }),
-  };
-});
-
-useSettings.subscribe(async state => {
-  if (state.rouletteColor) await LocalStorage.setRouletteColor(state.rouletteColor);
-
-  if (state.theme) await LocalStorage.setTheme(state.theme.id);
-
-  if (state.isRemoveRepetitions) await LocalStorage.setRepetitions(state.isRemoveRepetitions);
-});
+        setDrinkingMode: (isDrinkingMode: boolean) => set({ isDrinkingMode }),
+      };
+    },
+    {
+      name: 'settings-storage',
+      storage: createJSONStorage(() => SettingsStateStorage),
+    },
+  ),
+);

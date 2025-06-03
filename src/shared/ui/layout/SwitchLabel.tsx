@@ -4,17 +4,18 @@ import Grid from '../grid/Grid';
 import Typography from '../typography/Typography';
 
 interface SwitchLabelProps extends SwitchCustomProps {
-  label: string;
+  label: string | React.ReactNode;
+  isBlocked?: boolean;
 }
 
-export default function SwitchLabel({ label, ...props }: SwitchLabelProps) {
+export default function SwitchLabel({ label, isBlocked, ...props }: SwitchLabelProps) {
   return (
     <Pressable>
       <Grid row space="md" align="center" justfity="space-between">
         <Typography weight="medium" variant="callout">
           {label}
         </Typography>
-        <SwitchCustom {...props} />
+        <SwitchCustom disabled={isBlocked} {...props} />
       </Grid>
     </Pressable>
   );

@@ -1,22 +1,23 @@
+import { usePlayerStore } from '@/src/entities/Player/player.store';
+import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { LocalStorage } from '@/src/shared/service/storage.service';
 import Grid from '@/src/shared/ui/grid/Grid';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import Paper from '@/src/shared/ui/layout/Paper';
+import { formatBytes } from '@/src/shared/utils/formatBytes';
 import { BottomSheetScrollView, BottomSheetView } from '@gorhom/bottom-sheet';
+import * as Clipboard from 'expo-clipboard';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Button } from 'react-native';
+import { LanguagePicker } from '../LanguagePicker';
 import LegalBlock from './Blocks/LegalBlock';
 import RateBlock from './Blocks/RateBlock';
+import DrinkModeToggle from './DrinkModeToggle/DrinkModeToggle';
 import SwitchRepetition from './SwitchRepetition/SwitchRepetition';
 import VibrationToggle from './VibrationToggle/VibrationToggle';
-import { usePlayerStore } from '@/src/entities/Player/player.store';
-import { Button } from 'react-native';
-import { formatBytes } from '@/src/shared/utils/formatBytes';
-import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import * as Clipboard from 'expo-clipboard';
-import { useTranslation } from 'react-i18next';
-import { LanguagePicker } from '../LanguagePicker';
 
 export default function SettingsGame() {
   const colors = useTheme();
@@ -52,13 +53,12 @@ export default function SettingsGame() {
           space="lg"
         >
           <GroupBy title={t('settings.title')}>
-            <Paper paddingHorizontal={15} style={{ backgroundColor: colors.background.primary }}>
-              <SwitchRepetition />
-            </Paper>
+            <LanguagePicker />
             <Paper paddingHorizontal={15} style={{ backgroundColor: colors.background.primary }}>
               <VibrationToggle />
             </Paper>
-            <LanguagePicker />
+
+            <DrinkModeToggle />
           </GroupBy>
           {/* <GroupBy title="Выбор колеса">
             <RoulettePicker />
