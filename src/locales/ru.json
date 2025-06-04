@@ -44,12 +44,18 @@
     "dry-mode-description": "Играйте трезво — без алкоголя.",
     "start-button": "Начать игру",
     "please-select-a-game-mode": "Пожалуйста, выберите режим игры",
-    "need-pick-mode-modal-desck": "Перед началом игры вам необходимо выбрать игровой режим."
+    "need-pick-mode-modal-desck": "Перед началом игры вам необходимо выбрать игровой режим.",
+    "easy-mode": "Лёгкий режим",
+    "easy-mode-description": "Только чистое веселье, никаких штрафов.",
+    "activity-mode": "Спортивная ставка",
+    "activity-mode-description": "Ошибся на ходе? Ляг на пол и сделай несколько отжиманий.",
+    "sip-mode": "Глоток или перекус",
+    "sip-mode-description": "Сделай глоток воды или быстро перекуси в качестве наказания."
   },
   "gamePage": {
-    "modal-drink-title": "Задание на выпивку",
+    "modal-drink-title": "Задание штраф",
     "drink-modal-subtext": "Вы уверены, что хотите выбрать это?",
-    "modal-active-button": "Выпейте {{ number }} раз(а)",
+    "modal-active-button": "{{ number }} штрафных",
     "modal-cancel-button": "Отмена",
     "roulette": {
       "task-for": "Задание для",
@@ -58,7 +64,12 @@
       "task-for-all": "Задание для всех!"
     },
     "done-button": "Готово",
-    "drink-button": "Выпить"
+    "drink-button": "Штраф",
+    "push-ups": "отжиманий",
+    "squats": "приседаний",
+    "jumps": "прыжков",
+    "sip": "глоток",
+    "sips": "глотка"
   },
   "settings": {
     "token-copied": "Токен скопирован в буфер обмена",

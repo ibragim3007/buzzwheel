@@ -42,7 +42,13 @@
     "dry-mode-description": "Play it clean — no booze needed.",
     "start-button": "Start Game",
     "please-select-a-game-mode": "Please select a game mode",
-    "need-pick-mode-modal-desck": "You need to select a game mode before starting the game."
+    "need-pick-mode-modal-desck": "You need to select a game mode before starting the game.",
+    "easy-mode": "Easy Mode",
+    "easy-mode-description": "Stay dry and consequence-free—just pure fun, no forfeits.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "Slip up a turn? Hit the floor and crank out some push-ups.",
+    "sip-mode": "Sip or Snack",
+    "sip-mode-description": "Miss the mark? Gulp water or down a quick bite as your forfeit."
   },
   "gamePage": {
     "modal-drink-title": "Penalty task",
@@ -56,7 +62,12 @@
       "task-for-all": "A task for everyone!"
     },
     "done-button": "Done",
-    "drink-button": "Penalty"
+    "drink-button": "Penalty",
+    "push-ups": "push-ups",
+    "squats": "squats",
+    "jumps": "jumps",
+    "sip": "sip",
+    "sips": "sips"
   },
   "settings": {
     "token-copied": "Token copied to clipboard",

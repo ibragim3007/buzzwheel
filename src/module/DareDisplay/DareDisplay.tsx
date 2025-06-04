@@ -67,10 +67,10 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   function getPenaltyText(currentMode: ModeType | null, value: number): string {
     switch (currentMode) {
       case 'drink':
-        return value === 1 ? 'sip' : 'sips';
+        return value === 1 ? t('gamePage.sip') : t('gamePage.sips');
 
       case 'push-ups':
-        return getRandomObjectArray(['push-ups', 'squats', 'jumps']);
+        return getRandomObjectArray([t('gamePage.push-ups'), t('gamePage.squats'), t('gamePage.jumps')]);
 
       default:
         return '';

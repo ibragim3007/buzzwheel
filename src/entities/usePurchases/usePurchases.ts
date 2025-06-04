@@ -32,7 +32,7 @@ export const usePurchases = create<State & Actions>(set => {
       const customerInfo = await Purchases.getCustomerInfo();
       const offerings = await Purchases.getOfferings();
       const isActiveSubscription = customerInfo.activeSubscriptions.length > 0;
-      set({ customerInfo, offering: offerings.current, isActiveSubscription: true });
+      set({ customerInfo, offering: offerings.current, isActiveSubscription });
     } catch (e) {
       console.error('Error fetching customer info:', e);
     }

@@ -77,16 +77,16 @@ export default function GameModePage() {
                   currentMode={mode}
                   value="no-penalty"
                   image={NoPenaltyImage}
-                  title={'Easy Mode'}
-                  description={'Stay dry and consequence-free—just pure fun, no forfeits.'}
+                  title={t('modePage.easy-mode')}
+                  description={t('modePage.easy-mode-description')}
                   onPress={value => handleModeSelect(value as ModeType)}
                 />
                 <GameModeItem
                   currentMode={mode}
                   value="push-ups"
                   image={PushUpImage}
-                  title={'Drop & Pump'}
-                  description={'Slip up a turn? Hit the floor and crank out some push-ups.'}
+                  title={t('modePage.activity-mode')}
+                  description={t('modePage.activity-mode-description')}
                   onPress={value => handleModeSelect(value as ModeType)}
                   gradientColors={[colors.accent.primary, colors.accent.quaternary]}
                 />
@@ -95,8 +95,8 @@ export default function GameModePage() {
                   currentMode={mode}
                   value="drink"
                   image={DrinkWaterImage}
-                  title={'Sip or Snack	'}
-                  description={'Miss the mark? Gulp water or down a quick bite as your forfeit.'}
+                  title={t('modePage.sip-mode')}
+                  description={t('modePage.sip-mode-description')}
                   onPress={value => handleModeSelect(value as ModeType)}
                 />
               </Grid>
