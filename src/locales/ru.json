@@ -53,7 +53,7 @@
     "sip-mode-description": "Сделай глоток воды или быстро перекуси в качестве наказания."
   },
   "gamePage": {
-    "modal-drink-title": "Задание штраф",
+    "modal-drink-title": "Штрафное задание",
     "drink-modal-subtext": "Вы уверены, что хотите выбрать это?",
     "modal-active-button": "{{ number }} штрафных",
     "modal-cancel-button": "Отмена",

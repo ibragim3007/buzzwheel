@@ -69,10 +69,10 @@ export default function GameModeItem({
             color={isPicked ? colors.background.secondary : colors.background.primary}
             style={{ borderRadius: colors.styles.borderRadiusDefault }}
             space="md"
-            paddingHorizontal={6}
+            paddingHorizontal={10}
           >
             <Grid width="38%">
-              <Image source={image} style={{ width: 130, height: 140 }} contentFit="cover" />
+              <Image source={image} style={{ width: '100%', height: 140 }} contentFit="contain" />
             </Grid>
             <Grid width="56%" space="sm">
               <Typography weight="bold" variant="title-1">

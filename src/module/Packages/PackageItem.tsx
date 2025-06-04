@@ -110,7 +110,6 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                           shadowColor: colors.accent.secondary,
                           shadowOpacity: 0.8,
                           shadowRadius: 6,
-                          // lineHeight: 19,
                           shadowOffset: {
                             width: 0,
                             height: 1,
@@ -118,17 +117,12 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                         }}
                         variant="footnote"
                       >
-                        {t('packagePage.for-tow-only')}
+                        {t('packagePage.for-tow-only')} 18+
                       </Typography>
                     </Grid>
                   )}
                 </Grid>
-                <Typography
-                  // numberOfLines={picked ? 5 : 3}
-                  color="secondary"
-                  style={{ lineHeight: 19 }}
-                  variant="footnote"
-                >
+                <Typography color="secondary" style={{ lineHeight: normalizedSize(19) }} variant="footnote">
                   {pack.description}
                 </Typography>
               </Grid>
