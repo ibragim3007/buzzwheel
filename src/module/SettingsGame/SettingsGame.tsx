@@ -15,7 +15,6 @@ import { Button } from 'react-native';
 import { LanguagePicker } from '../LanguagePicker';
 import LegalBlock from './Blocks/LegalBlock';
 import RateBlock from './Blocks/RateBlock';
-import DrinkModeToggle from './DrinkModeToggle/DrinkModeToggle';
 import VibrationToggle from './VibrationToggle/VibrationToggle';
 
 export default function SettingsGame() {
@@ -57,7 +56,7 @@ export default function SettingsGame() {
               <VibrationToggle />
             </Paper>
 
-            <DrinkModeToggle />
+            {/* <DrinkModeToggle /> */}
           </GroupBy>
           {/* <GroupBy title="Выбор колеса">
             <RoulettePicker />

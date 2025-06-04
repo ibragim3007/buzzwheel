@@ -60,9 +60,9 @@ export default function GameModePage() {
           showsVerticalScrollIndicator={false}
         >
           <Header back />
-          <Grid space="lg" flex={1} justfity="space-between">
+          <Grid flex={1} justfity="space-between">
             <Grid space="lg" flex={1}>
-              <Grid marginTop={10} space="sm">
+              <Grid space="sm">
                 <Typography weight="bold" variant="title-1" textAlign="center">
                   {t('modePage.game-mode')}
                 </Typography>

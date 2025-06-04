@@ -1,8 +1,9 @@
-import { useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
+import { ModeType, useRouletteGame } from '@/src/entities/RouletteGame/roulette-game.repository';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { animationEngine, animationService } from '@/src/shared/service/animation.service';
 import { Dare, Player } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
@@ -12,13 +13,13 @@ import { normalizedSize } from '@/src/shared/utils/size';
 import { Entypo } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Alert, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
-import { useTranslation } from 'react-i18next';
-import { analytics, Events } from '@/src/shared/service/analytics.service';
-import { useSettings } from '@/src/entities/Settings/settings.repository';
+import { getPenaltyAmount } from './helper/getPenaltyAmount';
+import { getRandomObjectArray } from '@/src/shared/utils/getRandomObjectArray';
 
 interface DareDisplayProps {
   dare: Dare;
@@ -33,15 +34,14 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   const { vibrate } = useVibration();
 
   const colors = useTheme();
-  const { currentPackage } = useRouletteGame();
-  const { isDrinkingMode } = useSettings();
+  const { currentPackage, mode } = useRouletteGame();
 
   const onPressDrunk = () => {
     analytics.trackEvent(Events.pressAlcohol, {});
     vibrate();
     Alert.alert(t('gamePage.modal-drink-title'), t('gamePage.drink-modal-subtext'), [
       {
-        text: t('gamePage.modal-active-button', { number: dare.alcohol }),
+        text: penalty,
         onPress: () => {
           hideDare(true);
         },
@@ -62,6 +62,23 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
     hideDare(false);
   };
 
+  const amount = getPenaltyAmount(mode ?? 'no-penalty');
+
+  function getPenaltyText(currentMode: ModeType | null, value: number): string {
+    switch (currentMode) {
+      case 'drink':
+        return value === 1 ? 'sip' : 'sips';
+
+      case 'push-ups':
+        return getRandomObjectArray(['push-ups', 'squats', 'jumps']);
+
+      default:
+        return '';
+    }
+  }
+
+  const text = getPenaltyText(mode, amount);
+  const penalty = text ? `${amount} ${text}` : `${amount}`;
   return (
     <Animated.View
       style={{ width: '100%', marginHorizontal: HORIZONTAL_PADDINGS, flex: 1 }}
@@ -115,7 +132,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
         </Grid>
 
         <Grid row width="100%" paddingHorizontal={HORIZONTAL_PADDINGS * 2} space="lg">
-          {dare.alcohol && isDrinkingMode ? (
+          {amount ? (
             <>
               <Grid flex={0.5} gap={13}>
                 <Button
@@ -128,11 +145,12 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
                 <Grid align="center" row justfity="center" space="sm">
                   <Entypo name="flag" size={15} color={colors.text.disabled} />
                   <Typography textAlign="center" variant="caption-1" color="disabled">
-                    {t('gamePage.modal-active-button', { number: dare.alcohol })}
+                    {/* {t('gamePage.modal-active-button', { number: penaltyNumber })} */}
+                    {penalty}
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid flex={isDrinkingMode ? 0.5 : 1}>
+              <Grid flex={amount ? 0.5 : 1}>
                 <Button title={t('gamePage.done-button')} onPress={onPressDry} />
                 {/* <InGameButton title="Done" onPress={onPressDry} /> */}
               </Grid>
