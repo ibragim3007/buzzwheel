@@ -19,6 +19,7 @@ import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Alert, ScrollView } from 'react-native';
+import { normalizedSize } from '@/src/shared/utils/size';
 
 export default function GameModePage() {
   const colors = useTheme();
@@ -45,6 +46,28 @@ export default function GameModePage() {
       pickedPackages: pickedPackages.map(p => p.id),
     });
     vibrate();
+
+    if (mode !== 'no-penalty') {
+      Alert.alert(
+        t('modePage.warning'),
+        t('modePage.warning-description'),
+        [
+          {
+            text: t('common.cancel'),
+            style: 'cancel',
+          },
+          {
+            text: t('common.continue'),
+            onPress: () => {
+              navigate('/screens/game');
+            },
+          },
+        ],
+        { cancelable: true },
+      );
+      return;
+    }
+
     navigate('/screens/game');
   };
 
@@ -55,7 +78,7 @@ export default function GameModePage() {
       <SafeWrapper style={{ flex: 1 }}>
         <ScrollView
           contentContainerStyle={{
-            paddingVertical: 30,
+            paddingVertical: normalizedSize(30),
           }}
           showsVerticalScrollIndicator={false}
         >

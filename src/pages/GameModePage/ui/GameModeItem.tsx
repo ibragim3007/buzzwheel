@@ -75,7 +75,7 @@ export default function GameModeItem({
               <Image source={image} style={{ width: '100%', height: 140 }} contentFit="contain" />
             </Grid>
             <Grid width="56%" space="sm">
-              <Typography weight="bold" variant="title-1">
+              <Typography weight="bold" style={{ lineHeight: normalizedSize(29) }} variant="title-1">
                 {title}
               </Typography>
 

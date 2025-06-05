@@ -36,10 +36,6 @@
   "modePage": {
     "game-mode": "Game Mode",
     "description": "Choose how you'd like to spend the evening",
-    "drink-and-dare": "Drink & Dare",
-    "drink-mode-description": "Miss the mark? Bottoms up!",
-    "dry-mode-title": "Dry Run",
-    "dry-mode-description": "Play it clean — no booze needed.",
     "start-button": "Start Game",
     "please-select-a-game-mode": "Please select a game mode",
     "need-pick-mode-modal-desck": "You need to select a game mode before starting the game.",
@@ -48,11 +44,13 @@
     "activity-mode": "Drop & Pump",
     "activity-mode-description": "Slip up a turn? Hit the floor and crank out some push-ups.",
     "sip-mode": "Sip or Snack",
-    "sip-mode-description": "Miss the mark? Gulp water or down a quick bite as your forfeit."
+    "sip-mode-description": "Miss the mark? Gulp water or down a quick bite as your forfeit.",
+    "warning": "Safety Notice",
+    "warning-description": "This mode may assign light physical or social penalties (e.g., push-ups or a juice sip). Play responsibly and skip any task you find unsafe or uncomfortable."
   },
   "gamePage": {
-    "modal-drink-title": "Penalty task",
-    "drink-modal-subtext": "Are you sure you want to choose this?",
+    "modal-penalty-title": "Penalty task",
+    "penalty-modal-subtext": "Are you sure you want to choose this?",
     "modal-active-button": "{{ number }} penalties",
     "modal-cancel-button": "Cancel",
     "roulette": {
@@ -62,7 +60,7 @@
       "task-for-all": "A task for everyone!"
     },
     "done-button": "Done",
-    "drink-button": "Penalty",
+    "penalty-button": "Penalty",
     "push-ups": "push-ups",
     "squats": "squats",
     "jumps": "jumps",
@@ -83,5 +81,22 @@
     "feedback-title": "Give us feedback",
     "legal": "Legal",
     "language": "Language"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "continue": "Continue",
+    "done": "Done",
+    "next": "Next",
+    "back": "Back",
+    "select": "Select",
+    "loading": "Loading...",
+    "error": {
+      "generic": "An error occurred. Please try again later.",
+      "network": "Network error. Please check your connection."
+    }
   }
 }

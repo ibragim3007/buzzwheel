@@ -21,12 +21,11 @@ import Animated from 'react-native-reanimated';
 interface PackageItemProps {
   pack: Package;
   picked: boolean;
-  amountOfDares?: number;
   index: number;
   onPress: (pack: Package) => void;
 }
 
-export default function PackageItem({ pack, picked, amountOfDares, index, onPress }: PackageItemProps) {
+export default function PackageItem({ pack, picked, index, onPress }: PackageItemProps) {
   const colors = useTheme();
   const { t } = useTranslation();
   const { isActiveSubscription } = usePurchases();
@@ -91,14 +90,18 @@ export default function PackageItem({ pack, picked, amountOfDares, index, onPres
                 contentFit="contain"
                 source={getActualImageLink(pack.imageEncoded)}
                 transition={300}
-                // placeholder={{ blurhash }}
               />
 
               <Grid space="sm" flex={1}>
-                <Grid marginRight={20}>
-                  <Typography variant="title-3" weight="bold">
+                <Grid marginRight={25}>
+                  <Typography
+                    variant="title-3"
+                    style={{
+                      lineHeight: normalizedSize(23),
+                    }}
+                    weight="bold"
+                  >
                     {pack.name}
-                    {/* {`(${amountOfDares})`} */}
                   </Typography>
                   {pack.packageType === 'pair' && (
                     <Grid row space="sm" align="center">

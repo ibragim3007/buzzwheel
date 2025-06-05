@@ -19,17 +19,7 @@ export default function Packages() {
     <Grid gap={14}>
       {data.map((pack, index) => {
         const isPicked = pickedPackages.map(pM => pM.id).includes(pack.id);
-        const amountOfDares = pack.dares.length;
-        return (
-          <PackageItem
-            onPress={onTogglePackage}
-            picked={isPicked}
-            key={pack.id}
-            pack={pack}
-            index={index}
-            amountOfDares={amountOfDares}
-          />
-        );
+        return <PackageItem onPress={onTogglePackage} picked={isPicked} key={pack.id} pack={pack} index={index} />;
       })}
     </Grid>
   );

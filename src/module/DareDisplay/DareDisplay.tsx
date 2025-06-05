@@ -39,7 +39,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
   const onPressDrunk = () => {
     analytics.trackEvent(Events.pressAlcohol, {});
     vibrate();
-    Alert.alert(t('gamePage.modal-drink-title'), t('gamePage.drink-modal-subtext'), [
+    Alert.alert(t('gamePage.modal-penalty-title'), t('gamePage.penalty-modal-subtext'), [
       {
         text: penalty,
         onPress: () => {
@@ -136,7 +136,7 @@ export default function DareDisplay({ dare, currentTurn, players, hideDare }: Da
             <>
               <Grid flex={0.5} gap={13}>
                 <Button
-                  title={t('gamePage.drink-button')}
+                  title={t('gamePage.penalty-button')}
                   onPress={onPressDrunk}
                   gradientColors={[colors.background.secondary, colors.background.secondary]}
                   borderColor="transparent"
