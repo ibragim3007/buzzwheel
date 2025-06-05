@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "newArchEnabled": true,
-    "icon": "./assets/images/icons_ios/icon.png",
+    "icon": "./assets/images/icons_ios/icon-e.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "locales": {
@@ -55,6 +55,14 @@
         "expo-alternate-app-icons",
         [
           {
+            "name": "IconDefaul",
+            "ios": "./assets/images/icons_ios/icon.png",
+            "android": {
+              "backgroundColor": "#001413",
+              "foregroundImage": "./assets/images/icons_ios/icon-a.png"
+            }
+          },
+          {
             "name": "IconA",
             "ios": "./assets/images/icons_ios/icon-a.png",
             "android": {
@@ -81,6 +89,14 @@
           {
             "name": "IconD",
             "ios": "./assets/images/icons_ios/icon-d.png",
+            "android": {
+              "backgroundColor": "#001413",
+              "foregroundImage": "./assets/images/icons_ios/icon-d.png"
+            }
+          },
+          {
+            "name": "IconG",
+            "ios": "./assets/images/icons_ios/icon-g.png",
             "android": {
               "backgroundColor": "#001413",
               "foregroundImage": "./assets/images/icons_ios/icon-d.png"
