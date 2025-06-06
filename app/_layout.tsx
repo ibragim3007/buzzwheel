@@ -38,6 +38,8 @@ import Purchases from 'react-native-purchases';
 import i18n from '@/src/shared/providers/i18n';
 import { vexo } from 'vexo-analytics';
 import * as Sentry from '@sentry/react-native';
+import Grid from '@/src/shared/ui/grid/Grid';
+import { customTheme } from '@/src/shared/config/theme/theme';
 
 Sentry.init({
   dsn: 'https://663038e91c353db48e2d250a8446f0b7@o4509188089708544.ingest.us.sentry.io/4509407262670848',
@@ -124,14 +126,14 @@ export default Sentry.wrap(function RootLayout() {
   return (
     <I18nextProvider i18n={i18n}>
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <BottomSheetModalProvider>
-          <ThemeProvider>
+        <ThemeProvider>
+          <BottomSheetModalProvider>
             <StatusBar hidden />
             <CustomModal />
             <StackRoute />
             <Toast position="top" config={toastConfig} />
-          </ThemeProvider>
-        </BottomSheetModalProvider>
+          </BottomSheetModalProvider>
+        </ThemeProvider>
       </GestureHandlerRootView>
     </I18nextProvider>
   );

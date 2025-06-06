@@ -27,9 +27,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icons_android/icon-filled.png",
+        "foregroundImage": "./assets/images/icons_android/icon-transparent.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": ["com.google.android.gms.permission.AD_ID"],
       "package": "com.ibragimlol.BuzzWheel"
     },
     "web": {

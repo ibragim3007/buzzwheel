@@ -70,3 +70,4 @@ yarn-error.*
 
 .env.local
 *.apk
+/android
