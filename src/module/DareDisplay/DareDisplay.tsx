@@ -9,6 +9,7 @@ import { Dare, Player } from '@/src/shared/types/globalTypes';
 import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
+import { getRandomObjectArray } from '@/src/shared/utils/getRandomObjectArray';
 import { normalizedSize } from '@/src/shared/utils/size';
 import { Entypo } from '@expo/vector-icons';
 import { Image } from 'expo-image';
@@ -19,7 +20,6 @@ import Animated from 'react-native-reanimated';
 import ActionPreproc from './ActionPreproc';
 import ButtomTimerInCard from './ButtomTimerInCard';
 import { getPenaltyAmount } from './helper/getPenaltyAmount';
-import { getRandomObjectArray } from '@/src/shared/utils/getRandomObjectArray';
 
 interface DareDisplayProps {
   dare: Dare;

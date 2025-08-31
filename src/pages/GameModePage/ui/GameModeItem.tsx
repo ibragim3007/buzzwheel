@@ -72,7 +72,12 @@ export default function GameModeItem({
             paddingHorizontal={10}
           >
             <Grid width="38%">
-              <Image source={image} style={{ width: '100%', height: 140 }} contentFit="contain" />
+              <Image
+                cachePolicy="memory-disk"
+                source={image}
+                style={{ width: '100%', height: 140 }}
+                contentFit="contain"
+              />
             </Grid>
             <Grid width="56%" space="sm">
               <Typography weight="bold" style={{ lineHeight: normalizedSize(29) }} variant="title-1">

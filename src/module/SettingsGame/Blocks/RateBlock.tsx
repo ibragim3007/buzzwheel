@@ -6,16 +6,28 @@ import SettingsItem from '@/src/shared/ui/elements/SettingsItem';
 import GroupBy from '@/src/shared/ui/layout/GroupBy';
 import { FontAwesome } from '@expo/vector-icons';
 import * as StoreReview from 'expo-store-review';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linking } from 'react-native';
 
 export default function RateBlock() {
   const colors = useTheme();
+  const [isAvailableReview, setIsAvailableReview] = useState(false);
+
+  useEffect(() => {
+    const checkReviewAvailability = async () => {
+      const isAvailable = await StoreReview.isAvailableAsync();
+      setIsAvailableReview(isAvailable);
+    };
+
+    checkReviewAvailability();
+  }, []);
+
   const { t } = useTranslation();
   const { lang } = useLang();
   const handleRatePress = async () => {
     try {
-      if (await StoreReview.isAvailableAsync()) {
+      if (isAvailableReview) {
         analytics.trackEvent(Events.pressRateUs, {
           open: true,
           local: lang,
@@ -60,13 +72,15 @@ export default function RateBlock() {
         title={t('settings.write-review')}
         prefix={t('settings.feedback-subtext')}
       />
-      <SettingsItem
-        textColor={colors.text.white}
-        color={colors.accent.primary}
-        onPress={handleRatePress}
-        leftIcon={<FontAwesome name="star" size={24} color={colors.text.white} />}
-        title={t('settings.rate-us-title')}
-      />
+      {isAvailableReview && (
+        <SettingsItem
+          textColor={colors.text.white}
+          color={colors.accent.primary}
+          onPress={handleRatePress}
+          leftIcon={<FontAwesome name="star" size={24} color={colors.text.white} />}
+          title={t('settings.rate-us-title')}
+        />
+      )}
     </GroupBy>
   );
 }

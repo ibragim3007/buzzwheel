@@ -20,6 +20,8 @@ import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Alert, ScrollView } from 'react-native';
 import { normalizedSize } from '@/src/shared/utils/size';
+import * as StoreReview from 'expo-store-review';
+import { useEffect } from 'react';
 
 export default function GameModePage() {
   const colors = useTheme();
@@ -34,6 +36,14 @@ export default function GameModePage() {
     vibrateSelection();
     setMode(selectedMode);
   };
+
+  useEffect(() => {
+    const requestReview = async () => {
+      await StoreReview.requestReview();
+    };
+
+    requestReview();
+  }, []);
 
   const onPressStartGame = () => {
     if (mode === null) {
