@@ -31,13 +31,13 @@ export default function PaywallButton({ product, title }: PaywallButtonProps) {
       Animated.sequence([
         Animated.timing(scaleAnim, {
           toValue: 1.1,
-          duration: 500,
+          duration: 800,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
         }),
         Animated.timing(scaleAnim, {
           toValue: 1,
-          duration: 500,
+          duration: 800,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
         }),

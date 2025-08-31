@@ -14,15 +14,13 @@ export default function HeaderLogo() {
         variant="largeTitle"
         style={{
           fontFamily: fontWeightThird.light,
-          shadowColor: colors.accent.primary,
-          shadowOpacity: 1,
-          letterSpacing: 1,
+          letterSpacing: 1.2,
 
-          textShadowColor: colors.accent.primary,
+          textShadowColor: colors.accent.secondary,
 
           textShadowOffset: {
             width: 0,
-            height: 3,
+            height: 2.5,
           },
         }}
       >

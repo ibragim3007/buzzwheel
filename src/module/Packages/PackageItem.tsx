@@ -88,6 +88,7 @@ export default function PackageItem({ pack, picked, index, onPress }: PackageIte
                   width: normalizedSize(70),
                 }}
                 contentFit="contain"
+                cachePolicy={'memory-disk'}
                 source={getActualImageLink(pack.imageEncoded)}
                 transition={300}
               />

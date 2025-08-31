@@ -74,7 +74,7 @@ export default function Paywall() {
               source={LoadingAnimation}
               autoPlay
               loop={false}
-              speed={1.2}
+              speed={2.5}
               style={{ width: 25, height: 25, position: 'absolute' }}
               onAnimationFinish={() => setShowCloseIcon(true)}
             />
