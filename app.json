@@ -53,59 +53,6 @@
         }
       ],
       [
-        "expo-alternate-app-icons",
-        [
-          {
-            "name": "IconDefaul",
-            "ios": "./assets/images/icons_ios/icon.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-a.png"
-            }
-          },
-          {
-            "name": "IconA",
-            "ios": "./assets/images/icons_ios/icon-a.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-a.png"
-            }
-          },
-          {
-            "name": "IconB",
-            "ios": "./assets/images/icons_ios/icon-b.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-b.png"
-            }
-          },
-          {
-            "name": "IconC",
-            "ios": "./assets/images/icons_ios/icon-c.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-c.png"
-            }
-          },
-          {
-            "name": "IconD",
-            "ios": "./assets/images/icons_ios/icon-d.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-d.png"
-            }
-          },
-          {
-            "name": "IconG",
-            "ios": "./assets/images/icons_ios/icon-g.png",
-            "android": {
-              "backgroundColor": "#001413",
-              "foregroundImage": "./assets/images/icons_ios/icon-d.png"
-            }
-          }
-        ]
-      ],
-      [
         "expo-av",
         {
           "microphonePermission": "Allow Buzz Wheel to use the microphone to record your voice for the selected functionality."
@@ -118,7 +65,8 @@
           "project": "buzzwheel",
           "organization": "mydream-6o"
         }
-      ]
+      ],
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
