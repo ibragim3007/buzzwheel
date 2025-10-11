@@ -32,14 +32,13 @@ import { PassionOne_900Black } from '@expo-google-fonts/passion-one/900Black';
 import { modesRu } from '@/assets/package_mock/modes';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import { getActualImageLink } from '@/src/shared/helpers/getActualImageLink';
+import i18n from '@/src/shared/providers/i18n';
 import { preloadImages } from '@/src/shared/service/preload.service';
+import * as Sentry from '@sentry/react-native';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import Purchases from 'react-native-purchases';
-import i18n from '@/src/shared/providers/i18n';
 import { vexo } from 'vexo-analytics';
-import * as Sentry from '@sentry/react-native';
 import Grid from '@/src/shared/ui/grid/Grid';
-import { customTheme } from '@/src/shared/config/theme/theme';
 
 Sentry.init({
   dsn: 'https://663038e91c353db48e2d250a8446f0b7@o4509188089708544.ingest.us.sentry.io/4509407262670848',
@@ -128,10 +127,12 @@ export default Sentry.wrap(function RootLayout() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <ThemeProvider>
           <BottomSheetModalProvider>
-            <StatusBar hidden />
-            <CustomModal />
-            <StackRoute />
-            <Toast position="top" config={toastConfig} />
+            <Grid color="#15171c">
+              <StatusBar hidden />
+              <CustomModal />
+              <StackRoute />
+              <Toast position="top" config={toastConfig} />
+            </Grid>
           </BottomSheetModalProvider>
         </ThemeProvider>
       </GestureHandlerRootView>
