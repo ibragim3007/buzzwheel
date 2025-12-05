@@ -22,6 +22,7 @@ import { Alert, ScrollView } from 'react-native';
 import { normalizedSize } from '@/src/shared/utils/size';
 import * as StoreReview from 'expo-store-review';
 import { useEffect } from 'react';
+import ScrollPageWrapper from '@/src/shared/ui/layout/ScrollPageWrapper';
 
 export default function GameModePage() {
   const colors = useTheme();
@@ -42,7 +43,7 @@ export default function GameModePage() {
       await StoreReview.requestReview();
     };
 
-    requestReview();
+    void requestReview();
   }, []);
 
   const onPressStartGame = () => {
@@ -57,26 +58,26 @@ export default function GameModePage() {
     });
     vibrate();
 
-    if (mode !== 'no-penalty') {
-      Alert.alert(
-        t('modePage.warning'),
-        t('modePage.warning-description'),
-        [
-          {
-            text: t('common.cancel'),
-            style: 'cancel',
-          },
-          {
-            text: t('common.continue'),
-            onPress: () => {
-              navigate('/screens/game');
-            },
-          },
-        ],
-        { cancelable: true },
-      );
-      return;
-    }
+    // if (mode !== 'no-penalty') {
+    //   Alert.alert(
+    //     t('modePage.warning'),
+    //     t('modePage.warning-description'),
+    //     [
+    //       {
+    //         text: t('common.cancel'),
+    //         style: 'cancel',
+    //       },
+    //       {
+    //         text: t('common.continue'),
+    //         onPress: () => {
+    //           navigate('/screens/game');
+    //         },
+    //       },
+    //     ],
+    //     { cancelable: true },
+    //   );
+    //   return;
+    // }
 
     navigate('/screens/game');
   };
@@ -85,13 +86,16 @@ export default function GameModePage() {
 
   return (
     <PageWrapper flex={1}>
-      <SafeWrapper style={{ flex: 1 }}>
-        <ScrollView
-          contentContainerStyle={{
-            paddingVertical: normalizedSize(30),
-          }}
-          showsVerticalScrollIndicator={false}
-        >
+      {/* <SafeWrapper style={{ flex: 1 }}> */}
+      <ScrollPageWrapper
+        contentContainerStyle={
+          {
+            // paddingVertical: normalizedSize(30),
+          }
+        }
+        showsVerticalScrollIndicator={false}
+      >
+        <SafeWrapper style={{ paddingBottom: 180 }}>
           <Header back />
           <Grid flex={1} justfity="space-between">
             <Grid space="lg" flex={1}>
@@ -135,11 +139,21 @@ export default function GameModePage() {
               </Grid>
             </Grid>
           </Grid>
-        </ScrollView>
-        <Grid marginTop={20}>
-          <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
-        </Grid>
-      </SafeWrapper>
+        </SafeWrapper>
+      </ScrollPageWrapper>
+
+      <Grid
+        paddingHorizontal={30}
+        style={{
+          position: 'absolute',
+          bottom: 45,
+          width: '100%',
+        }}
+      >
+        <Button onPress={onPressStartGame} disabled={isDisabled} title={t('modePage.start-button')} />
+      </Grid>
+
+      {/* </SafeWrapper> */}
     </PageWrapper>
   );
 }
