@@ -127,12 +127,10 @@ export default Sentry.wrap(function RootLayout() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <ThemeProvider>
           <BottomSheetModalProvider>
-            <Grid color="#15171c">
-              <StatusBar hidden />
-              <CustomModal />
-              <StackRoute />
-              <Toast position="top" config={toastConfig} />
-            </Grid>
+            <StatusBar hidden />
+            <CustomModal />
+            <StackRoute />
+            <Toast position="top" config={toastConfig} />
           </BottomSheetModalProvider>
         </ThemeProvider>
       </GestureHandlerRootView>
