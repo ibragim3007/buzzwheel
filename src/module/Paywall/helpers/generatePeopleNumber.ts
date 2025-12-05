@@ -31,7 +31,7 @@ function getISOWeek(date: Date): number {
 }
 
 /** Генерирует стабильное число покупок за текущую ISO-неделю */
-export function getWeeklyPurchaseCount(min = 1132, max = 2320): number {
+export function getWeeklyPurchaseCount(min = 532, max = 1320): number {
   const now = new Date();
   const isoWeek = getISOWeek(now);
   const year = now.getUTCFullYear();

@@ -62,7 +62,7 @@ export default function Paywall() {
 
   return (
     <Grid justfity="space-between" height="100%" paddingHorizontal={HORIZONTAL_PADDINGS / 2}>
-      <Grid space="md">
+      <Grid space="sm">
         <Grid style={{ position: 'absolute' }}>
           {showCloseIcon ? (
             <Pressable onPress={goBack} hitSlop={10}>
@@ -82,7 +82,7 @@ export default function Paywall() {
         </Grid>
         <HeaderLogo />
         <Grid>
-          <Typography textAlign="center" weight="bold">
+          <Typography textAlign="center" weight="medium">
             <Trans
               i18nKey="paywall.vip_status_message"
               values={{ count: getWeeklyPurchaseCount() }}
@@ -96,7 +96,7 @@ export default function Paywall() {
       </Grid>
       <PaywallItems />
       <Grid space="lg" align="center" width="100%">
-        <Typography textAlign="center" weight="light">
+        <Typography variant="callout" textAlign="center" weight="light">
           {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
         </Typography>
         <PaywallButton title={t('paywall.button-text-play-for-free')} product={currentProduct} />

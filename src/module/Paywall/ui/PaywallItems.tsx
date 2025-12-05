@@ -9,7 +9,7 @@ import { normalizedSize } from '@/src/shared/utils/size';
 
 export default function PaywallItems() {
   const { t } = useTranslation();
-  const iconSize = normalizedSize(40);
+  const iconSize = normalizedSize(32);
   return (
     <Grid space="md" align="center">
       <ItemPaywall

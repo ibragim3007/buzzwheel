@@ -12,7 +12,7 @@ export default function ItemPaywall({ icon, title }: ItemPaywallProps) {
     <Grid space="md" align="center" row>
       <Grid>{icon}</Grid>
       <Grid width="60%">
-        <Typography>{title}</Typography>
+        <Typography variant="callout">{title}</Typography>
       </Grid>
     </Grid>
   );
