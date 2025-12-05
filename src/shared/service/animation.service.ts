@@ -20,8 +20,8 @@ type OptionAnimationServiceType = {
 
 const OptionsAnimationService: OptionAnimationServiceType = {
   ANIMATION_SPEED: 160,
-  MASS: 0.6,
-  stiffness: 70,
+  MASS: 0.5,
+  stiffness: 130,
 };
 
 class AnimationEngine {
@@ -66,7 +66,7 @@ class AnimationService {
   }
 
   getAnimationForShowPackageItem = (index: number) => {
-    return this.animationEngine.zoomInDown((index + 1) * 0.6);
+    return this.animationEngine.zoomInDown((index + 1) * 0.7);
   };
 
   enteringDareCard = (index: number) => {
