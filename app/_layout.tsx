@@ -1,7 +1,7 @@
+import 'react-native-reanimated';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import 'react-native-reanimated';
 
 import CustomModal from '@/src/entities/Modal/ui/CustomModal';
 import { toastConfig } from '@/src/shared/config/toast';
@@ -60,7 +60,7 @@ if (!__DEV__) {
   vexo('1aea5fc9-e226-4e8f-b22f-7e86b51c5c7d');
 }
 
-preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
+void preloadImages(modesRu.map(mode => getActualImageLink(mode.imageEncoded)));
 
 const isRTL = i18n.language.startsWith('ar');
 I18nManager.allowRTL(isRTL);
