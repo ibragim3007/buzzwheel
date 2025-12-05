@@ -50,7 +50,7 @@ export default function Input({ onCall }: InputProps) {
 
       return;
     }
-    onCall(name);
+    onCall(name.trim());
     setName('');
     // inputRef.current?.blur();
   };
@@ -75,6 +75,7 @@ export default function Input({ onCall }: InputProps) {
           ref={inputRef}
           onChangeText={handleChangeText}
           value={name}
+          keyboardAppearance="dark"
           cursorColor={colors.accent.primary}
           selectionColor={colors.accent.primary}
           placeholderTextColor={isError ? colors.text.error : colors.text.secondary}

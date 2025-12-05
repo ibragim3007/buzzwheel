@@ -4,7 +4,7 @@
   "packageType": "pair",
   "description": "Tender and spicy challenges for new couples. Let’s see how much you like each other!",
   "imageEncoded": "8f67a9d5-ac29-4365-b38a-577dd245bd6e.png",
-  "isFree": false,
+  "isFree": true,
   "dares": [
     {
       "title": "Blind Compliment",
