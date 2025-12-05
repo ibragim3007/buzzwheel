@@ -1,0 +1,265 @@
+{
+  "id": 3,
+  "name": "50 odcieni",
+  "packageType": "pair",
+  "description": "Gorące wyzwania i bardzo szczere pytania dla par, które nie boją się przekraczać granic.",
+  "imageEncoded": "d61a609e-a3db-4d94-88e1-47f460cc0616.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Szept namiętności",
+      "action": "${c_player}, wyszepcz ${r_player}, jaki dotyk lubisz najbardziej.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minuta wyznań",
+      "action": "${c_player}, opowiedz ${r_player} o swojej najbardziej śmiałej fantazji.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Już bliżej się nie da",
+      "action": "${c_player}, powoli zbliżaj się do ${r_player}, aż prawie nie zostanie między wami miejsca, a potem zastygnij tak na 15 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Zakazany temat",
+      "action": "${c_player}, zadaj ${r_player} najbardziej szczere pytanie, które od dawna chcesz zadać.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bez rąk",
+      "action": "${c_player}, dotknij ${r_player} dowolną częścią ciała z wyjątkiem rąk.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tajne miejsce",
+      "action": "${c_player}, zdradź ${r_player} najdziwniejsze miejsce, w którym chciał(a)byś zostać z ${r_player} sam na sam.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Oczy w oczy",
+      "action": "${c_player} i ${r_player}, patrzcie sobie w milczeniu w oczy przez 20 sekund, powoli się zbliżając.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Jedno słowo",
+      "action": "${c_player}, powiedz ${r_player} jedno słowo, od którego masz dreszcze.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wyznanie w ciemności",
+      "action": "${c_player}, zamknij oczy i wyznaj ${r_player} coś bardzo osobistego.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Granice pozwolenia",
+      "action": "${c_player}, szeptem powiedz ${r_player}, na co zgodził(a)byś się, gdybyście mieli tylko jedną wspólną noc.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Narysuj pragnienie",
+      "action": "${c_player}, delikatnie narysuj palcem na ciele ${r_player} swoje tajne pragnienie.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Oddech bliskości",
+      "action": "Zbliżcie usta tak blisko, jak się da, nie dotykając ich, i wytrzymajcie tak 15 sekund.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Fantazja na głos",
+      "action": "${c_player}, krótko opowiedz ${r_player}, o jakim prywatnym scenariuszu z ${r_player} myślisz najczęściej.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zasady gry",
+      "action": "${c_player}, zaproponuj jedną \"zasadę\" na następną godzinę, której ${r_player} musi przestrzegać.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tajny gest",
+      "action": "${c_player}, pokaż ${r_player}, jaki gest ${r_player} działa na ciebie najbardziej.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rozmowa bez słów",
+      "action": "Spróbujcie przekazać sobie swoje pragnienia tylko mimiką i spojrzeniem.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Prywatny masaż",
+      "action": "${c_player}, zrób ${r_player} zmysłowy masaż karku przez 20 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Sama prawda",
+      "action": "${c_player}, odpowiedz na pytanie ${r_player} tak szczerze, jak to możliwe, bez względu na to, jak bardzo jest odważne.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Niebezpieczna bliskość",
+      "action": "${c_player}, wyszepcz ${r_player} do ucha najbardziej pikantne zdanie, jakie przychodzi ci teraz do głowy.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pragnienie we dwoje",
+      "action": "Na trzy powiedzcie na głos swoje najbardziej intymne pragnienie względem siebie.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Pocałunek w zakazanym miejscu",
+      "action": "${c_player}, delikatnie pocałuj ${r_player} w dowolne niespodziewane miejsce na ciele.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dotyk w ciemno",
+      "action": "${c_player}, z zamkniętymi oczami przesuwaj dłonią po ciele ${r_player}, zatrzymując się tam, gdzie zechcesz.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Minuta namiętności",
+      "action": "Całujcie się pełną minutę, nie przerywając.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 60
+    },
+    {
+      "title": "Zapach podniecenia",
+      "action": "${c_player}, wciągnij zapach skóry ${r_player} na szyi i opisz, co w tobie wywołuje.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tajny szept",
+      "action": "${c_player}, wyszepcz ${r_player} do ucha, co chcesz właśnie teraz z ${r_player} zrobić.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Bliski kontakt",
+      "action": "${c_player}, przyciśnij całe swoje ciało do ${r_player} i wytrzymaj tak 15 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Idealny dotyk",
+      "action": "${c_player}, delikatnie przejedź palcem po ustach ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Śmiały masaż",
+      "action": "${c_player}, zrób ${r_player} zmysłowy masaż barków i pleców przez 30 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Gorący oddech",
+      "action": "${c_player}, poprowadź swój oddech wzdłuż szyi ${r_player}, ledwie muskając skórę.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Bez słów",
+      "action": "${c_player}, pokaż gestem lub dotykiem, czego teraz chcesz od ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Prywatny taniec",
+      "action": "${c_player}, zatańcz krótki, prowokujący taniec dla ${r_player}.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Fantazja na głos (w szczegółach)",
+      "action": "${c_player}, jak najdokładniej opisz ${r_player} swoje najbardziej intymne pragnienie, w którym ${r_player} gra główną rolę.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Słodkie ugryzienie",
+      "action": "${c_player}, delikatnie podgryź płatek ucha lub szyję ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zaproszenie do bliskości",
+      "action": "${c_player}, jak najzmysłowiej zaproś ${r_player}, żeby pobyć z tobą sam na sam.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Całkowite zaufanie",
+      "action": "${c_player}, pozwól ${r_player} dotknąć dowolnego miejsca na twoim ciele, jakie wybierze.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Jeden oddech",
+      "action": "Całujcie się tak, jakbyście dzielili się jednym oddechem.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Pragnienie dłonią",
+      "action": "${c_player}, za pomocą rąk pokaż na ciele ${r_player} miejsce, które teraz chcesz pocałować.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kontrola oddechu",
+      "action": "${c_player}, przesuwaj usta po obojczykach ${r_player}, dyktując tempo oddechu.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Oczy i usta",
+      "action": "Przez 20 sekund na zmianę patrzcie sobie w oczy i muskajcie się lekkimi pocałunkami.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Zakazana obietnica",
+      "action": "${c_player}, wyszepcz ${r_player} najbardziej odważną obietnicę, którą naprawdę chcesz spełnić jeszcze dziś.",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

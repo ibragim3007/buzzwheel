@@ -1,0 +1,268 @@
+{
+  "id": 2,
+  "name": "Flirt zu zweit",
+  "packageType": "pair",
+  "description": "Zärtliche und leicht freche Aufgaben für frische Paare. Mal sehen, wie sehr ihr euch wirklich mögt!",
+  "imageEncoded": "8f67a9d5-ac29-4365-b38a-577dd245bd6e.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Blindes Kompliment",
+      "action": "${c_player}, schließe die Augen und mach ${r_player} ein wirklich aufrichtiges Kompliment.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tanz zu zweit",
+      "action": "${c_player}, lade ${r_player} zu einem langsamen Tanz ohne Musik ein.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Geflüsterter Wunsch",
+      "action": "${c_player}, flüstere ${r_player} einen kleinen romantischen Wunsch ins Ohr.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "10 Sekunden Augenkontakt",
+      "action": "Schaut euch 10 Sekunden lang in die Augen, ohne wegzusehen.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Buchstaben zum Fühlen",
+      "action": "${c_player}, zeichne mit dem Finger sanft den ersten Buchstaben deines Namens auf den Rücken von ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Leckeres Kompliment",
+      "action": "${c_player}, vergleiche ${r_player} mit einem Dessert und erkläre warum.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Erstes Treffen",
+      "action": "Tut so, als hättet ihr euch gerade erst kennengelernt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Kleines Geheimnis",
+      "action": "${c_player}, erzähle ${r_player} leise etwas Persönliches, das ${r_player} noch nicht über dich weiß.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zärtliche Pause",
+      "action": "${c_player}, halte für ${rand(10,20)} Sekunden die Hände von ${r_player} und sieh ${r_player} dabei in die Augen.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Romantischer Tipp",
+      "action": "${c_player}, gib ${r_player} einen romantischen Tipp in einem Satz.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Halt mich fest",
+      "action": "${c_player}, umarme ${r_player} 15 Sekunden lang.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Süßer Spitzname",
+      "action": "${c_player}, denk dir für ${r_player} einen süßen Spitznamen aus, den ${r_player} noch nie gehört hat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Eine Frage",
+      "action": "${c_player}, stell ${r_player} eine romantische Frage, auf die du schon immer eine Antwort wolltest.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Atem der Nähe",
+      "action": "Bringt eure Gesichter so nah wie möglich zueinander und bleibt 10 Sekunden so, ohne euch zu berühren.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Kurzes Geständnis",
+      "action": "${c_player}, sag ${r_player}, wofür du besonders dankbar bist.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lächeln für ein Lächeln",
+      "action": "${c_player}, versuche nur mit deinem Gesichtsausdruck ${r_player} zum Lachen zu bringen.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Hände verraten alles",
+      "action": "${c_player}, erkenne ${r_player} mit geschlossenen Augen nur durch Berühren der Hände.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gemeinsame Zukunft",
+      "action": "Nennt abwechselnd einen Moment, den ihr gern gemeinsam erleben würdet.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Geschichte in Buchstaben",
+      "action": "${c_player}, erfinde eine kurze romantische Geschichte über dich und ${r_player} und baue dabei den Buchstaben ${r_letter} ein.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Plan für morgen",
+      "action": "Denkt euch zusammen innerhalb von 30 Sekunden einen kurzen romantischen Plan für den morgigen Abend aus.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Geheimer Blick",
+      "action": "${c_player}, sieh ${r_player} 10 Sekunden lang mit deinem sanftesten Blick an.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Lieblingsduft",
+      "action": "${c_player}, sag ${r_player}, welchen Duft du mit ${r_player} verbindest.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schmetterlingsberührung",
+      "action": "${c_player}, berühre die Wange von ${r_player} ganz sanft, wie ein Schmetterlingsflügel.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Stimme des Herzens",
+      "action": "${c_player}, flüstere ${r_player} drei Worte ins Ohr, die du genau jetzt sagen möchtest.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Melodie der Liebe",
+      "action": "${c_player}, summe eine Melodie, die dich an ${r_player} erinnert.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfektes Date",
+      "action": "${c_player}, beschreibe kurz das perfekte Date, das du für ${r_player} planen würdest.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Hand in Hand",
+      "action": "Haltet euch an den Händen und lasst erst beim nächsten Auftrag wieder los.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Ein Fakt",
+      "action": "${c_player}, nenne eine Sache an ${r_player}, die dich besonders beeindruckt.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kurze Liebeserklärung",
+      "action": "${c_player}, mach ${r_player} eine kurze, aber eindrucksvolle Liebeserklärung.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimes Lächeln",
+      "action": "${c_player}, lächle ${r_player} so an, dass ${r_player} sich wirklich besonders fühlt.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sanfte Massage",
+      "action": "${c_player}, massiere ${r_player} 20 Sekunden lang leicht die Schultern.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Einzigartig",
+      "action": "${c_player}, nenne eine Eigenschaft, die ${r_player} von allen anderen unterscheidet.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Süße Erinnerung",
+      "action": "${c_player}, erzähle kurz von dem schönsten Moment, den du mit ${r_player} erlebt hast.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Gemeinsamer Wunsch",
+      "action": "Sagt gleichzeitig laut, was ihr euch gerade beide wünscht.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lieblingsklang",
+      "action": "${c_player}, sag, was dir am Klang von ${r_player}s Stimme am besten gefällt.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantischer Film",
+      "action": "${c_player}, wähle einen Film, der eure Beziehung perfekt beschreibt.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Warmer Atem",
+      "action": "${c_player}, wärme 10 Sekunden lang die Hände von ${r_player} mit deinem Atem.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Brief ohne Worte",
+      "action": "${c_player}, zeichne mit dem Finger sanft ein Herz auf die Handfläche von ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ein Schritt näher",
+      "action": "Macht gleichzeitig einen Schritt aufeinander zu und bleibt 10 Sekunden lang stehen.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Perfekter Abend",
+      "action": "${c_player}, erzähle ${r_player}, wie dein idealer Abend zu zweit aussieht.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

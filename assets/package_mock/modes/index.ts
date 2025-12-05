@@ -26,14 +26,29 @@ import NeverHaveEn from './12_Never_Have_I_Ever/en.json';
 import { LANGUAGE, Package } from '@/src/shared/types/globalTypes';
 
 import freeModeDe from './1_free_mode/de.json';
+import flirtyDuoDe from './2_Flirty_Duo/de.json';
+import shadesDe from './3_50_Shades/de.json';
+import chaosDe from './4_CHAOS_Mode/de.json';
 
 import freeModeFr from './1_free_mode/fr.json';
+import flirtyDuoFr from './2_Flirty_Duo/fr.json';
+import shadesFr from './3_50_Shades/fr.json';
+import chaosFr from './4_CHAOS_Mode/fr.json';
 
 import freeModeEs from './1_free_mode/es.json';
+import flirtyDuoEs from './2_Flirty_Duo/es.json';
+import shadesEs from './3_50_Shades/es.json';
+import chaosEs from './4_CHAOS_Mode/es.json';
 
 import freeModePl from './1_free_mode/pl.json';
+import flirtyDuoPl from './2_Flirty_Duo/pl.json';
+import shadesPl from './3_50_Shades/pl.json';
+import chaosPl from './4_CHAOS_Mode/pl.json';
 
 import freeModeFil from './1_free_mode/fil.json';
+import flirtyDuoFil from './2_Flirty_Duo/fil.json';
+import shadesFil from './3_50_Shades/fil.json';
+import chaosFil from './4_CHAOS_Mode/fil.json';
 
 export const modesRu = [
   freeModeRu,
@@ -65,15 +80,14 @@ export const modesEn = [
   NeverHaveEn,
 ];
 
-export const modesDe = [freeModeDe];
+export const modesDe = [freeModeDe, flirtyDuoDe, shadesDe, chaosDe];
 
-export const modesFr = [freeModeFr];
+export const modesFr = [freeModeFr, flirtyDuoFr, shadesFr, chaosFr];
 
-export const modesEs = [freeModeEs];
+export const modesEs = [freeModeEs, flirtyDuoEs, shadesEs, chaosEs];
+export const modesPl = [freeModePl, flirtyDuoPl, shadesPl, chaosPl];
 
-export const modesPl = [freeModePl];
-
-export const modesFil = [freeModeFil];
+export const modesFil = [freeModeFil, flirtyDuoFil, shadesFil, chaosFil];
 
 type TModes = Record<LANGUAGE, Package[]>;
 

@@ -1,0 +1,549 @@
+{
+  "id": 4,
+  "name": "Modo CAOS",
+  "packageType": "default",
+  "description": "Retos locos que rompen todos los límites de la decencia. Solo para los más atrevidos.",
+  "imageEncoded": "954fe94f-1850-475e-806c-5cd50a704d80.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Espía ridículo",
+      "action": "${c_player}, cruza la habitación a escondidas como si fueras un espía.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Conversación al revés",
+      "action": "${c_player}, intenta hablar al revés durante 15 segundos. Los demás juzgan qué tal lo hiciste.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Animal desatado",
+      "action": "${c_player}, conviértete en el animal que elijan los demás y compórtate así durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Minuto de pánico",
+      "action": "Todos actúan a la vez como si estuvieran en un barco que se hunde durante 20 segundos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Canción a gritos",
+      "action": "${c_player}, canta a gritos una canción muy conocida.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Estilista loco",
+      "action": "${c_player}, crea un peinado u outfit loco para ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gran artista",
+      "action": "${c_player}, dibuja en el aire el retrato de ${r_player}. Los demás valoran lo parecido que es.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Baile del caos",
+      "action": "Todos bailan a la vez con estilos totalmente distintos durante 20 segundos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Presentador en pánico",
+      "action": "${c_player}, actúa como presentador de un programa cuando de repente unos alienígenas atacan el estudio.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Paseo zombi",
+      "action": "${c_player}, camina por la habitación como un zombi e intenta asustar a ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cumplido a gritos",
+      "action": "${c_player}, haz a gritos y de forma rara un cumplido a cualquier jugador.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fantasía culinaria",
+      "action": "${c_player}, en 15 segundos inventa el plato más asqueroso posible y describe su receta.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Político radical",
+      "action": "${c_player}, da un discurso político exigiendo que todos se pongan a bailar ya mismo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Orquesta de locura",
+      "action": "Todos fingen tocar los instrumentos más absurdos durante 20 segundos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gato parlante",
+      "action": "${c_player}, actúa como un gato parlante que se queja de su dura vida.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Discusión absurda",
+      "action": "${c_player}, empieza una discusión con ${r_player} sobre el tema más ridículo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Robot descontrolado",
+      "action": "${c_player}, conviértete en un robot averiado y muévete de forma caótica durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Pronóstico absurdo",
+      "action": "${c_player}, da el pronóstico del tiempo de mañana prometiendo una lluvia de gatos y perros.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Profesor loco",
+      "action": "${c_player}, da una clase sobre cómo no hacer absolutamente nada correctamente.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Locura colectiva",
+      "action": "Todos gritan su propio nombre con voces y tonos distintos durante 10 segundos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Ropa del revés",
+      "action": "${c_player}, ponte al revés cualquier prenda y llévala así hasta tu próximo turno.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baile ridículo",
+      "action": "${c_player}, baila como si tuvieras un globo atado a cada pierna.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pose del caos",
+      "action": "${c_player}, quédate en la pose más rara que puedas y mantenla durante ${rand(10,20)} segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Locura de monos",
+      "action": "Todos ponen caras, saltan y hacen ruidos de mono durante 15 segundos.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Susurro a gritos",
+      "action": "${c_player}, susurra la frase estoy bien lo más alto que puedas.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Entreno sin motivo",
+      "action": "${c_player}, haz ${rand(5,10)} sentadillas y grita algo raro después de cada una.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Despertador viviente",
+      "action": "${c_player}, actúa como un despertador sonando a las 5 a. m., usando cuerpo y voz.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Baile en círculo",
+      "action": "Todos forman un círculo alrededor de ${r_player} y gritan palabras al azar mientras dan vueltas.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Poder del instinto",
+      "action": "${c_player}, cierra los ojos y encuentra a ${r_player} gateando a cuatro patas.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 25
+    },
+    {
+      "title": "Objeto al azar",
+      "action": "${c_player}, toma cualquier objeto cercano y úsalo para algo que no le corresponde durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Hablar con una letra",
+      "action": "${c_player}, durante 15 segundos habla solo con palabras que empiecen por ${r_letter}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Paseo de modelo",
+      "action": "${c_player}, cruza la habitación como modelo de pasarela equilibrando algo en la cabeza.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rabieta silenciosa",
+      "action": "${c_player}, monta una rabieta sin emitir ningún sonido.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Espejo humano",
+      "action": "${c_player} y ${r_player} actúan como espejos: uno copia los movimientos del otro durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Explosión de emociones",
+      "action": "${c_player}, en 10 segundos muestra 3 emociones fuertes con las caras más raras que puedas.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Voz prestada",
+      "action": "${c_player}, habla con voz de dibujo animado durante la próxima ronda.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Silla invisible",
+      "action": "${c_player}, siéntate en una silla imaginaria y mantente así durante 10 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Doble reto",
+      "action": "${c_player} y ${r_player} deben hacer cada uno un movimiento tonto, uno después del otro.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Todo al revés",
+      "action": "${c_player}, durante 30 segundos haz todo al revés: di no cuando quieras decir sí y al revés.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Saltos con botas de goma",
+      "action": "${c_player}, salta 10 veces con botas de goma (reales o imaginarias) mientras gritas fuerte ¡Woo!.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Carrusel del vaso",
+      "action": "Todos se pasan un vaso imaginario diciendo chirk cada vez.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Saltos de rana",
+      "action": "${c_player}, salta como una rana hasta ${r_player} y vuelve.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Tren invisible",
+      "action": "${c_player}, haz 3 vueltas a la habitación fingiendo que arrastras un tren invisible.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Ola en equipo",
+      "action": "Todos hacen una ola con las manos en cadena; quien se retrase, bebe.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Comba sin cuerda",
+      "action": "${c_player}, salta a la comba imaginaria ${rand(10,15)} veces.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Subida de volumen",
+      "action": "${c_player}, di 5 palabras seguidas, cada una más alta que la anterior.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Relevo de caras",
+      "action": "Los jugadores se turnan haciendo una mueca hasta que ${c_player} diga basta.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Vuelta de honor",
+      "action": "${c_player}, da una vuelta de puntillas por la habitación susurrando soy un héroe.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Flexión imaginaria",
+      "action": "${c_player}, inclínate hacia delante como si fueras a besar el suelo y mantente así 10 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Marcha de verduras",
+      "action": "Todos marchan en el sitio fingiendo ser distintas verduras.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Máscara de locura",
+      "action": "${c_player}, cúbrete el pelo con un pañuelo (real o imaginario) y di ja-ja después de cada palabra.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pasos eco",
+      "action": "${c_player}, da 5 pasos hacia delante repitiendo en eco en voz alta después de cada paso.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talones rápidos",
+      "action": "${c_player}, camina rápido solo sobre los talones durante ${rand(10,15)} segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Silencio de grupo",
+      "action": "Todos guardan silencio y solo gesticulan hasta que ${r_player} diga hablen.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Cruce de miradas",
+      "action": "${c_player} y ${r_player}, mírense a los ojos y parpadeen a la vez durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Salta tu sombra",
+      "action": "${c_player}, intenta saltar por encima de tu propia sombra (o donde estaría).",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Dibujo con el pie",
+      "action": "${c_player}, dibuja en el aire una imagen imaginaria con la punta del pie.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Cuenta atrás inversa",
+      "action": "${c_player}, haz en voz alta una cuenta atrás rápida de ${rand(10,20)} a 1 sin equivocarte.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Relevo de saltos",
+      "action": "${c_player} y ${r_player}, salten en el sitio alternativamente ${rand(5,10)} veces.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pelea de almohadas",
+      "action": "${c_player} y ${r_player}, hagan una pequeña pelea con almohadas imaginarias.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Marcha zombi",
+      "action": "${c_player}, cruza la habitación como un zombi diciendo cerebros.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Risa sin motivo",
+      "action": "Todos se ríen fuerte y de forma ridícula durante 10 segundos sin parar.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Paso de cangrejo",
+      "action": "${c_player}, muévete de lado por la habitación como un cangrejo durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Baile de pollo",
+      "action": "${c_player}, haz un breve baile caótico de pollo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 0
+    },
+    {
+      "title": "Pase de lista animal",
+      "action": "Los jugadores se turnan imitando en voz alta sonidos de distintos animales.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Escalera invisible",
+      "action": "${c_player}, finge subir una escalera invisible durante 15 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Hablar con la pared",
+      "action": "${c_player}, ten una discusión dramática con la pared.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Director loco",
+      "action": "${c_player}, dirige de forma caótica una orquesta imaginaria.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Gritos de gaviota",
+      "action": "Todos gritan como gaviotas durante 10 segundos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Caminata graciosa",
+      "action": "${c_player}, muestra la forma de caminar más tonta que se te ocurra.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Parodia de amigo",
+      "action": "${c_player}, haz una breve parodia de ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Molino de brazos",
+      "action": "${c_player}, gira los brazos como un molino diciendo viento durante 15 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Baile de pingüino",
+      "action": "${c_player}, actúa como un pingüino bailando en una discoteca.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Nado en el suelo",
+      "action": "${c_player}, finge nadar estilo crol por el suelo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Risa fuerte",
+      "action": "${c_player}, ríete fuerte y de golpe, aunque nada tenga gracia.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Baile chamán salvaje",
+      "action": "${c_player}, haz un pequeño baile de chamán para invocar la lluvia.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Duelo de espadas imaginarias",
+      "action": "${c_player} y ${r_player}, representen un breve duelo con espadas imaginarias.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Caminata loca",
+      "action": "${c_player}, camina como si estuvieras en una cuerda floja sobre un abismo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Giros locos",
+      "action": "${c_player}, da vueltas sobre ti mismo ${rand(5,10)} veces y luego intenta quedarte quieto.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    }
+  ]
+}

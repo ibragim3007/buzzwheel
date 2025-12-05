@@ -1,0 +1,265 @@
+{
+  "id": 3,
+  "name": "50 Shades",
+  "packageType": "pair",
+  "description": "Maiinit na hamon at sobrang prangkang tanong para sa mga mag-partner na hindi takot lumampas sa linya.",
+  "imageEncoded": "d61a609e-a3db-4d94-88e1-47f460cc0616.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Bulong ng Pagnanasa",
+      "action": "${c_player}, bulungan si ${r_player} kung aling haplos ang pinakagusto mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Isang Minuto ng Pag-amin",
+      "action": "${c_player}, ibahagi kay ${r_player} ang pinaka-matapang mong pantasya.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Walang Mas Lapit Pa Dito",
+      "action": "${c_player}, dahan-dahang lumapit kay ${r_player} hanggang halos wala nang pagitan sa inyo, at manatili nang ganoon ng 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Bawal na Paksa",
+      "action": "${c_player}, tanungin si ${r_player} ng pinaka-prangkang tanong na matagal mo nang gustong itanong.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Walang Kamay",
+      "action": "${c_player}, hawakan si ${r_player} gamit ang kahit anong parte ng katawan mo, maliban sa mga kamay.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Lugar",
+      "action": "${c_player}, sabihin kay ${r_player} ang pinaka-di-karaniwang lugar kung saan mo gustong mapag-isa kayong dalawa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mata sa Mata",
+      "action": "${c_player} at ${r_player}, tingnan ang mata ng isa’t isa nang tahimik sa loob ng 20 segundo, dahan-dahang lumalapit.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Isang Salita",
+      "action": "${c_player}, sabihin kay ${r_player} ang isang salitang nagbibigay sa’yo ng kilig sa buong katawan.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pag-amin sa Dilim",
+      "action": "${c_player}, pumikit at sabihin kay ${r_player} ang isang sobrang personal na lihim.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hangganan ng Pahintulot",
+      "action": "${c_player}, pabulong na sabihin kay ${r_player} kung hanggang saan ka papayag kung isang gabi lang kayong magkasama.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Iguhit ang Pagnanasa",
+      "action": "${c_player}, dahan-dahang iguhit sa katawan ni ${r_player} gamit ang daliri mo ang iyong lihim na pagnanasa.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Hininga ng Lapit",
+      "action": "Ilapit ang mga labi ninyo hangga’t maaari nang hindi nagkakabangga at manatili nang ganoon ng 15 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Pantasya nang Malakas",
+      "action": "${c_player}, maikling ikuwento kay ${r_player} kung anong pribadong eksena ninyong dalawa ang madalas mong iniisip.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mga Patakaran ng Laro",
+      "action": "${c_player}, magmungkahi ng isang \"patakaran\" para sa susunod na oras na kailangang sundin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Galaw",
+      "action": "${c_player}, ipakita kay ${r_player} kung aling kilos nila ang pinaka-nakakaakit para sa’yo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Usapang Walang Salita",
+      "action": "Subukang iparating ang pagnanasa ninyo sa isa’t isa gamit lang ang mga ekspresyon ng mukha at titig.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Personal na Masahe",
+      "action": "${c_player}, bigyan si ${r_player} ng senswal na masahe sa leeg sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pawang Katotohanan Lang",
+      "action": "${c_player}, sagutin ang tanong ni ${r_player} nang buong katapatan, gaano man ito kaprangka.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Delikadong Lapit",
+      "action": "${c_player}, bulungan sa tainga si ${r_player} ng pinaka-mapangahas na linyang pumapasok sa isip mo ngayon.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pagnanasa para sa Dalawa",
+      "action": "Sa bilang na tatlo, sabay kayong bumigkas ng pinaka-intimong naisin ninyo para sa isa’t isa.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Halík sa Bawal na Lugar",
+      "action": "${c_player}, halikan nang marahan si ${r_player} sa kahit anong hindi inaasahang parte ng katawan nila.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Bulag na Haplos",
+      "action": "${c_player}, nakapikit, padaanin ang kamay mo sa katawan ni ${r_player} at huminto kung saan mo gusto.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Isang Minuto ng Pagnanasa",
+      "action": "Maghalikan nang tuloy-tuloy sa loob ng isang minuto nang hindi naghihiwalay.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 60
+    },
+    {
+      "title": "Amoy ng Pag-akit",
+      "action": "${c_player}, langhapin ang amoy ng balat ni ${r_player} sa may leeg at ilarawan kung ano ang nararamdaman mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Bulong",
+      "action": "${c_player}, bulungan sa tainga si ${r_player} kung ano ang gusto mong gawin sa kanya ngayon.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dikit na Dikít",
+      "action": "${c_player}, idikit ang buong katawan mo kay ${r_player} at manatili nang ganoon ng 15 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Perpektong Haplos",
+      "action": "${c_player}, dahan-dahang padaanin ang daliri mo sa mga labi ni ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tapat na Masahe",
+      "action": "${c_player}, bigyan si ${r_player} ng senswal na masahe sa balikat at likod sa loob ng 30 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Mainit na Hininga",
+      "action": "${c_player}, padaanin ang mainit mong hininga sa leeg ni ${r_player}, bahagyang dumadampi sa balat.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Walang Salita",
+      "action": "${c_player}, ipakita sa pamamagitan ng kilos o haplos kung ano ang gusto mo kay ${r_player} ngayon.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pribadong Sayaw",
+      "action": "${c_player}, magsayaw nang maikli pero mapang-akit para kay ${r_player}.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Pantasya nang Malakas (Detalyado)",
+      "action": "${c_player}, ikuwento kay ${r_player} nang mas detalyado ang pinaka-intimong pagnanasa mo na kasama siya.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Matamis na Kagat",
+      "action": "${c_player}, marahang kagatin ang tenga o leeg ni ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Paanyaya sa Pagiging Intimo",
+      "action": "${c_player}, yayain nang mahina at kaakit-akit si ${r_player} na mapag-isa kayong dalawa.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ganap na Tiwala",
+      "action": "${c_player}, hayaang hawakan ni ${r_player} ang kahit anong parte ng katawan mo na piliin niya.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Isang Hininga",
+      "action": "Maghalikan na parang iisa lang ang hinahati ninyong hininga.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Pagnanasa sa Pamamagitan ng Kamay",
+      "action": "${c_player}, gamit ang mga kamay mo, ituro sa katawan ni ${r_player} kung saang parte mo gustong humalik ngayon.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kontroladong Hininga",
+      "action": "${c_player}, padaanin ang mga labi mo sa buto sa balagat ni ${r_player} habang marahan mong ginagabayan ang paghinga niya.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Mata at Labi",
+      "action": "Salitan ninyong pagdikitin ang mga tingin at magbigay ng magagaan na halik sa labi sa loob ng 20 segundo.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Bawal na Pangako",
+      "action": "${c_player}, bulungan si ${r_player} ng pinaka-mapangahas na pangakong handa mong tuparin ngayong araw.",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

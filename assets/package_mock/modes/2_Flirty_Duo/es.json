@@ -1,0 +1,268 @@
+{
+  "id": 2,
+  "name": "Coqueteo para dos",
+  "packageType": "pair",
+  "description": "Retos tiernos y picantes para parejas nuevas. A ver cuánto se gustan.",
+  "imageEncoded": "8f67a9d5-ac29-4365-b38a-577dd245bd6e.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Cumplido a ciegas",
+      "action": "${c_player}, cierra los ojos y hazle a ${r_player} tu cumplido más sincero.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Baile para dos",
+      "action": "${c_player}, invita a ${r_player} a un baile lento sin música.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Deseo al oído",
+      "action": "${c_player}, susúrrale a ${r_player} un pequeño deseo romántico.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "10 segundos mirándose a los ojos",
+      "action": "Mírense a los ojos durante 10 segundos sin apartar la mirada.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Letras al tacto",
+      "action": "${c_player}, dibuja suavemente con el dedo la primera letra de tu nombre en la espalda de ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cumplido delicioso",
+      "action": "${c_player}, compara a ${r_player} con un postre y explica por qué.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Primer encuentro",
+      "action": "Actúen como si se acabaran de conocer.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pequeño secreto",
+      "action": "${c_player}, cuéntale en voz baja a ${r_player} algo personal que aún no sepa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pausa tierna",
+      "action": "${c_player}, toma las manos de ${r_player} durante ${rand(10,20)} segundos mientras le miras a los ojos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Consejo romántico",
+      "action": "${c_player}, dale a ${r_player} un consejo romántico en una sola frase.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Abrázame fuerte",
+      "action": "${c_player}, abraza a ${r_player} durante 15 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Apodo dulce",
+      "action": "${c_player}, inventa un apodo tierno para ${r_player} que nunca haya oído.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Una pregunta",
+      "action": "${c_player}, hazle a ${r_player} una pregunta romántica que siempre hayas querido hacer.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Aliento de cercanía",
+      "action": "Acérquense lo máximo posible las caras y quédense así 10 segundos sin tocarse.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Confesión breve",
+      "action": "${c_player}, dile a ${r_player} algo por lo que le das las gracias.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sonrisa por sonrisa",
+      "action": "${c_player}, intenta hacer reír a ${r_player} solo con gestos de la cara.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lo dirán las manos",
+      "action": "${c_player}, con los ojos cerrados, reconoce a ${r_player} tocando solo sus manos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Futuro compartido",
+      "action": "Por turnos, digan un momento que les gustaría vivir juntos.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Historia en letras",
+      "action": "${c_player}, inventa una breve historia romántica sobre ti y ${r_player} usando la letra ${r_letter}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Plan para mañana",
+      "action": "Entre los dos, inventen en 30 segundos un plan romántico corto para mañana por la noche.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Mirada secreta",
+      "action": "${c_player}, mira a ${r_player} con tu mirada más tierna durante 10 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Aroma favorito",
+      "action": "${c_player}, dile a ${r_player} qué aroma asocias con él/ella.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Caricia mariposa",
+      "action": "${c_player}, toca suavemente la mejilla de ${r_player} como si fuera el ala de una mariposa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Voz del corazón",
+      "action": "${c_player}, susurra al oído de ${r_player} tres palabras que quieras decirle ahora mismo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Melodía de amor",
+      "action": "${c_player}, tararea una melodía que te recuerde a ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cita perfecta",
+      "action": "${c_player}, describe brevemente la cita perfecta que te gustaría preparar para ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Mano a mano",
+      "action": "Dense la mano y no la suelten hasta el siguiente reto.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Un dato",
+      "action": "${c_player}, di un dato sobre ${r_player} que te impresione especialmente.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Declaración breve",
+      "action": "${c_player}, hazle a ${r_player} una declaración breve pero intensa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sonrisa secreta",
+      "action": "${c_player}, sonríele a ${r_player} de forma que se sienta realmente especial.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Masaje suave",
+      "action": "${c_player}, hazle a ${r_player} un ligero masaje en los hombros durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Único entre millones",
+      "action": "${c_player}, di una cualidad que haga a ${r_player} diferente de todos los demás.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Recuerdo dulce",
+      "action": "${c_player}, cuenta brevemente el momento más bonito que has vivido con ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Deseo compartido",
+      "action": "Al mismo tiempo, digan en voz alta qué es lo que ambos quieren ahora mismo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sonido favorito",
+      "action": "${c_player}, di qué sonido o tono de ${r_player} te gusta más.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Película romántica",
+      "action": "${c_player}, elige una película que describa perfectamente tu relación con ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Aliento cálido",
+      "action": "${c_player}, calienta las manos de ${r_player} con tu aliento durante 10 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Carta sin palabras",
+      "action": "${c_player}, dibuja suavemente un corazón en la palma de ${r_player} con tu dedo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Un paso más cerca",
+      "action": "Den al mismo tiempo un paso el uno hacia el otro y quédense quietos 10 segundos.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Noche perfecta",
+      "action": "${c_player}, cuéntale a ${r_player} cómo sería tu noche ideal juntos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

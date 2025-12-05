@@ -1,0 +1,549 @@
+{
+  "id": 4,
+  "name": "CHAOS Mode",
+  "packageType": "default",
+  "description": "Mga baliw na hamon na babasag sa lahat ng hangganan ng kahinhinan. Para lang sa pinakamatapang!",
+  "imageEncoded": "954fe94f-1850-475e-806c-5cd50a704d80.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Nakakatawang Espiya",
+      "action": "${c_player}, dahan-dahang tumawid sa buong kwarto na parang espiya.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baliktad na Usapan",
+      "action": "${c_player}, subukang magsalita pabaliktad sa loob ng 15 segundo. Ang iba ang huhusga kung gaano ka kagaling.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Ligaw na Hayop",
+      "action": "${c_player}, magpanggap bilang hayop na pipiliin ng ibang players at umasta nang ganoon sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sandali ng Pagkataranta",
+      "action": "Lahat ng players ay magpanggap na natataranta sa lumulubog na barko sa loob ng 20 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sigaw na Kanta",
+      "action": "${c_player}, kumanta ng kilalang kanta pero puro sigaw lang nang todo boses.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Baliw na Stylist",
+      "action": "${c_player}, gawin si ${r_player} ng nakakalokong hairstyle o outfit.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Dakilang Artista",
+      "action": "${c_player}, iguhit sa hangin ang mukha ni ${r_player}. Ang iba ang huhusga kung kamukha ba.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw ng Kaguluhan",
+      "action": "Lahat ng players sabay-sabay sumayaw sa iba-ibang style sa loob ng 20 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Natarantang TV Host",
+      "action": "${c_player}, magpanggap na host ng show habang biglang ina-attack ng aliens ang studio.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lakad-Zombie",
+      "action": "${c_player}, umikot sa kwarto na parang zombie at subukang “takutin” si ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sigaw na Papuri",
+      "action": "${c_player}, malakas at weird na purihin ang kahit sinong player.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kusina Fantasy",
+      "action": "${c_player}, sa loob ng 15 segundo, mag-imbento ng pinakanakadidiring pagkain at ilarawan ang resipe nito.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Radikal na Politiko",
+      "action": "${c_player}, magtalumpati na parang politiko na pinipilit ang lahat na sumayaw agad-agad.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Orkestrang Baliw",
+      "action": "Lahat ng players magpanggap na tumutugtog ng pinaka-absurd na instruments sa loob ng 20 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Magsasalitang Pusa",
+      "action": "${c_player}, magpanggap bilang pusang nagsasalita at nagrereklamo sa hirap ng buhay.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Walang Kwentang Away",
+      "action": "${c_player}, makipagtalo kay ${r_player} tungkol sa pinaka-walang kwentang topic.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nawalan ng Kontrol na Robot",
+      "action": "${c_player}, magpanggap na robot na napundi ang wiring at gumalaw nang sobrang magulo sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Walang Kwentang Forecast",
+      "action": "${c_player}, magbigay ng weather forecast para bukas na nangakong uulan ng mga pusa at aso.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Baliw na Propesor",
+      "action": "${c_player}, mag-lecture tungkol sa “paano tama na walang gawin kahit ano.”",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sabay-sabay na Kabaliwan",
+      "action": "Lahat ay sisigaw ng sarili nilang pangalan sa iba’t ibang boses at tono sa loob ng 10 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Baliktad na Damit",
+      "action": "${c_player}, isuot nang pabaliktad ang kahit anong piraso ng damit at huwag alisin hanggang sa susunod mong turn.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nakakatawang Sayaw",
+      "action": "${c_player}, sumayaw na parang may lobo na nakatali sa bawat paa.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pose ng Kaguluhan",
+      "action": "${c_player}, tumigil sa pinaka-weird na pose na kaya mo at panatilihin ito nang ${rand(10,20)} segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gayahin ang Unggoy",
+      "action": "Lahat ng players man-grimace, talon, at gumawa ng tunog-unggoy sa loob ng 15 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Malakas na Bulong",
+      "action": "${c_player}, ibulong ang pariralang “Ayos lang ako” sa pinakamalakas na kaya mong boses.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Eh Di Workout",
+      "action": "${c_player}, gumawa ng ${rand(5,10)} squats at sumigaw ng kung anong kakaiba pagkatapos ng bawat isa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Buhay na Alarm Clock",
+      "action": "${c_player}, magpanggap na alarm clock na tumutunog ng 5 a.m., gamit ang katawan at boses mo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Sabayang Ikot",
+      "action": "Lahat ng players bumuo ng bilog sa paligid ni ${r_player} at sumigaw ng random na salita habang umiikot.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lakas ng Instinct",
+      "action": "${c_player}, pumikit at hanapin si ${r_player} na gumagapang na naka-apat.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 25
+    },
+    {
+      "title": "Random na Bagay",
+      "action": "${c_player}, pumili ng kahit anong bagay sa paligid at gamitin ito sa maling paraan sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Isang-Letrang Usapan",
+      "action": "${c_player}, sa loob ng 15 segundo, magsalita lang gamit ang mga salitang nagsisimula sa \"${r_letter}\".",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Lakad-Model",
+      "action": "${c_player}, maglakad sa kwarto na parang runway model habang may binabalanse sa ulo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tahimik na Tampururót",
+      "action": "${c_player}, magtampururót nang walang kahit anong tunog.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Salamin",
+      "action": "${c_player} at ${r_player} ay magpanggap na magkabilang salamin: gayahin ng isa ang galaw ng isa pa sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sabog na Emosyon",
+      "action": "${c_player}, sa loob ng 10 segundo, ipakita ang 3 matinding emosyon gamit ang pinaka-weird mong mga mukha.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Hindi Iyong Boses",
+      "action": "${c_player}, magsalita gamit ang boses ng cartoon character sa susunod na round.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Di-nakikitang Upuan",
+      "action": "${c_player}, umupo sa imahinaryong upuan at manatili nang ganoon sa loob ng 10 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Double Hamon",
+      "action": "${c_player} at ${r_player} ay dapat gumawa ng tig-isang nakakatawang galaw, sunod-sunod.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lahat Baliktad",
+      "action": "${c_player}, sa loob ng 30 segundo, gawin ang lahat nang “baliktad”: sabihin ang “hindi” kapag ang ibig mong sabihin ay “oo” at baliktad.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Talón sa Bota",
+      "action": "${c_player}, tumalon ng 10 beses na parang naka-rubber boots (totoo o imahinaryo) habang malakas na sumisigaw ng “Woo!”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Karusel na Baso",
+      "action": "Lahat ng players magpasa ng imahinaryong baso at magsabi ng “chirk” sa bawat pasa.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Talón-Palaka",
+      "action": "${c_player}, tumalon na parang palaka papunta kay ${r_player} at pabalik.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Di-nakikitang Tren",
+      "action": "${c_player}, umikot nang 3 beses sa kwarto na parang may hinihila kang di-nakikitang tren sa likod mo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Team Wave",
+      "action": "Lahat ng players gumawa ng sunud-sunod na hand wave—kung sino ang mahuli, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Luksong Lubid na Walang Lubid",
+      "action": "${c_player}, mag-luksong lubid gamit ang imahinaryong lubid nang ${rand(10,15)} beses.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Paakyat na Lakas ng Boses",
+      "action": "${c_player}, sabihin ang 5 salita sunod-sunod, bawat isa mas malakas kaysa sa nauna.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Relay ng Mukha",
+      "action": "Ang mga players ay magpapalitan sa paggawa ng nakakatawang mukha hanggang sabihin ni ${c_player} ang “stop.”",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Lap ng Karangalan",
+      "action": "${c_player}, maglakad nang nakatiptoe sa paligid ng kwarto habang ibinubulong ang “Bayani ako.”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Yukong Imbento",
+      "action": "${c_player}, yumuko na parang hahalikan ang sahig at manatili nang 10 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Martsa ng Gulay",
+      "action": "Lahat ng players magmartsa sa kinatatayuan na parang iba’t ibang gulay sila.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Maskara ng Kabaliwan",
+      "action": "${c_player}, takpan ang buhok ng scarf (totoo o imahinaryo) at sabihin ang “ha-ha” pagkatapos ng bawat salita.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Hakbang-Eko",
+      "action": "${c_player}, gumawa ng 5 hakbang pasulong at malakas na i-echo ang sariling boses pagkatapos ng bawat hakbang.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabilis na Sakong",
+      "action": "${c_player}, maglakad nang mabilis sa mga sakong mo sa loob ng ${rand(10,15)} segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Tahimik na Grupo",
+      "action": "Lahat ay tatahimik at magge-gestures lang hanggang sabihin ni ${r_player} ang “salita.”",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Palitan ng Titig",
+      "action": "${c_player} at ${r_player}, magkatinginan sa mata at sabay na pumikit-dilat sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Talón sa Anino",
+      "action": "${c_player}, subukang talunin ang sarili mong anino (o kung saan ito dapat naroon).",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Guhit ng Paa",
+      "action": "${c_player}, “iguhit” ang isang imahinaryong larawan sa hangin gamit ang dulo ng paa mo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Baliktad na Bilang-Pabalik",
+      "action": "${c_player}, mabilis na bumilang pabalik nang malakas mula ${rand(10,20)} hanggang 1 nang walang mali.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Relay na Talon",
+      "action": "${c_player} at ${r_player}, salitsalitang tumalon sa kinatatayuan nang ${rand(5,10)} beses.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Labanan ng Unan",
+      "action": "${c_player} at ${r_player}, magpanggap na nag-aaway gamit ang imahinaryong mga unan.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Martsa-Zombie",
+      "action": "${c_player}, maglakad sa buong kwarto na parang zombie, paulit-ulit na sinasabi ang “brains.”",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Tawanan nang Walang Dahilan",
+      "action": "Lahat ng players tatawa nang malakas at sobrang nakakatawa sa loob ng 10 segundo, walang tigil.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Lakad-Alimango",
+      "action": "${c_player}, gumalaw nang pa-side sa kwarto na parang alimango sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Sayaw-Manok",
+      "action": "${c_player}, gawin ang maikling, magulong sayaw-manok.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 0
+    },
+    {
+      "title": "Roll Call ng Hayop",
+      "action": "Ang mga players ay magpapalitan sa pag-gaya nang malakas sa iba’t ibang tunog ng hayop.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Di-nakikitang Hagdan",
+      "action": "${c_player}, magpanggap na umaakyat sa di-nakikitang hagdan sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kausapin ang Pader",
+      "action": "${c_player}, makipag-argumento nang todo-emosyon sa pader.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Baliw na Maestro",
+      "action": "${c_player}, mag-kondak nang sobrang magulo sa isang imahinaryong orkestra.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sigaw ng Seagull",
+      "action": "Lahat ng players sisigaw na parang mga seagull sa loob ng 10 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Nakakatawang Lakad",
+      "action": "${c_player}, ipakita ang pinakasobrang nakakatawang lakad na maisip mo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Parodiya ng Kaibigan",
+      "action": "${c_player}, gumawa ng maikling parodiya ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Windmill na Braso",
+      "action": "${c_player}, iikot ang mga braso na parang windmill habang sinasabi ang “wind” sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sayaw-Penguin",
+      "action": "${c_player}, magpanggap na penguin na sumasayaw sa nightclub.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Paglangoy sa Sahig",
+      "action": "${c_player}, magpanggap na lumalangoy ng crawl sa sahig.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Malakas na Tawa",
+      "action": "${c_player}, tumawa nang malakas at bigla, kahit walang nakakatawa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ligaw na Sayaw ng Shaman",
+      "action": "${c_player}, gumawa ng maikling sayaw-shaman para “tawagin” ang ulan.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Labanang Espada-Imbento",
+      "action": "${c_player} at ${r_player}, magpanggap na nagdudwelong maikli gamit ang imahinaryong espada.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Baliw na Lakad",
+      "action": "${c_player}, maglakad na parang nasa tightrope ka sa ibabaw ng bangin.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Paikot-ikot",
+      "action": "${c_player}, umikot sa kinatatayuan nang ${rand(5,10)} beses at subukang tumayo nang diretso pagkatapos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    }
+  ]
+}

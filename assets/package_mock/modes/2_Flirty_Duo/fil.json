@@ -1,0 +1,268 @@
+{
+  "id": 2,
+  "name": "Flirt para sa Dalawa",
+  "packageType": "pair",
+  "description": "Malambing at maanghang na hamon para sa bagong mag-jowa. Tingnan natin kung gaano n'yo kagusto ang isa’t isa!",
+  "imageEncoded": "8f67a9d5-ac29-4365-b38a-577dd245bd6e.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Pikit-Matang Papuri",
+      "action": "${c_player}, pumikit at bigyan si ${r_player} ng pinaka-tapat mong papuri.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw para sa Dalawa",
+      "action": "${c_player}, yayain si ${r_player} sa mabagal na sayaw kahit walang tugtog.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Bulong na Hiling",
+      "action": "${c_player}, ibulong kay ${r_player} ang isang munting romantic na hiling.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "10 Segundong Titig",
+      "action": "Mag-titigan kayo sa mata nang 10 segundo nang hindi lumilingon.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Titik sa Hipo",
+      "action": "${c_player}, dahan-dahang iguhit ang unang letra ng pangalan mo sa likod ni ${r_player} gamit ang daliri mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Masarap na Papuri",
+      "action": "${c_player}, ikumpara si ${r_player} sa isang dessert at ipaliwanag kung bakit.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unang Pagkikita",
+      "action": "Umasta na parang ngayon lang kayo nagkita.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Munting Lihim",
+      "action": "${c_player}, mahina mong sabihin kay ${r_player} ang isang personal na bagay na hindi pa niya alam.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Malambing na Sandali",
+      "action": "${c_player}, hawakan ang mga kamay ni ${r_player} sa loob ng ${rand(10,20)} segundo habang nakatitig sa mga mata niya.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Romantikong Payo",
+      "action": "${c_player}, bigyan si ${r_player} ng romantic na tip sa isang pangungusap.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mahigpit na Yakap",
+      "action": "${c_player}, yakapin si ${r_player} nang 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Matamis na Palayaw",
+      "action": "${c_player}, mag-isip ng bagong cute na palayaw para kay ${r_player} na hindi pa niya naririnig.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Isang Tanong",
+      "action": "${c_player}, magtanong kay ${r_player} ng kahit anong romantic na tanong na matagal mo nang gustong masagot.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hinga ng Lapit",
+      "action": "Ilapit ang mga mukha ninyo hangga’t kaya at manatili nang ganoon sa loob ng 10 segundo nang hindi nagkakadikit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Maikling Pag-amin",
+      "action": "${c_player}, sabihin kay ${r_player} ang isang bagay na lubos mong ipinagpapasalamat sa kanya.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ngiti sa Ngiti",
+      "action": "${c_player}, subukang patawanin si ${r_player} gamit lang ang mga ekspresyon ng mukha mo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kwentong Kamay",
+      "action": "${c_player}, nakapikit, kilalanin si ${r_player} sa paghipo lang sa mga kamay niya.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Hinaharap na Magkasama",
+      "action": "Salitan kayong magbanggit ng tig-isang sandaling gusto ninyong maranasan nang magkasama.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Kuwento sa Titik",
+      "action": "${c_player}, gumawa ng maikling romantic na kuwento tungkol sa inyo ni ${r_player} gamit ang letrang ${r_letter}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Plano para Bukas",
+      "action": "Sabay kayong mag-isip ng maikling romantic na plano para sa bukas ng gabi sa loob ng 30 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Lihim na Tingin",
+      "action": "${c_player}, titigan si ${r_player} nang may pinakamalambing mong tingin sa loob ng 10 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Paboritong Amoy",
+      "action": "${c_player}, sabihin kay ${r_player} kung anong amoy ang iniuugnay mo sa kanya.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Haplos-Paru-paro",
+      "action": "${c_player}, dahan-dahang haplusin ang pisngi ni ${r_player} na parang pakpak ng paru-paro.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tinig ng Puso",
+      "action": "${c_player}, ibulong sa tenga ni ${r_player} ang tatlong salitang gusto mong sabihin ngayon.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Himig ng Pag-ibig",
+      "action": "${c_player}, hum ng himig na nagpapaalala sa iyo kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perpektong Date",
+      "action": "${c_player}, ilarawan nang maikli ang perpektong date na gusto mong ihanda para kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Magkahawak-Kamay",
+      "action": "Maghawak-kamay at huwag bibitaw hangga’t hindi pa tapos ang susunod na dare.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Isang Bagay",
+      "action": "${c_player}, banggitin ang isang bagay tungkol kay ${r_player} na pinakanakakahanga para sa iyo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maikling Pagdeklara",
+      "action": "${c_player}, magbigay ng maikli pero matinding pagdeklara kay ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Ngiti",
+      "action": "${c_player}, ngitian si ${r_player} sa paraang mararamdaman niyang tunay siyang espesyal.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Banayad na Masahe",
+      "action": "${c_player}, bigyan si ${r_player} ng magaan na masahe sa balikat sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Isa sa Milyon",
+      "action": "${c_player}, banggitin ang isang katangian ni ${r_player} na talagang naiiba sa lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Matamis na Alaala",
+      "action": "${c_player}, ikuwento nang maikli ang pinakamagandang sandali ninyong dalawa ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Magkasabay na Hiling",
+      "action": "Sabay ninyong sabihin nang malakas kung ano ang gusto ninyong dalawa ngayon.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Paboritong Tunog",
+      "action": "${c_player}, sabihin kung aling tunog o boses ni ${r_player} ang pinakagusto mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantikong Pelikula",
+      "action": "${c_player}, pumili ng pelikulang sa tingin mo ay pinakakatulad ng relasyon ninyo ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mainit na Hinga",
+      "action": "${c_player}, painitin ang mga kamay ni ${r_player} gamit ang hininga mo sa loob ng 10 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Letrang Walang Salita",
+      "action": "${c_player}, dahan-dahang gumuhit ng puso sa palad ni ${r_player} gamit ang daliri mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Isang Hakbang na Mas Malapit",
+      "action": "Sabay kayong gumawa ng isang hakbang papalapit sa isa't isa at manatili roon nang 10 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Perpektong Gabi",
+      "action": "${c_player}, sabihin kay ${r_player} kung ano ang ideal na gabi ninyong magkasama.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "id": 3,
+  "name": "50 Shades",
+  "packageType": "pair",
+  "description": "Défis brûlants et questions très intimes pour les couples qui n’ont pas peur de franchir les limites.",
+  "imageEncoded": "d61a609e-a3db-4d94-88e1-47f460cc0616.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Murmure de passion",
+      "action": "${c_player}, dis à voix basse à ${r_player} quelle caresse tu préfères.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minute de révélation",
+      "action": "${c_player}, partage avec ${r_player} ta fantaisie la plus audacieuse.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Pas plus près que ça",
+      "action": "${c_player}, avance lentement vers ${r_player} jusqu’à ce qu’il ne reste presque plus d’espace entre vous, puis reste immobile pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Sujet interdit",
+      "action": "${c_player}, pose à ${r_player} la question la plus intime que tu meurs d’envie de lui poser depuis longtemps.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sans les mains",
+      "action": "${c_player}, touche ${r_player} avec n’importe quelle partie de ton corps sauf tes mains.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Endroit secret",
+      "action": "${c_player}, dis à ${r_player} l’endroit le plus inattendu où tu aimerais te retrouver seul(e) avec lui/elle.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Yeux dans les yeux",
+      "action": "${c_player} et ${r_player}, regardez-vous en silence dans les yeux pendant 20 secondes en vous rapprochant doucement.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Un seul mot",
+      "action": "${c_player}, dis à ${r_player} un mot qui te donne des frissons.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Aveu dans le noir",
+      "action": "${c_player}, ferme les yeux et fais une confidence très personnelle à ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Limites du possible",
+      "action": "${c_player}, dis à voix basse à ${r_player} jusqu’où tu serais prêt(e) à aller si vous n’aviez qu’une seule nuit ensemble.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dessine ton désir",
+      "action": "${c_player}, dessine délicatement ton désir secret sur le corps de ${r_player} du bout du doigt.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Souffle de l’intimité",
+      "action": "Approchez vos lèvres le plus près possible sans vous toucher et restez ainsi pendant 15 secondes.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Fantaisie à voix haute",
+      "action": "${c_player}, raconte brièvement à ${r_player} le scénario intime avec lui/elle auquel tu penses le plus souvent.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Règles du jeu",
+      "action": "${c_player}, propose une « règle » pour l’heure qui vient que ${r_player} devra suivre.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Geste secret",
+      "action": "${c_player}, montre à ${r_player} quel geste de sa part tu trouves le plus excitant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Conversation sans mots",
+      "action": "Essayez de vous faire comprendre votre désir en utilisant seulement vos expressions du visage et vos yeux.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Massage personnel",
+      "action": "${c_player}, fais à ${r_player} un massage sensuel de la nuque pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Rien que la vérité",
+      "action": "${c_player}, réponds le plus honnêtement possible à la question de ${r_player}, aussi intime soit-elle.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Proximité dangereuse",
+      "action": "${c_player}, chuchote à l’oreille de ${r_player} la phrase la plus osée qui te vient en tête maintenant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Désir à deux",
+      "action": "À trois, dites à voix haute votre désir le plus intime l’un pour l’autre.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Baiser surprise",
+      "action": "${c_player}, embrasse doucement ${r_player} à un endroit inattendu de son corps.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Toucher à l’aveugle",
+      "action": "${c_player}, les yeux fermés, fais glisser ta main sur le corps de ${r_player} et arrête-toi où tu veux.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Minute de passion",
+      "action": "Embrassez-vous sans vous arrêter pendant une minute entière.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 60
+    },
+    {
+      "title": "Parfum du désir",
+      "action": "${c_player}, respire le parfum de la peau de ${r_player} dans son cou et décris ce que ça te fait.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Murmure secret",
+      "action": "${c_player}, chuchote à l’oreille de ${r_player} ce que tu as envie de faire avec lui/elle maintenant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Contact rapproché",
+      "action": "${c_player}, colle tout ton corps contre celui de ${r_player} et reste ainsi pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Caresse parfaite",
+      "action": "${c_player}, fais doucement glisser un doigt sur les lèvres de ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Massage sensuel",
+      "action": "${c_player}, fais à ${r_player} un massage sensuel des épaules et du dos pendant 30 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Souffle brûlant",
+      "action": "${c_player}, laisse ton souffle voyager le long du cou de ${r_player}, en effleurant à peine sa peau.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sans paroles",
+      "action": "${c_player}, montre par un geste ou un toucher ce que tu veux de ${r_player} maintenant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Danse privée",
+      "action": "${c_player}, offre à ${r_player} une courte danse provocante.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Fantaisie à voix haute (détaillée)",
+      "action": "${c_player}, décris à ${r_player}, avec le plus de détails possible, ton désir le plus intime qui le/la concerne.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Douce morsure",
+      "action": "${c_player}, mordille doucement le lobe de l’oreille ou le cou de ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Invitation à l’intimité",
+      "action": "${c_player}, invite doucement ${r_player} à se retrouver seul(e) avec toi de la façon la plus séduisante possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Confiance absolue",
+      "action": "${c_player}, laisse ${r_player} toucher n’importe quelle partie de ton corps, à son choix.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Un seul souffle",
+      "action": "Embrassez-vous comme si vous partagiez un seul et même souffle.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Désir en geste",
+      "action": "${c_player}, avec tes mains, indique sur le corps de ${r_player} l’endroit que tu as envie d’embrasser maintenant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Souffle maîtrisé",
+      "action": "${c_player}, fais glisser tes lèvres le long des clavicules de ${r_player} tout en guidant sa respiration.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Yeux et lèvres",
+      "action": "Alternez regards et baisers légers sur les lèvres pendant 20 secondes.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Promesse interdite",
+      "action": "${c_player}, chuchote à ${r_player} la promesse la plus osée que tu es prêt(e) à tenir aujourd’hui.",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}
