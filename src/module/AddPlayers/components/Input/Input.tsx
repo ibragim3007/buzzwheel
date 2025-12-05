@@ -36,15 +36,15 @@ export default function Input({ onCall }: InputProps) {
       vibrate();
 
       // Trigger animations
-      bounce.value = withSpring(-5, { stiffness: 250 }, () => {
+      bounce.value = withSpring(-5, { stiffness: 130, mass: 0.7 }, () => {
         bounce.value = withSpring(0);
       });
-      rotate.value = withSpring(5, { stiffness: 250 }, () => {
-        rotate.value = withSpring(-5, {}, () => {
+      rotate.value = withSpring(5, { stiffness: 130, mass: 0.5 }, () => {
+        rotate.value = withSpring(-5, { mass: 0.5 }, () => {
           rotate.value = withSpring(0);
         });
       });
-      scale.value = withSpring(1.1, { stiffness: 250 }, () => {
+      scale.value = withSpring(1.1, { stiffness: 130, mass: 0.7 }, () => {
         scale.value = withSpring(1);
       });
 
