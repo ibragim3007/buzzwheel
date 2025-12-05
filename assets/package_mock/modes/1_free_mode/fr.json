@@ -1,0 +1,660 @@
+{
+  "id": 1,
+  "name": "Mise en jambe pour la soirée",
+  "packageType": "default",
+  "description": "Des questions légères et marrantes pour lancer la soirée sans mauvaise surprise — parfait pour commencer !",
+  "imageEncoded": "66178b0b-ebf8-4e85-90c4-43a65e7936f8.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Brocoli dansant",
+      "action": "${c_player}, fais comme si tu étais un brocoli qui sort en boîte. Danse jusqu’à ce que ${r_player} dise « c’est cuit ! ».",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Répartiteur de taxis martiens",
+      "action": "${c_player}, tu es l’opérateur du service de taxis de Mars. Explique à ${r_player} comment aller sur la planète Zyuz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Poulet très important",
+      "action": "${c_player}, en poulet haut placé, adresse-toi à la nation. Caquète ${rand(3,5)} fois.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Agent secret du frigo",
+      "action": "${c_player}, joue l’agent qui essaie de découvrir auprès de ${r_player} ce qu’il y a dans son frigo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Animateur radio lunaire",
+      "action": "${c_player}, présente un journal depuis la Lune. Parle météo, sport et scoops — tout doit être lunaire.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mamie philosophe",
+      "action": "${c_player}, deviens une mamie râleuse et explique à ${r_player} pourquoi les jeunes ne respectent plus la lettre « ${r_letter} ».",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Canapé bavard",
+      "action": "${c_player}, joue le canapé sur lequel ${r_player} vient de s’asseoir. Plains-toi de la dure vie des meubles.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fée du chaos",
+      "action": "${c_player}, tu es une fée qui exauce des vœux bizarres. Propose à ${r_player} ${rand(2,3)} cadeaux absurdes.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chat en entretien d’embauche",
+      "action": "${c_player}, imagine que tu es un chat qui passe un entretien d’embauche. ${r_player} est le recruteur.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Prof d’absurdité",
+      "action": "${c_player}, donne un cours sur « Comment danser au plafond ». Utilise au moins ${rand(3,5)} termes techniques.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Star de TikTok",
+      "action": "${c_player}, rejoue une parodie de vidéo virale. ${r_player} doit deviner laquelle.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Dentiste dragon",
+      "action": "${c_player}, tu es un dragon qui fait dentiste à côté. Fais un contrôle à ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Facteur des émotions",
+      "action": "${c_player}, tu livres des lettres uniquement sous forme d’émotions. Annonce une nouvelle à ${r_player} uniquement avec ton visage.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mécanicien du rire",
+      "action": "${c_player}, montre comment tu « répares » le rire de ${r_player}. Décris tes outils et ta méthode.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Détective des chaussons perdus",
+      "action": "${c_player}, trouve des indices pour accuser ${r_player} d’avoir volé des chaussons imaginaires.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Consultant hibou",
+      "action": "${c_player}, donne des conseils sages mais parfaitement inutiles à ${r_player} en n’utilisant que des mots qui commencent par « ${r_letter} ».",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pub de groupe",
+      "action": "Tous les joueurs créent ensemble une pub pour le nouveau produit : « Chapeau pour la tristesse ». ${r_player} réalise le tournage.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Chef de dessin animé",
+      "action": "${c_player}, invente et présente le plat « Omelette du tonnerre et de l’arc-en-ciel ». Sois convaincant !",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tout le monde mime",
+      "action": "Pendant ${rand(15,30)} secondes, tous les joueurs ne peuvent communiquer qu’avec des gestes. Celui qui parle boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Animal sauvage",
+      "action": "Chaque joueur montre comment il se comporterait s’il était une autruche de compagnie. ${c_player} est le juge.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Légume secret",
+      "action": "${c_player}, si tu étais un légume, lequel serais-tu et pourquoi ? ${r_player} peut ne pas être d’accord et proposer autre chose.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amende pour penser",
+      "action": "${c_player}, si chaque pensée coûtait une amende, quelle pensée te vaudrait déjà un million ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tête de la semaine",
+      "action": "${c_player}, de quel visage remplacerais-tu le tien pendant une semaine ? ${r_player} doit valider le choix.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Échange de corps",
+      "action": "${c_player}, avec quel joueur tu n’échangerais surtout pas ton corps, et pourquoi ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sandwich de personnalités",
+      "action": "${c_player}, fais un sandwich avec les personnalités des joueurs : qui est le pain, le fromage, la sauce, et pourquoi ?",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Âme de mème",
+      "action": "${c_player}, quel mème décrit le mieux ta personnalité ? ${r_player} peut ne pas être d’accord.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Danse de l’âme",
+      "action": "${c_player}, si ton âme était une danse, laquelle serait-ce ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Président pingouin",
+      "action": "${c_player}, comment changerait le pays s’il était dirigé par un pingouin avec la voix de ${r_player} ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fête absurde",
+      "action": "${c_player}, invente une fête ridicule que tu voudrais rendre officielle.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Choix inutile",
+      "action": "${c_player}, choisis : perdre ton nez pour toujours ou parler à jamais avec la voix de ${r_player} ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Honte partagée",
+      "action": "Chaque joueur raconte quelque chose qu’il a fait et regretté aussitôt. ${r_player} choisit le gagnant.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 40
+    },
+    {
+      "title": "Fantaisie collective",
+      "action": "Les joueurs complètent à tour de rôle la phrase : « Si j’étais une banane… ». Celui qui se trompe boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Loi insensée",
+      "action": "${c_player}, invente une nouvelle loi absurde qui s’appliquera dans cette pièce.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Couleur officielle du jour",
+      "action": "${c_player}, choisis la « couleur du jour » et explique pourquoi tout le monde doit la respecter.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Animal totem",
+      "action": "${c_player}, choisis un animal qui protège spirituellement ${r_player} et explique pourquoi.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Métier de rêve",
+      "action": "${c_player}, quel serait ton métier si toutes les professions étaient basées sur les rêves ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verdict du groupe",
+      "action": "Tout le monde décide du rôle de ${c_player} dans un monde post-apocalyptique. ${c_player} peut protester — mais risque de boire.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nom vivant",
+      "action": "${c_player}, si ton prénom reflétait vraiment ta nature, comment s’appellerait-il ? (La lettre « ${r_letter} » doit y figurer !)",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Redémarrage collectif",
+      "action": "Tous les joueurs disent en même temps un mot pour créer une phrase. Répétitions interdites. Celui qui se trompe boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Un jour dans la peau d’un autre",
+      "action": "${c_player}, choisis un joueur. Décris comment tu passerais une journée dans son corps.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Vie d’objet",
+      "action": "${c_player}, si tu pouvais devenir un objet du quotidien, lequel serais-tu et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Animal de compagnie insolite",
+      "action": "${c_player}, quel est l’animal le plus étrange que tu aimerais avoir, et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Voyage dans le temps",
+      "action": "${c_player}, quelle période historique visiterais-tu et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Super-pouvoir",
+      "action": "${c_player}, quel super-pouvoir choisirais-tu si tu le pouvais ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Célébrité d’un jour",
+      "action": "${c_player}, quelle célébrité aimerais-tu être pendant un jour, et que ferais-tu ?",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Vie de dessin animé",
+      "action": "${c_player}, quel personnage de dessin animé aimerais-tu devenir, et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jour d’invisibilité",
+      "action": "${c_player}, quelle est la première chose que tu ferais si tu étais invisible pendant une journée ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fête idéale",
+      "action": "${c_player}, si tu pouvais créer un nouveau jour férié, ce serait quoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Trois vœux",
+      "action": "${c_player}, imagine que tu as attrapé un poisson d’or. Quels seraient tes trois vœux ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Île déserte",
+      "action": "${c_player}, quels trois objets emporterais-tu sur une île déserte ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talents cachés",
+      "action": "Chaque joueur partage un talent caché. Celui qui refuse boit.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Nourriture étrange",
+      "action": "Les joueurs disent tour à tour la chose la plus bizarre qu’ils aient mangée. Si tu ne trouves rien, tu bois.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Métier insolite",
+      "action": "${c_player}, quel est le métier le plus insolite que tu peux imaginer et que tu aimerais essayer ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vie animale",
+      "action": "${c_player}, quel animal voudrais-tu être pendant un jour, et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sport bizarre",
+      "action": "${c_player}, invente le sport le plus ridicule possible.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rêve d’enfant",
+      "action": "${c_player}, que voulais-tu devenir enfant, et pourquoi ce n’est pas arrivé ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Voyage de groupe",
+      "action": "Tous les joueurs proposent un lieu pour un voyage de groupe. ${r_player} choisit le plus drôle.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Maison de rêve",
+      "action": "${c_player}, décris ta maison idéale. En quoi est-elle différente d’une maison normale ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Achat inutile",
+      "action": "Chaque joueur nomme la chose la plus inutile qu’il ait achetée. Refuser = boire.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Président pour un jour",
+      "action": "${c_player}, décris ta journée si tu étais président du pays.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Statue de la Liberté",
+      "action": "${c_player}, prends la pose de la Statue de la Liberté et tiens-la pendant ${rand(15,25)} secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Danseur malgré lui",
+      "action": "${c_player}, exécute une courte danse marrante inventée par ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Marche de pingouin",
+      "action": "${c_player}, traverse la pièce en te dandinant comme un pingouin pendant ${rand(2,4)} tours.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Numéro d’équilibriste",
+      "action": "${c_player}, essaie d’équilibrer un objet sur ta tête pendant ${rand(10,20)} secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Course sur place",
+      "action": "${c_player}, fais comme si tu fuyais un essaim d’abeilles pendant ${rand(15,20)} secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gym des doigts",
+      "action": "${r_player}, montre un exercice marrant avec les doigts que tout le monde doit reproduire.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Guitare aérienne",
+      "action": "${c_player}, joue de la guitare invisible sur un morceau fredonné par ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Corde à sauter invisible",
+      "action": "${c_player}, saute à la corde invisible ${rand(10,15)} fois.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Yoga stylé",
+      "action": "${c_player}, prends une pose de yoga difficile et ridicule nommée par ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Danse du robot",
+      "action": "${c_player}, danse comme un robot en boîte de nuit.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Marche spatiale",
+      "action": "Tous les joueurs imitent la marche en apesanteur pendant ${rand(10,20)} secondes.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pose avion",
+      "action": "${c_player}, fais l’avion sur une jambe pendant ${rand(10,15)} secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Combat contre l’invisible",
+      "action": "${c_player}, joue une courte scène de combat contre un adversaire invisible.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Échauffement fun",
+      "action": "${r_player}, fais un petit échauffement marrant pour tous les joueurs.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Marche sur la Lune",
+      "action": "${c_player}, traverse la pièce lentement comme si tu marchais sur la Lune.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Chant en équilibre",
+      "action": "${c_player}, chante une petite chanson en restant sur une jambe.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Boxe de l’ombre",
+      "action": "${c_player}, fais un mini-combat de boxe contre un rival imaginaire.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Avion humain",
+      "action": "Tous les joueurs se mettent en file comme un avion et font le tour de la pièce sous la direction de ${r_player}.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Volley invisible",
+      "action": "${c_player}, joue un court match de volley invisible contre ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Animaux dansants",
+      "action": "${c_player}, danse comme l’animal choisi par ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Vendeur d’air",
+      "action": "${c_player}, vends de l’air de façon convaincante aux autres joueurs pendant ${rand(10,20)} secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Actu sur rien",
+      "action": "${c_player}, présente un flash info sur un événement totalement insignifiant.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Visite guidée insolite",
+      "action": "${c_player}, fais une courte visite guidée de la pièce comme si c’était un musée.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Pub pour l’ennui",
+      "action": "${c_player}, invente un slogan publicitaire pour l’ennui, pour donner envie aux gens de l’acheter.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Commentateur sportif",
+      "action": "${c_player}, commente les moindres gestes de ${r_player} comme un match sportif.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Film en 15 secondes",
+      "action": "${c_player}, résume n’importe quel film connu en 15 secondes. Les autres doivent deviner.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Poème improvisé",
+      "action": "${c_player}, compose un petit poème de quatre vers sur ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Interview absurde",
+      "action": "${c_player}, interviewe ${r_player} comme s’il était un grand expert en fainéantise.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Conte collectif",
+      "action": "Les joueurs disent chacun une phrase à tour de rôle pour créer un conte ridicule. Celui qui se plante boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Conférence sur le rien",
+      "action": "${c_player}, fais une conférence scientifique sur « pourquoi ne rien faire est bénéfique ».",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "One-man show",
+      "action": "${c_player}, joue une mini-pièce de théâtre où tu fais tous les personnages.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Pub d’équipe",
+      "action": "Tous les joueurs inventent ensemble une pub pour un produit imaginaire.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Inventeur de l’absurde",
+      "action": "${c_player}, invente et présente une invention ridicule qui améliore la vie des gens.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Horoscope de ${c_player}",
+      "action": "${c_player}, prédis la journée de ${r_player} comme si tu étais astrologue pro.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Présentateur météo",
+      "action": "${c_player}, annonce la météo de demain pour cette pièce.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Rap de groupe",
+      "action": "Les joueurs composent tour à tour un petit rap sur la partie en cours.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Mensonge convaincant",
+      "action": "${c_player}, raconte une courte histoire de ta vie. Les autres doivent deviner si c’est vrai ou faux.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Expert en bizarreries",
+      "action": "${c_player}, explique l’utilité d’un objet complètement inutile choisi par ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Orchestre humain",
+      "action": "Tous les joueurs font l’orchestre uniquement avec leurs mains et leurs voix. ${r_player} dirige.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Mode d’emploi de l’humain",
+      "action": "${c_player}, donne le mode d’emploi d’un humain comme s’il s’agissait d’un appareil ménager.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    }
+  ]
+}

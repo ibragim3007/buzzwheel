@@ -1,0 +1,660 @@
+{
+  "id": 1,
+  "name": "Pampainit ng party",
+  "packageType": "default",
+  "description": "Magagaan at nakakatawang tanong para uminit ang party, walang hindi komportableng sorpresa — sakto pang simula!",
+  "imageEncoded": "66178b0b-ebf8-4e85-90c4-43a65e7936f8.png",
+  "isFree": true,
+  "dares": [
+    {
+      "title": "Sumasayaw na Brokoli",
+      "action": "${c_player}, magpanggap kang brokoli na lumabas sa club. Sumayaw hanggang sabihin ni ${r_player} na luto ka na.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Dispatcher ng Mars Taxi",
+      "action": "${c_player}, ikaw ang dispatcher ng taxi sa Mars. Ipaliwanag kay ${r_player} kung paano makarating sa planetang Zyuz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Napakahalagang Manok",
+      "action": "${c_player}, bilang mataas ang ranggo na manok, kausapin ang bansa. Tumilaok ng ${rand(3,5)} na beses.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na Ahente ng Ref",
+      "action": "${c_player}, gumanap bilang lihim na ahente na sinusubukang alamin kay ${r_player} kung ano ang laman ng ref nila.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "DJ sa Buwan",
+      "action": "${c_player}, mag-host ng balita mula sa Buwan. Ikwento ang panahon, sports at mga sensasyon — lahat dapat pang-Buwan.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lolang Pilosopo",
+      "action": "${c_player}, maging mareklamong lola at ipaliwanag kay ${r_player} kung bakit hindi na pinapahalagahan ng kabataan ang letrang ${r_letter}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kausap na Sofa",
+      "action": "${c_player}, ikaw ang sofa na bagong inupuan ni ${r_player}. Magreklamo tungkol sa hirap ng buhay ng mga muwebles.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Duendeng Magulo",
+      "action": "${c_player}, isa kang diwata na nagbibigay ng kakaibang hiling. Alukin si ${r_player} ng ${rand(2,3)} nakakatawang regalo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pusa sa Job Interview",
+      "action": "${c_player}, magpanggap kang pusa na nag-a-apply sa trabaho. Si ${r_player} ang nag-iinterview sa'yo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Guro ng Kahangalan",
+      "action": "${c_player}, magturo ng leksyon na Paano sumayaw sa kisame. Gumamit ng hindi bababa sa ${rand(3,5)} teknikal na salita.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "TikTok Star",
+      "action": "${c_player}, gumanap ng parodya ng isang viral na video. Dapat hulaan ni ${r_player} kung ano iyon.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Dentistang Dragon",
+      "action": "${c_player}, isa kang dragon na may sideline bilang dentista. Bigyan ng check-up si ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tagahatid ng Emosyon",
+      "action": "${c_player}, nagdadala ka ng liham gamit lang emosyon. Ihatid ang balita kay ${r_player} gamit lang ang mukha mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mekaniko ng Tawa",
+      "action": "${c_player}, ipakita kung paano mo inaayos ang tawa ni ${r_player}. Ilarawan ang mga gamit at pamamaraan mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Detektib ng Nawawalang Tsinelas",
+      "action": "${c_player}, humanap ng mga pahiwatig para mapagbintangan si ${r_player} na nagnakaw ng imahinaryong tsinelas.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Owl Consultant",
+      "action": "${c_player}, magbigay ng matalino pero walang kuwentang payo kay ${r_player} gamit lang mga salitang nagsisimula sa ${r_letter}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pambarkadang Commercial",
+      "action": "Lahat ng manlalaro ay sabay gagawa ng ad para sa bagong produktong Sombrero ng Kalungkutan. Si ${r_player} ang direktor.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Cartoon Chef",
+      "action": "${c_player}, imbentuhin at i-present ang pagkaing Omelet ng Kidlat at Bahaghari. Kumbinsihin ang lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lahat Mime",
+      "action": "Sa loob ng ${rand(15,30)} segundo puwede lang mag-usap ang lahat gamit kilos. Ang unang magsalita, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Ligaw na Hayop",
+      "action": "Gayahin ng bawat isa kung paano sila kung alagang ostrich sila. Si ${c_player} ang hurado.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Gulay",
+      "action": "${c_player}, kung gulay ka, ano ka at bakit? Puwedeng hindi sang-ayon si ${r_player} at magmungkahi ng iba.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Multa sa Pag-iisip",
+      "action": "${c_player}, kung may multa sa bawat iniisip, aling idea ang may utang na sa'yo ng isang milyon?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mukha ng Linggo",
+      "action": "${c_player}, kaninong mukha ang papalitan mo sa'yo sa loob ng isang linggo? Dapat aprubahan ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Palit-Katawan",
+      "action": "${c_player}, sinong manlalaro ang HINDI mo papalitan ng katawan at bakit?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sandwich ng Ugali",
+      "action": "${c_player}, gumawa ng sandwich mula sa mga personalidad ng mga player: sino ang tinapay, keso, sarsa at bakit.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Kaluluwang Meme",
+      "action": "${c_player}, anong meme ang pinaka-naglalarawan sa'yo? Puwedeng hindi sumang-ayon si ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw ng Kaluluwa",
+      "action": "${c_player}, kung sayaw ang kaluluwa mo, anong sayaw iyon?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Presidenteng Penguin",
+      "action": "${c_player}, paano magbabago ang bansa kung pinamumunuan ito ng penguin na boses ni ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kabaliwang Holiday",
+      "action": "${c_player}, mag-imbento ng sobrang weird na holiday na gusto mong gawing opisyal.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Walang Kwentang Pili",
+      "action": "${c_player}, pumili: mawala ang ilong mo habambuhay o habang-buhay kang magsasalita gamit boses ni ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sabay-sabay na Epic Fail",
+      "action": "Bawat isa magsasabi ng ginawa nila na agad nilang pinagsisihan. Pipili si ${r_player} ng panalo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 40
+    },
+    {
+      "title": "Pambarkadang Banana",
+      "action": "Salitan ang mga manlalaro sa pagdugtong sa pariralang: Kung saging ako... Ang magkamali, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Baliw na Batas",
+      "action": "${c_player}, gumawa ng bagong absurd na batas na iiral lang sa kwartong ito.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Opisyal na Kulay ng Araw",
+      "action": "${c_player}, pumili ng kulay ng araw at ipaliwanag kung bakit dapat sumunod ang lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spirit Animal",
+      "action": "${c_player}, pumili ng hayop na magiging spirit animal ni ${r_player} at ipaliwanag kung bakit.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Trabahong Panaginip",
+      "action": "${c_player}, ano ang trabaho mo kung lahat ng propesyon ay nakabase sa panaginip?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hatol ng Grupo",
+      "action": "Lahat magdedesisyon kung anong papel ang gagampanan ni ${c_player} sa post-apocalypse. Puwede siyang tumutol — pero risk uminom.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Buhay na Pangalan",
+      "action": "${c_player}, kung ang pangalan mo ay tunay na sumasalamin sa'yo, ano ito? Dapat kasama ang ${r_letter}.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sabay-sabay na Reboot",
+      "action": "Sabay-sabay magsasabi ang lahat ng tig-iisang salita para bumuo ng pangungusap. Bawal ulitin. Magkamali — inom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Isang Araw Bilang Iba",
+      "action": "${c_player}, pumili ng kahit sinong player. Ilarawan kung paano mo gugugulin ang isang araw sa katawan nila.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Buhay-Bagay",
+      "action": "${c_player}, kung magiging gamit ka sa bahay, ano ka at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kakaibang Alaga",
+      "action": "${c_player}, anong pinaka-weird na hayop ang gusto mong alagaan at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Time Travel",
+      "action": "${c_player}, sa anong panahon ka pupunta at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Superpower",
+      "action": "${c_player}, anong superpower ang pipiliin mo kung maaari?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sikat sa Isang Araw",
+      "action": "${c_player}, aling celebrity ang gusto mong maging sa loob ng isang araw at ano ang gagawin mo?",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Buhay-Cartoon",
+      "action": "${c_player}, aling cartoon character ang gusto mong maging at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Araw na Invisible Ka",
+      "action": "${c_player}, ano ang unang gagawin mo kung invisible ka sa loob ng isang araw?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakabet na Holiday",
+      "action": "${c_player}, kung makakagawa ka ng bagong holiday, ano ito?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tatlong Hiling",
+      "action": "${c_player}, isipin mong nakahuli ka ng gintong isda. Anong tatlong hiling ang ibibigay mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Disyertong Isla",
+      "action": "${c_player}, anong tatlong bagay ang dadalhin mo sa isang disyertong isla?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tagong Talento",
+      "action": "Bawat isa magbabahagi ng tagong talento. Ang tatanggi, iinom.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Kakaibang Pagkain",
+      "action": "Salitan na sabihin ang pinaka-weird na nakain ninyo. Kung hindi makaalala, inom.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Kakaibang Propesyon",
+      "action": "${c_player}, anong pinaka-ibang propesyon ang naiisip mo at gusto mong subukan?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Buhay-Hayop",
+      "action": "${c_player}, anong hayop ang gusto mong maging sa isang araw at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Baliw na Sport",
+      "action": "${c_player}, mag-imbento ng pinaka-ridiculous na sport na kaya mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pangarap Bilang Bata",
+      "action": "${c_player}, ano ang pangarap mong trabaho noong bata ka at bakit hindi nangyari?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lakbay-Barkada",
+      "action": "Lahat magmumungkahi ng isang lugar para sa group trip. Pipili si ${r_player} ng pinaka-nakakatawa.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Bahay ng Panaginip",
+      "action": "${c_player}, ilarawan ang ideal mong bahay. Ano ang kakaiba kumpara sa ordinaryo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Walang Kwentang Bili",
+      "action": "Bawat isa magbabanggit ng pinaka-walang kwentang bagay na nabili nila. Tatanggi — inom.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Isang Araw na Presidente",
+      "action": "${c_player}, ilarawan ang araw mo bilang presidente ng bansa.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Statue of Liberty",
+      "action": "${c_player}, mag-freeze sa pose ng Statue of Liberty at manatili ng ${rand(15,25)} segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Sapilitang Dancer",
+      "action": "${c_player}, sumayaw ng maikling nakakatawang sayaw na iimbentuhin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lakad-Penguin",
+      "action": "${c_player}, maglakad sa paligid ng kwarto na parang penguin nang ${rand(2,4)} ikot.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Balancing Act",
+      "action": "${c_player}, subukang magbalanse ng kahit anong bagay sa ulo mo sa loob ng ${rand(10,20)} segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Takbong Walang Galaw",
+      "action": "${c_player}, magpanggap na tumatakbo palayo sa pulutong ng bubuyog sa loob ng ${rand(15,20)} segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Finger Gymnastics",
+      "action": "${r_player}, magpakita ng nakakatawang ehersisyo sa daliri na dapat gayahin ng lahat.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Air Guitar",
+      "action": "${c_player}, tumugtog ng invisible na gitara sa kantang hina-hum ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Invisible na Luksong-Lubid",
+      "action": "${c_player}, tumalon sa invisible na lubid ng ${rand(10,15)} beses.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Yoga Style",
+      "action": "${c_player}, gumawa ng mahirap at nakakatawang yoga pose na papangalanan ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sayaw-Robot",
+      "action": "${c_player}, sumayaw na parang robot sa club.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Space Walk",
+      "action": "Gayahin ng lahat ang paglakad sa zero gravity sa loob ng ${rand(10,20)} segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pose-Eroplano",
+      "action": "${c_player}, mag-pose na parang eroplano na naka-balanse sa isang paa sa loob ng ${rand(10,15)} segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Laban sa Invisible",
+      "action": "${c_player}, gumanap ng maikling laban laban sa imahinaryong kalaban.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Masayang Warm-up",
+      "action": "${r_player}, mag-lead ng maikli at nakakatawang warm-up para sa lahat.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Moon Walk",
+      "action": "${c_player}, dahan-dahang maglakad sa kwarto na parang nasa Buwan.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Kantang Balanseng",
+      "action": "${c_player}, kumanta ng maikling kanta habang nakatayo sa isang paa.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Shadow Boxing",
+      "action": "${c_player}, gumanap ng mabilis na laban sa imahinaryong kalaban.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Team Eroplano",
+      "action": "Lahat pumila bilang isang eroplano at umiikot sa kwarto na pinangungunahan ni ${r_player}.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Invisible Volleyball",
+      "action": "${c_player}, maglaro ng maikling laban ng invisible volleyball laban kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sumasayaw na Hayop",
+      "action": "${c_player}, sumayaw na parang hayop na pipiliin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Tindero ng Hangin",
+      "action": "${c_player}, ibenta nang kumbinsido ang hangin sa ibang manlalaro sa loob ng ${rand(10,20)} segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Balita Tungkol sa Wala",
+      "action": "${c_player}, magbasa ng sobrang seryosong balita tungkol sa isang walang kuwentang pangyayari.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Kakaibang Tour",
+      "action": "${c_player}, magbigay ng maikling tour sa kwarto na parang nasa museo kayo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Ad ng Inip",
+      "action": "${c_player}, gumawa ng advertising slogan para sa inip para gustuhin itong bilhin ng mga tao.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sports Commentator",
+      "action": "${c_player}, i-commentary ang kahit anong kilos ni ${r_player} na parang sports match.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Pelikula sa 15 Segundo",
+      "action": "${c_player}, ikuwento ang kahit anong sikat na pelikula sa loob ng 15 segundo. Huhulaan ng iba.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Biglaang Tula",
+      "action": "${c_player}, gumawa ng maikling apat-na-linyang tula tungkol kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Baliw na Interview",
+      "action": "${c_player}, i-interviewin si ${r_player} na parang sikat na eksperto siya sa katamaran.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 25
+    },
+    {
+      "title": "Pambarkadang Fairy Tale",
+      "action": "Salitan ang mga manlalaro sa pagsasabi ng isang pangungusap para gumawa ng nakakatawang fairy tale. Magkamali — inom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Lecture Tungkol sa Wala",
+      "action": "${c_player}, magbigay ng scientific lecture kung bakit nakakabuti ang walang ginagawa.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "One-Man Show",
+      "action": "${c_player}, mag-stage ng mini-play na ikaw lang ang lahat ng karakter.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Team Commercial",
+      "action": "Sabay-sabay na mag-imbento ang lahat ng commercial para sa isang imahinaryong produkto.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Imbentor ng Kahangalan",
+      "action": "${c_player}, mag-imbento at mag-present ng nakakatawang imbensyon na magpapabuti raw sa buhay ng mga tao.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Horoscope ni ${c_player}",
+      "action": "${c_player}, hulaan ang araw ni ${r_player} na parang professional astrologer ka.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weather Reporter",
+      "action": "${c_player}, ibigay ang forecast ng panahon bukas para sa kwartong ito.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Group Rap",
+      "action": "Salitan ang mga manlalaro sa pagbuo ng maikling rap tungkol sa kasalukuyang laro.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Kumbinsidong Kasinungalingan",
+      "action": "${c_player}, magkuwento ng maikling istorya sa buhay mo. Huhulaan ng iba kung totoo o hindi.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    },
+    {
+      "title": "Eksperto sa Kakaibahan",
+      "action": "${c_player}, ipaliwanag kung paano magiging useful ang sobrang walang kuwentang bagay na ibibigay ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Orkestrang Barkada",
+      "action": "Gayahin ng lahat ang isang orchestra gamit lang kamay at boses. Si ${r_player} ang conductor.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 30
+    },
+    {
+      "title": "Manual ng Tao",
+      "action": "${c_player}, gumawa ng instructions kung paano i-operate ang isang tao na parang gamit sa bahay.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 25
+    }
+  ]
+}

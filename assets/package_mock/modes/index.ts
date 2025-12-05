@@ -25,6 +25,16 @@ import SnackAttactEn from './11_Snack_Attack_Challenge/en.json';
 import NeverHaveEn from './12_Never_Have_I_Ever/en.json';
 import { LANGUAGE, Package } from '@/src/shared/types/globalTypes';
 
+import freeModeDe from './1_free_mode/de.json';
+
+import freeModeFr from './1_free_mode/fr.json';
+
+import freeModeEs from './1_free_mode/es.json';
+
+import freeModePl from './1_free_mode/pl.json';
+
+import freeModeFil from './1_free_mode/fil.json';
+
 export const modesRu = [
   freeModeRu,
   flirtyDuoRu,
@@ -55,9 +65,24 @@ export const modesEn = [
   NeverHaveEn,
 ];
 
+export const modesDe = [freeModeDe];
+
+export const modesFr = [freeModeFr];
+
+export const modesEs = [freeModeEs];
+
+export const modesPl = [freeModePl];
+
+export const modesFil = [freeModeFil];
+
 type TModes = Record<LANGUAGE, Package[]>;
 
 export const modes: TModes = {
   ru: modesRu as Package[],
   en: modesEn as Package[],
+  de: modesDe as Package[],
+  fr: modesFr as Package[],
+  es: modesEs as Package[],
+  pl: modesPl as Package[],
+  fil: modesFil as Package[],
 };
