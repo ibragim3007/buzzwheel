@@ -1,0 +1,102 @@
+{
+  "homepage": {
+    "need-at-least-players": "Wymaganych jest co najmniej dwóch graczy",
+    "increase-in-full-access": "Zwiększ ten limit dzięki Full Access.",
+    "limit_players": "Maksymalnie {{ max_players }} graczy",
+    "players-length-players": "{{ amount }} graczy",
+    "start-game": "Rozpocznij grę",
+    "input-field-for-player-name": "Imię gracza",
+    "add": "Dodaj",
+    "name-is-required": "Imię jest wymagane",
+    "enter-player-name": "Wpisz imię gracza",
+    "max-players-reached": "Limit {{ max_players }} graczy został osiągnięty",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} graczy",
+    "no-players-placeholder": "Nie ma jeszcze żadnych graczy"
+  },
+  "packagePage": {
+    "pick-your-modes": "Wybierz swoje tryby!",
+    "continue": "Kontynuuj",
+    "for-tow-only": "Dla dwóch graczy"
+  },
+  "paywall": {
+    "error-to-load-product": "Błąd ładowania produktu",
+    "day-trial-then": "3-dniowy okres próbny, potem {{ price }} tygodniowo",
+    "open-modes": "Odblokuj tryby",
+    "vip_status_message": "Już <bold><accent>{{count}}</accent></bold> użytkowników cieszy się statusem VIP — dołącz do nich!",
+    "button-text-play-for-free": "Graj za darmo",
+    "terms": "Warunki korzystania",
+    "restore": "Przywróć zakup",
+    "privacy": "Polityka prywatności",
+    "unlock-all-modes": "Odblokuj wszystkie tryby",
+    "cancel-any-time": "Anuluj w dowolnym momencie",
+    "unforgettable-emotions": "Niezapomniane wrażenia",
+    "alread-sub-message": "Masz już aktywną subskrypcję. Dziękujemy za wsparcie!",
+    "go-back": "Wróć"
+  },
+  "modePage": {
+    "game-mode": "Tryb gry",
+    "description": "Wybierz, jak chcesz spędzić wieczór",
+    "start-button": "Rozpocznij grę",
+    "please-select-a-game-mode": "Wybierz tryb gry",
+    "need-pick-mode-modal-desck": "Przed rozpoczęciem gry musisz wybrać tryb.",
+    "easy-mode": "Łatwy tryb",
+    "easy-mode-description": "Na sucho i bez konsekwencji — czysta zabawa, żadnych kar.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "Pomyłka w swojej kolejce? Na podłogę i kilka pompek.",
+    "sip-mode": "Łyk albo przekąska",
+    "sip-mode-description": "Nie wyszło? W ramach kary wypij łyk wody albo zjedz coś na szybko.",
+    "warning": "Informacja dotycząca bezpieczeństwa",
+    "warning-description": "Ten tryb może przydzielać lekkie kary fizyczne lub towarzyskie (np. pompki albo łyk soku). Grajcie odpowiedzialnie i pomijajcie każde zadanie, które uznacie za niebezpieczne lub niekomfortowe."
+  },
+  "gamePage": {
+    "modal-penalty-title": "Zadanie karne",
+    "penalty-modal-subtext": "Na pewno chcesz to wybrać?",
+    "modal-active-button": "{{ number }} kar",
+    "modal-cancel-button": "Anuluj",
+    "roulette": {
+      "task-for": "Zadanie dla",
+      "spin-button": "Zakręć kołem",
+      "all": "Wszyscy",
+      "task-for-all": "Zadanie dla wszystkich!"
+    },
+    "done-button": "Gotowe",
+    "penalty-button": "Kara",
+    "push-ups": "pompki",
+    "squats": "przysiady",
+    "jumps": "skoki",
+    "sip": "łyk",
+    "sips": "łyki"
+  },
+  "settings": {
+    "token-copied": "Token skopiowano do schowka",
+    "no-token-available": "Brak dostępnego tokena",
+    "title": "Ustawienia",
+    "disable-action-repeats": "Wyłącz powtarzające się akcje",
+    "vibration": "Wibracje",
+    "write-review": "Napisz opinię",
+    "feedback-subtext": "Twoja opinia jest dla nas ważna!",
+    "rate-us-title": "Oceń nas",
+    "privacy": "Polityka prywatności",
+    "copy-token": "Kopiuj token",
+    "feedback-title": "Przekaż opinię",
+    "legal": "Informacje prawne",
+    "language": "Język"
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "ok": "OK",
+    "yes": "Tak",
+    "no": "Nie",
+    "close": "Zamknij",
+    "continue": "Kontynuuj",
+    "done": "Gotowe",
+    "next": "Dalej",
+    "back": "Wstecz",
+    "select": "Wybierz",
+    "loading": "Ładowanie...",
+    "error": {
+      "generic": "Wystąpił błąd. Spróbuj ponownie później.",
+      "network": "Błąd sieci. Sprawdź swoje połączenie."
+    }
+  }
+}

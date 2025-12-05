@@ -1,0 +1,102 @@
+{
+  "homepage": {
+    "need-at-least-players": "Mindestens 2 Spieler sind erforderlich",
+    "increase-in-full-access": "Mit Full Access kannst du dieses Limit erhöhen.",
+    "limit_players": "Maximal {{ max_players }} Spieler",
+    "players-length-players": "{{ amount }} Spieler",
+    "start-game": "Spiel starten",
+    "input-field-for-player-name": "Spielername",
+    "add": "Hinzufügen",
+    "name-is-required": "Name ist erforderlich",
+    "enter-player-name": "Spielernamen eingeben",
+    "max-players-reached": "Du hast das Limit von {{ max_players }} Spielern erreicht",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} Spieler",
+    "no-players-placeholder": "Es gibt noch keine Spieler"
+  },
+  "packagePage": {
+    "pick-your-modes": "Wähle deine Modi!",
+    "continue": "Weiter",
+    "for-tow-only": "Für zwei Spieler"
+  },
+  "paywall": {
+    "error-to-load-product": "Fehler beim Laden des Produkts",
+    "day-trial-then": "3-tägige Testphase, danach {{ price }} pro Woche",
+    "open-modes": "Modi freischalten",
+    "vip_status_message": "Bereits <bold><accent>{{count}}</accent></bold> Nutzer genießen den VIP-Status – schließe dich ihnen an!",
+    "button-text-play-for-free": "Kostenlos spielen",
+    "terms": "Nutzungsbedingungen",
+    "restore": "Kauf wiederherstellen",
+    "privacy": "Datenschutzerklärung",
+    "unlock-all-modes": "Alle Modi freischalten",
+    "cancel-any-time": "Jederzeit kündbar",
+    "unforgettable-emotions": "Unvergessliche Erlebnisse",
+    "alread-sub-message": "Du hast bereits ein aktives Abonnement. Vielen Dank für deine Unterstützung!",
+    "go-back": "Zurück"
+  },
+  "modePage": {
+    "game-mode": "Spielmodus",
+    "description": "Wähle, wie du den Abend verbringen möchtest",
+    "start-button": "Spiel starten",
+    "please-select-a-game-mode": "Bitte wähle einen Spielmodus aus",
+    "need-pick-mode-modal-desck": "Du musst einen Spielmodus auswählen, bevor das Spiel startet.",
+    "easy-mode": "Einfacher Modus",
+    "easy-mode-description": "Bleib trocken und ohne Konsequenzen – nur reiner Spaß, keine Strafen.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "Runde vergeigt? Ab auf den Boden und ein paar Liegestütze machen.",
+    "sip-mode": "Sip or Snack",
+    "sip-mode-description": "Daneben gelegen? Als Strafe trinkst du Wasser oder isst schnell etwas.",
+    "warning": "Sicherheitshinweis",
+    "warning-description": "Dieser Modus kann leichte körperliche oder soziale Strafen enthalten (z. B. Liegestütze oder einen Schluck Saft). Spielt verantwortungsbewusst und überspringt jede Aufgabe, die euch unsicher oder unangenehm erscheint."
+  },
+  "gamePage": {
+    "modal-penalty-title": "Strafaufgabe",
+    "penalty-modal-subtext": "Bist du sicher, dass du das wählen möchtest?",
+    "modal-active-button": "{{ number }} Strafen",
+    "modal-cancel-button": "Abbrechen",
+    "roulette": {
+      "task-for": "Aufgabe für",
+      "spin-button": "Rad drehen",
+      "all": "Alle",
+      "task-for-all": "Eine Aufgabe für alle!"
+    },
+    "done-button": "Fertig",
+    "penalty-button": "Strafe",
+    "push-ups": "Liegestütze",
+    "squats": "Kniebeugen",
+    "jumps": "Sprünge",
+    "sip": "Schluck",
+    "sips": "Schlucke"
+  },
+  "settings": {
+    "token-copied": "Token in die Zwischenablage kopiert",
+    "no-token-available": "Kein Token verfügbar",
+    "title": "Einstellungen",
+    "disable-action-repeats": "Wiederholte Aktionen deaktivieren",
+    "vibration": "Vibration",
+    "write-review": "Bewertung schreiben",
+    "feedback-subtext": "Dein Feedback ist uns wichtig!",
+    "rate-us-title": "Bewerte uns",
+    "privacy": "Datenschutzerklärung",
+    "copy-token": "Token kopieren",
+    "feedback-title": "Feedback geben",
+    "legal": "Rechtliches",
+    "language": "Sprache"
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "ok": "OK",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen",
+    "continue": "Weiter",
+    "done": "Fertig",
+    "next": "Weiter",
+    "back": "Zurück",
+    "select": "Auswählen",
+    "loading": "Laden...",
+    "error": {
+      "generic": "Es ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.",
+      "network": "Netzwerkfehler. Bitte überprüfe deine Verbindung."
+    }
+  }
+}

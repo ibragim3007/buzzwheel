@@ -1,0 +1,102 @@
+{
+  "homepage": {
+    "need-at-least-players": "Kailangan ng hindi bababa sa 2 manlalaro",
+    "increase-in-full-access": "Palakihin ang limit na ito gamit ang Full Access.",
+    "limit_players": "Pinakamataas na {{ max_players }} manlalaro",
+    "players-length-players": "{{ amount }} manlalaro",
+    "start-game": "Simulan ang laro",
+    "input-field-for-player-name": "Pangalan ng manlalaro",
+    "add": "Idagdag",
+    "name-is-required": "Kinakailangan ang pangalan",
+    "enter-player-name": "Ilagay ang pangalan ng manlalaro",
+    "max-players-reached": "Naabot mo na ang limit na {{ max_players }} manlalaro",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} manlalaro",
+    "no-players-placeholder": "Wala pang mga manlalaro"
+  },
+  "packagePage": {
+    "pick-your-modes": "Pumili ng mga mode mo!",
+    "continue": "Magpatuloy",
+    "for-tow-only": "Para sa dalawang manlalaro"
+  },
+  "paywall": {
+    "error-to-load-product": "Nagka-error sa pag-load ng produkto",
+    "day-trial-then": "3-araw na libreng pagsubok, pagkatapos ay {{ price }} bawat linggo",
+    "open-modes": "I-unlock ang mga mode",
+    "vip_status_message": "Mayroon nang <bold><accent>{{count}}</accent></bold> na user na enjoy ang VIP status — sumama ka na!",
+    "button-text-play-for-free": "Maglaro nang libre",
+    "terms": "Mga Tuntunin ng Paggamit",
+    "restore": "Ibalik ang binili",
+    "privacy": "Patakaran sa Privacy",
+    "unlock-all-modes": "I-unlock ang lahat ng mode",
+    "cancel-any-time": "Maaaring magkansela kahit kailan",
+    "unforgettable-emotions": "Hindi malilimutang karanasan",
+    "alread-sub-message": "May aktibong subscription ka na. Salamat sa suporta!",
+    "go-back": "Bumalik"
+  },
+  "modePage": {
+    "game-mode": "Mode ng laro",
+    "description": "Pumili kung paano mo gustong gugulin ang gabi",
+    "start-button": "Simulan ang laro",
+    "please-select-a-game-mode": "Pumili muna ng game mode",
+    "need-pick-mode-modal-desck": "Kailangan mong pumili ng game mode bago simulan ang laro.",
+    "easy-mode": "Madaling mode",
+    "easy-mode-description": "Walang basa at walang consequence — purong saya lang, walang parusa.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "Nagkamali sa turn? Humiga sa sahig at gumawa ng ilang push-up.",
+    "sip-mode": "Sip o Snack",
+    "sip-mode-description": "Sumablay? Parusa: uminom ng tubig o kumain ng mabilisang snack.",
+    "warning": "Babala sa kaligtasan",
+    "warning-description": "Maaaring magbigay ang mode na ito ng magaang pisikal o sosyal na parusa (hal. push-up o lagok ng juice). Maglaro nang responsable at laktawan ang anumang task na tingin ninyo ay delikado o hindi komportable."
+  },
+  "gamePage": {
+    "modal-penalty-title": "Parusang gawain",
+    "penalty-modal-subtext": "Sigurado ka bang ito ang gusto mong piliin?",
+    "modal-active-button": "{{ number }} parusa",
+    "modal-cancel-button": "Kanselahin",
+    "roulette": {
+      "task-for": "Gawain para kay",
+      "spin-button": "Paikutin ang roleta",
+      "all": "Lahat",
+      "task-for-all": "Gawain para sa lahat!"
+    },
+    "done-button": "Tapos na",
+    "penalty-button": "Parusa",
+    "push-ups": "push-up",
+    "squats": "squat",
+    "jumps": "talon",
+    "sip": "lagok",
+    "sips": "mga lagok"
+  },
+  "settings": {
+    "token-copied": "Nakopya ang token sa clipboard",
+    "no-token-available": "Walang available na token",
+    "title": "Mga setting",
+    "disable-action-repeats": "I-disable ang paulit-ulit na aksyon",
+    "vibration": "Vibration",
+    "write-review": "Sumulat ng review",
+    "feedback-subtext": "Mahalaga sa amin ang feedback mo!",
+    "rate-us-title": "I-rate kami",
+    "privacy": "Patakaran sa Privacy",
+    "copy-token": "Kopyahin ang token",
+    "feedback-title": "Magbigay ng feedback",
+    "legal": "Legal",
+    "language": "Wika"
+  },
+  "common": {
+    "cancel": "Kanselahin",
+    "ok": "OK",
+    "yes": "Oo",
+    "no": "Hindi",
+    "close": "Isara",
+    "continue": "Magpatuloy",
+    "done": "Tapos na",
+    "next": "Susunod",
+    "back": "Bumalik",
+    "select": "Pumili",
+    "loading": "Naglo-load...",
+    "error": {
+      "generic": "May nangyaring error. Pakisubukan ulit mamaya.",
+      "network": "Error sa network. Pakisuri ang iyong koneksyon."
+    }
+  }
+}

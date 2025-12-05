@@ -1,0 +1,102 @@
+{
+  "homepage": {
+    "need-at-least-players": "Se requieren al menos 2 jugadores",
+    "increase-in-full-access": "Aumenta este límite con Full Access.",
+    "limit_players": "Máximo {{ max_players }} jugadores",
+    "players-length-players": "{{ amount }} jugadores",
+    "start-game": "Iniciar juego",
+    "input-field-for-player-name": "Nombre del jugador",
+    "add": "Añadir",
+    "name-is-required": "El nombre es obligatorio",
+    "enter-player-name": "Introduce el nombre del jugador",
+    "max-players-reached": "Has alcanzado el límite de {{ max_players }} jugadores",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} jugadores",
+    "no-players-placeholder": "Todavía no hay jugadores"
+  },
+  "packagePage": {
+    "pick-your-modes": "¡Elige tus modos!",
+    "continue": "Continuar",
+    "for-tow-only": "Solo para dos jugadores"
+  },
+  "paywall": {
+    "error-to-load-product": "Error al cargar el producto",
+    "day-trial-then": "Prueba de 3 días, luego {{ price }} por semana",
+    "open-modes": "Desbloquear modos",
+    "vip_status_message": "Ya hay <bold><accent>{{count}}</accent></bold> usuarios disfrutando del estado VIP — ¡únete a ellos!",
+    "button-text-play-for-free": "Jugar gratis",
+    "terms": "Términos de uso",
+    "restore": "Restaurar compra",
+    "privacy": "Política de privacidad",
+    "unlock-all-modes": "Desbloquear todos los modos",
+    "cancel-any-time": "Cancela en cualquier momento",
+    "unforgettable-emotions": "Emociones inolvidables",
+    "alread-sub-message": "Ya tienes una suscripción activa. ¡Gracias por tu apoyo!",
+    "go-back": "Volver"
+  },
+  "modePage": {
+    "game-mode": "Modo de juego",
+    "description": "Elige cómo quieres pasar la noche",
+    "start-button": "Iniciar juego",
+    "please-select-a-game-mode": "Por favor, selecciona un modo de juego",
+    "need-pick-mode-modal-desck": "Debes seleccionar un modo de juego antes de empezar la partida.",
+    "easy-mode": "Modo fácil",
+    "easy-mode-description": "Sin mojarte ni consecuencias: pura diversión, sin castigos.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "¿Fallaste tu turno? Al suelo y haz unas flexiones.",
+    "sip-mode": "Sip o Snack",
+    "sip-mode-description": "¿La has liado? Como castigo, bebe agua o toma un bocado rápido.",
+    "warning": "Aviso de seguridad",
+    "warning-description": "Este modo puede incluir castigos físicos o sociales leves (por ejemplo, flexiones o un sorbo de zumo). Juega de forma responsable y salta cualquier tarea que te parezca peligrosa o incómoda."
+  },
+  "gamePage": {
+    "modal-penalty-title": "Tarea de penalización",
+    "penalty-modal-subtext": "¿Seguro que quieres elegir esto?",
+    "modal-active-button": "{{ number }} castigos",
+    "modal-cancel-button": "Cancelar",
+    "roulette": {
+      "task-for": "Tarea para",
+      "spin-button": "Girar la ruleta",
+      "all": "Todos",
+      "task-for-all": "¡Una tarea para todos!"
+    },
+    "done-button": "Listo",
+    "penalty-button": "Castigo",
+    "push-ups": "flexiones",
+    "squats": "sentadillas",
+    "jumps": "saltos",
+    "sip": "sorbo",
+    "sips": "sorbos"
+  },
+  "settings": {
+    "token-copied": "Token copiado al portapapeles",
+    "no-token-available": "No hay token disponible",
+    "title": "Ajustes",
+    "disable-action-repeats": "Desactivar acciones repetidas",
+    "vibration": "Vibración",
+    "write-review": "Escribir una reseña",
+    "feedback-subtext": "¡Tu opinión es importante para nosotros!",
+    "rate-us-title": "Valóranos",
+    "privacy": "Política de privacidad",
+    "copy-token": "Copiar token",
+    "feedback-title": "Envíanos tu opinión",
+    "legal": "Información legal",
+    "language": "Idioma"
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "ok": "OK",
+    "yes": "Sí",
+    "no": "No",
+    "close": "Cerrar",
+    "continue": "Continuar",
+    "done": "Listo",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "select": "Seleccionar",
+    "loading": "Cargando...",
+    "error": {
+      "generic": "Se ha producido un error. Inténtalo de nuevo más tarde.",
+      "network": "Error de red. Comprueba tu conexión."
+    }
+  }
+}

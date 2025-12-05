@@ -1,0 +1,102 @@
+{
+  "homepage": {
+    "need-at-least-players": "Au moins 2 joueurs sont nécessaires",
+    "increase-in-full-access": "Augmente cette limite avec le Full Access.",
+    "limit_players": "Maximum {{ max_players }} joueurs",
+    "players-length-players": "{{ amount }} joueurs",
+    "start-game": "Démarrer la partie",
+    "input-field-for-player-name": "Nom du joueur",
+    "add": "Ajouter",
+    "name-is-required": "Le nom est obligatoire",
+    "enter-player-name": "Saisis le nom du joueur",
+    "max-players-reached": "Tu as atteint la limite de {{ max_players }} joueurs",
+    "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} joueurs",
+    "no-players-placeholder": "Il n'y a pas encore de joueurs"
+  },
+  "packagePage": {
+    "pick-your-modes": "Choisis tes modes !",
+    "continue": "Continuer",
+    "for-tow-only": "Pour deux joueurs"
+  },
+  "paywall": {
+    "error-to-load-product": "Erreur lors du chargement du produit",
+    "day-trial-then": "Essai de 3 jours, puis {{ price }} par semaine",
+    "open-modes": "Débloquer les modes",
+    "vip_status_message": "Déjà <bold><accent>{{count}}</accent></bold> utilisateurs profitent du statut VIP — rejoins-les !",
+    "button-text-play-for-free": "Jouer gratuitement",
+    "terms": "Conditions d'utilisation",
+    "restore": "Restaurer l'achat",
+    "privacy": "Politique de confidentialité",
+    "unlock-all-modes": "Débloquer tous les modes",
+    "cancel-any-time": "Annulable à tout moment",
+    "unforgettable-emotions": "Des expériences inoubliables",
+    "alread-sub-message": "Tu as déjà un abonnement actif. Merci pour ton soutien !",
+    "go-back": "Retour"
+  },
+  "modePage": {
+    "game-mode": "Mode de jeu",
+    "description": "Choisis comment tu veux passer la soirée",
+    "start-button": "Démarrer la partie",
+    "please-select-a-game-mode": "Merci de sélectionner un mode de jeu",
+    "need-pick-mode-modal-desck": "Tu dois sélectionner un mode de jeu avant de lancer la partie.",
+    "easy-mode": "Mode facile",
+    "easy-mode-description": "Reste au sec et sans conséquences — juste du fun, aucune pénalité.",
+    "activity-mode": "Drop & Pump",
+    "activity-mode-description": "Tu rates un tour ? Au sol et enchaîne quelques pompes.",
+    "sip-mode": "Sip ou Snack",
+    "sip-mode-description": "Tu t'es planté ? En pénalité, bois une gorgée d'eau ou mange un petit truc.",
+    "warning": "Avertissement de sécurité",
+    "warning-description": "Ce mode peut inclure de légères pénalités physiques ou sociales (par ex. pompes ou gorgée de jus). Jouez de manière responsable et passez toute tâche que vous jugez dangereuse ou inconfortable."
+  },
+  "gamePage": {
+    "modal-penalty-title": "Tâche de pénalité",
+    "penalty-modal-subtext": "Tu es sûr de vouloir choisir ça ?",
+    "modal-active-button": "{{ number }} pénalités",
+    "modal-cancel-button": "Annuler",
+    "roulette": {
+      "task-for": "Tâche pour",
+      "spin-button": "Lancer la roue",
+      "all": "Tous",
+      "task-for-all": "Une tâche pour tout le monde !"
+    },
+    "done-button": "Terminé",
+    "penalty-button": "Pénalité",
+    "push-ups": "pompes",
+    "squats": "squats",
+    "jumps": "sauts",
+    "sip": "gorgée",
+    "sips": "gorgées"
+  },
+  "settings": {
+    "token-copied": "Jeton copié dans le presse-papiers",
+    "no-token-available": "Aucun jeton disponible",
+    "title": "Paramètres",
+    "disable-action-repeats": "Désactiver la répétition des actions",
+    "vibration": "Vibration",
+    "write-review": "Écrire un avis",
+    "feedback-subtext": "Ton avis est important pour nous !",
+    "rate-us-title": "Note-nous",
+    "privacy": "Politique de confidentialité",
+    "copy-token": "Copier le jeton",
+    "feedback-title": "Donne-nous ton avis",
+    "legal": "Mentions légales",
+    "language": "Langue"
+  },
+  "common": {
+    "cancel": "Annuler",
+    "ok": "OK",
+    "yes": "Oui",
+    "no": "Non",
+    "close": "Fermer",
+    "continue": "Continuer",
+    "done": "Terminé",
+    "next": "Suivant",
+    "back": "Retour",
+    "select": "Sélectionner",
+    "loading": "Chargement...",
+    "error": {
+      "generic": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+      "network": "Erreur réseau. Veuillez vérifier votre connexion."
+    }
+  }
+}
