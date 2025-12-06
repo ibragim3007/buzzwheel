@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Ich hab noch nie",
+  "packageType": "default",
+  "description": "Klassischer Modus, der die wildesten Geheimnisse der Spieler aufdeckt. Mal sehen, wer hier am erfahrensten ist!",
+  "imageEncoded": "d4ad2c82-fc72-43fa-965b-e75f76232504.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Geheime Party",
+      "action": "${c_player}, sag: \"Ich war noch nie auf einer Party, die ich am nächsten Morgen bereut habe.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kleiner Diebstahl",
+      "action": "${c_player}, sag: \"Ich hab noch nie Kleingeld aus einem Laden geklaut.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Spontaner Kuss",
+      "action": "${c_player}, sag: \"Ich hab noch nie aus einer Mutprobe jemanden Fremden geküsst.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Abgang ohne Erklärung",
+      "action": "${c_player}, sag: \"Ich hab noch nie eine Beziehung ohne Erklärung beendet.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Spontaner Trip",
+      "action": "${c_player}, sag: \"Ich hab noch nie spontan ein Ticket in eine andere Stadt gekauft.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schulschlägerei",
+      "action": "${c_player}, sag: \"Ich war noch nie in eine Schlägerei in der Schule verwickelt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verschlafene Prüfung",
+      "action": "${c_player}, sag: \"Ich hab noch nie eine wichtige Prüfung verschlafen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Verknallt in Lehrer",
+      "action": "${c_player}, sag: \"Ich war noch nie in einen Lehrer oder eine Lehrerin verknallt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tattoo im Suff",
+      "action": "${c_player}, sag: \"Ich hab mir noch nie betrunken ein Tattoo stechen lassen.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Endstation-Nickerchen",
+      "action": "${c_player}, sag: \"Ich bin noch nie an der Endhaltestelle in Bus oder Bahn aufgewacht.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Büro-Romanze",
+      "action": "${c_player}, sag: \"Ich hab noch nie eine Büro-Romanze angefangen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Falsche Bahn",
+      "action": "${c_player}, sag: \"Ich hab noch nie den falschen Bus oder Zug genommen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Reden im Schlaf",
+      "action": "${c_player}, sag: \"Ich hab noch nie vor anderen im Schlaf geredet.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Strip vorm Spiegel",
+      "action": "${c_player}, sag: \"Ich hab noch nie vor dem Spiegel einen Striptease getanzt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verpasster Flug",
+      "action": "${c_player}, sag: \"Ich hab noch nie einen Flug verpasst.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Krank gemacht",
+      "action": "${c_player}, sag: \"Ich hab mich noch nie krankgemeldet, obwohl ich nicht krank war.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nacht-Chat mit Ex",
+      "action": "${c_player}, sag: \"Ich hab noch nie meinem Ex spät nachts geschrieben.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nacktbaden",
+      "action": "${c_player}, sag: \"Ich bin noch nie nackt baden gegangen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ertrunkenes Handy",
+      "action": "${c_player}, sag: \"Ich hab mein Handy noch nie aus Versehen ins Wasser fallen lassen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheime Hausparty",
+      "action": "${c_player}, sag: \"Ich hab noch nie heimlich eine Hausparty gefeiert, ohne dass meine Eltern es wussten.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geschwänzter Schultag",
+      "action": "${c_player}, sag: \"Ich hab noch nie einen ganzen Schultag geschwänzt.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Falscher Empfänger",
+      "action": "${c_player}, sag: \"Ich hab noch nie eine intime Nachricht an die falsche Person geschickt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cringe-Video",
+      "action": "${c_player}, sag: \"Ich hab noch nie ein peinliches Video für Social Media gedreht.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Stalker-Account",
+      "action": "${c_player}, sag: \"Ich hab noch nie ein Fake-Profil erstellt, um jemanden auszuspionieren.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mitternachtssnack",
+      "action": "${c_player}, sag: \"Ich hab noch nie nachts vor dem Kühlschrank stehend gegessen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Blind Date",
+      "action": "${c_player}, sag: \"Ich war noch nie auf einem Blind Date.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nachbarn erschreckt",
+      "action": "${c_player}, sag: \"Ich hab noch nie meine Nachbarn mit komischen Geräuschen erschreckt.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hoher Einsatz",
+      "action": "${c_player}, sag: \"Ich hab noch nie beim Zocken eine große Summe Geld verloren.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kaputtgemacht & vertuscht",
+      "action": "${c_player}, sag: \"Ich hab noch nie etwas von jemandem kaputt gemacht und nichts gesagt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Flucht vor Security",
+      "action": "${c_player}, sag: \"Ich bin noch nie vor Security oder Polizei weggerannt.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mit Preisschild raus",
+      "action": "${c_player}, sag: \"Ich bin noch nie mit Preisschild an der Kleidung aus dem Haus gegangen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Insekten gegessen",
+      "action": "${c_player}, sag: \"Ich hab noch nie Insekten gegessen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bei Arbeit eingeschlafen",
+      "action": "${c_player}, sag: \"Ich bin noch nie bei der Arbeit oder in einer Vorlesung eingeschlafen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Verstecktes Tattoo",
+      "action": "${c_player}, sag: \"Ich hab noch nie ein Tattoo vor meinen Eltern versteckt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Seltsamer Fetisch",
+      "action": "${c_player}, sag: \"Ich hatte noch nie einen seltsamen Fetisch für Gegenstände.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Aus Versehen geliked",
+      "action": "${c_player}, sag: \"Ich hab noch nie aus Versehen ein Foto von meinem Ex geliked.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rache am Ex",
+      "action": "${c_player}, sag: \"Ich hab mich noch nie an einem Ex-Partner gerächt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ausreißer als Kind",
+      "action": "${c_player}, sag: \"Ich hab als Kind noch nie versucht, von zu Hause wegzulaufen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Krank gestellt",
+      "action": "${c_player}, sag: \"Ich hab noch nie Krankheit vorgespielt, um Pläne abzusagen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lehrer-Crush 2.0",
+      "action": "${c_player}, sag: \"Ich hab mich noch nie in meinen Lehrer oder meine Lehrerin verliebt.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lauscher",
+      "action": "${c_player}, sag: \"Ich hab noch nie absichtlich ein Gespräch mitangehört.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Falsches Auto",
+      "action": "${c_player}, sag: \"Ich bin noch nie aus Versehen in das falsche Auto eingestiegen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schwarzfahren",
+      "action": "${c_player}, sag: \"Ich bin noch nie schwarzgefahren.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Herzensbrecher",
+      "action": "${c_player}, sag: \"Ich hab noch nie mit Absicht jemandem das Herz gebrochen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Test geschwänzt",
+      "action": "${c_player}, sag: \"Ich hab noch nie einen Test geschwänzt.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hotelsouvenirs",
+      "action": "${c_player}, sag: \"Ich hab noch nie Dinge aus einem Hotelzimmer mitgenommen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Aufgewacht woanders",
+      "action": "${c_player}, sag: \"Ich bin noch nie bei einem Fremden aufgewacht, ohne zu wissen, wie ich dort gelandet bin.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie beim Fahren",
+      "action": "${c_player}, sag: \"Ich hab noch nie beim Fahren ein Selfie gemacht.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nacht-Fastfood",
+      "action": "${c_player}, sag: \"Ich hab noch nie nachts Fast Food gegessen, obwohl ich auf Diät war.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Falsches Alter",
+      "action": "${c_player}, sag: \"Ich hab noch nie über mein Alter gelogen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kino ohne Ticket",
+      "action": "${c_player}, sag: \"Ich bin noch nie ohne Ticket ins Kino geschlichen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Blackout auf der Bühne",
+      "action": "${c_player}, sag: \"Ich hab noch nie auf der Bühne meinen Text vergessen.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Erfundene Skills",
+      "action": "${c_player}, sag: \"Ich hab noch nie mit einer Fähigkeit geprahlt, die ich gar nicht habe.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mitbewohners Essen geklaut",
+      "action": "${c_player}, sag: \"Ich hab noch nie Essen aus dem Kühlschrank meines Mitbewohners geklaut.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimer Alias",
+      "action": "Ich hab noch nie einen Account auf den Namen von jemand anderem erstellt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ohne Plan abgehauen",
+      "action": "Ich bin noch nie ohne Geld oder Plan in eine andere Stadt aufgebrochen.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Anruf im Morgengrauen",
+      "action": "Ich hab noch nie meinen Ex im Morgengrauen angerufen.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Fake-Tattoo-Bluff",
+      "action": "Ich hab noch nie behauptet, ein Fake-Tattoo wäre echt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mutprobe gedrückt",
+      "action": "Ich hab noch nie eine Mutprobe abgelehnt und mich dann aus dem Staub gemacht.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimnis ausgeplaudert",
+      "action": "Ich hab noch nie ein Geheimnis verraten, das ich versprochen hatte zu behalten.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Öffentlicher Sturz",
+      "action": "Ich bin noch nie in der Öffentlichkeit hingefallen und hab so getan, als wäre es ein Tanzmove.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Unterschrift gefälscht",
+      "action": "Ich hab noch nie die Unterschrift meiner Eltern gefälscht.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Promi-DM",
+      "action": "Ich bin noch nie in die DMs eines Promis geslidet.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Mystery-Tickets",
+      "action": "Ich hab noch nie Konzerttickets gekauft, ohne zu wissen, wer überhaupt auftritt.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

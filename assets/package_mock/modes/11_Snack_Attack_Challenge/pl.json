@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Wyzwanie Przekąsek",
+  "packageType": "default",
+  "description": "Smaczne i szalone wyzwania z jedzeniem i piciem. Mieszaj, popijaj i eksperymentuj!",
+  "imageEncoded": "f4e6f25e-5e77-4d06-85b5-ec2ddfaff58f.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Ślepy tester smaku",
+      "action": "${c_player}, z zasłoniętymi oczami zjedz łyżkę tego, co poda ci ${r_player}, i zgadnij składnik.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Kanapka niespodzianka",
+      "action": "${c_player}, zrób kanapkę z trzech losowych rzeczy i zjedz ją.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pikantny strzał",
+      "action": "${c_player}, wypij łyk wody z szczyptą ostrej papryki. Bez grymasów!",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wspólna smarowanka",
+      "action": "Każdy smaruje chleb losowym sosem i je. Kto się skrzywi, pije.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Słony deser",
+      "action": "${c_player}, posól połowę ciastka i zjedz je w ciszy.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Koktajlowa ruletka",
+      "action": "${c_player}, zmieszaj dwa różne napoje wybrane przez ${r_player} i weź łyk.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chrupiące echo",
+      "action": "${c_player}, głośno chrup dowolną przekąskę i trzy razy powiedz „pycha”.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Serowy uśmiech",
+      "action": "${c_player}, ugryź kawałek sera tak, by wyglądał jak uśmiech, i pokaż go wszystkim.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lodówkowy miks",
+      "action": "${c_player}, zmieszaj trzy napoje z lodówki w jednej szklance i wypij duszkiem.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Każdy smakoszem",
+      "action": "Każdy zjada łyżkę ketchupu z majonezem. Kto odmówi, pije.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Owocowy rap",
+      "action": "${c_player}, owiń mandarynkę serwetką jak mikrofon i zarapuj krótki wers o jedzeniu.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Krytyk z widelcem",
+      "action": "${c_player}, udawaj, że oceniasz wykwintne danie, jedząc frytkę.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ogórkowe chichoty",
+      "action": "${c_player}, ugryź ogórka i śmiej się przez 10 sekund, nie przełykając.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Dziki toast",
+      "action": "${c_player}, wymyśl absurdalny toast o kefirze i powiedz go, wznosząc szklankę wody.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Czekolada + chipsy",
+      "action": "${c_player}, zjedz kawałek czekolady razem z chipsem na jeden kęs.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sommelierzy wody",
+      "action": "Wszyscy sączą wodę i opisują „posmak”. Kiepski opis → pijesz.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Klepnij owsiankę",
+      "action": "${c_player}, klepnij miskę owsianki (prawdziwej lub wyimaginowanej) i powiedz „arcydzieło”.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pikantne wyzwanie",
+      "action": "${c_player}, zjedz plasterek chili. Możesz popić dopiero po 30 s.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Kanapka przyjaźni",
+      "action": "Zróbcie wspólną kanapkę: każdy dodaje jeden składnik, potem jecie po kolei po gryzie.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Odwrócona rolka",
+      "action": "${c_player}, bez ryżu! Owiń kromkę chleba w nori i zjedz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pianowy wąs",
+      "action": "${c_player}, weź łyk gazowanego napoju i zrób zdjęcie swojego pianowego wąsa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sokowo-mleczny miks",
+      "action": "${c_player}, wymieszaj sok z odrobiną mleka, wypij i opisz smak jednym słowem.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Każdy barmanem",
+      "action": "Każdy podaje dziwny składnik koktajlu. ${r_player} miesza i pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Taniec z łyżką",
+      "action": "${c_player}, złap łyżkę między zęby i tańcz przez 15 sekund.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Szklanka na palcach",
+      "action": "${c_player}, wypij wodę, trzymając szklankę za sam dół dwoma palcami.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Jajeczne pytanie",
+      "action": "${c_player}, wypij surowe jajko albo weź dwa duże łyki swojego napoju.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Owocowe kółko",
+      "action": "Każdy bierze owoc i biega w kółko wokół stołu przez 10 sekund.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Cukrowy śnieg",
+      "action": "${c_player}, wsyp szczyptę cukru na język i powiedz „płatek śniegu”.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wąchacz przypraw",
+      "action": "${c_player}, po samym zapachu zgadnij przyprawę wybraną przez ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Super smoothie",
+      "action": "${c_player}, wymień 4 składniki idealnego smoothie. Za każdy brak → łyk.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Każdy szefem kuchni",
+      "action": "Wymyślcie danie z „tego, co jest pod ręką”. ${r_player} wybiera najlepsze; reszta pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Majonezowy twardziel",
+      "action": "${c_player}, zjedz łyżeczkę majonezu bez robienia min.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Głośne chrupanie",
+      "action": "${c_player}, chrup chipsa głośniej niż wszyscy przez 5 s. Za cicho? dodatkowy łyk.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Niesłodki deser",
+      "action": "${c_player}, posól dowolny deser i zjedz go.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Degustatorzy wody",
+      "action": "Opisz zwykłą wodę jak wytrawne wino. Najnudniejszy opis pije.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Cebulowy śmiałek",
+      "action": "${c_player}, ugryź surową cebulę. Odmówisz → dwa łyki.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Czekolada + sól",
+      "action": "${c_player}, zanurz kawałek czekolady w soli i zjedz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zjedz tęczę",
+      "action": "${c_player}, zjedz pięć produktów w różnych kolorach pod rząd.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Koktajl kumpli",
+      "action": "${c_player} i ${r_player} mieszają sobie nawzajem napój i zamieniają się.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Papryka + mleko",
+      "action": "${c_player}, popij kęs chili mlekiem i powiedz „bułka z masłem”.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sałatka bez rąk",
+      "action": "${c_player}, zjedz kawałek sałatki bez użycia rąk.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Każdy baristą",
+      "action": "Opisz idealny smak kawy. Najmniej kreatywna osoba pije.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Zupa-bajka",
+      "action": "${c_player}, opowiedz krótką bajkę o zupie, w której główną rolę gra ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Król burgerów",
+      "action": "${c_player}, odegraj reklamę hamburgera tak, żeby każdy go zapragnął.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wieża z jedzenia",
+      "action": "${c_player}, zbuduj wieżę z 6 grzanek. Zawali się → pijesz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Krytycy smakosze",
+      "action": "Oceń wodę w skali 1–10. Kto da 1 albo 10, pije.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Miód + cytryna",
+      "action": "${c_player}, zjedz łyżkę miodu i od razu ugryź cytrynę.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Paskowany drink",
+      "action": "${c_player}, ułóż trzy płyny warstwami w jednym drinku i wypij go.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Serowy test",
+      "action": "${c_player}, spróbuj w ciemno dwóch serów i zgadnij, który jest który.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Szamani lodów",
+      "action": "Wymyśl najbardziej szalony smak lodów, jaki byś spróbował(a). Zawahanie → pijesz.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}

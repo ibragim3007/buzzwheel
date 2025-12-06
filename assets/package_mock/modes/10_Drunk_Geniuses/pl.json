@@ -1,0 +1,307 @@
+{
+  "id": 10,
+  "name": "Mózgowcy",
+  "packageType": "default",
+  "description": "Alkoholowy quiz: każdy błąd przybliża cię do dna kieliszka. Sprawdźmy twoją wiedzę!",
+  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "isFree": false,
+  "dares": [
+    { "title": "Matma bez kalkulatora", "action": "${c_player}, ile to 17 × 8?", "type": "player", "alcohol": 1 },
+    { "title": "Quiz ze stolic", "action": "${c_player}, podaj stolicę Kanady.", "type": "player", "alcohol": 1 },
+    {
+      "title": "Flaga z liściem",
+      "action": "${c_player}, na fladze którego kraju jest liść klonu?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pierwszy w kosmosie",
+      "action": "${c_player}, kto był pierwszym człowiekiem w kosmosie?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Symbol chemiczny",
+      "action": "${c_player}, jaki jest symbol chemiczny złota?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kto to napisał?",
+      "action": "${c_player}, kto napisał powieść '1984'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Szybkie tłumaczenie",
+      "action": "${c_player}, przetłumacz słowo 'свобода' na angielski.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Miasto Beatlesów",
+      "action": "${c_player}, w jakim mieście powstał zespół The Beatles?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dokładny rok",
+      "action": "${c_player}, w którym roku rozpadł się ZSRR?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Czas połowy",
+      "action": "${c_player}, ile minut trwa jedna połowa meczu piłki nożnej?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Matematyczny blitz",
+      "action": "${c_player}, ile wynosi pierwiastek kwadratowy ze 144?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Grecki bóg wojny",
+      "action": "${c_player}, kto był bogiem wojny w mitologii greckiej?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Trzy planety",
+      "action": "${c_player}, wymień trzy planety Układu Słonecznego jedna po drugiej.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Doktor od Sherlocka",
+      "action": "${c_player}, jakie nazwisko nosi doktor z serii o Sherlocku Holmesie?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przywódca Francji 1804",
+      "action": "${c_player}, kto rządził Francją w 1804 roku?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Miasto nad Newą",
+      "action": "${c_player}, przez które miasto przepływa rzeka Newa?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Skala Richtera",
+      "action": "${c_player}, co mierzy skala Richtera?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rozszyfruj HTML",
+      "action": "${c_player}, co oznacza skrót HTML?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Skąd paella",
+      "action": "${c_player}, z jakiego kraju pochodzi danie 'paella'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Podchwytliwa stolica",
+      "action": "${c_player}, jaka jest stolica Nowej Zelandii?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wzór na wodę",
+      "action": "${c_player}, zapisz wzór chemiczny wody.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gwiazda 'Titanica'",
+      "action": "${c_player}, kto zagrał Jacka w filmie 'Titanic'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dzień Kobiet",
+      "action": "${c_player}, którego dnia obchodzony jest Międzynarodowy Dzień Kobiet?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nadgryzione jabłko",
+      "action": "${c_player}, której firmie logo przedstawia nadgryzione jabłko?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Prawa ruchu",
+      "action": "${c_player}, który naukowiec sformułował trzy prawa ruchu?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Alfabetyczny zwierzyniec",
+      "action": "Po kolei wymieniajcie zwierzęta w porządku alfabetycznym. Pomyłka — łyk!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sztafeta stolic",
+      "action": "Podawajcie na zmianę stolice świata. Powtórka — łyk!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Policz do dziesięciu",
+      "action": "Mówcie kolejno liczby 1-10, ale zamiast 5 klaszczcie. Błąd — pijesz.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Cytaty z filmów",
+      "action": "Wymieniajcie cytaty z filmów bez przerwy. Potknięcie — łyk.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Łańcuch piosenek",
+      "action": "Każdy podaje piosenkę zaczynającą się na ostatnią literę poprzedniej.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Maraton marek",
+      "action": "Wymieniajcie po kolei marki ubrań. Powtórka albo pauza — pijesz!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Kluby piłkarskie",
+      "action": "Wymieniajcie kolejno kluby piłkarskie. Pomyłka — pijesz.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Runda kolorów",
+      "action": "Szybko nazwij unikalny kolor. Powtórka — łyk.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Przysłowiowa układanka",
+      "action": "Jedna osoba zaczyna przysłowie, następna je kończy. Porażka — pijesz.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Języki świata",
+      "action": "Wymieniajcie języki dookoła koła. Zawahanie — pijesz.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Kolory flagi",
+      "action": "${c_player}, którego koloru NIE ma na fladze Francji?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Skąd espresso",
+      "action": "${c_player}, w jakim kraju powstało espresso?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bio-blitz",
+      "action": "${c_player}, ile zębów trzonowych ma dorosły człowiek?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Co to IPO",
+      "action": "${c_player}, co oznacza skrót 'IPO'?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Najczęściej tłumaczona książka",
+      "action": "${c_player}, która książka została przetłumaczona na najwięcej języków?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Promień Ziemi",
+      "action": "${c_player}, mniej więcej ile kilometrów wynosi promień Ziemi?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kod do Rosji",
+      "action": "${c_player}, jaki jest międzynarodowy numer kierunkowy do Rosji?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Patent na żarówkę",
+      "action": "${c_player}, kto opatentował pierwszą żarówkę elektryczną?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sprawdzian gramatyki",
+      "action": "${c_player}, jaką częścią mowy jest wyraz 'beautifully'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Serca ośmiornicy",
+      "action": "${c_player}, ile serc ma ośmiornica?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Łańcuch gwiazdozbiorów",
+      "action": "Wymieniajcie po kolei gwiazdozbiory. Zawahanie — łyk.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Alfabetyczne filmy",
+      "action": "Wymieniajcie filmy od A do Z. Potknięcie — pijesz.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Łańcuch części ciała",
+      "action": "Wymieniajcie części ciała człowieka. Powtórka — łyk.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Miasta w łańcuszku",
+      "action": "Każdy podaje miasto zaczynające się na ostatnią literę poprzedniego.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Finałowy blitz",
+      "action": "${c_player}, wymień 5 krajów europejskich w 20 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

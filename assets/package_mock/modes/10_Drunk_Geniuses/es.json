@@ -1,0 +1,307 @@
+{
+  "id": 10,
+  "name": "Brainiacs",
+  "packageType": "default",
+  "description": "Quiz alcohólico: cada respuesta incorrecta te acerca al fondo del vaso. ¡Pongamos a prueba tus conocimientos!",
+  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "isFree": false,
+  "dares": [
+    { "title": "Cálculo sin calculadora", "action": "${c_player}, ¿cuánto es 17 × 8?", "type": "player", "alcohol": 1 },
+    { "title": "Quiz de capitales", "action": "${c_player}, di la capital de Canadá.", "type": "player", "alcohol": 1 },
+    {
+      "title": "Adivina la bandera",
+      "action": "${c_player}, ¿de qué país es la bandera con una hoja de arce?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Primero en el espacio",
+      "action": "${c_player}, ¿quién fue el primer humano en el espacio?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Símbolo químico",
+      "action": "${c_player}, ¿cuál es el símbolo químico del oro?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "¿Quién lo escribió?",
+      "action": "${c_player}, ¿quién escribió la novela '1984'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Traducción exprés",
+      "action": "${c_player}, traduce la palabra 'свобода' al inglés.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cuna de los Beatles",
+      "action": "${c_player}, ¿en qué ciudad nacieron The Beatles?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Año exacto",
+      "action": "${c_player}, ¿en qué año se disolvió la URSS?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Crono deportivo",
+      "action": "${c_player}, ¿cuántos minutos dura una parte en un partido de fútbol?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ronda relámpago de mates",
+      "action": "${c_player}, ¿cuál es la raíz cuadrada de 144?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Dios griego de la guerra",
+      "action": "${c_player}, ¿quién era el dios de la guerra en la mitología griega?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Trío de planetas",
+      "action": "${c_player}, nombra tres planetas del sistema solar seguidos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Compañero literario",
+      "action": "${c_player}, ¿cuál es el apellido del doctor en la serie de Sherlock?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Líder francés en 1804",
+      "action": "${c_player}, ¿quién gobernaba Francia en 1804?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ciudad del río",
+      "action": "${c_player}, ¿por qué ciudad pasa el río Neva?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "¿Qué mide Richter?",
+      "action": "${c_player}, ¿qué mide la escala de Richter?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Descifra HTML",
+      "action": "${c_player}, ¿qué significan las siglas HTML?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Origen de la paella",
+      "action": "${c_player}, ¿de qué país proviene el plato 'paella'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Capital tramposa",
+      "action": "${c_player}, ¿cuál es la capital de Nueva Zelanda?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fórmula del agua",
+      "action": "${c_player}, escribe la fórmula química del agua.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Prota de Titanic",
+      "action": "${c_player}, ¿quién interpretó a Jack en 'Titanic'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Día de la Mujer",
+      "action": "${c_player}, ¿en qué fecha se celebra el Día Internacional de la Mujer?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Logo de la manzana mordida",
+      "action": "${c_player}, ¿de qué empresa es el logo de la manzana mordida?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Leyes del movimiento",
+      "action": "${c_player}, ¿qué científico formuló las tres leyes del movimiento?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Desfile alfabético de animales",
+      "action": "Vayan diciendo animales en orden alfabético. Error: sorbo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Relevo de capitales",
+      "action": "Digan capitales del mundo por turnos. Repetir: sorbo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Cuenta hasta diez",
+      "action": "Digan los números del 1 al 10 por turnos, pero aplaudan en vez de decir el 5. Error: trago.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Frases de cine",
+      "action": "Digan frases de películas sin parar. Fallo: sorbo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Cadena de canciones",
+      "action": "Cada uno dice una canción que empiece por la última letra de la anterior.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Maratón de marcas",
+      "action": "Digan marcas de ropa en sentido horario. Repetir o dudar: trago.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Clubs de fútbol",
+      "action": "Digan clubes de fútbol por turnos. Error: trago.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ronda de colores",
+      "action": "Nombra rápido un color que nadie haya dicho. Repetir: sorbo.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Refranes partidos",
+      "action": "Uno empieza un refrán, el siguiente lo termina. Fallo: trago.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Idiomas del mundo",
+      "action": "Digan idiomas en círculo. Dudar: trago.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Color de la bandera",
+      "action": "${c_player}, ¿qué color NO está en la bandera de Francia?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Origen del espresso",
+      "action": "${c_player}, ¿en qué país se originó el espresso?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ráfaga de biología",
+      "action": "${c_player}, ¿cuántas muelas tiene un adulto?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Significado de IPO",
+      "action": "${c_player}, ¿qué significan las siglas 'IPO'?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Libro más traducido",
+      "action": "${c_player}, ¿qué libro se ha traducido a más idiomas?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Radio de la Tierra",
+      "action": "${c_player}, ¿aproximadamente cuántos kilómetros tiene el radio de la Tierra?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Prefijo de Rusia",
+      "action": "${c_player}, ¿cuál es el prefijo telefónico internacional de Rusia?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Patente de la bombilla",
+      "action": "${c_player}, ¿quién patentó la primera bombilla incandescente?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chequeo gramatical",
+      "action": "${c_player}, ¿qué tipo de palabra es 'beautifully'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Corazones de pulpo",
+      "action": "${c_player}, ¿cuántos corazones tiene un pulpo?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Cadena de constelaciones",
+      "action": "Digan constelaciones por turnos. Dudar: sorbo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Reto de pelis A-Z",
+      "action": "Digan películas de la A a la Z. Fallo: trago.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Cadena de partes del cuerpo",
+      "action": "Digan partes del cuerpo humano. Repetir: sorbo.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Cadena de ciudades",
+      "action": "Cada uno dice una ciudad que empiece por la última letra de la anterior.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Ráfaga final",
+      "action": "${c_player}, nombra 5 países europeos en 20 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

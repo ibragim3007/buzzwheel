@@ -1,0 +1,307 @@
+{
+  "id": 10,
+  "name": "Les Cerveaux",
+  "packageType": "default",
+  "description": "Un quiz arrosé : chaque mauvaise réponse te rapproche du fond de ton verre. On teste tes connaissances !",
+  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Calcul sans calculatrice",
+      "action": "${c_player}, combien font 17 × 8 ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    { "title": "Quiz capitales", "action": "${c_player}, cite la capitale du Canada.", "type": "player", "alcohol": 1 },
+    {
+      "title": "Devine le drapeau",
+      "action": "${c_player}, le drapeau de quel pays a une feuille d'érable ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Premier dans l'espace",
+      "action": "${c_player}, qui a été le premier humain dans l'espace ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Symbole chimique",
+      "action": "${c_player}, quel est le symbole chimique de l'or ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Qui l'a écrit ?",
+      "action": "${c_player}, qui a écrit le roman « 1984 » ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Traduction express",
+      "action": "${c_player}, traduis le mot « свобода » en anglais.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ville des Beatles",
+      "action": "${c_player}, dans quelle ville sont nés les Beatles ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Année exacte",
+      "action": "${c_player}, en quelle année l'URSS a-t-elle été dissoute ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chrono foot",
+      "action": "${c_player}, une mi-temps de football dure combien de minutes ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Flash de maths",
+      "action": "${c_player}, quelle est la racine carrée de 144 ?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Dieu grec de la guerre",
+      "action": "${c_player}, qui est le dieu de la guerre dans la mythologie grecque ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Trio de planètes",
+      "action": "${c_player}, cite trois planètes du Système solaire à la suite.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Acolyte littéraire",
+      "action": "${c_player}, quel est le nom de famille du docteur dans la série Sherlock ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dirigeant français de 1804",
+      "action": "${c_player}, qui dirigeait la France en 1804 ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ville sur la Neva",
+      "action": "${c_player}, dans quelle ville coule le fleuve Neva ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Échelle de Richter",
+      "action": "${c_player}, que mesure l'échelle de Richter ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Décode HTML",
+      "action": "${c_player}, que signifie le sigle HTML ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Origine de la paella",
+      "action": "${c_player}, de quel pays vient le plat « paella » ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Capitale piège",
+      "action": "${c_player}, quelle est la capitale de la Nouvelle-Zélande ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Formule de l'eau",
+      "action": "${c_player}, écris la formule chimique de l'eau.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Star de Titanic",
+      "action": "${c_player}, qui joue Jack dans « Titanic » ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Journée des femmes",
+      "action": "${c_player}, à quelle date fête-t-on la Journée internationale des femmes ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Logo à la pomme croquée",
+      "action": "${c_player}, quelle marque a une pomme croquée comme logo ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lois du mouvement",
+      "action": "${c_player}, quel scientifique a formulé les trois lois du mouvement ?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Défilé d'animaux",
+      "action": "Tour de table : des animaux par ordre alphabétique. Erreur — gorgée !",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Relais des capitales",
+      "action": "À tour de rôle, citez des capitales du monde. Répétition — gorgée !",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Compter jusqu'à dix",
+      "action": "Dites les nombres de 1 à 10 à tour de rôle, mais tapez dans vos mains au lieu de dire 5. Erreur — buvez.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Répliques de films",
+      "action": "Enchaînez les répliques de films sans pause. Faux pas — gorgée.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Chaîne de chansons",
+      "action": "Chacun nomme une chanson qui commence par la dernière lettre de la précédente.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Marathon de marques",
+      "action": "Dans le sens des aiguilles d'une montre, citez des marques de vêtements. Répétition ou hésitation — buvez !",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Clubs de foot",
+      "action": "Citez des clubs de foot à tour de rôle. Erreur — buvez.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Tour de couleurs",
+      "action": "Nommez chacun une couleur différente le plus vite possible. Répétition — gorgée.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Proverbes à compléter",
+      "action": "L'un commence un proverbe, le suivant le termine. Raté — buvez.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Langues du monde",
+      "action": "Faites le tour en citant des langues. Hésitation — buvez.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Couleur du drapeau",
+      "action": "${c_player}, quelle couleur n'apparaît PAS sur le drapeau français ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Origine de l'espresso",
+      "action": "${c_player}, dans quel pays est né l'espresso ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Quiz bio flash",
+      "action": "${c_player}, combien de molaires a un adulte ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Signification de IPO",
+      "action": "${c_player}, que signifie le sigle « IPO » ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Livre le plus traduit",
+      "action": "${c_player}, quel livre a été traduit dans le plus grand nombre de langues ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rayon de la Terre",
+      "action": "${c_player}, à peu près combien de kilomètres mesure le rayon de la Terre ?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Indicatif de la Russie",
+      "action": "${c_player}, quel est l'indicatif téléphonique international de la Russie ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Brevet de l'ampoule",
+      "action": "${c_player}, qui a déposé le brevet de la première ampoule à incandescence ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Point de grammaire",
+      "action": "${c_player}, à quelle classe grammaticale appartient le mot « beautifully » ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cœurs de pieuvre",
+      "action": "${c_player}, combien de cœurs a une pieuvre ?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Chaîne de constellations",
+      "action": "Citez des constellations à tour de rôle. Hésitation — gorgée.",
+      "type": "all",
+      "alcohol": 2
+    },
+    { "title": "Films de A à Z", "action": "Nommez des films de A à Z. Faute — buvez.", "type": "all", "alcohol": 2 },
+    {
+      "title": "Chaîne parties du corps",
+      "action": "Citez des parties du corps humain. Répétition — gorgée.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Chaîne de villes",
+      "action": "Chacun nomme une ville qui commence par la dernière lettre de la précédente.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Blitz final",
+      "action": "${c_player}, cite 5 pays européens en 20 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

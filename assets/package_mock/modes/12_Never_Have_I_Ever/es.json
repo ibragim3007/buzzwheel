@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Yo Nunca",
+  "packageType": "default",
+  "description": "Modo clásico que destapa los secretos más locos de los jugadores. A ver quién es el más experimentado.",
+  "imageEncoded": "d4ad2c82-fc72-43fa-965b-e75f76232504.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Fiesta secreta",
+      "action": "${c_player}, di: \"Yo nunca he ido a una fiesta de la que me arrepentí a la mañana siguiente.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pequeño hurto",
+      "action": "${c_player}, di: \"Yo nunca he robado monedas sueltas de una tienda.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beso al azar",
+      "action": "${c_player}, di: \"Yo nunca he besado a un desconocido por un reto.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Salida de corazón roto",
+      "action": "${c_player}, di: \"Yo nunca he terminado una relación sin dar explicaciones.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Viaje espontáneo",
+      "action": "${c_player}, di: \"Yo nunca he comprado un billete a otra ciudad por impulso.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pelea en la escuela",
+      "action": "${c_player}, di: \"Yo nunca me he metido en una pelea en la escuela.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Examen dormido",
+      "action": "${c_player}, di: \"Yo nunca me he quedado dormido y he perdido un examen importante.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush con profe",
+      "action": "${c_player}, di: \"Yo nunca he tenido un crush con un profe.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tatuaje borracho",
+      "action": "${c_player}, di: \"Yo nunca me he hecho un tatuaje estando borracho.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Siesta en la última parada",
+      "action": "${c_player}, di: \"Yo nunca me he despertado en la última parada del transporte público.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romance de oficina",
+      "action": "${c_player}, di: \"Yo nunca he tenido un romance de oficina.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Transporte equivocado",
+      "action": "${c_player}, di: \"Yo nunca he tomado el tren o el bus equivocado.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hablar dormido",
+      "action": "${c_player}, di: \"Yo nunca he hablado dormido delante de otras personas.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Striptease frente al espejo",
+      "action": "${c_player}, di: \"Yo nunca he bailado un striptease frente al espejo.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Vuelo perdido",
+      "action": "${c_player}, di: \"Yo nunca he perdido un vuelo.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baja falsa",
+      "action": "${c_player}, di: \"Yo nunca he pedido baja por enfermedad sin estar enfermo.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chat nocturno con ex",
+      "action": "${c_player}, di: \"Yo nunca le he escrito a mi ex de madrugada.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Baño desnudo",
+      "action": "${c_player}, di: \"Yo nunca me he bañado desnudo.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Teléfono ahogado",
+      "action": "${c_player}, di: \"Yo nunca he dejado caer mi teléfono al agua por accidente.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fiesta secreta en casa",
+      "action": "${c_player}, di: \"Yo nunca he hecho una fiesta en casa a escondidas de mis padres.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Día sin clases",
+      "action": "${c_player}, di: \"Yo nunca me he saltado un día entero de clases.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Destinatario equivocado",
+      "action": "${c_player}, di: \"Yo nunca he enviado un mensaje íntimo a la persona equivocada.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Video cringe",
+      "action": "${c_player}, di: \"Yo nunca he grabado un video cringe para redes sociales.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cuenta espía",
+      "action": "${c_player}, di: \"Yo nunca he creado un perfil falso para espiar a alguien.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Picoteo nocturno",
+      "action": "${c_player}, di: \"Yo nunca he comido de noche de pie frente a la nevera.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cita a ciegas",
+      "action": "${c_player}, di: \"Yo nunca he ido a una cita a ciegas.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Asustar a los vecinos",
+      "action": "${c_player}, di: \"Yo nunca he asustado a mis vecinos con ruidos raros.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gran apuesta",
+      "action": "${c_player}, di: \"Yo nunca he perdido una gran suma de dinero apostando.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rompí y me callé",
+      "action": "${c_player}, di: \"Yo nunca he roto las cosas de alguien y me he quedado callado.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Huir de seguridad",
+      "action": "${c_player}, di: \"Yo nunca he huido de seguridad o de la policía.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Etiqueta a la vista",
+      "action": "${c_player}, di: \"Yo nunca he salido de casa con la etiqueta del precio todavía en la ropa.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Comí insectos",
+      "action": "${c_player}, di: \"Yo nunca he comido insectos.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dormido en el trabajo",
+      "action": "${c_player}, di: \"Yo nunca me he quedado dormido en el trabajo o en una clase.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tatuaje escondido",
+      "action": "${c_player}, di: \"Yo nunca he escondido un tatuaje a mis padres.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fetiche raro",
+      "action": "${c_player}, di: \"Yo nunca he sentido una atracción rara por objetos.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Like accidental",
+      "action": "${c_player}, di: \"Yo nunca le he dado like por accidente a una foto de mi ex.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Venganza al ex",
+      "action": "${c_player}, di: \"Yo nunca me he vengado de una ex pareja.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Huida de la infancia",
+      "action": "${c_player}, di: \"Yo nunca intenté escaparme de casa cuando era niño.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Enfermedad falsa",
+      "action": "${c_player}, di: \"Yo nunca he fingido estar enfermo para cancelar planes.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush con profe 2.0",
+      "action": "${c_player}, di: \"Yo nunca me he enamorado de mi profe.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cotilla",
+      "action": "${c_player}, di: \"Yo nunca he escuchado a propósito la conversación de otros.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Coche equivocado",
+      "action": "${c_player}, di: \"Yo nunca me he subido por error a un coche que no era el mío.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Colado en el transporte",
+      "action": "${c_player}, di: \"Yo nunca he viajado en transporte público sin pagar.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rompecorazones",
+      "action": "${c_player}, di: \"Yo nunca he roto el corazón de alguien a propósito.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Examen evitado",
+      "action": "${c_player}, di: \"Yo nunca me he saltado un examen.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Souvenirs del hotel",
+      "action": "${c_player}, di: \"Yo nunca me he llevado cosas de una habitación de hotel.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Despertar en casa ajena",
+      "action": "${c_player}, di: \"Yo nunca me he despertado en casa de un desconocido sin saber cómo llegué allí.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie al volante",
+      "action": "${c_player}, di: \"Yo nunca me he hecho un selfie mientras conducía.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fast food nocturno",
+      "action": "${c_player}, di: \"Yo nunca he comido comida rápida de noche estando a dieta.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Edad falsa",
+      "action": "${c_player}, di: \"Yo nunca he mentido sobre mi edad.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Colarse en el cine",
+      "action": "${c_player}, di: \"Yo nunca me he colado en el cine sin entrada.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fallo en el escenario",
+      "action": "${c_player}, di: \"Yo nunca he olvidado mis líneas en el escenario.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Habilidad falsa",
+      "action": "${c_player}, di: \"Yo nunca he presumido de una habilidad que en realidad no tengo.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Comida del compañero robada",
+      "action": "${c_player}, di: \"Yo nunca he robado comida de la nevera de un compañero de piso.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Alias secreto",
+      "action": "Nunca he creado una cuenta a nombre de otra persona.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Alas a ninguna parte",
+      "action": "Nunca me he ido a otra ciudad sin dinero ni plan.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Llamada al amanecer",
+      "action": "Nunca he llamado a un ex al amanecer.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Farol de tatuaje falso",
+      "action": "Nunca he dicho que un tatuaje temporal era real.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Huir de un reto",
+      "action": "Nunca me he echado atrás en un reto y luego he desaparecido.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Secreto revelado",
+      "action": "Nunca he contado el secreto de alguien después de prometer guardarlo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Caída épica en público",
+      "action": "Nunca me he caído en público fingiendo que era un paso de baile.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Firma falsificada",
+      "action": "Nunca he falsificado la firma de mis padres.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "DM a famoso",
+      "action": "Nunca le he escrito por DM a un famoso.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Entradas misteriosas",
+      "action": "Nunca he comprado entradas para un concierto sin saber quién actuaba.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

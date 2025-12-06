@@ -1,0 +1,507 @@
+{
+  "id": 9,
+  "name": "Chaos total",
+  "packageType": "default",
+  "description": "Défis extrêmes réservés aux plus courageux. Les fragiles, même pas la peine !",
+  "imageEncoded": "77c0dfdc-6b68-4aec-b217-a79c325f3fc4.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Vérité piquante",
+      "action": "${c_player}, mange quelque chose de très épicé sans boire.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cri de rue",
+      "action": "${c_player}, sors et crie « J'adore ma mère ! » de toutes tes forces.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Douche froide",
+      "action": "${c_player}, arrose-toi d'eau froide pendant 10 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Strip inversé",
+      "action": "${c_player}, enfile d'un coup tous les vêtements que tu trouves dans la pièce.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Danse de fou",
+      "action": "${c_player}, fais la danse la plus dingue possible sur la table.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pompes chargées",
+      "action": "${c_player}, fais 10 pompes avec un objet posé sur ton dos.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Confession surprise",
+      "action": "${c_player}, appelle quelqu'un et avoue-lui un truc inattendu.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mâche l'immangeable",
+      "action": "${c_player}, mâche quelque chose de non comestible (papier, serviette, etc.).",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cocktail sauvage",
+      "action": "${c_player}, bois un cocktail de trois ingrédients au hasard choisis par les autres.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Volume max",
+      "action": "${c_player}, chante n'importe quelle chanson à fond pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Maquillage extrême",
+      "action": "${c_player}, laisse les autres te faire le maquillage le plus fou possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Boost miroir",
+      "action": "${c_player}, lance-toi des compliments bien forts devant le miroir pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Danseur de fenêtre",
+      "action": "${c_player}, danse devant la fenêtre pour que les passants te voient.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Poste osé",
+      "action": "${c_player}, poste tout de suite une photo bizarre sur tes réseaux.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Compliment fou",
+      "action": "${c_player}, fais un vrai compliment à un mur ou à n'importe quel objet.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Appel gênant",
+      "action": "${c_player}, appelle un ami et demande-lui d'emprunter une grosse somme d'argent.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fausse crise de panique",
+      "action": "${c_player}, joue une crise de panique pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Sérénade de rue",
+      "action": "${c_player}, sors en courant et chante le refrain de ta chanson préférée.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Test de confiance",
+      "action": "${c_player}, ferme les yeux et laisse ${r_player} te faire manger quelque chose de mystérieux.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Minute d'humilité",
+      "action": "${c_player}, mets-toi à genoux et excuse-toi auprès d'une chaise.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mélange dégueu",
+      "action": "${c_player}, mélange les 4 boissons les plus bizarres qui traînent et prends une gorgée.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rire le plus fort",
+      "action": "${c_player}, rigole le plus fort et le plus fou possible.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tenue à l'envers",
+      "action": "${c_player}, mets tes vêtements à l'envers et garde-les 10 minutes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Saleté gourmande",
+      "action": "${c_player}, lèche la semelle de ta propre chaussure.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Crise sur mesure",
+      "action": "${c_player}, fais une crise avec cris et larmes pendant une minute.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Battle de claques",
+      "action": "${c_player}, laisse ${r_player} te mettre une petite claque.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Baiser d'objet",
+      "action": "${c_player}, embrasse avec passion un objet au hasard choisi par le groupe.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Message aux parents",
+      "action": "${c_player}, écris à tes parents pour leur dire que tu les aimes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Coiffure ridicule",
+      "action": "${c_player}, mets un sous-vêtement sur ta tête pendant 5 minutes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sauts de rue",
+      "action": "${c_player}, sors et fais 10 sauts bien bruyants.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Vidéo au hasard",
+      "action": "${c_player}, filme une vidéo débile et envoie-la à un contact au hasard.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Histoire choc",
+      "action": "${c_player}, raconte une histoire choc inventée, le plus crédible possible.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Défi chelou",
+      "action": "${c_player}, défie quelqu'un dans le concours le plus bizarre qui te vient en tête.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Défi des défis",
+      "action": "${c_player}, laisse le groupe choisir ta punition.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Shooting déjanté",
+      "action": "${c_player}, prends 5 photos les plus cheloues possibles et balance-les dans le chat de groupe.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Question cash",
+      "action": "${c_player}, répond honnêtement à la question la plus gênante de ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chanteur à la fenêtre",
+      "action": "${c_player}, chante fort par la fenêtre pendant 10 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Instinct animal",
+      "action": "${c_player}, imite n'importe quel animal pendant 30 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Banane sensuelle",
+      "action": "${c_player}, mange une banane de la façon la plus sensuelle possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cri d'enlèvement",
+      "action": "${c_player}, crie par la fenêtre que tu t'es fait kidnapper !",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Danse électrique",
+      "action": "Tout le monde danse comme s'il venait de prendre une décharge. Le premier qui s'arrête boit.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Orchestre du chaos",
+      "action": "Chaque joueur imite un instrument avec uniquement sa bouche. Le plus discret boit !",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Hystérie de masse",
+      "action": "Tout le monde joue une grosse crise en hurlant pendant 15 secondes. Si tu rigoles, tu bois.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Marche bizarre",
+      "action": "Tout le monde marche en cercle dans la pose la plus bizarre possible pendant 20 secondes.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chant du chaos",
+      "action": "À trois, tout le monde hurle ensemble le mot « chaos ». Tu oublies ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Échange de fringues",
+      "action": "Tout le monde doit enfiler un vêtement de quelqu'un d'autre. Tu refuses ou tu rates ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Vague bruyante",
+      "action": "Faites une ola de stade avec des cris. Tu te loupes ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Comestible ou pas",
+      "action": "Nommez des objets à tour de rôle. Tu déclares un truc chelou « comestible » ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sauts d'amitié",
+      "action": "Tout le monde fait 10 sauts sur place. Tu en fais moins ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Confession de groupe",
+      "action": "Tout le monde avoue en même temps une chose embarrassante. Tu te tais ? Tu bois.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Grimaces débiles",
+      "action": "Faites votre grimace la plus folle pendant 15 secondes. La plus nulle boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Rugissement d'équipe",
+      "action": "Rugissez tous ensemble pendant 10 secondes. Tu glousses ? Tu bois.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Épreuve vérité",
+      "action": "Posez une question à tour de rôle. Tu refuses de répondre ? Tu bois.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Catwalk chaotique",
+      "action": "Défile avec un objet au hasard posé sur ta tête. Tu refuses ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Câlin à l'ennemi",
+      "action": "Fais un câlin à quelqu'un à qui tu n'as pas encore parlé ce soir. Tu n'y arrives pas ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Regard silencieux",
+      "action": "Fixez-vous en silence pendant 20 secondes. Le premier qui rit boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Honte de groupe",
+      "action": "Chacun raconte une histoire honteuse. Tu passes ton tour ? Tu bois.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Karaoké surréaliste",
+      "action": "Tout le monde chante une chanson différente en même temps pendant 20 secondes. Tu t'arrêtes avant ? Tu bois.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Saut du chaos",
+      "action": "Tous sautez comme des fous au centre. Le moins énergique boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Regard de folie",
+      "action": "Fixez-vous avec des têtes de fou pendant 10 secondes. Le premier qui cligne des yeux boit.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Cuillère de feu",
+      "action": "${c_player}, mange une cuillerée de la sauce la plus forte que ${r_player} peut trouver.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Cri dans le noir",
+      "action": "${c_player}, éteins la lumière et crie « Je suis là ! » trois fois sans attendre de réponse.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Poigne de glace",
+      "action": "${c_player}, garde un glaçon dans ta main jusqu'à ce qu'il soit complètement fondu.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sprint de minuit",
+      "action": "${c_player}, sors en trombe, fais le tour de la maison puis reviens en courant.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rampe sous la table",
+      "action": "${c_player}, rampe sous la table jusqu'à l'autre côté de la pièce.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Maquillage ridicule",
+      "action": "${c_player}, laisse ${r_player} te faire le maquillage le plus ridicule possible.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Baiser de vitre",
+      "action": "${c_player}, embrasse avec passion une vitre ou un miroir.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Voix d'opéra",
+      "action": "${c_player}, chante n'importe quelle phrase avec une voix d'opéra.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Blague sauvage",
+      "action": "${c_player}, raconte la blague la plus cruelle que tu connaisses.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Danse dans la boue",
+      "action": "${c_player}, fais comme si tu dansais dans la boue pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "En-cas serviette",
+      "action": "${c_player}, mâche une serviette et déclare : « Délicieux ! »",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Strip inversé de groupe",
+      "action": "Tout le monde enfile un vêtement en plus par-dessus ses habits. Le dernier à le faire boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Course sur place",
+      "action": "Tout le monde court sur place pendant 30 secondes. Le premier qui s'arrête boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Rires bruyants",
+      "action": "Riez tous très fort pendant 15 secondes. Tu t'arrêtes ? Tu bois.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Vague glacée",
+      "action": "Touchez tous votre front en disant « froid ! ». Celui qui se tait boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Cri d'équipe",
+      "action": "À trois, hurlez tous « Mayhem ! ». Tu te foires ? Tu bois.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Pose extrême",
+      "action": "Figez-vous dans la pose la plus inconfortable possible pendant 20 secondes. Tu bouges ? Tu bois.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Whisper Squad",
+      "action": "Chuchotez tous « adrénaline ». Tu parles plus fort ? Tu bois.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Groupe à risques",
+      "action": "Chacun cite la chose la plus extrême qu'il ait faite. Tu ne trouves rien ? Tu bois.",
+      "type": "all",
+      "alcohol": 3
+    }
+  ]
+}

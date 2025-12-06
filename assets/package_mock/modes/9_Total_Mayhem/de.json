@@ -1,0 +1,507 @@
+{
+  "id": 9,
+  "name": "Totaler Wahnsinn",
+  "packageType": "default",
+  "description": "Extreme Aufgaben nur für Mutige. Weicheier, gar nicht erst versuchen!",
+  "imageEncoded": "77c0dfdc-6b68-4aec-b217-a79c325f3fc4.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Scharfe Wahrheit",
+      "action": "${c_player}, iss etwas Scharfes ohne Wasser.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Straßenschrei",
+      "action": "${c_player}, geh nach draußen und brüll 'Ich liebe meine Mama!' so laut du kannst.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kalte Dusche",
+      "action": "${c_player}, übergieß dich 10 Sekunden lang mit kaltem Wasser.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Umgekehrter Strip",
+      "action": "${c_player}, zieh dir auf einmal alle Klamotten an, die du im Raum findest.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Irrer Tanz",
+      "action": "${c_player}, tanz den verrücktesten Tanz, den du kannst, auf dem Tisch.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Liegestütze mit Gewicht",
+      "action": "${c_player}, mach 10 Liegestütze, während ein beliebiger Gegenstand auf deinem Rücken liegt.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Überraschendes Geständnis",
+      "action": "${c_player}, ruf jemanden an und gesteh etwas Unerwartetes.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Unkaubares kauen",
+      "action": "${c_player}, kaue auf etwas Ungenießbarem (Papier, Serviette usw.).",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Wilder Cocktail",
+      "action": "${c_player}, trink einen Cocktail aus drei zufälligen Zutaten, die die anderen aussuchen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Maximale Lautstärke",
+      "action": "${c_player}, sing 15 Sekunden lang irgendein Lied auf voller Lautstärke.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Extremes Make-up",
+      "action": "${c_player}, lass dir von den anderen das wildeste Make-up verpassen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Spiegel-Hype",
+      "action": "${c_player}, lobe dich 20 Sekunden lang laut vor dem Spiegel.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Fenstertänzer",
+      "action": "${c_player}, tanz am Fenster, sodass Passanten dich sehen können.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Mutiger Post",
+      "action": "${c_player}, poste jetzt ein verrücktes Foto auf deinen Socials.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Abgedrehtes Kompliment",
+      "action": "${c_player}, mach einer Wand – oder irgendeinem Gegenstand – ein ernst gemeintes Kompliment.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Peinlicher Anruf",
+      "action": "${c_player}, ruf einen Freund an und frag nach einer hohen Geldsumme zum Leihen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gefakte Panikattacke",
+      "action": "${c_player}, spiele 15 Sekunden lang eine Panikattacke.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Straßen-Serenade",
+      "action": "${c_player}, renn nach draußen und sing den Refrain deines Lieblingslieds.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Vertrauenstest",
+      "action": "${c_player}, schließ die Augen und lass dir von ${r_player} etwas Unbekanntes füttern.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Minute der Demut",
+      "action": "${c_player}, geh auf die Knie und entschuldige dich bei einem Stuhl.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ekel-Mix",
+      "action": "${c_player}, misch die 4 seltsamsten Getränke und nimm einen Schluck.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lautestes Lachen",
+      "action": "${c_player}, lach so laut und irre, wie du kannst.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verkehrtes Outfit",
+      "action": "${c_player}, zieh deine Klamotten verkehrt herum an und behalt sie 10 Minuten an.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Leckerer Dreck",
+      "action": "${c_player}, leck die Sohle deines eigenen Schuhs ab.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Eigener Ausraster",
+      "action": "${c_player}, krieg einen einminütigen Ausraster mit Tränen und Schreien.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Echte Ohrfeige",
+      "action": "${c_player}, lass dir von ${r_player} eine leichte Ohrfeige geben.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Objektkuss",
+      "action": "${c_player}, küsse leidenschaftlich einen beliebigen Gegenstand, den die Gruppe aussucht.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Eltern-Geständnis",
+      "action": "${c_player}, schreib deinen Eltern und sag ihnen, dass du sie liebst.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Witzige Kopfbedeckung",
+      "action": "${c_player}, trag 5 Minuten lang Unterwäsche auf dem Kopf.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Straßen-Sprünge",
+      "action": "${c_player}, geh nach draußen und mach 10 laute Sprünge.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zufallsvideo",
+      "action": "${c_player}, nimm ein albernes Video auf und schick es an einen zufälligen Kontakt.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Schockgeschichte",
+      "action": "${c_player}, erzähl eine erfundene Schockgeschichte so überzeugend wie möglich.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Seltsame Challenge",
+      "action": "${c_player}, fordere jemanden zu dem seltsamsten Wettbewerb heraus, der dir einfällt.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mutprobe der Mutproben",
+      "action": "${c_player}, lass die Gruppe eine Strafe für dich auswählen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Wilde Fotosession",
+      "action": "${c_player}, mach 5 möglichst verrückte Fotos und schick sie in den Gruppenchat.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Direkte Frage",
+      "action": "${c_player}, beantworte die peinlichste Frage von ${r_player} ehrlich.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fenstersänger",
+      "action": "${c_player}, sing 10 Sekunden lang laut aus dem Fenster.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Tierischer Instinkt",
+      "action": "${c_player}, benimm dich 30 Sekunden lang wie ein beliebiges Tier.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Bananenkuss",
+      "action": "${c_player}, iss eine Banane so verführerisch wie möglich.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Entführungs-Schrei",
+      "action": "${c_player}, schrei aus dem Fenster, dass du entführt wurdest!",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Elektro-Tanz",
+      "action": "Alle tanzen, als hätten sie einen Stromschlag bekommen. Wer zuerst aufhört, trinkt.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Schmerz-Orchester",
+      "action": "Jeder spielt ein Instrument nur mit dem Mund. Der Leiseste trinkt!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Massenhysterie",
+      "action": "Alle spielen 15 Sekunden lang einen lauten Ausraster. Wer lacht, trinkt.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Seltsamer Marsch",
+      "action": "Marschiert 20 Sekunden lang im Kreis in der verrücktesten Haltung, die ihr euch vorstellen könnt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chaos-Chor",
+      "action": "Auf drei schreien alle gemeinsam das Wort 'Chaos'. Vergessen? Trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Kleider-Tausch",
+      "action": "Alle müssen ein Kleidungsstück von jemand anderem anziehen. Wer es nicht schafft, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Laute Welle",
+      "action": "Macht eine Stadionwelle mit Geschrei. Wer sie vermasselt, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Essbar oder nicht",
+      "action": "Nennt reihum Gegenstände. Nennst du etwas seltsam Essbares, trinkst du.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Freundschaftssprünge",
+      "action": "Alle machen 10 Sprünge auf der Stelle. Wer weniger macht, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Gruppengeständnis",
+      "action": "Alle gestehen gleichzeitig etwas Peinliches. Schweigst du, trinkst du.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Blöde Gesichter",
+      "action": "Zieht 15 Sekunden lang eure verrücktesten Grimassen. Wer am langweiligsten guckt, trinkt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Team-Gebrüll",
+      "action": "Brüllt 10 Sekunden lang gemeinsam. Wer kichert, trinkt.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Wahrheitsrunde",
+      "action": "Stellt reihum beliebige Fragen. Wer nicht antwortet, trinkt.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Catwalk-Chaos",
+      "action": "Lauft wie auf dem Catwalk mit einem zufälligen Teil auf dem Kopf. Wer sich weigert, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Umarme deinen 'Feind'",
+      "action": "Umarme jemanden, mit dem du heute noch nicht gesprochen hast. Geht nicht? Trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Stummes Starren",
+      "action": "Starrt euch 20 Sekunden lang stumm an. Wer zuerst lacht, trinkt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Gruppen-Scham",
+      "action": "Jeder erzählt eine peinliche Geschichte. Kannst du nicht, trinkst du.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Surreales Karaoke",
+      "action": "Alle singen 20 Sekunden lang gleichzeitig verschiedene Lieder. Hörst du früher auf, trinkst du.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chaos-Sprung",
+      "action": "Alle springen wild in die Mitte. Wer am wenigsten Energie hat, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wahnsinns-Starren",
+      "action": "Schaut euch 10 Sekunden lang mit verrückten Gesichtern in die Augen. Wer zuerst blinzelt, trinkt.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Feuerlöffel",
+      "action": "${c_player}, iss einen Löffel von der schärfsten Soße, die ${r_player} finden kann.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dunkler Schrei",
+      "action": "${c_player}, mach das Licht aus und ruf dreimal 'Ich bin hier!' ohne auf eine Antwort zu warten.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Eisgriff",
+      "action": "${c_player}, halt einen Eiswürfel fest, bis er komplett geschmolzen ist.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mitternachtssprint",
+      "action": "${c_player}, renn nach draußen, einmal ums Haus und wieder rein.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tisch-Kriechen",
+      "action": "${c_player}, kriech unter dem Tisch durch auf die andere Seite des Zimmers.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Lächerliches Make-up",
+      "action": "${c_player}, lass dir von ${r_player} das albernste Make-up verpassen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Glaskuss",
+      "action": "${c_player}, küsse leidenschaftlich ein Fenster oder einen Spiegel.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Opernstimme",
+      "action": "${c_player}, sing irgendeinen Satz mit Opernstimme.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Harter Witz",
+      "action": "${c_player}, erzähl den härtesten Witz, den du kennst.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Schlammtanz",
+      "action": "${c_player}, tu 20 Sekunden lang so, als würdest du im Schlamm tanzen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Servietten-Snack",
+      "action": "${c_player}, kaue auf einer Serviette und sag: 'Lecker!'",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gemeinsamer Umkehr-Strip",
+      "action": "Alle ziehen ein extra Teil über ihre Klamotten. Der Letzte trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lauf auf der Stelle",
+      "action": "Alle joggen 30 Sekunden lang auf der Stelle. Wer zuerst aufhört, trinkt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Lautes Lachen",
+      "action": "Lacht 15 Sekunden lang laut zusammen. Wer aufhört, trinkt.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Eiswelle",
+      "action": "Fasst euch an die Stirn und sagt gemeinsam 'kalt!'. Wer still bleibt, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Team-Schrei",
+      "action": "Auf drei schreit ihr gemeinsam 'Mayhem!'. Wer es vermasselt, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Extreme Pose",
+      "action": "Friert 20 Sekunden lang in der unbequemsten Pose ein. Wer sich bewegt, trinkt.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Flüstertrupp",
+      "action": "Flüstert gemeinsam 'Adrenalin'. Wer lauter spricht, trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Risikogruppe",
+      "action": "Alle nennen das Extremste, was sie je getan haben. Fällt dir nichts ein, trinkst du.",
+      "type": "all",
+      "alcohol": 3
+    }
+  ]
+}

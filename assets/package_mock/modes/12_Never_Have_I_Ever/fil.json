@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Never Have I Ever",
+  "packageType": "default",
+  "description": "Klasikong mode na bumubuking ng pinaka-wild na sikreto ng mga player. Tingnan natin kung sino ang pinaka-sanay!",
+  "imageEncoded": "d4ad2c82-fc72-43fa-965b-e75f76232504.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Lihim na Party",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nakapunta sa party na pinagsisihan ko kinabukasan.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Munting Nakaw",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagnakaw ng barya sa tindahan.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Biglaang Halik",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako humalik sa taong hindi ko kilala dahil sa hamon.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Biglang Alis sa Relasyon",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako basta umalis sa isang relasyon nang walang paliwanag.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Biglaang Biyahe",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako basta bumili ng ticket papuntang ibang siyudad dahil trip ko lang.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gulo sa School",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nakipagsuntukan sa school.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Na-miss na Exam",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nakatulog at na-miss ang mahalagang exam.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush sa Teacher",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagka-crush sa teacher o professor ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lasing na Tattoo",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagpa-tattoo nang lasing.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tulog sa Huling Hinto",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagising na nasa huling hinto na ng bus o tren.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Relasyon sa Opisina",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-umpisa ng office romance.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maling Sakay",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako sumakay sa maling bus o tren.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nagsalita Habang Tulog",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagsalita habang tulog sa harap ng iba.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Striptease sa Harap ng Salamin",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako sumayaw ng striptease sa harap ng salamin.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Na-miss na Flight",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako na-miss ang flight ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pekeng Sick Leave",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-sick leave kahit hindi naman ako may sakit.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hatinggabing Chat sa Ex",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-text sa ex ko nang hatinggabi.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hubad na Ligo",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako naligo nang hubad sa dagat o pool.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nalunod na Phone",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa aksidenteng nabitawan ang phone ko sa tubig.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na House Party",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-house party sa bahay nang hindi alam ng magulang ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Isang Buong Araw na Absent",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-absent nang isang buong araw sa school.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maling Pinadalhan",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nakapagpadala ng intimate na mensahe sa maling tao.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cringe na Video",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-record ng cringe na video para sa social media.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Spy Account",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako gumawa ng fake profile para i-stalk ang isang tao.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Midnight Snack",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako kumain sa hatinggabi habang nakatayo sa harap ng ref.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Blind Date",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako pumunta sa blind date.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tinakot ang Kapitbahay",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa natatakot ang kapitbahay ko sa mga kakaibang ingay.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Malaking Pusta",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako natalo ng malaking pera sa sugal.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nabasag, Tahimik Lang",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa nababasag ang gamit ng iba tapos nagkunwaring wala lang.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tumakbo sa Sekyu",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako tumakbo palayo sa sekyu o pulis.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Price Tag sa Damit",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako lumabas ng bahay na may naka-sabit pang price tag sa damit ko.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kumain ng Insekto",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako kumain ng insekto.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nakatulog sa Trabaho",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nakatulog sa trabaho o sa klase.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tinagong Tattoo",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa itinago ang tattoo ko sa mga magulang ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kakaibang Hilig",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagkaroon ng kakaibang atraksyon sa mga bagay.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Accidental Like",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa aksidenteng na-like ang picture ng ex ko.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ganti sa Ex",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako naghiganti sa ex ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pagtakas Bilang Bata",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa sinubukang tumakas sa bahay noong bata ako.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pekeng Sakit",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagkunwaring may sakit para lang makansel ang lakad.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush sa Teacher 2.0",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako na-in love sa teacher ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nakikinig sa Usapan",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa sinadyang makinig sa usapan ng iba.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maling Kotse",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako sumakay sa maling kotse nang hindi ko namamalayan.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Libre Sakay",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako sumakay sa public transpo nang hindi nagbabayad.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Heartbreaker",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa sinadyang basagin ang puso ng isang tao.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Iwas Test",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako umiwas sa test.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Souvenir sa Hotel",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako kumukuha ng gamit sa hotel room.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nagising sa Ibang Lugar",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagising sa bahay ng hindi ko kilala na hindi ko alam kung paano ako nakarating doon.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie Habang Nagmamaneho",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nag-selfie habang nagmamaneho.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gabi-gabing Fast Food",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako kumain ng fast food sa gabi habang naka-diet.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pekeng Edad",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagsinungaling tungkol sa edad ko.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pasimpleng Sine",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako pumasok sa sinehan nang walang ticket.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sablay sa Entablado",
+      "action": "${c_player}, sabihin mo: \"Hindi ko pa nakakalimutan ang linya ko sa entablado.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pekeng Talent",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagyabang ng skill na wala naman talaga ako.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kinain ang Pagkain ng Roommate",
+      "action": "${c_player}, sabihin mo: \"Hindi pa ako nagnakaw ng pagkain sa ref ng roommate ko.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Alias",
+      "action": "Hindi pa ako gumawa ng account gamit ang pangalan ng ibang tao.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lipad na Walang Pupuntahan",
+      "action": "Hindi pa ako umalis papunta sa ibang siyudad nang walang pera o plano.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Tawag sa Madaling-araw",
+      "action": "Hindi ko pa tinatawagan ang ex ko sa madaling-araw.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Pekeng Tattoo Bluff",
+      "action": "Hindi ko pa sinasabing totoo ang temporary tattoo.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Iwas sa Hamon",
+      "action": "Hindi pa ako umatras sa dare at biglang nawala.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Nabuking ang Sekreto",
+      "action": "Hindi ko pa binubuking ang sikreto ng iba pagkatapos mangakong iingatan iyon.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Madulas sa Publiko",
+      "action": "Hindi pa ako nadapa sa publiko at nagkunwaring sayaw iyon.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Pekeng Pirma",
+      "action": "Hindi ko pa ginagaya ang pirma ng magulang ko.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "DM sa Sikat",
+      "action": "Hindi pa ako nag-DM sa celebrity.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Misteryong Ticket",
+      "action": "Hindi pa ako bumibili ng concert ticket na hindi ko kilala kung sino ang tumutugtog.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

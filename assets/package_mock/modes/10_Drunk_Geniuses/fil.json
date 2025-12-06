@@ -1,0 +1,312 @@
+{
+  "id": 10,
+  "name": "Brainiacs",
+  "packageType": "default",
+  "description": "Quiz pang-inuman: bawat maling sagot, mas nauubos ang baso mo. Subukan natin ang talino mo!",
+  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Math na Walang Calculator",
+      "action": "${c_player}, magkano ang 17 × 8?",
+      "type": "player",
+      "alcohol": 1
+    },
+    { "title": "Capital Quiz", "action": "${c_player}, ano ang capital ng Canada?", "type": "player", "alcohol": 1 },
+    {
+      "title": "Hulaan ang Bandila",
+      "action": "${c_player}, aling bansa ang may bandilang may maple leaf?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unang Tao sa Kalawakan",
+      "action": "${c_player}, sino ang unang tao sa kalawakan?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Simbolo sa Kemika",
+      "action": "${c_player}, ano ang chemical symbol ng ginto?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sino ang Sumulat?",
+      "action": "${c_player}, sino ang sumulat ng nobelang '1984'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabilisang Salin",
+      "action": "${c_player}, isalin sa English ang salitang 'свобода'.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lungsod ng The Beatles",
+      "action": "${c_player}, saang lungsod ipinanganak ang The Beatles?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Eksaktong Taon",
+      "action": "${c_player}, saang taon nagkaroon ng dissolution ang USSR?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sports Timer",
+      "action": "${c_player}, ilang minuto ang isang half sa football (soccer)?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Math Blitz",
+      "action": "${c_player}, ano ang square root ng 144?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Diyos ng Digmaan",
+      "action": "${c_player}, sino ang diyos ng digmaan sa Greek mythology?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Planet Trio",
+      "action": "${c_player}, pangalanan ang kahit tatlong planeta sa Solar System nang sunod-sunod.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Kasama ni Sherlock",
+      "action": "${c_player}, ano ang apelyido ng doktor sa Sherlock series?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinuno ng France 1804",
+      "action": "${c_player}, sino ang namuno sa France noong 1804?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lungsod ng Ilog",
+      "action": "${c_player}, saang lungsod dumadaloy ang Ilog Neva?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sinusukat ng Richter",
+      "action": "${c_player}, ano ang sinusukat ng Richter scale?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "HTML Decode",
+      "action": "${c_player}, ano ang kahulugan ng acronym na HTML?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinagmulan ng Paella",
+      "action": "${c_player}, mula saang bansa ang pagkaing 'paella'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Malikong Capital",
+      "action": "${c_player}, ano ang capital ng New Zealand?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pormula ng Tubig",
+      "action": "${c_player}, isulat ang chemical formula ng tubig.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bida sa Titanic",
+      "action": "${c_player}, sino ang gumanap na Jack sa 'Titanic'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Araw ng Kababaihan",
+      "action": "${c_player}, anong petsa ipinagdiriwang ang International Women's Day?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kagat na Mansanas",
+      "action": "${c_player}, aling kumpanya ang may logo na kagat na mansanas?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Batas ng Paggalaw",
+      "action": "${c_player}, aling siyentista ang nagtakda ng tatlong batas ng motion?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Alphabet Animal March",
+      "action": "Umikot at magbanggit ng mga hayop ayon sa alpabeto. Magkamali — lagok!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Capital Relay",
+      "action": "Salit-salitang magbanggit ng mga capital ng mundo. Ulit — lagok!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Bilang Hanggang Sampu",
+      "action": "Sabihin nang salitan ang 1-10, pero palakpak sa halip na 5. Mali — inom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Movie Quotes",
+      "action": "Magbanggit ng movie quotes nang tuloy-tuloy. Madapa — lagok.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Song Chain",
+      "action": "Bawat isa ay magbanggit ng kantang nagsisimula sa huling letra ng nauna.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Brand Marathon",
+      "action": "Magbanggit ng clothing brands nang paikot. Ulit o hinto — inom!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Football Clubs",
+      "action": "Maglista ng football clubs nang salitan. Mali — inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Color Round",
+      "action": "Mabilisang magbanggit ng kakaibang kulay. Ulit — lagok.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Proverb Puzzle",
+      "action": "Isa ang magsisimula ng kasabihan, susunod ang magtatapos. Palya — inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wika sa Mundo",
+      "action": "Magbanggit ng mga wika nang paikot. Pag-aatubili — inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Kulay sa Bandila",
+      "action": "${c_player}, anong kulay ang HINDI nasa bandila ng France?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinagmulan ng Espresso",
+      "action": "${c_player}, saang bansa nagmula ang espresso?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bio Blitz",
+      "action": "${c_player}, ilang molar ang meron ang isang adult na tao?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kahulugan ng IPO",
+      "action": "${c_player}, ano ang ibig sabihin ng acronym na 'IPO'?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinaka-Isinataling Aklat",
+      "action": "${c_player}, aling aklat ang naisalin sa pinakamaraming wika?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Radius ng Daigdig",
+      "action": "${c_player}, humigit-kumulang ilang kilometro ang radius ng Earth?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dial Code ng Russia",
+      "action": "${c_player}, ano ang international phone code ng Russia?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Light-Bulb Patent",
+      "action": "${c_player}, sino ang nagpatent ng unang incandescent light bulb?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Grammar Check",
+      "action": "${c_player}, anong bahagi ng pananalita ang salitang 'beautifully'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Puso ng Pugita",
+      "action": "${c_player}, ilang puso ang mayroon ang isang octopus?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Constellation Chain",
+      "action": "Magbanggit ng mga constellation nang salitan. Pag-aatubili — lagok.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Alphabet Movie Challenge",
+      "action": "Magbanggit ng mga pelikula mula A-Z. Madulas — inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Body-Part Chain",
+      "action": "Maglista ng bahagi ng katawan ng tao. Ulit — lagok.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "City Word Chain",
+      "action": "Bawat isa ay magbanggit ng lungsod na nagsisimula sa huling letra ng nauna.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Final Blitz",
+      "action": "${c_player}, magbanggit ng 5 bansang Europeo sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

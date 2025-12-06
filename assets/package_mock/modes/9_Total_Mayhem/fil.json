@@ -1,0 +1,507 @@
+{
+  "id": 9,
+  "name": "Total Mayhem",
+  "packageType": "default",
+  "description": "Matitinding hamon para lang sa pinakamatapang. Mahihina, huwag na mag-try!",
+  "imageEncoded": "77c0dfdc-6b68-4aec-b217-a79c325f3fc4.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Maanghang na Katotohanan",
+      "action": "${c_player}, kumain ka ng sobrang maanghang na walang tubig.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sigaw sa Kalsada",
+      "action": "${c_player}, lumabas at sumigaw nang malakas: 'I love my mom!'",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Malamig na Buhos",
+      "action": "${c_player}, buhusan ang sarili ng malamig na tubig sa loob ng 10 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Baliktad na Bihis",
+      "action": "${c_player}, isuot ang lahat ng damit na makita mo sa kwarto nang sabay-sabay.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sayaw ng Sira",
+      "action": "${c_player}, sumayaw nang pinaka-walang hiya sa ibabaw ng mesa.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Push-Up na May Bigat",
+      "action": "${c_player}, gumawa ng 10 push-up habang may nakapatong na kahit anong bagay sa likod mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Biglang Kumpisal",
+      "action": "${c_player}, tumawag sa kahit kanino at umamin sa isang di-inaasahang sikreto.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nguyain ang Di-Makain",
+      "action": "${c_player}, nguyain ang isang bagay na hindi talaga pagkain (papel, tissue, atbp.).",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Brutal na Cocktail",
+      "action": "${c_player}, uminom ng cocktail mula sa tatlong random na sangkap na pipiliin ng iba.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Max na Birit",
+      "action": "${c_player}, bumirit ng kahit anong kanta sa sobrang lakas sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Extreme na Make-Up",
+      "action": "${c_player}, hayaang lagyan ka ng pinaka-wild na make-up ng iba.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Salamin Hype",
+      "action": "${c_player}, purihin nang malakas ang sarili mo sa harap ng salamin sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Mananayaw sa Bintana",
+      "action": "${c_player}, sumayaw sa may bintana para makita ka ng mga dumadaan.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Matapang na Post",
+      "action": "${c_player}, mag-post ngayon ng weird na picture sa social media mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Baliw na Papuri",
+      "action": "${c_player}, magbigay ng seryosong papuri sa pader—o kahit anong bagay.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ilitang Tawag",
+      "action": "${c_player}, tawagan ang isang kaibigan at humiram ng malaking halaga ng pera.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pekeng Panic Attack",
+      "action": "${c_player}, umarte na parang may panic attack sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Serenata sa Kalsada",
+      "action": "${c_player}, tumakbo palabas at kantahin ang chorus ng paborito mong kanta.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pagsubok ng Tiwala",
+      "action": "${c_player}, pumikit at hayaang pakainin ka ni ${r_player} ng kung ano mang di mo alam.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Minuto ng Pagpapakumbaba",
+      "action": "${c_player}, lumuhod at humingi ng tawad sa isang upuan.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kadiring Halo",
+      "action": "${c_player}, paghaluin ang 4 na pinaka-weird na inumin at tikman.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pinakamalakas na Tawa",
+      "action": "${c_player}, tumawa nang sobrang lakas at kabaliwan.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baliktad na Outfit",
+      "action": "${c_player}, isuot nang pabaliktad ang mga damit mo at panatilihin ito ng 10 minuto.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Masarap na Dumi",
+      "action": "${c_player}, dilaan ang talampakan ng sarili mong sapatos.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Custom na Buong-Buong Sira",
+      "action": "${c_player}, magwala na parang may breakdown na may iyak at sigaw sa loob ng isang minuto.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Soft na Sampalan",
+      "action": "${c_player}, hayaang bigyan ka ni ${r_player} ng mahinang sampal.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Halikan ang Bagay",
+      "action": "${c_player}, halikan nang todo ang isang random na bagay na pipiliin ng grupo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kumpisal sa Magulang",
+      "action": "${c_player}, mag-text sa magulang mo at sabihing mahal mo sila.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nakakahiya na Headgear",
+      "action": "${c_player}, isuot ang underwear sa ulo mo sa loob ng 5 minuto.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Talbog sa Labas",
+      "action": "${c_player}, lumabas at gumawa ng 10 malalakas na talon.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Random na Video",
+      "action": "${c_player}, mag-record ng nakakatawang video at ipadala sa random na contact.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kwento ng Shock",
+      "action": "${c_player}, magkuwento ng imbentong nakakashock na istorya nang seryoso.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Weird na Hamon",
+      "action": "${c_player}, hamunin ang kahit sino sa pinaka-weird na laban na maisip mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hamon ng Mga Hamon",
+      "action": "${c_player}, hayaang piliin ng grupo ang parusa mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Wild na Photo Shoot",
+      "action": "${c_player}, kumuha ng 5 sobrang weird na litrato at ibato sa group chat.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Diretsong Tanong",
+      "action": "${c_player}, sagutin nang tapat ang pinaka-awkward na tanong ni ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kantor sa Bintana",
+      "action": "${c_player}, kumanta nang malakas sa bintana sa loob ng 10 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Instinto ng Hayop",
+      "action": "${c_player}, umasta bilang kahit anong hayop sa loob ng 30 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Haliging Saging",
+      "action": "${c_player}, kumain ng saging nang sobrang seductive.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sigaw ng 'Kinidnap Ako'",
+      "action": "${c_player}, sumigaw sa bintana na kinidnap ka!",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Electro Dance",
+      "action": "Lahat sumayaw na parang nakuryente. Unang tumigil, iinom.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Orkestra ng Sakit",
+      "action": "Bawat isa umarteng parang instrumentong pang-musika gamit lang ang bibig. Pinakatahimik ang iinom!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Mababaliw na Eksena",
+      "action": "Lahat umarte ng malakas na freak-out sa loob ng 15 segundo. Tumawa ka? Inom.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Wakang Martsa",
+      "action": "Magmartsa sa bilog sa pinaka-weird na posisyon sa loob ng 20 segundo.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sigaw ng Kaguluhan",
+      "action": "Sa bilang na tatlo, sabay-sabay sumigaw ng salitang 'chaos'. Nakalimot? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Palit-Damit",
+      "action": "Lahat dapat magsuot ng gamit ng iba. Hindi sumunod, iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Maingay na Alon",
+      "action": "Gumawa ng stadium wave na may sigaw. Nagkamali? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Makakain o Hindi",
+      "action": "Magbanggit ng mga bagay nang salitan. Nagsabing parang pwedeng kainin? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Talon ng Pagkakaibigan",
+      "action": "Lahat gumawa ng 10 talon sa lugar. Kulang? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sabayang Kumpisal",
+      "action": "Sabay-sabay magpahayag ng isang nakakahiya. Tumahimik? Inom.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Nakakatawang Mukha",
+      "action": "Gumawa ng pinaka-weird na mukha sa loob ng 15 segundo. Pinaka-boring ang iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Sabay na Ugong",
+      "action": "Sabay-sabay umatungal sa loob ng 10 segundo. Tumawa? Inom.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Truth Gauntlet",
+      "action": "Magpaikut-ikot ng kahit anong tanong. Tumangging sumagot? Inom.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Catwalk Chaos",
+      "action": "Maglakad-rampa na may kung anong bagay sa ulo. Tumanggi? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Yakap sa 'Kaaway'",
+      "action": "Yakapin ang taong hindi mo pa kinakausap ngayong gabi. Di kaya? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Tahimik na Titigan",
+      "action": "Magtinginan nang tahimik sa loob ng 20 segundo. Unang tumawa, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Group Shame",
+      "action": "Bawat isa magkuwento ng nakakahiya. Di makapagkuwento? Inom.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Baliw na Karaoke",
+      "action": "Kumanta lahat ng iba-ibang kanta nang sabay sa loob ng 20 segundo. Tumigil nang maaga? Inom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Luksong Gulo",
+      "action": "Sabay-sabay tumalon papunta sa gitna. Pinaka-walang energy ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Titig ng Kabaliwan",
+      "action": "Magkatinginan na may baliw na mukha sa loob ng 10 segundo. Unang pumikit, iinom.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Kutsarang Apoy",
+      "action": "${c_player}, kumain ng isang kutsara ng pinakaanghang na sauce na mahahanap ni ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sigaw sa Dilim",
+      "action": "${c_player}, patayin ang ilaw at sumigaw ng 'I'm here!' nang tatlong beses nang hindi naghihintay ng sagot.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Yelong Hawak",
+      "action": "${c_player}, hawakan ang tipak ng yelo hanggang tuluyang matunaw.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gabi ng Takbo",
+      "action": "${c_player}, tumakbo palabas, ikutin ang bahay, tapos bumalik agad.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gapang sa Ilalim",
+      "action": "${c_player}, gumapang sa ilalim ng mesa hanggang kabilang dulo ng kwarto.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Nakakatawang Make-Up",
+      "action": "${c_player}, hayaang bigyan ka ni ${r_player} ng pinaka-ubod ng lokong make-up.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Halik sa Salamin",
+      "action": "${c_player}, halikan nang todo ang bintana o salamin.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Boses Opera",
+      "action": "${c_player}, kantahin ang kahit anong linya sa boses opera.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Malupit na Biro",
+      "action": "${c_player}, sabihin ang pinaka-harsh na joke na alam mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sayaw sa Putik",
+      "action": "${c_player}, umastang parang sumasayaw sa putik sa loob ng 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Snack na Napkin",
+      "action": "${c_player}, nguyain ang napkin at sabihing 'Delicious!'",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Group na Baliktad na Bihis",
+      "action": "Lahat magsuot ng tig-iisang dagdag na damit sa ibabaw ng suot nila. Pinakahuli ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Takbong Nakatayo",
+      "action": "Lahat tumakbo nang nakatayo sa loob ng 30 segundo. Unang tumigil, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Malakas na Tawa",
+      "action": "Sabay-sabay tumawa nang malakas sa loob ng 15 segundo. Tumigil? Inom.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Yelong Wave",
+      "action": "Sabayan hawakan ang noo at sabihing 'cold!'. Tahimik? Iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sabay na 'Mayhem!'",
+      "action": "Sa bilang na tatlo, sabay-sabay sumigaw ng 'Mayhem!'. Nagkamali? Inom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Extreme na Pose",
+      "action": "Mag-pose sa pinaka-hindi komportableng posisyon sa loob ng 20 segundo. Gumalaw? Inom.",
+      "type": "all",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Whisper Squad",
+      "action": "Sabay-sabay bulong ng salitang 'adrenaline'. Lumakas ang boses? Inom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Grupo ng Panganib",
+      "action": "Bawat isa magsabi ng pinaka-extreme na bagay na nagawa nila. Walang maisip? Inom.",
+      "type": "all",
+      "alcohol": 3
+    }
+  ]
+}

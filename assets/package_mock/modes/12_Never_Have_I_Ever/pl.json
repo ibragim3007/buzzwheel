@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Nigdy przenigdy",
+  "packageType": "default",
+  "description": "Klasyczny tryb, który wyciąga na wierzch najdziksze sekrety graczy. Zobaczmy, kto ma na sumieniu najwięcej!",
+  "imageEncoded": "d4ad2c82-fc72-43fa-965b-e75f76232504.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Tajne przyjęcie",
+      "action": "${c_player}, powiedz: \"Nigdy nie byłem na imprezie, której żałowałem następnego dnia.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Drobna kradzież",
+      "action": "${c_player}, powiedz: \"Nigdy nie ukradłem drobnych w sklepie.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Losowy pocałunek",
+      "action": "${c_player}, powiedz: \"Nigdy nie pocałowałem obcej osoby w ramach zadania.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wyjście bez słowa",
+      "action": "${c_player}, powiedz: \"Nigdy nie odszedłem ze związku bez wyjaśnienia.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Spontaniczny wypad",
+      "action": "${c_player}, powiedz: \"Nigdy nie kupiłem biletu do innego miasta pod wpływem impulsu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bójka w szkole",
+      "action": "${c_player}, powiedz: \"Nigdy nie brałem udziału w bójce w szkole.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Przespany egzamin",
+      "action": "${c_player}, powiedz: \"Nigdy nie przespałem ważnego egzaminu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zadurzenie w nauczycielu",
+      "action": "${c_player}, powiedz: \"Nigdy nie podkochiwałem się w nauczycielu lub wykładowcy.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tatuaż po pijaku",
+      "action": "${c_player}, powiedz: \"Nigdy nie zrobiłem tatuażu po pijaku.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Drzemka na końcowym",
+      "action": "${c_player}, powiedz: \"Nigdy nie obudziłem się na ostatnim przystanku w komunikacji miejskiej.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romans w pracy",
+      "action": "${c_player}, powiedz: \"Nigdy nie zaczynałem romansu w pracy.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zły kurs",
+      "action": "${c_player}, powiedz: \"Nigdy nie wsiadłem do złego pociągu ani autobusu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gadanie przez sen",
+      "action": "${c_player}, powiedz: \"Nigdy nie mówiłem przez sen przy innych.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Striptiz przed lustrem",
+      "action": "${c_player}, powiedz: \"Nigdy nie tańczyłem striptizu przed lustrem.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nie ten lot",
+      "action": "${c_player}, powiedz: \"Nigdy nie spóźniłem się na samolot.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "L4 na niby",
+      "action": "${c_player}, powiedz: \"Nigdy nie brałem L4, kiedy byłem zdrowy.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nocne pisanie do ex",
+      "action": "${c_player}, powiedz: \"Nigdy nie pisałem do ex w środku nocy.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kąpiel nago",
+      "action": "${c_player}, powiedz: \"Nigdy nie kąpałem się nago.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Utopiony telefon",
+      "action": "${c_player}, powiedz: \"Nigdy nie utopiłem telefonu przez przypadek.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Domówka po kryjomu",
+      "action": "${c_player}, powiedz: \"Nigdy nie urządziłem domówki za plecami rodziców.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Całodniowe wagary",
+      "action": "${c_player}, powiedz: \"Nigdy nie poszedłem na całodniowe wagary.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zły adresat",
+      "action": "${c_player}, powiedz: \"Nigdy nie wysłałem intymnej wiadomości nie tej osobie.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cringe’owe nagranie",
+      "action": "${c_player}, powiedz: \"Nigdy nie nagrałem żenującego filmiku na social media.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fejk do podglądania",
+      "action": "${c_player}, powiedz: \"Nigdy nie założyłem fejkowego profilu, żeby kogoś podglądać.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nocna wyżerka",
+      "action": "${c_player}, powiedz: \"Nigdy nie jadłem w nocy, stojąc przed lodówką.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Randka w ciemno",
+      "action": "${c_player}, powiedz: \"Nigdy nie byłem na randce w ciemno.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wystraszeni sąsiedzi",
+      "action": "${c_player}, powiedz: \"Nigdy nie wystraszyłem sąsiadów dziwnymi hałasami.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gruba przegrana",
+      "action": "${c_player}, powiedz: \"Nigdy nie przegrałem dużej sumy w hazardzie.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Stłukłem i zamilkłem",
+      "action": "${c_player}, powiedz: \"Nigdy nie zepsułem cudzej rzeczy i nic nie powiedziałem.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ucieczka przed ochroną",
+      "action": "${c_player}, powiedz: \"Nigdy nie uciekałem przed ochroną ani policją.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Metka na widoku",
+      "action": "${c_player}, powiedz: \"Nigdy nie wyszedłem z domu z metką na ubraniu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jadłem owady",
+      "action": "${c_player}, powiedz: \"Nigdy nie jadłem owadów.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Drzemka w pracy",
+      "action": "${c_player}, powiedz: \"Nigdy nie zasnąłem w pracy ani na wykładzie.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ukryty tatuaż",
+      "action": "${c_player}, powiedz: \"Nigdy nie ukrywałem tatuażu przed rodzicami.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dziwny fetysz",
+      "action": "${c_player}, powiedz: \"Nigdy nie miałem dziwnego fetyszu na punkcie przedmiotów.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Przypadkowy lajk",
+      "action": "${c_player}, powiedz: \"Nigdy nie polubiłem przypadkiem zdjęcia mojego ex.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zemsta na ex",
+      "action": "${c_player}, powiedz: \"Nigdy nie mściłem się na byłym partnerze.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ucieczka z domu",
+      "action": "${c_player}, powiedz: \"Nigdy jako dziecko nie próbowałem uciec z domu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Udawana choroba",
+      "action": "${c_player}, powiedz: \"Nigdy nie udawałem chorego, żeby odwołać plany.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zadurzenie w nauczycielu 2.0",
+      "action": "${c_player}, powiedz: \"Nigdy nie zakochałem się w swoim nauczycielu.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Podsłuchiwacz",
+      "action": "${c_player}, powiedz: \"Nigdy celowo nie podsłuchiwałem cudzej rozmowy.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nie ten samochód",
+      "action": "${c_player}, powiedz: \"Nigdy nie wsiadłem przez pomyłkę do nie tego samochodu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jazda na gapę",
+      "action": "${c_player}, powiedz: \"Nigdy nie jechałem komunikacją miejską na gapę.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Łamacz serc",
+      "action": "${c_player}, powiedz: \"Nigdy celowo nie złamałem komuś serca.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ucieczka przed sprawdzianem",
+      "action": "${c_player}, powiedz: \"Nigdy nie opuściłem sprawdzianu.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pamiątki z hotelu",
+      "action": "${c_player}, powiedz: \"Nigdy nie zabrałem rzeczy z pokoju hotelowego.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pobudka u obcych",
+      "action": "${c_player}, powiedz: \"Nigdy nie obudziłem się u obcej osoby, nie wiedząc, jak tam trafiłem.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie za kierownicą",
+      "action": "${c_player}, powiedz: \"Nigdy nie robiłem selfie podczas prowadzenia auta.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nocny fast food",
+      "action": "${c_player}, powiedz: \"Nigdy nie jadłem fast foodu w nocy, będąc na diecie.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zafałszowany wiek",
+      "action": "${c_player}, powiedz: \"Nigdy nie skłamałem na temat swojego wieku.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Do kina bez biletu",
+      "action": "${c_player}, powiedz: \"Nigdy nie wszedłem do kina bez biletu.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zawieszka na scenie",
+      "action": "${c_player}, powiedz: \"Nigdy nie zapomniałem tekstu na scenie.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Udawany talent",
+      "action": "${c_player}, powiedz: \"Nigdy nie przechwalałem się umiejętnością, której wcale nie mam.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Podjadanie współlokatora",
+      "action": "${c_player}, powiedz: \"Nigdy nie podjadałem jedzenia współlokatora z lodówki.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sekretne konto",
+      "action": "Nigdy nie założyłem konta na cudze nazwisko.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wylot w ciemno",
+      "action": "Nigdy nie wyjechałem do innego miasta bez pieniędzy i planu.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Telefon o świcie",
+      "action": "Nigdy nie dzwoniłem do ex o świcie.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Atrapa tatuażu",
+      "action": "Nigdy nie udawałem, że tymczasowy tatuaż jest prawdziwy.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ucieczka od wyzwania",
+      "action": "Nigdy nie wycofałem się z wyzwania i potem zniknąłem.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wygadana tajemnica",
+      "action": "Nigdy nie wygadałem czyjejś tajemnicy po obiecaniu, że ją zachowam.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Spektakularny gleba",
+      "action": "Nigdy nie wywróciłem się publicznie, udając, że to był taneczny ruch.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Podrobiony podpis",
+      "action": "Nigdy nie podrobiłem podpisu rodziców.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "DM do celebryty",
+      "action": "Nigdy nie wślizgnąłem się do DM-ów celebryty.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Bilety w ciemno",
+      "action": "Nigdy nie kupiłem biletów na koncert, nie wiedząc, kto występuje.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

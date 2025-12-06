@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Défi Snacks",
+  "packageType": "default",
+  "description": "Défis gourmands et déjantés avec nourriture et boissons. Mélange, bois, expérimente !",
+  "imageEncoded": "f4e6f25e-5e77-4d06-85b5-ec2ddfaff58f.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Dégustation à l’aveugle",
+      "action": "${c_player}, les yeux couverts, goûte une cuillerée de ce que ${r_player} te donne et devine l’ingrédient.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sandwich surprise",
+      "action": "${c_player}, fais un sandwich avec trois trucs au hasard et mange-le.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Shot épicé",
+      "action": "${c_player}, bois une gorgée d’eau avec une pincée de piment. Pas de grimace !",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tartine de groupe",
+      "action": "Chacun tartine une sauce au hasard sur du pain et mange. Ceux qui font la grimace boivent.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Dessert salé",
+      "action": "${c_player}, mets du sel sur la moitié d’un biscuit et mange-le en silence.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Roulette cocktail",
+      "action": "${c_player}, mélange deux boissons différentes choisies par ${r_player} et prends une gorgée.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Crousti-écho",
+      "action": "${c_player}, croque un snack bien fort et dis « délicieux » trois fois.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sourire au fromage",
+      "action": "${c_player}, croque un morceau de fromage en forme de sourire et montre-le à tout le monde.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Combo du frigo",
+      "action": "${c_player}, mélange trois boissons du frigo dans un verre et vide-le d’un coup.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tous gourmets",
+      "action": "Chacun mange une cuillerée de ketchup + mayo. Ceux qui refusent boivent.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Rap fruité",
+      "action": "${c_player}, emballe une mandarine dans une serviette comme un micro et rappe un petit couplet sur la nourriture.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Critique à la fourchette",
+      "action": "${c_player}, fais comme si tu notais un grand plat en goûtant une frite.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fous rires au concombre",
+      "action": "${c_player}, croque un morceau de concombre et rigole 10 secondes sans avaler.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Toast déjanté",
+      "action": "${c_player}, invente un toast absurde sur le kéfir et dis-le en levant un verre d’eau.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chocolat + chips",
+      "action": "${c_player}, mange un carré de chocolat avec une chips en une seule bouchée.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sommeliers de l’eau",
+      "action": "Chacun sirote de l’eau en décrivant l’« arrière-goût ». Description ratée = une gorgée.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Claque de porridge",
+      "action": "${c_player}, tape sur un bol de porridge (vrai ou imaginaire) et dis « chef-d’œuvre ».",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Défi pimenté",
+      "action": "${c_player}, mange une rondelle de piment. Tu peux boire seulement après 30 s.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Sandwich de l’amitié",
+      "action": "Préparez un sandwich partagé : chacun ajoute un ingrédient puis vous mordez dedans à tour de rôle.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Rouleau inversé",
+      "action": "${c_player}, oublie le riz ! Enroule une tranche de pain dans une feuille de nori et mange-la.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Moustache mousseuse",
+      "action": "${c_player}, bois une gorgée de boisson gazeuse et prends ta moustache de mousse en photo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mix jus-lait",
+      "action": "${c_player}, mélange du jus avec un peu de lait, bois et décris le goût en un mot.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tous barmans",
+      "action": "Chacun propose un ingrédient bizarre pour un cocktail. ${r_player} mélange tout et boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Danse de la cuillère",
+      "action": "${c_player}, coince une cuillère entre tes dents et danse pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Verre au bout des doigts",
+      "action": "${c_player}, bois de l’eau en tenant le verre tout en bas avec deux doigts.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Question d’œuf",
+      "action": "${c_player}, avale un œuf cru ou prends deux grosses gorgées de ta boisson.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ronde des fruits",
+      "action": "Chacun prend un fruit et tourne autour de la table pendant 10 secondes.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Neige sucrée",
+      "action": "${c_player}, verse une pincée de sucre sur ta langue et dis « flocon de neige ». ",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nez à épices",
+      "action": "${c_player}, devine une épice à l’odeur — celle que ${r_player} choisit.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Super smoothie",
+      "action": "${c_player}, cite 4 ingrédients pour le smoothie parfait. Chaque raté → une gorgée.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tous chefs",
+      "action": "Inventez un plat avec « ce qu’il y a là ». ${r_player} choisit le meilleur ; les autres boivent.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mastiff mayo",
+      "action": "${c_player}, mange une cuillère à café de mayo sans faire de grimace.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Croque bien fort",
+      "action": "${c_player}, croque une chips plus fort que tout le monde pendant 5 s. Trop discret ? gorgée en plus.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Dessert pas sucré",
+      "action": "${c_player}, sale n’importe quel dessert et mange-le.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dégustateurs d’eau",
+      "action": "Décrivez de l’eau plate comme un grand vin. La description la plus nulle boit.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Héros de l’oignon",
+      "action": "${c_player}, croque de l’oignon cru. Tu refuses → deux gorgées.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chocolat + sel",
+      "action": "${c_player}, trempe un carré de chocolat dans le sel et mange-le.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mange l’arc-en-ciel",
+      "action": "${c_player}, mange cinq aliments de couleurs différentes à la suite.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cocktail de potes",
+      "action": "${c_player} et ${r_player} préparent chacun une boisson pour l’autre et échangent.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Piment + lait",
+      "action": "${c_player}, fais passer une bouchée de piment avec du lait et dis « facile ».",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Salade sans les mains",
+      "action": "${c_player}, mange un morceau de salade sans utiliser tes mains.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tous baristas",
+      "action": "Décrivez le goût du café parfait. La personne la plus ennuyeuse boit.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Conte de soupe",
+      "action": "${c_player}, raconte un petit conte sur une soupe dont ${r_player} est le héros.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Roi du burger",
+      "action": "${c_player}, joue une pub pour hamburger pour donner envie à tout le monde.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tour gourmande",
+      "action": "${c_player}, construis une tour avec 6 croûtons. Si elle s’écroule, tu bois.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Critiques gourmets",
+      "action": "Notez l’eau de 1 à 10. Ceux qui mettent 1 ou 10 boivent.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Miel + citron",
+      "action": "${c_player}, mange une cuillerée de miel puis croque aussitôt dans un citron.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Boisson rayée",
+      "action": "${c_player}, fais une boisson en trois couches et avale-la.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Test de fromage",
+      "action": "${c_player}, goûte deux fromages à l’aveugle et devine lequel est lequel.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chamans de glace",
+      "action": "Donnez le parfum de glace le plus fou que vous goûteriez. Vous hésitez → vous buvez.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}

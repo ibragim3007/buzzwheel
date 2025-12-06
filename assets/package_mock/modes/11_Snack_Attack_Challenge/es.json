@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Desafío Snack",
+  "packageType": "default",
+  "description": "Retos sabrosos y locos con comida y bebida. Mezcla, bebe y experimenta.",
+  "imageEncoded": "f4e6f25e-5e77-4d06-85b5-ec2ddfaff58f.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Catador a ciegas",
+      "action": "${c_player}, con los ojos tapados, prueba una cucharada de lo que te dé ${r_player} y adivina el ingrediente.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sándwich sorpresa",
+      "action": "${c_player}, haz un sándwich con tres cosas al azar y cómetelo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Trago picante",
+      "action": "${c_player}, bebe un sorbo de agua con una pizca de chile picante. Ni una mueca.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Salsas en grupo",
+      "action": "Todos untan una salsa al azar en pan y se lo comen. Quien haga mueca, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Postre salado",
+      "action": "${c_player}, échale sal a media galleta y cómetela en silencio.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ruleta de cócteles",
+      "action": "${c_player}, mezcla dos bebidas distintas que elija ${r_player} y da un trago.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Eco crujiente",
+      "action": "${c_player}, cruje bien fuerte cualquier snack y di «delicioso» tres veces.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sonrisa de queso",
+      "action": "${c_player}, muerde un trozo de queso formando una sonrisa y enséñala a todos.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Combo de nevera",
+      "action": "${c_player}, mezcla tres bebidas de la nevera en un vaso y bébetelo de golpe sin parar.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Todos gourmet",
+      "action": "Cada uno come una cucharada de kétchup + mayonesa. Quien se niegue, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Rap frutal",
+      "action": "${c_player}, envuelve una mandarina en una servilleta como si fuera micro y rapea un verso corto sobre comida.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Crítico del tenedor",
+      "action": "${c_player}, finge que juzgas un plato de lujo mientras pruebas una papita frita.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Risas de pepino",
+      "action": "${c_player}, muerde un pepino y ríete 10 segundos sin tragar.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Brindis loco",
+      "action": "${c_player}, inventa un brindis absurdo sobre el kéfir y dilo levantando un vaso de agua.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chocolate + chips",
+      "action": "${c_player}, come un trozo de chocolate con una papa frita en un solo bocado.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sumilleres de agua",
+      "action": "Todos dan un sorbo de agua y describen el «posgusto». Quien lo haga mal, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Aplauso a la avena",
+      "action": "${c_player}, da una palmada a un cuenco de gachas (reales o imaginarias) y di «obra maestra».",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Reto picante",
+      "action": "${c_player}, come una rodaja de chile. Solo puedes beber después de 30 s.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Sándwich de amistad",
+      "action": "Haced un sándwich compartido: cada uno añade un ingrediente y luego lo vais mordiendo por turnos.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Rollo invertido",
+      "action": "${c_player}, sin arroz: envuelve una rebanada de pan con alga nori y cómetela.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bigote espumoso",
+      "action": "${c_player}, bebe un sorbo de refresco con gas y hazte una foto con tu bigote de espuma.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jugo con leche",
+      "action": "${c_player}, mezcla jugo con un poco de leche, bébelo y describe el sabor en una palabra.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Todos son bartenders",
+      "action": "Cada uno dice un ingrediente raro para cóctel. ${r_player} mezcla y bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Baile de la cuchara",
+      "action": "${c_player}, sujeta una cuchara entre los dientes y baila 15 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Vaso al borde",
+      "action": "${c_player}, bebe agua sujetando el vaso solo por la base con dos dedos.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dilema del huevo",
+      "action": "${c_player}, trágate un huevo crudo o da dos buenos tragos de tu bebida.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ronda frutal",
+      "action": "Todos cogen una fruta y dan vueltas alrededor de la mesa 10 segundos.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Nieve de azúcar",
+      "action": "${c_player}, echa una pizca de azúcar en tu lengua y di «copito de nieve».",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Olfateador de especias",
+      "action": "${c_player}, adivina una especia solo por el olor: la que elija ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Súper smoothie",
+      "action": "${c_player}, di 4 ingredientes para el batido perfecto. Por cada fallo, un trago.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Todos chefs",
+      "action": "Inventen un plato con «lo que haya». ${r_player} elige el mejor; los demás beben.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mayo a cucharadas",
+      "action": "${c_player}, come una cucharadita de mayonesa sin poner cara.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mastica fuerte",
+      "action": "${c_player}, cruje una papa frita más fuerte que todos durante 5 s. ¿Muy flojo? Trago extra.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Postre sin dulce",
+      "action": "${c_player}, échale sal a cualquier postre y cómetelo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Catadores de agua",
+      "action": "Describan el agua simple como si fuera vino caro. La descripción más sosa bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Valiente de la cebolla",
+      "action": "${c_player}, muerde cebolla cruda. Si te niegas, dos tragos.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chocolate + sal",
+      "action": "${c_player}, moja un trozo de chocolate en sal y cómetelo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cómete el arcoíris",
+      "action": "${c_player}, come cinco cosas de colores distintos seguidas.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cóctel de colegas",
+      "action": "${c_player} y ${r_player} preparan cada uno una bebida para el otro y luego las intercambian.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Chile + leche",
+      "action": "${c_player}, baja un bocado de chile con leche y di «fácil».",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ensalada sin manos",
+      "action": "${c_player}, come un trozo de ensalada sin usar las manos.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Todos baristas",
+      "action": "Describan el sabor del café perfecto. Quien sea más soso, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Cuento de sopa",
+      "action": "${c_player}, cuenta un mini cuento de hadas sobre una sopa donde el protagonista sea ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Rey de la hamburguesa",
+      "action": "${c_player}, actúa un anuncio de hamburguesas para que todos quieran una.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Torre de picatostes",
+      "action": "${c_player}, construye una torre de 6 picatostes. Si se cae, bebes.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Críticos gourmet",
+      "action": "Puntúen el agua del 1 al 10. Quien diga 1 o 10, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Miel + limón",
+      "action": "${c_player}, cómete una cucharada de miel y muerde un limón enseguida.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bebida a rayas",
+      "action": "${c_player}, haz capas con tres líquidos en una bebida y tómala de un trago.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Test de queso",
+      "action": "${c_player}, prueba a ciegas dos quesos y adivina cuál es cuál.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Chamanes del helado",
+      "action": "Di el sabor de helado más loco que probarías. Si dudas, bebes.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}

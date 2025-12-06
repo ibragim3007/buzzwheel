@@ -1,0 +1,317 @@
+{
+  "id": 10,
+  "name": "Brainiacs",
+  "packageType": "default",
+  "description": "Ein Trink-Quiz: Jede falsche Antwort bringt dich näher zum Glasboden. Testen wir dein Wissen!",
+  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Mathe ohne Taschenrechner",
+      "action": "${c_player}, wie viel ist 17 × 8?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hauptstadt-Quiz",
+      "action": "${c_player}, nenne die Hauptstadt von Kanada.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Flaggen-Raten",
+      "action": "${c_player}, welches Land hat eine Flagge mit einem Ahornblatt?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Erster im All",
+      "action": "${c_player}, wer war der erste Mensch im All?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chemisches Symbol",
+      "action": "${c_player}, wie lautet das chemische Symbol für Gold?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wer hat's geschrieben?",
+      "action": "${c_player}, wer hat den Roman '1984' geschrieben?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Blitz-Übersetzung",
+      "action": "${c_player}, übersetze das Wort 'свобода' ins Englische.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beatles-Heimatstadt",
+      "action": "${c_player}, in welcher Stadt wurden die Beatles geboren?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Exaktes Jahr",
+      "action": "${c_player}, in welchem Jahr wurde die UdSSR aufgelöst?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sport-Stoppuhr",
+      "action": "${c_player}, wie viele Minuten dauert eine Halbzeit im Fußball?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mathe-Blitz",
+      "action": "${c_player}, wie lautet die Quadratwurzel aus 144?",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Griechischer Kriegsgott",
+      "action": "${c_player}, wer war der Kriegsgott in der griechischen Mythologie?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Planeten-Trio",
+      "action": "${c_player}, nenne drei Planeten im Sonnensystem hintereinander.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Literarischer Partner",
+      "action": "${c_player}, wie lautet der Nachname des Doktors in den Sherlock-Geschichten?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Französischer Herrscher 1804",
+      "action": "${c_player}, wer regierte Frankreich im Jahr 1804?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fluss-Stadt",
+      "action": "${c_player}, durch welche Stadt fließt die Newa?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Richter-Skala",
+      "action": "${c_player}, was misst die Richter-Skala?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "HTML-Check",
+      "action": "${c_player}, wofür steht die Abkürzung HTML?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Paella-Herkunft",
+      "action": "${c_player}, aus welchem Land stammt das Gericht 'Paella'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Knifflige Hauptstadt",
+      "action": "${c_player}, wie heißt die Hauptstadt von Neuseeland?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wasserformel",
+      "action": "${c_player}, schreibe die chemische Formel für Wasser.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Titanic-Star",
+      "action": "${c_player}, wer spielte Jack in 'Titanic'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weltfrauentag",
+      "action": "${c_player}, an welchem Datum wird der Internationale Frauentag gefeiert?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Angebissener Apfel",
+      "action": "${c_player}, welches Unternehmen hat einen angebissenen Apfel als Logo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bewegungsgesetze",
+      "action": "${c_player}, welcher Wissenschaftler formulierte die drei Bewegungsgesetze?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Tier-Alphabet",
+      "action": "Geht reihum und nennt Tiere in alphabetischer Reihenfolge. Fehler — Schluck!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Hauptstadt-Staffel",
+      "action": "Nennt reihum Hauptstädte der Welt. Wiederholung — Schluck!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Bis zehn zählen",
+      "action": "Sagt der Reihe nach die Zahlen 1-10, aber klatscht statt 5. Fehler — trinken.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Filmzitate",
+      "action": "Nennt ohne Pause Filmzitate. Patzer — Schluck.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Song-Kette",
+      "action": "Jeder nennt einen Song, der mit dem letzten Buchstaben des vorherigen beginnt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Marken-Marathon",
+      "action": "Nennt im Uhrzeigersinn Bekleidungsmarken. Wiederholung oder Pause — trinken!",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Fußballvereine",
+      "action": "Nennt der Reihe nach Fußballvereine. Fehler — trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Farben-Runde",
+      "action": "Nennt schnell eine neue Farbe. Wiederholung — Schluck.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Sprichwort-Puzzle",
+      "action": "Einer beginnt ein Sprichwort, der nächste führt es fort. Fehlversuch — trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sprachen der Welt",
+      "action": "Nennt reihum Sprachen. Zögern — trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Flaggenfarbe",
+      "action": "${c_player}, welche Farbe ist NICHT auf der Flagge Frankreichs?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Espresso-Herkunft",
+      "action": "${c_player}, aus welchem Land stammt der Espresso?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bio-Blitz",
+      "action": "${c_player}, wie viele Backenzähne hat ein erwachsener Mensch?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "IPO-Bedeutung",
+      "action": "${c_player}, wofür steht die Abkürzung 'IPO'?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Meistübersetztes Buch",
+      "action": "${c_player}, welches Buch wurde in die meisten Sprachen übersetzt?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Erd-Radius",
+      "action": "${c_player}, wie viele Kilometer beträgt ungefähr der Radius der Erde?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Russische Vorwahl",
+      "action": "${c_player}, wie lautet die internationale Telefonvorwahl Russlands?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Glühbirnen-Patent",
+      "action": "${c_player}, wer meldete das erste Patent für die Glühlampe an?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Grammatik-Check",
+      "action": "${c_player}, welche Wortart ist das Wort 'beautifully'?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Oktopus-Herzen",
+      "action": "${c_player}, wie viele Herzen hat ein Oktopus?",
+      "type": "player",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Sternbild-Kette",
+      "action": "Nennt der Reihe nach Sternbilder. Zögern — Schluck.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Film-Alphabet-Challenge",
+      "action": "Nennt Filme von A-Z. Patzer — trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Körperteile-Kette",
+      "action": "Listet menschliche Körperteile auf. Wiederholung — Schluck.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Städte-Kette",
+      "action": "Jeder nennt eine Stadt, die mit dem letzten Buchstaben der vorherigen beginnt.",
+      "type": "all",
+      "alcohol": 2
+    },
+
+    {
+      "title": "Finaler Blitz",
+      "action": "${c_player}, nenne in 20 Sekunden 5 europäische Länder.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "id": 12,
+  "name": "Je n'ai jamais",
+  "packageType": "default",
+  "description": "Mode classique qui révèle les secrets les plus fous des joueurs. Voyons qui est le plus expérimenté !",
+  "imageEncoded": "d4ad2c82-fc72-43fa-965b-e75f76232504.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Soirée secrète",
+      "action": "${c_player}, dis : \"Je n'ai jamais été à une soirée que j'ai regrettée le lendemain matin.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Petit vol",
+      "action": "${c_player}, dis : \"Je n'ai jamais volé de la petite monnaie dans un magasin.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baiser surprise",
+      "action": "${c_player}, dis : \"Je n'ai jamais embrassé un inconnu pour un défi.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rupture sans explication",
+      "action": "${c_player}, dis : \"Je n'ai jamais quitté une relation sans explication.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Voyage spontané",
+      "action": "${c_player}, dis : \"Je n'ai jamais acheté un billet pour une autre ville sur un coup de tête.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bagarre à l'école",
+      "action": "${c_player}, dis : \"Je ne me suis jamais battu à l'école.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Examen raté",
+      "action": "${c_player}, dis : \"Je ne me suis jamais réveillé trop tard pour un examen important.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush sur un prof",
+      "action": "${c_player}, dis : \"Je n'ai jamais eu un crush sur un prof.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tatouage bourré",
+      "action": "${c_player}, dis : \"Je ne me suis jamais fait tatouer en étant bourré.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sieste au terminus",
+      "action": "${c_player}, dis : \"Je ne me suis jamais réveillé au terminus des transports en commun.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romance au bureau",
+      "action": "${c_player}, dis : \"Je n'ai jamais commencé une relation au bureau.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mauvais trajet",
+      "action": "${c_player}, dis : \"Je ne suis jamais monté dans le mauvais train ou le mauvais bus.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Parler en dormant",
+      "action": "${c_player}, dis : \"Je n'ai jamais parlé en dormant devant d'autres personnes.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Strip-tease devant le miroir",
+      "action": "${c_player}, dis : \"Je n'ai jamais dansé un strip-tease devant un miroir.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Vol manqué",
+      "action": "${c_player}, dis : \"Je n'ai jamais raté un vol.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Faux arrêt maladie",
+      "action": "${c_player}, dis : \"Je n'ai jamais pris un arrêt maladie sans être vraiment malade.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Message nocturne à un ex",
+      "action": "${c_player}, dis : \"Je n'ai jamais écrit à mon ex en pleine nuit.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Baignade nue",
+      "action": "${c_player}, dis : \"Je ne me suis jamais baigné nu.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Téléphone noyé",
+      "action": "${c_player}, dis : \"Je n'ai jamais fait tomber mon téléphone dans l'eau par accident.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Soirée secrète à la maison",
+      "action": "${c_player}, dis : \"Je n'ai jamais organisé une soirée chez moi en cachette de mes parents.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Journée d'école séchée",
+      "action": "${c_player}, dis : \"Je n'ai jamais séché une journée entière d'école.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mauvais destinataire",
+      "action": "${c_player}, dis : \"Je n'ai jamais envoyé un message intime à la mauvaise personne.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Vidéo gênante",
+      "action": "${c_player}, dis : \"Je n'ai jamais filmé une vidéo gênante pour les réseaux sociaux.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Compte espion",
+      "action": "${c_player}, dis : \"Je n'ai jamais créé de faux profil pour espionner quelqu'un.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Grignotage nocturne",
+      "action": "${c_player}, dis : \"Je n'ai jamais mangé la nuit debout devant le frigo.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rencard à l'aveugle",
+      "action": "${c_player}, dis : \"Je ne suis jamais allé à un rencard à l'aveugle.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Voisins effrayés",
+      "action": "${c_player}, dis : \"Je n'ai jamais fait peur à mes voisins avec des bruits bizarres.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Grosse perte au jeu",
+      "action": "${c_player}, dis : \"Je n'ai jamais perdu une grosse somme d'argent en jouant.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Casser et se taire",
+      "action": "${c_player}, dis : \"Je n'ai jamais cassé les affaires de quelqu'un et gardé le silence.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fuite devant la sécurité",
+      "action": "${c_player}, dis : \"Je n'ai jamais fui la sécurité ou la police.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Étiquette oubliée",
+      "action": "${c_player}, dis : \"Je ne suis jamais sorti de chez moi avec l'étiquette de prix encore sur mes vêtements.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Manger des insectes",
+      "action": "${c_player}, dis : \"Je n'ai jamais mangé d'insectes.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sieste au travail",
+      "action": "${c_player}, dis : \"Je ne me suis jamais endormi au travail ou en cours.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tatouage caché",
+      "action": "${c_player}, dis : \"Je n'ai jamais caché un tatouage à mes parents.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fétiche bizarre",
+      "action": "${c_player}, dis : \"Je n'ai jamais eu une étrange attirance pour des objets.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Like accidentel",
+      "action": "${c_player}, dis : \"Je n'ai jamais liké par accident la photo de mon ex.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vengeance sur un ex",
+      "action": "${c_player}, dis : \"Je ne me suis jamais vengé d'un ex.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fugue d'enfance",
+      "action": "${c_player}, dis : \"Je n'ai jamais essayé de fuguer de chez moi quand j'étais enfant.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fausse maladie",
+      "action": "${c_player}, dis : \"Je n'ai jamais fait semblant d'être malade pour annuler des plans.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush sur prof 2.0",
+      "action": "${c_player}, dis : \"Je ne suis jamais tombé amoureux de mon prof.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Écoute indiscrète",
+      "action": "${c_player}, dis : \"Je n'ai jamais écouté volontairement la conversation de quelqu'un.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mauvaise voiture",
+      "action": "${c_player}, dis : \"Je ne suis jamais monté par erreur dans la mauvaise voiture.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sans ticket",
+      "action": "${c_player}, dis : \"Je n'ai jamais pris les transports en commun sans payer.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Briseur de cœurs",
+      "action": "${c_player}, dis : \"Je n'ai jamais brisé le cœur de quelqu'un volontairement.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Contrôle séché",
+      "action": "${c_player}, dis : \"Je n'ai jamais séché un contrôle.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Souvenirs d'hôtel",
+      "action": "${c_player}, dis : \"Je n'ai jamais emporté des choses d'une chambre d'hôtel.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Réveil chez un inconnu",
+      "action": "${c_player}, dis : \"Je ne me suis jamais réveillé chez un inconnu sans savoir comment j'étais arrivé là.\"",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selfie au volant",
+      "action": "${c_player}, dis : \"Je n'ai jamais pris de selfie en conduisant.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fast-food nocturne",
+      "action": "${c_player}, dis : \"Je n'ai jamais mangé de fast-food la nuit pendant un régime.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Âge inventé",
+      "action": "${c_player}, dis : \"Je n'ai jamais menti sur mon âge.\"",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cinéma sans billet",
+      "action": "${c_player}, dis : \"Je ne suis jamais entré au cinéma sans billet.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Trou de mémoire sur scène",
+      "action": "${c_player}, dis : \"Je n'ai jamais oublié mon texte sur scène.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Compétence inventée",
+      "action": "${c_player}, dis : \"Je ne me suis jamais vanté d'une compétence que je n'ai pas.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nourriture de coloc volée",
+      "action": "${c_player}, dis : \"Je n'ai jamais volé de la nourriture dans le frigo d'un coloc.\"",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Alias secret",
+      "action": "Je n'ai jamais créé un compte au nom de quelqu'un d'autre.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Billet pour nulle part",
+      "action": "Je ne suis jamais parti dans une autre ville sans argent ni plan.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Appel à l'aube",
+      "action": "Je n'ai jamais appelé un ex à l'aube.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Bluff du faux tatouage",
+      "action": "Je n'ai jamais fait croire qu'un tatouage temporaire était vrai.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Défi esquivé",
+      "action": "Je ne me suis jamais dégonflé sur un défi avant de disparaître.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Secret dévoilé",
+      "action": "Je n'ai jamais révélé le secret de quelqu'un après avoir promis de le garder.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Grosse gamelle en public",
+      "action": "Je ne suis jamais tombé en public en faisant semblant que c'était un pas de danse.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Signature des parents imitée",
+      "action": "Je n'ai jamais imité la signature de mes parents.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "DM à une célébrité",
+      "action": "Je n'ai jamais glissé dans les DM d'une célébrité.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Billets mystères",
+      "action": "Je n'ai jamais acheté des billets de concert sans savoir qui jouait.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

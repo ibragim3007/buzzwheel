@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Hamon sa Meryenda",
+  "packageType": "default",
+  "description": "Masasarap at nakakabaliw na hamon sa pagkain at inumin. Haluan, higop, mag-eksperimento!",
+  "imageEncoded": "f4e6f25e-5e77-4d06-85b5-ec2ddfaff58f.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Bulag na Tikim",
+      "action": "${c_player}, nakatakip ang mga mata, tikman ang isang kutsarang ibibigay sa’yo ni ${r_player} at hulaan kung ano iyon.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Sorpresang Sandwich",
+      "action": "${c_player}, gumawa ng sandwich mula sa tatlong random na sangkap at kainin ito.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Maanghang na Shot",
+      "action": "${c_player}, uminom ng isang lagok ng tubig na may kurot ng sili. Bawal pumangiwi!",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pahid ng Grupo",
+      "action": "Lahat magpahid ng random na sarsa sa tinapay at kumain. Sinumang pumangiwi, iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Ma-alat na Dessert",
+      "action": "${c_player}, budburan ng asin ang kalahati ng biskwit at kainin nang tahimik.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ruleta ng Cocktail",
+      "action": "${c_player}, paghaluin ang dalawang magkaibang inumin na pinili ni ${r_player} at uminom ng isang lagok.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Maingay na Kagat",
+      "action": "${c_player}, kumagat nang malakas sa kahit anong meryenda at sabihin ang “ang sarap” nang tatlong beses.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ngiting Keso",
+      "action": "${c_player}, kagatin ang isang pirasong keso para maging hugis-ngiti at ipakita sa lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Halo sa Ref",
+      "action": "${c_player}, paghaluin ang tatlong inuming nasa ref sa isang baso at inumin nang tuloy-tuloy.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lahat Gourmet",
+      "action": "Bawat isa kumain ng isang kutsarang ketchup + mayo. Ang tumanggi, iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Fruit Rap",
+      "action": "${c_player}, balutin ang isang mandarin orange sa napkin na parang mikropono at mag-rap ng maikling berso tungkol sa pagkain.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Kritikong Tinidor",
+      "action": "${c_player}, magpanggap na hinuhusgahan mo ang mamahaling putahe habang tumitikim lang ng french fry.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tawang Pipino",
+      "action": "${c_player}, kumagat ng pipino at tumawa nang 10 segundo nang hindi nilulunok.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Lokolokong Toast",
+      "action": "${c_player}, mag-imbento ng kabaliw-baliw na toast tungkol sa kefir at sabihin ito habang nakataas ang baso ng tubig.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tsokolate + Tsip",
+      "action": "${c_player}, kumain ng pirasong tsokolate kasama ang isang tsip sa iisang kagat.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sommelier ng Tubig",
+      "action": "Lahat iinom ng tubig at ilalarawan ang “aftertaste”. Hindi makaisip → iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Palakpak sa Lugaw",
+      "action": "${c_player}, tapikin ang mangkok ng lugaw (totoo o kunwari lang) at sabihing “obra maestra”.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maanghang na Hamon",
+      "action": "${c_player}, kumain ng isang hiwa ng sili. Pwede ka lang uminom pagkalipas ng 30 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Sandwich ng Pagkakaibigan",
+      "action": "Gumawa ng pang-lahat na sandwich: bawat isa magdagdag ng tig-isang sangkap, tapos sali-salitan kayong kumakagat.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Baliktad na Roll",
+      "action": "${c_player}, walang kanin! Balutin ang isang pirasong tinapay sa nori at kainin.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Foam Bigote",
+      "action": "${c_player}, uminom ng softdrink, hayaang magmukhang bigote ang foam at kunan ng litrato.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Halo ng Juice at Gatas",
+      "action": "${c_player}, paghaluin ang juice at kaunting gatas, inumin, at ilarawan ang lasa sa isang salita.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lahat Bartender",
+      "action": "Bawat isa magsabi ng isang weird na sangkap ng cocktail. Si ${r_player} ang maghahalo at iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sayaw ng Kutsara",
+      "action": "${c_player}, ipitin ang kutsara sa pagitan ng ngipin at sumayaw nang 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Basong Baliktad",
+      "action": "${c_player}, uminom ng tubig habang hawak ang baso sa pinakailalim gamit lang dalawang daliri.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tanong sa Itlog",
+      "action": "${c_player}, lagukin ang isang hilaw na itlog o uminom ng dalawang malalaking lagok ng inumin mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Prutas na Ikot",
+      "action": "Lahat kumuha ng prutas at umikot sa mesa nang 10 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Asukal na Niyebe",
+      "action": "${c_player}, maglagay ng kurot ng asukal sa dila at sabihing “snowflake”.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amoy Pampalasa",
+      "action": "${c_player}, hulaan ang isang pampalasa gamit lang ang amoy — yung pipiliin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Super Smoothie",
+      "action": "${c_player}, pangalanan ang 4 na sangkap para sa “perfect” na smoothie. Bawat mali → isang lagok.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lahat Chef",
+      "action": "Mag-imbento ng putahe mula sa “kung ano mang meron dito”. Pipili si ${r_player} ng panalo; lahat ng talo, iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mayo Mastiff",
+      "action": "${c_player}, kumain ng isang kutsarita ng mayo nang walang kahit anong reaksyon sa mukha.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Maingay na Nguyain",
+      "action": "${c_player}, nguyain ang tsip nang mas maingay kaysa sa lahat sa loob ng 5 segundo. Mahina? dagdag na lagok.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Hindi Matamis na Dessert",
+      "action": "${c_player}, budburan ng asin ang kahit anong dessert at kainin.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Taga-Tikim ng Tubig",
+      "action": "Ilarawan ang simpleng tubig na parang mamahaling alak. Pinaka-boring ang paliwanag, iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Bayani ng Sibuyas",
+      "action": "${c_player}, kumagat ng hilaw na sibuyas. Tatanggi? dalawang lagok.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tsokolate + Asin",
+      "action": "${c_player}, isawsaw ang pirasong tsokolate sa asin at kainin.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kainin ang Bahaghari",
+      "action": "${c_player}, kumain ng limang pagkain na iba-iba ang kulay nang sunod-sunod.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cocktail ng Tropang Buddy",
+      "action": "${c_player} at ${r_player}, gumawa kayo ng inumin para sa isa’t isa at magpalitan.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sili + Gatas",
+      "action": "${c_player}, kumagat ng sili, banlawan ng gatas at sabihing “madali lang”.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Salad na Walang Kamay",
+      "action": "${c_player}, kumain ng isang pirasong salad nang hindi gumagamit ng kamay.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lahat Barista",
+      "action": "Ilarawan ang “perfect” na lasa ng kape. Pinaka-boring ang sagot, iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Kuwento ng Sabaw",
+      "action": "${c_player}, magkuwento ng maikling fairy-tale tungkol sa sabaw na bida si ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Hari ng Burger",
+      "action": "${c_player}, gumanap na parang nasa hamburger commercial hanggang mag-crave ang lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tore ng Pagkain",
+      "action": "${c_player}, bumuo ng tore mula sa 6 na crouton. Pag bumagsak — iinom ka.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gourmet Critics",
+      "action": "Bigyan ng rating ang tubig mula 1–10. Sinumang magbigay ng 1 o 10 ang iinom.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Pulot + Lemon",
+      "action": "${c_player}, kumain ng isang kutsara ng pulot tapos agad kumagat ng lemon.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Guhitang Inumin",
+      "action": "${c_player}, gumawa ng inuming may tatlong patong ng likido at lagukin.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Test sa Keso",
+      "action": "${c_player}, tikman nang nakapikit ang dalawang keso at hulaan kung alin ang alin.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Shaman ng Ice Cream",
+      "action": "Banggitin ang pinaka-wild na flavor ng ice cream na susubukan mo. Mag-alinlangan? iinom.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}

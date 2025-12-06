@@ -1,0 +1,320 @@
+{
+  "id": 11,
+  "name": "Snack-Challenge",
+  "packageType": "default",
+  "description": "Leckere und verrückte Challenges mit Essen und Drinks. Mischt, nippt und experimentiert!",
+  "imageEncoded": "f4e6f25e-5e77-4d06-85b5-ec2ddfaff58f.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Blinder Geschmackstest",
+      "action": "${c_player}, mit verbundenen Augen einen Löffel von dem probieren, was dir ${r_player} gibt, und die Zutat erraten.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Überraschungs-Sandwich",
+      "action": "${c_player}, mach dir aus drei zufälligen Sachen ein Sandwich und iss es.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gewürz-Shot",
+      "action": "${c_player}, trink einen Schluck Wasser mit einer Prise scharfem Pfeffer. Keine Grimassen!",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gruppen-Aufstrich",
+      "action": "Alle schmieren eine zufällige Soße aufs Brot und essen. Wer das Gesicht verzieht, trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Salziges Dessert",
+      "action": "${c_player}, bestreue einen halben Keks mit Salz und iss ihn schweigend.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cocktail-Roulette",
+      "action": "${c_player}, mische zwei verschiedene Drinks, die ${r_player} auswählt, und nimm einen Schluck.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Knusper-Echo",
+      "action": "${c_player}, knuspere einen beliebigen Snack laut und sag dreimal „lecker“.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Käse-Lächeln",
+      "action": "${c_player}, beiß ein Stück Käse zu einem Lächeln und zeig es allen.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kühlschrank-Mix",
+      "action": "${c_player}, mische drei Getränke aus dem Kühlschrank in einem Glas und ex sie ohne Pause.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Alle sind Gourmets",
+      "action": "Jeder isst einen Löffel Ketchup + Mayo. Wer ablehnt, trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Früchte-Rap",
+      "action": "${c_player}, wickle eine Mandarine wie ein Mikro in eine Serviette und rappe einen kurzen Vers über Essen.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Gabel-Kritiker",
+      "action": "${c_player}, tu so, als würdest du ein Gourmetgericht bewerten, während du eine Pommes probierst.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gurken-Kichern",
+      "action": "${c_player}, beiß in eine Gurke und lache 10 Sekunden, ohne zu schlucken.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Wilder Toast",
+      "action": "${c_player}, denk dir einen absurden Trinkspruch über Kefir aus und sag ihn mit erhobenem Wasserglas.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schoko + Chips",
+      "action": "${c_player}, iss ein Stück Schokolade zusammen mit einem Chip in einem Biss.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wasser-Sommeliers",
+      "action": "Alle nippen an Wasser und beschreiben den „Nachgeschmack“. Wer scheitert, trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Brei-Klatscher",
+      "action": "${c_player}, klatsch auf eine Schüssel Brei (echt oder imaginär) und sag „Meisterwerk“.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Scharfe Mutprobe",
+      "action": "${c_player}, iss eine Chilischeibe. Du darfst erst nach 30 s etwas trinken.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Freundschafts-Sandwich",
+      "action": "Macht ein gemeinsames Sandwich: Jeder fügt eine Zutat hinzu, dann esst ihr reihum davon.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Reverse-Rolle",
+      "action": "${c_player}, lass den Reis weg! Wickel eine Brotscheibe in Nori und iss sie.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Schaum-Schnurrbart",
+      "action": "${c_player}, nimm einen Schluck Limo und mach ein Foto von deinem Schaumschnurrbart.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Saft-Milch-Mix",
+      "action": "${c_player}, mische Saft mit etwas Milch, trink und beschreibe den Geschmack mit einem Wort.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Alle sind Barkeeper",
+      "action": "Jeder nennt eine verrückte Cocktail-Zutat. ${r_player} mischt und trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Löffel-Tanz",
+      "action": "${c_player}, klemme einen Löffel zwischen die Zähne und tanze 15 Sekunden.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Glas-Flip",
+      "action": "${c_player}, trink Wasser, während du das Glas nur ganz unten mit zwei Fingern hältst.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Eier-Frage",
+      "action": "${c_player}, kipp ein rohes Ei runter oder mach zwei große Schlucke von deinem Drink.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Frucht-Ringelreih",
+      "action": "Alle schnappen sich eine Frucht und drehen 10 Sekunden eine Runde um den Tisch.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Zucker-Schnee",
+      "action": "${c_player}, streu dir eine Prise Zucker auf die Zunge und sag „Schneeflocke“.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gewürz-Schnüffler",
+      "action": "${c_player}, errate ein Gewürz nur am Geruch – das, welches ${r_player} auswählt.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Super-Smoothie",
+      "action": "${c_player}, nenne 4 Zutaten für den perfekten Smoothie. Jeder Patzer → ein Schluck.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Alle sind Köche",
+      "action": "Erfindet ein Gericht aus „was halt da ist“. ${r_player} kürt das beste; die anderen trinken.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Mayo-Mastiff",
+      "action": "${c_player}, iss einen Teelöffel Mayo, ohne eine Miene zu verziehen.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Laut Kauen",
+      "action": "${c_player}, knuspere einen Chip 5 s lang lauter als alle anderen. Zu leise? Extra-Schluck.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 5
+    },
+    {
+      "title": "Unsüßes Dessert",
+      "action": "${c_player}, bestreue ein beliebiges Dessert mit Salz und iss es.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wasser-Verkoster",
+      "action": "Beschreibt Leitungswasser wie edlen Wein. Die langweiligste Beschreibung trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Zwiebel-Held",
+      "action": "${c_player}, beiß in eine rohe Zwiebel. Verweigern → zwei Schluck.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Schoko + Salz",
+      "action": "${c_player}, tunke ein Stück Schokolade in Salz und iss es.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Iss den Regenbogen",
+      "action": "${c_player}, iss fünf Lebensmittel in verschiedenen Farben hintereinander.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Buddy-Cocktail",
+      "action": "${c_player} und ${r_player} mixen sich gegenseitig einen Drink und tauschen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pfeffer + Milch",
+      "action": "${c_player}, spül einen Chilihappen mit Milch runter und sag „easy“.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Salat ohne Hände",
+      "action": "${c_player}, iss ein Stück Salat, ohne die Hände zu benutzen.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Alle sind Baristas",
+      "action": "Beschreibt den perfekten Kaffeegeschmack. Die langweiligste Person trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Suppen-Story",
+      "action": "${c_player}, erzähl ein kurzes Märchen über Suppe mit ${r_player} in der Hauptrolle.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Burger-König",
+      "action": "${c_player}, spiel eine Hamburger-Werbung nach, sodass alle einen wollen.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Food-Turm",
+      "action": "${c_player}, bau einen Turm aus 6 Croutons. Wenn er einstürzt, trinkst du.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gourmet-Kritiker",
+      "action": "Bewertet Wasser von 1–10. Wer 1 oder 10 gibt, trinkt.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Honig + Zitrone",
+      "action": "${c_player}, iss einen Löffel Honig und beiß direkt in eine Zitrone.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gestreifter Drink",
+      "action": "${c_player}, schichte drei Flüssigkeiten in einem Drink und kipp ihn runter.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Käse-Test",
+      "action": "${c_player}, verkoste zwei Käsesorten blind und rate, welche welche ist.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Eis-Schamanen",
+      "action": "Nennt die verrückteste Eissorte, die ihr probieren würdet. Zögern → trinken.",
+      "type": "all",
+      "alcohol": 2
+    }
+  ]
+}
