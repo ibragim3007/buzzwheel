@@ -16,7 +16,7 @@ interface Actions {
 export const usePurchases = create<State & Actions>(set => {
   const initValues = async () => {
     try {
-      Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
+      void Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
 
       // Configure RevenueCat based on the platform
       if (Platform.OS === 'ios') {
@@ -38,7 +38,7 @@ export const usePurchases = create<State & Actions>(set => {
     }
   };
 
-  initValues();
+  void initValues();
 
   return {
     customerInfo: undefined,
