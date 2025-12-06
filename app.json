@@ -10,7 +10,12 @@
     "userInterfaceStyle": "automatic",
     "locales": {
       "en": "./assets/locales/en.json",
-      "ru": "./assets/locales/ru.json"
+      "ru": "./assets/locales/ru.json",
+      "fr": "./assets/locales/fr.json",
+      "de": "./assets/locales/de.json",
+      "pl": "./assets/locales/pl.json",
+      "es": "./assets/locales/es.json",
+      "fil": "./assets/locales/fil.json"
     },
     "splash": {
       "image": "./assets/images/splash.png",
