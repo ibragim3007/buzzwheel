@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Faceci na krawędzi",
+  "packageType": "default",
+  "description": "Mocne wyzwania: siła, striptiz i adrenalina. Najlepszy tryb dla paczki samych gości!",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Błyskawiczne pompki",
+      "action": "${c_player}, zrób 15 pompek tak szybko, jak potrafisz.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Stanie na rękach",
+      "action": "${c_player}, wytrzymaj w staniu na rękach co najmniej 10 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Koszulka jedną ręką",
+      "action": "${c_player}, zdejmij koszulkę jedną ręką, jak na pokazie.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Taniec brzucha",
+      "action": "${c_player}, zatańcz taniec brzucha.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Siłowanie na rękę",
+      "action": "${c_player} i ${r_player}, zróbcie mini pojedynek na rękę.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wyzwanie w desce",
+      "action": "${c_player}, wytrzymaj w desce 30 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Pokaz mięśni",
+      "action": "${c_player}, pokaż swoje trzy najlepsze pozy kulturystyczne.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Bokserska minuta",
+      "action": "${c_player}, wyprowadzaj ciosy w powietrze przez 20 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Wyzwanie burpee",
+      "action": "${c_player}, zrób 10 burpees w 30 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Ruch z Magic Mike'a",
+      "action": "${c_player}, naśladuj taneczny ruch z 'Magic Mike'.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pompki z klaśnięciem",
+      "action": "${c_player}, zrób 15 pompek z klaśnięciem.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Mostek",
+      "action": "${c_player}, zrób mostek i wytrzymaj 10 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Skoki na jednej nodze",
+      "action": "${c_player}, skacz na jednej nodze przez 15 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Cichy striptiz",
+      "action": "${c_player}, zdejmij jeden element ubrania i przez 30 sekund zachowaj kamienną twarz.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Runda zwycięstwa",
+      "action": "${c_player}, przebiegnij rundę dookoła stołu lub pokoju.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Plażowy kulturysta",
+      "action": "${c_player}, przez 20 sekund udawaj kulturystę na plaży.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Boks z cieniem",
+      "action": "${c_player}, poboksuj z cieniem przez jedną rundę.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Test równowagi",
+      "action": "${c_player}, stań na jednej nodze z zamkniętymi oczami na 15 sekund.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Chwila ciężarowca",
+      "action": "${c_player}, udawaj, że podnosisz ciężką niewidzialną sztangę.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Podnieś kumpla",
+      "action": "${c_player}, podnieś ${r_player} i zrób 3 przysiady.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Skok ninja",
+      "action": "${c_player}, skocz jak najwyżej potrafisz.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lot Supermana",
+      "action": "${c_player}, udawaj Supermana lecącego po podłodze.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Latające kopnięcie",
+      "action": "${c_player}, zrób kopnięcie z wyskoku.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini striptiz",
+      "action": "${c_player}, zrób krótki striptiz przez 20 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pompki z obciążeniem",
+      "action": "${c_player}, rób pompki, gdy ${r_player} siedzi ci na plecach.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Wysokie kopnięcie",
+      "action": "${c_player}, kopnij tak wysoko, jak masz głowę.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Przysiad z kumplem",
+      "action": "${c_player}, rób przysiady z ${r_player} na plecach.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Głośne wyzwanie",
+      "action": "${c_player}, głośno i pewnie wyzwij ${r_player} na pojedynek.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Szybki striptiz",
+      "action": "${c_player}, zdejmij dowolne dwa elementy ubrania w 15 sekund.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Poza zwycięzcy",
+      "action": "${c_player}, przyjmij pozę zwycięzcy i trzymaj ją przez 20 sekund.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Podciąganie przy stole",
+      "action": "${c_player}, zrób 10 podciągnięć, używając stołu lub innej powierzchni.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pompki z uśmiechem",
+      "action": "${c_player}, zrób 10 pompek z szerokim uśmiechem.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Piłkarski freestyle",
+      "action": "${c_player}, pokaż serię piłkarskich trików.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Skok przez krzesło",
+      "action": "${c_player}, ostrożnie przeskocz przez krzesło.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pojedynek na gibkość",
+      "action": "${c_player}, pokaż swoje maksymalne rozciągnięcie.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pozowanie do kamery",
+      "action": "${c_player}, efektownie napręż mięśnie przed grupą.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Drużynowe przysiady",
+      "action": "Wszyscy gracze robią jednocześnie 10 przysiadów.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Popis siły",
+      "action": "${c_player}, podnieś krzesło i trzymaj je 10 sekund.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Żabi skok",
+      "action": "${c_player}, przeskocz nad ${r_player} jak żaba.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Błyskawiczne ciosy",
+      "action": "${c_player}, pokaż najszybsze ciosy, jakie potrafisz.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Żywa kettlebell",
+      "action": "${c_player}, podnieś ${r_player} jak kettlebell.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Drabinka przysiadów",
+      "action": "${c_player}, rób przysiady po kolei z każdym graczem.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Król podciągnięć",
+      "action": "${c_player}, zrób 10 podciągnięć na wyimaginowanym drążku.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ekstremalne skoki",
+      "action": "${c_player}, zrób serię wysokich skoków.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minuta kulturysty",
+      "action": "${c_player}, napinaj mięśnie po kolei przed każdym graczem.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Grupowe pompki",
+      "action": "Wszyscy gracze robią jednocześnie 10 pompek. Ostatni kończący pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Męski striptiz",
+      "action": "Każdy gracz zdejmuje jeden element ubrania. Kto odmówi, pije.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Bitwa w desce",
+      "action": "Wszyscy trzymają deskę przez 30 sekund. Kto pierwszy padnie, przegrywa i pije.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Turniej na rękę",
+      "action": "Zróbcie turniej w siłowaniu na rękę. Zwycięzca wybiera kogoś do picia.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sztafeta skoków",
+      "action": "Gracze po kolei robią po 5 wysokich skoków. Ten z najsłabszym wynikiem pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Wyzwanie Sparty",
+      "action": "Wszyscy krzyczą \"This is Sparta!\" i przyjmują bojowe pozy. Najcichszy pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ring pompek",
+      "action": "Wszyscy robią pompki. Kto pierwszy przestanie, pije.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Okrzyk bojowy",
+      "action": "Każdy wydaje z siebie najgłośniejszy okrzyk bojowy. Najsłabszy pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Siła bractwa",
+      "action": "Gracze splatają ramiona i robią 10 przysiadów w tym samym rytmie. Kto się wybije z rytmu, pije.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Taniec wojowników",
+      "action": "Wszyscy tańczą taniec wojowników przez 15 sekund. Kto odmówi, pije.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

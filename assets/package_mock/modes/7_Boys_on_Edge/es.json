@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Hombres al límite",
+  "packageType": "default",
+  "description": "Retos brutales de fuerza, striptease y adrenalina. El mejor modo para un grupo solo de chicos.",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Flexiones rápidas",
+      "action": "${c_player}, haz 15 flexiones lo más rápido que puedas.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Aguante en pino",
+      "action": "${c_player}, aguanta el pino al menos 10 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Camiseta con una mano",
+      "action": "${c_player}, quítate la camiseta con una sola mano de forma dramática.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Baile de abdominales",
+      "action": "${c_player}, haz un baile de vientre.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Pulsos",
+      "action": "${c_player} y ${r_player}, hagan una mini pulseada.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Reto de plancha",
+      "action": "${c_player}, mantén la plancha 30 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Show de músculos",
+      "action": "${c_player}, enseña tus tres mejores poses de culturista.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Minuto de boxeo",
+      "action": "${c_player}, lanza golpes al aire durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Reto de burpees",
+      "action": "${c_player}, haz 10 burpees en 30 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Paso de Magic Mike",
+      "action": "${c_player}, imita un paso de baile de Magic Mike.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Flexiones con aplauso",
+      "action": "${c_player}, haz 15 flexiones con aplauso.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Puente",
+      "action": "${c_player}, haz el puente y aguántalo 10 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Saltos a una pierna",
+      "action": "${c_player}, salta a una pierna durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Strip silencioso",
+      "action": "${c_player}, quítate una prenda y permanece serio 30 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Vuelta de victoria",
+      "action": "${c_player}, corre una vuelta alrededor de la mesa o de la habitación.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cuerpo de playa",
+      "action": "${c_player}, actúa como culturista en la playa durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Boxeo de sombra",
+      "action": "${c_player}, haz boxeo de sombra durante 20 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Prueba de equilibrio",
+      "action": "${c_player}, quédate a una pierna con los ojos cerrados durante 15 segundos.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Minuto de levantador",
+      "action": "${c_player}, finge levantar una barra invisible muy pesada.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Levanta a un amigo",
+      "action": "${c_player}, levanta a ${r_player} y haz 3 sentadillas.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Salto ninja",
+      "action": "${c_player}, salta todo lo alto que puedas.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Desliz de Superman",
+      "action": "${c_player}, actúa como Superman volando por el suelo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Patada voladora",
+      "action": "${c_player}, haz una patada de salto.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini striptease",
+      "action": "${c_player}, haz un striptease corto durante 20 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Flexiones con peso",
+      "action": "${c_player}, haz flexiones mientras ${r_player} se sienta en tu espalda.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Patada alta",
+      "action": "${c_player}, da una patada tan alta como tu cabeza.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sentadillas con peso",
+      "action": "${c_player}, haz sentadillas con ${r_player} en tu espalda.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Reto a gritos",
+      "action": "${c_player}, reta a ${r_player} a un duelo, fuerte y sin miedo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Striptease rápido",
+      "action": "${c_player}, quítate dos prendas cualquiera en 15 segundos.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Posa de victoria",
+      "action": "${c_player}, haz una pose de victoria y manténla 20 segundos.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Dominadas en mesa",
+      "action": "${c_player}, haz 10 dominadas usando una mesa u otra superficie.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Flexiones con sonrisa",
+      "action": "${c_player}, haz 10 flexiones con una sonrisa enorme.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Freestyle de fútbol",
+      "action": "${c_player}, enseña una serie de trucos de fútbol.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Salto sobre silla",
+      "action": "${c_player}, salta con cuidado por encima de una silla.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Duelo de flexibilidad",
+      "action": "${c_player}, muestra tu máxima flexibilidad.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Posa para la cámara",
+      "action": "${c_player}, marca músculo a lo grande para el grupo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sentadillas en equipo",
+      "action": "Todos los jugadores hacen 10 sentadillas a la vez.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Muestra de fuerza",
+      "action": "${c_player}, levanta una silla y mantenla 10 segundos.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Salto de rana",
+      "action": "${c_player}, salta por encima de ${r_player} como una rana.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Golpes relámpago",
+      "action": "${c_player}, muestra los golpes más rápidos que tengas.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Kettlebell vivo",
+      "action": "${c_player}, levanta a ${r_player} como si fuera una kettlebell.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Escalera de sentadillas",
+      "action": "${c_player}, haz sentadillas uno por uno con cada jugador.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Rey de las dominadas",
+      "action": "${c_player}, haz 10 dominadas en una barra imaginaria.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Saltos extremos",
+      "action": "${c_player}, haz una serie de saltos bien altos.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minuto de culturista",
+      "action": "${c_player}, marca músculo para cada jugador, uno por uno.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Flexiones en grupo",
+      "action": "Todos hacen 10 flexiones a la vez. El último en acabar bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Striptease masculino",
+      "action": "Cada jugador se quita una prenda. Quien se niegue bebe.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Batalla de planchas",
+      "action": "Todos hacen plancha 30 segundos. El primero en caer pierde y bebe.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Ring de pulsos",
+      "action": "Haced un torneo de pulsos. El ganador elige a alguien para que beba.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Relevo de saltos",
+      "action": "Por turnos, cada uno hace 5 saltos altos. El que peor lo haga bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Desafío Esparta",
+      "action": "Todos gritan 'This is Sparta!' y hacen poses de lucha. El que menos se oiga bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ring de flexiones",
+      "action": "Todos hacen flexiones. El primero en parar bebe.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Grito de guerra",
+      "action": "Cada jugador lanza su grito de guerra más fuerte. El más flojo bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Fuerza de hermandad",
+      "action": "Los jugadores se enganchan de los brazos y hacen 10 sentadillas a la vez. Quien se descoordine bebe.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Baile de guerrero",
+      "action": "Todos hacen un baile de guerra durante 15 segundos. Quien se niegue bebe.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

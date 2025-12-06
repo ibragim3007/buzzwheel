@@ -1,0 +1,531 @@
+{
+  "id": 5,
+  "name": "Dziecinne wygłupy",
+  "packageType": "default",
+  "description": "Absurdalne, wesołe zadania, w które możesz grać nawet przy rodzicach. Przedszkole dla dorosłych!",
+  "imageEncoded": "b581a6f6-beb9-40b6-870b-fda247bf89b9.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Spacer małego słonia",
+      "action": "${c_player}, przejdź się po pokoju, machając ręką jak trąbą słonia.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Bajkowy głos",
+      "action": "${c_player}, mów głosem wybranej postaci z bajki do końca tej rundy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wysportowana kura",
+      "action": "${c_player}, zachowuj się jak kura na siłowni.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Rój pszczół",
+      "action": "Wszyscy bzyczą jak pszczoły przez 10 sekund.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Wyimaginowana cytryna",
+      "action": "${c_player}, udawaj, że jesz kwaśną cytrynę i pokaż swoją reakcję.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Powolny robot",
+      "action": "${c_player}, ruszaj się i mów jak robot przez 15 sekund.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Szczęśliwy kangur",
+      "action": "${c_player}, skacz po pokoju jak radosny kangur.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Poważna żabka",
+      "action": "${c_player}, kucnij i udawaj bardzo poważną żabkę przez 15 sekund.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Magiczna różdżka",
+      "action": "${c_player}, weź niewidzialną różdżkę i spełnij jedno życzenie wybranego gracza.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fala",
+      "action": "Gracze przekazują sobie falę ręką; kto się pomyli, pije.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Wesoły dyrygent",
+      "action": "${c_player}, z radością dyryguj innymi graczami jak orkiestrą.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Zagubiony pingwin",
+      "action": "${c_player}, chodź jak pingwin, który zgubił dom.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Gadanie ze skarpetką",
+      "action": "${c_player}, porozmawiaj ze swoimi skarpetkami i zapytaj, jak minął im dzień.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mrożony jogurt",
+      "action": "${c_player}, zastygaj w najgłupszej pozie przez 15 sekund.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Szybka lista imion",
+      "action": "Każdy gracz szybko i zabawnie mówi swoje imię, aż kolej wróci do ${c_player}.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Skoki w kałużę",
+      "action": "${c_player}, skacz w miejscu, jakbyś chlapał w wielkiej kałuży.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Czapka niewidka",
+      "action": "${c_player}, załóż wyimaginowaną czapkę-niewidkę i spróbuj zniknąć.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Niezwykły muzyk",
+      "action": "${c_player}, zagraj krótką melodię na wyimaginowanym instrumencie.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Parada motyli",
+      "action": "Wszyscy machają rękami jak skrzydłami motyli przez 15 sekund.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kanapka emocji",
+      "action": "${c_player}, opisz przepis na kanapkę, używając emocji zamiast składników.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Rybka bez wody",
+      "action": "${c_player}, udawaj rybę, która próbuje pływać po lądzie.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dziwny bajarz",
+      "action": "${c_player}, opowiedz krótką historię o tym, jak ${r_player} został superbohaterem.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Plastelinowy człowiek",
+      "action": "${c_player}, poruszaj się tak, jakbyś był zrobiony z plasteliny.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Radosne brawa",
+      "action": "Wszyscy głośno i radośnie biją brawo ${r_player} przez 10 sekund.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Głupi chód",
+      "action": "${c_player}, pokaż sposób chodzenia, który idealnie pasuje do ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nietypowy wokalista",
+      "action": "${c_player}, zaśpiewaj dowolną piosenkę głosem zwierzęcia wybranego przez ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Rozmowa z zabawką",
+      "action": "${c_player}, porozmawiaj z wyimaginowaną zabawką i poproś ją o radę w sprawie ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Szybki żart",
+      "action": "${c_player}, wymyśl krótki żart o ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Niema parodia",
+      "action": "${c_player}, pokaż bez słów parodię ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Zbiorowe zdziwko",
+      "action": "Wszyscy robią zdziwioną minę i gapią się na ${r_player} przez 10 sekund.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Śpiąca królewna",
+      "action": "${c_player}, udawaj Śpiącą Królewnę i „obudź się”, gdy odezwie się ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Najdziwniejsze pytanie",
+      "action": "${c_player}, zadaj ${r_player} najgłupsze pytanie, jakie przyjdzie ci do głowy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Podróż krzesłem",
+      "action": "${c_player}, usiądź na krześle i udawaj, że to samochód. Przejedź nim po pokoju.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Głośne wyznanie",
+      "action": "${c_player}, głośno wyznaj ${r_player}, że bardziej kochasz słodycze niż przyjaciół.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Taniec radości",
+      "action": "Wszyscy tańczą radośnie, dopóki ${r_player} nie powie „stop”.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Piątki w powietrzu",
+      "action": "${c_player}, przybij wyimaginowaną piątkę każdemu graczowi, zaczynając od ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dziwne ćwiczenie",
+      "action": "${c_player}, pokaż najdziwniejsze ćwiczenie, które ${r_player} ma spróbować powtórzyć.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nagłe stop",
+      "action": "${c_player}, zacznij mówić i zastygnij, gdy ${r_player} wyda komendę.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Krępująca cisza",
+      "action": "${c_player} i ${r_player}, patrzcie sobie w oczy przez 10 sekund i nie wolno wam się śmiać.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Najważniejsze ogłoszenie",
+      "action": "${c_player}, głośno ogłoś, że ${r_player} to najlepsza rzecz, jaka ci się przytrafiła.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "List z przeszłości",
+      "action": "${c_player}, powiedz, co napisał(a)byś w liście do siebie z przeszłości.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przewodnik po gwiazdach",
+      "action": "${c_player}, bądź przewodnikiem po nocnym niebie i pokaż gwiazdę, która symbolizuje ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Magiczny ogród",
+      "action": "${c_player}, opisz magiczny ogród, w którym rosną życzenia wszystkich graczy.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Lądowanie motyla",
+      "action": "${c_player}, naśladuj motyla lądującego na dłoni ${r_player}, nie dotykając ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Portret szczęścia",
+      "action": "${c_player}, wyjaśnij, co znalazłoby się na twoim portrecie absolutnego szczęścia.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Muzyka deszczu",
+      "action": "Wszyscy delikatnie stukają palcami jak deszcz, podczas gdy ${r_player} opowiada historię.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Bajka na dobranoc",
+      "action": "${c_player}, wymyśl krótką, miłą bajkę na dobranoc o przygodach ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Lot na chmurze",
+      "action": "${c_player}, udawaj, że lecisz na chmurze i zaproś ${r_player} do siebie.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sen w śnie",
+      "action": "${c_player}, opisz najdziwniejszy sen, jaki mógłby mieć ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Żywy posąg",
+      "action": "${c_player}, zamień się w posąg, który ożywa i przekazuje ważną wiadomość.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Statek marzeń",
+      "action": "${c_player}, powiedz, dokąd popłyniesz statkiem zbudowanym z marzeń wszystkich graczy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Muzyka wiatru",
+      "action": "Wszyscy cicho mruczą jak wiatr, podczas gdy ${r_player} tańczy jak liść.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Spotkanie z sobą",
+      "action": "${c_player}, wyobraź sobie, że spotykasz siebie z przyszłości. O co zapytasz?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Obraz bez pędzla",
+      "action": "${c_player}, namaluj w powietrzu wyimaginowany obraz, który oddaje charakter ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "List do kosmity",
+      "action": "${c_player}, wytłumacz kosmicie, dlaczego ${r_player} jest najważniejszą osobą na Ziemi.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Ptasi koncert",
+      "action": "Wszyscy delikatnie naśladują śpiew ptaków, podczas gdy ${r_player} opowiada krótką wiosenną historię.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Kwiat nastroju",
+      "action": "${c_player}, powiedz, jaki kwiat najlepiej oddaje nastrój ${r_player} i dlaczego.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Niebo słów",
+      "action": "${c_player}, wymień trzy słowa, które powinny być zapisane na niebie, żeby wszyscy byli szczęśliwi.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wyspa marzeń",
+      "action": "${c_player}, opisz swoją wyspę marzeń, jeśli możesz zabrać ze sobą tylko ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Most przyjaźni",
+      "action": "${c_player} i ${r_player}, stwórzcie most z waszych ramion symbolizujący waszą przyjaźń.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Magiczna latarnia",
+      "action": "${c_player}, wyobraź sobie latarnię pokazującą szczęśliwe wspomnienia. Opisz jedno.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Miasto z chmur",
+      "action": "${c_player}, opisz miasto zbudowane z chmur i marzeń.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Taniec płatka śniegu",
+      "action": "${c_player}, zatańcz delikatnie jak płatek śniegu lądujący na dłoni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Ptak szczęścia",
+      "action": "${c_player}, udawaj ptaka szczęścia, który podarowuje ${r_player} wyimaginowane piórko.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lustro fantazji",
+      "action": "${c_player}, powiedz, co chcesz zobaczyć w magicznym lustrze.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nocny ogród",
+      "action": "Wszyscy zamykają oczy i cicho mruczą, podczas gdy ${r_player} opowiada o spacerze po nocnym ogrodzie.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Morze życzeń",
+      "action": "${c_player}, wyobraź sobie, że płyniesz po morzu, na którym spełnia się każde życzenie. Jakie wybierasz?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kwiatowa łąka",
+      "action": "${c_player}, ułóż bukiet, który idealnie pasuje do ${r_player}, i wyjaśnij dlaczego.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Szept księżyca",
+      "action": "${c_player}, powiedz, co księżyc szepcze dziś do ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Taniec cieni",
+      "action": "${c_player}, użyj rąk, by zatańczyć taniec cieni pokazujący dzisiejszy nastrój.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Żywa książka",
+      "action": "${c_player}, wyobraź sobie, że twoja ulubiona książka ożywa. Co by powiedziała?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pieśń podróżnika",
+      "action": "Wszyscy wystukują rytm, podczas gdy ${r_player} śpiewa krótką piosenkę o wyimaginowanej podróży.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Wyspa skarbów",
+      "action": "${c_player}, opisz swoją wyspę skarbów, na której skarbem są emocje, a nie pieniądze.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wróżka snów",
+      "action": "${c_player}, wyobraź sobie, że jesteś wróżką od słodkich snów. Co przyśni się dziś ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zamek w chmurach",
+      "action": "${c_player}, opisz zamek, który zbudujesz w chmurach dla wszystkich graczy.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Głos morza",
+      "action": "Wszyscy szepczą jak fale, podczas gdy ${r_player} opowiada, co mówi morze.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Promyk słońca",
+      "action": "${c_player}, bądź promykiem słońca i ogrzej ${r_player} miłymi słowami.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Droga do domu",
+      "action": "${c_player}, opisz drogę do domu z dowolnej krainy fantazji.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dobry olbrzym",
+      "action": "${c_player}, wyobraź sobie, że jesteś dobrym olbrzymem pomagającym ${r_player}. Jak pomożesz?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Las szeptów",
+      "action": "Wszyscy cicho powtarzają „wszystko będzie dobrze”, podczas gdy ${r_player} opowiada o spacerze po magicznym lesie.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

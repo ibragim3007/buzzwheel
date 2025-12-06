@@ -1,0 +1,304 @@
+{
+  "id": 6,
+  "name": "Wyznania z głębi duszy",
+  "packageType": "default",
+  "description": "Śmiałe pytania, które wyciągają na wierzch najgłębsze sekrety grupy. Gotowi na prawdę?",
+  "imageEncoded": "2673dd1f-b444-4b84-98fc-2136ac8c7194.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Najbardziej szalony numer",
+      "action": "${c_player}, co było najdzikszą rzeczą, jaką masz na koncie?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tajna randka",
+      "action": "${c_player}, czy zdarzył ci się kiedyś tajny romans?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wstydliwy sekret",
+      "action": "${r_player}, który sekret wciąż przyprawia cię o rumieniec?",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Pierwsza miłość",
+      "action": "${c_player}, kto był twoją pierwszą miłością?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zakazane pragnienie",
+      "action": "${c_player}, powiedz o jednym swoim ukrytym pragnieniu.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ukryta zazdrość",
+      "action": "${c_player}, komu z tej grupy najbardziej zazdrościsz i dlaczego?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Krępujący moment",
+      "action": "${c_player}, jaki był najbardziej krępujący moment w twoim życiu?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Najgorszy pocałunek",
+      "action": "${c_player}, opowiedz o swoim najgorszym pocałunku.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Największe kłamstwo",
+      "action": "${c_player}, jakie największe kłamstwo masz na sumieniu wobec kogoś bliskiego?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zakazane zauroczenie",
+      "action": "${c_player}, kto podobał ci się, choć było to zakazane albo niezręczne?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tajna słabość",
+      "action": "${c_player}, jaką masz tajną słabość, o której mało kto wie?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Najdziwniejsze miejsce",
+      "action": "${c_player}, w jakim najdziwniejszym miejscu zdarzyło ci się kogoś pocałować?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Największy żal",
+      "action": "${c_player}, czego w życiu żałujesz najbardziej?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Udawane uczucia",
+      "action": "${r_player}, czy zdarzyło ci się udawać zakochanie?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ukryte uczucia",
+      "action": "${c_player}, kto z tej grupy podoba ci się bardziej niż tylko jako przyjaciel?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Najśmielsza fantazja",
+      "action": "${c_player}, jaka jest twoja najśmielsza fantazja?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Odrzucone wyznanie",
+      "action": "${c_player}, czy ktoś odrzucił kiedyś twoje wyznanie uczuć?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Podwójna gra",
+      "action": "${c_player}, czy zdarzyło ci się chodzić z dwiema osobami naraz?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Najgorszy czyn",
+      "action": "${c_player}, jaka jest najgorsza rzecz, jaką masz na sumieniu?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zły nawyk",
+      "action": "${c_player}, jaki jest twój najgorszy nawyk?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Randkowa katastrofa",
+      "action": "${c_player}, opowiedz o swojej największej randkowej katastrofie.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Związek bez miłości",
+      "action": "${c_player}, czy zdarzył ci się związek bez miłości?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Niewygodna prawda",
+      "action": "${c_player}, jaką niezręczną prawdę wciąż ukrywasz przed bliskimi?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Dziwne zauroczenie",
+      "action": "${c_player}, opowiedz o swoim najbardziej nietypowym zauroczeniu.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ukryta uraza",
+      "action": "${r_player}, do kogo z obecnych wciąż czujesz urazę?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Najgorszy prezent",
+      "action": "${c_player}, jaki najgorszy prezent w życiu ci się trafił?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Publiczna wtopa",
+      "action": "${c_player}, czy zdarzyła ci się kiedyś publiczna wtopa?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zły przyjaciel",
+      "action": "${c_player}, czy zdarzyło ci się zdradzić przyjaciela?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ukryty lęk",
+      "action": "${c_player}, jakiego lęku pilnie strzeżesz przed innymi?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Miłość do ex",
+      "action": "${c_player}, czy wciąż czujesz coś do któregoś ze swoich ex?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Grzeszna przyjemność",
+      "action": "${c_player}, jaka jest twoja grzeszna przyjemność?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tajny sen",
+      "action": "${c_player}, czy zdarzył ci się sen, o którym wstydzisz się mówić?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Najśmielsza przygoda",
+      "action": "${c_player}, jaką najbardziej szaloną przygodę masz za sobą?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kłamstwo dla korzyści",
+      "action": "${r_player}, czy zdarzyło ci się skłamać tylko dla własnej korzyści?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Najbardziej bolesne rozstanie",
+      "action": "${c_player}, które rozstanie bolało cię najbardziej?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tajne pisanie",
+      "action": "${c_player}, czy prowadzisz teraz jakiś tajny czat, o którym nikt tu nie wie?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Złamana obietnica",
+      "action": "${c_player}, jaką ważną obietnicę masz na sumieniu?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ukryta niechęć",
+      "action": "${c_player}, kogo z obecnych po cichu czasem nie znosisz?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Tajny znajomy",
+      "action": "${c_player}, czy masz znajomego, o którym nikt tutaj nie wie?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Niewłaściwe myśli",
+      "action": "${c_player}, jakie najbardziej niewłaściwe myśli naszły cię w kompletnie nieodpowiednim momencie?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Wykorzystywanie innych",
+      "action": "${c_player}, czy zdarzyło ci się wykorzystać kogoś tylko dla własnej korzyści?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ukryte niezadowolenie",
+      "action": "${r_player}, co w tej grupie po cichu najbardziej cię irytuje?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Nieoczekiwane odrzucenie",
+      "action": "${c_player}, kogo zdarzyło ci się niespodziewanie spławić i dlaczego?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Podwójne życie",
+      "action": "${c_player}, czy zdarzyło ci się prowadzić podwójne życie?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Zawiedzione oczekiwania",
+      "action": "${c_player}, kto z tej grupy najbardziej cię zawiódł?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tajny osąd",
+      "action": "${c_player}, za co po cichu osądzasz ${r_player}?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zdrada w imię miłości",
+      "action": "${c_player}, czy dla miłości zdradzisz przyjaciela?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kłamstwo wobec siebie",
+      "action": "${c_player}, w jakiej sprawie wciąż wmawiasz sobie coś, co nie jest prawdą?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pytanie za milion",
+      "action": "${c_player}, czy za milion dolarów ujawnisz wszystkie swoje sekrety?",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

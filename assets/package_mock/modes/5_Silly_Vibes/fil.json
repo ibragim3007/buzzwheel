@@ -1,0 +1,531 @@
+{
+  "id": 5,
+  "name": "Super Kakulitan",
+  "packageType": "default",
+  "description": "Sobrang kulit at masasayang hamon na puwede niyong laruin kahit harap ng magulang niyo. Parang kindergarten para sa mga grown-up!",
+  "imageEncoded": "b581a6f6-beb9-40b6-870b-fda247bf89b9.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Lakad ng Baby Elepante",
+      "action": "${c_player}, mag-ikot sa kwarto habang iniindayog ang braso mo na parang ilong ng elepante.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Boses-Kartun",
+      "action": "${c_player}, magsalita gamit ang boses ng kahit anong cartoon character sa susunod na round.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sporty na Manok",
+      "action": "${c_player}, umasta na parang manok na nag-eehersisyo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Koro ng Bubuyog",
+      "action": "Lahat ng players, umugong na parang mga bubuyog sa loob ng 10 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Gawa-gawang Lemon",
+      "action": "${c_player}, magpanggap na kumakain ng sobrang asim na lemon at ipakita ang reaksyon mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabagal na Robot",
+      "action": "${c_player}, gumalaw at magsalita na parang robot sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Masayang Kangaroo",
+      "action": "${c_player}, tumaluntalon sa kwarto na parang sobrang saya na kangaroo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Seryosong Munting Palaka",
+      "action": "${c_player}, mag-squat at umasta na parang sobrang seryosong palaka sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Mahikang Wand",
+      "action": "${c_player}, hawakan ang gawa-gawang wand at tuparin ang wish ng isang player.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Alon ng Kamay",
+      "action": "Sunod-sunod na magpapasa ng pagkaway ang mga players; kung sino ang magkamali, iinom.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Masayang Konduktor",
+      "action": "${c_player}, i-conduct nang masaya ang ibang players na parang orchestra.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Ligaw na Penguin",
+      "action": "${c_player}, maglakad-lakad na paika-ika na parang penguin na nawalan ng tahanan.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kuwentong Medyas",
+      "action": "${c_player}, kausapin ang mga medyas mo at tanungin kung kamusta ang araw nila.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Frozen Yogurt",
+      "action": "${c_player}, mag-pose sa pinaka-kalokohang paraan at tumigil nang 15 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Bilisang Pagtawag ng Pangalan",
+      "action": "Bawat player ay mabilis at nakakatawang sasabihin ang pangalan nila hanggang bumalik kay ${c_player}.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Talong sa Lokdong Tubig",
+      "action": "${c_player}, tumalon-talon sa isang lugar na parang tumatalon sa higanteng lubluban ng tubig.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sombrerong Di Nakikita",
+      "action": "${c_player}, isuot ang gawa-gawang invisible na sumbrero at magpanggap na nawawala.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Kakaibang Musikero",
+      "action": "${c_player}, tumugtog ng maikling himig gamit ang gawa-gawang instrumento.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Paradang Paru-paro",
+      "action": "Lahat ng players, iwagayway ang mga braso na parang pakpak ng paru-paro sa loob ng 15 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sandwich ng Damdamin",
+      "action": "${c_player}, ilarawan ang recipe ng isang sandwich gamit ang mga emosyon imbes na sangkap.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Isdang Wala sa Tubig",
+      "action": "${c_player}, umasta na parang isdang pilit lumalangoy sa lupa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kakaibang Kuwentista",
+      "action": "${c_player}, magkuwento nang maikli kung paano naging superhero si ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Taong Clay",
+      "action": "${c_player}, gumalaw na parang gawa ka sa modeling clay.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Masayang Palakpakan",
+      "action": "Lahat ng players, malakas at masayang palakpakan si ${r_player} sa loob ng 10 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Nakakatawang Lakad",
+      "action": "${c_player}, ipakita ang lakad na sa tingin mo ay bagay na bagay kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kakaibang Mang-aawit",
+      "action": "${c_player}, kumanta ng kahit anong kanta gamit ang boses ng hayop na pipiliin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Usap sa Laruang Imahinasyon",
+      "action": "${c_player}, kausapin ang imahinasyong laruan at humingi ng payo tungkol kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabilis na Joke",
+      "action": "${c_player}, mag-imbento ng maikling joke tungkol kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tahimik na Parodiya",
+      "action": "${c_player}, gayahin si ${r_player} nang tahimik, walang salita.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sabay-sabay na Gulat",
+      "action": "Lahat ng players, gumawa ng nagugulat na mukha at titigan si ${r_player} nang 10 segundo.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Sleeping Beauty",
+      "action": "${c_player}, umasta na parang Sleeping Beauty at 'magising' lang kapag nagsalita si ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinaka-weird na Tanong",
+      "action": "${c_player}, tanungin si ${r_player} ng pinaka-kalokohang tanong na maiisip mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Biyehe sa Silya",
+      "action": "${c_player}, umupo sa silya at magpanggap na kotse ito. Magmaneho sa paligid ng kwarto.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Malakas na Pag-amin",
+      "action": "${c_player}, malakas na umamin kay ${r_player} na mas mahal mo ang kendi kaysa sa mga kaibigan.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw ng Saya",
+      "action": "Lahat ng players, sumayaw nang masaya hanggang sabihin ni ${r_player} na \"stop\".",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "High-Five sa Hangin",
+      "action": "${c_player}, magbigay ng imahinasyong high-five sa bawat player, simula kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kakaibang Ehersisyo",
+      "action": "${c_player}, ipakita ang pinaka-weird na ehersisyong dapat gayahin ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Biglang Hinto",
+      "action": "${c_player}, magsimulang magsalita at tumigil kapag inutusan ka ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Nakakailang na Katahimikan",
+      "action": "${c_player} at ${r_player}, magtitigan nang tahimik sa loob ng 10 segundo nang hindi tumatawa.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Pinakaimportanteng Anunsiyo",
+      "action": "${c_player}, malakas na ipahayag na si ${r_player} ang pinakamagandang nangyari sa'yo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Liham mula sa Nakaraan",
+      "action": "${c_player}, sabihin kung ano ang isusulat mo sa nakaraang sarili mo sa isang liham.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gabay na Bituin",
+      "action": "${c_player}, umastang gabay sa gabi at ituro kung aling bituin ang kumakatawan kay ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mahikang Hardin",
+      "action": "${c_player}, ilarawan ang mahiwagang hardin kung saan tumutubo ang mga wish ng bawat player.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Paghinto ng Paru-paro",
+      "action": "${c_player}, gayahin ang paru-parong lumalapag sa kamay ni ${r_player} nang hindi siya hinahawakan.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Larawan ng Kasiyahan",
+      "action": "${c_player}, ipaliwanag kung ano ang makikita sa larawan ng lubos mong kasiyahan.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Musika ng Ulan",
+      "action": "Lahat ng players, dahan-dahang kumatok gamit ang mga daliri na parang ulan habang nagkukuwento si ${r_player}.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Kuwento sa Pagtulog",
+      "action": "${c_player}, gumawa ng maikling mabait na bedtime story tungkol sa mga adventure ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sakay sa Ulap",
+      "action": "${c_player}, magpanggap na lumilipad sa ulap at anyayahan si ${r_player} na sumama.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Panaginip sa Loob ng Panaginip",
+      "action": "${c_player}, ilarawan ang pinaka-weird na panaginip na puwedeng mapanaginipan ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Buhay na Rebulto",
+      "action": "${c_player}, magpanggap na rebultong nabubuhay at magbibigay ng mahalagang mensahe.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Barkong Puno ng Panaginip",
+      "action": "${c_player}, ikuwento kung saan ka maglalayag sa barkong gawa sa mga panaginip ng lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Musika ng Hangin",
+      "action": "Lahat ng players, mahinhin na hum na parang hangin habang sumasayaw si ${r_player} na parang dahon.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Pagkikita sa Sarili",
+      "action": "${c_player}, isipin na nakikita mo ang future self mo. Ano ang itatanong mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinturang Walang Brush",
+      "action": "${c_player}, gumuhit ng imahinasyong larawan sa hangin na sumasalamin sa ugali ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Liham sa Alien",
+      "action": "${c_player}, ipaliwanag sa isang alien kung bakit si ${r_player} ang pinakamahalagang tao sa mundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Konsertong Ibon",
+      "action": "Lahat ng players, mahinhin na gayahin ang huni ng mga ibon habang nagkukuwento si ${r_player} ng maikling kuwento tungkol sa tagsibol.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Bulaklak ng Mood",
+      "action": "${c_player}, sabihin kung anong bulaklak ang pinaka-bagay sa mood ni ${r_player} at bakit.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Langit ng mga Salita",
+      "action": "${c_player}, banggitin ang tatlong salitang dapat nakasulat sa langit para sumaya ang lahat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Islang Panaginip",
+      "action": "${c_player}, ilarawan ang dream island mo kung si ${r_player} lang ang puwede mong isama.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Tulay ng Pagkakaibigan",
+      "action": "${c_player} at ${r_player}, gumawa ng tulay gamit ang mga braso ninyo bilang simbolo ng pagkakaibigan niyo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Mahikang Ilawan",
+      "action": "${c_player}, isipin ang isang ilawang nagpapakita ng masasayang alaala. Ilarawan ang isa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lungsod sa mga Ulap",
+      "action": "${c_player}, ilarawan ang lungsod na gawa sa ulap at mga panaginip.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw ng Niyebe",
+      "action": "${c_player}, dahan-dahang sumayaw na parang himaymay ng niyebe na lumalapag sa palad ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Ibon ng Kasiyahan",
+      "action": "${c_player}, magpanggap na ibon ng kasiyahan at regaluhan si ${r_player} ng imahinasyong balahibo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Salamin ng mga Fantasya",
+      "action": "${c_player}, sabihin kung ano ang gusto mong makita sa isang mahiwagang salamin.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hardin sa Gabi",
+      "action": "Lahat ng players, pumikit at mahinhin na hum habang nagkukuwento si ${r_player} tungkol sa paglalakad sa hardin sa gabi.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Dagat ng mga Hiling",
+      "action": "${c_player}, isipin na naglalayag ka sa dagat kung saan natutupad ang lahat ng wish. Aling wish ang pipiliin mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Parang ng mga Bulaklak",
+      "action": "${c_player}, bumuo ng bouquet na bagay na bagay kay ${r_player} at ipaliwanag kung bakit.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bulong ng Buwan",
+      "action": "${c_player}, sabihin kung ano ang ibinubulong ng buwan kay ${r_player} ngayong gabi.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sayaw ng Anino",
+      "action": "${c_player}, gamitin ang mga kamay mo para gumawa ng shadow dance na nagpapakita ng mood mo ngayon.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Buhay na Aklat",
+      "action": "${c_player}, isipin na nabuhay ang paborito mong libro. Ano ang sasabihin nito?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Awit ng Manlalakbay",
+      "action": "Lahat ng players, kumatok sa ritmo habang kumakanta si ${r_player} ng maikling kanta tungkol sa imahinasyong biyahe.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Isla ng Kayamanan",
+      "action": "${c_player}, ilarawan ang treasure island mo kung saan emosyon, hindi pera, ang kayamanan.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Diwata ng Panaginip",
+      "action": "${c_player}, isipin na isa kang diwata ng panaginip na nagbibigay ng matatamis na panaginip. Ano ang ipapanaginip mo kay ${r_player} ngayong gabi?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kastilyo sa Ulap",
+      "action": "${c_player}, ilarawan ang kastilyong itatayo mo sa mga ulap para sa lahat ng players.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tinig ng Dagat",
+      "action": "Lahat ng players, bumulong na parang alon habang ikinukuwento ni ${r_player} kung ano ang sinasabi ng dagat.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Sinag ng Araw",
+      "action": "${c_player}, umasta na parang sinag ng araw at painitin si ${r_player} gamit ang mga mabubuting salita.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Daan Pauwi",
+      "action": "${c_player}, ilarawan ang daan pauwi mula sa kahit anong fantasy land.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabait na Higante",
+      "action": "${c_player}, isipin na isa kang mabait na higante na tumutulong kay ${r_player}. Paano mo siya tutulungan?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gubat ng mga Bulong",
+      "action": "Lahat ng players, mahinhin na ulitin ang \"everything will be fine\" habang nagkukuwento si ${r_player} tungkol sa paglalakad sa mahiwagang gubat.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

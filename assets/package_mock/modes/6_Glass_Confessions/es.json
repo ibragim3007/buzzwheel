@@ -1,0 +1,304 @@
+{
+  "id": 6,
+  "name": "Confesiones del alma",
+  "packageType": "default",
+  "description": "Preguntas atrevidas que sacan a la luz los secretos más ocultos del grupo. ¿Listos para la verdad?",
+  "imageEncoded": "2673dd1f-b444-4b84-98fc-2136ac8c7194.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Acto más atrevido",
+      "action": "${c_player}, ¿qué es lo más loco que has hecho?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cita secreta",
+      "action": "${c_player}, ¿alguna vez has tenido un romance secreto?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Secreto vergonzoso",
+      "action": "${r_player}, ¿qué secreto todavía te hace sonrojar?",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Primer amor",
+      "action": "${c_player}, ¿quién fue tu primer amor?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Deseo prohibido",
+      "action": "${c_player}, di un deseo oculto.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Envidia oculta",
+      "action": "${c_player}, ¿a quién del grupo envidias más y por qué?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Momento más vergonzoso",
+      "action": "${c_player}, ¿cuál ha sido el momento más vergonzoso de tu vida?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Peor beso",
+      "action": "${c_player}, cuéntanos de tu peor beso.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mayor mentira",
+      "action": "${c_player}, ¿cuál es la mayor mentira que le has dicho a alguien cercano?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Crush prohibido",
+      "action": "${c_player}, ¿quién te gustaba aunque fuera prohibido o incómodo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Debilidad secreta",
+      "action": "${c_player}, ¿qué debilidad secreta tienes que casi nadie conoce?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lugar más raro",
+      "action": "${c_player}, ¿cuál es el lugar más raro donde has besado a alguien?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mayor arrepentimiento",
+      "action": "${c_player}, ¿de qué te arrepientes más en la vida?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Sentimientos fingidos",
+      "action": "${r_player}, ¿alguna vez has fingido estar enamorado/a?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sentimientos ocultos",
+      "action": "${c_player}, ¿quién de este grupo te gusta más que como amigo/a?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Fantasía más atrevida",
+      "action": "${c_player}, ¿cuál es tu fantasía más atrevida?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Confesión rechazada",
+      "action": "${c_player}, ¿alguna vez te han rechazado?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Doble juego",
+      "action": "${c_player}, ¿alguna vez has salido con dos personas al mismo tiempo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Peor acción",
+      "action": "${c_player}, ¿cuál es la peor cosa que has hecho?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Mal hábito",
+      "action": "${c_player}, ¿cuál es tu peor hábito?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Cita desastrosa",
+      "action": "${c_player}, cuéntanos de tu cita más desastrosa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Relación sin amor",
+      "action": "${c_player}, ¿alguna vez has estado en una relación sin amor?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Verdad incómoda",
+      "action": "${c_player}, ¿qué verdad incómoda sigues escondiendo a tus seres queridos?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Atracción extraña",
+      "action": "${c_player}, cuéntanos tu crush romántico más raro.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Rencor oculto",
+      "action": "${r_player}, ¿a quién de aquí todavía le guardas rencor?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Peor regalo",
+      "action": "${c_player}, ¿ cuál es el peor regalo que has recibido?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vergüenza pública",
+      "action": "${c_player}, ¿alguna vez has hecho el ridículo en público?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mal amigo",
+      "action": "${c_player}, ¿alguna vez has traicionado a un amigo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Miedo oculto",
+      "action": "${c_player}, ¿qué miedo ocultas a los demás?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Amor por un ex",
+      "action": "${c_player}, ¿sigues sintiendo algo por algún ex?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Placer culposo",
+      "action": "${c_player}, ¿cuál es tu placer culposo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sueño secreto",
+      "action": "${c_player}, ¿has tenido algún sueño que te dé vergüenza contar?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Aventura más loca",
+      "action": "${c_player}, ¿cuál ha sido la aventura más atrevida que has vivido?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mentira por interés",
+      "action": "${r_player}, ¿alguna vez has mentido por tu propio beneficio?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ruptura más dolorosa",
+      "action": "${c_player}, ¿qué ruptura te ha dolido más?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Chat secreto",
+      "action": "${c_player}, ¿tienes ahora mismo algún chat secreto?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Promesa rota",
+      "action": "${c_player}, ¿qué promesa has roto?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Desprecio oculto",
+      "action": "${c_player}, ¿a quién de aquí a veces desprecias en secreto?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Amigo secreto",
+      "action": "${c_player}, ¿tienes algún amigo secreto del que nadie sepa?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pensamientos inapropiados",
+      "action": "${c_player}, ¿cuáles son los pensamientos más inapropiados que se te han pasado por la cabeza en el peor momento?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Usar a alguien",
+      "action": "${c_player}, ¿alguna vez has usado a alguien para tu propio beneficio?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Malestar oculto",
+      "action": "${r_player}, ¿qué es lo que en secreto te molesta del grupo?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Rechazo inesperado",
+      "action": "${c_player}, ¿a quién has rechazado por sorpresa y por qué?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Doble vida",
+      "action": "${c_player}, ¿alguna vez has llevado una doble vida?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Expectativas rotas",
+      "action": "${c_player}, ¿quién del grupo te ha decepcionado?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Juicio secreto",
+      "action": "${c_player}, ¿por qué juzgas en secreto a ${r_player}?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Traición por amor",
+      "action": "${c_player}, ¿traicionarías a un amigo por amor?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Autoengaño",
+      "action": "${c_player}, ¿sobre qué sigues mintiéndote a ti mismo/a?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pregunta del millón",
+      "action": "${c_player}, ¿revelarías todos tus secretos por un millón de dólares?",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

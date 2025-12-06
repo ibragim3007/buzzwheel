@@ -1,0 +1,401 @@
+{
+  "id": 8,
+  "name": "Girls' Night in Heels",
+  "packageType": "default",
+  "description": "Mga hamon at tanong tungkol sa pag-ibig, ganda at mga sikreto ng magkakaibigan. Lahat ng nangyayari dito, atin-atin lang na girls!",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Kwento ng Unang Date",
+      "action": "${c_player}, ikuwento mo ang pinaka-nakakatawang date na naranasan mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hatol sa Outfit",
+      "action": "${c_player}, i-rate mo ang outfit ni ${r_player} at bigyan mo siya ng isang fashion tip.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na Crush",
+      "action": "${c_player}, umamin kung sino ang naging lihim mong crush.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ganda o Komportable",
+      "action": "${c_player}, pili: naka-heels buong araw o magde-date na walang makeup?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na Makeup",
+      "action": "${c_player}, anong beauty product ang patago mong paborito pero hindi mo inaamin?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Paboritong Amoy",
+      "action": "${c_player}, anong pabango ang iniisip ng friends mo kapag ikaw ang usapan?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauty Hack",
+      "action": "${c_player}, i-share ang pinaka-weird mong beauty trick.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Date sa Celebrity",
+      "action": "${c_player}, banggitin ang celebrity na gusto mong maka-date.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wardrobe Fail",
+      "action": "${c_player}, ano ang pinaka-awkward mong experience dahil sa suot mo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Perpektong Girls' Day",
+      "action": "${c_player}, ilarawan ang perpektong girls' day out mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Best Dressed",
+      "action": "${c_player}, diretsong sabihin kung sino ang pinaka-magandang tingnan ngayong gabi.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Takot sa Unang Date",
+      "action": "${c_player}, ano ang pinaka-kinakatakutan mo sa unang date, kahit di mo inaamin?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bawal na Kulay",
+      "action": "${c_player}, anong kulay ang hindi mo kailanman isusuot at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Weird na Regalo",
+      "action": "${c_player}, i-share ang pinaka-weird na regalong natanggap mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Friend na Peg",
+      "action": "${c_player}, anong ugali ni ${r_player} ang gusto mo ring meron ka, kahit patago lang?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Dress",
+      "action": "${c_player}, ilarawan ang dream dress mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantic na Pelikula",
+      "action": "${c_player}, saang romantic na pelikula ka umiyak?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Hula sa Pag-ibig",
+      "action": "${c_player}, hulaan mo ang love life ni ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Compliment Time",
+      "action": "${c_player}, bigyan ng tig-iisang compliment ang bawat friend sa mesa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unang Halik",
+      "action": "${c_player}, ikuwento ang tungkol sa unang halik mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Hobby",
+      "action": "${c_player}, anong hobby mo ang halos walang nakakaalam?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Inner Beauty",
+      "action": "${c_player}, ano ang talagang nagpapaganda sa isang babae bukod sa itsura?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Paboritong Accessory",
+      "action": "${c_player}, anong accessory ang lagi mong suot at bakit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Forbidden Dessert",
+      "action": "${c_player}, para sa anong dessert mo sisirain ang diet mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Little Black Dress",
+      "action": "${c_player}, saan mo isusuot ang perfect mong little black dress?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Heels",
+      "action": "${c_player}, ilarawan ang sapatos na nagpaparamdam sa'yo na parang reyna.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Friendly Envy",
+      "action": "${c_player}, ano ang tunay mong hinahangaan kay ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Selfie Pro",
+      "action": "${c_player}, ipakita kung paano ka kumuha ng perfect selfie.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sweet na Gesto",
+      "action": "${c_player}, anong gesture ng isang lalaki ang tunay na nagpapakilig sa'yo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfect Nails",
+      "action": "${c_player}, anong style ng kuko ang pinakastylish para sa'yo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pinaka-Weird na Diyeta",
+      "action": "${c_player}, ikuwento ang pinaka-weird na diet na sinubukan mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Slim Secret",
+      "action": "${c_player}, ano ang top trick mo para manatiling in shape?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na Influencer",
+      "action": "${c_player}, sinong influencer ang patago mong fina-follow?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Di-Makalimutang Compliment",
+      "action": "${c_player}, anong compliment ang hindi mo makalimutan hanggang ngayon?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Eksperto Ako Diyan",
+      "action": "${c_player}, saang bagay ka tinuturing na eksperto ng friends mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels o Sneakers",
+      "action": "${c_player}, ano ang susuotin mo sa date — heels o sneakers?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lihim na Talent",
+      "action": "${c_player}, anong lihim mong talento?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Paboritong Show",
+      "action": "${c_player}, anong show ang kaya mong panoorin paulit-ulit?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perpektong Umaga",
+      "action": "${c_player}, ilarawan ang perpektong umaga mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Heel Fail",
+      "action": "${c_player}, ikuwento ang pinakanakakatawang beses na nadapa ka sa heels.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "1-Minute Makeup",
+      "action": "${c_player}, ilarawan ang one-minute makeup routine mo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lipstick Check",
+      "action": "${c_player}, anong kulay ng lipstick ang nasa bag mo ngayon?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Friend in Need",
+      "action": "${c_player}, magkuwento ng isang beses na sinagip ka ng kaibigan mo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "3AM Call",
+      "action": "${c_player}, sinong kaibigan ang una mong tatawagan ng 3 a.m.?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauty Secret Swap",
+      "action": "Bawat girl mag-share ng isang weird na beauty hack. Walang maisip? Iinom ka!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Group Selfie",
+      "action": "Mag-group selfie kayo na may pinaka-nakakatawang mukha. Ayaw sumali? Iinom ka!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Compliment Chain",
+      "action": "Bawat girl magbigay ng compliment sa nasa kanan niya. Nabulol o nagkamali? Iinom ka!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Top Accessory",
+      "action": "Ipakita ng lahat ang paborito nilang accessory. Pinaka-konti ang boto — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Lip Color Match",
+      "action": "Sabihin sabay-sabay ang paboritong kulay ng lipstick. Magkapareho kayo? Sabay kayong iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Photo Pose-Off",
+      "action": "Mag-pose lahat na parang pang-picture. Unang tumawa — iinom!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Self-Love Shout",
+      "action": "Sabay-sabay sumigaw ng 'I love myself!'. Pinakatahimik ang boses — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Nail Check",
+      "action": "Ipakita ng lahat ang mga kuko nila. Walang manicure? Iinom ka!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels Dance-Off",
+      "action": "Sumayaw sa heels nang 15 segundo. Unang tumigil — iinom!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Showtime Picks",
+      "action": "Sabihin sabay-sabay ang paboritong show. Kapag ikaw lang ang may ganun — mamimili ka kung sino ang iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Girlfriend Fortune",
+      "action": "Hulaan kung anong mangyayari ngayong taon sa girl sa kanan mo. Walang hula? Iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Shoe Showdown",
+      "action": "Ipakita ng lahat ang sapatos nila. Pinaka-simpleng pares — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Truth or Bluff",
+      "action": "Magkuwento nang maikli. Huhulaan ng iba kung totoo o hindi. Mali ang hula — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Sing Your Favorite",
+      "action": "Hum lahat ng paborito n'yong kanta. Unang tumigil — iinom!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Wink War",
+      "action": "Sabay-sabay kikindat ang lahat ng girls. Sinong makalimot — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret Steal",
+      "action": "Aminin kung anong makeup item ang gusto mong nakawin sa isang friend. Ayaw umamin? Iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Favorite Dress",
+      "action": "Ilarawan ang paborito mong dress. Sinong ma-utal o magkamali — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Friendship Circle Dance",
+      "action": "Maghawak-kamay at sumayaw sa bilog nang 15 segundo. May bumitaw? Iinom!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cheers to Us",
+      "action": "Sabay-sabay mag-toast para sa pagkakaibigan. Pinakamaikling toast — iinom!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Dream Date",
+      "action": "Ilarawan nang malakas ang dream date mo. May magkapareho kayo ng detalye? Sabay kayong iinom!",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

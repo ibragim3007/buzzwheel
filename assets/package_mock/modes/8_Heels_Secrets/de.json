@@ -1,0 +1,401 @@
+{
+  "id": 8,
+  "name": "Mädelsabend in High Heels",
+  "packageType": "default",
+  "description": "Mutproben und Fragen über Liebe, Beauty und Mädelsgeheimnisse. Was hier passiert, bleibt unter uns Mädels!",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Story vom ersten Date",
+      "action": "${c_player}, erzähl von deinem witzigsten Date.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Style-Urteil",
+      "action": "${c_player}, bewerte das Outfit von ${r_player} und gib ihr einen Fashion-Tipp.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheimer Crush",
+      "action": "${c_player}, verrate, in wen du heimlich verknallt warst.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beauty oder Bequemlichkeit",
+      "action": "${c_player}, entscheide dich – den ganzen Tag High Heels oder zum Date ganz ohne Make-up?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheimes Make-up",
+      "action": "${c_player}, welches Beauty-Produkt liebst du heimlich, gibst es aber nie zu?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lieblingsduft",
+      "action": "${c_player}, welchen Duft verbinden deine Freundinnen mit dir?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauty-Rezept",
+      "action": "${c_player}, verrate deinen schrägsten Beauty-Trick.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Promi-Date",
+      "action": "${c_player}, mit welchem Star würdest du gern mal auf ein Date gehen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Outfit-Panne",
+      "action": "${c_player}, was war dein peinlichster Outfit-Moment?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Perfekter Tag",
+      "action": "${c_player}, beschreib deinen perfekten Mädels-Tag.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Best Dressed",
+      "action": "${c_player}, sag ehrlich, wer heute Abend am besten aussieht.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Erstes-Date-Angst",
+      "action": "${c_player}, was macht dir bei einem ersten Date insgeheim am meisten Angst?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "No-Go-Farbe",
+      "action": "${c_player}, welche Farbe würdest du nie tragen und warum?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Seltsames Geschenk",
+      "action": "${c_player}, was war das seltsamste Geschenk, das du je bekommen hast?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vorbild-Freundin",
+      "action": "${c_player}, welche Angewohnheit von ${r_player} hättest du heimlich gern selbst?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Traumkleid",
+      "action": "${c_player}, beschreib dein absolutes Traumkleid.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Romantikfilm-Moment",
+      "action": "${c_player}, bei welchem romantischen Film musstest du weinen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Liebesorakel",
+      "action": "${c_player}, sag die Liebes-Zukunft von ${r_player} voraus.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Komplimente-Zeit",
+      "action": "${c_player}, mach jeder Freundin am Tisch ein Kompliment.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Erster Kuss",
+      "action": "${c_player}, erzähl von deinem ersten Kuss.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimes Hobby",
+      "action": "${c_player}, welches Hobby kennt eigentlich niemand von dir?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Innere Schönheit",
+      "action": "${c_player}, was macht eine Frau außer ihrem Aussehen wirklich schön?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lieblings-Accessoire",
+      "action": "${c_player}, welches Accessoire trägst du fast immer – und warum?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Verbotenes Dessert",
+      "action": "${c_player}, für welches Dessert würdest du jede Diät vergessen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kleines Schwarzes",
+      "action": "${c_player}, wohin würdest du dein perfektes kleines Schwarzes ausführen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Traum-High-Heels",
+      "action": "${c_player}, beschreib die Schuhe, in denen du dich wie eine Königin fühlst.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Netter Neid",
+      "action": "${c_player}, was bewunderst du wirklich an ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Selfie-Profi",
+      "action": "${c_player}, zeig, wie du das perfekte Selfie machst.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Süße Geste",
+      "action": "${c_player}, welche Geste von einem Typen bringt dein Herz zum Schmelzen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfekte Nägel",
+      "action": "${c_player}, welcher Nagelstyle ist für dich am stylischsten?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Seltsamste Diät",
+      "action": "${c_player}, erzähl von der seltsamsten Diät, die du je ausprobiert hast.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schlank-Geheimnis",
+      "action": "${c_player}, was ist dein Top-Trick, um in Form zu bleiben?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheimer Influencer",
+      "action": "${c_player}, welchem Influencer folgst du heimlich?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Unvergessliches Kompliment",
+      "action": "${c_player}, welches Kompliment wirst du nie vergessen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Expertin im Freundeskreis",
+      "action": "${c_player}, wobei halten dich deine Freundinnen für eine Expertin?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels oder Sneaker",
+      "action": "${c_player}, was trägst du beim Date – Heels oder Sneaker?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheimes Talent",
+      "action": "${c_player}, welches geheime Talent hast du?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lieblingsserie",
+      "action": "${c_player}, welche Serie kannst du endlos in Dauerschleife schauen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfekter Morgen",
+      "action": "${c_player}, beschreib deinen perfekten Morgen.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "High-Heel-Fail",
+      "action": "${c_player}, erzähl, wie du mal auf High Heels lustig hingefallen bist.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "1-Minuten-Make-up",
+      "action": "${c_player}, beschreib deine Ein-Minuten-Make-up-Routine.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lippenstift-Check",
+      "action": "${c_player}, welche Lippenstiftfarbe steckt gerade in deiner Tasche?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Geretteter Tag",
+      "action": "${c_player}, erzähl von einem Tag, an dem eine Freundin dir den Tag gerettet hat.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "3-Uhr-Nachts-Anruf",
+      "action": "${c_player}, welche Freundin würdest du als Erste um 3 Uhr nachts anrufen?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauty-Geheimnis-Tausch",
+      "action": "Jede von euch verrät einen schrägen Beauty-Hack. Fällt dir keiner ein? Du trinkst!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Gruppen-Selfie",
+      "action": "Macht ein Gruppen-Selfie mit eurem lustigsten Gesicht. Weigerst du dich? Du trinkst!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Komplimente-Kette",
+      "action": "Jede macht der Freundin rechts von ihr ein Kompliment. Verhaspelst du dich? Du trinkst!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Top-Accessoire",
+      "action": "Alle zeigen ihr Lieblings-Accessoire. Die mit den wenigsten Stimmen trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Lippenfarben-Match",
+      "action": "Sagt gleichzeitig eure liebste Lippenstiftfarbe. Wer dieselbe hat, trinkt zusammen!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Foto-Posen-Battle",
+      "action": "Alle machen ihre beste Foto-Pose. Wer zuerst lacht, trinkt!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Self-Love-Schrei",
+      "action": "Alle schreien gleichzeitig: 'Ich liebe mich!'. Die leiseste Stimme trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Nagel-Check",
+      "action": "Alle zeigen ihre Nägel. Keine Maniküre? Du trinkst!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Heels-Dance-Off",
+      "action": "Tanzt 15 Sekunden in Heels. Wer zuerst aufhört, trinkt!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Showtime-Wahl",
+      "action": "Sagt gleichzeitig eure Lieblingsserie. Ist deine Antwort einzigartig – verteile einen Drink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Freundinnen-Orakel",
+      "action": "Sag voraus, was dieses Jahr der Freundin rechts von dir passiert. Dir fällt nichts ein? Trink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Schuh-Battle",
+      "action": "Alle zeigen ihre Schuhe. Das schlichteste Paar trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Wahrheit oder Bluff",
+      "action": "Erzähl eine kurze Story. Die anderen raten, ob sie wahr ist oder nicht. Falsch geraten? Trink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Lieblingssong-Summen",
+      "action": "Alle summen ihren Lieblingssong. Wer zuerst aufhört, trinkt!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Wink-Duell",
+      "action": "Alle zwinkern gleichzeitig. Wer es vergisst, trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Geheimer Klau",
+      "action": "Gib zu, welches Make-up-Teil du einer Freundin heimlich klauen würdest. Weigerst du dich? Trink!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Lieblingskleid",
+      "action": "Beschreib dein Lieblingskleid. Wer ins Stocken gerät, trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Freundschafts-Kreis-Tanz",
+      "action": "Fasst euch an den Händen und tanzt 15 Sekunden im Kreis. Kette lösen? Trink!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Auf uns!",
+      "action": "Sagt gleichzeitig einen Toast auf die Freundschaft. Der kürzeste Toast trinkt!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Traumdate",
+      "action": "Beschreibt laut euer Traumdate. Habt ihr dieselben Details? Trinkt zusammen!",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "id": 6,
+  "name": "Beichte aus tiefster Seele",
+  "packageType": "default",
+  "description": "Mutige Fragen, die die tiefsten Geheimnisse der Runde aufdecken. Bereit für die Wahrheit?",
+  "imageEncoded": "2673dd1f-b444-4b84-98fc-2136ac8c7194.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Krasseste Aktion",
+      "action": "${c_player}, was ist das Verrückteste, das du je getan hast?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheime Romanze",
+      "action": "${c_player}, hattest du schon einmal eine geheime Romanze?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Peinliches Geheimnis",
+      "action": "${r_player}, welches Geheimnis lässt dich heute noch erröten?",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Erste Liebe",
+      "action": "${c_player}, wer war deine erste große Liebe?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Verbotenes Verlangen",
+      "action": "${c_player}, nenne einen deiner versteckten Wünsche.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verborgener Neid",
+      "action": "${c_player}, wem in der Runde bist du am meisten neidisch – und warum?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Peinlicher Moment",
+      "action": "${c_player}, was war der peinlichste Moment deines Lebens?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Schlechtester Kuss",
+      "action": "${c_player}, erzähl von deinem schlechtesten Kuss.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Größte Lüge",
+      "action": "${c_player}, was war die größte Lüge, die du einem nahestehenden Menschen erzählt hast?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Verbotene Schwärmerei",
+      "action": "${c_player}, in wen warst du verknallt, obwohl es verboten oder total unangenehm war?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Geheime Schwäche",
+      "action": "${c_player}, welche geheime Schwäche hast du, von der kaum jemand weiß?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Seltsamster Ort",
+      "action": "${c_player}, was ist der ungewöhnlichste Ort, an dem du jemanden geküsst hast?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Größte Reue",
+      "action": "${c_player}, was bereust du in deinem Leben am meisten?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Vorgegaukelte Gefühle",
+      "action": "${r_player}, hast du jemals verliebte Gefühle nur vorgespielt?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Verborgene Gefühle",
+      "action": "${c_player}, wen aus dieser Runde magst du mehr als nur freundschaftlich?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Krasseste Fantasie",
+      "action": "${c_player}, was ist deine krasseste Fantasie?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Abgewiesenes Geständnis",
+      "action": "${c_player}, hast du schon einmal eine Abfuhr bekommen?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Doppeltes Spiel",
+      "action": "${c_player}, hast du jemals zwei Menschen gleichzeitig gedatet?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Schlimmste Tat",
+      "action": "${c_player}, was ist das Schlimmste, das du je getan hast?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Schlechte Angewohnheit",
+      "action": "${c_player}, was ist deine schlimmste Angewohnheit?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dating-Desaster",
+      "action": "${c_player}, erzähl von deinem schlimmsten Date.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beziehung ohne Liebe",
+      "action": "${c_player}, warst du jemals in einer Beziehung ohne echte Liebe?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Unangenehme Wahrheit",
+      "action": "${c_player}, welche unangenehme Wahrheit verheimlichst du deinen Liebsten noch?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Seltsame Anziehung",
+      "action": "${c_player}, erzähl von deiner seltsamsten Schwärmerei.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verborgener Groll",
+      "action": "${r_player}, gegen wen hier hegst du immer noch Groll?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Schlimmstes Geschenk",
+      "action": "${c_player}, was war das schlimmste Geschenk, das du je bekommen hast?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Peinlichkeit in der Öffentlichkeit",
+      "action": "${c_player}, ist dir schon einmal etwas richtig Peinliches in der Öffentlichkeit passiert?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Schlechter Freund",
+      "action": "${c_player}, hast du jemals einen Freund oder eine Freundin verraten?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Verborgene Angst",
+      "action": "${c_player}, welche Angst verheimlichst du allen?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gefühle für Ex",
+      "action": "${c_player}, hast du noch Gefühle für einen deiner Ex-Partner?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Heimliches Laster",
+      "action": "${c_player}, was ist dein heimliches Laster?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimer Traum",
+      "action": "${c_player}, hattest du schon einmal einen Traum, für den du dich zu sehr schämst, um ihn zu erzählen?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Krassestes Abenteuer",
+      "action": "${c_player}, was war dein mutigstes oder verrücktestes Abenteuer?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lüge aus Eigennutz",
+      "action": "${r_player}, hast du jemals gelogen, nur um selbst einen Vorteil zu haben?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Schmerzhafteste Trennung",
+      "action": "${c_player}, welche Trennung hat dir am meisten wehgetan?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimer Chat",
+      "action": "${c_player}, führst du gerade einen geheimen Chat, von dem hier niemand weiß?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Gebrochenes Versprechen",
+      "action": "${c_player}, welches Versprechen hast du gebrochen?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verborgene Verachtung",
+      "action": "${c_player}, wen hier kannst du insgeheim manchmal überhaupt nicht ausstehen?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Geheime Freundschaft",
+      "action": "${c_player}, hast du eine geheime Freundschaft, von der hier niemand weiß?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Unangebrachte Gedanken",
+      "action": "${c_player}, welche völlig unpassenden Gedanken hattest du schon einmal im falschen Moment?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Jemanden ausnutzen",
+      "action": "${c_player}, hast du jemals jemanden nur für deinen Vorteil ausgenutzt?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Verborgene Unzufriedenheit",
+      "action": "${r_player}, was stört dich insgeheim an dieser Runde?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Unerwartete Abfuhr",
+      "action": "${c_player}, wem hast du schon einmal völlig unerwartet eine Abfuhr erteilt – und warum?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Doppelleben",
+      "action": "${c_player}, hast du jemals ein Doppelleben geführt?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Enttäuschte Erwartungen",
+      "action": "${c_player}, wer aus der Runde hat dich enttäuscht?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Geheimes Urteil",
+      "action": "${c_player}, worüber urteilst du insgeheim über ${r_player}?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Verrat aus Liebe",
+      "action": "${c_player}, würdest du für die Liebe einen Freund oder eine Freundin verraten?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Selbstbetrug",
+      "action": "${c_player}, worüber belügst du dich selbst immer noch?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Millionenfrage",
+      "action": "${c_player}, würdest du für eine Million Dollar all deine Geheimnisse preisgeben?",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

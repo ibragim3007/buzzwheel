@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Mecs en mode extrême",
+  "packageType": "default",
+  "description": "Défis hardcore de force, strip-tease et adrénaline. Le meilleur mode pour une bande de mecs !",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Pompes express",
+      "action": "${c_player}, fais 15 pompes le plus vite possible.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Poiriers tenus",
+      "action": "${c_player}, tiens en équilibre sur les mains au moins 10 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "T-shirt à une main",
+      "action": "${c_player}, enlève ton T-shirt de façon théâtrale avec une seule main.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Danse des abdos",
+      "action": "${c_player}, fais une danse du ventre.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Bras de fer",
+      "action": "${c_player} et ${r_player}, faites un mini bras de fer.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Défi de planche",
+      "action": "${c_player}, tiens la planche pendant 30 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Show de muscles",
+      "action": "${c_player}, montre tes trois meilleures poses de bodybuilder.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Minute de boxe",
+      "action": "${c_player}, enchaîne des coups de poing dans le vide pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Défi burpees",
+      "action": "${c_player}, fais 10 burpees en 30 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Move Magic Mike",
+      "action": "${c_player}, imite un mouvement de danse de Magic Mike.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pompes claquées",
+      "action": "${c_player}, fais 15 pompes claquées.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pose du pont",
+      "action": "${c_player}, fais un pont et tiens-le 10 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Sauts sur une jambe",
+      "action": "${c_player}, saute sur une jambe pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Strip silencieux",
+      "action": "${c_player}, enlève un vêtement et reste sérieux pendant 30 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Tour de victoire",
+      "action": "${c_player}, cours un tour autour de la table ou de la pièce.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Corps de plage",
+      "action": "${c_player}, joue les bodybuilders sur la plage pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Shadow boxing",
+      "action": "${c_player}, fais du shadow boxing pendant 20 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Test d’équilibre",
+      "action": "${c_player}, tiens-toi sur une jambe, les yeux fermés, pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Minute powerlifter",
+      "action": "${c_player}, fais semblant de soulever une barre très lourde.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Soulève un pote",
+      "action": "${c_player}, soulève ${r_player} et fais 3 squats.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Saut ninja",
+      "action": "${c_player}, saute le plus haut possible.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Glissade Superman",
+      "action": "${c_player}, fais comme Superman qui vole à travers la pièce.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Coup de pied volant",
+      "action": "${c_player}, fais un coup de pied sauté.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini strip",
+      "action": "${c_player}, fais un mini strip-tease de 20 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Pompes avec poids",
+      "action": "${c_player}, fais des pompes pendant que ${r_player} est assis sur ton dos.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Coup de pied haut",
+      "action": "${c_player}, donne un coup de pied à hauteur de ta tête.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Presse humaine",
+      "action": "${c_player}, fais des squats en portant ${r_player} sur ton dos.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Défi bruyant",
+      "action": "${c_player}, défie ${r_player} à haute voix et avec assurance en duel.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Strip éclair",
+      "action": "${c_player}, enlève deux vêtements en 15 secondes.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Pose de victoire",
+      "action": "${c_player}, prends une pose de vainqueur et garde-la 20 secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Tractions à la table",
+      "action": "${c_player}, fais 10 tractions en utilisant une table ou une autre surface.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pompes avec le sourire",
+      "action": "${c_player}, fais 10 pompes en gardant un large sourire.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Freestyle foot",
+      "action": "${c_player}, montre une série de tricks de foot.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Saut par-dessus chaise",
+      "action": "${c_player}, saute prudemment par-dessus une chaise.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Duel de souplesse",
+      "action": "${c_player}, montre ta souplesse maximale.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Flex devant la caméra",
+      "action": "${c_player}, contracte tes muscles de façon spectaculaire devant le groupe.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Squats en équipe",
+      "action": "Tous les joueurs font 10 squats en même temps.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Démonstration de force",
+      "action": "${c_player}, soulève une chaise et garde-la en l’air 10 secondes.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Saut grenouille",
+      "action": "${c_player}, saute par-dessus ${r_player} comme une grenouille.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Coups éclair",
+      "action": "${c_player}, montre les coups de poing les plus rapides que tu peux.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Kettlebell vivant",
+      "action": "${c_player}, soulève ${r_player} comme un kettlebell.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Échelle de squats",
+      "action": "${c_player}, fais des squats à tour de rôle avec chaque joueur.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Roi des tractions",
+      "action": "${c_player}, fais 10 tractions sur une barre imaginaire.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sauts extrêmes",
+      "action": "${c_player}, fais une série de sauts très hauts.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Minute bodybuilder",
+      "action": "${c_player}, flexe devant chaque joueur l’un après l’autre.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pompes de groupe",
+      "action": "Tous les joueurs font 10 pompes en même temps. Le dernier à finir boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Strip-show masculin",
+      "action": "Chaque joueur enlève un vêtement. Ceux qui refusent boivent.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Bataille de planche",
+      "action": "Tout le monde tient la planche pendant 30 secondes. Le premier qui lâche perd et boit.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Ring de bras de fer",
+      "action": "Organisez un tournoi de bras de fer. Le gagnant choisit quelqu’un qui boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Relais de sauts",
+      "action": "Les joueurs font chacun 5 sauts hauts. Celui qui saute le moins haut boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Défi Sparta",
+      "action": "Tous crient « This is Sparta ! » et prennent une pose de combat. Le plus discret boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Ring des pompes",
+      "action": "Tout le monde fait des pompes. Le premier qui s’arrête boit.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Cri de guerre",
+      "action": "Chaque joueur pousse son cri de guerre le plus fort. Le plus faible boit.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Force de la fraternité",
+      "action": "Les joueurs s’accrochent par les bras et font 10 squats en rythme. Ceux qui se décalent boivent.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Danse de guerrier",
+      "action": "Tous exécutent une danse de guerre pendant 15 secondes. Ceux qui refusent boivent.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Männer am Limit",
+  "packageType": "default",
+  "description": "Harte Challenges mit Kraft, Striptease und Adrenalin. Der beste Modus für eure Männerrunde!",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Schnelle Liegestütze",
+      "action": "${c_player}, mach 15 Liegestütze so schnell du kannst.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Handstand halten",
+      "action": "${c_player}, halte einen Handstand mindestens 10 Sekunden lang.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Einhand-Strip",
+      "action": "${c_player}, zieh dein Shirt mit nur einer Hand dramatisch aus.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bauchmuskel-Tanz",
+      "action": "${c_player}, leg einen Bauchtanz hin.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Armdrücken",
+      "action": "${c_player} und ${r_player}, macht ein kurzes Armdrücken.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Plank-Challenge",
+      "action": "${c_player}, halte eine Plank 30 Sekunden lang.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Muskelshow",
+      "action": "${c_player}, zeig deine drei besten Bodybuilder-Posen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Box-Minute",
+      "action": "${c_player}, box 20 Sekunden lang in die Luft.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Burpee-Challenge",
+      "action": "${c_player}, mach 10 Burpees in 30 Sekunden.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Magic-Mike-Move",
+      "action": "${c_player}, ahme einen Tanzmove aus Magic Mike nach.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Klatsch-Liegestütze",
+      "action": "${c_player}, mach 15 Klatsch-Liegestütze.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Brücke",
+      "action": "${c_player}, mach eine Brücke und halte sie 10 Sekunden.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Einbein-Hüpfen",
+      "action": "${c_player}, hüpf 15 Sekunden lang auf einem Bein.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Stiller Strip",
+      "action": "${c_player}, zieh ein Kleidungsstück aus und bleib 30 Sekunden völlig ernst.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Ehrenrunde",
+      "action": "${c_player}, dreh eine Runde um den Tisch oder durchs Zimmer.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beachbody-Posen",
+      "action": "${c_player}, tu 20 Sekunden lang so, als wärst du Bodybuilder am Strand.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Schattenboxen",
+      "action": "${c_player}, mach eine Runde Schattenboxen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Balance-Test",
+      "action": "${c_player}, steh 15 Sekunden lang auf einem Bein mit geschlossenen Augen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Kraftheber-Minute",
+      "action": "${c_player}, tu so, als würdest du eine unsichtbare schwere Hantel stemmen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Freund hochheben",
+      "action": "${c_player}, heb ${r_player} hoch und mach 3 Kniebeugen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ninja-Sprung",
+      "action": "${c_player}, spring so hoch du kannst.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Superman-Gleiten",
+      "action": "${c_player}, tu so, als würdest du wie Superman über den Boden fliegen.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Fliegender Kick",
+      "action": "${c_player}, mach einen Sprungkick.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini-Strip",
+      "action": "${c_player}, mach 20 Sekunden lang einen kurzen Striptease.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Liegestütze mit Gewicht",
+      "action": "${c_player}, mach Liegestütze, während ${r_player} auf deinem Rücken sitzt.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hoher Kick",
+      "action": "${c_player}, kick so hoch wie dein Kopf.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beinpressen",
+      "action": "${c_player}, mach Kniebeugen, während du ${r_player} auf dem Rücken trägst.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Laute Herausforderung",
+      "action": "${c_player}, fordere ${r_player} laut und mutig zu einem Duell heraus.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Schneller Strip",
+      "action": "${c_player}, zieh in 15 Sekunden zwei beliebige Kleidungsstücke aus.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Siegespose",
+      "action": "${c_player}, nimm eine Siegespose ein und halte sie 20 Sekunden.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Tisch-Klimmzüge",
+      "action": "${c_player}, mach 10 Klimmzüge an einem Tisch oder einer anderen stabilen Fläche.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Liegestütze mit Lächeln",
+      "action": "${c_player}, mach 10 Liegestütze und grinse dabei breit.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Fußball-Freestyle",
+      "action": "${c_player}, zeig eine Reihe deiner besten Fußballtricks.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Stuhlsprung",
+      "action": "${c_player}, spring vorsichtig über einen Stuhl.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dehn-Duell",
+      "action": "${c_player}, zeig, wie weit du dich maximal dehnen kannst.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Muskel-Posing",
+      "action": "${c_player}, spann deine Muskeln dramatisch für die Runde an.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Team-Kniebeugen",
+      "action": "Alle Spieler machen gleichzeitig 10 Kniebeugen.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Kraftprobe",
+      "action": "${c_player}, heb einen Stuhl hoch und halte ihn 10 Sekunden.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Froschsprung",
+      "action": "${c_player}, spring wie ein Frosch über ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Blitzschläge",
+      "action": "${c_player}, zeig deine schnellsten Schläge.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Lebende Kettlebell",
+      "action": "${c_player}, heb ${r_player} wie eine Kettlebell hoch.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kniebeugen-Staffel",
+      "action": "${c_player}, mach nacheinander mit jedem Spieler Kniebeugen.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Klimmzug-König",
+      "action": "${c_player}, mach 10 Klimmzüge an einer imaginären Stange.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Extreme Sprünge",
+      "action": "${c_player}, mach eine Serie hoher Sprünge.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bodybuilder-Minute",
+      "action": "${c_player}, posiere nacheinander für jeden Spieler.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Gruppen-Liegestütze",
+      "action": "Alle Spieler machen gleichzeitig 10 Liegestütze. Wer als Letzter fertig ist, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Männer-Stripshow",
+      "action": "Jeder Spieler zieht ein Kleidungsstück aus. Wer sich weigert, trinkt.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Plank-Battle",
+      "action": "Alle halten 30 Sekunden eine Plank. Wer zuerst aufgibt, verliert und trinkt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Armdrück-Arena",
+      "action": "Macht ein Armdrück-Turnier. Der Sieger bestimmt, wer trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sprung-Staffel",
+      "action": "Die Spieler machen reihum 5 hohe Sprünge. Wer am schlechtesten abschneidet, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sparta-Challenge",
+      "action": "Alle schreien \"This is Sparta!\" und nehmen Kampfposen ein. Wer am leisesten ist, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Liegestütz-Ring",
+      "action": "Alle machen Liegestütze. Wer zuerst aufhört, trinkt.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Kampfschrei",
+      "action": "Jeder Spieler gibt seinen lautesten Kampfschrei. Der schwächste trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Bruderstärke",
+      "action": "Die Spieler haken sich unter und machen synchron 10 Kniebeugen. Wer aus dem Takt kommt, trinkt.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Krieger-Tanz",
+      "action": "Alle führen 15 Sekunden lang einen Krieger-Tanz auf. Wer sich weigert, trinkt.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

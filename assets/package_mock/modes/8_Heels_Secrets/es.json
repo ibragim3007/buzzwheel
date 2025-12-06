@@ -1,0 +1,401 @@
+{
+  "id": 8,
+  "name": "Noche de chicas en tacones",
+  "packageType": "default",
+  "description": "Retos y preguntas sobre amor, belleza y secretos entre amigas. Lo que pasa aquí se queda entre nosotras.",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Historia de la primera cita",
+      "action": "${c_player}, cuéntanos la cita más divertida que has tenido.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Veredicto de estilo",
+      "action": "${c_player}, puntúa el look de ${r_player} y dale un consejo de estilo.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush secreto",
+      "action": "${c_player}, confiesa quién ha sido tu crush secreto.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Belleza o comodidad",
+      "action": "${c_player}, elige: tacones todo el día o ir a una cita sin maquillaje.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maquillaje secreto",
+      "action": "${c_player}, ¿qué producto de belleza te encanta en secreto pero nunca lo admites?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Aroma favorito",
+      "action": "${c_player}, ¿qué perfume asocian contigo tus amigas?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Truco de belleza",
+      "action": "${c_player}, comparte tu truco de belleza más raro.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cita con famoso",
+      "action": "${c_player}, di con qué famoso te encantaría tener una cita.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Accidente con la ropa",
+      "action": "${c_player}, ¿cuál ha sido tu momento más incómodo con la ropa?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Día perfecto",
+      "action": "${c_player}, describe tu día perfecto de chicas.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "La mejor vestida",
+      "action": "${c_player}, di con honestidad quién se ve mejor esta noche.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Miedo en la primera cita",
+      "action": "${c_player}, ¿qué es lo que más te asusta en secreto en una primera cita?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Color prohibido",
+      "action": "${c_player}, ¿qué color nunca usarías y por qué?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Regalo raro",
+      "action": "${c_player}, comparte el regalo más raro que has recibido.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amiga modelo a seguir",
+      "action": "${c_player}, ¿qué hábito de ${r_player} te gustaría tener en secreto?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vestido soñado",
+      "action": "${c_player}, describe tu vestido soñado.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Momento de película romántica",
+      "action": "${c_player}, ¿qué película romántica te hizo llorar?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Predicción de amor",
+      "action": "${c_player}, haz una predicción de amor para ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Momento de cumplidos",
+      "action": "${c_player}, da un cumplido a cada amiga de la mesa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Primer beso",
+      "action": "${c_player}, cuéntanos cómo fue tu primer beso.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Hobby oculto",
+      "action": "${c_player}, ¿qué hobby tienes que nadie conoce?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Belleza interior",
+      "action": "${c_player}, ¿qué hace hermosa a una mujer más allá de su apariencia?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Accesorio imprescindible",
+      "action": "${c_player}, ¿qué accesorio llevas casi siempre y por qué?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Postre prohibido",
+      "action": "${c_player}, ¿por qué postre romperías tu dieta?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vestidito negro",
+      "action": "${c_player}, ¿a dónde llevarías tu vestidito negro perfecto?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tacones de ensueño",
+      "action": "${c_player}, describe los zapatos que te hacen sentir como una reina.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Envidia amiga",
+      "action": "${c_player}, ¿qué admiras de verdad de ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pro del selfie",
+      "action": "${c_player}, muestra cómo te haces el selfie perfecto.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Gesto tierno",
+      "action": "${c_player}, ¿qué gesto de un chico te derrite el corazón?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Uñas perfectas",
+      "action": "${c_player}, ¿qué estilo de uñas te parece más elegante?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dieta más rara",
+      "action": "${c_player}, cuéntanos la dieta más rara que has probado.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secreto para estar en forma",
+      "action": "${c_player}, ¿cuál es tu mejor truco para mantenerte en forma?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Influencer secreto",
+      "action": "${c_player}, ¿qué influencer sigues en secreto?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cumplido inolvidable",
+      "action": "${c_player}, ¿qué cumplido se te quedó grabado para siempre?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amiga experta",
+      "action": "${c_player}, ¿en qué dicen tus amigas que eres experta?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tacones o tenis",
+      "action": "${c_player}, ¿qué llevarías a una cita: tacones o tenis?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talento oculto",
+      "action": "${c_player}, ¿qué talento secreto tienes?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Serie favorita",
+      "action": "${c_player}, ¿qué serie podrías ver en bucle para siempre?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mañana perfecta",
+      "action": "${c_player}, describe tu mañana perfecta.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Epic fail en tacones",
+      "action": "${c_player}, cuéntanos una caída graciosa que tuviste en tacones.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Maquillaje en 1 minuto",
+      "action": "${c_player}, describe tu rutina de maquillaje de un minuto.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Chequeo de labial",
+      "action": "${c_player}, ¿de qué color es el labial que llevas ahora en el bolso?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amiga al rescate",
+      "action": "${c_player}, cuenta una vez en que una amiga te salvó el día.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Llamada de las 3 a.m.",
+      "action": "${c_player}, ¿a qué amiga llamarías primero a las 3 a.m.?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Intercambio de secretos de belleza",
+      "action": "Cada chica comparte un truco de belleza raro. ¿No se te ocurre ninguno? Bebes.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Selfie en grupo",
+      "action": "Saquen un selfie de grupo con su cara más divertida. Quien se niegue, bebe.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Cadena de cumplidos",
+      "action": "Cada chica le hace un cumplido a la de su derecha. Quien se trabe, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Accesorio top",
+      "action": "Todas muestran su accesorio favorito. La del menos votado bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Coincidencia de labial",
+      "action": "Digan a la vez su color de labial favorito. Quienes coincidan beben juntas.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Duelo de poses",
+      "action": "Todas hacen su mejor pose para foto. La primera que se ría bebe.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Grito de amor propio",
+      "action": "Todas gritan a la vez «¡Me amo!». La voz más bajita bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Revisión de uñas",
+      "action": "Todas muestran sus uñas. Quien no tenga manicura, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Duelo de baile en tacones",
+      "action": "Bailen en tacones durante 15 segundos. La primera que pare, bebe.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Noche de series",
+      "action": "Digan a la vez su serie favorita. Quien tenga una serie única reparte un trago.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Fortuna de amiga",
+      "action": "Predice qué le traerá este año a la chica de tu derecha. ¿No puedes? Bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Duelo de zapatos",
+      "action": "Todas muestran sus zapatos. La dueña del par más simple bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Verdad o farol",
+      "action": "Cuenta una historia corta. Las demás adivinan si es verdad o mentira. Quien se equivoque, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Canta tu favorita",
+      "action": "Todas tararean su canción favorita. La primera que pare, bebe.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Guerra de guiños",
+      "action": "Todas guiñan el ojo a la vez. Quien se olvide, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Robo secreto",
+      "action": "Admite qué producto de maquillaje le robarías en secreto a una amiga. ¿Te niegas? Bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Vestido favorito",
+      "action": "Describe tu vestido favorito. Quien se trabe, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Baile del círculo de amigas",
+      "action": "Den la mano y bailen en círculo durante 15 segundos. Si se rompe el círculo, beben.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Brindis por nosotras",
+      "action": "Digan a la vez un brindis por la amistad. Quien haga el brindis más corto, bebe.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Cita soñada",
+      "action": "Describe en voz alta tu cita ideal. ¿Coinciden en detalles? Beben juntas.",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

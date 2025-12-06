@@ -29,26 +29,46 @@ import freeModeDe from './1_free_mode/de.json';
 import flirtyDuoDe from './2_Flirty_Duo/de.json';
 import shadesDe from './3_50_Shades/de.json';
 import chaosDe from './4_CHAOS_Mode/de.json';
+import SillyVibesDe from './5_Silly_Vibes/de.json';
+import GlassConfessionsDe from './6_Glass_Confessions/de.json';
+import BoysOnEdgeDe from './7_Boys_on_Edge/de.json';
+import HeelsSecretsDe from './8_Heels_Secrets/de.json';
 
 import freeModeFr from './1_free_mode/fr.json';
 import flirtyDuoFr from './2_Flirty_Duo/fr.json';
 import shadesFr from './3_50_Shades/fr.json';
 import chaosFr from './4_CHAOS_Mode/fr.json';
+import SillyVibesFr from './5_Silly_Vibes/fr.json';
+import GlassConfessionsFr from './6_Glass_Confessions/fr.json';
+import BoysOnEdgeFr from './7_Boys_on_Edge/fr.json';
+import HeelsSecretsFr from './8_Heels_Secrets/fr.json';
 
 import freeModeEs from './1_free_mode/es.json';
 import flirtyDuoEs from './2_Flirty_Duo/es.json';
 import shadesEs from './3_50_Shades/es.json';
 import chaosEs from './4_CHAOS_Mode/es.json';
+import SillyVibesEs from './5_Silly_Vibes/es.json';
+import GlassConfessionsEs from './6_Glass_Confessions/es.json';
+import BoysOnEdgeEs from './7_Boys_on_Edge/es.json';
+import HeelsSecretsEs from './8_Heels_Secrets/es.json';
 
 import freeModePl from './1_free_mode/pl.json';
 import flirtyDuoPl from './2_Flirty_Duo/pl.json';
 import shadesPl from './3_50_Shades/pl.json';
 import chaosPl from './4_CHAOS_Mode/pl.json';
+import SillyVibesPl from './5_Silly_Vibes/pl.json';
+import GlassConfessionsPl from './6_Glass_Confessions/pl.json';
+import BoysOnEdgePl from './7_Boys_on_Edge/pl.json';
+import HeelsSecretsPl from './8_Heels_Secrets/pl.json';
 
 import freeModeFil from './1_free_mode/fil.json';
 import flirtyDuoFil from './2_Flirty_Duo/fil.json';
 import shadesFil from './3_50_Shades/fil.json';
 import chaosFil from './4_CHAOS_Mode/fil.json';
+import SillyVibesFil from './5_Silly_Vibes/fil.json';
+import GlassConfessionsFil from './6_Glass_Confessions/fil.json';
+import BoysOnEdgeFil from './7_Boys_on_Edge/fil.json';
+import HeelsSecretsFil from './8_Heels_Secrets/fil.json';
 
 export const modesRu = [
   freeModeRu,
@@ -80,14 +100,59 @@ export const modesEn = [
   NeverHaveEn,
 ];
 
-export const modesDe = [freeModeDe, flirtyDuoDe, shadesDe, chaosDe];
+export const modesDe = [
+  freeModeDe,
+  flirtyDuoDe,
+  shadesDe,
+  chaosDe,
+  SillyVibesDe,
+  GlassConfessionsDe,
+  BoysOnEdgeDe,
+  HeelsSecretsDe,
+];
 
-export const modesFr = [freeModeFr, flirtyDuoFr, shadesFr, chaosFr];
+export const modesFr = [
+  freeModeFr,
+  flirtyDuoFr,
+  shadesFr,
+  chaosFr,
+  SillyVibesFr,
+  GlassConfessionsFr,
+  BoysOnEdgeFr,
+  HeelsSecretsFr,
+];
 
-export const modesEs = [freeModeEs, flirtyDuoEs, shadesEs, chaosEs];
-export const modesPl = [freeModePl, flirtyDuoPl, shadesPl, chaosPl];
+export const modesEs = [
+  freeModeEs,
+  flirtyDuoEs,
+  shadesEs,
+  chaosEs,
+  SillyVibesEs,
+  GlassConfessionsEs,
+  BoysOnEdgeEs,
+  HeelsSecretsEs,
+];
+export const modesPl = [
+  freeModePl,
+  flirtyDuoPl,
+  shadesPl,
+  chaosPl,
+  SillyVibesPl,
+  GlassConfessionsPl,
+  BoysOnEdgePl,
+  HeelsSecretsPl,
+];
 
-export const modesFil = [freeModeFil, flirtyDuoFil, shadesFil, chaosFil];
+export const modesFil = [
+  freeModeFil,
+  flirtyDuoFil,
+  shadesFil,
+  chaosFil,
+  SillyVibesFil,
+  GlassConfessionsFil,
+  BoysOnEdgeFil,
+  HeelsSecretsFil,
+];
 
 type TModes = Record<LANGUAGE, Package[]>;
 

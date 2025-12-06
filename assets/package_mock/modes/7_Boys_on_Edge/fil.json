@@ -1,0 +1,364 @@
+{
+  "id": 7,
+  "name": "Mga Lalaki sa Bingit",
+  "packageType": "default",
+  "description": "Brutal na hamon na may lakas, striptease at adrenaline. Pinakamagandang mode para sa tropang puro lalaki!",
+  "imageEncoded": "3332ae6e-9fff-4500-b486-befa2d913571.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Mabilis na Push-ups",
+      "action": "${c_player}, gawin ang 15 push-ups nang pinakamabilis na kaya mo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Handstand 10 Segundo",
+      "action": "${c_player}, mag-handstand nang hindi bababa sa 10 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 10
+    },
+    {
+      "title": "Isang Kamay, Tanggal Kamiseta",
+      "action": "${c_player}, tanggalin ang kamiseta mo gamit lang isang kamay nang may drama.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sayaw ng Abs",
+      "action": "${c_player}, mag-belly dance.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Arm Wrestling",
+      "action": "${c_player} at ${r_player}, mag-arm wrestling kayo ng isang maikling round.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Plank Challenge",
+      "action": "${c_player}, mag-plank nang 30 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Muscle Show",
+      "action": "${c_player}, ipakita ang tatlo mong paboritong bodybuilder pose.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Boxing Minute",
+      "action": "${c_player}, magbitaw ng suntok sa hangin nang 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Burpee Challenge",
+      "action": "${c_player}, gawin ang 10 burpees sa loob ng 30 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Galaw ni Magic Mike",
+      "action": "${c_player}, gayahin ang isang sayaw na galaw mula sa Magic Mike.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Clap Push-ups",
+      "action": "${c_player}, gawin ang 15 clap push-ups.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Bridge Pose",
+      "action": "${c_player}, gawin ang bridge at hawakan ito nang 10 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Lundag sa Isang Paa",
+      "action": "${c_player}, lumundag sa isang paa nang 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Tahimik na Strip",
+      "action": "${c_player}, alisin ang isang piraso ng damit at manatiling seryoso nang 30 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 30
+    },
+    {
+      "title": "Victory Lap",
+      "action": "${c_player}, umikot nang isang lap sa paligid ng mesa o kwarto.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beach Body Flex",
+      "action": "${c_player}, umasta na parang bodybuilder sa beach nang 20 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Shadow Boxing",
+      "action": "${c_player}, mag-shadow boxing ng isang round.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Balance Test",
+      "action": "${c_player}, tumayo sa isang paa na nakapikit nang 15 segundo.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Powerlifter Minute",
+      "action": "${c_player}, magpanggap na nagbubuhat ng mabigat pero imahinaryong barbell.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 20
+    },
+    {
+      "title": "Buhatin ang Kaibigan",
+      "action": "${c_player}, buhatin si ${r_player} at gumawa ng 3 squats.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Ninja Jump",
+      "action": "${c_player}, tumalon nang pinakamataas na kaya mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Superman Slide",
+      "action": "${c_player}, umasta na parang Superman na lumilipad sa sahig.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Flying Kick",
+      "action": "${c_player}, gumawa ng tumatalong sipa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Mini Strip",
+      "action": "${c_player}, mag-mini striptease nang 20 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 20
+    },
+    {
+      "title": "Push-up na may Bigat",
+      "action": "${c_player}, mag-push-up habang nakaupo si ${r_player} sa likod mo.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "High Kick",
+      "action": "${c_player}, sumipa nang kasingtaas ng ulo mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Leg Press",
+      "action": "${c_player}, mag-squat habang buhat sa likod mo si ${r_player}.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Malakas na Hamon",
+      "action": "${c_player}, malakas at matapang na hamunin si ${r_player} sa duel.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mabilis na Strip",
+      "action": "${c_player}, tanggalin ang alinmang dalawang piraso ng damit sa loob ng 15 segundo.",
+      "type": "player",
+      "alcohol": 3,
+      "time": 15
+    },
+    {
+      "title": "Victory Pose",
+      "action": "${c_player}, gumawa ng victory pose at hawakan ito nang 20 segundo.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Table Pull-ups",
+      "action": "${c_player}, gawin ang 10 pull-ups gamit ang mesa o ibang matibay na ibabaw.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Push-ups na may Ngiti",
+      "action": "${c_player}, gumawa ng 10 push-ups habang nakangiti nang malapad.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Football Freestyle",
+      "action": "${c_player}, magpakita ng sunod-sunod na football tricks.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Chair Jump",
+      "action": "${c_player}, dahan-dahang tumalon at lampasan ang isang upuan.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Duel ng Flexibility",
+      "action": "${c_player}, ipakita ang pinaka-maximum mong stretch.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Camera Flex",
+      "action": "${c_player}, mag-flex ng muscles mo nang todo para sa grupo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Team Squats",
+      "action": "Lahat ng manlalaro ay sabay-sabay na gumawa ng 10 squats.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Pagpapakitang Lakas",
+      "action": "${c_player}, buhatin ang isang upuan at hawakan ito nang 10 segundo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lundag Palaka",
+      "action": "${c_player}, lumundag at lampasan si ${r_player} na parang palaka.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kidlat na Suntok",
+      "action": "${c_player}, ipakita ang pinaka-mabilis mong mga suntok.",
+      "type": "player",
+      "alcohol": 2,
+      "time": 10
+    },
+    {
+      "title": "Buhay na Kettlebell",
+      "action": "${c_player}, buhatin si ${r_player} na parang kettlebell.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Squat Ladder",
+      "action": "${c_player}, mag-squats sunod-sunod kasama ang bawat manlalaro.",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Hari ng Pull-up",
+      "action": "${c_player}, gumawa ng 10 pull-ups sa imahinaryong bar.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Matitinding Talon",
+      "action": "${c_player}, gumawa ng ilang sunod-sunod na mataas na talon.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Bodybuilder Minute",
+      "action": "${c_player}, mag-flex sa harap ng bawat manlalaro, isa-isa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Group Push-ups",
+      "action": "Lahat ng manlalaro ay sabay na gumagawa ng 10 push-ups. Ang huling matapos ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Strip Show ng mga Lalaki",
+      "action": "Bawat manlalaro ay mag-aalis ng isang piraso ng damit. Kung sino ang tumanggi, iinom.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Laban sa Plank",
+      "action": "Lahat ay mag-plank nang 30 segundo. Ang unang bumigay, talo at iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 30
+    },
+    {
+      "title": "Arm Wrestling Ring",
+      "action": "Gumawa ng arm wrestling tournament. Pipili ang panalo ng isang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Jump Relay",
+      "action": "Paikot na gagawa ang mga manlalaro ng tig-5 mataas na talon. Ang pinaka-mahina ang talon ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sparta Challenge",
+      "action": "Lahat sisigaw ng 'This is Sparta!' at gagawa ng fighting pose. Ang pinakamahinang sigaw ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Push-up Ring",
+      "action": "Lahat ay gagawa ng push-ups. Ang unang huminto ang iinom.",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Battle Cry",
+      "action": "Bawat manlalaro ay magbibigay ng pinakamalakas nilang sigaw-panglaban. Ang pinakamahina ang iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lakas ng Kapatiran",
+      "action": "Magkakabit ang mga braso ng mga manlalaro at gagawa ng 10 squats nang sabay-sabay. Kung sino ang mawala sa tiyempo, iinom.",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Sayaw Mandirigma",
+      "action": "Lahat ay sasayaw ng war dance nang 15 segundo. Kung sino ang tumanggi, iinom.",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    }
+  ]
+}

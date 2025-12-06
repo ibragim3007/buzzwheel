@@ -1,0 +1,304 @@
+{
+  "id": 6,
+  "name": "Kumpisal sa Kailaliman ng Kaluluwa",
+  "packageType": "default",
+  "description": "Matitinding tanong na maglalantad ng pinakamalalalim na sikreto ng grupo. Handa na ba kayo sa katotohanan?",
+  "imageEncoded": "2673dd1f-b444-4b84-98fc-2136ac8c7194.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Pinakamatapang na Gawa",
+      "action": "${c_player}, ano ang pinakabaliw na ginawa mo sa buhay?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Date",
+      "action": "${c_player}, nagkaroon ka na ba ng lihim na relasyon?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kahiya-hiyang Lihim",
+      "action": "${r_player}, aling lihim ang hanggang ngayon ay napapahiya ka pa rin kapag naaalala mo?",
+      "type": "all",
+      "alcohol": 3
+    },
+    {
+      "title": "Unang Pag-ibig",
+      "action": "${c_player}, sino ang una mong pag-ibig?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Bawal na Nasa",
+      "action": "${c_player}, sabihin ang isang lihim mong pagnanasa.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Inggit",
+      "action": "${c_player}, kanino sa grupong ito ka pinakanaiinggit at bakit?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Nakakahiya na Sandali",
+      "action": "${c_player}, ano ang pinakanakakahiya mong karanasan sa buhay?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakamasamang Halik",
+      "action": "${c_player}, ikuwento ang pinakamasamang halik na naranasan mo.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakamalaking Kasinungalingan",
+      "action": "${c_player}, ano ang pinakamalaking kasinungalingang nasabi mo sa isang taong malapit sa iyo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Bawal na Crush",
+      "action": "${c_player}, kanino ka nagkagusto kahit alam mong bawal o nakakailang?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Kahinaan",
+      "action": "${c_player}, anong lihim mong kahinaan ang kaunti lang ang nakakaalam?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakakakaibang Lugar",
+      "action": "${c_player}, saang pinaka-kakaibang lugar ka nakahalik sa isang tao?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pinakamalaking Pagsisisi",
+      "action": "${c_player}, ano ang pinakamalaking pinagsisisihan mo sa buhay?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pekeng Damdamin",
+      "action": "${r_player}, nagkunwari ka na bang in love ka?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Damdamin",
+      "action": "${c_player}, sino sa grupong ito ang gusto mo higit pa sa kaibigan lang?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pinakamatinding Pantasya",
+      "action": "${c_player}, ano ang pinakamatinding pantasya mo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Basted na Pag-amin",
+      "action": "${c_player}, naranasan mo na bang ma-basted?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dalawang Sabay",
+      "action": "${c_player}, nakipag-date ka na ba sa dalawang tao nang sabay?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pinakamasamang Gawa",
+      "action": "${c_player}, ano ang pinakamasamang nagawa mo?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pinakamasamang Ugali",
+      "action": "${c_player}, ano ang pinakamasama mong ugali?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Sablay na Date",
+      "action": "${c_player}, ikuwento ang pinaka-sablay mong date.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Relasyong Walang Pag-ibig",
+      "action": "${c_player}, naging nasa isang relasyon ka na ba na parang walang pag-ibig?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nakakailang na Katotohanan",
+      "action": "${c_player}, anong nakakailang na katotohanan ang itinatago mo pa rin sa mga mahal mo sa buhay?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Kakaibang Crush",
+      "action": "${c_player}, ikuwento ang pinaka-kakaiba mong crush.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Sama ng Loob",
+      "action": "${r_player}, kanino rito ikaw may tinatagong sama ng loob hanggang ngayon?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakamasamang Regalo",
+      "action": "${c_player}, ano ang pinakamasamang regalong natanggap mo?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Kahiya-hiyang Eksena sa Publiko",
+      "action": "${c_player}, naranasan mo na bang mapahiya sa harap ng maraming tao?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Masamang Kaibigan",
+      "action": "${c_player}, nagtaksil ka na ba sa kaibigan?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Takot",
+      "action": "${c_player}, anong takot ang lihim mong itinatago sa lahat?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pagmamahal sa Ex",
+      "action": "${c_player}, may nararamdaman ka pa ba para sa isang ex?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Paborito",
+      "action": "${c_player}, ano ang 'guilty pleasure' mo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Panaginip",
+      "action": "${c_player}, nagkaroon ka na ba ng panaginip na nahihiya kang ikuwento?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakamatinding Pakikipagsapalaran",
+      "action": "${c_player}, ano ang pinakamatinding pakikipagsapalaran na sinuong mo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Kasinungalingan para sa Sarili",
+      "action": "${r_player}, nagsinungaling ka na ba para sa sarili mong pakinabang?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Pinakamapait na Hiwalayan",
+      "action": "${c_player}, aling hiwalayan ang pinakanakasakit sa iyo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Pagcha-chat",
+      "action": "${c_player}, may tinatago ka bang lihim na chat ngayon?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nabasag na Pangako",
+      "action": "${c_player}, anong pangakong nabali mo na?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Inis",
+      "action": "${c_player}, kanino rito ka minsan lihim na naiinis?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Kaibigan",
+      "action": "${c_player}, may lihim ka bang kaibigan na walang ibang nakakaalam?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Maling Naiisip sa Maling Oras",
+      "action": "${c_player}, ano ang pinakanamaling naiisip mo na pumasok sa isip mo sa maling oras?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Paggamit sa Iba",
+      "action": "${c_player}, ginamit mo na ba ang isang tao para sa sarili mong pakinabang?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Lihim na Pagkainis",
+      "action": "${r_player}, ano ang lihim na kinaiinisan mo tungkol sa grupong ito?",
+      "type": "all",
+      "alcohol": 2
+    },
+    {
+      "title": "Hindi Inaasahang Pagtanggi",
+      "action": "${c_player}, sino ang hindi mo inaasahang tinanggihan mo at bakit?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Dobleng Buhay",
+      "action": "${c_player}, naranasan mo na bang mamuhay nang may dobleng buhay?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Nabigong Inaasahan",
+      "action": "${c_player}, sino sa grupo ang pinakanakabigo sa'yo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Lihim na Paghatol",
+      "action": "${c_player}, tungkol saan mo lihim na hinuhusgahan si ${r_player}?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Pagtataksil para sa Pag-ibig",
+      "action": "${c_player}, pagtataksilan mo ba ang kaibigan para sa pag-ibig?",
+      "type": "player",
+      "alcohol": 3
+    },
+    {
+      "title": "Pagsisinungaling sa Sarili",
+      "action": "${c_player}, tungkol saan ka pa rin nagsisinungaling sa sarili mo?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Tanong na Isang Milyong Dolyar",
+      "action": "${c_player}, ipapahayag mo ba lahat ng sikreto mo kapalit ng isang milyong dolyar?",
+      "type": "player",
+      "alcohol": 3
+    }
+  ]
+}

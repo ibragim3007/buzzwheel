@@ -1,0 +1,401 @@
+{
+  "id": 8,
+  "name": "Soirée filles en talons",
+  "packageType": "default",
+  "description": "Défis et questions sur l’amour, la beauté et les petits secrets entre copines. Ce qui se passe ici reste entre nous !",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Premier rencard",
+      "action": "${c_player}, raconte-nous ton rencard le plus drôle.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Verdict look",
+      "action": "${c_player}, note le look de ${r_player} et donne-lui un conseil mode.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Crush secret",
+      "action": "${c_player}, avoue qui était ton crush secret.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Beauté ou confort",
+      "action": "${c_player}, choisis : talons toute la journée ou rendez-vous sans maquillage ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Maquillage secret",
+      "action": "${c_player}, quel produit beauté tu adores en secret mais n’avoues jamais ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Parfum préféré",
+      "action": "${c_player}, quel parfum tes amies associent à toi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Recette beauté",
+      "action": "${c_player}, partage ton astuce beauté la plus bizarre.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rencard de star",
+      "action": "${c_player}, cite une star avec qui tu rêverais d’avoir un rencard.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Accident de look",
+      "action": "${c_player}, quel est ton moment look le plus gênant ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Journée parfaite",
+      "action": "${c_player}, décris ta journée idéale entre copines.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "La mieux habillée",
+      "action": "${c_player}, dis honnêtement qui est la plus stylée ce soir.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Peur du premier rencard",
+      "action": "${c_player}, qu’est-ce qui te fait le plus peur en secret lors d’un premier rencard ?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Couleur interdite",
+      "action": "${c_player}, quelle couleur tu ne porterais jamais et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Cadeau bizarre",
+      "action": "${c_player}, raconte le cadeau le plus bizarre que tu aies reçu.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amie modèle",
+      "action": "${c_player}, quelle habitude de ${r_player} tu aimerais secrètement avoir ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Robe de rêve",
+      "action": "${c_player}, décris ta robe de rêve.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Film romantique",
+      "action": "${c_player}, quel film romantique t’a déjà fait pleurer ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Prédiction d’amour",
+      "action": "${c_player}, fais une prédiction amoureuse pour ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Minute compliments",
+      "action": "${c_player}, fais un compliment à chaque fille à table.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Premier baiser",
+      "action": "${c_player}, raconte-nous ton premier baiser.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Passion cachée",
+      "action": "${c_player}, quel hobby as-tu que personne ne connaît ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Beauté intérieure",
+      "action": "${c_player}, qu’est-ce qui rend une femme belle au-delà de son apparence ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Accessoire fétiche",
+      "action": "${c_player}, quel accessoire tu portes toujours et pourquoi ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dessert interdit",
+      "action": "${c_player}, pour quel dessert tu briserais ton régime ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Petite robe noire",
+      "action": "${c_player}, où porterais-tu ta petite robe noire parfaite ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talons de rêve",
+      "action": "${c_player}, décris les chaussures qui te font te sentir comme une reine.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jalousie amicale",
+      "action": "${c_player}, qu’est-ce que tu admires vraiment chez ${r_player} ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pro du selfie",
+      "action": "${c_player}, montre comment tu prends le selfie parfait.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Geste qui fait fondre",
+      "action": "${c_player}, quel geste d’un mec te fait complètement fondre ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ongles parfaits",
+      "action": "${c_player}, quel style de manucure trouves-tu le plus stylé ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Régime le plus bizarre",
+      "action": "${c_player}, parle-nous du régime le plus bizarre que tu aies essayé.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Secret minceur",
+      "action": "${c_player}, c’est quoi ton meilleur truc pour rester en forme ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Influenceuse secrète",
+      "action": "${c_player}, quelle influenceuse tu suis en secret ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Compliment inoubliable",
+      "action": "${c_player}, quel compliment t’a marquée pour toujours ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "L’amie experte",
+      "action": "${c_player}, en quoi tes amies te considèrent-elles comme une experte ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talons ou baskets",
+      "action": "${c_player}, tu mets quoi pour un rencard : talons ou baskets ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Talent caché",
+      "action": "${c_player}, quel talent caché as-tu ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Série préférée",
+      "action": "${c_player}, quelle série peux-tu regarder en boucle pour toujours ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Matin parfait",
+      "action": "${c_player}, décris ton matin parfait.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fail en talons",
+      "action": "${c_player}, raconte une fois où tu as chuté en talons de façon hilarante.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Make-up 1 minute",
+      "action": "${c_player}, décris ta routine make-up en une minute.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Check rouge à lèvres",
+      "action": "${c_player}, quelle couleur de rouge à lèvres il y a dans ton sac en ce moment ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Amie au secours",
+      "action": "${c_player}, raconte une fois où une amie t’a sauvé la journée.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Appel 3 h du mat",
+      "action": "${c_player}, quelle amie appellerais-tu en premier à 3 h du matin ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Échange de secrets beauté",
+      "action": "Chaque fille partage une astuce beauté bizarre. T’en as pas ? Tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Selfie de groupe",
+      "action": "Faites un selfie de groupe avec votre grimace la plus drôle. Tu refuses ? Tu bois !",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Chaîne de compliments",
+      "action": "Chaque fille complimente celle à sa droite. Tu bégayes ? Tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Accessoire star",
+      "action": "Tout le monde montre son accessoire préféré. Celle qui a le moins de votes boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Match de rouge à lèvres",
+      "action": "Dites en même temps votre couleur de rouge à lèvres préférée. Celles qui matchent boivent ensemble !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Battle de poses",
+      "action": "Tout le monde prend sa meilleure pose photo. La première qui rigole boit !",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Cri d’amour de soi",
+      "action": "Tout le monde crie « Je m’aime ! » en même temps. La voix la plus faible boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Check manucure",
+      "action": "Tout le monde montre ses ongles. Pas de manucure ? Tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Dance battle en talons",
+      "action": "Dansez en talons pendant 15 secondes. La première qui s’arrête boit !",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Choix de séries",
+      "action": "Dites votre série préférée en même temps. Si la tienne est unique, tu fais boire quelqu’un !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Destin de copine",
+      "action": "Prédisez ce qui attend cette année la fille à votre droite. Tu n’y arrives pas ? Tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Battle de chaussures",
+      "action": "Tout le monde montre ses chaussures. Celle qui a la paire la plus simple boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Vérité ou bluff",
+      "action": "Racontez une courte histoire. Les autres devinent si c’est vrai ou pas. Mauvaise réponse = tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Chante ta préférée",
+      "action": "Tout le monde fredonne sa chanson préférée. La première qui s’arrête boit !",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Guerre de clins d’œil",
+      "action": "Toutes les filles font un clin d’œil en même temps. Celle qui oublie boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Vol de maquillage",
+      "action": "Avoue quel produit de maquillage tu volerais en secret à une amie. Tu refuses ? Tu bois !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Robe préférée",
+      "action": "Chacune décrit sa robe préférée. Celle qui bafouille boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Ronde de l’amitié",
+      "action": "Tenez-vous par la main et dansez en ronde pendant 15 secondes. Vous cassez le cercle ? Vous buvez !",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "À nous !",
+      "action": "Portez un toast à l’amitié en même temps. Celle qui fait le toast le plus court boit !",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Rencard de rêve",
+      "action": "Décrivez à voix haute votre rencard de rêve. Des détails qui matchent ? Vous buvez ensemble !",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}

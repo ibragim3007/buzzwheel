@@ -1,0 +1,531 @@
+{
+  "id": 5,
+  "name": "Bêtises en folie",
+  "packageType": "default",
+  "description": "Des défis absurdes et joyeux à jouer même devant tes parents. La maternelle pour adultes !",
+  "imageEncoded": "b581a6f6-beb9-40b6-870b-fda247bf89b9.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Marche du bébé éléphant",
+      "action": "${c_player}, fais le tour de la pièce en balançant ton bras comme une trompe d’éléphant.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Voix de dessin animé",
+      "action": "${c_player}, parle avec la voix d’un personnage de dessin animé jusqu’au prochain tour.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Poulet sportif",
+      "action": "${c_player}, fais la poule qui fait du sport.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Bourdonnement collectif",
+      "action": "Tous les joueurs bourdonnent comme des abeilles pendant 10 secondes.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Citron imaginaire",
+      "action": "${c_player}, fais semblant de manger un citron bien acide et montre ta réaction.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Robot au ralenti",
+      "action": "${c_player}, parle et bouge comme un robot pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kangourou joyeux",
+      "action": "${c_player}, saute dans la pièce comme un kangourou tout joyeux.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Petite grenouille sérieuse",
+      "action": "${c_player}, accroupis-toi et joue une grenouille très sérieuse pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Baguette magique",
+      "action": "${c_player}, prends une baguette magique imaginaire et exauce le vœu d’un joueur.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Vague en chaîne",
+      "action": "Les joueurs se passent un signe de la main à tour de rôle ; celui qui se trompe boit.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Chef d’orchestre joyeux",
+      "action": "${c_player}, dirige joyeusement les autres joueurs comme un orchestre.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Pingouin perdu",
+      "action": "${c_player}, dandine-toi comme un pingouin qui a perdu sa maison.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Discussion avec les chaussettes",
+      "action": "${c_player}, parle à tes chaussettes et demande-leur comment s’est passée leur journée.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Yaourt glacé",
+      "action": "${c_player}, reste figé dans la pose la plus ridicule possible pendant 15 secondes.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Ronde des prénoms",
+      "action": "Chaque joueur dit rapidement son prénom de façon marrante jusqu’à ce que ce soit de nouveau le tour de ${c_player}.",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Sauts dans les flaques",
+      "action": "${c_player}, saute sur place comme si tu éclaboussais une énorme flaque.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Chapeau d’invisibilité",
+      "action": "${c_player}, mets un chapeau invisible imaginaire et essaie de disparaître.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Musicien bizarre",
+      "action": "${c_player}, joue un petit air sur un instrument imaginaire.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Parade des papillons",
+      "action": "Tous les joueurs battent des bras comme des ailes de papillon pendant 15 secondes.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Sandwich d’émotions",
+      "action": "${c_player}, décris une recette de sandwich en utilisant des émotions à la place des ingrédients.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Poisson hors de l’eau",
+      "action": "${c_player}, fais le poisson qui essaie de nager sur la terre ferme.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Conteur étrange",
+      "action": "${c_player}, raconte une petite histoire sur comment ${r_player} est devenu un super-héros.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Personne en pâte à modeler",
+      "action": "${c_player}, bouge comme si tu étais fait de pâte à modeler.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Applaudissements joyeux",
+      "action": "Tous les joueurs applaudissent ${r_player} fort et joyeusement pendant 10 secondes.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Marche ridicule",
+      "action": "${c_player}, montre une façon de marcher qui irait parfaitement à ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chanteur atypique",
+      "action": "${c_player}, chante n’importe quelle chanson avec la voix d’un animal choisi par ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Conversation avec un jouet",
+      "action": "${c_player}, parle à un jouet imaginaire et demande-lui son avis sur ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Blague express",
+      "action": "${c_player}, invente une petite blague sur ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Parodie silencieuse",
+      "action": "${c_player}, fais une parodie de ${r_player} sans dire un mot.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Surprise générale",
+      "action": "Tous les joueurs font une tête surprise et fixent ${r_player} pendant 10 secondes.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Belle au bois dormant",
+      "action": "${c_player}, joue la Belle au bois dormant et réveille-toi quand ${r_player} parle.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Question la plus bizarre",
+      "action": "${c_player}, pose à ${r_player} la question la plus bête qui te vient.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Road trip sur chaise",
+      "action": "${c_player}, assieds-toi sur une chaise et fais comme si c’était une voiture. Conduis dans la pièce.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Confession bruyante",
+      "action": "${c_player}, avoue bien fort à ${r_player} que tu aimes les bonbons plus que tes amis.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Danse de la joie",
+      "action": "Tous les joueurs dansent joyeusement jusqu’à ce que ${r_player} dise stop.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "High five dans le vide",
+      "action": "${c_player}, fais un high five imaginaire à chaque joueur, en commençant par ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Exercice bizarre",
+      "action": "${c_player}, montre l’exercice le plus étrange que ${r_player} doit essayer de copier.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Arrêt brutal",
+      "action": "${c_player}, commence à parler et fige-toi quand ${r_player} l’ordonne.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Silence gênant",
+      "action": "${c_player} et ${r_player}, regardez-vous en silence pendant 10 secondes sans rire.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 10
+    },
+    {
+      "title": "Annonce capitale",
+      "action": "${c_player}, annonce bien fort que ${r_player} est la meilleure chose qui te soit jamais arrivée.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Lettre du passé",
+      "action": "${c_player}, dis ce que tu écrirais à ton toi du passé dans une lettre.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Guide des étoiles",
+      "action": "${c_player}, fais le guide du ciel nocturne et montre l’étoile qui représente ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jardin magique",
+      "action": "${c_player}, décris un jardin magique où poussent les vœux de chaque joueur.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Atterrissage du papillon",
+      "action": "${c_player}, mime un papillon qui se pose sur la main de ${r_player} sans le/la toucher.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Portrait du bonheur",
+      "action": "${c_player}, explique ce qu’il y aurait dans ton portrait du bonheur absolu.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Musique de la pluie",
+      "action": "Tous les joueurs tapotent doucement des doigts comme la pluie pendant que ${r_player} raconte une histoire.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Histoire du soir",
+      "action": "${c_player}, invente un petit conte du soir gentil sur les aventures de ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Balade sur un nuage",
+      "action": "${c_player}, fais comme si tu volais sur un nuage et invite ${r_player} à te rejoindre.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Rêve dans le rêve",
+      "action": "${c_player}, décris le rêve le plus étrange que ${r_player} pourrait faire.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Statue vivante",
+      "action": "${c_player}, deviens une statue qui prend vie et délivre un message important.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Bateau des rêves",
+      "action": "${c_player}, dis où tu voguerais sur un bateau construit avec les rêves de tout le monde.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Musique du vent",
+      "action": "Tous les joueurs fredonnent doucement comme le vent pendant que ${r_player} danse comme une feuille.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Rencontre avec toi-même",
+      "action": "${c_player}, imagine que tu rencontres ton toi du futur. Que lui demanderais-tu ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Peinture sans pinceau",
+      "action": "${c_player}, peins dans l’air un tableau imaginaire qui reflète le caractère de ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lettre à un extraterrestre",
+      "action": "${c_player}, explique à un extraterrestre pourquoi ${r_player} est la personne la plus importante sur Terre.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Concert d’oiseaux",
+      "action": "Tous les joueurs imitent doucement le chant des oiseaux pendant que ${r_player} raconte une petite histoire de printemps.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Fleur d’humeur",
+      "action": "${c_player}, dis quelle fleur reflète le mieux l’humeur de ${r_player} et pourquoi.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ciel de mots",
+      "action": "${c_player}, dis trois mots qui devraient être écrits dans le ciel pour rendre tout le monde heureux.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Île des rêves",
+      "action": "${c_player}, décris ton île de rêve si tu ne pouvais emmener que ${r_player} avec toi.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Pont de l’amitié",
+      "action": "${c_player} et ${r_player}, faites un pont avec vos bras pour symboliser votre amitié.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Lanterne magique",
+      "action": "${c_player}, imagine une lanterne qui montre des souvenirs heureux. Décris-en un.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ville de nuages",
+      "action": "${c_player}, décris une ville faite de nuages et de rêves.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Danse du flocon",
+      "action": "${c_player}, danse doucement comme un flocon de neige qui se pose sur la paume de ${r_player}.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Oiseau du bonheur",
+      "action": "${c_player}, fais l’oiseau du bonheur qui offre à ${r_player} une plume imaginaire.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Miroir des rêves",
+      "action": "${c_player}, dis ce que tu aimerais voir dans un miroir magique.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Jardin de nuit",
+      "action": "Tous les joueurs ferment les yeux et fredonnent doucement pendant que ${r_player} parle d’une promenade dans un jardin de nuit.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Mer des souhaits",
+      "action": "${c_player}, imagine que tu vogues sur une mer où tous les souhaits se réalisent. Lequel choisis-tu ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pré fleuri",
+      "action": "${c_player}, crée un bouquet qui irait parfaitement à ${r_player} et explique pourquoi.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chuchotis de la lune",
+      "action": "${c_player}, dis ce que la lune chuchote à ${r_player} ce soir.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Danse des ombres",
+      "action": "${c_player}, utilise tes mains pour faire une danse d’ombres qui montre l’humeur du jour.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Livre vivant",
+      "action": "${c_player}, imagine que ton livre préféré prend vie. Que dirait-il ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Chanson du voyageur",
+      "action": "Tous les joueurs tapent un rythme pendant que ${r_player} chante une petite chanson sur un voyage imaginaire.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Île au trésor",
+      "action": "${c_player}, décris ton île au trésor où les émotions sont le trésor, pas l’argent.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Fée des rêves",
+      "action": "${c_player}, imagine que tu es une fée qui offre de beaux rêves. Que rêverait ${r_player} ce soir ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Château dans les nuages",
+      "action": "${c_player}, décris le château que tu construirais dans les nuages pour tous les joueurs.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Voix de la mer",
+      "action": "Tous les joueurs murmurent comme les vagues pendant que ${r_player} dit ce que la mer raconte.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Rayon de soleil",
+      "action": "${c_player}, fais le rayon de soleil et réchauffe ${r_player} avec des mots gentils.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Route du retour",
+      "action": "${c_player}, décris une route du retour à la maison depuis n’importe quel pays imaginaire.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Gentil géant",
+      "action": "${c_player}, imagine que tu es un gentil géant qui aide ${r_player}. Comment vas-tu l’aider ?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Forêt des murmures",
+      "action": "Tous les joueurs répètent doucement tout ira bien pendant que ${r_player} parle d’une promenade dans une forêt magique.",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    }
+  ]
+}

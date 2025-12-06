@@ -1,0 +1,401 @@
+{
+  "id": 8,
+  "name": "Babskie Party na Szpilkach",
+  "packageType": "default",
+  "description": "Wyzwania i pytania o miłość, urodę i babskie sekrety. Co się tu dzieje, zostaje między nami!",
+  "imageEncoded": "2431698b-d92f-4292-ae83-8be652146195.png",
+  "isFree": false,
+  "dares": [
+    {
+      "title": "Historia Pierwszej Randki",
+      "action": "${c_player}, opowiedz o najzabawniejszej randce, na jakiej byłaś.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Modowy Werdykt",
+      "action": "${c_player}, oceń strój ${r_player} i daj jej jedną modową radę.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Tajny Crush",
+      "action": "${c_player}, wyznaj, kto był twoim tajnym crashem.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Uroda czy Wygoda",
+      "action": "${c_player}, wybierz — cały dzień w szpilkach czy randka bez makijażu?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sekretny Kosmetyk",
+      "action": "${c_player}, jaki kosmetyk potajemnie uwielbiasz, ale się do tego nie przyznajesz?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ulubiony Zapach",
+      "action": "${c_player}, z jakim zapachem perfum kojarzą cię przyjaciółki?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przepis na Urodę",
+      "action": "${c_player}, zdradź swój najdziwniejszy urodowy trik.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Randka z Celebrytą",
+      "action": "${c_player}, z jakim celebrytą poszłabyś na randkę?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Modowa Wpadka",
+      "action": "${c_player}, opowiedz o swojej najbardziej krępującej wpadce z ubraniem.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Idealny Babski Dzień",
+      "action": "${c_player}, opisz wasz idealny babski wypad.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Najlepiej Ubrana",
+      "action": "${c_player}, szczerze powiedz, kto dziś wygląda najlepiej.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Strach Przed Randką",
+      "action": "${c_player}, co w pierwszej randce potajemnie przeraża cię najbardziej?",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Zakazany Kolor",
+      "action": "${c_player}, jakiego koloru nigdy byś nie założyła i dlaczego?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Dziwny Prezent",
+      "action": "${c_player}, opowiedz o najdziwniejszym prezencie, jaki dostałaś.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przyjaciółka–Wzór",
+      "action": "${c_player}, jakiego nawyku ${r_player} po cichu jej zazdrościsz?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sukienka Marzeń",
+      "action": "${c_player}, opisz swoją wymarzoną sukienkę.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Filmowa Romantyczka",
+      "action": "${c_player}, przy jakim romantycznym filmie płakałaś?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Miłosna Przepowiednia",
+      "action": "${c_player}, zrób miłosną przepowiednię dla ${r_player}.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Czas Komplementów",
+      "action": "${c_player}, powiedz komplement każdej osobie przy stole.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Pierwszy Pocałunek",
+      "action": "${c_player}, opowiedz o swoim pierwszym pocałunku.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Ukryte Hobby",
+      "action": "${c_player}, jakie masz hobby, o którym prawie nikt nie wie?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wewnętrzne Piękno",
+      "action": "${c_player}, co sprawia, że kobieta jest piękna poza wyglądem?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ulubiony Dodatek",
+      "action": "${c_player}, jaki dodatek nosisz prawie zawsze i dlaczego?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Zakazany Deser",
+      "action": "${c_player}, na jaki deser złamałabyś dietę?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mała Czarna",
+      "action": "${c_player}, dokąd poszłabyś w swojej idealnej małej czarnej?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Buty Królowej",
+      "action": "${c_player}, opisz buty, w których czujesz się jak królowa.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przyjazna Zazdrość",
+      "action": "${c_player}, co szczerze podziwiasz w ${r_player}?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Mistrzyni Selfie",
+      "action": "${c_player}, pokaż, jak robisz idealne selfie.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Słodki Gest",
+      "action": "${c_player}, jaki gest faceta najbardziej topi twoje serce?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Perfekcyjne Paznokcie",
+      "action": "${c_player}, jaki manicure uważasz za najbardziej stylowy?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Najdziwniejsza Dieta",
+      "action": "${c_player}, opowiedz o najdziwniejszej diecie, jaką próbowałaś.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sekretna Forma",
+      "action": "${c_player}, jaki jest twój najlepszy trik na utrzymanie formy?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Sekretny Influencer",
+      "action": "${c_player}, jakiego influencera śledzisz po cichu?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Niezapomniany Komplement",
+      "action": "${c_player}, jaki komplement zapamiętałaś na zawsze?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Specjalistka w Grupie",
+      "action": "${c_player}, w czym twoje przyjaciółki uważają cię za ekspertkę?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Szpilki czy Sneakersy",
+      "action": "${c_player}, co założyłabyś na randkę — szpilki czy sneakersy?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ukryty Talent",
+      "action": "${c_player}, jaki masz sekretny talent?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Ulubiony Serial",
+      "action": "${c_player}, jaki serial mogłabyś oglądać w kółko?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Idealny Poranek",
+      "action": "${c_player}, opisz swój idealny poranek.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wpadka na Szpilkach",
+      "action": "${c_player}, opowiedz o zabawnym upadku w szpilkach.",
+      "type": "player",
+      "alcohol": 2
+    },
+    {
+      "title": "Makijaż w 1 Minutę",
+      "action": "${c_player}, opisz swój minutowy makijaż.",
+      "type": "player",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Pomadka z Torebki",
+      "action": "${c_player}, jaki kolor pomadki masz teraz w torebce?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Przyjaciółka na Ratunek",
+      "action": "${c_player}, opowiedz historię, kiedy przyjaciółka uratowała ci dzień.",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Telefon o 3 w Nocy",
+      "action": "${c_player}, do której przyjaciółki zadzwoniłabyś pierwsza o 3 w nocy?",
+      "type": "player",
+      "alcohol": 1
+    },
+    {
+      "title": "Wymiana Urodowych Sekretów",
+      "action": "Każda z was zdradza jeden dziwny urodowy trik. Nie masz pomysłu? Pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Grupowe Selfie",
+      "action": "Zróbcie grupowe selfie z waszymi najśmieszniejszymi minami. Odmówisz? Pijesz!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Łańcuszek Komplementów",
+      "action": "Każda dziewczyna komplementuje tę po prawej. Zająkniesz się? Pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Ulubiony Dodatek",
+      "action": "Pokażcie swoje ulubione dodatki. Ta, której dodatek zbierze najmniej głosów, pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Kolor Ust",
+      "action": "Powiedzcie jednocześnie swój ulubiony kolor szminki. Kto ma ten sam, pije razem!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Pozowanie do Zdjęcia",
+      "action": "Każda robi swoją najlepszą pozę do zdjęcia. Pierwsza, która się zaśmieje — pije!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Kocham Siebie",
+      "action": "Wszystkie naraz krzyczycie: \"Kocham siebie!\". Najcichsza — pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Kontrola Paznokci",
+      "action": "Pokażcie paznokcie. Bez manikiuru? Pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Taniec w Szpilkach",
+      "action": "Tańczcie w szpilkach przez 15 sekund. Pierwsza, która przestanie — pije!",
+      "type": "all",
+      "alcohol": 2,
+      "time": 15
+    },
+    {
+      "title": "Serialowy Wieczór",
+      "action": "Powiedzcie jednocześnie swój ulubiony serial. Masz jedyna inny? Wybierasz, kto pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Przepowiednia dla Przyjaciółki",
+      "action": "Przepowiedz, co czeka w tym roku dziewczynę po twojej prawej. Nie wymyślisz? Pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Pojedynek Butów",
+      "action": "Pokażcie buty. Najprostsza para — pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Prawda czy Ściema",
+      "action": "Każda opowiada krótką historię. Reszta zgaduje, czy to prawda. Zła odpowiedź — pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Zaśpiewaj Ulubioną",
+      "action": "Nucicie swoje ulubione piosenki. Pierwsza, która przestanie — pije!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 20
+    },
+    {
+      "title": "Wojna Mrugnięć",
+      "action": "Wszystkie mrugacie w tym samym momencie. Kto zapomni — pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Sekret do Ukradzenia",
+      "action": "Każda z was przyznaje, jaki kosmetyk potajemnie ukradłaby przyjaciółce. Odmówisz? Pijesz!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Ulubiona Sukienka",
+      "action": "Opisz swoją ulubioną sukienkę. Kto się zaplącze w słowach — pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Taniec Przyjaźni",
+      "action": "Złapcie się za ręce i tańczcie w kółku przez 15 sekund. Przerwiecie krąg? Pijecie!",
+      "type": "all",
+      "alcohol": 1,
+      "time": 15
+    },
+    {
+      "title": "Toast za Nas",
+      "action": "Powiedzcie jednocześnie toast za przyjaźń. Najkrótszy toast — pije!",
+      "type": "all",
+      "alcohol": 1
+    },
+    {
+      "title": "Randka Marzeń",
+      "action": "Opiszcie na głos swoją wymarzoną randkę. Macie te same szczegóły? Pijecie razem!",
+      "type": "all",
+      "alcohol": 1
+    }
+  ]
+}
