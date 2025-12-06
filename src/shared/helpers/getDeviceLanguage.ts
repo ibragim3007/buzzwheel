@@ -2,7 +2,7 @@ import { getLocales } from 'expo-localization';
 import { DEFAULT_LANGUAGE } from '../config/constants/constants';
 import { LANGUAGE } from '../types/globalTypes';
 
-const availableLanguages: LANGUAGE[] = ['en', 'ru'];
+const availableLanguages: LANGUAGE[] = ['en', 'ru', 'de', 'fr', 'es', 'pl', 'fil'];
 
 export const getDeviceLanguage = (): LANGUAGE => {
   try {
