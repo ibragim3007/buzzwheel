@@ -2,17 +2,20 @@ import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { useEffect, useState } from 'react';
-import PaywallButton from './ui/PaywallButton';
 import { useTranslation } from 'react-i18next';
-
-interface PaywallBlockProps {
-  title: string;
-}
+import Button from '@/src/shared/ui/buttons/Button';
+import { navigate } from 'expo-router/build/global-state/routing';
+import { useTheme } from '@/src/shared/hooks/useTheme';
 
 export default function PaywallBlock() {
+  const colors = useTheme();
   const { offering } = usePurchases();
   const { t } = useTranslation();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
+
+  const onOpenPaywall = () => {
+    navigate('/screens/paywall');
+  };
 
   useEffect(() => {
     setCurrentProduct(offering?.availablePackages[0]);
@@ -33,7 +36,11 @@ export default function PaywallBlock() {
       <Typography weight="light">
         {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
       </Typography>
-      <PaywallButton title={t('paywall.open-modes')} product={currentProduct} />
+      <Button
+        gradientColors={[colors.accent.tertiary, colors.accent.secondary]}
+        title={t('paywall.open-modes')}
+        onPress={onOpenPaywall}
+      />
     </Grid>
   );
 }
