@@ -24,6 +24,7 @@
     "error-to-load-product": "Ошибка загрузки продукта",
     "day-trial-then": "Пробный период 3 дня, затем {{ price }} в неделю",
     "open-modes": "Открыть режимы",
+    "unlimited_access": "Безлимитный доступ",
     "vip_status_message": "Уже <bold><accent>{{count}}</accent></bold> пользователей играют со статусом VIP — присоединяйтесь!",
     "button-text-play-for-free": "Играть бесплатно",
     "terms": "Условия использования",
@@ -32,6 +33,9 @@
     "unlock-all-modes": "Открыть все режимы",
     "cancel-any-time": "Отменить в любой момент",
     "unforgettable-emotions": "Незабываемые эмоции",
+    "yearly_plan": "Годовой план",
+    "weekly_plan": "Недельный план",
+    "free_trial_enabled": "Пробный период включён",
     "alread-sub-message": "У вас уже есть активная подписка. Спасибо за вашу поддержку!",
     "go-back": "Назад"
   },

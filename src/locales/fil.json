@@ -22,6 +22,7 @@
     "error-to-load-product": "Nagka-error sa pag-load ng produkto",
     "day-trial-then": "3-araw na libreng pagsubok, pagkatapos ay {{ price }} bawat linggo",
     "open-modes": "I-unlock ang mga mode",
+    "unlimited_access": "Unlimited Access",
     "vip_status_message": "Mayroon nang <bold><accent>{{count}}</accent></bold> na user na enjoy ang VIP status — sumama ka na!",
     "button-text-play-for-free": "Maglaro nang libre",
     "terms": "Mga Tuntunin ng Paggamit",
@@ -30,6 +31,9 @@
     "unlock-all-modes": "I-unlock ang lahat ng mode",
     "cancel-any-time": "Maaaring magkansela kahit kailan",
     "unforgettable-emotions": "Hindi malilimutang karanasan",
+    "yearly_plan": "Yearly Plan",
+    "weekly_plan": "Weekly Plan",
+    "free_trial_enabled": "Free Trial Enabled",
     "alread-sub-message": "May aktibong subscription ka na. Salamat sa suporta!",
     "go-back": "Bumalik"
   },

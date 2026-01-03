@@ -22,6 +22,7 @@
     "error-to-load-product": "Fehler beim Laden des Produkts",
     "day-trial-then": "3-tägige Testphase, danach {{ price }} pro Woche",
     "open-modes": "Modi freischalten",
+    "unlimited_access": "Unlimited Access",
     "vip_status_message": "Bereits <bold><accent>{{count}}</accent></bold> Nutzer genießen den VIP-Status – schließe dich ihnen an!",
     "button-text-play-for-free": "Kostenlos spielen",
     "terms": "Nutzungsbedingungen",
@@ -30,6 +31,9 @@
     "unlock-all-modes": "Alle Modi freischalten",
     "cancel-any-time": "Jederzeit kündbar",
     "unforgettable-emotions": "Unvergessliche Erlebnisse",
+    "yearly_plan": "Yearly Plan",
+    "weekly_plan": "Weekly Plan",
+    "free_trial_enabled": "Free Trial Enabled",
     "alread-sub-message": "Du hast bereits ein aktives Abonnement. Vielen Dank für deine Unterstützung!",
     "go-back": "Zurück"
   },

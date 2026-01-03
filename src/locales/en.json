@@ -22,6 +22,7 @@
     "error-to-load-product": "Error loading product",
     "day-trial-then": "3-Day Trial, then {{ price }} per week",
     "open-modes": "Unlock modes",
+    "unlimited_access": "Unlimited Access",
     "vip_status_message": "Already <bold><accent>{{count}}</accent></bold> users enjoy VIP status — join them!",
     "button-text-play-for-free": "Play for Free",
     "terms": "Terms of Use",
@@ -30,6 +31,9 @@
     "unlock-all-modes": "Unlock all modes",
     "cancel-any-time": "Cancel anytime",
     "unforgettable-emotions": "Unforgettable experiences",
+    "yearly_plan": "Yearly Plan",
+    "weekly_plan": "Weekly Plan",
+    "free_trial_enabled": "Free Trial Enabled",
     "alread-sub-message": "You already have an active subscription. Thank you for your support!",
     "go-back": "Go Back"
   },
