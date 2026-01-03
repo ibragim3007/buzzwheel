@@ -31,8 +31,14 @@ export const usePurchases = create<State & Actions>(set => {
 
       const customerInfo = await Purchases.getCustomerInfo();
       const offerings = await Purchases.getOfferings();
+
       const isActiveSubscription = customerInfo.activeSubscriptions.length > 0;
-      set({ customerInfo, offering: offerings.current, isActiveSubscription });
+
+      // console.log(JSON.stringify(offerings.all['new-offering-yearly-weekly'].availablePackages, null, 2));
+
+      const newOffering = offerings.all['new-offering-yearly-weekly'] || null;
+
+      set({ customerInfo, offering: newOffering, isActiveSubscription });
     } catch (e) {
       console.error('Error fetching customer info:', e);
     }

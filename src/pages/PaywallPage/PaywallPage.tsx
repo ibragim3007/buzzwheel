@@ -11,6 +11,7 @@ import { Image } from 'expo-image';
 import Button from '@/src/shared/ui/buttons/Button';
 import { navigate } from 'expo-router/build/global-state/routing';
 import { useTranslation } from 'react-i18next';
+import PaywallNew from '@/src/module/Paywall/PaywallNew';
 
 export default function PaywallPage() {
   const { t } = useTranslation();
@@ -43,7 +44,8 @@ export default function PaywallPage() {
   return (
     <PageWrapper flex={1}>
       <SafeWrapper>
-        <Paywall />
+        <PaywallNew />
+        {/* <Paywall /> */}
       </SafeWrapper>
     </PageWrapper>
   );

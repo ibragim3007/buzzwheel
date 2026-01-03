@@ -1,28 +1,34 @@
-import PeopleImage from '@/assets/images/paywall_icons/paywall_people.png';
-import { useTheme } from '@/src/shared/hooks/useTheme';
-import { fontWeightThird } from '@/src/shared/styles/typography/typography';
 import Grid from '@/src/shared/ui/grid/Grid';
-import Typography from '@/src/shared/ui/typography/Typography';
-import { Image } from 'expo-image';
+import IconTransparent from '@/assets/images/icons_ios/icon-e.png';
 
-export default function HeaderLogo() {
-  const colors = useTheme();
+import { useTheme } from '@react-navigation/native';
+
+import { Image } from 'expo-image';
+import React from 'react';
+import { normalizedSize } from '@/src/shared/utils/size';
+
+interface HeaderLogoProps {
+  image?: string;
+}
+
+export default function HeaderLogo({ image }: HeaderLogoProps) {
+  const { colors } = useTheme();
   return (
-    <Grid space="md" align="center">
+    <Grid
+      row
+      justfity="center"
+      align="center"
+      space="md"
+      style={{
+        position: 'absolute',
+        opacity: 0.09,
+        transform: [{ rotate: '20deg' }],
+      }}
+    >
       <Image
-        contentFit="contain"
-        source={PeopleImage}
-        style={{ width: '100%', height: 180, shadowColor: colors.accent.primary, shadowOpacity: 0.5 }}
+        source={image || IconTransparent}
+        style={{ width: normalizedSize(510), height: normalizedSize(510), borderRadius: 40 }}
       />
-      <Typography
-        variant="largeTitle"
-        style={{
-          fontFamily: fontWeightThird.light,
-          letterSpacing: 1.2,
-        }}
-      >
-        BuzzWheel
-      </Typography>
     </Grid>
   );
 }

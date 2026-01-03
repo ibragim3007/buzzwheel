@@ -17,9 +17,13 @@ import Button from '@/src/shared/ui/buttons/Button';
 import { Trans, useTranslation } from 'react-i18next';
 import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
+import ProductItem from './ui/ProductItem';
 
 export default function Paywall() {
   const { offering } = usePurchases();
+
+  console.log(offering?.availablePackages);
+
   const { t } = useTranslation();
   const [currentProduct, setCurrentProduct] = useState(offering?.availablePackages[0]);
 
@@ -95,10 +99,11 @@ export default function Paywall() {
         </Grid>
       </Grid>
       <PaywallItems />
+      <ProductItem />
       <Grid space="lg" align="center" width="100%">
-        <Typography variant="callout" textAlign="center" weight="light">
+        {/* <Typography variant="callout" textAlign="center" weight="light">
           {t('paywall.day-trial-then', { price: currentProduct.product.priceString })}
-        </Typography>
+        </Typography> */}
         <PaywallButton title={t('paywall.button-text-play-for-free')} product={currentProduct} />
         <Grid space="sm" align="center">
           <FooterActions />
