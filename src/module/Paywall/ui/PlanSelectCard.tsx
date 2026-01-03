@@ -25,6 +25,8 @@ export default function PlanSelectCard({
 }: PlanSelectCardProps) {
   const colors = useTheme();
 
+  const chipRadius = normalizedSize(999);
+
   const borderColor = selected ? colors.accent.primary : withOpacity(colors.text.primary, 0.18);
   const backgroundColor = selected
     ? withOpacity(colors.accent.primary, 0.12)
@@ -43,7 +45,7 @@ export default function PlanSelectCard({
   return (
     <Pressable onPress={onPress}>
       <Grid paddingVertical={16} paddingHorizontal={16} style={cardStyle}>
-        <Grid row align="center" justfity="space-between" gap={12}>
+        <Grid row wrap align="flex-start" justfity="space-between" gap={12}>
           <Grid flex={1} gap={3}>
             <Typography variant="headline" weight="bold">
               {title}
@@ -55,29 +57,50 @@ export default function PlanSelectCard({
             )}
           </Grid>
 
-          <Grid row align="center" gap={10}>
+          <Grid row wrap align="center" justfity="flex-end" gap={6} style={{ flexShrink: 1, maxWidth: '55%' }}>
             {!!badgeText && (
               <Grid
-                paddingVertical={6}
                 paddingHorizontal={10}
                 style={{
-                  borderRadius: normalizedSize(10),
+                  minHeight: normalizedSize(26),
+                  borderRadius: chipRadius,
                   backgroundColor: colors.accent.secondary,
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
-                <Typography variant="caption-1" weight="bold" color="white">
+                <Typography variant="caption-2" weight="bold" color="white">
                   {badgeText}
                 </Typography>
               </Grid>
             )}
 
             {!!rightLabel && (
-              <Typography variant="title-3" weight="bold">
-                {rightLabel}
-              </Typography>
+              <Grid
+                paddingHorizontal={10}
+                style={{
+                  minHeight: normalizedSize(26),
+                  borderRadius: chipRadius,
+                  borderWidth: 1,
+                  borderColor: selected
+                    ? withOpacity(colors.accent.primary, 0.65)
+                    : withOpacity(colors.text.primary, 0.18),
+                  backgroundColor: selected
+                    ? withOpacity(colors.accent.primary, 0.08)
+                    : withOpacity(colors.background.primary, 0.12),
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Typography variant="caption-2" weight="bold">
+                  {rightLabel}
+                </Typography>
+              </Grid>
             )}
 
-            <Ionicons name={iconName} size={normalizedSize(22)} color={iconColor} />
+            <Grid style={{ marginLeft: normalizedSize(4) }}>
+              <Ionicons name={iconName} size={normalizedSize(22)} color={iconColor} />
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

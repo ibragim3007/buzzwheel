@@ -21,13 +21,13 @@ export default function HeaderLogo({ image }: HeaderLogoProps) {
       space="md"
       style={{
         position: 'absolute',
-        opacity: 0.09,
-        transform: [{ rotate: '20deg' }],
+        opacity: 0.07,
+        transform: [{ rotate: '17deg' }],
       }}
     >
       <Image
         source={image || IconTransparent}
-        style={{ width: normalizedSize(510), height: normalizedSize(510), borderRadius: 40 }}
+        style={{ width: normalizedSize(370), height: normalizedSize(370), borderRadius: 40 }}
       />
     </Grid>
   );
