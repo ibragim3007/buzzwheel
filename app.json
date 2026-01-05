@@ -2,7 +2,7 @@
   "expo": {
     "name": "BuzzWheel",
     "slug": "BuzzWheel",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "orientation": "portrait",
     "newArchEnabled": true,
     "icon": "./assets/images/icons_ios/icon-e.png",
@@ -44,6 +44,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "./plugins/withAndroidLintOptions.js",
       "expo-router",
       "expo-font",
       "expo-web-browser",
