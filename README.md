@@ -1,6 +1,7 @@
 # Party Roulette — BuzzWheel 🎉
 
-[Landing Page (PlayMarket) 📱](https://buzzwheel-landing.vercel.app)
+[Landing Page (PlayMarket)](https://buzzwheel-landing.vercel.app)
+
 [Check the app on AppStore 📱](https://apps.apple.com/us/app/party-roulette-buzzwheel/id6746181307)
 
 <img src="https://i.postimg.cc/0ysPDLXr/Screenshot_2026_01_13_at_3_40_23_PM.png" style="border-radius: 10px" />
