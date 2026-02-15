@@ -5,7 +5,7 @@
     "version": "1.0.4",
     "orientation": "portrait",
     "newArchEnabled": true,
-    "icon": "./assets/images/icons_ios/icon-e.png",
+    "icon": "./assets/images/icons_ios/icon-l.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "locales": {
@@ -32,7 +32,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icons_android/icon-transparent.png",
+        "foregroundImage": "./assets/images/icons_android/icon-transparent-new.png",
         "backgroundColor": "#ffffff"
       },
       "permissions": ["com.google.android.gms.permission.AD_ID"],
@@ -53,7 +53,7 @@
         {
           "backgroundColor": "#0C111C",
           "android": {
-            "image": "./assets/images/icons_android/icon-transparent.png",
+            "image": "./assets/images/icons_android/icon-transparent-new.png",
             "resizeMode": "contain"
           }
         }
