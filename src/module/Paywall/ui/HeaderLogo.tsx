@@ -1,11 +1,10 @@
-import Grid from '@/src/shared/ui/grid/Grid';
 import IconTransparent from '@/assets/images/icons_ios/icon-e.png';
+import Grid from '@/src/shared/ui/grid/Grid';
 
 import { useTheme } from '@react-navigation/native';
 
-import { Image } from 'expo-image';
-import React from 'react';
 import { normalizedSize } from '@/src/shared/utils/size';
+import { Image } from 'expo-image';
 
 interface HeaderLogoProps {
   image?: string;
@@ -21,13 +20,13 @@ export default function HeaderLogo({ image }: HeaderLogoProps) {
       space="md"
       style={{
         position: 'absolute',
-        opacity: 0.07,
-        transform: [{ rotate: '17deg' }],
+        opacity: 0.04,
+        transform: [{ rotate: '15deg' }],
       }}
     >
       <Image
         source={image || IconTransparent}
-        style={{ width: normalizedSize(370), height: normalizedSize(370), borderRadius: 40 }}
+        style={{ width: normalizedSize(420), height: normalizedSize(420), borderRadius: normalizedSize(40) }}
       />
     </Grid>
   );

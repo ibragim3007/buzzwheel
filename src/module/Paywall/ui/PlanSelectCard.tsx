@@ -45,11 +45,7 @@ export default function PlanSelectCard({
 
   const cardStyle: ViewStyle = {
     borderWidth: highlighted && !selected ? 2 : 1,
-    borderColor: selected
-      ? withOpacity(colors.text.primary, 0)
-      : highlighted
-        ? accentBorder
-        : idleBorder,
+    borderColor: selected ? withOpacity(colors.text.primary, 0) : highlighted ? accentBorder : idleBorder,
     backgroundColor: selected ? colors.text.primary : withOpacity(colors.background.secondary, 0.55),
     borderRadius: colors.styles.borderRadiusDefault,
   };
@@ -94,113 +90,113 @@ export default function PlanSelectCard({
         )}
 
         <Grid paddingVertical={14} paddingHorizontal={14} style={cardStyle}>
-        <Grid row align="center" gap={12}>
-          {!!leftIcon && (
-            <Image
-              source={leftIcon}
-              style={{ width: normalizedSize(46), height: normalizedSize(46) }}
-              contentFit="contain"
-            />
-          )}
-
-          <Grid flex={1} gap={2}>
-            <Typography variant="headline" weight="bold" style={{ color: titleColor }}>
-              {title}
-            </Typography>
-            {!!subtitle && (
-              <Typography variant="footnote" style={{ color: subtitleColor }}>
-                {subtitle}
-              </Typography>
+          <Grid row align="center" gap={12}>
+            {!!leftIcon && (
+              <Image
+                source={leftIcon}
+                style={{ width: normalizedSize(46), height: normalizedSize(46) }}
+                contentFit="contain"
+              />
             )}
+
+            <Grid flex={1} gap={2}>
+              <Typography variant="headline" weight="bold" style={{ color: titleColor }}>
+                {title}
+              </Typography>
+              {!!subtitle && (
+                <Typography variant="footnote" style={{ color: subtitleColor }}>
+                  {subtitle}
+                </Typography>
+              )}
+            </Grid>
+
+            <Grid
+              style={{
+                width: normalizedSize(24),
+                height: normalizedSize(24),
+                borderRadius: normalizedSize(12),
+                borderWidth: selected ? 0 : 2,
+                borderColor: indicatorBorder,
+                backgroundColor: indicatorBg,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {selected && <Ionicons name="checkmark" size={normalizedSize(16)} color={colors.text.white} />}
+            </Grid>
           </Grid>
 
-          <Grid
-            style={{
-              width: normalizedSize(24),
-              height: normalizedSize(24),
-              borderRadius: normalizedSize(12),
-              borderWidth: selected ? 0 : 2,
-              borderColor: indicatorBorder,
-              backgroundColor: indicatorBg,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {selected && <Ionicons name="checkmark" size={normalizedSize(16)} color={colors.text.white} />}
-          </Grid>
-        </Grid>
+          {visibleBadges.length > 0 && (
+            <Grid row wrap gap={8} marginTop={12}>
+              {visibleBadges.map(badge => {
+                const text = badge.text;
+                const variant = badge.variant ?? 'outline';
 
-        {visibleBadges.length > 0 && (
-          <Grid row wrap gap={8} marginTop={12}>
-            {visibleBadges.map(badge => {
-              const text = badge.text;
-              const variant = badge.variant ?? 'outline';
+                if (variant === 'gradient') {
+                  return (
+                    <LinearGradient
+                      key={text}
+                      start={[0, 0]}
+                      end={[1, 0]}
+                      colors={[colors.accent.secondary, colors.accent.primary]}
+                      style={{
+                        paddingHorizontal: 14,
+                        minHeight: normalizedSize(28),
+                        borderRadius: chipRadius,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Typography variant="caption-1" weight="bold" color="white">
+                        {text}
+                      </Typography>
+                    </LinearGradient>
+                  );
+                }
 
-              if (variant === 'gradient') {
+                if (variant === 'success') {
+                  return (
+                    <LinearGradient
+                      key={text}
+                      start={[0, 0]}
+                      end={[1, 0]}
+                      colors={['#3DD171', '#1FAE57']}
+                      style={{
+                        paddingHorizontal: 14,
+                        minHeight: normalizedSize(28),
+                        borderRadius: chipRadius,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Typography variant="caption-1" weight="bold" color="white">
+                        {text}
+                      </Typography>
+                    </LinearGradient>
+                  );
+                }
+
                 return (
-                  <LinearGradient
+                  <Grid
                     key={text}
-                    start={[0, 0]}
-                    end={[1, 0]}
-                    colors={[colors.accent.secondary, colors.accent.primary]}
+                    paddingHorizontal={14}
                     style={{
-                      paddingHorizontal: 14,
                       minHeight: normalizedSize(28),
                       borderRadius: chipRadius,
+                      borderWidth: 1,
+                      borderColor: withOpacity(colors.text.primary, 0.2),
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                   >
-                    <Typography variant="caption-1" weight="bold" color="white">
+                    <Typography variant="caption-1" weight="bold" style={{ color: titleColor }}>
                       {text}
                     </Typography>
-                  </LinearGradient>
+                  </Grid>
                 );
-              }
-
-              if (variant === 'success') {
-                return (
-                  <LinearGradient
-                    key={text}
-                    start={[0, 0]}
-                    end={[1, 0]}
-                    colors={['#3DD171', '#1FAE57']}
-                    style={{
-                      paddingHorizontal: 14,
-                      minHeight: normalizedSize(28),
-                      borderRadius: chipRadius,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <Typography variant="caption-1" weight="bold" color="white">
-                      {text}
-                    </Typography>
-                  </LinearGradient>
-                );
-              }
-
-              return (
-                <Grid
-                  key={text}
-                  paddingHorizontal={14}
-                  style={{
-                    minHeight: normalizedSize(28),
-                    borderRadius: chipRadius,
-                    borderWidth: 1,
-                    borderColor: withOpacity(colors.text.primary, 0.2),
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Typography variant="caption-1" weight="bold" style={{ color: titleColor }}>
-                    {text}
-                  </Typography>
-                </Grid>
-              );
-            })}
-          </Grid>
-        )}
+              })}
+            </Grid>
+          )}
         </Grid>
       </Grid>
     </Pressable>

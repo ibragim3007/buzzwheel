@@ -1,12 +1,20 @@
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
-import { Text } from 'react-native';
+import { Image } from 'expo-image';
+import AppIcon from '@/assets/images/icons_ios/icon-e.png';
 
 export default function LogoText() {
   return (
     <Grid align="center" gap={6}>
-      <Text style={{ fontSize: normalizedSize(96), lineHeight: normalizedSize(110) }}>🎡</Text>
+      <Image
+        source={AppIcon}
+        style={{
+          width: normalizedSize(110),
+          height: normalizedSize(110),
+          borderRadius: normalizedSize(24),
+        }}
+      />
       <Typography
         weight="bold"
         textAlign="center"
