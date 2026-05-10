@@ -3,8 +3,10 @@ import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import { Image } from 'expo-image';
 import AppIcon from '@/assets/images/icons_ios/icon-e.png';
+import { useTranslation } from 'react-i18next';
 
 export default function LogoText() {
+  const { t } = useTranslation();
   return (
     <Grid align="center" gap={6}>
       <Image
@@ -25,7 +27,7 @@ export default function LogoText() {
         BuzzWheel
       </Typography>
       <Typography variant="callout" color="secondary" textAlign="center">
-        Your gateway to endless fun
+        {t('paywall.gateway_to_endless_fun')}
       </Typography>
     </Grid>
   );
