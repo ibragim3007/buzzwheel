@@ -2,10 +2,10 @@
   "expo": {
     "name": "BuzzWheel",
     "slug": "BuzzWheel",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "newArchEnabled": true,
-    "icon": "./assets/images/icons_ios/icon-l.png",
+    "icon": "./assets/images/icons_ios/icon-e.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "locales": {
@@ -32,8 +32,9 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icons_android/icon-transparent-new.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icons_android/icon-transparent.png",
+        "backgroundImage": "./assets/images/icons_android/icon-background.png",
+        "backgroundColor": "#FCC900"
       },
       "permissions": ["com.google.android.gms.permission.AD_ID"],
       "package": "com.ibragimlol.BuzzWheel"
@@ -53,7 +54,7 @@
         {
           "backgroundColor": "#0C111C",
           "android": {
-            "image": "./assets/images/icons_android/icon-transparent-new.png",
+            "image": "./assets/images/icons_android/icon-transparent.png",
             "resizeMode": "contain"
           }
         }
