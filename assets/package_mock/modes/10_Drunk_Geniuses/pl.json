@@ -3,7 +3,7 @@
   "name": "Mózgowcy",
   "packageType": "default",
   "description": "Alkoholowy quiz: każdy błąd przybliża cię do dna kieliszka. Sprawdźmy twoją wiedzę!",
-  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "imageEncoded": "package_icons/10_drunk_geniuses.png",
   "isFree": false,
   "dares": [
     { "title": "Matma bez kalkulatora", "action": "${c_player}, ile to 17 × 8?", "type": "player", "alcohol": 1 },

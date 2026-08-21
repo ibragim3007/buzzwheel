@@ -3,7 +3,7 @@
   "name": "Brainiacs",
   "packageType": "default",
   "description": "A boozy quiz: every wrong answer sinks you closer to the bottom of your glass. Let's test your knowledge!",
-  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "imageEncoded": "package_icons/10_drunk_geniuses.png",
   "isFree": false,
   "dares": [
     { "title": "No‑Calculator Math", "action": "${c_player}, what's 17 × 8?", "type": "player", "alcohol": 1 },

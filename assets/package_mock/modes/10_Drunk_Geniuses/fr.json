@@ -3,7 +3,7 @@
   "name": "Les Cerveaux",
   "packageType": "default",
   "description": "Un quiz arrosé : chaque mauvaise réponse te rapproche du fond de ton verre. On teste tes connaissances !",
-  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "imageEncoded": "package_icons/10_drunk_geniuses.png",
   "isFree": false,
   "dares": [
     {

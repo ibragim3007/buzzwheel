@@ -3,7 +3,7 @@
   "name": "Brainiacs",
   "packageType": "default",
   "description": "Ein Trink-Quiz: Jede falsche Antwort bringt dich näher zum Glasboden. Testen wir dein Wissen!",
-  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "imageEncoded": "package_icons/10_drunk_geniuses.png",
   "isFree": false,
   "dares": [
     {

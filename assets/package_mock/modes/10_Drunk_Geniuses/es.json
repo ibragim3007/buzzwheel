@@ -3,7 +3,7 @@
   "name": "Brainiacs",
   "packageType": "default",
   "description": "Quiz alcohólico: cada respuesta incorrecta te acerca al fondo del vaso. ¡Pongamos a prueba tus conocimientos!",
-  "imageEncoded": "3972ee76-9e20-40ea-8c69-8587c71565ea.png",
+  "imageEncoded": "package_icons/10_drunk_geniuses.png",
   "isFree": false,
   "dares": [
     { "title": "Cálculo sin calculadora", "action": "${c_player}, ¿cuánto es 17 × 8?", "type": "player", "alcohol": 1 },

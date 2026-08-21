@@ -3,7 +3,7 @@
   "name": "Tryb CHAOS",
   "packageType": "default",
   "description": "Szalone wyzwania, które rozwalą każdą granicę przyzwoitości. Tylko dla najodważniejszych!",
-  "imageEncoded": "954fe94f-1850-475e-806c-5cd50a704d80.png",
+  "imageEncoded": "package_icons/4_chaos_mode.png",
   "isFree": false,
   "dares": [
     {
