@@ -1,4 +1,4 @@
-import IconTransparent from '@/assets/images/icons_ios/icon-e.png';
+import IconTransparent from '@/assets/images/icons_ios/icon-a.png';
 import Grid from '@/src/shared/ui/grid/Grid';
 
 import { useTheme } from '@react-navigation/native';

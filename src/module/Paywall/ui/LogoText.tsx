@@ -2,7 +2,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import { Image } from 'expo-image';
-import AppIcon from '@/assets/images/icons_ios/icon-e.png';
+import AppIcon from '@/assets/images/icons_ios/icon-a.png';
 import { useTranslation } from 'react-i18next';
 
 export default function LogoText() {
