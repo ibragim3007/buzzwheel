@@ -105,5 +105,11 @@
       "generic": "Wystąpił błąd. Spróbuj ponownie później.",
       "network": "Błąd sieci. Sprawdź swoje połączenie."
     }
+  },
+  "limitPage": {
+    "title": "Rozgrzewka skończona!",
+    "description": "Zagraliście {{ turns }} rund. Teraz będzie ostrzej: czeka {{ packs }} zablokowanych paczek i {{ dares }}+ nowych wyzwań.",
+    "unlock": "Odblokuj wszystkie tryby",
+    "continue-free": "Graj dalej za darmo"
   }
 }

@@ -105,5 +105,11 @@
       "generic": "Es ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.",
       "network": "Netzwerkfehler. Bitte überprüfe deine Verbindung."
     }
+  },
+  "limitPage": {
+    "title": "Aufwärmen vorbei!",
+    "description": "Ihr habt {{ turns }} Runden gespielt. Jetzt wird's heißer: {{ packs }} gesperrte Pakete und {{ dares }}+ neue Aufgaben warten.",
+    "unlock": "Alle Modi freischalten",
+    "continue-free": "Kostenlos weiterspielen"
   }
 }

@@ -105,5 +105,11 @@
       "generic": "Se ha producido un error. Inténtalo de nuevo más tarde.",
       "network": "Error de red. Comprueba tu conexión."
     }
+  },
+  "limitPage": {
+    "title": "¡Se acabó el calentamiento!",
+    "description": "Habéis jugado {{ turns }} rondas. Ahora sube la temperatura: {{ packs }} packs bloqueados y {{ dares }}+ retos nuevos os esperan.",
+    "unlock": "Desbloquear todos los modos",
+    "continue-free": "Seguir jugando gratis"
   }
 }

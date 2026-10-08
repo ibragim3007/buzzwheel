@@ -105,5 +105,11 @@
       "generic": "Une erreur s'est produite. Veuillez réessayer plus tard.",
       "network": "Erreur réseau. Veuillez vérifier votre connexion."
     }
+  },
+  "limitPage": {
+    "title": "Fini l'échauffement !",
+    "description": "Vous avez joué {{ turns }} tours. Ça va chauffer : {{ packs }} packs verrouillés et {{ dares }}+ nouveaux défis vous attendent.",
+    "unlock": "Débloquer tous les modes",
+    "continue-free": "Continuer gratuitement"
   }
 }

@@ -15,6 +15,7 @@ export default function StackRoute() {
       <Stack.Screen name="screens/penalty" />
       <Stack.Screen name="screens/gameModeScreen" />
       <Stack.Screen name="screens/paywall" options={{ presentation: 'fullScreenModal' }} />
+      <Stack.Screen name="screens/limit" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
       <Stack.Screen name="+not-found" />
     </Stack>
   );

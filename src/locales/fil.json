@@ -105,5 +105,11 @@
       "generic": "May nangyaring error. Pakisubukan ulit mamaya.",
       "network": "Error sa network. Pakisuri ang iyong koneksyon."
     }
+  },
+  "limitPage": {
+    "title": "Tapos na ang warm-up!",
+    "description": "Nakapaglaro kayo ng {{ turns }} rounds. Mas maanghang na mula rito: {{ packs }} naka-lock na packs at {{ dares }}+ bagong hamon ang naghihintay.",
+    "unlock": "I-unlock ang lahat ng mode",
+    "continue-free": "Magpatuloy nang libre"
   }
 }

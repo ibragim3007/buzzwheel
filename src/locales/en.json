@@ -105,5 +105,11 @@
       "generic": "An error occurred. Please try again later.",
       "network": "Network error. Please check your connection."
     }
+  },
+  "limitPage": {
+    "title": "Warm-up's over!",
+    "description": "You've played {{ turns }} rounds. Things get spicier from here: {{ packs }} locked packs and {{ dares }}+ new dares are waiting.",
+    "unlock": "Unlock all modes",
+    "continue-free": "Keep playing for free"
   }
 }

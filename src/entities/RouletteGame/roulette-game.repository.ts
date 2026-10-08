@@ -6,6 +6,7 @@ import { useSettings } from '../Settings/settings.repository';
 import { navigate } from 'expo-router/build/global-state/routing';
 import { pickByWeight } from '@/src/shared/utils/pickByWeight';
 import { usePurchases } from '../usePurchases/usePurchases';
+import { FREE_TURNS_BEFORE_LIMIT, TURNS_BETWEEN_LIMIT_REMINDERS } from '@/src/shared/config/constants/constants';
 
 export type ModeType = 'drink' | 'dry' | 'push-ups' | 'no-penalty';
 interface State {
@@ -15,9 +16,9 @@ interface State {
   currentPackage: PackageWithDaresIds | null;
   displayDare: boolean;
   mode: ModeType | null;
-  paywallOptions: {
-    showPaywallAfter: number;
-    currentSeries: number;
+  limitOptions: {
+    turnsPlayed: number; // Ходы за сессию приложения, не сбрасываются между играми
+    showLimitAt: number;
   };
 }
 
@@ -37,9 +38,9 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
   displayDare: false,
   currentPackage: null,
   mode: null,
-  paywallOptions: {
-    showPaywallAfter: getRandomInt(2, 5), // Показывать paywall после 2-5 ходов
-    currentSeries: 0, // Текущая серия для paywall
+  limitOptions: {
+    turnsPlayed: 0,
+    showLimitAt: FREE_TURNS_BEFORE_LIMIT,
   },
 
   showDare: () => {
@@ -47,6 +48,8 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
   },
 
   hideDare: (drunk: boolean) => {
+    const isTurnFinished = get().currentDare !== null;
+
     set(state => {
       if (state.currentDare !== null && state.currentTurn !== null && state.currentPackage !== null) {
         return {
@@ -72,6 +75,23 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
         currentTurn: null,
       };
     });
+
+    if (!isTurnFinished) return;
+
+    const { turnsPlayed, showLimitAt } = get().limitOptions;
+    const nextTurnsPlayed = turnsPlayed + 1;
+    const { isActiveSubscription } = usePurchases.getState();
+
+    // Показываем лимит только между ходами — после того как задание закрыто
+    if (!isActiveSubscription && nextTurnsPlayed >= showLimitAt) {
+      set({
+        limitOptions: { turnsPlayed: nextTurnsPlayed, showLimitAt: nextTurnsPlayed + TURNS_BETWEEN_LIMIT_REMINDERS },
+      });
+      setTimeout(() => navigate('/screens/limit'), 400); // Даём карточке задания уехать
+      return;
+    }
+
+    set({ limitOptions: { turnsPlayed: nextTurnsPlayed, showLimitAt } });
   },
 
   setMode: (mode: ModeType | null) => {
@@ -103,24 +123,6 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
   },
 
   setTurn: (player: Player, type: DareType) => {
-    /* Реализовать логику показа paywall, на каждый 5-й ход через навигацию */
-    const { showPaywallAfter, currentSeries } = get().paywallOptions;
-    const { isActiveSubscription } = usePurchases.getState();
-
-    /* Если количество ходов кратно showPaywallAfter, то показываем paywall */
-    if (currentSeries === showPaywallAfter && !isActiveSubscription) {
-      setTimeout(() => {
-        navigate('/screens/paywall'); // Показываем paywall
-
-        set({
-          paywallOptions: {
-            currentSeries: 0, // Сбрасываем серию после показа paywall
-            showPaywallAfter: getRandomInt(2, 4), // Генерируем новое значение для показа paywall
-          },
-        });
-      }, 2000); // Задержка в 2 секунды чтобы игрок успел увидеть свой ход
-    }
-
     const { pickedPackages, decayWeight, resetWeight } = usePackage.getState();
     const isRemoveRepetitions = useSettings.getState().isRemoveRepetitions;
     // const randomPackage = availablePackages[getRandomInt(0, availablePackages.length)];
@@ -163,14 +165,10 @@ export const useRouletteGame = create<State & Actions>((set, get) => ({
     // Возможно имеет смысл сделать органичение по игроку/действию  move.player.id === player.id &&
     const randomDare = sortedDares[getRandomInt(0, sortedDares.length)];
 
-    set((state: State) => ({
+    set(() => ({
       currentPackage: randomPackage,
       currentTurn: player,
       currentDare: randomDare,
-      paywallOptions: {
-        currentSeries: currentSeries + 1, // Увеличиваем серию после каждого хода
-        showPaywallAfter: state.paywallOptions.showPaywallAfter,
-      },
     }));
   },
 }));
