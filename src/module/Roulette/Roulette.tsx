@@ -77,7 +77,7 @@ const Roulette = ({ segments, options, currentTurn, onCallback, onChangeSpinStat
       }
 
       const name = currentTurn?.name ?? winnerSegment.label;
-      const nameColor = currentTurn?.color || winnerSegment.textColor || colors.text.primary;
+      const nameColor = currentTurn?.color || winnerSegment.textColor || colors.accent.primary;
       return (
         <Animated.View key="winner" entering={ZoomIn.springify().damping(13)} style={styles.headline}>
           {currentTurn && (

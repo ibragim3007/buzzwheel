@@ -79,19 +79,4 @@ export const fitLabel = (
   return { text: chars.slice(0, count).join('').trimEnd() + '…', fontSize: minFont };
 };
 
-export const shadeColor = (hex: string, amount: number) => {
-  let h = hex.replace('#', '');
-  if (h.length === 3)
-    h = h
-      .split('')
-      .map(ch => ch + ch)
-      .join('');
-  const num = parseInt(h.slice(0, 6), 16);
-  if (Number.isNaN(num)) return hex;
-
-  const mix = (ch: number) => Math.round(amount >= 0 ? ch + (255 - ch) * amount : ch * (1 + amount));
-  const r = mix((num >> 16) & 255);
-  const g = mix((num >> 8) & 255);
-  const b = mix(num & 255);
-  return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
-};
+export { shadeColor } from '@/src/shared/utils/color';

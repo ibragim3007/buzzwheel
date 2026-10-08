@@ -80,9 +80,7 @@ export default function GamePage() {
 
       <Grid justfity="center" align="center" flex={1}>
         {currentDare && displayDare && currentTurn && (
-          <Grid marginTop={50}>
-            <DareDisplay dare={currentDare} hideDare={hideDare} currentTurn={currentTurn} players={players} />
-          </Grid>
+          <DareDisplay dare={currentDare} hideDare={hideDare} currentTurn={currentTurn} players={players} />
         )}
 
         {!displayDare && (
