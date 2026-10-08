@@ -20,7 +20,9 @@
   },
   "paywall": {
     "error-to-load-product": "Nagka-error sa pag-load ng produkto",
-    "day-trial-then": "3-araw na libreng pagsubok, pagkatapos ay {{ price }} bawat linggo",
+    "day-trial-then": "{{ days }}-araw na libreng pagsubok, pagkatapos ay {{ price }} bawat linggo",
+    "price-per-week": "{{ price }} bawat linggo",
+    "retry": "Subukang muli",
     "open-modes": "I-unlock ang mga mode",
     "unlimited_access": "Unlimited Access",
     "vip_status_message": "Mayroon nang <bold><accent>{{count}}</accent></bold> na user na enjoy ang VIP status — sumama ka na!",

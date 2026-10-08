@@ -20,7 +20,9 @@
   },
   "paywall": {
     "error-to-load-product": "Erreur lors du chargement du produit",
-    "day-trial-then": "Essai de 3 jours, puis {{ price }} par semaine",
+    "day-trial-then": "Essai de {{ days }} jours, puis {{ price }} par semaine",
+    "price-per-week": "{{ price }} par semaine",
+    "retry": "Réessayer",
     "open-modes": "Débloquer les modes",
     "unlimited_access": "Unlimited Access",
     "vip_status_message": "Déjà <bold><accent>{{count}}</accent></bold> utilisateurs profitent du statut VIP — rejoins-les !",

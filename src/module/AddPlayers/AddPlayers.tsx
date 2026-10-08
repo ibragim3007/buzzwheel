@@ -42,7 +42,7 @@ export default function AddPlayers() {
         text2: t('homepage.increase-in-full-access'),
         type: 'error',
         onShow: () => vibrate(),
-        onPress: () => navigate('/screens/gift'),
+        onPress: () => navigate('/screens/paywall'),
       });
       return;
     }

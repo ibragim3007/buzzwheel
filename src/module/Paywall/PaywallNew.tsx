@@ -4,6 +4,7 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { useNavigation } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
+import { ActivityIndicator } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import CloseIcon from './ui/CloseIcon';
 import HeaderLogo from './ui/HeaderLogo';
@@ -18,7 +19,7 @@ import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
 import LogoText from './ui/LogoText';
 
 export default function PaywallNew() {
-  const { offering } = usePurchases();
+  const { offering, isOfferingLoading, loadOffering } = usePurchases();
 
   const { t } = useTranslation();
   const [selectedPlanId, setSelectedPlanId] = useState<PaywallPlanId>('weekly');
@@ -33,6 +34,10 @@ export default function PaywallNew() {
   };
 
   const { vibrateSelection } = useVibration();
+
+  useEffect(() => {
+    if (!offering) void loadOffering();
+  }, []);
 
   const plans = useMemo(() => resolvePaywallPlans(offering), [offering]);
 
@@ -64,12 +69,21 @@ export default function PaywallNew() {
   };
 
   if (!selectedProduct) {
+    if (isOfferingLoading) {
+      return (
+        <Grid justfity="center" height="100%" align="center">
+          <ActivityIndicator color="#fff" />
+        </Grid>
+      );
+    }
+
     return (
-      <Grid justfity="center" height="100%" align="center">
-        <Typography variant="title-3" weight="bold">
+      <Grid justfity="center" height="100%" align="center" space="lg">
+        <Typography variant="title-3" weight="bold" textAlign="center">
           {t('paywall.error-to-load-product')}
         </Typography>
-        <Button title={'go back'} onPress={goBack} />
+        <Button title={t('paywall.retry')} onPress={() => void loadOffering()} />
+        <Button title={t('paywall.go-back')} onPress={goBack} gradientColors={['#2a2d36', '#2a2d36']} />
       </Grid>
     );
   }
