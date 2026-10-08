@@ -38,7 +38,7 @@ export default function PackageItem({ pack, picked, index, onPress }: PackageIte
         packageName: pack.name,
       });
 
-      navigate('/screens/paywall');
+      navigate({ pathname: '/screens/paywall', params: { packId: String(pack.id) } });
       return;
     }
 

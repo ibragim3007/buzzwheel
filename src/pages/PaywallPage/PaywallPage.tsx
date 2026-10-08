@@ -43,7 +43,7 @@ export default function PaywallPage() {
 
   return (
     <PageWrapper flex={1}>
-      <SafeWrapper>
+      <SafeWrapper style={{ flex: 1 }}>
         <PaywallNew />
         {/* <Paywall /> */}
       </SafeWrapper>

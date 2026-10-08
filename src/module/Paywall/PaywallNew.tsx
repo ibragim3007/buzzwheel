@@ -1,29 +1,32 @@
+import { usePackage } from '@/src/entities/Package/usePackage';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
-import GiftIcon from '@/assets/images/paywall_icons/thanks_icon.png';
+import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
+import { useVibration } from '@/src/shared/hooks/useVibration';
+import Button from '@/src/shared/ui/buttons/Button';
 import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
-import { useNavigation } from 'expo-router';
+import { normalizedSize } from '@/src/shared/utils/size';
+import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { ActivityIndicator } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { ActivityIndicator, ScrollView } from 'react-native';
+import { getSavingsPercentByYearlyVsWeekly, PaywallPlanId, resolvePaywallPlans } from './helpers/paywallPlans';
+import BenefitsList, { Benefit } from './ui/BenefitsList';
 import CloseIcon from './ui/CloseIcon';
-import HeaderLogo from './ui/HeaderLogo';
-import { useVibration } from '@/src/shared/hooks/useVibration';
-import { localeVars } from '@/src/locales/localeVars';
-import Button from '@/src/shared/ui/buttons/Button';
-import PaywallButton from './ui/PaywallButton';
 import FooterActions from './ui/FooterActions';
-import PlanSelectCard, { PlanBadge } from './ui/PlanSelectCard';
-import { PaywallPlanId, resolvePaywallPlans, getSavingsPercentByYearlyVsWeekly } from './helpers/paywallPlans';
-import { HORIZONTAL_PADDINGS } from '@/src/shared/config/constants/constants';
-import LogoText from './ui/LogoText';
+import FeaturedPack from './ui/Hero/FeaturedPack';
+import PacksMarquee from './ui/Hero/PacksMarquee';
+import PaywallButton from './ui/PaywallButton';
+import PlanOption from './ui/PlanOption';
+import RatingRow from './ui/RatingRow';
+import TeaserChips from './ui/TeaserChips';
 
 export default function PaywallNew() {
-  const { offering, isOfferingLoading, loadOffering } = usePurchases();
-
   const { t } = useTranslation();
+  const { offering, isOfferingLoading, loadOffering } = usePurchases();
+  const { data: packages } = usePackage();
+  const { packId } = useLocalSearchParams<{ packId?: string }>();
   const [selectedPlanId, setSelectedPlanId] = useState<PaywallPlanId>('weekly');
-  const [trialEnabled, setTrialEnabled] = useState(true);
   const [showCloseIcon, setShowCloseIcon] = useState(false);
 
   const navigate = useNavigation();
@@ -39,36 +42,32 @@ export default function PaywallNew() {
     if (!offering) void loadOffering();
   }, []);
 
-  const plans = useMemo(() => resolvePaywallPlans(offering), [offering]);
+  const lockedPackages = useMemo(() => packages.filter(pack => !pack.isFree), [packages]);
+  const featuredPack = useMemo(
+    () => (packId ? (lockedPackages.find(pack => pack.id === Number(packId)) ?? null) : null),
+    [packId, lockedPackages],
+  );
+  // Округляем вниз до десятков, чтобы «600+» было честным
+  const lockedDaresCount = Math.floor(lockedPackages.reduce((sum, pack) => sum + pack.dares.length, 0) / 10) * 10;
 
+  const plans = useMemo(() => resolvePaywallPlans(offering), [offering]);
   const yearlyPlan = plans.find(p => p.id === 'yearly') ?? null;
   const weeklyPlan = plans.find(p => p.id === 'weekly') ?? null;
-
+  const selectedPlan = plans.find(p => p.id === selectedPlanId) ?? plans[0] ?? null;
   const savingsPercent = getSavingsPercentByYearlyVsWeekly(yearlyPlan?.pkg ?? null, weeklyPlan?.pkg ?? null);
 
-  const selectedPlan = plans.find(p => p.id === selectedPlanId) ?? plans[0] ?? null;
-  const selectedProduct = selectedPlan?.pkg ?? null;
-
-  const anyPlanHasTrial = plans.some(p => p.trialDays > 0);
-
   useEffect(() => {
-    if (!selectedPlan && plans[0]) {
+    if (!plans.some(p => p.id === selectedPlanId) && plans[0]) {
       setSelectedPlanId(plans[0].id);
     }
-  }, [plans, selectedPlan]);
-
-  useEffect(() => {
-    if (!anyPlanHasTrial && trialEnabled) {
-      setTrialEnabled(false);
-    }
-  }, [anyPlanHasTrial, trialEnabled]);
+  }, [plans, selectedPlanId]);
 
   const onSelectPlan = (planId: PaywallPlanId) => {
     void vibrateSelection();
     setSelectedPlanId(planId);
   };
 
-  if (!selectedProduct) {
+  if (!selectedPlan) {
     if (isOfferingLoading) {
       return (
         <Grid justfity="center" height="100%" align="center">
@@ -88,83 +87,104 @@ export default function PaywallNew() {
     );
   }
 
-  const yearlyPriceString = yearlyPlan?.pkg.product.priceString ?? 'N/A';
-  const weeklyPriceString = weeklyPlan?.pkg.product.priceString ?? 'N/A';
+  const yearlyPerWeek = yearlyPlan?.pkg.product.pricePerWeekString;
 
-  const yearlyTrialDays = yearlyPlan?.trialDays ?? 0;
-  const weeklyTrialDays = weeklyPlan?.trialDays ?? 0;
+  const weeklyCaption =
+    weeklyPlan && weeklyPlan.trialDays > 0
+      ? t('paywall.days-free', { days: weeklyPlan.trialDays })
+      : t('paywall.most-popular');
 
-  const selectedTrialDays = selectedPlan?.trialDays ?? 0;
-  const selectedHasTrial = trialEnabled && selectedTrialDays > 0;
+  const yearlyCaption = [
+    yearlyPlan && yearlyPlan.trialDays > 0 ? t('paywall.days-free', { days: yearlyPlan.trialDays }) : null,
+    yearlyPerWeek ? t('paywall.only-per-week', { price: yearlyPerWeek }) : null,
+  ]
+    .filter(Boolean)
+    .join(' · ');
 
-  const yearlySubtitle =
-    trialEnabled && yearlyTrialDays > 0
-      ? localeVars('{{days}}-Day Trial, then {{price}} per year', {
-          days: yearlyTrialDays,
-          price: yearlyPriceString,
-        })
-      : localeVars('{{price}} per year', { price: yearlyPriceString });
+  const hasTrial = selectedPlan.trialDays > 0;
+  const ctaTitle = hasTrial ? t('paywall.cta-trial', { days: selectedPlan.trialDays }) : t('common.continue');
+  const disclosure = hasTrial ? t('paywall.disclosure-trial') : t('paywall.disclosure');
 
-  const weeklySubtitle =
-    trialEnabled && weeklyTrialDays > 0
-      ? localeVars('{{days}}-Day Trial, then {{price}} per week', {
-          days: weeklyTrialDays,
-          price: weeklyPriceString,
-        })
-      : localeVars('{{price}} per week', { price: weeklyPriceString });
+  const benefits: Benefit[] = [
+    { icon: 'wine', title: t('paywall.benefit-drink') },
+    { icon: 'people', title: t('paywall.benefit-players') },
+    { icon: 'color-palette', title: t('paywall.benefit-themes') },
+  ];
 
-  const ctaTitle = selectedHasTrial ? t('paywall.button-text-play-for-free') : t('common.continue');
-
-  const yearlyBadges: PlanBadge[] = [];
-  if (selectedPlanId === 'yearly' && savingsPercent) {
-    yearlyBadges.push({ text: localeVars('SAVE {{p}}%', { p: savingsPercent }), variant: 'outline' });
-  }
-  if (selectedPlanId === 'yearly' && trialEnabled && yearlyTrialDays > 0) {
-    yearlyBadges.push({ text: 'FREE', variant: 'success' });
-  }
-
-  const weeklyBadges: PlanBadge[] = [{ text: 'POPULAR', variant: 'gradient' }];
-  if (trialEnabled && weeklyTrialDays > 0) {
-    weeklyBadges.push({ text: 'FREE', variant: 'success' });
-  }
+  const sidePadding = normalizedSize(HORIZONTAL_PADDINGS);
 
   return (
-    <Grid space="lg" height="100%" paddingHorizontal={HORIZONTAL_PADDINGS} justfity="space-between">
-      <CloseIcon goBack={goBack} showCloseIcon={showCloseIcon} setShowCloseIcon={setShowCloseIcon} />
-      <HeaderLogo />
+    <Grid flex={1}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ marginHorizontal: -sidePadding }}
+        contentContainerStyle={{ paddingBottom: normalizedSize(16), flexGrow: 1, justifyContent: 'center' }}
+      >
+        <Grid paddingTop={36} gap={22}>
+          {featuredPack ? <FeaturedPack pack={featuredPack} /> : <PacksMarquee packages={lockedPackages} />}
 
-      <Grid flex={1} justfity="space-between" space="lg" paddingTop={40}>
-        <LogoText />
+          <Grid gap={8} paddingHorizontal={sidePadding}>
+            <Typography
+              weight="bold"
+              textAlign="center"
+              style={{ fontSize: normalizedSize(28), lineHeight: normalizedSize(34) }}
+            >
+              {featuredPack ? featuredPack.name : t('paywall.headline')}
+            </Typography>
+            <Typography variant="callout" color="secondary" textAlign="center">
+              {featuredPack
+                ? t('paywall.featured-subheadline', { packs: lockedPackages.length - 1, dares: lockedDaresCount })
+                : t('paywall.subheadline', { packs: lockedPackages.length, dares: lockedDaresCount })}
+            </Typography>
+            {featuredPack ? (
+              <Grid marginTop={6}>
+                <TeaserChips pack={featuredPack} />
+              </Grid>
+            ) : (
+              <RatingRow />
+            )}
+          </Grid>
 
-        <Grid space="md">
-          {!!weeklyPlan && (
-            <PlanSelectCard
-              title={t('paywall.weekly_plan')}
-              subtitle={weeklySubtitle}
-              leftIcon={GiftIcon}
-              badges={weeklyBadges}
-              topRibbon="MOST POPULAR"
-              highlighted
-              selected={selectedPlanId === 'weekly'}
-              onPress={() => onSelectPlan('weekly')}
-            />
-          )}
+          <Grid paddingHorizontal={sidePadding}>
+            <BenefitsList items={benefits} />
+          </Grid>
 
-          {!!yearlyPlan && (
-            <PlanSelectCard
-              title={t('paywall.yearly_plan')}
-              subtitle={yearlySubtitle}
-              badges={yearlyBadges}
-              selected={selectedPlanId === 'yearly'}
-              onPress={() => onSelectPlan('yearly')}
-            />
-          )}
+          <Grid gap={10} paddingHorizontal={sidePadding}>
+            {!!weeklyPlan && (
+              <PlanOption
+                title={t('paywall.weekly_plan')}
+                caption={weeklyCaption}
+                price={weeklyPlan.pkg.product.priceString}
+                period={t('paywall.period-week')}
+                selected={selectedPlanId === 'weekly'}
+                onPress={() => onSelectPlan('weekly')}
+              />
+            )}
+            {!!yearlyPlan && (
+              <PlanOption
+                title={t('paywall.yearly_plan')}
+                caption={yearlyCaption}
+                badge={savingsPercent ? t('paywall.badge-save', { p: savingsPercent }) : undefined}
+                price={yearlyPlan.pkg.product.priceString}
+                period={t('paywall.period-year')}
+                selected={selectedPlanId === 'yearly'}
+                onPress={() => onSelectPlan('yearly')}
+              />
+            )}
+          </Grid>
         </Grid>
+      </ScrollView>
+
+      <Grid space="sm" align="center" paddingTop={8} paddingBottom={6}>
+        <PaywallButton title={ctaTitle} product={selectedPlan.pkg} />
+        <Typography variant="caption-1" color="secondary" textAlign="center">
+          {disclosure}
+        </Typography>
+        <FooterActions />
       </Grid>
 
-      <Grid space="md" align="center" paddingBottom={10}>
-        <PaywallButton title={ctaTitle} product={selectedProduct} />
-        <FooterActions />
+      <Grid style={{ position: 'absolute', top: 0, left: 0, zIndex: 10 }}>
+        <CloseIcon goBack={goBack} showCloseIcon={showCloseIcon} setShowCloseIcon={setShowCloseIcon} />
       </Grid>
     </Grid>
   );
