@@ -93,7 +93,8 @@
       "task-for": "Tarea para",
       "spin-button": "Girar la ruleta",
       "all": "Todos",
-      "task-for-all": "¡Una tarea para todos!"
+      "task-for-all": "¡Una tarea para todos!",
+      "hint": "Toca o desliza la ruleta para girarla"
     },
     "done-button": "Listo",
     "penalty-button": "Castigo",

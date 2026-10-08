@@ -93,7 +93,8 @@
       "task-for": "Aufgabe für",
       "spin-button": "Rad drehen",
       "all": "Alle",
-      "task-for-all": "Eine Aufgabe für alle!"
+      "task-for-all": "Eine Aufgabe für alle!",
+      "hint": "Tippe oder wische, um das Rad zu drehen"
     },
     "done-button": "Fertig",
     "penalty-button": "Strafe",

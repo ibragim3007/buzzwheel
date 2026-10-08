@@ -132,9 +132,8 @@ export default function GiftPage() {
             entering={ZoomIn.delay(300).springify()}
             exiting={ZoomOut.delay(400).springify()}
           >
-            <Grid flex={1}>
+            <Grid flex={1} justfity="center">
               <Roulette
-                centerBlock
                 segments={segments}
                 options={{
                   ...DefaultRouletteOptions,

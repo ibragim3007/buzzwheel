@@ -93,7 +93,8 @@
       "task-for": "Tâche pour",
       "spin-button": "Lancer la roue",
       "all": "Tous",
-      "task-for-all": "Une tâche pour tout le monde !"
+      "task-for-all": "Une tâche pour tout le monde !",
+      "hint": "Touche ou fais glisser la roue pour la lancer"
     },
     "done-button": "Terminé",
     "penalty-button": "Pénalité",

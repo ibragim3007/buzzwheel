@@ -13,7 +13,7 @@ import { animationService } from '@/src/shared/service/animation.service';
 import Grid from '@/src/shared/ui/grid/Grid';
 import SafeWrapper from '@/src/shared/ui/layout/SafeWrapper';
 import Header from '@/src/widget/Header';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import Animated, { SlideOutLeft } from 'react-native-reanimated';
@@ -38,9 +38,13 @@ export default function GamePage() {
 
   const { t } = useTranslation();
 
-  const segments = convertPlayersToSegments(players, rouletteColor?.colors || groupsOfColors[0], {
-    all: t('gamePage.roulette.all'),
-  });
+  const segments = useMemo(
+    () =>
+      convertPlayersToSegments(players, rouletteColor?.colors || groupsOfColors[0], {
+        all: t('gamePage.roulette.all'),
+      }),
+    [players, rouletteColor, t],
+  );
 
   const callback = (winner: SegmentType) => {
     if (winner.type === 'player') {
@@ -88,7 +92,6 @@ export default function GamePage() {
             style={{ alignItems: 'center' }}
           >
             <Roulette
-              centerBlock
               currentTurn={currentTurn}
               segments={segments}
               options={DefaultRouletteOptions}

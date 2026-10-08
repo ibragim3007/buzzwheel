@@ -93,7 +93,8 @@
       "task-for": "Task for",
       "spin-button": "Spin the Wheel",
       "all": "All",
-      "task-for-all": "A task for everyone!"
+      "task-for-all": "A task for everyone!",
+      "hint": "Tap or swipe the wheel to spin"
     },
     "done-button": "Done",
     "penalty-button": "Penalty",

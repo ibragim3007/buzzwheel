@@ -93,7 +93,8 @@
       "task-for": "Zadanie dla",
       "spin-button": "Zakręć kołem",
       "all": "Wszyscy",
-      "task-for-all": "Zadanie dla wszystkich!"
+      "task-for-all": "Zadanie dla wszystkich!",
+      "hint": "Dotknij lub przesuń koło, aby zakręcić"
     },
     "done-button": "Gotowe",
     "penalty-button": "Kara",

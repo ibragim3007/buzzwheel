@@ -1,20 +1,22 @@
-import { normalizedSize } from '@/src/shared/utils/size';
 import { SegmentType } from '@/src/entities/Roulette/types';
 import { DEFAULT_PROBABILITY } from '@/src/shared/config/constants/constants';
 import { useVibration } from '@/src/shared/hooks/useVibration';
+import { analytics, Events } from '@/src/shared/service/analytics.service';
 import { useState } from 'react';
 import {
   Easing,
   runOnJS,
+  useAnimatedReaction,
   useAnimatedStyle,
-  useDerivedValue,
   useSharedValue,
-  withDelay,
   withSequence,
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
-import { analytics, Events } from '@/src/shared/service/analytics.service';
+
+const SPIN_DURATION = 5600;
+const WIND_UP_DURATION = 280;
+const POINTER_MAX_ANGLE = 28;
 
 const getWeightedRandomItem = (items: SegmentType[]) => {
   const totalWeight = items.reduce((total, item) => total + (item?.probability || DEFAULT_PROBABILITY), 0);
@@ -32,146 +34,89 @@ const getWeightedRandomItem = (items: SegmentType[]) => {
 };
 
 export const useRoulette = (segments: SegmentType[], onCallback: (winner: SegmentType) => void) => {
-  const { vibrate, vibrateSelection } = useVibration();
+  const { vibrate, vibrateSelection, vibrateMedium } = useVibration();
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<null | number>(null);
 
+  // Колесо вращается по часовой стрелке; rotation — накопленный угол в градусах
   const rotation = useSharedValue(0);
   const wheelScale = useSharedValue(1);
-  const wheelTranslateY = useSharedValue(0);
-  const cursorRotation = useSharedValue(0);
-  const oneSegmentAngle = 360 / segments.length;
-  const prevIndex = useSharedValue(-1); // хранит индекс предыдущего сектора
+  const spinning = useSharedValue(false);
+  const lastTickAt = useSharedValue(0);
+  const segmentAngle = 360 / segments.length;
 
-  /** Каждый раз, когда колесо «перешагнуло» в новый сектор → лёгкий тик */
-  useDerivedValue(() => {
-    if (!isSpinning) return;
+  /** Гвоздик прошёл под язычком → лёгкий haptic-тик (не чаще ~22 раз в секунду) */
+  useAnimatedReaction(
+    () => Math.floor(rotation.value / segmentAngle),
+    (current, previous) => {
+      if (!spinning.value || previous === null || current === previous) return;
+      const now = Date.now();
+      if (now - lastTickAt.value < 45) return;
+      lastTickAt.value = now;
+      runOnJS(vibrateSelection)();
+    },
+  );
 
-    const currentIndex = Math.floor((Math.abs(rotation.value) % 360) / oneSegmentAngle);
-
-    if (currentIndex !== prevIndex.value) {
-      prevIndex.value = currentIndex;
-      runOnJS(vibrateSelection)(); // запускаем haptic-тик в JS-потоке
-    }
-  });
-
-  const spinWheel = () => {
-    analytics.trackEvent(Events.pressSpinWheel, {});
-    void vibrate();
-    rotation.value = withTiming(0, { duration: 0 });
-    wheelScale.value = 1;
-    wheelTranslateY.value = 0;
-    setWinner(null);
-    if (isSpinning) return;
-
-    setIsSpinning(true);
-
-    // const randomSegmentIndex = getRandomInt(0, segments.length);
-
-    const { index: randomSegmentIndex } = getWeightedRandomItem(segments);
-
-    const totalAngle = rotation.value - 360 * 6 - oneSegmentAngle * randomSegmentIndex;
-
-    const realSegmentId = Math.abs((totalAngle % 360) / oneSegmentAngle);
-
-    cursorRotation.value = withSequence(
-      withTiming(-10, { duration: 50 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 60 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 50 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 30 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(5, { duration: 60 }),
-      withTiming(-15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(0, { duration: 60 }),
-      withTiming(-10, { duration: 50 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 60 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 50 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 30 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(5, { duration: 60 }),
-      withTiming(-15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(0, { duration: 60 }),
-      withTiming(-10, { duration: 50 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 60 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(-5, { duration: 50 }),
-      withTiming(15, { duration: 50 }),
-      withTiming(-20, { duration: 30 }),
-      withTiming(10, { duration: 70 }),
-      withTiming(0, { duration: 30 }),
-      withTiming(5, { duration: 60 }),
-      withTiming(-15, { duration: 50 }),
-      withTiming(-20, { duration: 60 }),
-      withTiming(0, { duration: 60 }),
-      withTiming(5, { duration: 160 }),
-      withTiming(-15, { duration: 150 }),
-      withTiming(-20, { duration: 160 }),
-      withTiming(0, { duration: 160 }),
-      withTiming(10, { duration: 260 }),
-      withTiming(0, { duration: 360 }),
-    );
-
-    rotation.value = withTiming(totalAngle, { duration: 5000, easing: Easing.out(Easing.cubic) }, isFinished => {
-      if (isFinished) {
-        runOnJS(handleFinishRotation)(totalAngle, realSegmentId); // Передаём индекс сегмента
-      }
-    });
-
-    wheelScale.value = withDelay(3100, withTiming(1.5, { duration: 900 }));
-    wheelTranslateY.value = withDelay(3100, withTiming(-300, { duration: 900 }));
+  const handleFinishRotation = (index: number) => {
+    spinning.value = false;
+    wheelScale.value = withSequence(withTiming(1.035, { duration: 140 }), withSpring(1, { damping: 9 }));
+    void vibrateMedium();
+    setWinner(index);
+    setIsSpinning(false);
+    onCallback(segments[index]);
+    analytics.trackEvent(Events.finishRotation, {});
   };
 
-  const handleFinishRotation = (totalAngle: number, segmentIndex: number) => {
+  const spinWheel = () => {
+    if (isSpinning || winner !== null || segments.length === 0) return;
+
+    analytics.trackEvent(Events.pressSpinWheel, {});
     void vibrate();
-    const leftSegment = segmentIndex - 1 < 0 ? segments.length - 1 : segmentIndex - 1;
-    const randomSegments = [leftSegment, segmentIndex];
-    const segmentsArr = [segments[leftSegment], segments[segmentIndex]];
-    const { index: zeroOrOne } = getWeightedRandomItem(segmentsArr);
-    // const zeroOrOne = getRandomInt(0, 2);
-    // const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
-    const getRandomSegment = Math.round(randomSegments[zeroOrOne]);
+    setIsSpinning(true);
+    spinning.value = true;
 
-    const updateTotalAngle = totalAngle + (zeroOrOne === 0 ? oneSegmentAngle / 2 : -(oneSegmentAngle / 2));
+    const { index } = getWeightedRandomItem(segments);
 
-    rotation.value = withSpring(updateTotalAngle, {});
+    // Под язычком (верх) оказывается локальный угол колеса (-rotation). Останавливаемся
+    // внутри выбранного сектора со случайным смещением, но не на самой границе.
+    const landingAngle = index * segmentAngle + segmentAngle * (0.5 + (Math.random() - 0.5) * 0.6);
+    const start = rotation.value % 360;
+    const delta = (((360 - landingAngle - start) % 360) + 360) % 360;
+    const fullTurns = 5 + Math.floor(Math.random() * 2);
+    const target = start + fullTurns * 360 + delta;
 
-    const winner = segments[getRandomSegment];
-    setWinner(getRandomSegment);
-    onCallback(winner);
-    analytics.trackEvent(Events.finishRotation, {});
-    setIsSpinning(false);
+    rotation.value = start;
+    rotation.value = withSequence(
+      // Небольшой замах назад перед раскруткой
+      withTiming(start - Math.min(12, segmentAngle * 0.35), {
+        duration: WIND_UP_DURATION,
+        easing: Easing.inOut(Easing.quad),
+      }),
+      withTiming(target, { duration: SPIN_DURATION, easing: Easing.bezier(0.12, 0.7, 0.1, 1) }, finished => {
+        if (finished) runOnJS(handleFinishRotation)(index);
+      }),
+    );
+
+    wheelScale.value = withSequence(
+      withTiming(0.97, { duration: WIND_UP_DURATION }),
+      withSpring(1, { damping: 12, stiffness: 140 }),
+    );
   };
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${rotation.value}deg` }, { scale: wheelScale.value }],
-    bottom: wheelTranslateY.value,
   }));
 
-  const bottomNormalized = normalizedSize(240);
-  const cursorAnimatedStyle = useAnimatedStyle(() => ({
-    transform: [{ rotate: `${cursorRotation.value}deg` }, { scale: wheelScale.value }],
-    bottom: bottomNormalized + wheelTranslateY.value,
-  }));
+  /**
+   * Язычок отклоняется, когда к нему подъезжает гвоздик, и соскакивает обратно,
+   * как только гвоздик проходит под ним.
+   */
+  const cursorAnimatedStyle = useAnimatedStyle(() => {
+    const phase = ((rotation.value % segmentAngle) + segmentAngle) % segmentAngle;
+    const zone = Math.min(segmentAngle * 0.18, 8);
+    const push = phase > segmentAngle - zone ? (phase - (segmentAngle - zone)) / zone : 0;
+    return { transform: [{ rotate: `${-push * POINTER_MAX_ANGLE}deg` }] };
+  });
 
   return { spinWheel, winner, isSpinning, animatedStyle, cursorAnimatedStyle };
 };
