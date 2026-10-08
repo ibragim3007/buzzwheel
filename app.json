@@ -73,7 +73,36 @@
           "organization": "mydream-6o"
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      [
+        "expo-alternate-app-icons",
+        [
+          {
+            "name": "IconRefined",
+            "ios": "./assets/images/icons_ios/variants/v1_refined.png",
+            "android": {
+              "foregroundImage": "./assets/images/icons_ios/variants/v1_refined.png",
+              "backgroundColor": "#FFC400"
+            }
+          },
+          {
+            "name": "IconBeeFace",
+            "ios": "./assets/images/icons_ios/variants/v2_bee_face.png",
+            "android": {
+              "foregroundImage": "./assets/images/icons_ios/variants/v2_bee_face.png",
+              "backgroundColor": "#4B2DB8"
+            }
+          },
+          {
+            "name": "IconDevilBee",
+            "ios": "./assets/images/icons_ios/variants/v4_devil_bee.png",
+            "android": {
+              "foregroundImage": "./assets/images/icons_ios/variants/v4_devil_bee.png",
+              "backgroundColor": "#D4202E"
+            }
+          }
+        ]
+      ]
     ],
     "experiments": {
       "typedRoutes": true
