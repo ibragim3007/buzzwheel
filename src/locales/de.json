@@ -11,7 +11,12 @@
     "enter-player-name": "Spielernamen eingeben",
     "max-players-reached": "Du hast das Limit von {{ max_players }} Spielern erreicht",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} Spieler",
-    "no-players-placeholder": "Es gibt noch keine Spieler"
+    "no-players-placeholder": "Es gibt noch keine Spieler",
+    "title": "Wer spielt mit?",
+    "subtitle": "Füge alle hinzu, die mitfeiern",
+    "players-title": "Spieler",
+    "empty-hint": "Füge mindestens 2 Spieler hinzu, um das Rad zu drehen",
+    "ready-to-play": "Alle dabei? Los geht's!"
   },
   "packagePage": {
     "pick-your-modes": "Wähle deine Modi!",

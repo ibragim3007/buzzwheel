@@ -11,7 +11,12 @@
     "enter-player-name": "Enter player name",
     "max-players-reached": "You have reached the limit of {{ max_players }} players",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} players",
-    "no-players-placeholder": "There are no players yet"
+    "no-players-placeholder": "There are no players yet",
+    "title": "Who's playing?",
+    "subtitle": "Add everyone joining the party",
+    "players-title": "Players",
+    "empty-hint": "Add at least 2 players to spin the wheel",
+    "ready-to-play": "Everyone in? Let's go!"
   },
   "packagePage": {
     "pick-your-modes": "Choose your modes!",

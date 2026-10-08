@@ -1,6 +1,6 @@
-import ArrowAnimation from '@/assets/lottie/arrow-pointer.json';
 import { usePlayerStore } from '@/src/entities/Player/player.store';
 import { usePurchases } from '@/src/entities/usePurchases/usePurchases';
+import { withOpacity } from '@/src/module/Paywall/helpers/withOpacity';
 import { MAX_PLAYERS_FOR_FREE } from '@/src/shared/config/constants/constants';
 import { useTheme } from '@/src/shared/hooks/useTheme';
 import { useVibration } from '@/src/shared/hooks/useVibration';
@@ -10,14 +10,14 @@ import Grid from '@/src/shared/ui/grid/Grid';
 import Typography from '@/src/shared/ui/typography/Typography';
 import { normalizedSize } from '@/src/shared/utils/size';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import LottieView from 'lottie-react-native';
 
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 import Input from './components/Input/Input';
 import Placeholder from './components/Players/Placeholder';
 import Players from './components/Players/Players';
-import UserLimit from './components/Players/UserLimit';
 import { useTranslation } from 'react-i18next';
 import { analytics, Events } from '@/src/shared/service/analytics.service';
 
@@ -29,6 +29,7 @@ export default function AddPlayers() {
   const { vibrate, vibrateSelection, vibrateError } = useVibration();
   const { isActiveSubscription } = usePurchases();
   const isEnoughPlayers = players.length >= 2;
+  const isMaxPlayers = !isActiveSubscription && players.length >= MAX_PLAYERS_FOR_FREE;
 
   const onAddNewPlayer = (name: string) => {
     if (players.length >= MAX_PLAYERS_FOR_FREE && !isActiveSubscription) {
@@ -75,61 +76,118 @@ export default function AddPlayers() {
     navigate('/screens/packages');
   };
 
-  const isShowArrow = players.length <= 0;
+  const isEmpty = players.length === 0;
 
-  const isPlayersGreaterThan0 = players.length > 0;
+  const footerHint = isMaxPlayers
+    ? t('homepage.max-players-reached', { max_players: MAX_PLAYERS_FOR_FREE })
+    : isEnoughPlayers
+      ? t('homepage.ready-to-play')
+      : isEmpty
+        ? ''
+        : t('homepage.need-at-least-players');
 
   return (
-    <Grid flex={1} justfity="space-around">
-      <Grid gap={12}>
-        <Input onCall={onAddNewPlayer} />
+    <Grid flex={1} space="lg" paddingTop={12}>
+      <Grid space="sm">
+        <Typography weight="bold" variant="title-0">
+          {t('homepage.title')}
+        </Typography>
+        <Typography variant="callout" color="disabled">
+          {t('homepage.subtitle')}
+        </Typography>
       </Grid>
 
-      <Grid style={{ overflow: 'hidden', position: 'relative' }}>
-        <ScrollView
-          scrollIndicatorInsets={{ top: normalizedSize(40), bottom: normalizedSize(40) }}
-          indicatorStyle="black"
-          contentContainerStyle={{ paddingVertical: normalizedSize(15) }}
-          style={{
-            height: normalizedSize(360),
-            backgroundColor: colors.background.secondary,
-            paddingHorizontal: normalizedSize(15),
-            borderRadius: colors.styles.borderRadiusDefault + 15,
-          }}
-        >
-          {players.length === 0 && <Placeholder />}
-          <Players players={players} />
-        </ScrollView>
-      </Grid>
-      <Grid space="lg" marginBottom={20}>
-        <Grid height={30} justfity="center">
-          {isActiveSubscription ? (
-            <Typography color="disabled" textAlign="center" variant="footnote">
-              {isPlayersGreaterThan0
-                ? t('homepage.players-length-players', { amount: players.length })
-                : t('homepage.need-at-least-players')}
+      <Input onCall={onAddNewPlayer} highlight={isEmpty} />
+
+      <Grid flex={1} space="md">
+        <Grid row align="center" justfity="space-between">
+          <Typography
+            weight="bold"
+            variant="caption-1"
+            color="disabled"
+            style={{ textTransform: 'uppercase', letterSpacing: 1.2 }}
+          >
+            {t('homepage.players-title')}
+          </Typography>
+
+          <View
+            style={{
+              paddingHorizontal: normalizedSize(10),
+              paddingVertical: normalizedSize(3),
+              borderRadius: normalizedSize(12),
+              backgroundColor: withOpacity(isMaxPlayers ? colors.accent.secondary : colors.accent.primary, 0.15),
+            }}
+          >
+            <Typography
+              weight="bold"
+              variant="caption-1"
+              style={{ color: isMaxPlayers ? colors.accent.secondary : colors.accent.primary }}
+            >
+              {isActiveSubscription ? players.length : `${players.length}/${MAX_PLAYERS_FOR_FREE}`}
             </Typography>
-          ) : (
-            <UserLimit currentPlayers={players.length} />
+          </View>
+        </Grid>
+
+        <View style={{ flex: 1 }}>
+          <ScrollView
+            style={{ flex: 1 }}
+            showsVerticalScrollIndicator={false}
+            keyboardShouldPersistTaps="handled"
+            contentContainerStyle={{ paddingBottom: normalizedSize(24), flexGrow: isEmpty ? 1 : undefined }}
+          >
+            {isEmpty ? (
+              <Grid flex={1} justfity="center">
+                <Placeholder />
+              </Grid>
+            ) : (
+              <Players players={players} />
+            )}
+          </ScrollView>
+
+          {/* Мягкое затухание списка у нижнего края */}
+          <LinearGradient
+            pointerEvents="none"
+            colors={[withOpacity(colors.background.primary, 0), colors.background.primary]}
+            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: normalizedSize(28) }}
+          />
+        </View>
+      </Grid>
+
+      <Grid space="md" marginBottom={12}>
+        <Grid height={normalizedSize(20)} justfity="center">
+          {footerHint !== '' && (
+            <Animated.View key={footerHint} entering={FadeIn.duration(250)}>
+              <Typography
+                variant="footnote"
+                weight="medium"
+                textAlign="center"
+                style={{ color: isEnoughPlayers && !isMaxPlayers ? colors.accent.primary : colors.text.disabled }}
+              >
+                {footerHint}
+              </Typography>
+            </Animated.View>
           )}
         </Grid>
-        <Button
-          onPress={onPressStart}
-          title={t('homepage.start-game')}
-          disabled={!isEnoughPlayers}
-          startIcon={
-            <Ionicons name="play" size={24} color={!isEnoughPlayers ? colors.text.disabled : colors.text.primary} />
-          }
-        />
-      </Grid>
-      {isShowArrow && (
-        <Grid
-          pointerEvents="none"
-          style={{ position: 'absolute', top: 30, right: 60, transform: [{ rotateY: '180deg' }, { rotate: '-30deg' }] }}
+
+        <View
+          style={{
+            borderRadius: colors.styles.borderRadiusDefault,
+            shadowColor: colors.accent.primary,
+            shadowOpacity: isEnoughPlayers ? 0.45 : 0,
+            shadowRadius: 18,
+            shadowOffset: { width: 0, height: 6 },
+          }}
         >
-          <LottieView autoPlay loop source={ArrowAnimation} style={{ width: 200, height: 200 }} />
-        </Grid>
-      )}
+          <Button
+            onPress={onPressStart}
+            title={t('homepage.start-game')}
+            disabled={!isEnoughPlayers}
+            startIcon={
+              <Ionicons name="play" size={24} color={!isEnoughPlayers ? colors.text.disabled : colors.text.primary} />
+            }
+          />
+        </View>
+      </Grid>
     </Grid>
   );
 }

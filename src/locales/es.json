@@ -11,7 +11,12 @@
     "enter-player-name": "Introduce el nombre del jugador",
     "max-players-reached": "Has alcanzado el límite de {{ max_players }} jugadores",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} jugadores",
-    "no-players-placeholder": "Todavía no hay jugadores"
+    "no-players-placeholder": "Todavía no hay jugadores",
+    "title": "¿Quién juega?",
+    "subtitle": "Añade a todos los de la fiesta",
+    "players-title": "Jugadores",
+    "empty-hint": "Añade al menos 2 jugadores para girar la ruleta",
+    "ready-to-play": "¿Están todos? ¡Vamos!"
   },
   "packagePage": {
     "pick-your-modes": "¡Elige tus modos!",

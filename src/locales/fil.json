@@ -11,7 +11,12 @@
     "enter-player-name": "Ilagay ang pangalan ng manlalaro",
     "max-players-reached": "Naabot mo na ang limit na {{ max_players }} manlalaro",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} manlalaro",
-    "no-players-placeholder": "Wala pang mga manlalaro"
+    "no-players-placeholder": "Wala pang mga manlalaro",
+    "title": "Sino ang maglalaro?",
+    "subtitle": "Idagdag ang lahat ng kasali",
+    "players-title": "Mga manlalaro",
+    "empty-hint": "Magdagdag ng hindi bababa sa 2 manlalaro para paikutin ang gulong",
+    "ready-to-play": "Kumpleto na? Tara na!"
   },
   "packagePage": {
     "pick-your-modes": "Pumili ng mga mode mo!",

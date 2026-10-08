@@ -11,7 +11,12 @@
     "enter-player-name": "Saisis le nom du joueur",
     "max-players-reached": "Tu as atteint la limite de {{ max_players }} joueurs",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} joueurs",
-    "no-players-placeholder": "Il n'y a pas encore de joueurs"
+    "no-players-placeholder": "Il n'y a pas encore de joueurs",
+    "title": "Qui joue ?",
+    "subtitle": "Ajoute tous ceux qui font la fête",
+    "players-title": "Joueurs",
+    "empty-hint": "Ajoute au moins 2 joueurs pour faire tourner la roue",
+    "ready-to-play": "Tout le monde est là ? C'est parti !"
   },
   "packagePage": {
     "pick-your-modes": "Choisis tes modes !",

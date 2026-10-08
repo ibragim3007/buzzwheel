@@ -12,7 +12,12 @@
     "enter-player-name": "Введите имя",
     "max-players-reached": "Вы достигли лимита в {{ max_players }} игроков",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} игроков",
-    "no-players-placeholder": "Игроков пока нет"
+    "no-players-placeholder": "Игроков пока нет",
+    "title": "Кто играет?",
+    "subtitle": "Добавь всех, кто в компании",
+    "players-title": "Игроки",
+    "empty-hint": "Добавь минимум 2 игроков, чтобы крутить колесо",
+    "ready-to-play": "Все в сборе? Погнали!"
   },
   "packagePage": {
     "pick-your-modes": "Выберите режимы!",

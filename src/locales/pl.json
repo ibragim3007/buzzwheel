@@ -11,7 +11,12 @@
     "enter-player-name": "Wpisz imię gracza",
     "max-players-reached": "Limit {{ max_players }} graczy został osiągnięty",
     "current-max-players": "{{ currentPlayers }}/{{ maxPlayers }} graczy",
-    "no-players-placeholder": "Nie ma jeszcze żadnych graczy"
+    "no-players-placeholder": "Nie ma jeszcze żadnych graczy",
+    "title": "Kto gra?",
+    "subtitle": "Dodaj wszystkich z imprezy",
+    "players-title": "Gracze",
+    "empty-hint": "Dodaj co najmniej 2 graczy, aby zakręcić kołem",
+    "ready-to-play": "Wszyscy są? Zaczynamy!"
   },
   "packagePage": {
     "pick-your-modes": "Wybierz swoje tryby!",
